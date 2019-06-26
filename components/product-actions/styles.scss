@@ -1,0 +1,33 @@
+@import "../../styles/utils/index";
+
+@include c(product-actions) {
+  @include position--fixed(null, null, 0, 0);
+
+
+  box-shadow: 0 0 px2rpx(30px) 0 rgba(map-get($colors, c2), 0.1);
+  width: 100%;
+  display: flex;
+
+  @include e(collect, add-cart) {
+    @include text--middle(px2rpx(96px));
+  }
+
+  @include e(collect) {
+    flex: 0 1 auto;
+    width: px2rpx(130px);
+    background: {
+      image: cdn("components/product-actions/collect.png");
+      size: px2rpx(40px) px2rpx(40px);
+      repeat: no-repeat;
+      position: center center;
+    }
+
+    @include s(is-active) {
+      background-image: cdn("components/product-actions/collect-hl.png");
+    }
+  }
+
+  @include e(add-cart) {
+    flex: 1;
+  }
+}

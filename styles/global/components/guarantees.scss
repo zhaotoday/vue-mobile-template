@@ -1,0 +1,26 @@
+@include c(guarantees) {
+  @include e(item) {
+    @include padding(px2rpx(30px), null, px2rpx(30px - 4px));
+
+    position: relative;
+    border-bottom: 1px solid map-get($colors, c12);
+    margin-left: px2rpx(90px);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  @include e(title) {
+    padding-bottom: px2rpx(16px);
+    line-height: 100%;
+  }
+
+  @include e(desc) {
+    line-height: 150%;
+  }
+
+  @include c(icon) {
+    @include position--absolute(px2rpx(27px), null, null, px2rpx(-68px));
+  }
+}

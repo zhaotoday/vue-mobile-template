@@ -1,0 +1,114 @@
+{
+  "pages": [
+    {
+      "path": "pages/tab-bar/index/index",
+      "style": {
+        "navigationBarTitleText": "东街口"
+      }
+    },
+    {
+      "path": "pages/products/search/index",
+      "style": {
+        "navigationBarTitleText": "搜索"
+      }
+    },
+    {
+      "path": "pages/products/detail/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/addresses/form/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/addresses/list/index",
+      "style": {
+        "navigationBarTitleText": "地址管理"
+      }
+    },
+    {
+      "path": "pages/products/list/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/bind/index",
+      "style": {
+        "navigationBarTitleText": "绑定手机号"
+      }
+    },
+    {
+      "path": "pages/pay/index",
+      "style": {
+        "navigationBarTitleText": "结算"
+      }
+    },
+    {
+      "path": "pages/tab-bar/my/index",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/tab-bar/cart/index",
+      "style": {
+        "navigationBarTitleText": "购物车"
+      }
+    },
+    {
+      "path": "pages/tab-bar/categories/index",
+      "style": {
+        "navigationBarTitleText": "分类"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "授权登录"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#53B060",
+    "backgroundColor": "#F6F6F6"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tab-bar/index/index",
+        "iconPath": "static/tab-bar/index.png",
+        "selectedIconPath": "static/tab-bar/index-hl.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tab-bar/categories/index",
+        "iconPath": "static/tab-bar/categories.png",
+        "selectedIconPath": "static/tab-bar/categories-hl.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/tab-bar/cart/index",
+        "iconPath": "static/tab-bar/cart.png",
+        "selectedIconPath": "static/tab-bar/cart-hl.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/tab-bar/my/index",
+        "iconPath": "static/tab-bar/my.png",
+        "selectedIconPath": "static/tab-bar/my-hl.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

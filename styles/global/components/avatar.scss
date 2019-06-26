@@ -1,0 +1,6 @@
+@include c(avatar) {
+  @include circle(px2rpx(120px));
+
+  display: inline-block;
+  box-shadow: 0 0 px2rpx(30px) 0 rgba(map-get($colors, c2), 0.2);
+}

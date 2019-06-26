@@ -1,0 +1,98 @@
+@include c(list) {
+  @include e(item) {
+    @include text--middle(px2rpx(100px));
+
+    position: relative;
+    border-bottom: 1px solid map-get($colors, c12);
+    margin-left: px2rpx(40px);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    @include s(has-icon) {
+      text-indent: px2rpx(40px + 16px);
+    }
+
+    @include s(is-height-auto) {
+      @include padding(px2rpx(25px), null, px2rpx(25px));
+
+      height: auto;
+    }
+
+    @include s(is-link) {
+      background: {
+        image: cdn("components/list/is-link.png");
+        size: px2rpx(24px) px2rpx(32px);
+        repeat: no-repeat;
+        position: right px2rpx(40px) center;
+      }
+
+      @include c(list) {
+        @include e(extra) {
+          right: px2rpx(80px);
+        }
+      }
+    }
+
+    @include s(is-contact) {
+      text-align: left;
+      background-color: map-get($colors, c1);
+      padding: 0;
+
+      &::after {
+        border: 0;
+      }
+    }
+
+    @include c(icon) {
+      @include position--absolute(50%, null, null, 0);
+
+      transform: translateY(-50%);
+    }
+  }
+
+  @include e(desc) {
+    @include padding(px2rpx(10px), null, px2rpx(10px));
+    line-height: 100%;
+  }
+
+  @include e(extra) {
+    @include position--absolute(50%, px2rpx(40px));
+
+    transform: translateY(-50%);
+    line-height: 100%;
+  }
+
+  @include e(input) {
+    @include position--absolute(50%);
+    @include text--middle(px2rpx(106px));
+
+    transform: translateY(-50%);
+    border: 0;
+    left: px2rpx(138px);
+    width: px2rpx(400px);
+
+    @include s(is-full) {
+      left: 0;
+    }
+  }
+
+  @include e(value) {
+    @include position--absolute(50%);
+
+    transform: translateY(-50%);
+    left: px2rpx(138px);
+    min-width: px2rpx(400px);
+  }
+
+  @include e(operation) {
+    @include position--absolute(50%, 0);
+    @include text--middle(px2rpx(60px));
+
+    transform: translateY(-50%);
+    width: px2rpx(200px);
+    text-align: center;
+    border-left: 1px solid map-get($colors, c9);
+  }
+}

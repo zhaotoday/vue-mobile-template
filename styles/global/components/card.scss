@@ -1,0 +1,38 @@
+@include c(card) {
+  @include e(head) {
+    @include text--middle(px2rpx(80px));
+
+    position: relative;
+    text-indent: px2rpx(18px + 8px + 14px);
+
+    &::before {
+      @include size(px2rpx(8px), px2rpx(32px));
+      @include position--absolute(50%, null, null, px2rpx(18px));
+
+      transform: translateY(-50%);
+      content: '';
+      display: block;
+      border-radius: px2rpx(4px);
+    }
+
+    &.green {
+      &::before {
+        background-color: map-get($colors, c4);
+      }
+    }
+
+    &.yellow {
+      &::before {
+        background-color: map-get($colors, c13);
+      }
+    }
+
+    @include s(has-border) {
+      @extend %border-1px;
+
+      &::after {
+        border-bottom: 1px solid map-get($colors, c12);
+      }
+    }
+  }
+}

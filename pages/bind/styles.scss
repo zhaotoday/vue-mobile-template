@@ -1,0 +1,24 @@
+@import '../../styles/utils/index';
+
+@include p(bind) {
+  @include b(check-code) {
+    @include position--absolute(50%, 0);
+    @include padding(null, px2rpx(40px), null, px2rpx(40px));
+    @include text--middle(px2rpx(88px));
+
+    transform: translateY(-50%);
+    text-align: right;
+    color: map-get($colors, c4);
+    z-index: 2;
+
+    &.is-disabled {
+      color: map-get($colors, c7);
+    }
+  }
+
+  @include c(button) {
+    @include position--fixed(null, null, px2rpx(130px), 50%);
+
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,36 @@
+@include c(panel) {
+  @include e(head) {
+    @include text--middle(px2rpx(80px));
+
+    position: relative;
+  }
+
+  @include e(title) {
+    text-indent: px2rpx(30px);
+  }
+
+  @include e(extra) {
+    @include padding(px2rpx(5px), null, px2rpx(5px));
+    @include position--absolute(50%, px2rpx(40px));
+
+    display: inline-block;
+    transform: translateY(-50%);
+    line-height: 100%;
+
+    @include s(is-link) {
+      padding-right: px2rpx(32px);
+      background: {
+        image: cdn("components/panel/more.png");
+        size: px2rpx(24px) px2rpx(32px);
+        position: center right;
+        repeat: no-repeat;
+      }
+    }
+  }
+
+  @include e(body) {
+    @include m(p30) {
+      @include padding(null, px2rpx(30px), px2rpx(30px), px2rpx(30px));
+    }
+  }
+}

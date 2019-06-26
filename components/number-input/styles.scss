@@ -1,0 +1,36 @@
+@import "../../styles/utils/index";
+
+@include c(number-input) {
+  @include size(px2rpx(168px), px2rpx(48px));
+
+  box-sizing: border-box;
+  border: 1px solid map-get($colors, c14);
+  border-radius: px2rpx(48px);
+  display: flex;
+
+  @include e(subtract, number, add) {
+    flex: 1;
+  }
+
+  @include e(subtract, add) {
+    background: {
+      size: px2rpx(20px) px2rpx(20px);
+      position: center center;
+      repeat: no-repeat;
+    }
+  }
+
+  @include e(subtract) {
+    background-image: cdn("components/number-input/subtract.png");
+  }
+
+  @include e(add) {
+    background-image: cdn("components/number-input/add.png");
+  }
+
+  @include e(number) {
+    line-height: px2rpx(48px);
+    border-left: 1px solid map-get($colors, c14);
+    border-right: 1px solid map-get($colors, c14);
+  }
+}

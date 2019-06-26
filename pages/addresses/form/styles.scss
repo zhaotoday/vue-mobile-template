@@ -1,0 +1,31 @@
+@import '../../../styles/utils/index';
+
+@include p(addresses-form) {
+  @include b(gender) {
+    @include position--absolute(50%, px2rpx(40px));
+
+    transform: translateY(-50%);
+    line-height: 0;
+
+    @include c(tag) {
+      margin-left: px2rpx(20px);
+    }
+  }
+
+  @include b(types) {
+    @include position--absolute(50%, null, null, px2rpx(138px));
+
+    transform: translateY(-50%);
+    line-height: 0;
+
+    @include c(tag) {
+      margin-right: px2rpx(20px);
+    }
+  }
+
+  @include c(button) {
+    @include position--absolute(null, null, px2rpx(60px), 50%);
+
+    transform: translateX(-50%);
+  }
+}

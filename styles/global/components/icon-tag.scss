@@ -1,0 +1,36 @@
+@include c(icon-tag) {
+  @include m(set, unset, edit, del) {
+    @include text--middle(px2rpx(32px));
+    @include padding(px2rpx(8px), px2rpx(8px), px2rpx(8px));
+
+    background: {
+      size: px2rpx(32px) px2rpx(32px);
+      position: 0 center;
+      repeat: no-repeat;
+    }
+  }
+
+  @include m(set, unset) {
+    padding-left: px2rpx(32px + 10px);
+  }
+
+  @include m(edit, del) {
+    padding-left: px2rpx(32px);
+  }
+
+  @include m(set) {
+    background-image: cdn("components/icon-tag/set.png");
+  }
+
+  @include m(unset) {
+    background-image: cdn("components/icon-tag/unset.png");
+  }
+
+  @include m(edit) {
+    background-image: cdn("components/icon-tag/edit.png");
+  }
+
+  @include m(del) {
+    background-image: cdn("components/icon-tag/del.png");
+  }
+}

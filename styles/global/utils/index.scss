@@ -1,0 +1,27 @@
+.u-fwb {
+  font-weight: bold;
+}
+
+.u-tac {
+  text-align: center;
+}
+
+.u-cf {
+  @include clearfix;
+}
+
+.u-mt20 {
+  margin-top: px2rpx(20px);
+}
+
+.u-mb20 {
+  margin-bottom: px2rpx(20px);
+}
+
+.u-pt20 {
+  padding-top: px2rpx(20px);
+}
+
+.u-pb20 {
+  padding-bottom: px2rpx(20px);
+}

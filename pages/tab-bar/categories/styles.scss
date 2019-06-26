@@ -1,0 +1,88 @@
+@import "../../../styles/utils/index";
+
+@include p(categories) {
+  @include b(sidebar) {
+    @include position--absolute(0, null, 0, 0);
+
+    padding-top: px2rpx(10px);
+    width: px2rpx(180px);
+    box-sizing: border-box;
+    border-right: 1px solid map-get($colors, c12);
+
+    @include e(item) {
+      @include text--middle(px2rpx(80px));
+      @include block--center;
+
+      position: relative;
+      color: map-get($colors, c10);
+      text-align: center;
+      width: px2rpx(140px);
+
+      p {
+        @include position--absolute(50%, null, null, 50%);
+        @include text--overflow;
+
+        width: px2rpx(140px);
+        transform: translate(-50%, -50%);
+        line-height: 100%;
+        z-index: 1;
+      }
+
+      @include s(is-active) {
+        color: map-get($colors, c1);
+
+        &::after {
+          @include position--absolute(50%, null, null, 0);
+          @include size(100%, px2rpx(48px));
+
+          transform: translateY(-50%);
+          background-color: map-get($colors, c4);
+          display: block;
+          content: '';
+          z-index: 0;
+          border-radius: px2rpx(48px);
+        }
+      }
+    }
+  }
+
+  @include b(main) {
+    @include position--absolute(0, null, 0, px2rpx(180px));
+
+    width: px2rpx(571px);
+  }
+
+  @include b(banner-wrap) {
+    padding-top: px2rpx(30px);
+  }
+
+  @include b(banner) {
+    @include size(px2rpx(510px), px2rpx(200px));
+    @include block--center;
+
+    display: block;
+  }
+
+  @include b(categories) {
+    @include clearfix;
+
+    @include e(item) {
+      @include padding(px2rpx(30px), null, px2rpx(30px));
+
+      float: left;
+      width: 33.3%;
+      text-align: center;
+    }
+
+    @include e(image) {
+      @include size(px2rpx(110px), px2rpx(110px));
+      @include block--center;
+
+      display: block;
+    }
+
+    @include e(name) {
+      padding-top: px2rpx(16px);
+    }
+  }
+}

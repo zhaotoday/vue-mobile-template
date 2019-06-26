@@ -1,0 +1,20 @@
+@import '../../styles/utils/index';
+
+@include p(pay) {
+  @include b(pay) {
+    @include position--fixed(null, null, 0, 0);
+    @include text--middle(px2rpx(96px));
+
+    width: 100%;
+
+    @include e(money) {
+      text-indent: px2rpx(30px);
+    }
+
+    @include e(submit) {
+      @include position--absolute(0,0);
+
+      width: px2rpx(200px);
+    }
+  }
+}

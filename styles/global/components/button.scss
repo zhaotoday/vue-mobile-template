@@ -1,0 +1,17 @@
+@include c(button) {
+  text-align: center;
+
+  &::after {
+    border: none;
+  }
+
+  &.h76 {
+    @include text--middle(px2rpx(76px));
+
+    border-radius: px2rpx(76px);
+  }
+
+  &.w670 {
+    width: px2rpx(670px);
+  }
+}
