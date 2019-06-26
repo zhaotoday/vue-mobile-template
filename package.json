@@ -1,7 +1,7 @@
 {
   "name": "uni-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "uni-app template",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,13 +17,10 @@
   },
   "homepage": "https://github.com/zhaotoday/uni-app#readme",
   "dependencies": {
-    "array-to-tree": "^3.3.0",
     "jt-helpers": "0.0.6",
     "jt-rest": "0.0.8",
     "jt-time": "0.0.7",
     "mp-client": "0.0.29",
-    "mpvue": "^2.0.5",
-    "mpvue-wxparse": "^0.6.5",
     "sass-utils": "^1.0.21",
     "vuex": "^3.1.0",
     "wx-bridge": "0.0.19"
