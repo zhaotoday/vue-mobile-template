@@ -17,6 +17,18 @@
       "style": {
         "navigationBarTitleText": "授权登录"
       }
+    },
+    {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/my/index",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
     }
   ],
   "globalStyle": {
@@ -32,13 +44,13 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/tab-bar/home/index",
+        "pagePath": "pages/home/index",
         "iconPath": "static/tab-bar/home.png",
         "selectedIconPath": "static/tab-bar/home-hl.png",
         "text": "首页"
       },
       {
-        "pagePath": "pages/tab-bar/my/index",
+        "pagePath": "pages/my/index",
         "iconPath": "static/tab-bar/my.png",
         "selectedIconPath": "static/tab-bar/my-hl.png",
         "text": "我的"
