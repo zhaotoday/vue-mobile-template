@@ -1,10 +1,14 @@
 @include c(tag) {
+  $heights: 30, 36;
+
   display: inline-block;
 
-  &.h30 {
-    @include text--middle(px2rpx(30px));
-    @include padding(null, px2rpx(15px), null, px2rpx(15px));
+  @each $item in $heights {
+    &.h#{$item} {
+      @include text--middle(px2rpx($item * 1px));
+      @include padding(null, px2rpx($item / 2 * 1px), null, px2rpx($item / 2 * 1px));
 
-    border-radius: px2rpx(15px);
+      border-radius: px2rpx($item / 2 * 1px);
+    }
   }
 }

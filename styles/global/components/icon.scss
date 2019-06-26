@@ -1,4 +1,8 @@
 @include c(icon) {
+  $items: (
+    (width: 40px, height: 40px, icon: address)
+  );
+
   display: inline-block;
   background: {
     size: 100% 100%;
@@ -6,51 +10,15 @@
     position: center center;
   }
 
-  @include m(logo) {
-    @include size(px2rpx(160px), px2rpx(160px));
+  @each $item in $items {
+    $width: map-get($item, width);
+    $height: map-get($item, height);
+    $icon: map-get($item, icon);
 
-    background-image: cdn("components/icon/logo.png");
-  }
+    @include m(#{$icon}) {
+      @include size(px2rpx($width * 1px), px2rpx($height * 1px));
 
-  @include m(add-bg) {
-    @include size(px2rpx(48px), px2rpx(48px));
-
-    background-image: cdn("components/icon/add-bg.png");
-  }
-
-  @each $value in (address, collection, coupon, service, to-be-business) {
-    @include m(#{$value}) {
-      @include size(px2rpx(40px), px2rpx(40px));
-
-      background-image: cdn("components/icon/#{$value}.png");
+      background-image: cdn("components/icon/#{$icon}.png");
     }
-  }
-
-  @include m(arrow-up, arrow-down) {
-    @include size(px2rpx(48px), px2rpx(48px));
-  }
-
-  @include m(arrow-up) {
-    background-image: cdn("components/icon/arrow-up.png");
-  }
-
-  @include m(arrow-down) {
-    background-image: cdn("components/icon/arrow-down.png");
-  }
-
-  @include m(delivery, pay, after-sale) {
-    @include size(px2rpx(60px), px2rpx(40px));
-  }
-
-  @include m(delivery) {
-    background-image: cdn("components/icon/delivery.png");
-  }
-
-  @include m(pay) {
-    background-image: cdn("components/icon/pay.png");
-  }
-
-  @include m(after-sale) {
-    background-image: cdn("components/icon/after-sale.png");
   }
 }

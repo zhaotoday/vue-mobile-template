@@ -1,10 +1,10 @@
 @include c(avatar) {
-  $width: px2rpx(120px);
-  $box-shadow-blur: px2rpx(30px);
+  $width: 120px;
+  $box-shadow-blur: 30px;
   $box-shadow-color: rgba(map-get($colors, c2), 0.2);
 
-  @include circle($width);
+  @include circle(px2rpx($width));
 
   display: inline-block;
-  box-shadow: 0 0 $box-shadow-blur 0 $box-shadow-color;
+  box-shadow: 0 0 px2rpx($box-shadow-blur) 0 $box-shadow-color;
 }
