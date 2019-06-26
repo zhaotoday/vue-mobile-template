@@ -21,7 +21,7 @@
     "jt-helpers": "0.0.6",
     "jt-rest": "0.0.8",
     "jt-time": "0.0.7",
-    "mp-client": "0.0.28",
+    "mp-client": "0.0.29",
     "mpvue": "^2.0.5",
     "mpvue-wxparse": "^0.6.5",
     "sass-utils": "^1.0.21",
