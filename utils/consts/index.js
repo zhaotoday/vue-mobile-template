@@ -3,7 +3,7 @@
 const API_URL = 'https://api.fjnm.cn/api/v1'
 
 // 首页
-const INDEX_PAGE = '/pages/tab-bar/index/index'
+const INDEX_PAGE = '/pages/home/index'
 
 // 登录页
 const LOGIN_PAGE = '/pages/login/index'

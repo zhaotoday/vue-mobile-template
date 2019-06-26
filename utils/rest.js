@@ -33,8 +33,6 @@ export default class extends REST {
       super.request(method, { id, query, body })
         .then(res => {
           showLoading && wxb.hideLoading()
-
-          // 在这里可对 res 进行包装
           resolve(res.data)
         })
         .catch(res => {
