@@ -1,11 +1,18 @@
 @include c(button) {
   $widths: 200, 300;
   $heights: 60, 80;
+  $border-radii: 8, 10;
 
   text-align: center;
 
   &::after {
     border: none;
+  }
+
+  @each $item in $heights {
+    &.w#{$item} {
+      width: px2rpx($item * 1px);
+    }
   }
 
   @each $item in $heights {
@@ -18,9 +25,9 @@
     }
   }
 
-  @each $item in $heights {
-    &.w#{$item} {
-      width: px2rpx($item * 1px);
+  @each $item in $border-radii {
+    &.br#{$item} {
+      border-radius: px2rpx($item * 1px);
     }
   }
 }

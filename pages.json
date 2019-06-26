@@ -1,69 +1,15 @@
 {
   "pages": [
     {
-      "path": "pages/tab-bar/index/index",
+      "path": "pages/components/index",
       "style": {
-        "navigationBarTitleText": "东街口"
-      }
-    },
-    {
-      "path": "pages/products/search/index",
-      "style": {
-        "navigationBarTitleText": "搜索"
-      }
-    },
-    {
-      "path": "pages/products/detail/index",
-      "style": {
-        "navigationBarTitleText": ""
-      }
-    },
-    {
-      "path": "pages/addresses/form/index",
-      "style": {
-        "navigationBarTitleText": ""
-      }
-    },
-    {
-      "path": "pages/addresses/list/index",
-      "style": {
-        "navigationBarTitleText": "地址管理"
-      }
-    },
-    {
-      "path": "pages/products/list/index",
-      "style": {
-        "navigationBarTitleText": ""
+        "navigationBarTitleText": "组件"
       }
     },
     {
       "path": "pages/bind/index",
       "style": {
         "navigationBarTitleText": "绑定手机号"
-      }
-    },
-    {
-      "path": "pages/pay/index",
-      "style": {
-        "navigationBarTitleText": "结算"
-      }
-    },
-    {
-      "path": "pages/tab-bar/my/index",
-      "style": {
-        "navigationBarTitleText": "我的"
-      }
-    },
-    {
-      "path": "pages/tab-bar/cart/index",
-      "style": {
-        "navigationBarTitleText": "购物车"
-      }
-    },
-    {
-      "path": "pages/tab-bar/categories/index",
-      "style": {
-        "navigationBarTitleText": "分类"
       }
     },
     {
@@ -86,22 +32,10 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/tab-bar/index/index",
-        "iconPath": "static/tab-bar/index.png",
-        "selectedIconPath": "static/tab-bar/index-hl.png",
+        "pagePath": "pages/tab-bar/home/index",
+        "iconPath": "static/tab-bar/home.png",
+        "selectedIconPath": "static/tab-bar/home-hl.png",
         "text": "首页"
-      },
-      {
-        "pagePath": "pages/tab-bar/categories/index",
-        "iconPath": "static/tab-bar/categories.png",
-        "selectedIconPath": "static/tab-bar/categories-hl.png",
-        "text": "分类"
-      },
-      {
-        "pagePath": "pages/tab-bar/cart/index",
-        "iconPath": "static/tab-bar/cart.png",
-        "selectedIconPath": "static/tab-bar/cart-hl.png",
-        "text": "购物车"
       },
       {
         "pagePath": "pages/tab-bar/my/index",
