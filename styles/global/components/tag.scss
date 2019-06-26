@@ -1,17 +1,10 @@
 @include c(tag) {
   display: inline-block;
 
-  &.h34 {
-    @include text--middle(px2rpx(34px));
-    @include padding(null, px2rpx(17px), null, px2rpx(17px));
+  &.h30 {
+    @include text--middle(px2rpx(30px));
+    @include padding(null, px2rpx(15px), null, px2rpx(15px));
 
-    border-radius: px2rpx(17px);
-  }
-
-  &.h50 {
-    @include text--middle(px2rpx(50px));
-    @include padding(null, px2rpx(25px), null, px2rpx(25px));
-
-    border-radius: px2rpx(50px);
+    border-radius: px2rpx(15px);
   }
 }
