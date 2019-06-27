@@ -1,5 +1,6 @@
 @include c(tag) {
   $heights: 30, 36;
+  $border-radii: 8, 10;
 
   display: inline-block;
 
@@ -9,6 +10,12 @@
       @include padding(null, px2rpx($item / 2 * 1px), null, px2rpx($item / 2 * 1px));
 
       border-radius: px2rpx($item / 2 * 1px);
+    }
+  }
+
+  @each $item in $border-radii {
+    &.br#{$item} {
+      border-radius: px2rpx($item * 1px);
     }
   }
 }
