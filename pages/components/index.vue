@@ -8,5 +8,5 @@
 
 <style
   lang="scss"
-  src="./styles.scss">
+  src="./style.scss">
 </style>
