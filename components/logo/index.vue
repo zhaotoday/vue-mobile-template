@@ -5,13 +5,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'c-logo'
-}
-</script>
+<script src="./script.js"></script>
 
 <style
   lang="scss"
-  src="./styles.scss">
+  src="./style.scss">
 </style>

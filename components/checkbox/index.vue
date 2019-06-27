@@ -5,19 +5,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'c-checkbox',
-  props: {
-    checked: {
-      type: Boolean,
-      default: false
-    }
-  }
-}
-</script>
+<script src="./script.js"></script>
 
 <style
   lang="scss"
-  src="./styles.scss">
+  src="./style.scss">
 </style>

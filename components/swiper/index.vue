@@ -25,31 +25,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'c-swiper',
-  props: {
-    items: {
-      type: Array,
-      default () {
-        return []
-      }
-    }
-  },
-  data () {
-    return {
-      current: 0
-    }
-  },
-  methods: {
-    handleChange (e) {
-      this.current = e.mp.detail.current
-    }
-  }
-}
-</script>
+<script src="./script.js"></script>
 
 <style
   lang="scss"
-  src="./styles.scss">
+  src="./style.scss">
 </style>
