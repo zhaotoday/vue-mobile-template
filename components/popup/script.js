@@ -1,5 +1,5 @@
 export default {
-  name: 'CPopup',
+  name: 'c-popup',
   props: {
     visible: {
       type: Boolean,
