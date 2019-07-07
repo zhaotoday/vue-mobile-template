@@ -1,12 +1,20 @@
 @include c(button) {
-  $widths: 200, 300;
-  $heights: 60, 80;
-  $border-radii: 8, 10;
+  $widths: 670, 160;
+  $heights: 76, 48;
+  $border-radii: 0;
 
+  box-sizing: border-box;
   text-align: center;
+  display: inline-block;
 
   &::after {
     border: none;
+  }
+
+  @include s(is-foot) {
+    @include position--fixed(null, null, px2rpx(60px), 50%);
+
+    transform: translateX(-50%);
   }
 
   @each $item in $widths {
@@ -28,4 +36,8 @@
       border-radius: px2rpx($item * 1px);
     }
   }
+}
+
+button.c-button {
+  display: block;
 }

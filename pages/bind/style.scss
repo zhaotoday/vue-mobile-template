@@ -1,6 +1,9 @@
 @import '../../styles/utils/index';
 
 @include p(bind) {
+  $b-check-code_color: map-get($colors, c4);
+  $b-check-code-is-disabled_color: map-get($colors, c9);
+
   @include b(check-code) {
     @include position--absolute(50%, 0);
     @include padding(null, px2rpx(40px), null, px2rpx(40px));
@@ -8,17 +11,11 @@
 
     transform: translateY(-50%);
     text-align: right;
-    color: map-get($colors, c4);
+    color: $b-check-code_color;
     z-index: 2;
 
     &.is-disabled {
-      color: map-get($colors, c9);
+      color: $b-check-code-is-disabled_color;
     }
-  }
-
-  @include c(button) {
-    @include position--fixed(null, null, px2rpx(60px), 50%);
-
-    transform: translateX(-50%);
   }
 }
