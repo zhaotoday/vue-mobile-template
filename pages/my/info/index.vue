@@ -1,22 +1,27 @@
 <template>
   <div class="p-my-info">
-    <div class="c-list bgc1 fs32">
-      <div class="c-list__item c6">
-        姓名
-        <div class="c-list__value c2 fs32">{{ cForm.name }}</div>
+    <div class="c-list bgc1 fs32 u-mt16">
+      <div class="c-list__item">
+        <label class="c35">姓名</label>
+        <input
+          class="c-list__value fs32"
+          placeholder-class="c32"
+          placeholder="请输入姓名"
+          v-model="cForm.name"
+        />
       </div>
-      <div class="c-list__item c6">
-        手机号
-        <div class="c-list__input cs2 fs32">
+      <div class="c-list__item">
+        <label class="c35">手机号</label>
+        <div class="c-list__value fs32">
           {{ $helpers.encryptPhoneNumber(cForm.phoneNumber) }}
         </div>
         <div
-          class="c-list__operation c7 fs28"
+          class="c-list__operation c21 fs28"
           @click="navigateTo('/pages/bind/index?update=1')">
           更换手机
         </div>
       </div>
-      <div class="c-list__item c6">
+      <div class="c-list__item">
         生日
         <div
           v-if="hasBirthday"
@@ -28,14 +33,14 @@
           mode="date"
           v-model="cForm.birthday"
           @change="handleBirthdayChange">
-          <div :class="[ 'c-list__value', cForm.birthday ? 'c2' : 'c19' ]">
+          <div :class="[ 'c-list__value', cForm.birthday ? '' : 'c31' ]">
             {{ cForm.birthday || '请选择生日，保存后不可修改' }}
           </div>
         </picker>
       </div>
     </div>
     <button
-      class="c-button is-foot w670 h76 bgc4 c1 fs32"
+      class="c-button is-foot w650 h88 bgc21 c11 fs32"
       @click="save">
       保存
     </button>

@@ -1,9 +1,9 @@
 {
   "pages": [
     {
-      "path": "pages/bind/index",
+      "path": "pages/my/info/index",
       "style": {
-        "navigationBarTitleText": ""
+        "navigationBarTitleText": "我的信息"
       }
     },
     {
@@ -13,9 +13,9 @@
       }
     },
     {
-      "path": "pages/my/info/index",
+      "path": "pages/bind/index",
       "style": {
-        "navigationBarTitleText": "我的信息"
+        "navigationBarTitleText": ""
       }
     },
     {

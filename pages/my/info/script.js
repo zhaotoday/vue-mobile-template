@@ -10,7 +10,8 @@ export default {
     return {
       hasBirthday: false,
       cForm: {
-        name: '',
+        name: '测试',
+        phoneNumber: '13950442340',
         birthday: ''
       }
     }

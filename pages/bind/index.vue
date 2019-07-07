@@ -8,7 +8,8 @@
           maxlength="11"
           placeholder-class="c32"
           placeholder="请输入要绑定的手机号"
-          v-model="cForm.phoneNumber" />
+          v-model="cForm.phoneNumber"
+        />
         <div
           :class="[ 'b-check-code', 'fs28', { 'is-disabled': cCheckCode.disabled } ]"
           @click="handleGetCheckCode">
@@ -22,7 +23,8 @@
           maxlength="6"
           placeholder-class="c32"
           placeholder="请输入验证码"
-          v-model="cForm.checkCode" />
+          v-model="cForm.checkCode"
+        />
       </div>
     </div>
     <button

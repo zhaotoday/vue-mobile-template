@@ -9,7 +9,7 @@
   $__extra_right: 40px;
   $__value_height: 106px;
   $__value_left: 138px;
-  $__value_width: 400px;
+  $__value_width: 450px;
 
   @include e(item) {
     @include text--middle(px2rpx($__item_height));
@@ -98,5 +98,15 @@
     @include s(is-full) {
       left: 0;
     }
+  }
+
+  @include e(operation) {
+    @include position--absolute(50%, 0);
+    @include text--middle(px2rpx(60px));
+
+    transform: translateY(-50%);
+    width: px2rpx(200px);
+    text-align: center;
+    border-left: 1px solid map-get($colors, c34);
   }
 }
