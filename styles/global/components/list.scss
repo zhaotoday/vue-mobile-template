@@ -1,21 +1,33 @@
 @include c(list) {
+  $__item_height: 100px;
+  $__item_border-bottom-color: map-get($colors, c12);
+  $__item_margin-left: 40px;
+  $__item-has-icon_text-indent: 56px;
+  $__item-is-adaptable_padding: 25px;
+  $__item-is-link__extra_right: 80px;
+  $__item-is-button__background-color: map-get($colors, c1);
+  $__extra_right: 40px;
+  $__value_height: 106px;
+  $__value_left: 138px;
+  $__value_width: 400px;
+
   @include e(item) {
-    @include text--middle(px2rpx(100px));
+    @include text--middle(px2rpx($__item_height));
 
     position: relative;
-    border-bottom: 1px solid map-get($colors, c12);
-    margin-left: px2rpx(40px);
+    border-bottom: 1px solid $__item_border-bottom-color;
+    margin-left: px2rpx($__item_margin-left);
 
     &:last-child {
       border-bottom: 0;
     }
 
     @include s(has-icon) {
-      text-indent: px2rpx(40px + 16px);
+      text-indent: px2rpx($__item-has-icon_text-indent);
     }
 
-    @include s(is-height-auto) {
-      @include padding(px2rpx(25px), null, px2rpx(25px));
+    @include s(is-adaptable) {
+      @include padding(px2rpx($__item-is-adaptable_padding), null, px2rpx($__item-is-adaptable_padding));
 
       height: auto;
     }
@@ -30,14 +42,14 @@
 
       @include c(list) {
         @include e(extra) {
-          right: px2rpx(80px);
+          right: px2rpx($__item-is-link__extra_right);
         }
       }
     }
 
-    @include s(is-contact) {
+    @include s(is-button) {
       text-align: left;
-      background-color: map-get($colors, c1);
+      background-color: $__item-is-button__background-color;
       padding: 0;
 
       &::after {
@@ -54,45 +66,37 @@
 
   @include e(desc) {
     @include padding(px2rpx(10px), null, px2rpx(10px));
+
     line-height: 100%;
   }
 
   @include e(extra) {
-    @include position--absolute(50%, px2rpx(40px));
+    @include position--absolute(50%, px2rpx($__extra_right));
 
     transform: translateY(-50%);
     line-height: 100%;
-  }
 
-  @include e(input) {
-    @include position--absolute(50%);
-    @include text--middle(px2rpx(106px));
+    &.w450 {
+      @include text--overflow(2);
 
-    transform: translateY(-50%);
-    border: 0;
-    left: px2rpx(138px);
-    width: px2rpx(400px);
-
-    @include s(is-full) {
-      left: 0;
+      width: px2rpx(450px);
+      text-align: right;
+      line-height: 120%;
     }
   }
 
   @include e(value) {
     @include position--absolute(50%);
+    @include text--middle(px2rpx($__value_height));
+    @include text--overflow;
 
     transform: translateY(-50%);
-    left: px2rpx(138px);
-    min-width: px2rpx(400px);
-  }
+    border: 0;
+    left: px2rpx($__value_left);
+    width: px2rpx($__value_width);
 
-  @include e(operation) {
-    @include position--absolute(50%, 0);
-    @include text--middle(px2rpx(60px));
-
-    transform: translateY(-50%);
-    width: px2rpx(200px);
-    text-align: center;
-    border-left: 1px solid map-get($colors, c9);
+    @include s(is-full) {
+      left: 0;
+    }
   }
 }

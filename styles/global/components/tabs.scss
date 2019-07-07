@@ -1,33 +1,27 @@
 @include c(tabs) {
-  @include e(tabs) {
-    display: flex;
-    background-color: map-get($colors, c1);
-  }
+  $__item_height: 72px;
+  $__item-is-active_color: map-get($colors, c4);
 
-  @include e(tab) {
-    @include text--middle(px2rem(50px));
+  display: flex;
+
+  @include e(item) {
+    @include text--middle(px2rpx($__item_height));
 
     position: relative;
     flex: 1;
-    text-align: center;
-    color: map-get($colors, c2);
 
     &.is-active {
-      color: map-get($colors, c3);
+      color: $__item-is-active_color;
 
       &::after {
-        @include position--absolute(null, null, 0, 50%);
+        @include position--absolute(null, null, px2rpx(10px), 50%);
 
         transform: translateX(-50%);
         display: block;
         content: '';
-        width: px2rpx(50px);
-        border-bottom: px2rpx(4px) solid map-get($colors, c3);
+        width: px2rpx(80px);
+        border-bottom: px2rpx(4px) solid $__item-is-active_color;
       }
     }
-  }
-
-  @include e(content) {
-    @include margin(px2rpx(10px), null, null, px2rpx(20px));
   }
 }

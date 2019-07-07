@@ -1,7 +1,7 @@
 @include c(avatar) {
-  $width: 200px;
+  $width: 120px;
   $box-shadow-blur: 30px;
-  $box-shadow-color: rgba(map-get($colors, c2), 0.02);
+  $box-shadow-color: rgba(map-get($colors, c2), 0.2);
 
   @include circle(px2rpx($width));
 
