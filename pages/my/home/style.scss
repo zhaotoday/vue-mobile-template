@@ -5,6 +5,11 @@ page {
 }
 
 @include p(my) {
+  @include size(100%, 100%);
+
+  overflow: hidden;
+  position: relative;
+
   @include b(bg) {
     @include circle(px2rpx(2000px));
     @include position--absolute(px2rpx(-1810px), null, null, 50%);
