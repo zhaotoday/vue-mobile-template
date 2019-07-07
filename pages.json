@@ -1,6 +1,12 @@
 {
   "pages": [
     {
+      "path": "pages/my/info/index",
+      "style": {
+        "navigationBarTitleText": "我的信息"
+      }
+    },
+    {
       "path": "pages/components/index",
       "style": {
         "navigationBarTitleText": "组件"
@@ -25,7 +31,7 @@
       }
     },
     {
-      "path": "pages/my/index",
+      "path": "pages/my/home/index",
       "style": {
         "navigationBarTitleText": "我的"
       }
@@ -50,7 +56,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/my/index",
+        "pagePath": "pages/my/home/index",
         "iconPath": "static/tab-bar/my.png",
         "selectedIconPath": "static/tab-bar/my-hl.png",
         "text": "我的"

@@ -8,28 +8,12 @@
       <div class="c-list__item c6">
         手机号
         <div class="c-list__input cs2 fs32">
-          {{ encryptedMobile }}
+          {{ $helpers.encryptPhoneNumber(cForm.phoneNumber) }}
         </div>
         <div
           class="c-list__operation c7 fs28"
           @click="navigateTo('/pages/bind/index?update=1')">
           更换手机
-        </div>
-      </div>
-      <div class="c-list__item c6">
-        性别
-        <div class="c-list__value c2">
-          <c-checkbox
-            label="男士"
-            :checked="cForm.sex === 1"
-            @change="cForm.sex = 1"
-            style="margin-right: 60rpx;">
-          </c-checkbox>
-          <c-checkbox
-            label="女士"
-            :checked="cForm.sex === 2"
-            @change="cForm.sex = 2">
-          </c-checkbox>
         </div>
       </div>
       <div class="c-list__item c6">
@@ -51,8 +35,8 @@
       </div>
     </div>
     <button
-      :class="'c-button c-button--' + (submitDisabled ? 'disabled bgc12 c1' : 'primary bgc7 c1') + ' fs32'"
-      @click="handleSubmit">
+      class="c-button is-foot w670 h76 bgc4 c1 fs32"
+      @click="save">
       保存
     </button>
   </div>

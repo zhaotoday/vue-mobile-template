@@ -23,5 +23,8 @@ export default {
     return items && items.length
       ? (items.find(item => item[key] === val) || {})
       : {}
+  },
+  encryptPhoneNumber (phoneNumber) {
+    return phoneNumber ? `${phoneNumber.substring(0, 3)}****${phoneNumber.substring(8, 11)}` : ''
   }
 }
