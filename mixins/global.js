@@ -3,12 +3,15 @@ import $consts from '@/utils/consts'
 
 export default {
   data () {
-    return { $consts }
+    return {
+      $consts,
+      loaded: false
+    }
   },
   onShareAppMessage () {
     return {
       title: '小程序名称',
-      path: `pages/index/index`
+      path: this.$consts.HOME_PAGE
     }
   },
   methods: {
@@ -21,13 +24,12 @@ export default {
     switchTab (url) {
       this.$wx.switchTab({ url })
     },
-    loggedIn ({ action = '' } = {}) {
-      const { page: { route } } = this.$parent ? this.$parent.$mp : this.$mp
-      const url = `${this.$consts.LOGIN_PAGE}?from=${route}&action=${action}`
-
+    loggedIn () {
       return new Promise(async (resolve, reject) => {
         if (!this.$auth.loggedIn()) {
-          await this.$wx.navigateTo({ url })
+          await this.$wx.navigateTo({
+            url: this.$consts.LOGIN_PAGE
+          })
           reject()
         } else {
           const user = this.$auth.get()['user']
@@ -36,12 +38,11 @@ export default {
       })
     },
     phoneNumberBound () {
-      const { page: { route } } = this.$parent ? this.$parent.$mp : this.$mp
-      const url = `${this.$consts.BIND_PAGE}?from=${route}`
-
       return new Promise(async (resolve, reject) => {
         if (!this.$auth.phoneNumberBound()) {
-          await this.$wx.navigateTo({ url })
+          await this.$wx.navigateTo({
+            url: this.$consts.BIND_PAGE
+          })
           reject()
         } else {
           const user = this.$auth.get()['user']
