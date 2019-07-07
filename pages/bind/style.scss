@@ -12,12 +12,12 @@
     z-index: 2;
 
     &.is-disabled {
-      color: map-get($colors, c7);
+      color: map-get($colors, c9);
     }
   }
 
   @include c(button) {
-    @include position--fixed(null, null, px2rpx(130px), 50%);
+    @include position--fixed(null, null, px2rpx(60px), 50%);
 
     transform: translateX(-50%);
   }
