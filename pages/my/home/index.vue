@@ -8,7 +8,7 @@
     <div class="b-name fs40 u-tac">赵金添</div>
     <div class="b-phone c35 fs28 u-tac">手机号：13950442340</div>
 
-    <div class="c-list fs30">
+    <div class="c-list fs34">
       <div
         class="c-list__item has-icon is-link"
         @click="navigateTo('/pages/addresses/list/index')">
@@ -22,7 +22,7 @@
         我的课程
       </div>
       <button
-        class="c-list__item has-border is-button has-icon is-link fs32"
+        class="c-list__item has-border is-button has-icon is-link fs34"
         open-type="contact">
         <i class="c-icon c-icon--service"></i>
         客户服务
