@@ -1,0 +1,17 @@
+@import "../../styles/utils/index";
+
+@include c(add-to-cart) {
+  @include text--middle(px2rpx(96px));
+
+  display: flex;
+
+  @include e(add, subtract) {
+    flex: 0 1 auto;
+    width: px2rpx(260px);
+  }
+
+  @include e(number) {
+    flex: 1;
+    background-color: map-get($colors, c16);
+  }
+}
