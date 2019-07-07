@@ -5,7 +5,7 @@
       class="c-overlay"
       @click="$emit('close')">
     </div>
-    <slot name="content" />
+    <slot name="content"></slot>
   </div>
 </template>
 
