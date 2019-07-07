@@ -1,7 +1,7 @@
 @import '../../styles/utils/index';
 
 @include p(login) {
-  @include b(logo-wrap) {
+  @include b(logo) {
     @include padding(px2rpx(130px), null, px2rpx(120px));
 
     text-align: center;
@@ -19,9 +19,5 @@
 
   @include b(desc) {
     padding-bottom: px2rpx(82px);
-  }
-
-  @include c(button) {
-    @include block--center;
   }
 }
