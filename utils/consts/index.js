@@ -1,9 +1,12 @@
 // 接口地址
-// const API_URL = 'http://localhost:3005/api/v1'
+// const API_URL = 'http://localhost:3004/api/v1'
 const API_URL = 'https://api.fjnm.cn/api/v1'
 
+// CDN
+const CDN_URL = 'https://cdn.fjnm.cn'
+
 // 首页
-const INDEX_PAGE = '/pages/home/index'
+const HOME_PAGE = '/pages/home/index'
 
 // 登录页
 const LOGIN_PAGE = '/pages/login/index'
@@ -13,7 +16,8 @@ const BIND_PAGE = '/pages/bind/index'
 
 export default {
   API_URL,
-  INDEX_PAGE,
+  CDN_URL,
+  HOME_PAGE,
   LOGIN_PAGE,
   BIND_PAGE
 }
