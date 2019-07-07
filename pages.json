@@ -53,7 +53,19 @@
         "pagePath": "pages/home/index",
         "iconPath": "static/tab-bar/home.png",
         "selectedIconPath": "static/tab-bar/home-hl.png",
-        "text": "首页"
+        "text": "俱乐部"
+      },
+      {
+        "pagePath": "pages/natatoriums/index",
+        "iconPath": "static/tab-bar/natatoriums.png",
+        "selectedIconPath": "static/tab-bar/natatoriums-hl.png",
+        "text": "游泳馆"
+      },
+      {
+        "pagePath": "pages/events/index",
+        "iconPath": "static/tab-bar/events.png",
+        "selectedIconPath": "static/tab-bar/events-hl.png",
+        "text": "赛事"
       },
       {
         "pagePath": "pages/my/home/index",
