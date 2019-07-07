@@ -1,10 +1,6 @@
 @include c(avatar) {
-  $width: 120px;
-  $box-shadow-blur: 30px;
-  $box-shadow-color: rgba(map-get($colors, c2), 0.2);
+  @include circle(px2rpx(168px));
 
-  @include circle(px2rpx($width));
-
-  display: inline-block;
-  box-shadow: 0 0 px2rpx($box-shadow-blur) 0 $box-shadow-color;
+  display: block;
+  border: px2rpx(8px) solid map-get($colors, c11);
 }

@@ -2,7 +2,7 @@
   $__item_height: 100px;
   $__item_border-bottom-color: map-get($colors, c34);
   $__item_margin-left: 40px;
-  $__item-has-icon_text-indent: 56px;
+  $__item-has-icon_text-indent: 60px;
   $__item-is-adaptable_padding: 25px;
   $__item-is-link__extra_right: 80px;
   $__item-is-button__background-color: map-get($colors, c1);
@@ -20,6 +20,10 @@
 
     &:last-child {
       border-bottom: 0;
+    }
+
+    @include s(has-border) {
+      border-bottom: 1px solid $__item_border-bottom-color;
     }
 
     @include s(has-icon) {
