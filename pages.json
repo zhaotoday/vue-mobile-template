@@ -1,6 +1,24 @@
 {
   "pages": [
     {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/natatoriums/index",
+      "style": {
+        "navigationBarTitleText": "游泳馆"
+      }
+    },
+    {
+      "path": "pages/events/index",
+      "style": {
+        "navigationBarTitleText": "赛事"
+      }
+    },
+    {
       "path": "pages/my/info/index",
       "style": {
         "navigationBarTitleText": "我的信息"
@@ -22,12 +40,6 @@
       "path": "pages/components/index",
       "style": {
         "navigationBarTitleText": "组件"
-      }
-    },
-    {
-      "path": "pages/home/index",
-      "style": {
-        "navigationBarTitleText": "首页"
       }
     },
     {
