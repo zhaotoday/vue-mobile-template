@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script></script>
+<script src="./script.js"></script>
 
 <style
   lang="scss"

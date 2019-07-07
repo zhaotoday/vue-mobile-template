@@ -10,7 +10,7 @@ export default {
   },
   onLoad () {
     this.$wx.setNavigationBarTitle({
-      title: this.$mp.query.modify ? '更换手机号' : '绑定手机号'
+      title: this.$mp.query.update ? '更换手机号' : '绑定手机号'
     })
   },
   methods: {

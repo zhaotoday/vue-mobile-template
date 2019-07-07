@@ -9,7 +9,7 @@
     {
       "path": "pages/bind/index",
       "style": {
-        "navigationBarTitleText": "绑定手机号"
+        "navigationBarTitleText": ""
       }
     },
     {
