@@ -1,5 +1,6 @@
 @include c(icon) {
   $items: (
+    (width: 160px, height: 160px, icon: logo),
     (width: 40px, height: 40px, icon: address),
     (width: 40px, height: 40px, icon: service)
   );

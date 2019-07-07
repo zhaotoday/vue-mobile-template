@@ -1,12 +1,23 @@
 // CDN
-// $cdn: "http://localhost:88";
-$cdn: "https://api.fjnm.cn/static";
+$cdn: "http://localhost:88";
+// $cdn: "https://api.fjnm.cn/static";
 
 // CDN 版本号
 $cdn-version: 0.1;
 
 // 颜色
 $colors: (
+        // 黑白
+        c11: white,
+        c12: black,
+        // 主色调
+        c21: #1DA677,
+        c22: #fff,
+        c23: #fff,
+        // 灰色
+        c31: #999999,
+        c32: #F2F2F2,
+        c33: #fff,
         c1: #fff,
         c2: #000,
         c3: #333333,
@@ -17,9 +28,9 @@ $colors: (
         c8: #BBBBBB,
         c9: #999999,
         c10: #666666,
-        c11: #4D4D4D,
-        c12: #E5E5E5,
-        c13: #F7B500,
+        //c11: #4D4D4D,
+        //c12: #E5E5E5,
+        //c13: #F7B500,
         c14: #D7D7D7,
         C15: #BABABA,
         c16: #56c976

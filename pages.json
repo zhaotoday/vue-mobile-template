@@ -1,15 +1,9 @@
 {
   "pages": [
     {
-      "path": "pages/my/info/index",
+      "path": "pages/login/index",
       "style": {
-        "navigationBarTitleText": "我的信息"
-      }
-    },
-    {
-      "path": "pages/components/index",
-      "style": {
-        "navigationBarTitleText": "组件"
+        "navigationBarTitleText": "授权登录"
       }
     },
     {
@@ -19,9 +13,15 @@
       }
     },
     {
-      "path": "pages/login/index",
+      "path": "pages/my/info/index",
       "style": {
-        "navigationBarTitleText": "授权登录"
+        "navigationBarTitleText": "我的信息"
+      }
+    },
+    {
+      "path": "pages/components/index",
+      "style": {
+        "navigationBarTitleText": "组件"
       }
     },
     {
@@ -38,10 +38,10 @@
     }
   ],
   "globalStyle": {
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#53B060",
-    "backgroundColor": "#F6F6F6"
+    "navigationBarBackgroundColor": "white",
+    "backgroundColor": "#F2F2F2"
   },
   "tabBar": {
     "color": "#999999",
