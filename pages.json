@@ -1,15 +1,15 @@
 {
   "pages": [
     {
-      "path": "pages/login/index",
-      "style": {
-        "navigationBarTitleText": "授权登录"
-      }
-    },
-    {
       "path": "pages/bind/index",
       "style": {
         "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "授权登录"
       }
     },
     {

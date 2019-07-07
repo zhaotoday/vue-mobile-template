@@ -1,8 +1,9 @@
 @import '../../styles/utils/index';
 
 @include p(bind) {
-  $b-check-code_color: map-get($colors, c4);
-  $b-check-code-is-disabled_color: map-get($colors, c9);
+  $b-check-code_color: map-get($colors, c21);
+  $b-check-code-is-disabled_color: map-get($colors, c32);
+  $b-check-code_border-left-color: map-get($colors, c34);
 
   @include b(check-code) {
     @include position--absolute(50%, 0);
@@ -13,6 +14,16 @@
     text-align: right;
     color: $b-check-code_color;
     z-index: 2;
+
+    &::before {
+      @include position--absolute(50%, null, null, 0);
+
+      transform: translateY(-50%);
+      display: block;
+      content: '';
+      height: px2rpx(60px);
+      border-left: 1px solid $b-check-code_border-left-color;
+    }
 
     &.is-disabled {
       color: $b-check-code-is-disabled_color;

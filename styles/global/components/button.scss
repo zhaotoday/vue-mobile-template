@@ -1,5 +1,5 @@
 @include c(button) {
-  $widths: 670;
+  $widths: 650;
   $heights: 88;
   $border-radii: 0;
 
@@ -12,7 +12,7 @@
   }
 
   @include s(is-foot) {
-    @include position--fixed(null, null, px2rpx(60px), 50%);
+    @include position--fixed(null, null, px2rpx(70px), 50%);
 
     transform: translateX(-50%);
   }
