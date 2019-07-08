@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="c-list__item">
-        生日
+        <label class="c35">生日</label>
         <div
           v-if="hasBirthday"
           class="c-list__value c2">

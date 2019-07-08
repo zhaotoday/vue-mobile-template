@@ -11,7 +11,7 @@
     <div class="c-list fs34">
       <div
         class="c-list__item has-icon is-link"
-        @click="navigateTo('/pages/addresses/list/index')">
+        @click="navigateTo('/pages/my/info/index')">
         <i class="c-icon c-icon--info"></i>
         我的资料
       </div>
