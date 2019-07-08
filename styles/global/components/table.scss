@@ -1,0 +1,46 @@
+@include c(table) {
+  $border_color: map-get($colors, c33);
+  $th_background-color: map-get($colors, c21);
+  $td_padding: 15px;
+  $td_border-color: map-get($colors, c33);
+
+  position: relative;
+  border: 1px solid $border_color;
+  border-bottom: 0;
+
+  tr {
+    display: flex;
+  }
+
+  th {
+    @include text--middle(px2rpx(50px));
+
+    background-color: $th_background-color;
+  }
+
+  th,
+  td {
+    padding: px2rpx($td_padding);
+    flex: 1;
+    border-left: 1px solid $td_border-color;
+    border-bottom: 1px solid $td_border-color;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &.w150 {
+      flex: 0 1 auto;
+      width: px2rpx(150px);
+    }
+  }
+
+  @include e(together) {
+    @include position--absolute(px2rpx(80px), 0, 0, px2rpx(360px));
+    @include padding(px2rpx(50px), px2rpx(40px), null, px2rpx(40px));
+
+    box-sizing: border-box;
+    border-left: 1px solid $td_border-color;
+    border-bottom: 1px solid $td_border-color;
+  }
+}
