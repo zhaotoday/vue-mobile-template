@@ -9,18 +9,11 @@ export default {
   data () {
     return {
       hasBirthday: false,
-      cForm: {
-        name: '测试',
-        phoneNumber: '13950442340',
-        birthday: ''
-      }
+      cForm: {}
     }
   },
   async onShow () {
-    const { name, birthday } = await this.getWxUsersDetail()
-
-    this.cForm.name = name
-    this.cForm.birthday = birthday
+    this.cForm = await this.getWxUsersDetail()
   },
   methods: {
     async getWxUsersDetail () {
@@ -32,11 +25,21 @@ export default {
       this.cForm.birthday = e.detail.value
     },
     async save () {
-      if (this.submitDisabled) {
+      const { name, birthday } = this.cForm
+
+      if (!name.trim()) {
+        this.$wx.showToast({
+          title: '请填写姓名'
+        })
         return
       }
 
-      const { name, birthday } = this.cForm
+      if (!this.birthday) {
+        this.$wx.showToast({
+          title: '请选择生日'
+        })
+        return
+      }
 
       await this.$store.dispatch('wx/wxUsers/post', {
         body: { name, birthday }

@@ -1,3 +1,5 @@
+import GENDERS from './genders'
+
 // 接口地址
 // const API_URL = 'http://localhost:3004/api/v1'
 const API_URL = 'https://api.fjnm.cn/api/v1'
@@ -15,6 +17,7 @@ const LOGIN_PAGE = '/pages/login/index'
 const BIND_PAGE = '/pages/bind/index'
 
 export default {
+  GENDERS,
   API_URL,
   CDN_URL,
   HOME_PAGE,

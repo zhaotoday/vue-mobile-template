@@ -22,6 +22,12 @@
         </div>
       </div>
       <div class="c-list__item">
+        <label class="c35">性别</label>
+        <div class="c-list__value fs32">
+          {{ $helpers.getItem($consts.GENDERS, 'value', cForm.gender)['label'] || '未知' }}
+        </div>
+      </div>
+      <div class="c-list__item">
         <label class="c35">生日</label>
         <div
           v-if="hasBirthday"
