@@ -3,8 +3,8 @@
     <swiper
       class="c-swiper__swiper"
       :circular="true"
-      :autoplay="true"
-      :interval="2500"
+      :autoplay="autoplay"
+      :interval="interval"
       @change="handleChange">
       <swiper-item
         v-for="(item, index) in items"
@@ -12,7 +12,8 @@
         <img
           class="c-swiper__image"
           mode="aspectFill"
-          :src="item" />
+          :src="item"
+        />
       </swiper-item>
     </swiper>
     <div class="cc-indicator">
