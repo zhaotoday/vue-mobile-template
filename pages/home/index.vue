@@ -43,6 +43,24 @@
     <div class="b-panel bgc11">
       <div class="b-panel__head fs36 u-tac">新闻动态</div>
       <div class="b-panel__body c35 fs28">
+        <ul>
+          <li
+            v-for="item in 4"
+            :key="item"
+            class="c-media c-media--sm">
+            <img
+              class="c-media__image"
+              src="http://localhost:88/pages/home/demo2.jpg"
+            />
+            <div class="c-media__body">
+              <h2 class="c-media__title fs30">夏天适合游泳锻炼坚持下来或能赚到这5个益处夏天适合游泳锻炼坚持下来或能赚到这5个益处</h2>
+              <div class="c-media__extra c31 fs24">2019.06.21</div>
+            </div>
+          </li>
+          <li class="c-media__more c31 u-tac">
+            查看更多
+          </li>
+        </ul>
       </div>
     </div>
   </div>
