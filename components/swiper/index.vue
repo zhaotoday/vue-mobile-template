@@ -8,11 +8,13 @@
       @change="handleChange">
       <swiper-item
         v-for="(item, index) in items"
-        :key="index">
+        :key="index"
+        :style="{ height: height + 'rpx' }">
         <img
           class="c-swiper__image"
           mode="aspectFill"
           :src="item"
+          :style="{ height: height + 'rpx' }"
         />
       </swiper-item>
     </swiper>

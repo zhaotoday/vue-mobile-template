@@ -14,6 +14,10 @@ export default {
     interval: {
       type: Number,
       default: 3000
+    },
+    height: {
+      type: Number,
+      default: 300
     }
   },
   data () {

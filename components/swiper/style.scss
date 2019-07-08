@@ -4,7 +4,7 @@
   position: relative;
 
   @include e(swiper, image) {
-    @include size(100%, px2rpx(300px));
+    width: 100%;
   }
 
   @include cc(indicator) {
