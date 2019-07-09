@@ -1,29 +1,21 @@
 @include c(media) {
-  display: flex;
-
-  @include e(image) {
-    flex: 0 1 auto;
-    display: block;
-  }
-
-  @include e(body) {
-    flex: 1;
-  }
-
   @include m(sm) {
     @include padding(px2rpx(32px), null, px2rpx(32px));
 
+    display: flex;
     border-bottom: 1px solid map-get($colors, c34);
 
     @include c(media) {
       @include e(image) {
         @include size(px2rpx(208px), px2rpx(128px));
 
+        flex: 0 1 auto;
         display: block;
         border-radius: px2rpx(8px);
       }
 
       @include e(body) {
+        flex: 1;
         margin-left: px2rpx(20px);
       }
 
@@ -46,5 +38,30 @@
 
   @include e(more) {
     @include padding(px2rpx(16px), null, px2rpx(16px));
+  }
+
+  @include m(bg) {
+    @include margin(null, auto, px2rpx(20px), auto);
+    @include padding(px2rpx(22px), null, px2rpx(30px));
+
+    width: px2rpx(710px);
+    border-radius: px2rpx(12px);
+
+    @include c(media) {
+      @include e(image) {
+        @include size(px2rpx(670px), px2rpx(300px));
+        @include block--center;
+
+        display: block;
+      }
+
+      @include e(title) {
+        @include block--center;
+
+        width: px2rpx(670px);
+        padding-top: px2rpx(30px);
+        line-height: 140%;
+      }
+    }
   }
 }

@@ -1,16 +1,16 @@
 <template>
   <div class="p-home">
     <c-swiper :items="banners"></c-swiper>
-    <div class="b-panel bgc11 u-mb20">
-      <h2 class="b-panel__head fs36 u-tac">俱乐部简介</h2>
-      <div class="b-panel__body c35 fs28">
+    <div class="c-panel bgc11 u-mb20">
+      <h2 class="c-panel__head fs36 u-tac">俱乐部简介</h2>
+      <div class="c-panel__body c35 fs28">
         <p>福州泳力游泳俱乐部，以普及游泳为己任，立志于做中国最专业的游泳培训机构，并希望以已之力让热爱游泳的人能通过游泳保持身心健康，实现自我价值。 </p>
         <p>泳力游泳俱乐部，涵盖专业游泳培训和群众游泳培训两个版块，且在两个不同版块整合各自领域的优势资源，实现优势互补，成为游泳培训行业的标杆。</p>
       </div>
     </div>
-    <div class="b-panel bgc11 u-mb20">
-      <div class="b-panel__head fs36 u-tac">团队介绍</div>
-      <div class="b-panel__body c35 fs28">
+    <div class="c-panel bgc11 u-mb20">
+      <div class="c-panel__head fs36 u-tac">团队介绍</div>
+      <div class="c-panel__body c35 fs28">
         <table
           class="c-table bgc11 fs28 u-tac"
           style="margin-bottom: 32rpx;">
@@ -40,10 +40,10 @@
         </p>
       </div>
     </div>
-    <div class="b-panel bgc11 u-mb16">
-      <div class="b-panel__head fs36 u-tac">新闻动态</div>
+    <div class="c-panel bgc11 u-mb16">
+      <div class="c-panel__head fs36 u-tac">新闻动态</div>
       <div
-        class="b-panel__body c35 fs28"
+        class="c-panel__body c35 fs28"
         style="padding-bottom: 0;">
         <ul style="margin-top: -20rpx;">
           <li

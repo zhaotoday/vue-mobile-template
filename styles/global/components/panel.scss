@@ -1,36 +1,27 @@
 @include c(panel) {
   @include e(head) {
-    @include text--middle(px2rpx(80px));
+    @include padding(px2rpx(30px), null, px2rpx(50px));
 
     position: relative;
-  }
 
-  @include e(title) {
-    text-indent: px2rpx(30px);
-  }
+    &::after {
+      @include position--absolute(null, null, px2rpx(28px), 50%);
+      @include size(px2rpx(48px), px2rpx(8px));
 
-  @include e(extra) {
-    @include padding(px2rpx(5px), null, px2rpx(5px));
-    @include position--absolute(50%, px2rpx(40px));
-
-    display: inline-block;
-    transform: translateY(-50%);
-    line-height: 100%;
-
-    @include s(is-link) {
-      padding-right: px2rpx(32px);
-      background: {
-        image: cdn("components/panel/more.png");
-        size: px2rpx(24px) px2rpx(32px);
-        position: center right;
-        repeat: no-repeat;
-      }
+      transform: translateX(-50%);
+      border-radius: px2rpx(8px);
+      display: block;
+      content: '';
+      background-color: map-get($colors, c21);
     }
   }
 
   @include e(body) {
-    @include m(p30) {
-      @include padding(null, px2rpx(30px), px2rpx(30px), px2rpx(30px));
+    @include padding(null, px2rpx(40px), px2rpx(20px), px2rpx(40px));
+
+    p {
+      line-height: 150%;
+      padding-bottom: px2rpx(20px);
     }
   }
 }

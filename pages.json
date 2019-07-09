@@ -1,6 +1,18 @@
 {
   "pages": [
     {
+      "path": "pages/events/index",
+      "style": {
+        "navigationBarTitleText": "赛事"
+      }
+    },
+    {
+      "path": "pages/natatoriums/index",
+      "style": {
+        "navigationBarTitleText": "游泳馆"
+      }
+    },
+    {
       "path": "pages/home/index",
       "style": {
         "navigationBarTitleText": "首页"
@@ -12,18 +24,6 @@
         "navigationBarTitleText": "我的",
         "navigationBarTextStyle": "white",
         "navigationBarBackgroundColor": "#1DA677"
-      }
-    },
-    {
-      "path": "pages/natatoriums/index",
-      "style": {
-        "navigationBarTitleText": "游泳馆"
-      }
-    },
-    {
-      "path": "pages/events/index",
-      "style": {
-        "navigationBarTitleText": "赛事"
       }
     },
     {
