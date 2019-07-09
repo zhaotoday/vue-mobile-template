@@ -22,7 +22,7 @@
         我的课程
       </div>
       <button
-        class="c-list__item has-border is-button has-icon is-link fs34"
+        class="c-list__item has-border is-button has-icon is-link bgc11 fs34"
         open-type="contact">
         <i class="c-icon c-icon--service"></i>
         客户服务

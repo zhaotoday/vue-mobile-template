@@ -1,6 +1,6 @@
 <template>
   <div class="p-bind">
-    <div class="c-list bgc1 fs30 u-mt16">
+    <div class="c-list bgc11 fs30 u-mt16">
       <div class="c-list__item">
         <input
           class="c-list__value is-full fs32"
