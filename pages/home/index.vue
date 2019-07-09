@@ -40,9 +40,11 @@
         </p>
       </div>
     </div>
-    <div class="b-panel bgc11">
+    <div class="b-panel bgc11 u-mb16">
       <div class="b-panel__head fs36 u-tac">新闻动态</div>
-      <div class="b-panel__body c35 fs28">
+      <div
+        class="b-panel__body c35 fs28"
+        style="padding-bottom: 0;">
         <ul style="margin-top: -20rpx;">
           <li
             v-for="item in 4"

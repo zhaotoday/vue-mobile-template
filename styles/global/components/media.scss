@@ -41,10 +41,10 @@
       @include e(extra) {
         padding-top: px2rpx(25px);
       }
-
-      @include e(more) {
-        @include padding(px2rpx(16px), null, px2rpx(16px));
-      }
     }
+  }
+
+  @include e(more) {
+    @include padding(px2rpx(16px), null, px2rpx(16px));
   }
 }
