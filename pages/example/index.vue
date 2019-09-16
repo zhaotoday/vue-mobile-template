@@ -1,8 +1,8 @@
-<example>
+<template>
   <div class="p-example">
     example
   </div>
-</example>
+</template>
 
 <script src="./script.js"></script>
 
