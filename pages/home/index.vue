@@ -1,8 +1,8 @@
-<temlpate>
+<template>
   <div class="p-home">
     home
   </div>
-</temlpate>
+</template>
 
 <script src="./script.js"></script>
 
