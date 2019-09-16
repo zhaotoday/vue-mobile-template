@@ -1,0 +1,18 @@
+@include c(actions) {
+  @include position--fixed(null, null, 0, 0);
+
+  width: 100%;
+  z-index: map-get($z-indexes, c-actions);
+
+  @include e(item) {
+    @include text--middle(px2rpx(110px));
+
+    border-bottom: 1px solid map-get($colors, c34);
+  }
+
+  @include e(cancel) {
+    @include text--middle(px2rpx(100px));
+
+    margin-top: px2rpx(14px);
+  }
+}

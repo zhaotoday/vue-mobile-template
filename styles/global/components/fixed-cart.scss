@@ -1,0 +1,29 @@
+@include c(fixed-cart) {
+  $left: 30px;
+  $bottom: 120px;
+
+  @include position--fixed(null, null, px2rpx($bottom), px2rpx($left));
+  @include text--middle(px2rpx(76px));
+  @include padding(null, px2rpx(30px), null, px2rpx(75px));
+
+  display: inline-block;
+  border-radius: px2rpx(38px);
+  background: {
+    image: cdn("components/fixed-cart/cart.png");
+    size: px2rpx(36px) px2rpx(30px);
+    repeat: no-repeat;
+    position: px2rpx(30px) center;
+  }
+
+  @include s(has-tab) {
+    bottom: px2rpx($bottom - 96px);
+  }
+
+  @include e(number) {
+    @include position--absolute(px2rpx(6px), null, null, px2rpx(50px));
+    @include padding(null, px2rpx(10px), null, px2rpx(10px));
+    @include text--middle(px2rpx(30px));
+
+    border-radius: px2rpx(15px);
+  }
+}

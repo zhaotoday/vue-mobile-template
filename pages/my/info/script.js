@@ -1,11 +1,4 @@
-import CCheckbox from '@/components/checkbox'
-import { mapState } from 'vuex'
-
 export default {
-  components: { CCheckbox },
-  computed: mapState({
-    wxUsersDetail: state => state['wx/wxUsers'].detail
-  }),
   data () {
     return {
       hasBirthday: false,
@@ -13,12 +6,14 @@ export default {
     }
   },
   async onShow () {
-    this.cForm = await this.getWxUsersDetail()
+    this.id = this.$auth.get()['user'].id
+    this.cForm = await this.getDetail()
+    this.hasBirthday = !!this.cForm.birthday
   },
   methods: {
-    async getWxUsersDetail () {
+    async getDetail () {
       return this.$store.dispatch('wx/wxUsers/getDetail', {
-        id: this.$auth.get()['user'].id
+        id: this.id
       })
     },
     handleBirthdayChange (e) {
@@ -34,14 +29,15 @@ export default {
         return
       }
 
-      if (!this.birthday) {
+      if (!birthday) {
         this.$wx.showToast({
           title: '请选择生日'
         })
         return
       }
 
-      await this.$store.dispatch('wx/wxUsers/post', {
+      await this.$store.dispatch('wx/wxUsers/put', {
+        id: this.id,
         body: { name, birthday }
       })
 

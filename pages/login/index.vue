@@ -3,7 +3,7 @@
     <div class="b-logo">
       <c-logo></c-logo>
     </div>
-    <h2 class="b-title fs32">力软小程序将获取以下授权：</h2>
+    <h2 class="b-title fs32">泳力俱乐部小程序将获取以下授权：</h2>
     <p class="b-desc c31 fs28">获得您的公开信息（昵称、头像等）</p>
     <button
       class="c-button w650 h88 bgc21 c11 fs32"

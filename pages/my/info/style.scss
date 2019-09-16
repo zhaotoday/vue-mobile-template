@@ -15,10 +15,4 @@
 
     line-height: 100%;
   }
-
-  @include c(button) {
-    @include position--fixed(null, null, px2rpx(80px), 50%);
-
-    transform: translateX(-50%);
-  }
 }

@@ -1,18 +1,18 @@
 <template>
   <div class="p-home">
     <c-swiper :items="banners"></c-swiper>
-    <div class="c-panel bgc11 u-mb20">
+    <div class="c-panel bgc11 u-mb16">
       <h2 class="c-panel__head fs36 u-tac">俱乐部简介</h2>
       <div class="c-panel__body c35 fs28">
         <p>福州泳力游泳俱乐部，以普及游泳为己任，立志于做中国最专业的游泳培训机构，并希望以已之力让热爱游泳的人能通过游泳保持身心健康，实现自我价值。 </p>
         <p>泳力游泳俱乐部，涵盖专业游泳培训和群众游泳培训两个版块，且在两个不同版块整合各自领域的优势资源，实现优势互补，成为游泳培训行业的标杆。</p>
       </div>
     </div>
-    <div class="c-panel bgc11 u-mb20">
+    <div class="c-panel bgc11 u-mb16">
       <div class="c-panel__head fs36 u-tac">团队介绍</div>
       <div class="c-panel__body c35 fs28">
         <table
-          class="c-table bgc11 fs28 u-tac"
+          class="c-table bgc27 fs28 u-tac"
           style="margin-bottom: 32rpx;">
           <tr class="c11">
             <th class="w150">职称</th>
@@ -24,12 +24,12 @@
             <td class="w150">7</td>
           </tr>
           <tr>
-            <td class="w150">高级教练</td>
-            <td class="w150">7</td>
+            <td class="w150">中级教练</td>
+            <td class="w150">4</td>
           </tr>
           <tr>
-            <td class="w150">高级教练</td>
-            <td class="w150">7</td>
+            <td class="w150">初级教练</td>
+            <td class="w150">12</td>
           </tr>
           <div class="c-table__together">
             其中： 国家级游泳健将11人， 国家一级运动员33人
@@ -47,20 +47,25 @@
         style="padding-bottom: 0;">
         <ul style="margin-top: -20rpx;">
           <li
-            v-for="item in 4"
-            :key="item"
-            class="c-media c-media--sm">
+            v-for="item in newsList.items"
+            :key="item.id"
+            class="c-media c-media--sm"
+            @click="navigateTo(`/pages/detail/index?id=${item.id}&title=新闻详情`)">
             <img
               class="c-media__image"
-              src="http://localhost:88/pages/home/demo2.jpg"
+              :src="$helpers.getImageById(item.picture)"
+              mode="aspectFill"
             />
             <div class="c-media__body">
-              <h2 class="c-media__title fs30">夏天适合游泳锻炼坚持下来或能赚到这5个益处夏天适合游泳锻炼坚持下来或能赚到这5个益处</h2>
-              <div class="c-media__extra c31 fs24">2019.06.21</div>
+              <h2 class="c-media__title fs30">{{ item.title }}</h2>
+              <div class="c-media__extra c31 fs24">{{ $time.getTime(item.createdAt) }}</div>
             </div>
           </li>
-          <li class="c-media__more c31 u-tac">
-            查看更多
+          <li
+            class="c-media__more c31 u-tac"
+            @click="navigateTo('/pages/news/index')">
+            <span>查看更多</span>
+            <i class="c-icon c-icon--more"></i>
           </li>
         </ul>
       </div>

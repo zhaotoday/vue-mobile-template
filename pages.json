@@ -1,21 +1,95 @@
 {
   "pages": [
     {
-      "path": "pages/events/index",
+      "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "赛事"
+        "navigationBarTitleText": "泳力俱乐部"
       }
     },
     {
-      "path": "pages/natatoriums/index",
+      "path": "pages/trainer/home/index",
+      "style": {
+        "navigationBarTitleText": "学员点评",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#617CF2"
+      }
+    },
+    {
+      "path": "pages/trainer/comments/list/index",
+      "style": {
+        "navigationBarTitleText": "点评"
+      }
+    },
+    {
+      "path": "pages/trainer/comments/form/index",
+      "style": {
+        "navigationBarTitleText": "新增点评"
+      }
+    },
+    {
+      "path": "pages/my/products/home/index",
+      "style": {
+        "navigationBarTitleText": "我的课程"
+      }
+    },
+    {
+      "path": "pages/my/products/comments/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/orders/index",
+      "style": {
+        "navigationBarTitleText": "我的订单"
+      }
+    },
+    {
+      "path": "pages/cart/index",
+      "style": {
+        "navigationBarTitleText": "购物车"
+      }
+    },
+    {
+      "path": "pages/natatoriums/list/index",
       "style": {
         "navigationBarTitleText": "游泳馆"
       }
     },
     {
-      "path": "pages/home/index",
+      "path": "pages/natatoriums/detail/index",
       "style": {
-        "navigationBarTitleText": "首页"
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/products/detail/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/news/index",
+      "style": {
+        "navigationBarTitleText": "新闻动态"
+      }
+    },
+    {
+      "path": "pages/my/info/index",
+      "style": {
+        "navigationBarTitleText": "我的资料"
+      }
+    },
+    {
+      "path": "pages/detail/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/events/index",
+      "style": {
+        "navigationBarTitleText": "赛事"
       }
     },
     {
@@ -24,12 +98,6 @@
         "navigationBarTitleText": "我的",
         "navigationBarTextStyle": "white",
         "navigationBarBackgroundColor": "#1DA677"
-      }
-    },
-    {
-      "path": "pages/my/info/index",
-      "style": {
-        "navigationBarTitleText": "我的信息"
       }
     },
     {
@@ -70,7 +138,7 @@
         "text": "俱乐部"
       },
       {
-        "pagePath": "pages/natatoriums/index",
+        "pagePath": "pages/natatoriums/list/index",
         "iconPath": "static/tab-bar/natatoriums.png",
         "selectedIconPath": "static/tab-bar/natatoriums-hl.png",
         "text": "游泳馆"

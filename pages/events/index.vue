@@ -1,21 +1,23 @@
 <template>
   <div class="p-events">
-    <div class="c-panel bgc11 u-mb16">
+    <div class="c-panel bgc11 u-mt16 u-mb16">
       <div
         class="c-panel__body c35 fs28"
         style="padding-bottom: 0;">
-        <ul class="bgc11 u-mt20">
+        <ul>
           <li
-            v-for="item in 5"
-            :key="item"
-            class="c-media c-media--sm">
+            v-for="item in eventsList.items"
+            :key="item.id"
+            class="c-media c-media--sm"
+            @click="navigateTo(`/pages/detail/index?id=${item.id}&title=赛事详情`)">
             <img
               class="c-media__image"
-              src="http://localhost:88/pages/home/demo2.jpg"
+              :src="$helpers.getImageById(item.picture)"
+              mode="aspectFill"
             />
             <div class="c-media__body">
-              <h2 class="c-media__title fs30">夏天适合游泳锻炼坚持下来或能赚到这5个益处夏天适合游泳锻炼坚持下来或能赚到这5个益处</h2>
-              <div class="c-media__extra c31 fs24">2019.06.21</div>
+              <h2 class="c-media__title fs30">{{ item.title }}</h2>
+              <div class="c-media__extra c31 fs24">{{ $time.getTime(item.createdAt) }}</div>
             </div>
           </li>
         </ul>

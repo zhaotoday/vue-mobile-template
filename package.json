@@ -23,7 +23,8 @@
     "mp-client": "0.0.29",
     "sass-utils": "^1.0.22",
     "vuex": "^3.1.0",
-    "wx-bridge": "0.0.19"
+    "vuex-persistedstate": "^2.5.4",
+    "wx-bridge": "0.0.24"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",

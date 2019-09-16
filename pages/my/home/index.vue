@@ -1,13 +1,14 @@
 <template>
-  <div class="p-my">
+  <div
+    v-if="user.id"
+    class="p-my">
     <div class="b-bg"></div>
     <img
       class="c-avatar"
       :src="user.avatarUrl"
     />
-    <div class="b-name fs40 u-tac">赵金添</div>
-    <div class="b-phone c35 fs28 u-tac">手机号：13950442340</div>
-
+    <div class="b-name fs40 u-tac">{{ detail.name || user.nickName }}</div>
+    <div class="b-phone c35 fs28 u-tac">手机号：{{ user.phoneNumber }}</div>
     <div class="c-list fs34">
       <div
         class="c-list__item has-icon is-link"
@@ -17,8 +18,14 @@
       </div>
       <div
         class="c-list__item has-icon is-link"
-        @click="navigateTo('/pages/addresses/list/index')">
-        <i class="c-icon c-icon--course"></i>
+        @click="navigateTo('/pages/orders/index')">
+        <i class="c-icon c-icon--order"></i>
+        我的订单
+      </div>
+      <div
+        class="c-list__item has-icon is-link"
+        @click="navigateTo('/pages/my/products/home/index')">
+        <i class="c-icon c-icon--product"></i>
         我的课程
       </div>
       <button

@@ -1,0 +1,17 @@
+@import '../../styles/utils/index';
+
+@include p(detail) {
+  @include b(title) {
+    @include padding(px2rpx(40px), null, px2rpx(40px));
+    @include block--center;
+
+    width: px2rpx(670px);
+    line-height: px2rpx(66px);
+  }
+
+  @include b(content) {
+    @include padding(null, px2rpx(40px), px2rpx(40px), px2rpx(40px));
+
+    line-height: px2rpx(50px);
+  }
+}

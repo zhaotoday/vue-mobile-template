@@ -1,0 +1,7 @@
+@import '../../../../styles/utils/index';
+
+@include p(trainer-comments-list) {
+  &.pb {
+    padding-bottom: px2rpx(96px);
+  }
+}

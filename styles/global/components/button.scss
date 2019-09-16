@@ -1,6 +1,6 @@
 @include c(button) {
-  $widths: 650;
-  $heights: 88;
+  $widths: 650, 160;
+  $heights: 88, 48;
   $border-radii: 0;
 
   box-sizing: border-box;

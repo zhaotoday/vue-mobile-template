@@ -18,7 +18,7 @@
         <div
           class="c-list__operation c21 fs28"
           @click="navigateTo('/pages/bind/index?update=1')">
-          更换手机
+          更换手机号
         </div>
       </div>
       <div class="c-list__item">

@@ -24,4 +24,23 @@
       padding-bottom: px2rpx(20px);
     }
   }
+
+  @include e(foot) {
+    @include padding(px2rpx(16px), 0, px2rpx(16px));
+
+    position: relative;
+    line-height: 100%;
+    text-align: right;
+
+    @include c(button) {
+      margin-left: px2rpx(20px);
+    }
+  }
+
+  @include e(extra) {
+    @include position--absolute(50%, null, null, 0);
+
+    transform: translateY(-50%);
+    line-height: 100%;
+  }
 }

@@ -1,0 +1,14 @@
+@import '../../../styles/utils/index';
+
+@include p(trainer-home) {
+  @include b(score) {
+    @include e(input) {
+      @include size(px2rpx(420px), px2rpx(88px));
+      @include margin(null, auto, px2rpx(40px), auto);
+
+      display: block;
+      background: rgba(241, 241, 241, 1);
+      border-radius: 8px;
+    }
+  }
+}

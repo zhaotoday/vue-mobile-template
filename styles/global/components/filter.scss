@@ -1,0 +1,13 @@
+@include c(filter) {
+  @include text--middle(px2rpx(66px));
+
+  vertical-align: middle;
+  border-bottom: 1px solid map-get($colors, c34);
+  z-index: map-get($z-indexes, c-filter);
+
+  @include c(icon) {
+    @include position--relative(px2rpx(2px));
+
+    margin-left: px2rpx(10px);
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../../../styles/utils/index';
+
+@include p(trainer-comments-form) {
+  @include b(title) {
+    @include padding(px2rpx(26px), null, px2rpx(20px), px2rpx(40px));
+
+    line-height: 100%;
+  }
+
+  @include b(textarea) {
+    @include size(px2rpx(650px), px2rpx(180px));
+
+    border-radius: px2rpx(6px);
+    line-height: px2rpx(40px);
+    padding: px2rpx(20px);
+    margin-left: px2rpx(30px);
+  }
+
+  @include b(upload) {
+    @include size(px2rpx(220px), px2rpx(220px));
+
+    border: px2rpx(2px) dashed map-get($colors, c39);
+    margin-left: px2rpx(30px);
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+      @include position--absolute(50%, null, null, 50%);
+
+      transform: translateX(-50%) translateY(-50%);
+      display: block;
+      content: '';
+    }
+
+    &::before {
+      @include size(px2rpx(1px), px2rpx(60px));
+
+      border-left: 1px solid map-get($colors, c39);
+    }
+
+    &::after {
+      @include size(px2rpx(60px), px2rpx(1px));
+
+      border-bottom: 1px solid map-get($colors, c39);
+    }
+  }
+
+  @include b(upload-file) {
+    @include size(px2rpx(220px), px2rpx(220px));
+
+    border: px2rpx(2px) dashed map-get($colors, c39);
+    margin-left: px2rpx(30px);
+    box-sizing: border-box;
+    position: relative;
+
+    video {
+      @include size(100%, 100%);
+    }
+
+    @include c(icon) {
+      @include position--absolute(px2rpx(-24px), px2rpx(-24px));
+    }
+  }
+}

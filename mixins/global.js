@@ -10,7 +10,7 @@ export default {
   },
   onShareAppMessage () {
     return {
-      title: '小程序名称',
+      title: this.$consts.INTRODUCTION,
       path: this.$consts.HOME_PAGE
     }
   },
