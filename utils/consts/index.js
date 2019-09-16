@@ -1,5 +1,4 @@
 import GENDERS from './genders'
-import ORDER_STATUSES from './order-statuses'
 
 // 接口地址
 // const API_URL = 'http://localhost:3006/api/v1'
@@ -18,11 +17,10 @@ const LOGIN_PAGE = '/pages/login/index'
 const BIND_PAGE = '/pages/bind/index'
 
 // 介绍
-const INTRODUCTION = '泳力游泳俱乐部展示平台，查询泳力合作场馆，了解游泳培训课程、教练员资质，学员情况等。'
+const INTRODUCTION = '小程序介绍。'
 
 export default {
   GENDERS,
-  ORDER_STATUSES,
   API_URL,
   CDN_URL,
   HOME_PAGE,
