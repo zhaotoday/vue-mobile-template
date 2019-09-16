@@ -1,8 +1,8 @@
-<example>
-  <div class="p-example">
-    example
+<home>
+  <div class="p-home">
+    home
   </div>
-</example>
+</home>
 
 <script src="./script.js"></script>
 
