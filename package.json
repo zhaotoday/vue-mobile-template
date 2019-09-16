@@ -22,7 +22,7 @@
     "jt-time": "0.0.7",
     "mp-client": "0.0.29",
     "sass-utils": "^1.0.22",
-    "vuex": "^3.1.0",
+    "vuex": "^3.1.1",
     "vuex-persistedstate": "^2.5.4",
     "wx-bridge": "0.0.24"
   },
