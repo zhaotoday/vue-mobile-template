@@ -1,37 +1,4 @@
 @import '../../../styles/utils/index';
 
-page {
-  background-color: map-get($colors, c11);
-}
-
-@include p(my) {
-  @include size(100%, 100%);
-
-  overflow: hidden;
-  position: relative;
-
-  @include b(bg) {
-    @include circle(px2rpx(2000px));
-    @include position--absolute(px2rpx(-1810px), null, null, 50%);
-
-    transform: translateX(-50%);
-    background-color: map-get($colors, c21);
-  }
-
-  @include c(avatar) {
-    @include position--absolute(px2rpx(60px), null, null, 50%);
-
-    transform: translateX(-50%);
-  }
-
-  @include b(name) {
-    padding-top: px2rpx(260px);
-    line-height: 100%;
-  }
-
-  @include b(phone) {
-    @include padding(px2rpx(14px), null, px2rpx(30px));
-
-    line-height: 100%;
-  }
+@include p(my-home) {
 }
