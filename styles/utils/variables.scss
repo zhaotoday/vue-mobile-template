@@ -8,34 +8,35 @@ $cdn-version: 0.1;
 // 颜色
 $colors: (
   // 黑白
-        c11: white,
-        c12: black,
+  c11: white,
+  c12: black,
   // 主色调
-        c21: #1DA677,
-        c22: #fff,
-        c23: #D93535,
-        c24: #FA751D,
-        c25: red,
-        c26: #617CF2,
-        c27: #EEF8F5,
+  c21: #1DA677,
+  c22: #fff,
+  c23: #D93535,
+  c24: #FA751D,
+  c25: red,
+  c26: #617CF2,
+  c27: #EEF8F5,
   // 灰色
-        c31: #999999,
-        c32: #BABABA,
-        c33: #E5E5E5,
-        c34: #F2F2F2,
-        c35: #666666,
-        c36: #2D2D2D,
-        c37: #BCBCBC,
-        c38: #CECECE,
-        c39: #EAEAEA
+  c31: #999999,
+  c32: #BABABA,
+  c33: #E5E5E5,
+  c34: #F2F2F2,
+  c35: #666666,
+  c36: #2D2D2D,
+  c37: #BCBCBC,
+  c38: #CECECE,
+  c39: #EAEAEA
 );
 
 // z-index
 $z-indexes: (
-        c-tabs: 4,
-        c-fixed-cart: 4,
-        c-overlay: 5,
-        c-dialog: 6,
-        c-popup: 6,
-        c-actions: 6
+  c-filter: 2,
+  c-tabs: 4,
+  c-fixed-cart: 4,
+  c-overlay: 5,
+  c-dialog: 6,
+  c-popup: 6,
+  c-actions: 6
 );
