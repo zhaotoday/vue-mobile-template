@@ -1,17 +1,26 @@
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 import $consts from '@/utils/consts'
 
 export default {
   data () {
     return {
       $consts,
-      loaded: false
+      loaded: false,
+      query: {}
     }
   },
+  computed: mapState(['user']),
   onShareAppMessage () {
     return {
-      title: this.$consts.INTRODUCTION,
+      title: this.$consts.NAME,
       path: this.$consts.HOME_PAGE
+    }
+  },
+  onShow () {
+    if (this.$auth.loggedIn()) {
+      this.$store.dispatch('setUser', {
+        user: this.$auth.get()['user']
+      })
     }
   },
   methods: {
@@ -49,6 +58,9 @@ export default {
           resolve({ user })
         }
       })
+    },
+    wrapHTML (html) {
+      return html.replace(/\<img/gi, '<img style="max-width:100%;height:auto" ')
     }
   }
 }
