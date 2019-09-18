@@ -37,7 +37,7 @@
 
   @include e(together) {
     @include position--absolute(px2rpx(80px), 0, 0, px2rpx(360px));
-    @include padding(px2rpx(46px), px2rpx(40px), null, px2rpx(40px));
+    @include padding(px2rpx(50px), px2rpx(40px), null, px2rpx(40px));
 
     box-sizing: border-box;
     border-left: 1px solid $td_border-color;
