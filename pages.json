@@ -7,9 +7,9 @@
       }
     },
     {
-      "path": "pages/my/info/index",
+      "path": "pages/login/index",
       "style": {
-        "navigationBarTitleText": "我的资料"
+        "navigationBarTitleText": "授权登录"
       }
     },
     {
@@ -19,9 +19,9 @@
       }
     },
     {
-      "path": "pages/login/index",
+      "path": "pages/my/info/index",
       "style": {
-        "navigationBarTitleText": "授权登录"
+        "navigationBarTitleText": "我的资料"
       }
     },
     {
