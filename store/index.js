@@ -18,7 +18,9 @@ export default new Vuex.Store({
       }
     })
   ],
-  state: {},
+  state: {
+    user: {}
+  },
   getters,
   actions,
   mutations,
