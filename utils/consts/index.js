@@ -16,7 +16,10 @@ const LOGIN_PAGE = '/pages/login/index'
 // 绑定手机页面
 const BIND_PAGE = '/pages/bind/index'
 
-// 介绍
+// 小程序名称
+const NAME = '力软小程序'
+
+// 小程序介绍
 const INTRODUCTION = '小程序介绍。'
 
 export default {
@@ -26,5 +29,6 @@ export default {
   HOME_PAGE,
   LOGIN_PAGE,
   BIND_PAGE,
+  NAME,
   INTRODUCTION
 }
