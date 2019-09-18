@@ -19,8 +19,14 @@ export default {
     handleBirthdayChange (e) {
       this.cForm.birthday = e.detail.value
     },
+    handleGenderChange (e) {
+      const { index: formIndex } = e.currentTarget.dataset
+      const pickerIndex = +e.detail.value
+
+      this.cForm.gender = this.$consts.GENDERS[pickerIndex].value
+    },
     async save () {
-      const { name, birthday } = this.cForm
+      const { name, birthday, gender } = this.cForm
 
       if (!name.trim()) {
         this.$wx.showToast({
@@ -38,7 +44,7 @@ export default {
 
       await this.$store.dispatch('wx/wxUsers/put', {
         id: this.id,
-        body: { name, birthday }
+        body: { name, birthday, gender }
       })
 
       this.$wx.showToast({ title: '保存成功' })

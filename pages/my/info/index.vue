@@ -23,9 +23,21 @@
       </div>
       <div class="c-list__item">
         <label class="c35">性别</label>
-        <div class="c-list__value fs32">
-          {{ $helpers.getItem($consts.GENDERS, 'value', cForm.gender)['label'] || '未知' }}
-        </div>
+        <picker
+          :range="$consts.GENDERS.filter(item => item.value !== '0').map(item => item.label)"
+          :data-index="index"
+          @change="handleGenderChange">
+          <div
+            v-if="cForm.gender"
+            class="c-list__value fs32">
+            {{ $helpers.getItem($consts.GENDERS, 'value', cForm.gender)['label'] || '未知' }}
+          </div>
+          <div
+            v-else
+            class="c-list__value fs32 c31">
+            请选择性别
+          </div>
+        </picker>
       </div>
       <div class="c-list__item">
         <label class="c35">生日</label>
