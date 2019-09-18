@@ -5,7 +5,7 @@ export default {
       type: Boolean,
       default: false
     },
-    options: {
+    items: {
       type: Array,
       default: () => []
     }

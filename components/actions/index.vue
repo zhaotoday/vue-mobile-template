@@ -7,9 +7,9 @@
     </div>
     <div
       v-show="visible"
-      class="c-actions bgc34 fs36 u-tac">
+      class="c-actions bgc34 fs34 u-tac">
       <div
-        v-for="item in options"
+        v-for="item in items"
         :key="item.value"
         class="c-actions__item bgc11"
         @click="select(item)">

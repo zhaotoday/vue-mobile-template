@@ -53,7 +53,7 @@
         "pagePath": "pages/home/index",
         "iconPath": "static/tab-bar/home.png",
         "selectedIconPath": "static/tab-bar/home-hl.png",
-        "text": "力软小程序"
+        "text": "首页"
       },
       {
         "pagePath": "pages/my/home/index",
