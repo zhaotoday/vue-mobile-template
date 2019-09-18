@@ -1,6 +1,6 @@
 export default [
   {
-    label: '未知',
+    label: '保密',
     value: '0'
   },
   {

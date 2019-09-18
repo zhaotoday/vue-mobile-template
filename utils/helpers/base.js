@@ -26,5 +26,8 @@ export default {
   },
   encryptPhoneNumber (phoneNumber) {
     return phoneNumber ? `${phoneNumber.substring(0, 3)}****${phoneNumber.substring(8, 11)}` : ''
+  },
+  deepCopy (obj) {
+    return JSON.parse(JSON.stringify(obj))
   }
 }

@@ -17,9 +17,13 @@ export default class extends REST {
       body.wxUserId = userId
     }
 
-    // 转 query.where 对象为字符串
+    // 转 where 对象为字符串
     if (query.where) {
       query.where = restHelpers.whereToStr(query.where)
+    }
+
+    if (body.where) {
+      body.where = JSON.parse(restHelpers.whereToStr(body.where))
     }
 
     // 清楚缓存

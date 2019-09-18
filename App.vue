@@ -2,6 +2,7 @@
 export default {
   onLaunch () {
     this.setOpenId()
+    this.refreshWxUserInfo()
   },
   onShow () {
     console.log('App Show')
@@ -21,6 +22,27 @@ export default {
         })
 
         this.$auth.setOpenId({ openId })
+      }
+    },
+    async refreshWxUserInfo () {
+      if (this.$auth.loggedIn()) {
+        const {
+          data: {
+            nickName,
+            avatarUrl,
+            phoneNumber,
+            name
+          }
+        } = await this.$store.dispatch('wx/wxUsers/postAction', {
+          body: { type: 'GET_INFO' }
+        })
+
+        this.$auth.set({
+          nickName,
+          avatarUrl,
+          phoneNumber,
+          name
+        })
       }
     }
   }
