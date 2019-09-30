@@ -1,4 +1,3 @@
-import { utils } from 'mp-client'
 import CLogo from '@/components/logo'
 
 export default {
@@ -8,7 +7,7 @@ export default {
       const getSettingRes = await this.$wx.getSetting()
 
       if (!getSettingRes.authSetting['scope.userInfo']) {
-        this.$wx.showToast({ title: '授权登录后才能进行下一步操作' })
+        this.$wx.navigateBack()
       } else {
         const loginRes = await this.$wx.login()
         const { iv, encryptedData } = await this.$wx.getUserInfo({

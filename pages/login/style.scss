@@ -20,4 +20,10 @@
   @include b(desc) {
     padding-bottom: px2rpx(82px);
   }
+
+  @include b(buttons) {
+    @include block--center;
+
+    width: px2rpx(670px);
+  }
 }
