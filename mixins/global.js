@@ -33,6 +33,9 @@ export default {
     switchTab (url) {
       this.$wx.switchTab({ url })
     },
+    navigateBack (delta = 1) {
+      this.$wx.navigateBack({ delta })
+    },
     loggedIn () {
       return new Promise(async (resolve, reject) => {
         if (!this.$auth.loggedIn()) {
