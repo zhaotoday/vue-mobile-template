@@ -1,14 +1,11 @@
 @include c(icon) {
   $items: (
     (icon: logo, width: 160px, height: 160px),
-    (icon: order, width: 48px, height: 48px),
-    (icon: product, width: 48px, height: 48px),
     (icon: info, width: 48px, height: 48px),
     (icon: service, width: 48px, height: 48px),
     (icon: more, width: 12px, height: 20px),
     (icon: empty, width: 220px, height: 144px),
-    (icon: drop, width: 20px, height: 20px),
-    (icon: close, width: 48px, height: 48px)
+    (icon: drop, width: 20px, height: 20px)
   );
 
   display: inline-block;
