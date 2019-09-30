@@ -4,4 +4,10 @@
   background-color: map-get($colors, c11);
   display: block;
   border: px2rpx(8px) solid map-get($colors, c11);
+
+  @include m(default) {
+    background: {
+      image: cdn("components/avatar/default.png");
+    }
+  }
 }
