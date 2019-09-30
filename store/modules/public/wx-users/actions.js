@@ -26,7 +26,7 @@ export default {
     return new Model().DELETE({ id })
   },
 
-  postAction ({ commit }, { query, body }) {
-    return new Model().addPath('actions').POST({ query, body })
+  postAction ({ commit }, { showLoading, query, body }) {
+    return new Model().addPath('actions').POST({ showLoading, query, body })
   }
 }
