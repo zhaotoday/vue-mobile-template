@@ -1,6 +1,11 @@
 export default {
-  async onShow () {
-    await this.loggedIn()
-    await this.phoneNumberBound()
+  methods: {
+    async navigateToMyInfo () {
+      await this.loggedIn()
+
+      this.$wx.navigateTo({
+        url: '/pages/my/info/index'
+      })
+    }
   }
 }

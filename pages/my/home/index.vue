@@ -1,16 +1,30 @@
 <template>
   <div class="p-my">
-    <div class="b-bg"></div>
-    <img
-      class="c-avatar"
-      :src="user.avatarUrl"
-    />
-    <div class="b-name fs40 u-tac">{{ detail.name || user.nickName }}</div>
-    <div class="b-phone c35 fs28 u-tac">手机号：{{ user.phoneNumber }}</div>
+    <div class="b-info bgc21 c11 u-tac">
+      <template v-if="user.id">
+        <img
+          class="c-avatar"
+          :src="user.avatarUrl"
+        />
+        <div class="b-name fs40 u-tac">{{ detail.name || user.nickName }}</div>
+        <div class="b-phone fs28 u-tac">手机号：{{ user.phoneNumber }}</div>
+      </template>
+      <template v-else>
+        <div
+          class="c-avatar c-avatar--default"
+          @click="navigateTo($consts.LOGIN_PAGE)">
+        </div>
+        <div
+          class="b-login c-tag w60 h50 bdc11 br8 fs28"
+          @click="navigateTo($consts.LOGIN_PAGE)">
+          授权登录
+        </div>
+      </template>
+    </div>
     <div class="c-list fs34">
       <div
         class="c-list__item has-icon is-link"
-        @click="navigateTo('/pages/my/info/index')">
+        @click="navigateToMyInfo">
         <i class="c-icon c-icon--info"></i>
         我的资料
       </div>

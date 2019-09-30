@@ -8,6 +8,7 @@
   @include m(default) {
     background: {
       image: cdn("components/avatar/default.png");
+      size: 100% 100%;
     }
   }
 }

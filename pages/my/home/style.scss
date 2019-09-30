@@ -10,12 +10,12 @@ page {
   overflow: hidden;
   position: relative;
 
-  @include b(bg) {
-    @include circle(px2rpx(2000px));
-    @include position--absolute(px2rpx(-1810px), null, null, 50%);
+  @include b(info) {
+    @include size(100%, px2rpx(400px));
 
-    transform: translateX(-50%);
-    background-color: map-get($colors, c21);
+    box-sizing: border-box;
+    position: relative;
+    padding-top: px2rpx(260px);
   }
 
   @include c(avatar) {
@@ -24,14 +24,11 @@ page {
     transform: translateX(-50%);
   }
 
-  @include b(name) {
-    padding-top: px2rpx(260px);
+  @include b(name, phone) {
     line-height: 100%;
   }
 
   @include b(phone) {
     @include padding(px2rpx(14px), null, px2rpx(30px));
-
-    line-height: 100%;
   }
 }

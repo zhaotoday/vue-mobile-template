@@ -1,6 +1,6 @@
 @include c(tag) {
   $heights: 34, 50, 60;
-  $border-radii: 0;
+  $border-radii: 0 8;
 
   display: inline-block;
 
