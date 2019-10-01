@@ -6,8 +6,8 @@
           class="c-avatar"
           :src="user.avatarUrl"
         />
-        <div class="b-name fs40 u-tac">{{ detail.name || user.nickName }}</div>
-        <div class="b-phone fs28 u-tac">手机号：{{ user.phoneNumber }}</div>
+        <div class="b-name fs40">{{ detail.name || user.nickName }}</div>
+        <div class="b-phone fs28">手机号：{{ user.phoneNumber }}</div>
       </template>
       <template v-else>
         <div
