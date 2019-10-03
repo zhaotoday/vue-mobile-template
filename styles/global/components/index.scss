@@ -1,0 +1,11 @@
+@include c(index) {
+  @include cc(list) {
+    @include e(title){
+      @include text--middle(30px);
+    }
+  }
+
+  @include cc(letters) {
+
+  }
+}
