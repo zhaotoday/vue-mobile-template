@@ -1,7 +1,17 @@
 @include c(index) {
   @include cc(list) {
-    @include e(title){
+    @include e(title, item) {
+      text-indent: px2rpx(20px);
+    }
+
+    @include e(title) {
       @include text--middle(30px);
+    }
+
+    @include e(item) {
+      @include text--middle(50px);
+
+      border-bottom: 1px solid map-get($colors, c34);
     }
   }
 
