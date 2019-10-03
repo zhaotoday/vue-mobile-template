@@ -18,6 +18,7 @@ export default {
         })
 
         const { data: { openId } } = await this.$store.dispatch('public/wxUsers/postAction', {
+          showError: false,
           body: { type: 'MP_CODE_TO_SESSION', code }
         })
 
@@ -34,6 +35,7 @@ export default {
             name
           }
         } = await this.$store.dispatch('wx/wxUsers/postAction', {
+          showError: false,
           body: { type: 'GET_INFO' }
         })
 
