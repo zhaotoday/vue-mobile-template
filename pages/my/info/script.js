@@ -47,6 +47,8 @@ export default {
         body: { name, birthday, gender }
       })
 
+      this.$auth.set({ name })
+
       this.$wx.showToast({ title: '保存成功' })
 
       await this.$helpers.sleep(1500)

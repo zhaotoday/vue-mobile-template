@@ -1,15 +1,15 @@
 {
   "pages": [
     {
-      "path": "pages/select-city/index",
-      "style": {
-        "navigationBarTitleText": "城市选择"
-      }
-    },
-    {
       "path": "pages/home/index",
       "style": {
         "navigationBarTitleText": "力软小程序"
+      }
+    },
+    {
+      "path": "pages/select-city/index",
+      "style": {
+        "navigationBarTitleText": "城市选择"
       }
     },
     {

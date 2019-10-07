@@ -7,12 +7,6 @@
     text-align: center;
   }
 
-  @include b(title, desc) {
-    @include margin(null, px2rpx(50px), null, px2rpx(50px));
-
-    line-height: 100%;
-  }
-
   @include b(title) {
     padding-bottom: px2rpx(20px);
   }
@@ -21,9 +15,10 @@
     padding-bottom: px2rpx(82px);
   }
 
-  @include b(buttons) {
+  @include b(title, desc, buttons) {
     @include block--center;
 
     width: px2rpx(670px);
+    line-height: 100%;
   }
 }

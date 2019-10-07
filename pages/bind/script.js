@@ -90,7 +90,7 @@ export default {
         }
       })
 
-      this.$auth.setPhoneNumber({ phoneNumber })
+      this.$auth.set({ phoneNumber })
       this.$wx.showToast({ title: '绑定成功' })
 
       await this.$helpers.sleep(1500)
