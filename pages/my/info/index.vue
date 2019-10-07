@@ -17,8 +17,8 @@
         </div>
         <div
           class="c-list__operation c21 fs28"
-          @click="navigateTo('/pages/bind/index?update=1')">
-          更换手机号
+          @click="navigateTo(`/pages/bind/index?update=${cForm.phoneNumber ? 1 : ''}`)">
+          {{ cForm.phoneNumber ? '更换手机号' : '绑定手机号' }}
         </div>
       </div>
       <div class="c-list__item">
