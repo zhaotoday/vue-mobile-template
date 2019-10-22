@@ -1,7 +1,21 @@
+import cities from './cities'
+
 export default {
   data () {
     return {
-      letters: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+      cities,
+      letters: [],
+      cScroll: {
+        intoView: ''
+      }
+    }
+  },
+  created () {
+    this.letters = this.cities.cityGroups.map(item => item.initial)
+  },
+  methods: {
+    scrollIntoView (item) {
+      this.cScroll.intoView = item
     }
   }
 }

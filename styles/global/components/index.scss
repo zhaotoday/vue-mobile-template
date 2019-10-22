@@ -1,4 +1,10 @@
 @include c(index) {
+  @include e(scroll) {
+    @include position--fixed(0, null, 0, 0);
+
+    width: 100%;
+  }
+
   @include cc(list) {
     @include e(title, item) {
       text-indent: px2rpx(20px);
@@ -16,6 +22,13 @@
   }
 
   @include cc(letters) {
+    @include position--fixed(0, 0);
 
+    @include e(item) {
+      @include text--middle(px2rpx(44px));
+
+      width: px2rpx(50px);
+      text-align: center;
+    }
   }
 }
