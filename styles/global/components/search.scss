@@ -1,0 +1,55 @@
+@include c(search) {
+  $padding: 15px;
+  $__input_width: 690px;
+  $__input_height: 68px;
+  $__input_margin-left: 30px;
+  $__input_margin-right: 30px;
+  $__input_border-radius: 68px / 2;
+  $__input-input_margin: 65px;
+  $__submit_padding-tb: 10px;
+  $__submit_padding-lr: 30px;
+  $has-submit__input_width: 610px;
+
+  @include padding(px2rpx($padding), null, px2rpx($padding));
+
+  position: relative;
+
+  @include e(input) {
+    @include size(auto, px2rpx($__input_height));
+    @include margin(null, px2rpx($__input_margin-right), null, px2rpx($__input_margin-left));
+
+    border-radius: px2rpx($__input_border-radius);
+    background: {
+      image: cdn("components/search/search.png");
+      size: px2rpx(28px) px2rpx(28px);
+      repeat: no-repeat;
+      position: px2rpx(24px) center;
+    }
+
+    div {
+      @include text--middle(px2rpx($__input_height));
+      @include margin(null, px2rpx($__input-input_margin), null, px2rpx($__input-input_margin));
+    }
+  }
+
+  @include e(submit) {
+    @include position--absolute(50%, 0);
+
+    padding: px2rpx($__submit_padding-tb) px2rpx($__submit_padding-lr);
+    transform: translateY(-50%);
+    line-height: 100%;
+    display: none;
+  }
+
+  @include s(has-submit) {
+    @include c(search) {
+      @include e(input) {
+        width: px2rpx($has-submit__input_width) !important;
+      }
+
+      @include e(submit) {
+        display: inline-block;
+      }
+    }
+  }
+}
