@@ -19,5 +19,6 @@
 
   @include e(textarea) {
     @include size(auto, px2rpx(180px));
+    @include padding(px2rpx(24px), null, px2rpx(24px));
   }
 }
