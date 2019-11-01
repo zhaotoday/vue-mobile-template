@@ -1,6 +1,7 @@
 <template>
   <div
-    :class="[ 'c-search', 'bgc21', { 'has-submit': showSubmit } ]"
+    class="c-search bgc21"
+    :class="{ 'has-submit': showSubmit }"
     @click="handleClick">
     <div class="c-search__input bgc11">
       <div
