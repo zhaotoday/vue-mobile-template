@@ -1,6 +1,9 @@
 <template>
   <div class="p-components">
-    <c-search show-submit></c-search>
+    <c-search
+      placeholder="请输入..."
+      show-submit>
+    </c-search>
     <h2>按钮</h2>
     <button class="c-button br8 w200 h60 bgc4 c1 fs32">
       按钮

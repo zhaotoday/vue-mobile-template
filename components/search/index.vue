@@ -7,7 +7,7 @@
         v-if="link"
         class="fs28">
         <span v-if="value">
-        {{ value }}
+          {{ value }}
         </span>
         <span
           v-else
