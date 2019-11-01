@@ -3,10 +3,10 @@
     class="c-search bgc21"
     :class="{ 'has-submit': showSubmit }"
     @click="handleClick">
-    <div class="c-search__input bgc11">
+    <div class="c-search__input-wrap bgc11">
       <div
         v-if="link"
-        class="fs28">
+        class="c-search__input fs28">
         <span v-if="value">
           {{ value }}
         </span>
@@ -18,7 +18,7 @@
       </div>
       <input
         v-else
-        class="fs28"
+        class="c-search__input fs28"
         :placeholder="placeholder"
         confirm-type="search"
         :auto-focus="autoFocus"

@@ -14,7 +14,7 @@
 
   position: relative;
 
-  @include e(input) {
+  @include e(input-wrap) {
     @include size(auto, px2rpx($__input_height));
     @include margin(null, px2rpx($__input_margin-right), null, px2rpx($__input_margin-left));
 
@@ -25,12 +25,11 @@
       repeat: no-repeat;
       position: px2rpx(24px) center;
     }
+  }
 
-    div,
-    input {
-      @include text--middle(px2rpx($__input_height));
-      @include margin(null, px2rpx($__input-input_margin), null, px2rpx($__input-input_margin));
-    }
+  @include e(input) {
+    @include text--middle(px2rpx($__input_height));
+    @include margin(null, px2rpx($__input-input_margin), null, px2rpx($__input-input_margin));
   }
 
   @include e(submit) {
