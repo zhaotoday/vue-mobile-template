@@ -4,7 +4,7 @@ export default {
       cForm: {
         name: '',
         phoneNumber: '',
-        suggestion: ''
+        content: ''
       }
     }
   },

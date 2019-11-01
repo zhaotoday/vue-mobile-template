@@ -16,12 +16,12 @@
       placeholder="请输入手机号"
       v-model="cForm.phoneNumber"
     />
-    <h2 class="c-comment__title c12 fs30">留言建议（可以不填）</h2>
+    <h2 class="c-comment__title c12 fs30">评论（可以不填）</h2>
     <textarea
       class="c-comment__textarea fs28 bgc11"
       placholder-class="c32"
-      placeholder="请输入留言建议"
-      v-model="cForm.suggestion">
+      placeholder="请输入评论"
+      v-model="cForm.content">
     </textarea>
     <button
       class="c-button is-foot w650 h88 bg1 c11 fs32"

@@ -10,7 +10,7 @@
   @include e(input, textarea) {
     border-radius: px2rpx(6px);
     line-height: px2rpx(32px);
-    padding: px2rpx(20px);
+    padding: px2rpx(18px);
   }
 
   @include e(input) {

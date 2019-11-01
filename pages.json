@@ -1,6 +1,12 @@
 {
   "pages": [
     {
+      "path": "pages/comment/index",
+      "style": {
+        "navigationBarTitleText": "评论"
+      }
+    },
+    {
       "path": "pages/select-city/index",
       "style": {
         "navigationBarTitleText": "城市选择"
