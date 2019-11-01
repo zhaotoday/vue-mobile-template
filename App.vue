@@ -22,7 +22,7 @@ export default {
           body: { type: 'MP_CODE_TO_SESSION', code }
         })
 
-        this.$auth.setOpenId({ openId })
+        this.$auth.setOpenId(openId)
       }
     },
     async refreshWxUserInfo () {

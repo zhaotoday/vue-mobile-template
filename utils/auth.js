@@ -20,8 +20,11 @@ export default {
     const user = this.get()[USER]
     wxb.setStorageSync(USER, { ...user, ...data })
   },
-  setOpenId ({ openId }) {
-    wxb.setStorageSync(OPEN_ID, openId)
+  setOpenId (value) {
+    wxb.setStorageSync(OPEN_ID, value)
+  },
+  getOpenId () {
+    return wxb.getStorageSync(OPEN_ID)
   },
   setName ({ name }) {
     const user = this.get()[USER]
