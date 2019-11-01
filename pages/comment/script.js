@@ -2,7 +2,6 @@ export default {
   data () {
     return {
       cForm: {
-        city: '',
         name: '',
         phoneNumber: '',
         suggestion: ''
@@ -12,12 +11,7 @@ export default {
   methods: {
     async submit () {
       const PHONE_REG = /^1\d{2}\s?\d{4}\s?\d{4}$/
-      const { city, name, phoneNumber } = this.cForm
-
-      if (!city.trim()) {
-        this.$wx.showToast({ title: '请输入所在城市' })
-        return
-      }
+      const { name, phoneNumber } = this.cForm
 
       if (!name.trim()) {
         this.$wx.showToast({ title: '请输入您的姓名' })
@@ -34,7 +28,7 @@ export default {
         return
       }
 
-      await this.$store.dispatch('wx/joins/post', {
+      await this.$store.dispatch('wx/comments/post', {
         body: this.cForm
       })
 

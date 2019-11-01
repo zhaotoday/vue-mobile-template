@@ -1,12 +1,5 @@
 <template>
-  <div class="p-join c-comment">
-    <h2 class="c-comment__title c12 fs30">所在城市</h2>
-    <input
-      class="c-comment__input fs28 bgc11"
-      placholder-class="c32"
-      placeholder="请输入所在城市"
-      v-model="cForm.city"
-    />
+  <div class="p-comment c-comment">
     <h2 class="c-comment__title c12 fs30">您的姓名</h2>
     <input
       class="c-comment__input fs28 bgc11"
