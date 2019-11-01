@@ -1,6 +1,12 @@
 {
   "pages": [
     {
+      "path": "pages/components/index",
+      "style": {
+        "navigationBarTitleText": "组件"
+      }
+    },
+    {
       "path": "pages/comment/index",
       "style": {
         "navigationBarTitleText": "评论"
@@ -42,12 +48,6 @@
       "path": "pages/bind/index",
       "style": {
         "navigationBarTitleText": ""
-      }
-    },
-    {
-      "path": "pages/components/index",
-      "style": {
-        "navigationBarTitleText": "组件"
       }
     }
   ],

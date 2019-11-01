@@ -4,11 +4,11 @@
   $__input_height: 68px;
   $__input_margin-left: 30px;
   $__input_margin-right: 30px;
-  $__input_border-radius: 68px / 2;
+  $__input_border-radius: 16px;
   $__input-input_margin: 65px;
   $__submit_padding-tb: 10px;
   $__submit_padding-lr: 30px;
-  $has-submit__input_width: 610px;
+  $has-submit__input_width: 592px;
 
   @include padding(px2rpx($padding), null, px2rpx($padding));
 

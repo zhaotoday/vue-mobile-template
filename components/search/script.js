@@ -9,13 +9,17 @@ export default {
       type: Boolean,
       default: false
     },
+    link: {
+      type: String,
+      default: ''
+    },
     defaultValue: {
       type: String,
       default: ''
     },
     placeholder: {
       type: String,
-      default: '搜索位置查找附近茶室'
+      default: ''
     }
   },
   data () {
@@ -29,6 +33,11 @@ export default {
     }
   },
   methods: {
+    handleClick () {
+      if (this.link) {
+        this.$wx.navigateTo({ url: this.link })
+      }
+    },
     handleConfirm () {
       this.$emit('confirm', this.value)
     },

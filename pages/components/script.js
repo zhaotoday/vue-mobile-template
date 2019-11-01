@@ -1,5 +1,5 @@
+import CSearch from '@/components/search'
+
 export default {
-  onShow () {
-    console.log(3333)
-  }
+  components: { CSearch }
 }

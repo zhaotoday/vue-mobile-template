@@ -1,9 +1,11 @@
 <template>
   <div
     :class="[ 'c-search', 'bgc21', { 'has-submit': showSubmit } ]"
-    @click="$emit('focus')">
+    @click="handleClick">
     <div class="c-search__input bgc11">
-      <div class="fs28">
+      <div
+        v-if="link"
+        class="fs28">
         <span v-if="value">
         {{ value }}
         </span>
@@ -13,9 +15,19 @@
           {{ placeholder }}
         </span>
       </div>
+      <input
+        v-else
+        class="fs28"
+        :placeholder="placeholder"
+        confirm-type="search"
+        :auto-focus="autoFocus"
+        v-model="value"
+        @focus="$emit('focus')"
+        @confirm="handleConfirm"
+      />
     </div>
     <div
-      class="c-search__submit c1 fs28"
+      class="c-search__submit c11 fs28"
       @click="handleConfirm">
       搜索
     </div>
