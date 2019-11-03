@@ -39,7 +39,7 @@
     @include s(is-link) {
       background: {
         image: cdn("components/list/is-link.png");
-        size: px2rpx(24px) px2rpx(32px);
+        size: px2rpx(30px) px2rpx(30px);
         repeat: no-repeat;
         position: right px2rpx(40px) center;
       }
