@@ -1,0 +1,17 @@
+@include c(title) {
+  @include padding(px2rpx(28px), null, px2rpx(34px));
+
+  position: relative;
+  line-height: 100%;
+
+  &::after {
+    @include position--absolute(null, null, px2rpx(16px), 50%);
+    @include size(px2rpx(60px), px2rpx(4px));
+
+    transform: translateX(-50%);
+    border-radius: px2rpx(4px);
+    display: block;
+    content: '';
+    background-color: map-get($colors, c21);
+  }
+}
