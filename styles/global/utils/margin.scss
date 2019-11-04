@@ -6,6 +6,6 @@ $items: 16 18 20;
   }
 
   .u-mb#{$item} {
-    margin-top: px2rpx($item * 1px);
+    margin-bottom: px2rpx($item * 1px);
   }
 }

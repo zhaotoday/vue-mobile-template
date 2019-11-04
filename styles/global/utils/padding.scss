@@ -2,10 +2,10 @@ $items: 16 18 20;
 
 @each $item in $items {
   .u-pt#{$item} {
-    margin-top: px2rpx($item * 1px);
+    padding-top: px2rpx($item * 1px);
   }
 
   .u-pb#{$item} {
-    margin-top: px2rpx($item * 1px);
+    padding-bottom: px2rpx($item * 1px);
   }
 }

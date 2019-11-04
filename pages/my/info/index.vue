@@ -1,6 +1,6 @@
 <template>
-  <div class="p-my-info">
-    <div class="c-list bgc11 fs32 u-mt16">
+  <div class="p-my-info u-pt18">
+    <div class="c-list bgc11 fs32">
       <div class="c-list__item">
         <label class="c35">姓名</label>
         <input

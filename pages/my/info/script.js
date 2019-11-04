@@ -28,7 +28,7 @@ export default {
     async save () {
       const { name, birthday, gender } = this.cForm
 
-      if (!name.trim()) {
+      if (!name) {
         this.$wx.showToast({
           title: '请填写姓名'
         })
