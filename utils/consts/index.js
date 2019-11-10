@@ -1,11 +1,14 @@
 import GENDERS from './genders'
 
 // 接口地址
-// const API_URL = 'http://localhost:3006/api/v1'
-const API_URL = 'https://yongli-api.liruan.cn/api/v1'
+// const API_URL = 'http://localhost:3006/v1'
+const API_URL = 'https://app.liruan.cn/v1'
 
 // CDN
-const CDN_URL = 'https://cdn.fjnm.cn'
+const CDN_URL = 'https://app.lrcdn.cn'
+
+// 静态资源
+const STATIC_URL = 'https://app.liruan.cn/static'
 
 // 首页
 const HOME_PAGE = '/pages/home/index'

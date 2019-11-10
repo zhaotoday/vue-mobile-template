@@ -15,7 +15,7 @@ export default {
       },
       cPainter: {
         palette: {
-          background: `${this.$consts.CDN_URL}/components/share/poster.jpg`,
+          background: `${this.$consts.STATIC_URL}/components/share/poster.jpg`,
           width: '840px',
           height: '1308px',
           borderRadius: '0',
