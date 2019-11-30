@@ -45,7 +45,7 @@
       }
     },
     {
-      "path": "pages/bind/index",
+      "path": "pages/my/bind/index",
       "style": {
         "navigationBarTitleText": ""
       }
