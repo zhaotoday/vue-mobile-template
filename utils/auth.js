@@ -42,7 +42,7 @@ export default {
     return !!wxb.getStorageSync(USER) && !!wxb.getStorageSync(TOKEN)
   },
   infoModified () {
-    return this.loggedIn() && !!this.get()['user'].name
+    return this.loggedIn() && !!this.get()['user'].name && !!this.get()['user'].phoneNumber
   },
   phoneNumberBound () {
     return this.loggedIn() && !!this.get()['user'].phoneNumber

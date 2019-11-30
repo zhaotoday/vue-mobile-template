@@ -5,9 +5,13 @@ export default {
       cForm: {}
     }
   },
-  async onShow () {
+  async onLoad () {
     this.cForm = await this.getDetail()
     this.hasBirthday = !!this.cForm.birthday
+  },
+  async onShow () {
+    const { phoneNumber } = await this.getDetail()
+    this.cForm.phoneNumber = phoneNumber
   },
   methods: {
     async getDetail () {
