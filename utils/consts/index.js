@@ -17,7 +17,7 @@ const HOME_PAGE = '/pages/home/index'
 const LOGIN_PAGE = '/pages/login/index'
 
 // 绑定手机页面
-const BIND_PAGE = '/pages/bind/index'
+const BIND_PAGE = '/pages/my/bind/index'
 
 // 小程序名称
 const NAME = '力软小程序'
