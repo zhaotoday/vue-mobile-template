@@ -6,44 +6,42 @@ export default {
     }
   },
   async onShow () {
-    this.id = this.$auth.get()['user'].id
     this.cForm = await this.getDetail()
     this.hasBirthday = !!this.cForm.birthday
   },
   methods: {
     async getDetail () {
       return this.$store.dispatch('wx/wxUsers/getDetail', {
-        id: this.id
+        id: this.user.id
       })
     },
     handleBirthdayChange (e) {
       this.cForm.birthday = e.detail.value
     },
     handleGenderChange (e) {
-      const { index: formIndex } = e.currentTarget.dataset
       const pickerIndex = +e.detail.value
-
       this.cForm.gender = this.$consts.GENDERS[pickerIndex].value
     },
     async save () {
-      const { name, birthday, gender } = this.cForm
+      const { name, phoneNumber, birthday, gender } = this.cForm
 
       if (!name) {
-        this.$wx.showToast({
-          title: '请填写姓名'
-        })
+        this.$wx.showToast({ title: '请填写姓名' })
+        return
+      }
+
+      if (!phoneNumber) {
+        this.$wx.showToast({ title: '请绑定手机号' })
         return
       }
 
       if (!birthday) {
-        this.$wx.showToast({
-          title: '请选择生日'
-        })
+        this.$wx.showToast({ title: '请选择生日' })
         return
       }
 
       await this.$store.dispatch('wx/wxUsers/put', {
-        id: this.id,
+        id: this.user.id,
         body: { name, birthday, gender }
       })
 
