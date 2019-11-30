@@ -41,6 +41,9 @@ export default {
   loggedIn () {
     return !!wxb.getStorageSync(USER) && !!wxb.getStorageSync(TOKEN)
   },
+  infoModified () {
+    return this.loggedIn() && !!this.get()['user'].name
+  },
   phoneNumberBound () {
     return this.loggedIn() && !!this.get()['user'].phoneNumber
   }

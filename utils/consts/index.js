@@ -16,7 +16,10 @@ const HOME_PAGE = '/pages/home/index'
 // 登录页
 const LOGIN_PAGE = '/pages/login/index'
 
-// 绑定手机页面
+// 资料页
+const INFO_PAGE = '/pages/my/info/index'
+
+// 绑定手机页
 const BIND_PAGE = '/pages/my/bind/index'
 
 // 小程序名称
@@ -31,6 +34,7 @@ export default {
   CDN_URL,
   HOME_PAGE,
   LOGIN_PAGE,
+  INFO_PAGE,
   BIND_PAGE,
   NAME,
   INTRODUCTION

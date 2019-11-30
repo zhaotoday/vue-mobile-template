@@ -55,6 +55,19 @@ export default {
         }
       })
     },
+    infoModified () {
+      return new Promise(async (resolve, reject) => {
+        if (!this.$auth.infoModified()) {
+          await this.$wx.navigateTo({
+            url: this.$consts.INFO_PAGE
+          })
+          reject()
+        } else {
+          const user = this.$auth.get()['user']
+          resolve({ user })
+        }
+      })
+    },
     phoneNumberBound () {
       return new Promise(async (resolve, reject) => {
         if (!this.$auth.phoneNumberBound()) {
