@@ -1,4 +1,4 @@
-@import '../../styles/utils/index';
+@import '../../../styles/utils/index';
 
 @include p(bind) {
   $b-check-code_color: map-get($colors, c21);
