@@ -33,6 +33,12 @@ export default {
     switchTab (url) {
       this.$wx.switchTab({ url })
     },
+    redirectTo (url) {
+      this.$wx.redirectTo({ url })
+    },
+    reLaunch (url) {
+      this.$wx.reLaunch({ url })
+    },
     navigateBack (delta = 1) {
       this.$wx.navigateBack({ delta })
     },
