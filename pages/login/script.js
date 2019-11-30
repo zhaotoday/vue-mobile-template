@@ -3,7 +3,7 @@ import CLogo from '@/components/logo'
 export default {
   components: { CLogo },
   methods: {
-    async getUserInfo (e) {
+    async getUserInfo () {
       const getSettingRes = await this.$wx.getSetting()
 
       if (!getSettingRes.authSetting['scope.userInfo']) {
@@ -30,9 +30,9 @@ export default {
 
         await this.$helpers.sleep(1500)
 
-        if (!this.$auth.phoneNumberBound()) {
+        if (!this.infoModified()) {
           this.$wx.redirectTo({
-            url: this.$consts.BIND_PAGE
+            url: this.$consts.INFO_PAGE
           })
         } else {
           this.$wx.navigateBack()
