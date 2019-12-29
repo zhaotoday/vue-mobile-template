@@ -1,8 +1,4 @@
 @include c(button) {
-  $widths: 650, 160;
-  $heights: 76, 88, 48;
-  $border-radii: 0;
-
   box-sizing: border-box;
   text-align: center;
   display: inline-block;
@@ -15,23 +11,23 @@
     display: block;
   }
 
-  @include s(is-foot) {
+  @include s(is-bottom) {
     @include position--fixed(null, null, px2rpx(70px), 50%);
 
     transform: translateX(-50%);
   }
 
-  .w1 {
+  &.w1 {
     width: 100%;
   }
 
-  @each $item in $widths {
+  @each $item in $button-widths {
     &.w#{$item} {
       width: px2rpx($item * 1px);
     }
   }
 
-  @each $item in $heights {
+  @each $item in $button-heights {
     &.h#{$item} {
       @include text--middle(px2rpx($item * 1px));
 
@@ -39,7 +35,7 @@
     }
   }
 
-  @each $item in $border-radii {
+  @each $item in $button-border-radii {
     &.br#{$item} {
       border-radius: px2rpx($item * 1px);
     }
