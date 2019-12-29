@@ -1,6 +1,6 @@
 @import '../../../styles/utils/index';
 
-@include p(bind) {
+@include p(phone-number) {
   $b-check-code_color: map-get($colors, c21);
   $b-check-code-is-disabled_color: map-get($colors, c32);
   $b-check-code_border-left-color: map-get($colors, c34);
