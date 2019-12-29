@@ -1,24 +1,13 @@
 @include c(search) {
-  $padding: 15px;
-  $__input_width: 690px;
-  $__input_height: 68px;
-  $__input_margin-left: 30px;
-  $__input_margin-right: 30px;
-  $__input_border-radius: 16px;
-  $__input-input_margin: 65px;
-  $__submit_padding-tb: 10px;
-  $__submit_padding-lr: 30px;
-  $has-submit__input_width: 610px;
-
-  @include padding(px2rpx($padding), null, px2rpx($padding));
+  @include padding(px2rpx(15px), null, px2rpx(15px));
 
   position: relative;
 
   @include e(input-wrap) {
-    @include size(auto, px2rpx($__input_height));
-    @include margin(null, px2rpx($__input_margin-right), null, px2rpx($__input_margin-left));
+    @include margin(null, px2rpx(30px), null, px2rpx(30px));
 
-    border-radius: px2rpx($__input_border-radius);
+    height: px2rpx(68px);
+    border-radius: px2rpx(16px);
     background: {
       image: url("~@/cdn/components/search/search.png");
       size: px2rpx(28px) px2rpx(28px);
@@ -28,14 +17,14 @@
   }
 
   @include e(input) {
-    @include text--middle(px2rpx($__input_height));
-    @include margin(null, px2rpx($__input-input_margin), null, px2rpx($__input-input_margin));
+    @include text--middle(px2rpx(68px));
+    @include margin(null, px2rpx(65px), null, px2rpx(65px));
   }
 
   @include e(submit) {
     @include position--absolute(50%, 0);
 
-    padding: px2rpx($__submit_padding-tb) px2rpx($__submit_padding-lr);
+    padding: px2rpx(10px) px2rpx(30px);
     transform: translateY(-50%);
     line-height: 100%;
     display: none;
@@ -43,8 +32,8 @@
 
   @include s(has-submit) {
     @include c(search) {
-      @include e(input) {
-        width: px2rpx($has-submit__input_width) !important;
+      @include e(input-wrap) {
+        margin-right: px2rpx(112px);
       }
 
       @include e(submit) {
