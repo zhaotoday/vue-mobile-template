@@ -54,7 +54,7 @@ export default {
           return
         }
 
-        this.$store.dispatch('wx/wxUsers/postAction', {
+        await this.$store.dispatch('wx/wxUsers/postAction', {
           body: {
             type: 'GET_CHECK_CODE',
             phoneNumber: model.phoneNumber
@@ -82,43 +82,30 @@ export default {
       })
     },
     async confirm () {
-      const { phoneNumber, checkCode } = this.cForm
+      const { rules, model } = this.cForm
 
-      if (!phoneNumber) {
-        this.$wx.showToast({ title: '手机号不能为空' })
-        return
-      }
-
-      if (!/^1\d{2}\s?\d{4}\s?\d{4}$/.test(phoneNumber)) {
-        this.$wx.showToast({ title: '手机号格式错误' })
-        return
-      }
-
-      if (!checkCode) {
-        this.$wx.showToast({ title: '验证码不能为空' })
-        return
-      }
-
-      if (checkCode.length < 6) {
-        this.$wx.showToast({ title: '验证码格式错误' })
-        return
-      }
-
-      await this.$store.dispatch('wx/wxUsers/postAction', {
-        showLoading: true,
-        body: {
-          type: 'BIND_PHONE_NUMBER',
-          phoneNumber,
-          checkCode
+      new AsyncValidator(rules).validate(model, async (errors, fields) => {
+        if (errors) {
+          this.$wx.showToast({ title: errors[0].message })
+          return
         }
+
+        await this.$store.dispatch('wx/wxUsers/postAction', {
+          showLoading: true,
+          body: {
+            type: 'BIND_PHONE_NUMBER',
+            phoneNumber,
+            checkCode
+          }
+        })
+
+        this.$auth.set({ phoneNumber })
+        this.$wx.showToast({ title: '绑定成功' })
+
+        await this.$helpers.sleep(1500)
+
+        this.$wx.navigateBack()
       })
-
-      this.$auth.set({ phoneNumber })
-      this.$wx.showToast({ title: '绑定成功' })
-
-      await this.$helpers.sleep(1500)
-
-      this.$wx.navigateBack()
     }
   }
 }
