@@ -1,5 +1,18 @@
 <template>
   <div class="p-components">
+    <div class="c-panel bgc11 u-mt18">
+      <div class="c-panel__head">
+        <div class="c-panel__title fs30">基础</div>
+        <div class="c-panel__extra has-icon c37 fs24">
+          更多
+          <i class="c-icon c-icon--panel-more"></i>
+        </div>
+      </div>
+      <div class="c-panel__body p30">
+        aaa
+      </div>
+    </div>
+
     <h2>搜索框</h2>
     <p>
       <c-search
@@ -25,7 +38,13 @@
       <i class="c-icon c-icon--logo"></i>
     </p>
     <h2>标签</h2>
-    <div class="c-tag h30 bdc5 c5 fs20">公司</div>
+    <p>
+      <span class="c-tag h30 br8 bdc21 c21 fs20">公司 XXXX</span>
+    </p>
+    <h2>暂无数据</h2>
+    <p>
+      <c-empty tip="暂无数据..."></c-empty>
+    </p>
   </div>
 </template>
 

@@ -43,5 +43,10 @@ $button-border-radii: 0, 8;
 $icon-items: (
   (icon: logo, width: 160px, height: 160px),
   (icon: empty, width: 220px, height: 144px),
-  (icon: drop, width: 20px, height: 20px)
+  (icon: drop, width: 20px, height: 20px),
+  (icon: panel-more, width: 20px, height: 20px)
 );
+
+// tag
+$tag-heights: 30, 40, 50, 60;
+$tag-border-radii: 0, 8;

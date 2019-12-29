@@ -1,10 +1,7 @@
 @include c(tag) {
-  $heights: 34, 50, 60;
-  $border-radii: 0 8;
-
   display: inline-block;
 
-  @each $item in $heights {
+  @each $item in $tag-heights {
     &.h#{$item} {
       @include text--middle(px2rpx($item * 1px));
       @include padding(null, px2rpx($item / 2 * 1px), null, px2rpx($item / 2 * 1px));
@@ -13,7 +10,7 @@
     }
   }
 
-  @each $item in $border-radii {
+  @each $item in $tag-border-radii {
     &.br#{$item} {
       border-radius: px2rpx($item * 1px);
     }

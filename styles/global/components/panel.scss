@@ -1,46 +1,34 @@
 @include c(panel) {
   @include e(head) {
-    @include padding(px2rpx(30px), null, px2rpx(50px));
+    @include text--middle(px2rpx(80px));
 
     position: relative;
+    margin-left: px2rpx(30px);
+    border-bottom: 1px solid map-get($colors, c32);
+  }
 
-    &::after {
-      @include position--absolute(null, null, px2rpx(28px), 50%);
-      @include size(px2rpx(48px), px2rpx(8px));
+  @include e(extra) {
+    @include position--absolute(50%, px2rpx(20px));
 
-      transform: translateX(-50%);
-      border-radius: px2rpx(8px);
-      display: block;
-      content: '';
-      background-color: map-get($colors, c21);
+    transform: translateY(-50%);
+    display: inline-block;
+    padding: px2rpx(10px);
+    line-height: 100%;
+
+    @include c(icon) {
+      @include position--absolute(50%, px2rpx(10px));
+
+      transform: translateY(-50%);
+    }
+
+    @include s(has-icon) {
+      padding-right: px2rpx(30px);
     }
   }
 
   @include e(body) {
-    @include padding(null, px2rpx(40px), px2rpx(20px), px2rpx(40px));
-
-    p {
-      line-height: 150%;
-      padding-bottom: px2rpx(20px);
+    &.m30 {
+      margin: px2rpx(30px);
     }
-  }
-
-  @include e(foot) {
-    @include padding(px2rpx(16px), 0, px2rpx(16px));
-
-    position: relative;
-    line-height: 100%;
-    text-align: right;
-
-    @include c(button) {
-      margin-left: px2rpx(20px);
-    }
-  }
-
-  @include e(extra) {
-    @include position--absolute(50%, null, null, 0);
-
-    transform: translateY(-50%);
-    line-height: 100%;
   }
 }
