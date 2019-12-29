@@ -35,6 +35,13 @@ $z-indexes: (
 );
 
 // button
-$button-widths: 650, 160;
-$button-heights: 88, 76, 48;
-$button-border-radii: 8, 0;
+$button-widths: 160, 650;
+$button-heights: 48, 76, 88;
+$button-border-radii: 0, 8;
+
+// icon
+$icon-items: (
+  (icon: logo, width: 160px, height: 160px),
+  (icon: empty, width: 220px, height: 144px),
+  (icon: drop, width: 20px, height: 20px)
+);

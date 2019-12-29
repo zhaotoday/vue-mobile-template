@@ -17,11 +17,13 @@
     <p>
       <img
         class="c-avatar"
-        src="https://mp-api.chongyangyanglao.com/static/components/icon/logo.png"
+        src="https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83epGL9qnUFzOMHWV5OXLDhWdyPBVnpSSqUOZ4fQdasgMbfibSVJmbGakweaJXv51u6eoiaawvdBPPWVw/132"
       />
     </p>
     <h2>图标</h2>
-    <i class="c-icon c-icon--address"></i>
+    <p>
+      <i class="c-icon c-icon--logo"></i>
+    </p>
     <h2>标签</h2>
     <div class="c-tag h30 bdc5 c5 fs20">公司</div>
   </div>

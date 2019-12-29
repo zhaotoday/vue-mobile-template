@@ -1,13 +1,4 @@
 @include c(icon) {
-  $items: (
-    (icon: logo, width: 160px, height: 160px),
-    (icon: info, width: 48px, height: 48px),
-    (icon: service, width: 48px, height: 48px),
-    (icon: more, width: 12px, height: 20px),
-    (icon: empty, width: 220px, height: 144px),
-    (icon: drop, width: 20px, height: 20px)
-  );
-
   display: inline-block;
   background: {
     size: 100% 100%;
@@ -15,7 +6,7 @@
     position: center center;
   }
 
-  @each $item in $items {
+  @each $item in $icon-items {
     $width: map-get($item, width);
     $height: map-get($item, height);
     $icon: map-get($item, icon);
@@ -23,7 +14,7 @@
     @include m(#{$icon}) {
       @include size(px2rpx($width), px2rpx($height));
 
-      background-image: cdn("components/icon/#{$icon}.png");
+      background-image: url("~@/cdn/components/icon/#{$icon}.png");
     }
   }
 }
