@@ -83,6 +83,12 @@ export default {
     },
     wrapHTML (html) {
       return html.replace(/\<img/gi, '<img style="max-width:100%;height:auto" ')
+    },
+    filterList (list, key) {
+      return {
+        ...list,
+        items: list.items.filter(item => !!item[key])
+      }
     }
   }
 }
