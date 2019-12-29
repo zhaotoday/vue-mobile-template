@@ -30,7 +30,7 @@
     </div>
     <button
       class="c-button is-foot w650 h88 bgc21 c11 fs32"
-      @click="confirm">
+      @click="submit">
       提交
     </button>
   </div>

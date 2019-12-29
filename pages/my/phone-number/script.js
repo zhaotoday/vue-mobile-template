@@ -81,8 +81,9 @@ export default {
         }, 1000)
       })
     },
-    async confirm () {
+    async submit () {
       const { rules, model } = this.cForm
+      const { phoneNumber, checkCode } = model
 
       new AsyncValidator(rules).validate(model, async (errors, fields) => {
         if (errors) {
