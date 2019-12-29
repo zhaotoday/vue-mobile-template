@@ -1,37 +1,21 @@
 @include c(list) {
-  $__item_height: 100px;
-  $__item_border-bottom-color: map-get($colors, c34);
-  $__item_margin-left: 40px;
-  $__item-has-icon_text-indent: 60px;
-  $__item-is-adaptable_padding: 25px;
-  $__item-is-link__extra_right: 80px;
-  $__item-is-button__background-color: map-get($colors, c1);
-  $__extra_right: 40px;
-  $__value_height: 106px;
-  $__value_left: 138px;
-  $__value_width: 450px;
-
   @include e(item) {
-    @include text--middle(px2rpx($__item_height));
+    @include text--middle(px2rpx(100px));
 
     position: relative;
-    border-bottom: 1px solid $__item_border-bottom-color;
-    margin-left: px2rpx($__item_margin-left);
+    border-bottom: 1px solid map-get($colors, c32);
+    margin-left: px2rpx(30px);
 
     &:last-child {
       border-bottom: 0;
     }
 
-    @include s(has-border) {
-      border-bottom: 1px solid $__item_border-bottom-color;
-    }
-
     @include s(has-icon) {
-      text-indent: px2rpx($__item-has-icon_text-indent);
+      text-indent: px2rpx(60px);
     }
 
     @include s(is-adaptable) {
-      @include padding(px2rpx($__item-is-adaptable_padding), null, px2rpx($__item-is-adaptable_padding));
+      @include padding(px2rpx(25px), null, px2rpx(25px));
 
       height: auto;
     }
@@ -46,14 +30,14 @@
 
       @include c(list) {
         @include e(extra) {
-          right: px2rpx($__item-is-link__extra_right);
+          right: px2rpx(80px);
         }
       }
     }
 
     @include s(is-button) {
       text-align: left;
-      background-color: $__item-is-button__background-color;
+      background-color: map-get($colors, c1);
       padding: 0;
 
       &::after {
@@ -75,7 +59,7 @@
   }
 
   @include e(extra) {
-    @include position--absolute(50%, px2rpx($__extra_right));
+    @include position--absolute(50%, px2rpx(40px));
 
     transform: translateY(-50%);
     line-height: 100%;
@@ -91,26 +75,16 @@
 
   @include e(value) {
     @include position--absolute(50%);
-    @include text--middle(px2rpx($__value_height));
+    @include text--middle(px2rpx(106px));
     @include text--overflow;
 
     transform: translateY(-50%);
     border: 0;
-    left: px2rpx($__value_left);
-    width: px2rpx($__value_width);
+    left: px2rpx(138px);
+    width: px2rpx(450px);
 
     @include s(is-full) {
       left: 0;
     }
-  }
-
-  @include e(operation) {
-    @include position--absolute(50%, 0);
-    @include text--middle(px2rpx(60px));
-
-    transform: translateY(-50%);
-    width: px2rpx(200px);
-    text-align: center;
-    border-left: 1px solid map-get($colors, c34);
   }
 }

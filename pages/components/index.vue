@@ -5,11 +5,24 @@
         <div class="c-panel__title fs30">基础</div>
         <div class="c-panel__extra has-icon c37 fs24">
           更多
-          <i class="c-icon c-icon--panel-more"></i>
+          <i class="c-icon c-icon--more"></i>
         </div>
       </div>
       <div class="c-panel__body p30">
-        aaa
+        <ul class="c-list fs32">
+          <li
+            class="c-list__item has-icon is-link"
+            @click="navigateToMyInfo">
+            <i class="c-my-icon c-my-icon--info"></i>
+            我的资料
+          </li>
+          <li
+            class="c-list__item has-icon is-link"
+            @click="navigateToMyInfo">
+            <i class="c-my-icon c-my-icon--info"></i>
+            我的资料
+          </li>
+        </ul>
       </div>
     </div>
 
