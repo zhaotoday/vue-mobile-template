@@ -1,6 +1,7 @@
 <template>
   <div
-    :class="[ 'c-checkbox', { 'is-checked': checked } ]"
+    class="c-checkbox"
+    :class="{ 'is-checked': checked }"
     @click="$emit('change')">
   </div>
 </template>
