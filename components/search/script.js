@@ -33,12 +33,12 @@ export default {
     }
   },
   methods: {
-    handleClick () {
+    navigateToLink () {
       if (this.link) {
         this.$wx.navigateTo({ url: this.link })
       }
     },
-    handleConfirm () {
+    confirm () {
       this.$emit('confirm', this.value)
     },
     getValue () {
