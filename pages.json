@@ -45,7 +45,7 @@
       }
     },
     {
-      "path": "pages/my/bind/index",
+      "path": "pages/my/phone-number/index",
       "style": {
         "navigationBarTitleText": ""
       }

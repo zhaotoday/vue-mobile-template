@@ -17,7 +17,7 @@
         </div>
         <div
           class="c-list__operation c21 fs28"
-          @click="navigateTo(`${$consts.BIND_PAGE}?update=${cForm.phoneNumber ? 1 : ''}`)">
+          @click="navigateTo(`${$consts.PHONE_NUMBER_PAGE}?update=${cForm.phoneNumber ? 1 : ''}`)">
           {{ cForm.phoneNumber ? '更换手机号' : '绑定手机号' }}
         </div>
       </div>
