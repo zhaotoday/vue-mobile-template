@@ -20,7 +20,7 @@
 
     border-radius: px2rpx($__input_border-radius);
     background: {
-      image: cdn("components/search/search.png");
+      image: url("~@/cdn/components/search/search.png");
       size: px2rpx(28px) px2rpx(28px);
       repeat: no-repeat;
       position: px2rpx(24px) center;

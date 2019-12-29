@@ -1,17 +1,17 @@
 {
   "pages": [
     {
+      "path": "pages/components/index",
+      "style": {
+        "navigationBarTitleText": "组件"
+      }
+    },
+    {
       "path": "pages/my/home/index",
       "style": {
         "navigationBarTitleText": "我的",
         "navigationBarTextStyle": "white",
         "navigationBarBackgroundColor": "#1DA677"
-      }
-    },
-    {
-      "path": "pages/components/index",
-      "style": {
-        "navigationBarTitleText": "组件"
       }
     },
     {
