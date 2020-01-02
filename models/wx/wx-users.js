@@ -1,4 +1,4 @@
-import REST from '@/utils/rest'
+import REST from 'we-design/utils/rest'
 import consts from '@/utils/consts'
 import restHelpers from '@/utils/helpers/rest-helpers'
 
