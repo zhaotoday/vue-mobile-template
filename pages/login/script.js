@@ -1,4 +1,4 @@
-import CLogo from 'we-design/src/components/logo'
+import CLogo from 'we-design/components/logo'
 
 export default {
   components: { CLogo },

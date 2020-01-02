@@ -1,5 +1,5 @@
-import CSearch from 'we-design/src/components/search'
-import CEmpty from 'we-design/src/components/empty'
+import CSearch from 'we-design/components/search'
+import CEmpty from 'we-design/components/empty'
 
 export default {
   components: { CSearch, CEmpty }
