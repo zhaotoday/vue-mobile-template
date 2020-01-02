@@ -1,8 +1,0 @@
-@include c(empty) {
-  padding-top: px2rpx(180px);
-
-  @include e(tip) {
-    line-height: 100%;
-    padding-top: px2rpx(20px);
-  }
-}
