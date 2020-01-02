@@ -72,7 +72,7 @@ export default {
       return new Promise(async (resolve, reject) => {
         if (!this.$auth.phoneNumberBound()) {
           await this.$wx.navigateTo({
-            url: this.$consts.BIND_PAGE
+            url: this.$consts.PHONE_NUMBER_PAGE
           })
           reject()
         } else {
