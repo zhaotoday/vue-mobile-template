@@ -18,16 +18,5 @@ export default {
     }
 
     return `${consts.CDN_URL}/${id}${sizeParams}`
-  },
-  getItem (items, key, val) {
-    return items && items.length
-      ? (items.find(item => item[key] === val) || {})
-      : {}
-  },
-  encryptPhoneNumber (phoneNumber) {
-    return phoneNumber ? `${phoneNumber.substring(0, 3)}****${phoneNumber.substring(8, 11)}` : ''
-  },
-  deepCopy (obj) {
-    return JSON.parse(JSON.stringify(obj))
   }
 }
