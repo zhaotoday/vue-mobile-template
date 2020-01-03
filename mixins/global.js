@@ -1,10 +1,9 @@
 import { mapActions, mapState } from 'vuex'
-import $consts from '@/utils/consts'
 
 export default {
   data () {
     return {
-      $consts,
+      $consts: this.$consts,
       loaded: false,
       query: {}
     }
@@ -91,7 +90,7 @@ export default {
       }
     },
     getImageById (id) {
-      return `${consts.API_URL}/public/files/${id}`
+      return `${this.$consts.API_URL}/public/files/${id}`
     },
     getImageURL ({ id, width, height }) {
       let sizeParams = ''
@@ -104,7 +103,7 @@ export default {
         sizeParams = `?imageView2/2/h/${height}/q/100`
       }
 
-      return `${consts.CDN_URL}/${id}${sizeParams}`
+      return `${this.$consts.CDN_URL}/${id}${sizeParams}`
     }
   }
 }
