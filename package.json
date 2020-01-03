@@ -23,7 +23,7 @@
     "sass-utils": "^1.0.23",
     "vuex": "^3.1.2",
     "vuex-persistedstate": "^2.7.0",
-    "we-design": "0.0.8"
+    "we-design": "0.0.9"
   },
   "devDependencies": {
     "node-sass": "^4.13.0",
