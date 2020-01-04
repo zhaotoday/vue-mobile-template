@@ -53,5 +53,5 @@ export default {
 
 <style
   lang="scss"
-  src="./styles/global/index.scss">
+  src="./assets/styles/global/index.scss">
 </style>
