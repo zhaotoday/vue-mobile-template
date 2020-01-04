@@ -1,6 +1,30 @@
 {
   "pages": [
     {
+      "path": "pages/components/index",
+      "style": {
+        "navigationBarTitleText": "We Design"
+      }
+    },
+    {
+      "path": "pages/components/simple-ui",
+      "style": {
+        "navigationBarTitleText": "简单 UI"
+      }
+    },
+    {
+      "path": "pages/components/list",
+      "style": {
+        "navigationBarTitleText": "列表"
+      }
+    },
+    {
+      "path": "pages/components/swiper",
+      "style": {
+        "navigationBarTitleText": "轮播广告"
+      }
+    },
+    {
       "path": "pages/components/logo",
       "style": {
         "navigationBarTitleText": "Logo"
@@ -34,12 +58,6 @@
       "path": "pages/components/share",
       "style": {
         "navigationBarTitleText": "分享"
-      }
-    },
-    {
-      "path": "pages/components/index",
-      "style": {
-        "navigationBarTitleText": "组件"
       }
     },
     {
