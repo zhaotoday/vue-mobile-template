@@ -32,6 +32,7 @@ export default {
   GENDERS,
   API_URL,
   CDN_URL,
+  STATIC_URL,
   HOME_PAGE,
   LOGIN_PAGE,
   INFO_PAGE,

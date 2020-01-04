@@ -1,6 +1,12 @@
 {
   "pages": [
     {
+      "path": "pages/components/search",
+      "style": {
+        "navigationBarTitleText": "搜索"
+      }
+    },
+    {
       "path": "pages/components/share",
       "style": {
         "navigationBarTitleText": "分享"
