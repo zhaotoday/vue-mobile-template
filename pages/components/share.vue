@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  mounted () {
+  onShow () {
     this.$refs.share.init()
   }
 }
