@@ -1,6 +1,12 @@
 {
   "pages": [
     {
+      "path": "pages/components/share",
+      "style": {
+        "navigationBarTitleText": "分享"
+      }
+    },
+    {
       "path": "pages/components/index",
       "style": {
         "navigationBarTitleText": "组件"
@@ -55,7 +61,10 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#ffffff",
-    "backgroundColor": "#F2F2F2"
+    "backgroundColor": "#F2F2F2",
+    "usingComponents": {
+      "painter": "/wxcomponents/painter/painter"
+    }
   },
   "tabBar": {
     "color": "#999999",

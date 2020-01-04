@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "uni-app template",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhaotoday/uni-app.git"
@@ -23,7 +21,7 @@
     "sass-utils": "^1.0.23",
     "vuex": "^3.1.2",
     "vuex-persistedstate": "^2.7.0",
-    "we-design": "0.0.12"
+    "we-design": "0.0.14"
   },
   "devDependencies": {
     "node-sass": "^4.13.0",
