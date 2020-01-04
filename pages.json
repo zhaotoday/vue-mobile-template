@@ -1,6 +1,18 @@
 {
   "pages": [
     {
+      "path": "pages/components/logo",
+      "style": {
+        "navigationBarTitleText": "Logo"
+      }
+    },
+    {
+      "path": "pages/components/empty",
+      "style": {
+        "navigationBarTitleText": "空空如也"
+      }
+    },
+    {
       "path": "pages/components/dialog",
       "style": {
         "navigationBarTitleText": "弹出框"
