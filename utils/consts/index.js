@@ -2,13 +2,13 @@ import GENDERS from './genders'
 
 // 接口地址
 // const API_URL = 'http://localhost:3006/v1'
-const API_URL = 'https://app.liruan.cn/v1'
+const API_URL = 'https://gxcs.liruan.cn/v1'
 
 // CDN
-const CDN_URL = 'https://app.lrcdn.cn'
+const CDN_URL = 'https://gxcs.lrcdn.cn'
 
 // 静态资源
-const STATIC_URL = 'https://app.liruan.cn/static'
+const STATIC_URL = 'https://gxcs.liruan.cn/static'
 
 // 首页
 const HOME_PAGE = '/pages/home/index'
