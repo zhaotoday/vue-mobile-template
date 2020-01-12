@@ -16,7 +16,6 @@
   "homepage": "https://github.com/zhaotoday/uni-app#readme",
   "dependencies": {
     "async-validator": "^3.2.3",
-    "jt-helpers": "0.0.7",
     "jt-time": "0.0.7",
     "sass-utils": "^1.0.23",
     "vuex": "^3.1.2",
