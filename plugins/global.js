@@ -2,6 +2,7 @@ import time from 'jt-time'
 import auth from 'we-design/utils/auth'
 import wxb from 'we-design/utils/wxb'
 import globalMixin from 'we-design/mixins/global'
+import dictsMixin from 'we-design/mixins/dicts'
 import store from '@/store'
 import consts from '@/utils/consts'
 import helpers from '@/utils/helpers/base'
@@ -16,5 +17,6 @@ export default {
     Vue.prototype.$helpers = helpers
 
     Vue.mixin(globalMixin)
+    Vue.mixin(dictsMixin)
   }
 }
