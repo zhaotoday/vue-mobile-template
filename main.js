@@ -10,8 +10,8 @@ import CLogo from 'we-design/components/logo'
 import CPopup from 'we-design/components/popup'
 import CSearch from 'we-design/components/search'
 import CPoster from 'we-design/components/poster'
-import CShare from 'we-design/components/share'
 import CShareOptions from 'we-design/components/share-options'
+import CShare from 'we-design/components/share'
 import CSwiper from 'we-design/components/swiper'
 
 Vue.config.productionTip = false
