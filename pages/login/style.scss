@@ -1,5 +1,9 @@
 @import '../../assets/styles/utils/index';
 
+page {
+  background-color: map-get($colors, c11);
+}
+
 @include p(login) {
   @include b(logo) {
     @include padding(px2rpx(130px), null, px2rpx(120px));
