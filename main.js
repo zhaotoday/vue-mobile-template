@@ -1,35 +1,35 @@
 import Vue from 'vue'
 import App from '@/App'
 import globalPlugin from '@/plugins/global'
-import CCheckbox from 'we-design/components/checkbox'
-import CDialog from 'we-design/components/dialog'
-import CEmpty from 'we-design/components/empty'
-import CFilter from 'we-design/components/filter'
-import CIndex from 'we-design/components/index'
-import CLogo from 'we-design/components/logo'
-import CPopup from 'we-design/components/popup'
-import CSearch from 'we-design/components/search'
-import CPoster from 'we-design/components/poster'
-import CShareOptions from 'we-design/components/share-options'
-import CShare from 'we-design/components/share'
-import CSwiper from 'we-design/components/swiper'
+import Checkbox from 'we-design/components/checkbox'
+import Dialog from 'we-design/components/dialog'
+import Empty from 'we-design/components/empty'
+import Filter from 'we-design/components/filter'
+import Index from 'we-design/components/index'
+import Logo from 'we-design/components/logo'
+import Popup from 'we-design/components/popup'
+import Search from 'we-design/components/search'
+import Poster from 'we-design/components/poster'
+import ShareOptions from 'we-design/components/share-options'
+import Share from 'we-design/components/share'
+import Swiper from 'we-design/components/swiper'
 
 Vue.config.productionTip = false
 
 Vue.use(globalPlugin)
 
-Vue.component('c-checkbox', CCheckbox)
-Vue.component('c-dialog', CDialog)
-Vue.component('c-empty', CEmpty)
-Vue.component('c-filter', CFilter)
-Vue.component('c-index', CIndex)
-Vue.component('c-logo', CLogo)
-Vue.component('c-popup', CPopup)
-Vue.component('c-search', CSearch)
-Vue.component('c-poster', CPoster)
-Vue.component('c-share-options', CShareOptions)
-Vue.component('c-share', CShare)
-Vue.component('c-swiper', CSwiper)
+Vue.component('c-checkbox', Checkbox)
+Vue.component('c-dialog', Dialog)
+Vue.component('c-empty', Empty)
+Vue.component('c-filter', Filter)
+Vue.component('c-index', Index)
+Vue.component('c-logo', Logo)
+Vue.component('c-popup', Popup)
+Vue.component('c-search', Search)
+Vue.component('c-poster', Poster)
+Vue.component('c-share-options', ShareOptions)
+Vue.component('c-share', Share)
+Vue.component('c-swiper', Swiper)
 
 const app = new Vue({
   mpType: 'app',
