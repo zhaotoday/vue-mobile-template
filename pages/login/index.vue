@@ -8,7 +8,7 @@
     <div class="b-buttons o-grid">
       <div class="o-grid__cell">
         <div
-          class="c-button is-block w1 h76 bdc21 c21 fs32"
+          class="c-button is-block h76 bdc21 c21 fs32"
           style="margin-right: 20rpx;"
           @click="navigateBack()">
           拒绝
@@ -17,7 +17,7 @@
       <div class="o-grid__cell">
         <!-- #ifdef H5 -->
         <button
-          class="c-button is-block w1 h76 bgc21 c11 fs32"
+          class="c-button is-block h76 bgc21 c11 fs32"
           style="margin-left: 20rpx;"
           @click="getUserInfo">
           允许
