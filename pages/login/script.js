@@ -36,8 +36,8 @@ export default {
         const wxUsersPostActionRes = await this.$store.dispatch(
           'public/wxUsers/postAction', {
             showLoading: true,
+            action: 'login',
             body: {
-              type: 'MP_GET_USER_INFO',
               code: loginRes.code,
               iv,
               encryptedData,

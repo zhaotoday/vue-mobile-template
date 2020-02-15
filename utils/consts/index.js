@@ -1,8 +1,8 @@
 import GENDERS from './genders'
 
 // 接口地址
-// const API_URL = 'http://localhost:3006/v1'
-const API_URL = 'https://gxcs.liruan.cn/v1'
+const API_URL = 'http://localhost:3000'
+// const API_URL = 'https://gxcs.liruan.cn/v1'
 
 // CDN
 const CDN_URL = 'https://gxcs.lrcdn.cn'
