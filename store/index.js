@@ -24,8 +24,10 @@ export default new Vuex.Store({
   actions,
   mutations,
   modules: {
-    'public/wxUsers': require('we-design/store/modules/public/wx-users').default,
+    'public/wxUsers': require(
+      'we-design/store/modules/public/wx-users').default,
     'public/dicts': require('we-design/store/modules/public/dicts').default,
-    'wx/wxUsers': require('we-design/store/modules/wx/wx-users').default
+    'wx/wxUsers': require('we-design/store/modules/wx/wx-users').default,
+    'wx/payments': require('./modules/wx/payments').default
   }
 })
