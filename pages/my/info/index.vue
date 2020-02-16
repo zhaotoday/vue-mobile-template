@@ -6,7 +6,7 @@
         <input
           class="c-list__value fs32"
           placeholder-class="c36"
-          placeholder="请输入姓名"
+          placeholder="请填写姓名"
           v-model.trim="cForm.model.name"
         />
       </div>

@@ -9,26 +9,26 @@ export default {
           phoneNumber: [
             {
               required: true,
-              message: '手机号不能为空'
+              message: '请填写手机号'
             },
             {
               pattern: /^1\d{2}\s?\d{4}\s?\d{4}$/,
               message: '手机号格式错误'
             }
           ],
-          checkCode: [
+          captcha: [
             {
               required: true,
-              message: '验证码不能为空'
+              message: '请填写验证码'
             },
             {
-              max: 6,
+              len: 6,
               message: '验证码格式错误'
             }
           ]
         }
       },
-      cCheckCode: {
+      cCaptcha: {
         disabled: false,
         message: '获取验证码'
       }
@@ -40,23 +40,23 @@ export default {
     })
   },
   methods: {
-    async getCheckCode () {
-      if (this.cCheckCode.disabled) return
+    async sendCaptcha () {
+      if (this.cCaptcha.disabled) return
 
       const rules = {
         phoneNumber: this.cForm.rules.phoneNumber
       }
       const { model } = this.cForm
 
-      new AsyncValidator(rules).validate(model, async (errors, fields) => {
+      new AsyncValidator(rules).validate(model, async errors => {
         if (errors) {
           this.$wx.showToast({ title: errors[0].message })
           return
         }
 
         await this.$store.dispatch('wx/wxUsers/postAction', {
+          action: 'sendCaptcha',
           body: {
-            type: 'GET_CHECK_CODE',
             phoneNumber: model.phoneNumber
           }
         })
@@ -66,24 +66,24 @@ export default {
         let i = 0
         let leftSeconds = 120
 
-        this.cCheckCode.disabled = true
-        this.cCheckCode.message = `${leftSeconds} 秒后重新获取`
+        this.cCaptcha.disabled = true
+        this.cCaptcha.message = `${leftSeconds}s 后获取`
 
         this.timer = setInterval(() => {
-          this.cCheckCode.message = `${leftSeconds - ++i} 秒后重新获取`
+          this.cCaptcha.message = `${leftSeconds - ++i}s 后获取`
 
           if (leftSeconds === i) {
             clearInterval(this.timer)
 
-            this.cCheckCode.disabled = false
-            this.cCheckCode.message = '获取验证码'
+            this.cCaptcha.disabled = false
+            this.cCaptcha.message = '获取验证码'
           }
         }, 1000)
       })
     },
     async submit () {
       const { rules, model } = this.cForm
-      const { phoneNumber, checkCode } = model
+      const { phoneNumber, captcha } = model
 
       new AsyncValidator(rules).validate(model, async (errors, fields) => {
         if (errors) {
@@ -93,10 +93,10 @@ export default {
 
         await this.$store.dispatch('wx/wxUsers/postAction', {
           showLoading: true,
+          action: 'bindPhoneNumber',
           body: {
-            type: 'BIND_PHONE_NUMBER',
             phoneNumber,
-            checkCode
+            captcha
           }
         })
 

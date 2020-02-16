@@ -12,9 +12,9 @@
         />
         <div
           class="c-list__operation fs28"
-          :class="cCheckCode.disabled ? 'c32' : 'c21'"
-          @click="getCheckCode">
-          {{ cCheckCode.message }}
+          :class="cCaptcha.disabled ? 'c36' : 'c21'"
+          @click="sendCaptcha">
+          {{ cCaptcha.message }}
         </div>
       </div>
       <div class="c-list__item">
@@ -24,7 +24,7 @@
           maxlength="6"
           placeholder-class="c36"
           placeholder="请填写验证码"
-          v-model.trim="cForm.model.checkCode"
+          v-model.trim="cForm.model.captcha"
         />
       </div>
     </div>

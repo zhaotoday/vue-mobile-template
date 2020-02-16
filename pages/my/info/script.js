@@ -1,3 +1,5 @@
+import AsyncValidator from 'async-validator'
+
 export default {
   data () {
     return {
@@ -5,10 +7,22 @@ export default {
       cForm: {
         model: {},
         rules: {
-          name:[
+          name: [
             {
               required: true,
-              message:""
+              message: '请填写姓名'
+            }
+          ],
+          phoneNumber: [
+            {
+              required: true,
+              message: '请绑定手机号'
+            }
+          ],
+          birthday: [
+            {
+              required: true,
+              message: '请选择生日'
             }
           ]
         }
@@ -37,35 +51,27 @@ export default {
       this.cForm.model.gender = this.$consts.GENDERS[pickerIndex].value
     },
     async save () {
-      const { name, phoneNumber, birthday, gender } = this.cForm
+      const { model, rules } = this.cForm
 
-      if (!name) {
-        this.$wx.showToast({ title: '请填写姓名' })
-        return
-      }
+      new AsyncValidator(rules).validate(model, async errors => {
+        if (errors) {
+          this.$wx.showToast({ title: errors[0].message })
+          return
+        }
 
-      if (!phoneNumber) {
-        this.$wx.showToast({ title: '请绑定手机号' })
-        return
-      }
+        await this.$store.dispatch('wx/wxUsers/put', {
+          id: this.user.id,
+          body: model
+        })
 
-      if (!birthday) {
-        this.$wx.showToast({ title: '请选择生日' })
-        return
-      }
+        this.$auth.set({ name: model.name })
 
-      await this.$store.dispatch('wx/wxUsers/put', {
-        id: this.user.id,
-        body: { name, birthday, gender }
+        this.$wx.showToast({ title: '保存成功' })
+
+        await this.$helpers.sleep(1500)
+
+        this.$wx.navigateBack()
       })
-
-      this.$auth.set({ name })
-
-      this.$wx.showToast({ title: '保存成功' })
-
-      await this.$helpers.sleep(1500)
-
-      this.$wx.navigateBack()
     }
   }
 }
