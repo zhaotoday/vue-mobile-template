@@ -2,16 +2,26 @@ export default {
   data () {
     return {
       hasBirthday: false,
-      cForm: {}
+      cForm: {
+        model: {},
+        rules: {
+          name:[
+            {
+              required: true,
+              message:""
+            }
+          ]
+        }
+      }
     }
   },
   async onLoad () {
-    this.cForm = await this.getDetail()
+    this.cForm.model = await this.getDetail()
     this.hasBirthday = !!this.cForm.birthday
   },
   async onShow () {
     const { phoneNumber } = await this.getDetail()
-    this.cForm.phoneNumber = phoneNumber
+    this.cForm.model.phoneNumber = phoneNumber
   },
   methods: {
     async getDetail () {
@@ -20,11 +30,11 @@ export default {
       })
     },
     handleBirthdayChange (e) {
-      this.cForm.birthday = e.detail.value
+      this.cForm.model.birthday = e.detail.value
     },
     handleGenderChange (e) {
       const pickerIndex = +e.detail.value
-      this.cForm.gender = this.$consts.GENDERS[pickerIndex].value
+      this.cForm.model.gender = this.$consts.GENDERS[pickerIndex].value
     },
     async save () {
       const { name, phoneNumber, birthday, gender } = this.cForm

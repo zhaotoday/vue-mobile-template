@@ -6,13 +6,13 @@
           class="c-list__value is-full fs32"
           type="number"
           maxlength="11"
-          placeholder-class="c32"
-          placeholder="请输入要绑定的手机号"
+          placeholder-class="c36"
+          placeholder="请填写手机号"
           v-model.trim="cForm.model.phoneNumber"
         />
         <div
-          class="b-check-code fs28"
-          :class="{ 'is-disabled': cCheckCode.disabled }"
+          class="c-list__operation fs28"
+          :class="cCheckCode.disabled ? 'c32' : 'c21'"
           @click="getCheckCode">
           {{ cCheckCode.message }}
         </div>
@@ -22,14 +22,14 @@
           class="c-list__value is-full fs32"
           type="number"
           maxlength="6"
-          placeholder-class="c32"
-          placeholder="请输入验证码"
+          placeholder-class="c36"
+          placeholder="请填写验证码"
           v-model.trim="cForm.model.checkCode"
         />
       </div>
     </div>
     <button
-      class="c-button is-foot w650 h88 bgc21 c11 fs32"
+      class="c-button is-bottom w650 h88 bgc21 c11 fs32"
       @click="submit">
       提交
     </button>
