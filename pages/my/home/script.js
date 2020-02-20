@@ -1,11 +1,13 @@
-export default {
-  methods: {
-    async navigateToMyInfo() {
-      await this.loggedIn();
+import Vue from "vue";
+import { Component } from "vue-property-decorator";
 
-      this.$wx.navigateTo({
-        url: "/pages/my/info/index"
-      });
-    }
+@Component
+export default class ExamplePage extends Vue {
+  async navigateToMyInfo() {
+    await this.loggedIn();
+
+    this.$wx.navigateTo({
+      url: "/pages/my/info/index"
+    });
   }
-};
+}

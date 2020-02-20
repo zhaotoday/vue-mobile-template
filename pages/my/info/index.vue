@@ -17,48 +17,57 @@
         </div>
         <div
           class="c-list__operation c21 fs28"
-          @click="navigateTo(`${$consts.PHONE_NUMBER_PAGE}?update=${cForm.model.phoneNumber ? 1 : ''}`)">
-          {{ cForm.model.phoneNumber ? '更换手机号' : '绑定手机号' }}
+          @click="
+            navigateTo(
+              `${$consts.PHONE_NUMBER_PAGE}?update=${
+                cForm.model.phoneNumber ? 1 : ''
+              }`
+            )
+          "
+        >
+          {{ cForm.model.phoneNumber ? "更换手机号" : "绑定手机号" }}
         </div>
       </div>
       <div class="c-list__item">
         <label>性别</label>
         <picker
-          :range="$consts.GENDERS.filter(item => item.value !== '0').map(item => item.label)"
-          @change="handleGenderChange">
-          <div
-            v-if="cForm.model.gender"
-            class="c-list__value fs32">
-            {{ $helpers.getItem($consts.GENDERS, 'value', cForm.model.gender)['label'] || '未知' }}
+          :range="
+            $consts.GENDERS.filter(item => item.value !== '0').map(
+              item => item.label
+            )
+          "
+          @change="handleGenderChange"
+        >
+          <div v-if="cForm.model.gender" class="c-list__value fs32">
+            {{
+              $helpers.getItem($consts.GENDERS, "value", cForm.model.gender)[
+                "label"
+              ] || "未知"
+            }}
           </div>
-          <div
-            v-else
-            class="c-list__value fs32 c36">
+          <div v-else class="c-list__value fs32 c36">
             请选择性别
           </div>
         </picker>
       </div>
       <div class="c-list__item">
         <label>生日</label>
-        <div
-          v-if="hasBirthday"
-          class="c-list__value c2">
+        <div v-if="hasBirthday" class="c-list__value c2">
           {{ cForm.model.birthday }}
         </div>
         <picker
           v-else
           mode="date"
           v-model="cForm.model.birthday"
-          @change="handleBirthdayChange">
-          <div :class="[ 'c-list__value', cForm.model.birthday ? '' : 'c36' ]">
-            {{ cForm.model.birthday || '请选择生日，保存后不可修改' }}
+          @change="handleBirthdayChange"
+        >
+          <div :class="['c-list__value', cForm.model.birthday ? '' : 'c36']">
+            {{ cForm.model.birthday || "请选择生日，保存后不可修改" }}
           </div>
         </picker>
       </div>
     </div>
-    <button
-      class="c-button is-bottom w650 h88 bgc21 c11 fs32"
-      @click="save">
+    <button class="c-button is-bottom w650 h88 bgc21 c11 fs32" @click="save">
       保存
     </button>
   </div>
@@ -66,7 +75,4 @@
 
 <script src="./script.js"></script>
 
-<style
-  lang="scss"
-  src="./style.scss">
-</style>
+<style lang="scss" src="./style.scss"></style>

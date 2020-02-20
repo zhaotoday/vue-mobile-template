@@ -23,7 +23,7 @@ import Vue from "vue";
 import { Component } from "vue-property-decorator";
 
 @Component
-export default class extends Vue {
+export default class IndexPage extends Vue {
   components = [
     {
       name: "checkbox"

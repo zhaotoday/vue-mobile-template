@@ -10,7 +10,8 @@
         <div
           class="c-button is-block h76 bdc21 c21 fs32"
           style="margin-right: 20rpx;"
-          @click="navigateBack()">
+          @click="navigateBack()"
+        >
           拒绝
         </div>
       </div>
@@ -19,7 +20,8 @@
         <button
           class="c-button is-block h76 bgc21 c11 fs32"
           style="margin-left: 20rpx;"
-          @click="getUserInfo">
+          @click="getUserInfo"
+        >
           允许
         </button>
         <!-- #endif -->
@@ -28,7 +30,8 @@
           class="c-button is-block w1 h76 bgc21 c11 fs32"
           open-type="getUserInfo"
           style="margin-left: 20rpx;"
-          @getuserinfo="getUserInfo">
+          @getuserinfo="getUserInfo"
+        >
           允许
         </button>
         <!-- #endif -->
@@ -39,7 +42,4 @@
 
 <script src="./script.js"></script>
 
-<style
-  lang="scss"
-  src="./style.scss">
-</style>
+<style lang="scss" src="./style.scss"></style>

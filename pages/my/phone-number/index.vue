@@ -13,7 +13,8 @@
         <div
           class="c-list__operation fs28"
           :class="cCaptcha.disabled ? 'c36' : 'c21'"
-          @click="sendCaptcha">
+          @click="sendCaptcha"
+        >
           {{ cCaptcha.message }}
         </div>
       </div>
@@ -28,9 +29,7 @@
         />
       </div>
     </div>
-    <button
-      class="c-button is-bottom w650 h88 bgc21 c11 fs32"
-      @click="submit">
+    <button class="c-button is-bottom w650 h88 bgc21 c11 fs32" @click="submit">
       提交
     </button>
   </div>
@@ -38,7 +37,4 @@
 
 <script src="./script.js"></script>
 
-<style
-  lang="scss"
-  src="./style.scss">
-</style>
+<style lang="scss" src="./style.scss"></style>
