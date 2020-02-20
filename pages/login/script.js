@@ -1,56 +1,58 @@
-import CLogo from 'we-design/components/logo'
-import mockUser from 'we-design/utils/mock-user'
+import CLogo from "we-design/components/logo";
+import mockUser from "we-design/utils/mock-user";
 
 export default {
   components: { CLogo },
   methods: {
-    async success () {
-      this.$wx.showToast({ title: '登录成功' })
+    async success() {
+      this.$wx.showToast({ title: "登录成功" });
 
-      await this.$helpers.sleep(1500)
+      await this.$helpers.sleep(1500);
 
       if (!this.infoModified()) {
         this.$wx.redirectTo({
           url: this.$consts.INFO_PAGE
-        })
+        });
       } else {
-        this.$wx.navigateBack()
+        this.$wx.navigateBack();
       }
     },
-    async getUserInfo () {
+    async getUserInfo() {
       // #ifdef H5
-      mockUser.login()
-      await this.success()
+      mockUser.login();
+      await this.success();
       // #endif
 
       // #ifndef H5
-      const getSettingRes = await this.$wx.getSetting()
+      const getSettingRes = await this.$wx.getSetting();
 
-      if (!getSettingRes.authSetting['scope.userInfo']) {
-        this.$wx.navigateBack()
+      if (!getSettingRes.authSetting["scope.userInfo"]) {
+        this.$wx.navigateBack();
       } else {
-        const loginRes = await this.$wx.login()
+        const loginRes = await this.$wx.login();
         const { iv, encryptedData } = await this.$wx.getUserInfo({
           withCredentials: true
-        })
+        });
         const wxUsersPostActionRes = await this.$store.dispatch(
-          'public/wxUsers/postAction', {
+          "public/wxUsers/postAction",
+          {
             showLoading: true,
-            action: 'login',
+            action: "login",
             body: {
               code: loginRes.code,
               iv,
               encryptedData,
               loginRes
             }
-          })
-        const { wxUser, token } = wxUsersPostActionRes.data
+          }
+        );
+        const { wxUser, token } = wxUsersPostActionRes.data;
 
-        this.$auth.login({ user: wxUser, token })
+        this.$auth.login({ user: wxUser, token });
 
-        await this.success()
+        await this.success();
       }
       // #endif
     }
   }
-}
+};

@@ -1,7 +1,7 @@
-import AsyncValidator from 'async-validator'
+import AsyncValidator from "async-validator";
 
 export default {
-  data () {
+  data() {
     return {
       cForm: {
         model: {},
@@ -9,104 +9,104 @@ export default {
           phoneNumber: [
             {
               required: true,
-              message: '请填写手机号'
+              message: "请填写手机号"
             },
             {
               pattern: /^1\d{2}\s?\d{4}\s?\d{4}$/,
-              message: '手机号格式错误'
+              message: "手机号格式错误"
             }
           ],
           captcha: [
             {
               required: true,
-              message: '请填写验证码'
+              message: "请填写验证码"
             },
             {
               len: 6,
-              message: '验证码格式错误'
+              message: "验证码格式错误"
             }
           ]
         }
       },
       cCaptcha: {
         disabled: false,
-        message: '获取验证码'
+        message: "获取验证码"
       }
-    }
+    };
   },
-  onLoad () {
+  onLoad() {
     this.$wx.setNavigationBarTitle({
-      title: this.$mp.query.update ? '更换手机号' : '绑定手机号'
-    })
+      title: this.$mp.query.update ? "更换手机号" : "绑定手机号"
+    });
   },
   methods: {
-    async sendCaptcha () {
-      if (this.cCaptcha.disabled) return
+    async sendCaptcha() {
+      if (this.cCaptcha.disabled) return;
 
       const rules = {
         phoneNumber: this.cForm.rules.phoneNumber
-      }
-      const { model } = this.cForm
+      };
+      const { model } = this.cForm;
 
       new AsyncValidator(rules).validate(model, async errors => {
         if (errors) {
-          this.$wx.showToast({ title: errors[0].message })
-          return
+          this.$wx.showToast({ title: errors[0].message });
+          return;
         }
 
-        await this.$store.dispatch('wx/wxUsers/postAction', {
-          action: 'sendCaptcha',
+        await this.$store.dispatch("wx/wxUsers/postAction", {
+          action: "sendCaptcha",
           body: {
             phoneNumber: model.phoneNumber
           }
-        })
+        });
 
-        this.$wx.showToast({ title: '验证码获取成功' })
+        this.$wx.showToast({ title: "验证码获取成功" });
 
-        let i = 0
-        let leftSeconds = 120
+        let i = 0;
+        let leftSeconds = 120;
 
-        this.cCaptcha.disabled = true
-        this.cCaptcha.message = `${leftSeconds}s 后获取`
+        this.cCaptcha.disabled = true;
+        this.cCaptcha.message = `${leftSeconds}s 后获取`;
 
         this.timer = setInterval(() => {
-          this.cCaptcha.message = `${leftSeconds - ++i}s 后获取`
+          this.cCaptcha.message = `${leftSeconds - ++i}s 后获取`;
 
           if (leftSeconds === i) {
-            clearInterval(this.timer)
+            clearInterval(this.timer);
 
-            this.cCaptcha.disabled = false
-            this.cCaptcha.message = '获取验证码'
+            this.cCaptcha.disabled = false;
+            this.cCaptcha.message = "获取验证码";
           }
-        }, 1000)
-      })
+        }, 1000);
+      });
     },
-    async submit () {
-      const { rules, model } = this.cForm
-      const { phoneNumber, captcha } = model
+    async submit() {
+      const { rules, model } = this.cForm;
+      const { phoneNumber, captcha } = model;
 
       new AsyncValidator(rules).validate(model, async (errors, fields) => {
         if (errors) {
-          this.$wx.showToast({ title: errors[0].message })
-          return
+          this.$wx.showToast({ title: errors[0].message });
+          return;
         }
 
-        await this.$store.dispatch('wx/wxUsers/postAction', {
+        await this.$store.dispatch("wx/wxUsers/postAction", {
           showLoading: true,
-          action: 'bindPhoneNumber',
+          action: "bindPhoneNumber",
           body: {
             phoneNumber,
             captcha
           }
-        })
+        });
 
-        this.$auth.set({ phoneNumber })
-        this.$wx.showToast({ title: '绑定成功' })
+        this.$auth.set({ phoneNumber });
+        this.$wx.showToast({ title: "绑定成功" });
 
-        await this.$helpers.sleep(1500)
+        await this.$helpers.sleep(1500);
 
-        this.$wx.navigateBack()
-      })
+        this.$wx.navigateBack();
+      });
     }
   }
-}
+};

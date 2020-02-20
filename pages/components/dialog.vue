@@ -1,8 +1,6 @@
 <template>
   <div class="wrap">
-    <button
-      class="c-button br8 w1 h88 bgc21 c11 fs32"
-      @click="visible = true">
+    <button class="c-button br8 w1 h88 bgc21 c11 fs32" @click="visible = true">
       弹出框
     </button>
     <c-dialog
@@ -12,7 +10,8 @@
       :show-cancel="false"
       confirm-text="确认按钮"
       confirm-disabled
-      @confirm="visible = false">
+      @confirm="visible = false"
+    >
       <div slot="body">
         <div class="b-body fs30 u-tac">内容</div>
       </div>
@@ -21,23 +20,23 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      visible: false
-    }
-  }
+import Vue from "vue";
+import { Component } from "vue-property-decorator";
+
+@Component
+export default class extends Vue {
+  visible = true;
 }
 </script>
 
 <style lang="scss">
-  @import "../../assets/styles/utils/index";
+@import "../../assets/styles/utils/index";
 
-  .wrap {
-    padding: px2rpx(30px);
-  }
+.wrap {
+  padding: px2rpx(30px);
+}
 
-  @include b(body) {
-    padding-bottom: px2rpx(30px);
-  }
+@include b(body) {
+  padding-bottom: px2rpx(30px);
+}
 </style>
