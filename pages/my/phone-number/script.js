@@ -87,7 +87,7 @@ export default class MyPhoneNumberPage extends Vue {
     const { rules, model } = this.cForm;
     const { phoneNumber, captcha } = model;
 
-    new AsyncValidator(rules).validate(model, async (errors, fields) => {
+    new AsyncValidator(rules).validate(model, async errors => {
       if (errors) {
         this.$wx.showToast({ title: errors[0].message });
         return;
