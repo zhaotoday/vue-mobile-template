@@ -3,7 +3,7 @@ import { Component } from "vue-property-decorator";
 import AsyncValidator from "async-validator";
 
 @Component
-export default class HomePage extends Vue {
+export default class MyPhoneNumberPage extends Vue {
   cForm = {
     model: {},
     rules: {

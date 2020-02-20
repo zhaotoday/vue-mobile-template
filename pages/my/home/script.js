@@ -2,7 +2,7 @@ import Vue from "vue";
 import { Component } from "vue-property-decorator";
 
 @Component
-export default class ExamplePage extends Vue {
+export default class MyHomePage extends Vue {
   async navigateToMyInfo() {
     await this.loggedIn();
 
