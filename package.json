@@ -4,8 +4,8 @@
   "description": "uni-app template",
   "main": "main.js",
   "scripts": {
-    "format": "prettier --write \"pages/**/*.js\" \"utils/**/*.js\"",
-    "lint": "eslint \"pages/**/*.js\" \"utils/**/*.js\" --fix"
+    "format": "prettier --write \"models/**/*.js\" \"pages/**/*.js\" \"plugins/**/*.js\" \"store/**/*.js\" \"utils/**/*.js\"",
+    "lint": "eslint \"models/**/*.js\" \"pages/**/*.js\" \"plugins/**/*.js\" \"store/**/*.js\" \"utils/**/*.js\" --fix"
   },
   "repository": {
     "type": "git",
