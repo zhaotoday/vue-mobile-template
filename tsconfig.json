@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "strict": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "experimentalDecorators": true
+  },
+  "include": [
+    "components/**/*.ts",
+    "components/**/*.vue",
+    "pages/**/*.ts",
+    "pages/**/*.vue",
+    "utils/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
