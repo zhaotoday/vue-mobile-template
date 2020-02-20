@@ -9,10 +9,7 @@
     </div>
     <div class="c-panel__body p30">
       <ul class="c-list fs32">
-        <li
-          v-for="item in 4"
-          :key="item"
-          class="c-list__item is-link">
+        <li v-for="item in 4" :key="item" class="c-list__item is-link">
           列表项
         </li>
       </ul>
@@ -21,5 +18,9 @@
 </template>
 
 <script>
-export default {}
+import Vue from "vue";
+import { Component } from "vue-property-decorator";
+
+@Component
+export default class extends Vue {}
 </script>

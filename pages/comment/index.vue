@@ -21,11 +21,10 @@
       class="c-comment__textarea fs28 bgc11"
       placholder-class="c32"
       placeholder="请输入评论"
-      v-model="cForm.content">
+      v-model="cForm.content"
+    >
     </textarea>
-    <button
-      class="c-button is-foot w650 h88 bgc21 c11 fs32"
-      @click="submit">
+    <button class="c-button is-foot w650 h88 bgc21 c11 fs32" @click="submit">
       提交
     </button>
   </div>
@@ -33,7 +32,4 @@
 
 <script src="./script.js"></script>
 
-<style
-  lang="scss"
-  src="./style.scss">
-</style>
+<style lang="scss" src="./style.scss"></style>

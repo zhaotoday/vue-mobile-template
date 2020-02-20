@@ -9,7 +9,8 @@
           v-for="item in components"
           :key="item.name"
           class="c-list__item is-link"
-          @click="navigateTo(`/pages/components/${item.name}`)">
+          @click="navigateTo(`/pages/components/${item.name}`)"
+        >
           {{ item.name }}
         </li>
       </ul>
@@ -18,39 +19,39 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      components: [
-        {
-          name: 'checkbox'
-        },
-        {
-          name: 'dialog'
-        },
-        {
-          name: 'empty'
-        },
-        {
-          name: 'list'
-        },
-        {
-          name: 'logo'
-        },
-        {
-          name: 'search'
-        },
-        {
-          name: 'share'
-        },
-        {
-          name: 'simple-ui'
-        },
-        {
-          name: 'swiper'
-        }
-      ]
+import Vue from "vue";
+import { Component } from "vue-property-decorator";
+
+@Component
+export default class extends Vue {
+  components = [
+    {
+      name: "checkbox"
+    },
+    {
+      name: "dialog"
+    },
+    {
+      name: "empty"
+    },
+    {
+      name: "list"
+    },
+    {
+      name: "logo"
+    },
+    {
+      name: "search"
+    },
+    {
+      name: "share"
+    },
+    {
+      name: "simple-ui"
+    },
+    {
+      name: "swiper"
     }
-  }
+  ];
 }
 </script>

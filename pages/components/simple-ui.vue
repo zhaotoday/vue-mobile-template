@@ -25,18 +25,22 @@
 </template>
 
 <script>
-export default {}
+import Vue from "vue";
+import { Component } from "vue-property-decorator";
+
+@Component
+export default class extends Vue {}
 </script>
 
 <style lang="scss">
-  @import "../../assets/styles/utils/index";
+@import "../../assets/styles/utils/index";
 
-  h2 {
-    padding: px2rpx(30px);
-    font-size: px2rpx(28px);
-  }
+h2 {
+  padding: px2rpx(30px);
+  font-size: px2rpx(28px);
+}
 
-  p {
-    @include margin(null, px2rpx(30px), px2rpx(30px), px2rpx(30px));
-  }
+p {
+  @include margin(null, px2rpx(30px), px2rpx(30px), px2rpx(30px));
+}
 </style>

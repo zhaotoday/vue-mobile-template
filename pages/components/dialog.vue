@@ -25,7 +25,7 @@ import { Component } from "vue-property-decorator";
 
 @Component
 export default class extends Vue {
-  visible = true;
+  visible = false;
 }
 </script>
 
