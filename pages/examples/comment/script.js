@@ -10,6 +10,6 @@ export default class CommentPage extends Vue {
   };
 
   async submit() {
-    console.log("submit: " + this.cForm);
+    console.log("submit: ", this.cForm);
   }
 }

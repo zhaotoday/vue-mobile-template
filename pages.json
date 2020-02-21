@@ -61,23 +61,23 @@
       }
     },
     {
-      "path": "pages/my/home/index",
-      "style": {
-        "navigationBarTitleText": "我的",
-        "navigationBarTextStyle": "white",
-        "navigationBarBackgroundColor": "#1DA677"
-      }
-    },
-    {
-      "path": "pages/comment/index",
+      "path": "pages/examples/comment/index",
       "style": {
         "navigationBarTitleText": "评论"
       }
     },
     {
-      "path": "pages/select-city/index",
+      "path": "pages/examples/select-city/index",
       "style": {
         "navigationBarTitleText": "城市选择"
+      }
+    },
+    {
+      "path": "pages/my/home/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#1DA677"
       }
     },
     {

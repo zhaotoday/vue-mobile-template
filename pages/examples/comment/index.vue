@@ -24,7 +24,7 @@
       v-model="cForm.content"
     >
     </textarea>
-    <button class="c-button is-foot w650 h88 bgc21 c11 fs32" @click="submit">
+    <button class="c-button is-bottom w650 h88 bgc21 c11 fs32" @click="submit">
       提交
     </button>
   </div>

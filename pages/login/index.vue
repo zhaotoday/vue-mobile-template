@@ -27,7 +27,7 @@
         <!-- #endif -->
         <!-- #ifndef H5 -->
         <button
-          class="c-button is-block w1 h76 bgc21 c11 fs32"
+          class="c-button is-block h76 bgc21 c11 fs32"
           open-type="getUserInfo"
           style="margin-left: 20rpx;"
           @getuserinfo="getUserInfo"
