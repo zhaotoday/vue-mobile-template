@@ -54,6 +54,10 @@ export default class LoginPage extends Vue {
 
       this.$auth.login({ user: wxUser, token });
 
+      this.$store.dispatch("setUser", {
+        user: this.$auth.get()["user"]
+      });
+
       await this.success();
     }
     // #endif
