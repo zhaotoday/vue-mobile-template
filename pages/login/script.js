@@ -8,17 +8,15 @@ import mockUser from "we-design/utils/mock-user";
 })
 export default class LoginPage extends Vue {
   async success() {
+    this.$store.dispatch("setUser", {
+      user: this.$auth.get()["user"]
+    });
     this.$wx.showToast({ title: "登录成功" });
 
     await this.$helpers.sleep(1500);
+    await this.infoModified();
 
-    if (!this.infoModified()) {
-      this.$wx.redirectTo({
-        url: this.$consts.INFO_PAGE
-      });
-    } else {
-      this.$wx.navigateBack();
-    }
+    this.$wx.navigateBack();
   }
 
   async getUserInfo() {
@@ -53,10 +51,6 @@ export default class LoginPage extends Vue {
       const { wxUser, token } = wxUsersPostActionRes.data;
 
       this.$auth.login({ user: wxUser, token });
-
-      this.$store.dispatch("setUser", {
-        user: this.$auth.get()["user"]
-      });
 
       await this.success();
     }
