@@ -31,24 +31,17 @@ export default class LoginPage extends Vue {
     if (!getSettingRes.authSetting["scope.userInfo"]) {
       this.$wx.navigateBack();
     } else {
-      const loginRes = await this.$wx.login();
+      const { code } = await this.$wx.login();
       const { iv, encryptedData } = await this.$wx.getUserInfo({
         withCredentials: true
       });
-      const wxUsersPostActionRes = await this.$store.dispatch(
-        "public/wxUsers/postAction",
-        {
-          showLoading: true,
-          action: "login",
-          body: {
-            code: loginRes.code,
-            iv,
-            encryptedData,
-            loginRes
-          }
-        }
-      );
-      const { wxUser, token } = wxUsersPostActionRes.data;
+      const {
+        data: { wxUser, token }
+      } = await this.$store.dispatch("public/wxUsers/postAction", {
+        showLoading: true,
+        action: "login",
+        body: { code, iv, encryptedData }
+      });
 
       this.$auth.login({ user: wxUser, token });
 
