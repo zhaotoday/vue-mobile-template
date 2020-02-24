@@ -1,14 +1,15 @@
 <script>
-export default {
-  onLaunch () {
-    this.setOpenId()
-    this.refreshWxUserInfo()
-    this.updateDicts()
+import Vue from "vue";
+import { Component } from "vue-property-decorator";
+
+@Component
+export default class App extends Vue {
+  onLaunch() {
+    this.setOpenId();
+    this.refreshWxUserInfo();
+    this.updateDicts();
   }
 }
 </script>
 
-<style
-  lang="scss"
-  src="./assets/styles/global/index.scss">
-</style>
+<style lang="scss" src="./assets/styles/global/index.scss"></style>
