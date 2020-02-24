@@ -1,5 +1,5 @@
 <template>
-  <div class="p-my">
+  <div class="p-my-home">
     <div class="b-info bgc21 c11 u-tac">
       <template v-if="user.id">
         <img class="c-avatar" :src="user.avatarUrl" />

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-phone-number u-pt18">
+  <div class="p-my-phone-number u-pt18">
     <div class="c-list bgc11 fs30">
       <div class="c-list__item">
         <input
