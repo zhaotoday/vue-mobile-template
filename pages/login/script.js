@@ -1,11 +1,8 @@
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import CLogo from "we-design/components/logo";
 import mockUser from "we-design/utils/mock-user";
 
-@Component({
-  components: { CLogo }
-})
+@Component
 export default class LoginPage extends Vue {
   async success() {
     this.$store.dispatch("setUser", {
