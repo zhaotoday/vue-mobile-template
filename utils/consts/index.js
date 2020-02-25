@@ -1,5 +1,3 @@
-import GENDERS from "./genders";
-
 // 接口地址
 const API_URL = "http://localhost:3000";
 // const API_URL = 'https://gxcs.liruan.cn/v1'
@@ -29,7 +27,6 @@ const NAME = "力软小程序";
 const INTRODUCTION = "小程序介绍。";
 
 export default {
-  GENDERS,
   API_URL,
   CDN_URL,
   STATIC_URL,

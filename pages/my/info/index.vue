@@ -13,7 +13,11 @@
       <div class="c-list__item">
         <label>手机号</label>
         <div class="c-list__value fs32">
-          {{ $helpers.encryptPhoneNumber(cForm.model.phoneNumber) }}
+          {{
+            cForm.model.phoneNumber
+              ? $helpers.encryptPhoneNumber(cForm.model.phoneNumber)
+              : ""
+          }}
         </div>
         <div
           class="c-list__operation c21 fs28"
@@ -32,7 +36,7 @@
         <label>性别</label>
         <picker
           :range="
-            $consts.GENDERS.filter(item => item.value !== '0').map(
+            dicts.Gender.filter(item => item.value !== 0).map(
               item => item.label
             )
           "
@@ -40,9 +44,9 @@
         >
           <div v-if="cForm.model.gender" class="c-list__value fs32">
             {{
-              $helpers.getItem($consts.GENDERS, "value", cForm.model.gender)[
+              $helpers.getItem(dicts.Gender, "value", cForm.model.gender)[
                 "label"
-              ] || "未知"
+              ] || ""
             }}
           </div>
           <div v-else class="c-list__value fs32 c36">

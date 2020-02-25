@@ -7,7 +7,12 @@ export default class MyInfoPage extends Vue {
   hasBirthday = false;
 
   cForm = {
-    model: {},
+    model: {
+      name: "",
+      phoneNumber: "",
+      birthday: "",
+      gender: -1
+    },
     rules: {
       name: [
         {
@@ -52,7 +57,10 @@ export default class MyInfoPage extends Vue {
 
   handleGenderChange(e) {
     const pickerIndex = +e.detail.value;
-    this.cForm.model.gender = this.$consts.GENDERS[pickerIndex].value;
+
+    this.cForm.model.gender = this.dicts.Gender.filter(
+      item => item.value !== 0
+    )[pickerIndex].value;
   }
 
   async save() {
