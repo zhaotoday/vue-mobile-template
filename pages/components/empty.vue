@@ -6,5 +6,5 @@
 import { Vue, Component } from "vue-property-decorator";
 
 @Component
-export default class EmptyPage extends Vue {}
+export default class EmptyExample extends Vue {}
 </script>

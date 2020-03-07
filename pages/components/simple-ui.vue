@@ -28,7 +28,7 @@
 import { Vue, Component } from "vue-property-decorator";
 
 @Component
-export default class SimpleUiPage extends Vue {}
+export default class SimpleUiExample extends Vue {}
 </script>
 
 <style lang="scss">

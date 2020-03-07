@@ -2,7 +2,7 @@ import { Vue, Component } from "vue-property-decorator";
 import mockUser from "we-design/utils/mock-user";
 
 @Component
-export default class LoginPage extends Vue {
+export default class Login extends Vue {
   async success() {
     this.$store.dispatch("setUser", {
       user: this.$auth.get()["user"]

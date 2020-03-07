@@ -4,4 +4,4 @@ import CIndex from "we-design/components/index";
 @Component({
   components: { CIndex }
 })
-export default class SelectCityPage extends Vue {}
+export default class SelectCity extends Vue {}

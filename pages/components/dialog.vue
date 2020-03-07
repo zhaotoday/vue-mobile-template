@@ -23,7 +23,7 @@
 import { Vue, Component } from "vue-property-decorator";
 
 @Component
-export default class DialogPage extends Vue {
+export default class DialogExample extends Vue {
   visible = false;
 }
 </script>
