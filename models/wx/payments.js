@@ -1,5 +1,5 @@
 import REST from "we-design/utils/rest";
-import restHelpers from "we-design/utils/helpers/rest-helpers";
+import auth from "we-design/utils/auth";
 import consts from "@/utils/consts";
 
 export default class extends REST {
@@ -7,7 +7,7 @@ export default class extends REST {
     super();
 
     this.baseURL = consts.API_URL;
-    this.headers = restHelpers.getHeaders();
+    this.headers = auth.getHeaders();
     this.path = "wx/payments";
   }
 }
