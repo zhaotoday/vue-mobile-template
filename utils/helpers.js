@@ -1,3 +1,3 @@
-import helpers from "we-design/utils/helpers/base";
+import helpers from "we-design/utils/helpers";
 
 export default helpers;
