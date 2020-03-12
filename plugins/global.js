@@ -6,7 +6,7 @@ import wxUserMixin from "we-design/mixins/wx-user";
 import dictsMixin from "we-design/mixins/dicts";
 import store from "@/store";
 import consts from "@/utils/consts";
-import helpers from "@/utils/helpers/base";
+import helpers from "@/utils/helpers";
 
 export default {
   install(Vue) {

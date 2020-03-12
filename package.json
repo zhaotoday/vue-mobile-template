@@ -24,7 +24,7 @@
     "vue-property-decorator": "^8.4.0",
     "vuex": "^3.1.2",
     "vuex-persistedstate": "^2.7.0",
-    "we-design": "0.0.45"
+    "we-design": "0.0.47"
   },
   "devDependencies": {
     "@vue/eslint-config-prettier": "^6.0.0",
