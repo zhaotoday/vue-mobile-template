@@ -1,5 +1,5 @@
 // File -> Settings -> Languages & Frameworks -> JavaScript -> Webpack
-// 选择 build 文件夹 -> alias.conf.js
+// -> webpack configuration file 选择 alias.config.js
 
 const resolve = dir => require("path").join(__dirname, dir);
 
