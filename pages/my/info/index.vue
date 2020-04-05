@@ -23,7 +23,7 @@
           class="c-list__operation c21 fs28"
           @click="
             navigateTo(
-              `${$consts.PHONE_NUMBER_PAGE}?update=${
+              `${$consts.PhoneNumberPage}?update=${
                 cForm.model.phoneNumber ? 1 : ''
               }`
             )

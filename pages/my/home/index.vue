@@ -11,11 +11,11 @@
       <template v-else>
         <div
           class="c-avatar c-avatar--default"
-          @click="navigateTo($consts.LOGIN_PAGE)"
+          @click="navigateTo($consts.LoginPage)"
         ></div>
         <div
           class="b-login c-tag w60 h50 bdc11 br8 fs28"
-          @click="navigateTo($consts.LOGIN_PAGE)"
+          @click="navigateTo($consts.LoginPage)"
         >
           授权登录
         </div>

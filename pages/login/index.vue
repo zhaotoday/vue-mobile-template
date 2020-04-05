@@ -1,9 +1,9 @@
 <template>
   <div class="p-login">
     <div class="b-logo">
-      <c-logo :name="$consts.NAME"></c-logo>
+      <c-logo :name="$consts.Name"></c-logo>
     </div>
-    <h2 class="b-title fs32">{{ $consts.NAME }}将获取以下授权：</h2>
+    <h2 class="b-title fs32">{{ $consts.Name }}将获取以下授权：</h2>
     <p class="b-desc c37 fs28">获得您的公开信息（昵称、头像等）</p>
     <div class="b-buttons o-grid">
       <div class="o-grid__cell">
