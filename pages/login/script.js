@@ -1,4 +1,4 @@
-import { Vue, Component } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import mockUser from "we-design/utils/mock-user";
 
 @Component

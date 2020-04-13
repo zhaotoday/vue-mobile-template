@@ -1,7 +1,7 @@
-import Pen from './lib/pen';
-import Downloader from './lib/downloader';
+import Pen from "./lib/pen";
+import Downloader from "./lib/downloader";
 
-const util = require('./lib/util');
+const util = require("./lib/util");
 
 const downloader = new Downloader();
 
@@ -16,28 +16,28 @@ Component({
    */
   properties: {
     customStyle: {
-      type: String,
+      type: String
     },
     palette: {
       type: Object,
-      observer: function (newVal, oldVal) {
+      observer: function(newVal, oldVal) {
         if (this.isNeedRefresh(newVal, oldVal)) {
           this.paintCount = 0;
           this.startPaint();
         }
-      },
+      }
     },
     // 启用脏检查，默认 false
     dirty: {
       type: Boolean,
-      value: false,
-    },
+      value: false
+    }
   },
 
   data: {
-    picURL: '',
+    picURL: "",
     showCanvas: true,
-    painterStyle: '',
+    painterStyle: ""
   },
 
   attached() {
@@ -57,7 +57,11 @@ Component({
     },
 
     isNeedRefresh(newVal, oldVal) {
-      if (!newVal || this.isEmpty(newVal) || (this.data.dirty && util.equal(newVal, oldVal))) {
+      if (
+        !newVal ||
+        this.isEmpty(newVal) ||
+        (this.data.dirty && util.equal(newVal, oldVal))
+      ) {
         return false;
       }
       return true;
@@ -73,25 +77,27 @@ Component({
           getApp().systemInfo = wx.getSystemInfoSync();
         } catch (e) {
           const error = `Painter get system info failed, ${JSON.stringify(e)}`;
-          that.triggerEvent('imgErr', { error: error });
+          that.triggerEvent("imgErr", { error: error });
           console.error(error);
           return;
         }
       }
       screenK = getApp().systemInfo.screenWidth / 750;
 
-      this.downloadImages().then((palette) => {
+      this.downloadImages().then(palette => {
         const { width, height } = palette;
         this.canvasWidthInPx = width.toPx();
         this.canvasHeightInPx = height.toPx();
         if (!width || !height) {
-          console.error(`You should set width and height correctly for painter, width: ${width}, height: ${height}`);
+          console.error(
+            `You should set width and height correctly for painter, width: ${width}, height: ${height}`
+          );
           return;
         }
         this.setData({
-          painterStyle: `width:${width};height:${height};`,
+          painterStyle: `width:${width};height:${height};`
         });
-        const ctx = wx.createCanvasContext('k-canvas', this);
+        const ctx = wx.createCanvasContext("k-canvas", this);
         const pen = new Pen(ctx, palette);
         pen.paint(() => {
           this.saveImgToLocal();
@@ -106,51 +112,61 @@ Component({
         const paletteCopy = JSON.parse(JSON.stringify(this.properties.palette));
         if (paletteCopy.background) {
           preCount++;
-          downloader.download(paletteCopy.background).then((path) => {
-            paletteCopy.background = path;
-            completeCount++;
-            if (preCount === completeCount) {
-              resolve(paletteCopy);
+          downloader.download(paletteCopy.background).then(
+            path => {
+              paletteCopy.background = path;
+              completeCount++;
+              if (preCount === completeCount) {
+                resolve(paletteCopy);
+              }
+            },
+            () => {
+              completeCount++;
+              if (preCount === completeCount) {
+                resolve(paletteCopy);
+              }
             }
-          }, () => {
-            completeCount++;
-            if (preCount === completeCount) {
-              resolve(paletteCopy);
-            }
-          });
+          );
         }
         if (paletteCopy.views) {
           for (const view of paletteCopy.views) {
-            if (view && view.type === 'image' && view.url) {
+            if (view && view.type === "image" && view.url) {
               preCount++;
               /* eslint-disable no-loop-func */
-              downloader.download(view.url).then((path) => {
-                view.url = path;
-                wx.getImageInfo({
-                  src: view.url,
-                  success: (res) => {
-                    // 获得一下图片信息，供后续裁减使用
-                    view.sWidth = res.width;
-                    view.sHeight = res.height;
-                  },
-                  fail: (error) => {
-                    // 如果图片坏了，则直接置空，防止坑爹的 canvas 画崩溃了
-                    view.url = "";
-                    console.error(`getImageInfo ${view.url} failed, ${JSON.stringify(error)}`);
-                  },
-                  complete: () => {
-                    completeCount++;
-                    if (preCount === completeCount) {
-                      resolve(paletteCopy);
+              downloader.download(view.url).then(
+                path => {
+                  view.url = path;
+                  wx.getImageInfo({
+                    src: view.url,
+                    success: res => {
+                      // 获得一下图片信息，供后续裁减使用
+                      view.sWidth = res.width;
+                      view.sHeight = res.height;
+                    },
+                    fail: error => {
+                      // 如果图片坏了，则直接置空，防止坑爹的 canvas 画崩溃了
+                      view.url = "";
+                      console.error(
+                        `getImageInfo ${view.url} failed, ${JSON.stringify(
+                          error
+                        )}`
+                      );
+                    },
+                    complete: () => {
+                      completeCount++;
+                      if (preCount === completeCount) {
+                        resolve(paletteCopy);
+                      }
                     }
-                  },
-                });
-              }, () => {
-                completeCount++;
-                if (preCount === completeCount) {
-                  resolve(paletteCopy);
+                  });
+                },
+                () => {
+                  completeCount++;
+                  if (preCount === completeCount) {
+                    resolve(paletteCopy);
+                  }
                 }
-              });
+              );
             }
           }
         }
@@ -163,16 +179,21 @@ Component({
     saveImgToLocal() {
       const that = this;
       setTimeout(() => {
-        wx.canvasToTempFilePath({
-          canvasId: 'k-canvas',
-          success: function (res) {
-            that.getImageInfo(res.tempFilePath);
+        wx.canvasToTempFilePath(
+          {
+            canvasId: "k-canvas",
+            success: function(res) {
+              that.getImageInfo(res.tempFilePath);
+            },
+            fail: function(error) {
+              console.error(
+                `canvasToTempFilePath failed, ${JSON.stringify(error)}`
+              );
+              that.triggerEvent("imgErr", { error: error });
+            }
           },
-          fail: function (error) {
-            console.error(`canvasToTempFilePath failed, ${JSON.stringify(error)}`);
-            that.triggerEvent('imgErr', { error: error });
-          },
-        }, this);
+          this
+        );
       }, 300);
     },
 
@@ -180,28 +201,34 @@ Component({
       const that = this;
       wx.getImageInfo({
         src: filePath,
-        success: (infoRes) => {
+        success: infoRes => {
           if (that.paintCount > MAX_PAINT_COUNT) {
             const error = `The result is always fault, even we tried ${MAX_PAINT_COUNT} times`;
             console.error(error);
-            that.triggerEvent('imgErr', { error: error });
+            that.triggerEvent("imgErr", { error: error });
             return;
           }
           // 比例相符时才证明绘制成功，否则进行强制重绘制
-          if (Math.abs((infoRes.width * that.canvasHeightInPx - that.canvasWidthInPx * infoRes.height) / (infoRes.height * that.canvasHeightInPx)) < 0.01) {
-            that.triggerEvent('imgOK', { path: filePath });
+          if (
+            Math.abs(
+              (infoRes.width * that.canvasHeightInPx -
+                that.canvasWidthInPx * infoRes.height) /
+                (infoRes.height * that.canvasHeightInPx)
+            ) < 0.01
+          ) {
+            that.triggerEvent("imgOK", { path: filePath });
           } else {
             that.startPaint();
           }
           that.paintCount++;
         },
-        fail: (error) => {
+        fail: error => {
           console.error(`getImageInfo failed, ${JSON.stringify(error)}`);
-          that.triggerEvent('imgErr', { error: error });
-        },
+          that.triggerEvent("imgErr", { error: error });
+        }
       });
-    },
-  },
+    }
+  }
 });
 
 let screenK = 0.5;
@@ -228,9 +255,9 @@ function setStringPrototype() {
     const value = parseFloat(this);
 
     let res = 0;
-    if (unit === 'rpx') {
+    if (unit === "rpx") {
       res = Math.round(value * screenK);
-    } else if (unit === 'px') {
+    } else if (unit === "px") {
       res = value;
     }
     return res;

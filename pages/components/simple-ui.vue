@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { Vue, Component } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class SimpleUiExample extends Vue {}
