@@ -1,18 +1,18 @@
-import Vue from 'vue'
-import App from '@/App'
-import globalPlugin from '@/plugins/global'
-import Checkbox from 'we-design/components/checkbox'
-import Dialog from 'we-design/components/dialog'
-import Empty from 'we-design/components/empty'
-import Filter from 'we-design/components/filter'
-import Index from 'we-design/components/index'
-import Logo from 'we-design/components/logo'
-import Popup from 'we-design/components/popup'
-import Search from 'we-design/components/search'
-import Poster from 'we-design/components/poster'
-import ShareOptions from 'we-design/components/share-options'
-import Share from 'we-design/components/share'
-import Swiper from 'we-design/components/swiper'
+import Vue from "vue";
+import App from "@/App";
+import globalPlugin from "@/plugins/global";
+import Checkbox from "we-design/components/checkbox";
+import Dialog from "we-design/components/dialog";
+import Empty from "we-design/components/empty";
+import Filter from "we-design/components/filter";
+import Index from "we-design/components/index";
+import Logo from "we-design/components/logo";
+import Popup from "we-design/components/popup";
+import Search from "we-design/components/search";
+import Poster from "we-design/components/poster";
+import ShareOptions from "we-design/components/share-options";
+import Share from "we-design/components/share";
+import Swiper from "we-design/components/swiper";
 
 Vue.config.productionTip = false;
 

@@ -1,7 +1,10 @@
 import { Component, Vue } from "vue-property-decorator";
 import mockUser from "we-design/utils/mock-user";
+import MpMixin from "we-design/mixins/mp";
 
-@Component
+@Component({
+  mixins: [MpMixin]
+})
 export default class Login extends Vue {
   async success() {
     this.$store.dispatch("setUser", {
@@ -20,29 +23,11 @@ export default class Login extends Vue {
     mockUser.login();
     await this.success();
     // #endif
-
     // #ifndef H5
-    const getSettingRes = await this.$wx.getSetting();
-
-    if (!getSettingRes.authSetting["scope.userInfo"]) {
-      this.$wx.navigateBack();
-    } else {
-      const { code } = await this.$wx.login();
-      const { iv, encryptedData } = await this.$wx.getUserInfo({
-        withCredentials: true
-      });
-      const {
-        data: { wxUser, token }
-      } = await this.$store.dispatch("public/wxUsers/postAction", {
-        showLoading: true,
-        action: "login",
-        body: { code, iv, encryptedData }
-      });
-
+    this.mpLogin(async ({ wxUser, token }) => {
       this.$auth.login({ user: wxUser, token });
-
       await this.success();
-    }
+    });
     // #endif
   }
 }
