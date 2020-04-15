@@ -5,7 +5,7 @@ import MpMixin from "we-design/mixins/mp";
 @Component({
   mixins: [MpMixin]
 })
-export default class Login extends Vue {
+export default class extends Vue {
   async success() {
     this.$store.dispatch("setUser", {
       user: this.$auth.get()["user"]

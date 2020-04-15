@@ -14,7 +14,7 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component
-export default class ShareExample extends Vue {
+export default class extends Vue {
   onShow() {
     this.$refs.share.init();
   }

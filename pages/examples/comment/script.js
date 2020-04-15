@@ -1,7 +1,7 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component
-export default class CommentExample extends Vue {
+export default class extends Vue {
   cForm = {
     model: {
       name: "",

@@ -2,7 +2,7 @@ import { Component, Vue } from "vue-property-decorator";
 import AsyncValidator from "async-validator";
 
 @Component
-export default class MyInfo extends Vue {
+export default class extends Vue {
   hasBirthday = false;
 
   cForm = {
