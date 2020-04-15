@@ -1,7 +1,7 @@
 <template>
   <div class="p-my-info u-pt18">
-    <div class="c-list bgc11 fs32">
-      <div class="c-list__item">
+    <ul class="c-list bgc11 fs32">
+      <li class="c-list__item">
         <label>姓名</label>
         <input
           class="c-list__value fs32"
@@ -9,8 +9,8 @@
           placeholder="请填写姓名"
           v-model.trim="cForm.model.name"
         />
-      </div>
-      <div class="c-list__item">
+      </li>
+      <li class="c-list__item">
         <label>手机号</label>
         <div class="c-list__value fs32">
           {{
@@ -31,8 +31,8 @@
         >
           {{ cForm.model.phoneNumber ? "更换手机号" : "绑定手机号" }}
         </div>
-      </div>
-      <div class="c-list__item">
+      </li>
+      <li class="c-list__item">
         <label>性别</label>
         <picker
           :range="
@@ -53,8 +53,8 @@
             请选择性别
           </div>
         </picker>
-      </div>
-      <div class="c-list__item">
+      </li>
+      <li class="c-list__item">
         <label>生日</label>
         <div v-if="hasBirthday" class="c-list__value c2">
           {{ cForm.model.birthday }}
@@ -69,8 +69,8 @@
             {{ cForm.model.birthday || "请选择生日，保存后不可修改" }}
           </div>
         </picker>
-      </div>
-    </div>
+      </li>
+    </ul>
     <button class="c-button is-bottom w650 h88 bgc21 c11 fs32" @click="save">
       保存
     </button>
