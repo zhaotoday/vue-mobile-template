@@ -44,9 +44,7 @@
         >
           <div v-if="cForm.model.gender" class="c-list__value fs32">
             {{
-              $helpers.getItem(dicts.Gender, "value", cForm.model.gender)[
-                "label"
-              ] || ""
+              getItem(dicts.Gender, "value", cForm.model.gender)["label"] || ""
             }}
           </div>
           <div v-else class="c-list__value fs32 c36">
