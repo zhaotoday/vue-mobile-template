@@ -1,13 +1,12 @@
 <template>
-  <uni-shadow-root class="painter-painter"
-    ><canvas canvas-id="k-canvas" :style="painterStyle + customStyle"></canvas
-  ></uni-shadow-root>
+<uni-shadow-root class="painter-painter"><canvas canvas-id="k-canvas" :style="(painterStyle)+(customStyle)"></canvas></uni-shadow-root>
 </template>
 
 <script>
-global["__wxVueOptions"] = { components: {} };
 
-global["__wxRoute"] = "painter/painter";
+global['__wxVueOptions'] = {components:{}}
+
+global['__wxRoute'] = 'painter/painter'
 import Pen from "./lib/pen";
 import Downloader from "./lib/downloader";
 
@@ -273,6 +272,8 @@ function setStringPrototype() {
     return res;
   };
 }
-export default global["__wxComponents"]["painter/painter"];
+export default global['__wxComponents']['painter/painter']
 </script>
-<style platform="mp-weixin"></style>
+<style platform="mp-weixin">
+
+</style>
