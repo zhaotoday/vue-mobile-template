@@ -1,7 +1,7 @@
 <template>
   <div class="p-my-phone-number u-pt18">
-    <div class="c-list bgc11 fs30">
-      <div class="c-list__item">
+    <ul class="c-list bgc11 fs30">
+      <li class="c-list__item">
         <input
           class="c-list__value is-full fs32"
           type="number"
@@ -17,8 +17,8 @@
         >
           {{ cCaptcha.message }}
         </div>
-      </div>
-      <div class="c-list__item">
+      </li>
+      <li class="c-list__item">
         <input
           class="c-list__value is-full fs32"
           type="number"
@@ -27,8 +27,8 @@
           placeholder="请填写验证码"
           v-model.trim="cForm.model.captcha"
         />
-      </div>
-    </div>
+      </li>
+    </ul>
     <button class="c-button is-bottom w650 h88 bgc21 c11 fs32" @click="submit">
       提交
     </button>
