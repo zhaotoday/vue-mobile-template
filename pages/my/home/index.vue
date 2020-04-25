@@ -22,7 +22,10 @@
       </template>
     </div>
     <div class="c-list fs34">
-      <div class="c-list__item has-icon is-link" @click="navigateToMyInfo">
+      <div
+        class="c-list__item has-icon is-link"
+        @click="navigateTo({ url: '/pages/my/info/index', requiresAuth: true })"
+      >
         <i class="c-icon c-icon--info"></i>
         我的资料
       </div>
