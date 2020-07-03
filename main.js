@@ -13,6 +13,7 @@ import Poster from "we-design/components/poster";
 import ShareOptions from "we-design/components/share-options";
 import Share from "we-design/components/share";
 import Swiper from "we-design/components/swiper";
+import Rate from "we-design/components/rate";
 
 Vue.config.productionTip = false;
 
@@ -30,6 +31,7 @@ Vue.component("c-poster", Poster);
 Vue.component("c-share-options", ShareOptions);
 Vue.component("c-share", Share);
 Vue.component("c-swiper", Swiper);
+Vue.component("c-rate", Rate);
 
 const app = new Vue({
   mpType: "app",
