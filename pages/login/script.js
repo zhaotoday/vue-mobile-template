@@ -1,6 +1,6 @@
 import { Component, Vue } from "vue-property-decorator";
-import mockUser from "we-design/utils/mock-user";
-import MpMixin from "we-design/mixins/mp";
+import mockUser from "vue-mobile/utils/mock-user";
+import MpMixin from "vue-mobile/mixins/mp";
 
 @Component({
   mixins: [MpMixin]

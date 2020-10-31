@@ -1,5 +1,5 @@
-import REST from "we-design/utils/rest";
-import auth from "we-design/utils/auth";
+import REST from "vue-mobile/utils/rest";
+import auth from "vue-mobile/utils/auth";
 import consts from "@/utils/consts";
 
 export default class extends REST {

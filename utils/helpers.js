@@ -1,3 +1,3 @@
-import helpers from "we-design/utils/helpers";
+import helpers from "vue-mobile/utils/helpers";
 
 export default helpers;

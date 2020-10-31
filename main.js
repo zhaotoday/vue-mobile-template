@@ -1,19 +1,19 @@
 import Vue from "vue";
 import App from "@/App";
 import globalPlugin from "@/plugins/global";
-import Checkbox from "we-design/components/checkbox";
-import Dialog from "we-design/components/dialog";
-import Empty from "we-design/components/empty";
-import Filter from "we-design/components/filter";
-import Index from "we-design/components/index";
-import Logo from "we-design/components/logo";
-import Popup from "we-design/components/popup";
-import Search from "we-design/components/search";
-import Poster from "we-design/components/poster";
-import ShareOptions from "we-design/components/share-options";
-import Share from "we-design/components/share";
-import Swiper from "we-design/components/swiper";
-import Rate from "we-design/components/rate";
+import Checkbox from "vue-mobile/components/checkbox";
+import Dialog from "vue-mobile/components/dialog";
+import Empty from "vue-mobile/components/empty";
+import Filter from "vue-mobile/components/filter";
+import Index from "vue-mobile/components/index";
+import Logo from "vue-mobile/components/logo";
+import Popup from "vue-mobile/components/popup";
+import Search from "vue-mobile/components/search";
+import Poster from "vue-mobile/components/poster";
+import ShareOptions from "vue-mobile/components/share-options";
+import Share from "vue-mobile/components/share";
+import Swiper from "vue-mobile/components/swiper";
+import Rate from "vue-mobile/components/rate";
 
 Vue.config.productionTip = false;
 

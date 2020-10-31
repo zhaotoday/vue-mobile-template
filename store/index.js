@@ -1,10 +1,10 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import createPersistedState from "vuex-persistedstate";
-import state from "we-design/store/state";
-import getters from "we-design/store/getters";
-import actions from "we-design/store/actions";
-import mutations from "we-design/store/mutations";
+import state from "vue-mobile/store/state";
+import getters from "vue-mobile/store/getters";
+import actions from "vue-mobile/store/actions";
+import mutations from "vue-mobile/store/mutations";
 
 Vue.use(Vuex);
 
@@ -24,10 +24,10 @@ export default new Vuex.Store({
   actions,
   mutations,
   modules: {
-    "public/wxUsers": require("we-design/store/modules/public/wx-users")
+    "public/wxUsers": require("vue-mobile/store/modules/public/wx-users")
       .default,
-    "public/dicts": require("we-design/store/modules/public/dicts").default,
-    "wx/wxUsers": require("we-design/store/modules/wx/wx-users").default,
+    "public/dicts": require("vue-mobile/store/modules/public/dicts").default,
+    "wx/wxUsers": require("vue-mobile/store/modules/wx/wx-users").default,
     "wx/payments": require("./modules/wx/payments").default
   }
 });
