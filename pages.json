@@ -55,12 +55,6 @@
       }
     },
     {
-      "path": "pages/components/share",
-      "style": {
-        "navigationBarTitleText": "分享"
-      }
-    },
-    {
       "path": "pages/examples/comment/index",
       "style": {
         "navigationBarTitleText": "评论"
@@ -109,10 +103,7 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#ffffff",
-    "backgroundColor": "#F2F2F2",
-    "usingComponents": {
-      "painter": "/wxcomponents/painter/painter"
-    }
+    "backgroundColor": "#F2F2F2"
   },
   "tabBar": {
     "color": "#999999",

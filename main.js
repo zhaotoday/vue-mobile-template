@@ -9,9 +9,6 @@ import Index from "vue-mobile/components/index";
 import Logo from "vue-mobile/components/logo";
 import Popup from "vue-mobile/components/popup";
 import Search from "vue-mobile/components/search";
-import Poster from "vue-mobile/components/poster";
-import ShareOptions from "vue-mobile/components/share-options";
-import Share from "vue-mobile/components/share";
 import Swiper from "vue-mobile/components/swiper";
 import Rate from "vue-mobile/components/rate";
 
@@ -27,9 +24,6 @@ Vue.component("c-index", Index);
 Vue.component("c-logo", Logo);
 Vue.component("c-popup", Popup);
 Vue.component("c-search", Search);
-Vue.component("c-poster", Poster);
-Vue.component("c-share-options", ShareOptions);
-Vue.component("c-share", Share);
 Vue.component("c-swiper", Swiper);
 Vue.component("c-rate", Rate);
 

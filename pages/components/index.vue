@@ -43,9 +43,6 @@ export default class extends Vue {
       name: "search"
     },
     {
-      name: "share"
-    },
-    {
       name: "simple-ui"
     },
     {
