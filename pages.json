@@ -61,12 +61,6 @@
       }
     },
     {
-      "path": "pages/examples/select-city/index",
-      "style": {
-        "navigationBarTitleText": "城市选择"
-      }
-    },
-    {
       "path": "pages/my/home/index",
       "style": {
         "navigationBarTitleText": "我的",
