@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/zhaotoday/uni-app#readme",
   "dependencies": {
-    "async-validator": "^3.4.0",
+    "async-validator": "^3.5.1",
     "jt-time": "0.0.7",
     "sass-utils": "^1.0.23",
     "uni-read-pages": "^1.0.5",
