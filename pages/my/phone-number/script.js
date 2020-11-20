@@ -101,7 +101,11 @@ export default class extends Vue {
         }
       });
 
-      this.$auth.set({ phoneNumber });
+      await this.$store.dispatch("wx/wxUsers/set", {
+        key: "wxUser",
+        value: await this.getWxUserInfo()
+      });
+
       this.$wx.showToast({ title: "绑定成功" });
 
       await this.$helpers.sleep(1500);
