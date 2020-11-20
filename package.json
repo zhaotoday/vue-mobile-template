@@ -1,7 +1,7 @@
 {
-  "name": "uni-app",
+  "name": "vue-mobile-template",
   "version": "1.0.0",
-  "description": "uni-app template",
+  "description": "vue-mobile template",
   "main": "main.js",
   "scripts": {
     "format": "prettier --write \"models/**/*.js\" \"pages/**/*.js\" \"plugins/**/*.js\" \"store/**/*.js\" \"utils/**/*.js\"",
