@@ -1,9 +1,14 @@
 <script>
 export default {
-  onLaunch() {
-    this.setOpenId();
-    this.refreshWxUserInfo();
-    this.updateDicts();
+  async onLaunch() {
+    await this.updateDicts();
+
+    if (this.$auth.loggedIn()) {
+      await this.$store.dispatch("wx/wxUsers/set", {
+        key: "wxUser",
+        value: await this.getWxUserInfo()
+      });
+    }
   }
 };
 </script>
