@@ -11,7 +11,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   plugins: [
     createPersistedState({
-      paths: ["public/dicts"],
+      paths: ["public/dicts", "wx/wxUsers"],
       storage: {
         getItem: key => wx.getStorageSync(key),
         setItem: (key, value) => wx.setStorageSync(key, value),
