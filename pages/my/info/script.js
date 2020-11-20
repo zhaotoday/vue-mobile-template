@@ -76,13 +76,18 @@ export default class extends Vue {
         body: model
       });
 
-      this.$auth.set({ name: model.name });
+      await this.$store.dispatch("wx/wxUsers/set", {
+        key: "wxUser",
+        value: await this.getWxUserInfo()
+      });
 
       this.$wx.showToast({ title: "保存成功" });
 
       await this.$helpers.sleep(1500);
 
-      this.$wx.navigateBack();
+      this.$wx.navigateBack({
+        delta: this.$mp.query.from === "login" ? 2 : 1
+      });
     });
   }
 }

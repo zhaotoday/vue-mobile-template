@@ -4,7 +4,7 @@
       <li class="c-list__item">
         <label>姓名</label>
         <input
-          class="c-list__value fs32"
+          class="c-list__value"
           placeholder-class="c36"
           placeholder="请填写姓名"
           v-model.trim="cForm.model.name"
@@ -12,7 +12,7 @@
       </li>
       <li class="c-list__item">
         <label>手机号</label>
-        <div class="c-list__value fs32">
+        <div class="c-list__value">
           {{
             cForm.model.phoneNumber
               ? $helpers.encryptPhoneNumber(cForm.model.phoneNumber)
@@ -42,12 +42,12 @@
           "
           @change="handleGenderChange"
         >
-          <div v-if="cForm.model.gender" class="c-list__value fs32">
+          <div v-if="cForm.model.gender" class="c-list__value">
             {{
               getItem(dicts.Gender, "value", cForm.model.gender)["label"] || ""
             }}
           </div>
-          <div v-else class="c-list__value fs32 c36">
+          <div v-else class="c-list__value c36">
             请选择性别
           </div>
         </picker>
