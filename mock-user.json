@@ -2,9 +2,12 @@
   "openId": "",
   "user": {
     "id": 1,
+    "name": "赵金添",
     "nickName": "赵金添",
-    "avatarUrl": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eopRYpiak5MdicbcLY43zibSP1HTnqU6yHhqnQ614sxV6slPpxJzgXfuzJicneSDEssjicqOkiaIiawTF3dw/132",
-    "phoneNumber": null
+    "avatarUrl": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83epbyHPGNLu9sAq9NSnaVqZkGKWzTYZaoNDBTfdfDH4kvbiaWtP1RMIK9B9Lqj4Q7WYNtO8JsLSdGkw/132",
+    "avatarId": null,
+    "phoneNumber": "13950442340",
+    "extra": {}
   },
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuaWNrTmFtZSI6Iui1temHkea3uyIsImF2YXRhclVybCI6Imh0dHBzOi8vd3gucWxvZ28uY24vbW1vcGVuL3ZpXzMyL0RZQUlPZ3E4M2VvcFJZcGlhazVNZGljYmNMWTQzemliU1AxSFRucVU2eUhocW5RNjE0c3hWNnNsUHB4SnpnWGZ1ekppY25lU0RFc3NqaWNxT2tpYUlpYXdURjNkdy8xMzIiLCJwaG9uZU51bWJlciI6bnVsbCwib3BlbklkIjoib21NZWU0dHlteTJWLWF4QUtMNUVwS3dVdVdHOCJ9LCJpYXQiOjE1ODE4MTk5MTksImV4cCI6MTYxMzM1NTkxOX0.UcU3Ofty8v6MYd_cL8lcD_QZWWY5BSw_c8iwKcwFJGQ"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuYW1lIjoiIiwibmlja05hbWUiOiLotbXph5Hmt7siLCJhdmF0YXJVcmwiOiJodHRwczovL3d4LnFsb2dvLmNuL21tb3Blbi92aV8zMi9EWUFJT2dxODNlcGJ5SFBHTkx1OXNBcTlOU25hVnFaa0dLV3pUWVphb05EQlRmZGZESDRrdmJpYVd0UDFSTUlLOUI5THFqNFE3V1lOdE84SnNMU2RHa3cvMTMyIiwiYXZhdGFySWQiOm51bGwsInBob25lTnVtYmVyIjpudWxsLCJvcGVuSWQiOiJvcWRncDQ4QmZCSkJQeW9INC1JZ1NZaEJGdXo4In0sImlhdCI6MTU5Mzk0MzE2MywiZXhwIjoxNjI1NDc5MTYzfQ.I3NKvvNJt2wcp5JTQ5hBJU-jPait94WvFSR1gfNFcPs"
 }
