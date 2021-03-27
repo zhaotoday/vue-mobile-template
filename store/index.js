@@ -1,17 +1,14 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import wx from "wx-bridge";
 import createPersistedState from "vuex-persistedstate";
-import state from "vue-mobile/store/state";
-import getters from "vue-mobile/store/getters";
-import actions from "vue-mobile/store/actions";
-import mutations from "vue-mobile/store/mutations";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+export const store = new Vuex.Store({
   plugins: [
     createPersistedState({
-      paths: ["public/dicts", "wx/wxUsers"],
+      paths: ["public/enums", "wxUsers"],
       storage: {
         getItem: key => wx.getStorageSync(key),
         setItem: (key, value) => wx.setStorageSync(key, value),
@@ -19,15 +16,9 @@ export default new Vuex.Store({
       }
     })
   ],
-  state,
-  getters,
-  actions,
-  mutations,
   modules: {
-    "public/wxUsers": require("vue-mobile/store/modules/public/wx-users")
+    "public/enums": require("vue-mobile/@liruan/store/modules/public/enums")
       .default,
-    "public/dicts": require("vue-mobile/store/modules/public/dicts").default,
-    "wx/wxUsers": require("vue-mobile/store/modules/wx/wx-users").default,
-    "wx/payments": require("./modules/wx/payments").default
+    wxUser: require("vue-mobile/@liruan/store/modules/wx/wx-users").default
   }
 });
