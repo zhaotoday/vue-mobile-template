@@ -20,7 +20,7 @@
   "dependencies": {
     "async-validator": "^3.5.1",
     "jt-time": "0.0.7",
-    "sass-utils": "^1.0.23",
+    "sass-utils": "^1.0.34",
     "uni-read-pages": "^1.0.5",
     "uni-simple-router": "^1.5.5",
     "vue-mobile": "^1.0.40",
