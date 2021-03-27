@@ -19,20 +19,22 @@
   "homepage": "https://github.com/zhaotoday/uni-app#readme",
   "dependencies": {
     "async-validator": "^3.5.1",
+    "jt-helpers": "0.0.12",
     "jt-time": "0.0.7",
     "sass-utils": "^1.0.34",
     "uni-read-pages": "^1.0.5",
     "uni-simple-router": "^1.5.5",
-    "vue-mobile": "^1.0.40",
+    "vue-mobile": "^1.0.43",
     "vue-property-decorator": "^8.5.1",
-    "vuex": "^3.5.1",
-    "vuex-persistedstate": "^2.7.1"
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^2.7.1",
+    "wx-bridge": "0.0.35"
   },
   "devDependencies": {
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.14.1",
     "prettier": "^1.19.1",

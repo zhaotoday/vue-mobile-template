@@ -1,15 +1,12 @@
-import Vue from "vue";
-import Router from "uni-simple-router";
+import { createRouter, RouterMount } from "uni-simple-router";
 
-Vue.use(Router);
-
-const router = new Router({
-  routes: ROUTES,
-  encodeURI: false
+const router = createRouter({
+  platform: process.env.VUE_APP_PLATFORM,
+  routes: [...ROUTES]
 });
 
 router.beforeEach(async (to, from, next) => {
   next();
 });
 
-export default router;
+export { router, RouterMount };

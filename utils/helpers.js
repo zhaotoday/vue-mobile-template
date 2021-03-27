@@ -1,3 +1,2 @@
-import helpers from "vue-mobile/utils/helpers";
-
-export default helpers;
+import { helpers as $helpers } from "vue-mobile/@liruan/utils/helpers";
+export const helpers = $helpers;

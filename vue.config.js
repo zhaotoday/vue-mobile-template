@@ -1,11 +1,16 @@
 const TransformPages = require("uni-read-pages");
-const tfPages = new TransformPages();
+const { webpack } = new TransformPages();
 
 module.exports = {
   configureWebpack: {
     plugins: [
-      new tfPages.webpack.DefinePlugin({
-        ROUTES: JSON.stringify(tfPages.routes)
+      new webpack.DefinePlugin({
+        ROUTES: webpack.DefinePlugin.runtimeValue(() => {
+          const tfPages = new TransformPages({
+            includes: ["path", "name", "aliasPath"]
+          });
+          return JSON.stringify(tfPages.routes);
+        }, true)
       })
     ]
   }
