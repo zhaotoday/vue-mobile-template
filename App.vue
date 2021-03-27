@@ -1,14 +1,16 @@
 <script>
+import { auth } from "vue-mobile/@liruan/utils/auth";
+import { useEnums } from "vue-mobile/@liruan/composables/use-enums";
+import { useWxUser } from "vue-mobile/@liruan/composables/use-wx-user";
+
 export default {
   async onLaunch() {
-    await this.updateDicts();
+    const { getEnums } = useEnums();
+    const { getWxUser } = useWxUser();
 
-    if (this.$auth.loggedIn()) {
-      await this.$store.dispatch("wx/wxUsers/set", {
-        key: "wxUser",
-        value: await this.getWxUserInfo()
-      });
-    }
+    await getEnums();
+
+    if (auth.loggedIn()) await getWxUser();
   }
 };
 </script>

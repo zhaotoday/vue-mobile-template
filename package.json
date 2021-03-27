@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/zhaotoday/uni-app#readme",
   "dependencies": {
+    "@vue/composition-api": "^1.0.0-rc.5",
     "async-validator": "^3.5.1",
     "jt-helpers": "0.0.12",
     "jt-time": "0.0.7",
