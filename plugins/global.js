@@ -8,9 +8,9 @@ import { helpers } from "@/utils/helpers";
 
 export const globalPlugin = {
   install(Vue) {
+    Vue.prototype.$wx = wx;
     Vue.prototype.$time = time;
     Vue.prototype.$auth = auth;
-    Vue.prototype.$wx = wx;
     Vue.prototype.$store = store;
     Vue.prototype.$consts = consts;
     Vue.prototype.$helpers = helpers;

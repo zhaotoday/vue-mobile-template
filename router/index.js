@@ -5,7 +5,7 @@ const router = createRouter({
   routes: [...ROUTES]
 });
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach((to, from, next) => {
   next();
 });
 
