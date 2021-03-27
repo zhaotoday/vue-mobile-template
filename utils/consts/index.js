@@ -1,5 +1,5 @@
 // 接口地址
-const ApiUrl = "http://localhost:3000";
+const ApiUrl = "http://localhost:3101";
 
 // CDN 地址
 const CdnUrl = "https://my-app.lrcdn.cn";
