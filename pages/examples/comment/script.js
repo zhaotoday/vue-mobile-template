@@ -1,16 +1,22 @@
-import { Component, Vue } from "vue-property-decorator";
+import { reactive } from "@vue/composition-api";
 
-@Component
-export default class extends Vue {
-  cForm = {
-    model: {
-      name: "",
-      phoneNumber: "",
-      content: ""
-    }
-  };
+export default {
+  setup() {
+    const cForm = reactive({
+      model: {
+        name: "",
+        phoneNumber: "",
+        content: ""
+      }
+    });
 
-  async submit() {
-    console.log("submit: ", this.cForm.model);
+    const submit = async () => {
+      console.log("submit: ", cForm.model);
+    };
+
+    return {
+      cForm,
+      submit
+    };
   }
-}
+};

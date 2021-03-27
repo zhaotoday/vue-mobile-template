@@ -1,34 +1,24 @@
-import { Component, Mixins } from "vue-property-decorator";
-import mockUser from "vue-mobile/utils/mock-user";
-import MpMixin from "vue-mobile/mixins/mp";
+import wx from "wx-bridge";
+import { helpers } from "@/utils/helpers";
+import { useWxUser } from "vue-mobile/@liruan/composables/use-wx-user";
 
-@Component
-export default class extends Mixins(MpMixin) {
-  async success(user) {
-    await this.$store.dispatch("wx/wxUsers/set", {
-      key: "wxUser",
-      value: user
-    });
+export default {
+  setup() {
+    const { login } = useWxUser();
 
-    this.$wx.showToast({ title: "登录成功" });
+    const getUserInfo = async () => {
+      try {
+        await login();
+        wx.showToast({ title: "登陆成功" });
+        await helpers.sleep(1500);
+        wx.navigateBack();
+      } catch (e) {
+        wx.navigateBack();
+      }
+    };
 
-    await this.$helpers.sleep(1500);
-    await this.infoModified("login");
-
-    this.$wx.navigateBack();
+    return {
+      getUserInfo
+    };
   }
-
-  async getUserInfo() {
-    // #ifdef H5
-    const { user } = mockUser.login();
-    await this.success(user);
-    // #endif
-
-    // #ifndef H5
-    this.mpLogin(async ({ wxUser, token, extra }) => {
-      this.$auth.login({ token });
-      await this.success({ ...wxUser, extra });
-    });
-    // #endif
-  }
-}
+};

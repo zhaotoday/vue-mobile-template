@@ -1,16 +1,16 @@
 <template>
   <div class="p-login">
     <div class="b-logo">
-      <c-logo :name="$consts.Name"></c-logo>
+      <c-logo name="XXX 小程序" />
     </div>
-    <h2 class="b-title fs32">{{ $consts.Name }}将获取以下授权：</h2>
+    <h2 class="b-title fs32">XXX 小程序将获取以下授权：</h2>
     <p class="b-desc c37 fs28">获得您的公开信息（昵称、头像等）</p>
     <div class="b-buttons o-grid">
       <div class="o-grid__cell">
         <div
           class="c-button is-block h76 bdc21 c21 fs32"
           style="margin-right: 20rpx;"
-          @click="navigateBack()"
+          @click="$wx.navigateBack()"
         >
           拒绝
         </div>
