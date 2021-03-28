@@ -35,19 +35,22 @@
       <li class="c-list__item">
         <label>性别</label>
         <picker
+          class="c-list__value"
           :range="
             enums.Gender.filter((item) => item.value !== 0).map(
               (item) => item.label
             )
           "
-          @change="handleGenderChange"
+          @change="onGenderChange"
         >
-          <div v-if="cForm.model.gender" class="c-list__value">
+          <div v-if="cForm.model.gender">
             {{
-              getItem(dicts.Gender, "value", cForm.model.gender)["label"] || ""
+              $helpers.getItem(enums.Gender, "value", cForm.model.gender)[
+                "label"
+              ] || ""
             }}
           </div>
-          <div v-else class="c-list__value c36">请选择性别</div>
+          <div v-else class="c36">请选择性别</div>
         </picker>
       </li>
       <li class="c-list__item">
@@ -59,7 +62,7 @@
           v-else
           mode="date"
           v-model="cForm.model.birthday"
-          @change="handleBirthdayChange"
+          @change="onBirthdayChange"
         >
           <div :class="['c-list__value', cForm.model.birthday ? '' : 'c36']">
             {{ cForm.model.birthday || "请选择生日，保存后不可修改" }}
@@ -67,7 +70,7 @@
         </picker>
       </li>
     </ul>
-    <button class="c-button is-bottom w650 h88 bgc21 c11 fs32" @click="save">
+    <button class="c-button is-bottom w650 h88 bgc21 c11 fs32" @click="submit">
       保存
     </button>
   </div>
