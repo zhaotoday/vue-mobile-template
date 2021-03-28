@@ -1,21 +1,21 @@
 <template>
   <div class="p-my-home">
     <div class="b-info bgc21 c11 u-tac">
-      <template v-if="user.id">
-        <img class="c-avatar" :src="user.avatarUrl" />
-        <div class="b-name fs40">{{ user.name || user.nickName }}</div>
-        <div v-if="user.phoneNumber" class="b-phone fs28">
-          手机号：{{ user.phoneNumber }}
+      <template v-if="wxUser.id">
+        <img class="c-avatar" :src="wxUser.avatarUrl" />
+        <div class="b-name fs40">{{ wxUser.name || wxUser.nickName }}</div>
+        <div v-if="wxUser.phoneNumber" class="b-phone fs28">
+          手机号：{{ wxUser.phoneNumber }}
         </div>
       </template>
       <template v-else>
         <div
           class="c-avatar c-avatar--default"
-          @click="navigateTo($consts.LoginPage)"
+          @click="$wx.navigateTo('/pages/login/index')"
         ></div>
         <div
           class="b-login c-tag w60 h50 bdc11 br8 fs28"
-          @click="navigateTo($consts.LoginPage)"
+          @click="$wx.navigateTo('/pages/login/index')"
         >
           授权登录
         </div>
@@ -24,7 +24,7 @@
     <div class="c-list fs34">
       <div
         class="c-list__item has-icon is-link"
-        @click="navigateTo({ url: '/pages/my/info/index', requiresAuth: true })"
+        @click="$wx.navigateTo('/pages/my/info/index')"
       >
         <i class="c-icon c-icon--info"></i>
         我的资料

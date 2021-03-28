@@ -1,4 +1,8 @@
-import { Component, Vue } from "vue-property-decorator";
+import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 
-@Component
-export default class extends Vue {}
+export default {
+  setup() {
+    const { wxUser } = useWxUser();
+    return { wxUser };
+  },
+};
