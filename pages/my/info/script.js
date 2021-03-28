@@ -10,28 +10,28 @@ export default class extends Vue {
       name: "",
       phoneNumber: "",
       birthday: "",
-      gender: -1
+      gender: -1,
     },
     rules: {
       name: [
         {
           required: true,
-          message: "请填写姓名"
-        }
+          message: "请填写姓名",
+        },
       ],
       phoneNumber: [
         {
           required: true,
-          message: "请绑定手机号"
-        }
+          message: "请绑定手机号",
+        },
       ],
       birthday: [
         {
           required: true,
-          message: "请选择生日"
-        }
-      ]
-    }
+          message: "请选择生日",
+        },
+      ],
+    },
   };
 
   async onLoad() {
@@ -46,7 +46,7 @@ export default class extends Vue {
 
   async getDetail() {
     return this.$store.dispatch("wx/wxUsers/getDetail", {
-      id: this.user.id
+      id: this.user.id,
     });
   }
 
@@ -58,14 +58,14 @@ export default class extends Vue {
     const pickerIndex = +e.detail.value;
 
     this.cForm.model.gender = this.dicts.Gender.filter(
-      item => item.value !== 0
+      (item) => item.value !== 0
     )[pickerIndex].value;
   }
 
   async save() {
     const { model, rules } = this.cForm;
 
-    new AsyncValidator(rules).validate(model, async errors => {
+    new AsyncValidator(rules).validate(model, async (errors) => {
       if (errors) {
         this.$wx.showToast({ title: errors[0].message });
         return;
@@ -73,12 +73,12 @@ export default class extends Vue {
 
       await this.$store.dispatch("wx/wxUsers/put", {
         id: this.user.id,
-        body: model
+        body: model,
       });
 
       await this.$store.dispatch("wx/wxUsers/set", {
         key: "wxUser",
-        value: await this.getWxUserInfo()
+        value: await this.getWxUserInfo(),
       });
 
       this.$wx.showToast({ title: "保存成功" });
@@ -86,7 +86,7 @@ export default class extends Vue {
       await this.$helpers.sleep(1500);
 
       this.$wx.navigateBack({
-        delta: this.$mp.query.from === "login" ? 2 : 1
+        delta: this.$mp.query.from === "login" ? 2 : 1,
       });
     });
   }

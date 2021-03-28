@@ -16,5 +16,5 @@ export const globalPlugin = {
     Vue.prototype.$helpers = helpers;
 
     Vue.mixin(globalMixin);
-  }
+  },
 };

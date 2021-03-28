@@ -10,15 +10,15 @@ export const store = new Vuex.Store({
     createPersistedState({
       paths: ["public/enums", "wxUsers"],
       storage: {
-        getItem: key => wx.getStorageSync(key),
+        getItem: (key) => wx.getStorageSync(key),
         setItem: (key, value) => wx.setStorageSync(key, value),
-        removeItem: key => wx.removeStorageSync(key)
-      }
-    })
+        removeItem: (key) => wx.removeStorageSync(key),
+      },
+    }),
   ],
   modules: {
     "public/enums": require("vue-mobile/@liruan/store/modules/public/enums")
       .default,
-    wxUsers: require("vue-mobile/@liruan/store/modules/wx/wx-users").default
-  }
+    wxUsers: require("vue-mobile/@liruan/store/modules/wx/wx-users").default,
+  },
 });

@@ -18,7 +18,7 @@ export default {
     };
 
     return {
-      getUserInfo
+      getUserInfo,
     };
-  }
+  },
 };

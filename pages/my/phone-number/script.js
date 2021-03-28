@@ -9,34 +9,34 @@ export default class extends Vue {
       phoneNumber: [
         {
           required: true,
-          message: "请填写手机号"
+          message: "请填写手机号",
         },
         {
           pattern: /^1\d{2}\s?\d{4}\s?\d{4}$/,
-          message: "手机号格式错误"
-        }
+          message: "手机号格式错误",
+        },
       ],
       captcha: [
         {
           required: true,
-          message: "请填写验证码"
+          message: "请填写验证码",
         },
         {
           len: 6,
-          message: "验证码格式错误"
-        }
-      ]
-    }
+          message: "验证码格式错误",
+        },
+      ],
+    },
   };
 
   cCaptcha = {
     disabled: false,
-    message: "获取验证码"
+    message: "获取验证码",
   };
 
   onLoad() {
     this.$wx.setNavigationBarTitle({
-      title: this.$mp.query.update ? "更换手机号" : "绑定手机号"
+      title: this.$mp.query.update ? "更换手机号" : "绑定手机号",
     });
   }
 
@@ -44,11 +44,11 @@ export default class extends Vue {
     if (this.cCaptcha.disabled) return;
 
     const rules = {
-      phoneNumber: this.cForm.rules.phoneNumber
+      phoneNumber: this.cForm.rules.phoneNumber,
     };
     const { model } = this.cForm;
 
-    new AsyncValidator(rules).validate(model, async errors => {
+    new AsyncValidator(rules).validate(model, async (errors) => {
       if (errors) {
         this.$wx.showToast({ title: errors[0].message });
         return;
@@ -57,8 +57,8 @@ export default class extends Vue {
       await this.$store.dispatch("wx/wxUsers/postAction", {
         action: "sendCaptcha",
         body: {
-          phoneNumber: model.phoneNumber
-        }
+          phoneNumber: model.phoneNumber,
+        },
       });
 
       this.$wx.showToast({ title: "验证码获取成功" });
@@ -86,7 +86,7 @@ export default class extends Vue {
     const { rules, model } = this.cForm;
     const { phoneNumber, captcha } = model;
 
-    new AsyncValidator(rules).validate(model, async errors => {
+    new AsyncValidator(rules).validate(model, async (errors) => {
       if (errors) {
         this.$wx.showToast({ title: errors[0].message });
         return;
@@ -97,13 +97,13 @@ export default class extends Vue {
         action: "bindPhoneNumber",
         body: {
           phoneNumber,
-          captcha
-        }
+          captcha,
+        },
       });
 
       await this.$store.dispatch("wx/wxUsers/set", {
         key: "wxUser",
-        value: await this.getWxUserInfo()
+        value: await this.getWxUserInfo(),
       });
 
       this.$wx.showToast({ title: "绑定成功" });

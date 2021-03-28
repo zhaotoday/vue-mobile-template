@@ -6,8 +6,8 @@ export default {
       model: {
         name: "",
         phoneNumber: "",
-        content: ""
-      }
+        content: "",
+      },
     });
 
     const submit = async () => {
@@ -16,7 +16,7 @@ export default {
 
     return {
       cForm,
-      submit
+      submit,
     };
-  }
+  },
 };

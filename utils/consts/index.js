@@ -10,5 +10,5 @@ const StaticUrl = "https://my-app.liruan.cn/static";
 export const consts = {
   ApiUrl,
   CdnUrl,
-  StaticUrl
+  StaticUrl,
 };
