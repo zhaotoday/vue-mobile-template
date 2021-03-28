@@ -22,8 +22,8 @@
         <div
           class="c-list__operation c21 fs28"
           @click="
-            navigateTo(
-              `${$consts.PhoneNumberPage}?update=${
+            $wx.navigateTo(
+              `/pages/my/phone-humber/index?update=${
                 cForm.model.phoneNumber ? 1 : ''
               }`
             )
@@ -36,8 +36,8 @@
         <label>性别</label>
         <picker
           :range="
-            dicts.Gender.filter(item => item.value !== 0).map(
-              item => item.label
+            enums.Gender.filter((item) => item.value !== 0).map(
+              (item) => item.label
             )
           "
           @change="handleGenderChange"
@@ -47,9 +47,7 @@
               getItem(dicts.Gender, "value", cForm.model.gender)["label"] || ""
             }}
           </div>
-          <div v-else class="c-list__value c36">
-            请选择性别
-          </div>
+          <div v-else class="c-list__value c36">请选择性别</div>
         </picker>
       </li>
       <li class="c-list__item">

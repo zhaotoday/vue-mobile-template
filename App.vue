@@ -11,7 +11,7 @@ export default {
     await getEnums();
 
     if (auth.loggedIn()) await getWxUser();
-  }
+  },
 };
 </script>
 
