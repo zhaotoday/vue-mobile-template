@@ -3,8 +3,6 @@ import { auth } from "vue-mobile/@lr/utils/auth";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 
-console.log(22);
-
 export default {
   async onLaunch() {
     console.log(33);
