@@ -16,7 +16,7 @@ useComponents();
 const app = new Vue({
   mpType: "app",
   router,
-  ...App
+  ...App,
 });
 
 // #ifdef H5
