@@ -1,7 +1,7 @@
 <script>
-import { auth } from "vue-mobile/@liruan/utils/auth";
-import { useEnums } from "vue-mobile/@liruan/composables/use-enums";
-import { useWxUser } from "vue-mobile/@liruan/composables/use-wx-user";
+import { auth } from "vue-mobile/@lr/utils/auth";
+import { useEnums } from "vue-mobile/@lr/composables/use-enums";
+import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 
 export default {
   async onLaunch() {
