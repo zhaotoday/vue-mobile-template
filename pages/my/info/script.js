@@ -12,7 +12,6 @@ export default {
   setup() {
     const { wxUser, getWxUser } = useWxUser();
     const { enums } = useEnums();
-    console.log(enums, router.currentRoute);
     const { query } = router.currentRoute;
     const hasBirthday = ref(false);
     const cForm = reactive({

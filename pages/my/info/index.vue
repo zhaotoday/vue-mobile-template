@@ -60,13 +60,15 @@
         </div>
         <picker
           v-else
+          class="c-list__value"
           mode="date"
           v-model="cForm.model.birthday"
           @change="onBirthdayChange"
         >
-          <div :class="['c-list__value', cForm.model.birthday ? '' : 'c36']">
-            {{ cForm.model.birthday || "请选择生日，保存后不可修改" }}
+          <div v-if="cForm.model.birthday">
+            {{ cForm.model.birthday }}
           </div>
+          <div v-else class="c36">请选择生日，保存后不可修改</div>
         </picker>
       </li>
     </ul>
