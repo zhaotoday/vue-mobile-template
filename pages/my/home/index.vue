@@ -14,7 +14,7 @@
           @click="$wx.navigateTo('/pages/login/index')"
         ></div>
         <div
-          class="b-login c-tag w60 h50 bdc11 br8 fs28"
+          class="b-login c-tag h50 bdc11 br8 fs28"
           @click="$wx.navigateTo('/pages/login/index')"
         >
           授权登录

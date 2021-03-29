@@ -55,7 +55,7 @@
       </li>
       <li class="c-list__item">
         <label>生日</label>
-        <div v-if="hasBirthday" class="c-list__value c2">
+        <div v-if="hasBirthday" class="c-list__value">
           {{ cForm.model.birthday }}
         </div>
         <picker
