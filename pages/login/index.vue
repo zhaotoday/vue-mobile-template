@@ -9,7 +9,7 @@
       <div class="o-grid__cell">
         <div
           class="c-button is-block h76 bdc21 c21 fs32"
-          style="margin-right: 20rpx;"
+          style="margin-right: 20rpx"
           @click="$wx.navigateBack()"
         >
           拒绝
@@ -19,7 +19,7 @@
         <!-- #ifdef H5 -->
         <button
           class="c-button is-block h76 bgc21 c11 fs32"
-          style="margin-left: 20rpx;"
+          style="margin-left: 20rpx"
           @click="getUserInfo"
         >
           允许
@@ -29,7 +29,7 @@
         <button
           class="c-button is-block h76 bgc21 c11 fs32"
           open-type="getUserInfo"
-          style="margin-left: 20rpx;"
+          style="margin-left: 20rpx"
           @getuserinfo="getUserInfo"
         >
           允许

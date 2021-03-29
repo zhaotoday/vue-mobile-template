@@ -1,10 +1,10 @@
 export const globalMixin = {
   data() {
     return {
-      query: {}
+      query: {},
     };
   },
   onLoad(options) {
     this.query = options;
-  }
+  },
 };
