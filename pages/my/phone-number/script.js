@@ -1,5 +1,5 @@
 import AsyncValidator from "async-validator";
-import { onMounted, reactive } from "@vue/composition-api";
+import { onMounted, onUnmounted, reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
 import { formValidators } from "vue-mobile/@lr/utils/form-validators";
 import { router } from "@/router";
@@ -29,6 +29,10 @@ export default {
       wx.setNavigationBarTitle({
         title: query.update ? "更换手机号" : "绑定手机号",
       });
+    });
+
+    onUnmounted(() => {
+      clearInterval(sendCaptchaTimer);
     });
 
     const cCaptcha = reactive({
