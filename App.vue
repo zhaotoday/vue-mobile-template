@@ -5,8 +5,6 @@ import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 
 export default {
   async onLaunch() {
-    console.log(33);
-
     const { getEnums } = useEnums();
     const { getWxUser } = useWxUser();
 

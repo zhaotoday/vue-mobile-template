@@ -16,9 +16,9 @@ import Rate from "vue-mobile/components/rate";
 
 Vue.config.productionTip = false;
 
+Vue.use(router);
 Vue.use(VueCompositionAPI);
 Vue.use(globalPlugin);
-Vue.use(router);
 
 Vue.component("c-checkbox", Checkbox);
 Vue.component("c-dialog", Dialog);
