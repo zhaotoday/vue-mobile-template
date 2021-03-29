@@ -23,7 +23,7 @@
           class="c-list__operation c21 fs28"
           @click="
             $wx.navigateTo(
-              `/pages/my/phone-humber/index?update=${
+              `/pages/my/phone-number/index?update=${
                 cForm.model.phoneNumber ? 1 : ''
               }`
             )

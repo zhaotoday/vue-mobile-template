@@ -1,116 +1,119 @@
-import { Component, Vue } from "vue-property-decorator";
 import AsyncValidator from "async-validator";
+import { onMounted, reactive } from "@vue/composition-api";
+import wx from "wx-bridge";
+import { formValidators } from "vue-mobile/@lr/utils/form-validators";
+import { router } from "@/router";
+import { WxUsersModel } from "vue-mobile/@lr/models/wx/wx-users";
+import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
+import { helpers } from "@/utils/helpers";
 
-@Component
-export default class extends Vue {
-  cForm = {
-    model: {},
-    rules: {
-      phoneNumber: [
-        {
-          required: true,
-          message: "请填写手机号",
-        },
-        {
-          pattern: /^1\d{2}\s?\d{4}\s?\d{4}$/,
-          message: "手机号格式错误",
-        },
-      ],
-      captcha: [
-        {
-          required: true,
-          message: "请填写验证码",
-        },
-        {
-          len: 6,
-          message: "验证码格式错误",
-        },
-      ],
-    },
-  };
-
-  cCaptcha = {
-    disabled: false,
-    message: "获取验证码",
-  };
-
-  onLoad() {
-    this.$wx.setNavigationBarTitle({
-      title: this.$mp.query.update ? "更换手机号" : "绑定手机号",
+export default {
+  setup() {
+    const { query } = router.currentRoute;
+    const { getWxUser } = useWxUser();
+    const cForm = reactive({
+      model: {},
+      rules: {
+        phoneNumber: [
+          formValidators.required({ label: "手机号" }),
+          formValidators.phoneNumber(),
+        ],
+        captcha: [
+          formValidators.required({ label: "验证码" }),
+          formValidators.captcha(),
+        ],
+      },
     });
-  }
 
-  async sendCaptcha() {
-    if (this.cCaptcha.disabled) return;
-
-    const rules = {
-      phoneNumber: this.cForm.rules.phoneNumber,
-    };
-    const { model } = this.cForm;
-
-    new AsyncValidator(rules).validate(model, async (errors) => {
-      if (errors) {
-        this.$wx.showToast({ title: errors[0].message });
-        return;
-      }
-
-      await this.$store.dispatch("wx/wxUsers/postAction", {
-        action: "sendCaptcha",
-        body: {
-          phoneNumber: model.phoneNumber,
-        },
+    onMounted(() => {
+      wx.setNavigationBarTitle({
+        title: query.update ? "更换手机号" : "绑定手机号",
       });
+    });
 
-      this.$wx.showToast({ title: "验证码获取成功" });
+    const cCaptcha = reactive({
+      disabled: false,
+      message: "获取验证码",
+    });
 
-      let i = 0;
-      let leftSeconds = 120;
+    let sendCaptchaTimer = null;
 
-      this.cCaptcha.disabled = true;
-      this.cCaptcha.message = `${leftSeconds}s 后获取`;
+    const sendCaptcha = async () => {
+      if (cCaptcha.disabled) return;
 
-      this.timer = setInterval(() => {
-        this.cCaptcha.message = `${leftSeconds - ++i}s 后获取`;
+      const rules = {
+        phoneNumber: cForm.rules.phoneNumber,
+      };
+      const { model } = cForm;
 
-        if (leftSeconds === i) {
-          clearInterval(this.timer);
-
-          this.cCaptcha.disabled = false;
-          this.cCaptcha.message = "获取验证码";
+      await new AsyncValidator(rules).validate(model, async (errors) => {
+        if (errors) {
+          wx.showToast({ title: errors[0].message });
+          return;
         }
-      }, 1000);
-    });
-  }
 
-  async submit() {
-    const { rules, model } = this.cForm;
-    const { phoneNumber, captcha } = model;
+        await new WxUsersModel().POST({
+          action: "sendCaptcha",
+          body: {
+            phoneNumber: model.phoneNumber,
+          },
+        });
 
-    new AsyncValidator(rules).validate(model, async (errors) => {
-      if (errors) {
-        this.$wx.showToast({ title: errors[0].message });
-        return;
-      }
+        wx.showToast({ title: "验证码获取成功" });
 
-      await this.$store.dispatch("wx/wxUsers/postAction", {
-        showLoading: true,
-        action: "bindPhoneNumber",
-        body: {
-          phoneNumber,
-          captcha,
-        },
+        let i = 0;
+        let leftSeconds = 120;
+
+        cCaptcha.disabled = true;
+        cCaptcha.message = `${leftSeconds}s 后获取`;
+
+        sendCaptchaTimer = setInterval(() => {
+          cCaptcha.message = `${leftSeconds - ++i}s 后获取`;
+
+          if (leftSeconds === i) {
+            clearInterval(sendCaptchaTimer);
+
+            cCaptcha.disabled = false;
+            cCaptcha.message = "获取验证码";
+          }
+        }, 1000);
       });
+    };
 
-      await this.$store.dispatch("wx/wxUsers/set", {
-        key: "wxUser",
-        value: await this.getWxUserInfo(),
+    const submit = async () => {
+      const { rules, model } = cForm;
+      const { phoneNumber, captcha } = model;
+
+      await new AsyncValidator(rules).validate(model, async (errors) => {
+        if (errors) {
+          wx.showToast({ title: errors[0].message });
+          return;
+        }
+
+        await new WxUsersModel().POST({
+          showLoading: true,
+          action: "bindPhoneNumber",
+          body: {
+            phoneNumber,
+            captcha,
+          },
+        });
+
+        wx.showToast({ title: "绑定成功" });
+
+        await getWxUser();
+
+        await helpers.sleep(1500);
+
+        wx.navigateBack();
       });
+    };
 
-      this.$wx.showToast({ title: "绑定成功" });
-
-      await this.$helpers.sleep(1500);
-
-      this.$wx.navigateBack();
-    });
-  }
-}
+    return {
+      cForm,
+      cCaptcha,
+      sendCaptcha,
+      submit,
+    };
+  },
+};
