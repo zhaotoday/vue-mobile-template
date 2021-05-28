@@ -2,7 +2,7 @@ import { reactive, ref } from "@vue/composition-api";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
 import { formValidators } from "vue-mobile/@lr/utils/form-validators";
-import { WxUsersModel } from "vue-mobile/@lr/models/wx/wx-users";
+import { WxUsersApi } from "vue-mobile/@lr/apis/wx/wx-users";
 import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { helpers } from "@/utils/helpers";
@@ -29,7 +29,7 @@ export default {
     });
 
     const getDetail = async () => {
-      return new WxUsersModel().GET({ id: wxUser.value.id });
+      return new WxUsersApi().GET({ id: wxUser.value.id });
     };
 
     const onBirthdayChange = (e) => {
@@ -53,7 +53,7 @@ export default {
           return;
         }
 
-        await new WxUsersModel().PUT({
+        await new WxUsersApi().PUT({
           id: wxUser.value.id,
           body: model,
         });

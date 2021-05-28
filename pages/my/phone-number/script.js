@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
 import { formValidators } from "vue-mobile/@lr/utils/form-validators";
 import { router } from "@/router";
-import { WxUsersModel } from "vue-mobile/@lr/models/wx/wx-users";
+import { WxUsersApi } from "vue-mobile/@lr/apis/wx/wx-users";
 import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 import { helpers } from "@/utils/helpers";
 
@@ -56,7 +56,7 @@ export default {
           return;
         }
 
-        await new WxUsersModel().POST({
+        await new WxUsersApi().POST({
           action: "sendCaptcha",
           body: {
             phoneNumber: model.phoneNumber,
@@ -94,7 +94,7 @@ export default {
           return;
         }
 
-        await new WxUsersModel().POST({
+        await new WxUsersApi().POST({
           showLoading: true,
           action: "bindPhoneNumber",
           body: {
