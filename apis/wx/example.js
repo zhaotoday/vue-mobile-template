@@ -1,5 +1,5 @@
 import { Rest } from "vue-mobile/@lr/utils/rest";
-import { auth } from "vue-mobile/utils/auth";
+import { auth } from "vue-mobile/@lr/utils/auth";
 import { consts } from "@/utils/consts";
 
 export class ExampleApi extends Rest {
