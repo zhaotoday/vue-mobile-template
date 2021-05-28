@@ -18,15 +18,15 @@
   },
   "homepage": "https://github.com/zhaotoday/uni-app#readme",
   "dependencies": {
-    "@vue/composition-api": "^1.0.0-rc.5",
-    "async-validator": "^3.5.1",
-    "jt-helpers": "0.0.12",
+    "@vue/composition-api": "^1.0.0-rc.10",
+    "async-validator": "^3.5.2",
+    "jt-helpers": "0.0.13",
     "jt-time": "0.0.9",
-    "sass-utils": "^1.0.34",
+    "sass-utils": "^1.0.35",
     "uni-read-pages": "^1.0.5",
-    "uni-simple-router": "^2.0.1",
+    "uni-simple-router": "^2.0.5",
     "vue": "^2.6.12",
-    "vue-mobile": "^1.0.62",
+    "vue-mobile": "^1.0.91",
     "vuex": "^3.6.2",
     "vuex-persistedstate": "^4.0.0-beta.3",
     "wx-bridge": "0.0.35"
@@ -34,9 +34,9 @@
   "devDependencies": {
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.23.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.8.0",
-    "prettier": "^2.2.1",
+    "eslint": "^7.27.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "prettier": "^2.3.0"
   }
 }
