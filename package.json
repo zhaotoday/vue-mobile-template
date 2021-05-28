@@ -4,7 +4,7 @@
   "description": "vue-mobile template",
   "main": "main.js",
   "scripts": {
-    "format": "prettier --write \"models/**/*.js\" \"pages/**/*.js\" \"plugins/**/*.js\" \"store/**/*.js\" \"utils/**/*.js\"",
+    "format": "prettier --write \"apis/**/*.js\" \"components/**/*.{vue,js}\" \"mixins/**/*.js\" \"pages/**/*.{vue,js}\" \"plugins/**/*.js\" \"router/**/*.js\" \"store/**/*.js\" \"utils/**/*.js\"",
     "lint": "eslint \"models/**/*.js\" \"pages/**/*.js\" \"plugins/**/*.js\" \"store/**/*.js\" \"utils/**/*.js\" --fix"
   },
   "repository": {
