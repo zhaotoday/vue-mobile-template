@@ -14,4 +14,7 @@ module.exports = {
       }),
     ],
   },
+  chainWebpack: (config) => {
+    config.resolve.alias.set("lr", "vue-mobile/@lr");
+  },
 };

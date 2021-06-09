@@ -7,6 +7,7 @@ module.exports = {
   resolve: {
     alias: {
       "@": resolve("./src"),
+      lr: resolve("./node_modules/vue-mobile/@lr"),
     },
   },
 };
