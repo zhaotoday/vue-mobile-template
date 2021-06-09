@@ -1,9 +1,0 @@
-@import "~@/assets/styles/utils/index";
-
-@include c(tag-checkbox) {
-  line-height: 0;
-
-  @include c(tag) {
-    @include margin(null, px2rpx(10px), px2rpx(10px));
-  }
-}
