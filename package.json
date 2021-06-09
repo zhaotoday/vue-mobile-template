@@ -15,7 +15,9 @@
     "test:android": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=android jest -i",
     "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
-    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
+    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
+    "format": "prettier --write \"src/**/*.{vue,js}\"",
+    "lint": "eslint \"src/**/*.{vue,js}\" --fix"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31920210514002",
