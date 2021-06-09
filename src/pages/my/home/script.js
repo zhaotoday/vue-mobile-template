@@ -1,4 +1,4 @@
-import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
+import { useWxUser } from "lr/composables/use-wx-user";
 
 export default {
   setup() {

@@ -17,8 +17,8 @@ export const store = new Vuex.Store({
     }),
   ],
   modules: {
-    "public/enums": require("vue-mobile/@lr/store/modules/public/enums")
+    "public/enums": require("lr/store/modules/public/enums")
       .default,
-    wxUsers: require("vue-mobile/@lr/store/modules/wx/wx-users").default,
+    wxUsers: require("lr/store/modules/wx/wx-users").default,
   },
 });

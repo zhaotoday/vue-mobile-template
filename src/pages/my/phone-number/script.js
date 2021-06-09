@@ -1,10 +1,10 @@
 import AsyncValidator from "async-validator";
 import { onMounted, onUnmounted, reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
-import { formValidators } from "vue-mobile/@lr/utils/form-validators";
+import { formValidators } from "lr/utils/form-validators";
 import { router } from "@/router";
-import { WxUsersApi } from "vue-mobile/@lr/apis/wx/wx-users";
-import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
+import { WxUsersApi } from "lr/apis/wx/wx-users";
+import { useWxUser } from "lr/composables/use-wx-user";
 import { helpers } from "@/utils/helpers";
 
 export default {

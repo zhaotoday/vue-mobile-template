@@ -1,1 +1,1 @@
-export { helpers } from "vue-mobile/@lr/utils/helpers";
+export { helpers } from "lr/utils/helpers";

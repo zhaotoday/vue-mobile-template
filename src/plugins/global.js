@@ -1,6 +1,6 @@
 import wx from "wx-bridge";
 import time from "jt-time";
-import { auth } from "vue-mobile/@lr/utils/auth";
+import { auth } from "lr/utils/auth";
 import { globalMixin } from "@/mixins/global";
 import { store } from "@/store";
 import { consts } from "@/utils/consts";
