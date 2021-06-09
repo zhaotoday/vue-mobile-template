@@ -1,0 +1,32 @@
+@import "~@/assets/styles/utils/index";
+
+@include c(share) {
+  @include position--fixed(null, null, 0, 0);
+
+  width: 100%;
+  z-index: 1003;
+
+  @include e(options) {
+    @include padding(px2rpx(30px), px2rpx(10px), null, px2rpx(10px));
+
+    h2 {
+      padding-top: px2rpx(14px);
+      line-height: 100%;
+    }
+  }
+
+  @include e(tip) {
+    padding: px2rpx(30px);
+    line-height: 150%;
+  }
+
+  @include e(cancel) {
+    @include text--middle(px2rpx(90px));
+
+    margin-top: px2rpx(14px);
+  }
+
+  @include e(qrcode) {
+    @include position--fixed(0, null, null, px2rpx(-1000px));
+  }
+}

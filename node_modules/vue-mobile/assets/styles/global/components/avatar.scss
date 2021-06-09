@@ -1,0 +1,13 @@
+@include c(avatar) {
+  @include circle(px2rpx($avatar-width));
+
+  background-color: map-get($colors, c11);
+  display: block;
+
+  @include m(default) {
+    background: {
+      image: url("#{$image-url}/components/avatar/default.png");
+      size: 100% 100%;
+    }
+  }
+}

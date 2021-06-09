@@ -1,0 +1,34 @@
+@include c(panel) {
+  @include e(head) {
+    @include text--middle(px2rpx(100px));
+
+    position: relative;
+    margin-left: px2rpx(30px);
+    border-bottom: 1px solid map-get($colors, c32);
+  }
+
+  @include e(extra) {
+    @include position--absolute(50%, px2rpx(20px));
+
+    transform: translateY(-50%);
+    display: inline-block;
+    padding: px2rpx(10px);
+    line-height: 100%;
+
+    @include c(icon) {
+      @include position--absolute(50%, px2rpx(10px));
+
+      transform: translateY(-50%);
+    }
+
+    @include s(has-icon) {
+      padding-right: px2rpx(30px);
+    }
+  }
+
+  @include e(body) {
+    &.m30 {
+      margin: px2rpx(30px);
+    }
+  }
+}

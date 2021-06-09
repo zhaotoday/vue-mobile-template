@@ -1,0 +1,73 @@
+@include c(orders) {
+  @include e(item) {
+    @include clearfix;
+  }
+
+  @include e(head) {
+    @include text--middle(px2rpx(70px));
+
+    position: relative;
+    margin-left: px2rpx(30px);
+    border-bottom: 1px solid map-get($colors, c32);
+
+    span {
+      line-height: 100%;
+    }
+  }
+
+  @include e(extra) {
+    @include position--absolute(50%, px2rpx(30px));
+
+    transform: translateY(-50%);
+    line-height: 100%;
+  }
+
+  @include e(body) {
+    margin: px2rpx(30px);
+
+    @include o(media) {
+      @include e(image) {
+        @include size(px2rpx(160px), px2rpx(100px));
+
+        border-radius: px2rpx(9px);
+      }
+
+      @include e(body) {
+        margin-left: px2rpx(20px);
+      }
+    }
+  }
+
+  @include e(foot) {
+    @include padding(px2rpx(16px), px2rpx(30px), px2rpx(16px));
+
+    line-height: 100%;
+    border-top: 1px solid map-get($colors, c32);
+
+    @include c(tag) {
+      margin-left: px2rpx(20px);
+    }
+  }
+
+  @include cc(products) {
+    @include e(item) {
+      @include margin(px2rpx(-4px), null, px2rpx(4px));
+      @include text--overflow(2);
+
+      height: px2rpx(68px);
+      line-height: 120%;
+      position: relative;
+    }
+
+    @include e(number) {
+      @include position--absolute(50%, 0);
+
+      transform: translateY(-50%);
+    }
+  }
+
+  @include e(money) {
+    line-height: 100%;
+    text-align: right;
+  }
+}

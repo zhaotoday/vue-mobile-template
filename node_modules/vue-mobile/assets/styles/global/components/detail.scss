@@ -1,0 +1,41 @@
+@include c(detail) {
+  @include e(head) {
+    @include padding(px2rpx(30px), null, px2rpx(30px));
+
+    margin: px2rpx(20px);
+    border-radius: px2rpx(16px);
+  }
+
+  @include e(label, value) {
+    line-height: 100%;
+  }
+
+  @include e(value) {
+    padding-top: px2rpx(20px);
+  }
+
+  @include e(item) {
+    @include size(100%, px2rpx(124px));
+
+    position: relative;
+    border-bottom: 1px solid map-get($colors, c34);
+  }
+
+  @include e(title, time, extra) {
+    line-height: 100%;
+  }
+
+  @include e(title) {
+    @include position--absolute(px2rpx(26px), null, null, 0);
+  }
+
+  @include e(time) {
+    @include position--absolute(null, null, px2rpx(26px));
+  }
+
+  @include e(extra) {
+    @include position--absolute(px2rpx(26px), 0);
+
+    text-align: right;
+  }
+}

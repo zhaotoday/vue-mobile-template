@@ -1,0 +1,69 @@
+@include o(grid) {
+  display: flex;
+
+  @include m(full) {
+    flex-wrap: wrap;
+  }
+
+  @include e(cell) {
+    flex: 1;
+
+    @include m(width-fixed) {
+      flex: 0 1 auto;
+    }
+  }
+
+  @include e(row) {
+    @include clearfix;
+
+    width: 100%;
+
+    @each $item in $grid-paddings {
+      > .p#{$item / 1px} {
+        @include padding(null, px2rpx($item), null, px2rpx($item));
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  @include e(col) {
+    float: left;
+    min-height: 1px;
+    box-sizing: border-box;
+  }
+
+  @include m(10) {
+    display: block;
+
+    @include o(grid) {
+      @include e(col) {
+        @for $i from 1 through 10 {
+          @include m(#{$i}) {
+            width: 100% / 10 * $i;
+          }
+        }
+      }
+    }
+  }
+
+  @include m(12) {
+    display: block;
+
+    @include o(grid) {
+      @include e(col) {
+        @for $i from 1 through 12 {
+          @include m(#{$i}) {
+            width: 100% / 12 * $i;
+          }
+        }
+      }
+    }
+  }
+}

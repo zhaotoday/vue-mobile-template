@@ -1,0 +1,7 @@
+@import "~@/assets/styles/utils/index";
+
+@include c(toggle) {
+  border-top: 1px solid map-get($colors, c32);
+  padding: px2rpx(24px);
+  line-height: 100%;
+}

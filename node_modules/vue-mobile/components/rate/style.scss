@@ -1,0 +1,36 @@
+@import "~@/assets/styles/utils/index";
+
+@include c(rate) {
+  @include s(sm) {
+    i {
+      font-size: px2rpx(24px);
+      margin-right: px2rpx(6px);
+    }
+
+    span {
+      font-size: px2rpx(24px);
+    }
+  }
+
+  @include s(md) {
+    i {
+      font-size: px2rpx(30px);
+      margin-right: px2rpx(10px);
+    }
+
+    span {
+      font-size: px2rpx(28px);
+    }
+  }
+
+  @include s(lg) {
+    i {
+      font-size: px2rpx(34px);
+      margin-right: px2rpx(14px);
+    }
+
+    span {
+      font-size: px2rpx(30px);
+    }
+  }
+}
