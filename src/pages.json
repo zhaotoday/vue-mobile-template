@@ -64,15 +64,5 @@
         "text": "我的"
       }
     ]
-  },
-  "condition": {
-    "current": 0,
-    "list": [
-      {
-        "name": "login",
-        "path": "pages/login/index",
-        "query": "query=xxx"
-      }
-    ]
   }
 }

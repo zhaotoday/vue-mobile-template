@@ -42,7 +42,7 @@
     "vue-mobile": "^1.0.97",
     "vuex": "^3.6.2",
     "vuex-persistedstate": "^4.0.0-beta.3",
-    "wx-bridge": "^0.0.35"
+    "wx-bridge": "^0.0.37"
   },
   "devDependencies": {
     "@babel/runtime": "~7.12.0",
