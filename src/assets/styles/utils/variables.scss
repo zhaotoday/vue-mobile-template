@@ -23,8 +23,14 @@ $colors: (
 );
 
 // button
-$button-widths: 650px;
-$button-heights: 76px, 88px;
+$c-button: (
+  widths: 650px,
+  heights: (
+    76px,
+    88px,
+  ),
+  --at-bottom: 30px,
+);
 
 // grid
 $grid-paddings: 10px;
