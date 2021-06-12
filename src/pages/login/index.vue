@@ -8,8 +8,7 @@
     <div class="b-buttons o-grid">
       <div class="o-grid__cell">
         <div
-          class="c-button is-block h76 bdc21 c21 fs32"
-          style="margin-right: 20rpx"
+          class="c-button is-block h76 u-br8 bdc21 c21 fs32 u-mr20"
           @click="$wx.navigateBack()"
         >
           拒绝
@@ -18,8 +17,7 @@
       <div class="o-grid__cell">
         <!-- #ifdef H5 -->
         <button
-          class="c-button is-block h76 bgc21 c11 fs32"
-          style="margin-left: 20rpx"
+          class="c-button is-block h76 u-br8 bgc21 c11 fs32 u-ml20"
           @click="getUserInfo"
         >
           允许
@@ -27,9 +25,8 @@
         <!-- #endif -->
         <!-- #ifndef H5 -->
         <button
-          class="c-button is-block h76 bgc21 c11 fs32"
+          class="c-button is-block h76 u-br8 bgc21 c11 fs32 u-ml20"
           open-type="getUserInfo"
-          style="margin-left: 20rpx"
           @getuserinfo="getUserInfo"
         >
           允许
