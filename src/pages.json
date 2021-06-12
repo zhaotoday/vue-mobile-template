@@ -33,7 +33,7 @@
       }
     },
     {
-      "path": "pages/examples/comment/index",
+      "path": "pages/examples/form/index",
       "style": {
         "navigationBarTitleText": "评论"
       }
