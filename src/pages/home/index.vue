@@ -1,5 +1,7 @@
 <template>
   <div class="p-home u-m20">
+    <!-- 以下是 vue-mobile 框架中已优化过的组件样式类实例 -->
+
     <!-- c-avatar -->
     <image
       class="c-avatar r168"
@@ -11,9 +13,18 @@
       mode="aspectFill"
       src="https://img01.yzcdn.cn/vant/cat.jpeg"
     />
-    <div class="c-avatar c-avatar-default r168"></div>
+    <image
+      class="c-avatar r168"
+      src="~vue-mobile/assets/images/components/avatar/default.png"
+    />
+
+    <!-- title -->
+    <div class="c-title c-title--md fs32 u-mb30">标题</div>
+    <div class="c-title c-title--bg fs32 u-mb30">大标题</div>
+
     <!-- button -->
     <button class="c-button w650 h76 u-br8 bgc21 c11 fs32">允许</button>
+
     <!-- icon -->
     <i class="c-icon c-icon--logo"></i>
   </div>
