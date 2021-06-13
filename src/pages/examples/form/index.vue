@@ -24,7 +24,10 @@
       v-model.trim="cForm.model.content"
     >
     </textarea>
-    <button class="c-button at-bottom w650 h88 u-br8 bg--primary c--white fs32" @click="submit">
+    <button
+      class="c-button at-bottom w650 h88 u-br8 bg--primary c--white fs32"
+      @click="submit"
+    >
       提交
     </button>
   </div>
