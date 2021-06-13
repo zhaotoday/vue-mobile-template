@@ -1,13 +1,13 @@
 <template>
   <div class="p-form c-form">
-    <h2 class="c-form__title t-black fs30">您的姓名</h2>
+    <h2 class="c-form__title fs30">您的姓名</h2>
     <input
       class="c-form__input bg-white fs30"
       placeholder-class="t-placeholder"
       placeholder="请输入您的姓名"
       v-model.trim="cForm.model.name"
     />
-    <h2 class="c-form__title t-black fs30">手机号</h2>
+    <h2 class="c-form__title fs30">手机号</h2>
     <input
       class="c-form__input bg-white fs30"
       type="number"
@@ -16,7 +16,7 @@
       placeholder="请输入手机号"
       v-model.trim="cForm.model.phoneNumber"
     />
-    <h2 class="c-form__title t-black fs30">评论（可以不填）</h2>
+    <h2 class="c-form__title fs30">评论（可以不填）</h2>
     <textarea
       class="c-form__textarea bg-white fs30"
       placeholder-class="t-placeholder"
