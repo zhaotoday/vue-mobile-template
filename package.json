@@ -39,7 +39,7 @@
     "uni-read-pages": "^1.0.5",
     "uni-simple-router": "^2.0.6",
     "vue": "^2.6.14",
-    "vue-mobile": "^1.0.103",
+    "vue-mobile": "^1.0.106",
     "vuex": "^3.6.2",
     "vuex-persistedstate": "^4.0.0-beta.3",
     "wx-bridge": "^0.0.37"

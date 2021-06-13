@@ -25,9 +25,6 @@ $colors: (
 // button
 $c-button: (
   widths: 650px,
-  heights: (
-    76px,
-    88px,
-  ),
+  heights: $pxes,
   --at-bottom: 30px,
 );
