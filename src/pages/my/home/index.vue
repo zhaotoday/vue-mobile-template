@@ -1,6 +1,6 @@
 <template>
   <div class="p-my-home">
-    <div class="b-info bgc21 c11 u-tac">
+    <div class="b-info bg--primary c--white u-tac">
       <template v-if="wxUser.id">
         <img class="c-avatar r168" :src="wxUser.avatarUrl" />
         <div class="b-name fs40">{{ wxUser.name || wxUser.nickName }}</div>
@@ -15,7 +15,7 @@
           @click="$wx.navigateTo('/pages/login/index')"
         />
         <div
-          class="b-login c-tag h50 u-br8 bdc11 fs28"
+          class="b-login c-tag h50 u-br8 bd--white fs28"
           @click="$wx.navigateTo('/pages/login/index')"
         >
           授权登录
@@ -31,7 +31,7 @@
         我的资料
       </div>
       <button
-        class="c-list__item is-button has-icon is-link bgc11 fs30"
+        class="c-list__item is-button has-icon is-link bg--white fs30"
         open-type="contact"
       >
         <i class="c-icon c-icon--service"></i>

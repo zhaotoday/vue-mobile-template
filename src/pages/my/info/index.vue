@@ -1,11 +1,11 @@
 <template>
   <div class="p-my-info u-pt18">
-    <ul class="c-list bgc11 fs30">
+    <ul class="c-list bg--white fs30">
       <li class="c-list__item">
         <label>姓名</label>
         <input
           class="c-list__value"
-          placeholder-class="c36"
+          placeholder-class="c--placeholder"
           placeholder="请填写姓名"
           v-model.trim="cForm.model.name"
         />
@@ -20,7 +20,7 @@
           }}
         </div>
         <div
-          class="c-list__operation c21 fs28"
+          class="c-list__operation c--primary fs28"
           @click="
             $wx.navigateTo(
               `/pages/my/phone-number/index?update=${
@@ -50,7 +50,7 @@
               ] || ""
             }}
           </div>
-          <div v-else class="c36">请选择性别</div>
+          <div v-else class="c--placeholder">请选择性别</div>
         </picker>
       </li>
       <li class="c-list__item">
@@ -68,11 +68,11 @@
           <div v-if="cForm.model.birthday">
             {{ cForm.model.birthday }}
           </div>
-          <div v-else class="c36">请选择生日，保存后不可修改</div>
+          <div v-else class="c--placeholder">请选择生日，保存后不可修改</div>
         </picker>
       </li>
     </ul>
-    <button class="c-button at-bottom w650 h88 u-br8 bgc21 c11 fs32" @click="submit">
+    <button class="c-button at-bottom w650 h88 u-br8 bg--primary c--white fs32" @click="submit">
       保存
     </button>
   </div>

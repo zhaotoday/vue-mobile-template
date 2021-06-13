@@ -1,7 +1,7 @@
 @import "~@/assets/styles/utils/index";
 
 page {
-  background-color: map-get($colors, c11);
+  background-color: map-get($colors, white);
 }
 
 @include p(login) {
