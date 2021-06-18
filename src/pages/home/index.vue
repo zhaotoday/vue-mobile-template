@@ -23,7 +23,7 @@
     <div class="c-title c-title--bg fs32 u-mb30">大标题</div>
 
     <!-- button -->
-    <button class="c-button w650 h76 u-br8 bg-primary t-white fs32">
+    <button class="c-button w690 h76 u-br8 bg-primary t-white fs32">
       允许
     </button>
 

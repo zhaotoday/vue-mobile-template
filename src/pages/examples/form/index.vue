@@ -25,7 +25,7 @@
     >
     </textarea>
     <button
-      class="c-button at-bottom w650 h88 u-br8 bg-primary t-white fs32"
+      class="c-button at-bottom w690 h88 u-br8 bg-primary t-white fs32"
       @click="submit"
     >
       提交
