@@ -27,14 +27,14 @@
         class="c-list__item has-icon is-link"
         @click="$wx.navigateTo('/pages/my/info/index')"
       >
-        <i class="c-icon c-icon--info"></i>
+        <i class="c-iconfont c-iconfont--info t-primary fs36"></i>
         我的资料
       </div>
       <button
         class="c-list__item is-button has-icon is-link bg-white fs30"
         open-type="contact"
       >
-        <i class="c-icon c-icon--service"></i>
+        <i class="c-iconfont c-iconfont--service t-primary fs36"></i>
         客户服务
       </button>
     </div>
