@@ -8,7 +8,7 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   plugins: [
     createPersistedState({
-      paths: ["public/enums", "wxUsers"],
+      paths: ["enums", "wxUsers"],
       storage: {
         getItem: (key) => wx.getStorageSync(key),
         setItem: (key, value) => wx.setStorageSync(key, value),
