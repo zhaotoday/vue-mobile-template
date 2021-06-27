@@ -25,7 +25,9 @@
     <div class="c-list fs30">
       <div
         class="c-list__item has-icon is-link"
-        @click="$wx.navigateTo('/pages/my/info/index')"
+        @click="
+          navigateTo({ requiresLogin: true, url: '/pages/my/info/index' })
+        "
       >
         <i class="c-iconfont c-iconfont--info t-primary fs36"></i>
         我的资料
