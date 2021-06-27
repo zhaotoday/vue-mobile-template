@@ -19,18 +19,13 @@
               : ""
           }}
         </div>
-        <div
-          class="c-list__operation t-primary fs28"
-          @click="
-            $wx.navigateTo(
-              `/pages/my/phone-number/index?update=${
-                cForm.model.phoneNumber ? 1 : ''
-              }`
-            )
-          "
+        <button
+          class="c-list__operation c-button u-br0 bg-white t-primary fs28"
+          open-type="getPhoneNumber"
+          @getphonenumber="onGetPhoneNumber"
         >
-          {{ cForm.model.phoneNumber ? "更换手机号" : "绑定手机号" }}
-        </div>
+          获取手机号
+        </button>
       </li>
       <li class="c-list__item">
         <label>性别</label>

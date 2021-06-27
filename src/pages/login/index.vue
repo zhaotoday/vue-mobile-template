@@ -9,16 +9,7 @@
       <div class="o-grid__row">
         <div class="o-grid__col o-grid__col--6 p20">
           <button
-            class="
-              c-button
-              is-block
-              h76
-              u-br8
-              bg-white
-              bd-primary
-              t-primary
-              fs32
-            "
+            class="c-button is-block h76 u-br8 bg-white bd-primary t-primary fs32"
             @click="$wx.navigateBack()"
           >
             拒绝

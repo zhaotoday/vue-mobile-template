@@ -7,6 +7,7 @@ import { useWxUser } from "lr/composables/use-wx-user";
 import { useEnums } from "lr/composables/use-enums";
 import { helpers } from "@/utils/helpers";
 import { router } from "@/router";
+import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
 
 export default {
   setup() {
@@ -30,6 +31,17 @@ export default {
 
     const getDetail = async () => {
       return new WxUsersApi().GET({ id: wxUser.value.id });
+    };
+
+    const onGetPhoneNumber = async (e) => {
+      const { iv, encryptedData } = e.detail;
+      const { code } = await wx.login();
+      const { phoneNumber } = await new PublicWxUsersApi().POST({
+        action: "getPhoneNumber",
+        body: { code, iv, encryptedData },
+      });
+
+      cForm.model.phoneNumber = phoneNumber;
     };
 
     const onBirthdayChange = (e) => {
@@ -73,6 +85,7 @@ export default {
       hasBirthday,
       cForm,
       getDetail,
+      onGetPhoneNumber,
       onBirthdayChange,
       onGenderChange,
       submit,
