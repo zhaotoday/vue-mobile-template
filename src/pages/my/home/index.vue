@@ -11,7 +11,7 @@
       <template v-else>
         <image
           class="c-avatar r168"
-          src="~vue-mobile/assets/images/components/avatar/default.png"
+          :src="avatarUrl"
           @click="$wx.navigateTo('/pages/login/index')"
         />
         <div

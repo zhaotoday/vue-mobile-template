@@ -13,10 +13,7 @@
       mode="aspectFill"
       src="https://img01.yzcdn.cn/vant/cat.jpeg"
     />
-    <image
-      class="c-avatar r168"
-      src="~vue-mobile/assets/images/components/avatar/default.png"
-    />
+    <image class="c-avatar r168" :src="avatarUrl" />
 
     <!-- title -->
     <div class="c-title c-title--md fs32 u-mb30">标题</div>
