@@ -36,6 +36,7 @@
     "jt-time": "^0.0.9",
     "regenerator-runtime": "^0.12.1",
     "sass-utils": "^1.0.51",
+    "uni-composition-api": "^0.5.9",
     "uni-read-pages": "^1.0.5",
     "uni-simple-router": "^2.0.6",
     "vue": "^2.6.14",

@@ -27,12 +27,6 @@
       }
     },
     {
-      "path": "pages/my/phone-number/index",
-      "style": {
-        "navigationBarTitleText": ""
-      }
-    },
-    {
       "path": "pages/examples/form/index",
       "style": {
         "navigationBarTitleText": "评论"
