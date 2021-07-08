@@ -27,8 +27,7 @@
           <!-- #ifndef H5 -->
           <button
             class="c-button is-block h76 u-br8 bg-primary t-white fs32"
-            open-type="getUserInfo"
-            @getuserinfo="getUserInfo"
+            @click="getUserInfo"
           >
             允许
           </button>
