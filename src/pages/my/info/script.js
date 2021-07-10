@@ -8,6 +8,7 @@ import { useEnums } from "lr/composables/use-enums";
 import { helpers } from "@/utils/helpers";
 import { router } from "@/router";
 import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
+import { onShow } from "uni-composition-api";
 
 export default {
   setup() {
@@ -32,6 +33,11 @@ export default {
     const getDetail = async () => {
       return new WxUsersApi().GET({ id: wxUser.value.id });
     };
+
+    onShow(async () => {
+      cForm.model = await getDetail();
+      hasBirthday.value = !!cForm.model.birthday;
+    });
 
     const onGetPhoneNumber = async (e) => {
       const { iv, encryptedData } = e.detail;
@@ -84,19 +90,10 @@ export default {
       enums,
       hasBirthday,
       cForm,
-      getDetail,
       onGetPhoneNumber,
       onBirthdayChange,
       onGenderChange,
       submit,
     };
-  },
-  async onLoad() {
-    this.cForm.model = await this.getDetail();
-    this.hasBirthday = !!this.cForm.birthday;
-  },
-  async onShow() {
-    const { phoneNumber } = await this.getDetail();
-    this.cForm.model.phoneNumber = phoneNumber;
   },
 };
