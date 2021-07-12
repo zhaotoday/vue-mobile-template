@@ -1,5 +1,5 @@
-import { Rest } from "lr/utils/rest";
-import { auth } from "lr/utils/auth";
+import { Rest } from "@lr/utils/rest";
+import { auth } from "@lr/utils/auth";
 import { consts } from "@/utils/consts";
 
 export class ExampleApi extends Rest {

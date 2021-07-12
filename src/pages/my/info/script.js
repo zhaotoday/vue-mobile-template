@@ -1,10 +1,10 @@
 import { reactive, ref } from "@vue/composition-api";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
-import { formValidators } from "lr/utils/form-validators";
-import { WxUsersApi } from "lr/apis/wx/wx-users";
-import { useWxUser } from "lr/composables/use-wx-user";
-import { useEnums } from "lr/composables/use-enums";
+import { formValidators } from "@lr/utils/form-validators";
+import { WxUsersApi } from "@lr/apis/wx/wx-users";
+import { useWxUser } from "@lr/composables/use-wx-user";
+import { useEnums } from "@lr/composables/use-enums";
 import { helpers } from "@/utils/helpers";
 import { router } from "@/router";
 import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
