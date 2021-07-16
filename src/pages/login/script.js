@@ -1,10 +1,13 @@
 import wx from "wx-bridge";
 import { helpers } from "@/utils/helpers";
+import { useBem } from "@/composables/use-bem";
 import { useWxUser } from "@lr/composables/use-wx-user";
 import { useMockWxUser } from "@lr/composables/use-mock-wx-user";
 
 export default {
   setup() {
+    const bem = useBem();
+
     const getUserInfo = async () => {
       try {
         // #ifdef MP
@@ -24,6 +27,7 @@ export default {
     };
 
     return {
+      bem,
       getUserInfo,
     };
   },

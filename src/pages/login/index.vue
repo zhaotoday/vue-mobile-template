@@ -9,7 +9,8 @@
       <div class="o-grid__row">
         <div class="o-grid__col o-grid__col--6 p20">
           <button
-            class="c-button is-block h76 u-br8 bg-white bd-primary t-primary fs32"
+            :class="bem.button.big.$"
+            class="is-block bg-white bd-primary t-primary"
             @click="$wx.navigateBack()"
           >
             拒绝
@@ -18,7 +19,8 @@
         <div class="o-grid__col o-grid__col--6 p20">
           <!-- #ifdef H5 -->
           <button
-            class="c-button is-block h76 u-br8 bg-primary t-white fs32"
+            :class="bem.button.big.$"
+            class="is-block bg-primary t-white"
             @click="getUserInfo"
           >
             允许
@@ -26,7 +28,8 @@
           <!-- #endif -->
           <!-- #ifndef H5 -->
           <button
-            class="c-button is-block h76 u-br8 bg-primary t-white fs32"
+            :class="bem.button.big.$"
+            class="is-block bg-primary t-white"
             @click="getUserInfo"
           >
             允许
