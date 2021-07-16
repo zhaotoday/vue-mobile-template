@@ -1,7 +1,10 @@
 import { reactive } from "@vue/composition-api";
+import { useBem } from "@/composables/use-bem";
 
 export default {
   setup() {
+    const bem = useBem();
+
     const cForm = reactive({
       model: {
         name: "",
@@ -15,6 +18,7 @@ export default {
     };
 
     return {
+      bem,
       cForm,
       submit,
     };
