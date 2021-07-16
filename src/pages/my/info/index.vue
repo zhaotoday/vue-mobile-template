@@ -68,7 +68,8 @@
       </li>
     </ul>
     <button
-      class="c-button at-bottom w690 h88 u-br8 bg-primary t-white fs32"
+      :class="bem.button.big.$"
+      class="at-bottom w690 bg-primary t-white"
       @click="submit"
     >
       保存
