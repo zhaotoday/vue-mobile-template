@@ -17,7 +17,6 @@
           </button>
         </div>
         <div class="o-grid__col o-grid__col--6 p20">
-          <!-- #ifdef H5 -->
           <button
             :class="bem.button.big.$"
             class="is-block bg-primary t-white"
@@ -25,16 +24,6 @@
           >
             允许
           </button>
-          <!-- #endif -->
-          <!-- #ifndef H5 -->
-          <button
-            :class="bem.button.big.$"
-            class="is-block bg-primary t-white"
-            @click="getUserInfo"
-          >
-            允许
-          </button>
-          <!-- #endif -->
         </div>
       </div>
     </div>
