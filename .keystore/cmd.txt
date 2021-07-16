@@ -1,4 +1,9 @@
 参考链接：https://ask.dcloud.net.cn/article/35777
+
+下载并安装 JRE：
+访问：https://www.oracle.com/java/technologies/javase-downloads.html
+搜索：JRE Download
+
 命令：
 $ set PATH=%PATH%;"C:\Program Files\Java\jre1.8.0_291\bin"
 $ keytool -genkey -alias liruan -keyalg RSA -keysize 2048 -validity 36500 -keystore liruan.keystore
