@@ -1,7 +1,7 @@
 import { reactive, ref } from "@vue/composition-api";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
-import { formValidators } from "@lr/utils/form-validators";
+import { useFormValidators } from "@lr/composables/use-form-validators";
 import { WxUsersApi } from "@lr/apis/wx/wx-users";
 import { useBem } from "@/composables/use-bem";
 import { useWxUser } from "@lr/composables/use-wx-user";
@@ -13,6 +13,7 @@ import { onShow } from "uni-composition-api";
 
 export default {
   setup() {
+    const formValidators = useFormValidators();
     const bem = useBem();
     const { wxUser, getWxUser } = useWxUser();
     const { enums } = useEnums();
