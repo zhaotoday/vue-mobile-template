@@ -1,5 +1,5 @@
 import wx from "wx-bridge";
-import { helpers } from "@/utils/helpers";
+import { useHelpers } from "@/composables/use-helpers";
 import { useBem } from "@/composables/use-bem";
 import { useWxUser } from "@lr/composables/use-wx-user";
 import { useMockWxUser } from "@lr/composables/use-mock-wx-user";
@@ -19,7 +19,7 @@ export default {
         // #endif
 
         wx.showToast({ title: "登陆成功" });
-        await helpers.sleep(1500);
+        await useHelpers().sleep(1500);
         wx.navigateBack();
       } catch (e) {
         wx.navigateBack();

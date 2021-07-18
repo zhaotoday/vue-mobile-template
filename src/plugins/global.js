@@ -1,17 +1,17 @@
 import wx from "wx-bridge";
 import time from "jt-time";
-import { auth } from "@lr/utils/auth";
 import { store } from "@/store";
-import { consts } from "@/utils/consts";
-import { helpers } from "@/utils/helpers";
+import { useAuth } from "@lr/composables/use-auth";
+import { useConsts } from "@/composables/use-consts";
+import { useHelpers } from "@/composables/use-helpers";
 
 export const globalPlugin = {
   install(Vue) {
     Vue.prototype.$wx = wx;
     Vue.prototype.$time = time;
-    Vue.prototype.$auth = auth;
     Vue.prototype.$store = store;
-    Vue.prototype.$consts = consts;
-    Vue.prototype.$helpers = helpers;
+    Vue.prototype.$auth = useAuth();
+    Vue.prototype.$consts = useConsts();
+    Vue.prototype.$helpers = useHelpers();
   },
 };

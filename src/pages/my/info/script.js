@@ -6,7 +6,7 @@ import { WxUsersApi } from "@lr/apis/wx/wx-users";
 import { useBem } from "@/composables/use-bem";
 import { useWxUser } from "@lr/composables/use-wx-user";
 import { useEnums } from "@lr/composables/use-enums";
-import { helpers } from "@/utils/helpers";
+import { useHelpers } from "@/composables/use-helpers";
 import { router } from "@/router";
 import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
 import { onShow } from "uni-composition-api";
@@ -82,7 +82,7 @@ export default {
 
         await getWxUser();
 
-        await helpers.sleep(1500);
+        await useHelpers().sleep(1500);
 
         wx.navigateBack({ delta: query.from === "login" ? 2 : 1 });
       });
