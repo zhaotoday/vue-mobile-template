@@ -8,7 +8,7 @@ import { useWxUser } from "@lr/composables/use-wx-user";
 import { useEnums } from "@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
 import { router } from "@/router";
-import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
+import { PublicWxUsersApi } from "@lr/apis/public/wx-users";
 import { onShow } from "uni-composition-api";
 
 export default {
