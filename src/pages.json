@@ -33,7 +33,7 @@
       }
     },
     {
-      "path": "pages/user/login/index",
+      "path": "pages/user/mp-login/index",
       "style": {
         "navigationBarTitleText": "登录"
       }
