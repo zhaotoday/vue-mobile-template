@@ -15,16 +15,16 @@ export default {
         await useWxUser().login();
         // #endif
 
-        // #ifdef H5
-        await useMockWxUser().login();
-        // #endif
-
         // #ifdef APP-PLUS
         const {
           authResult: { access_token: accessToken, openid: openId },
         } = await wx.login({ provider: "weixin" });
 
         await appLogin({ accessToken, openId });
+        // #endif
+
+        // #ifdef H5
+        await useMockWxUser().login();
         // #endif
 
         wx.showToast({ title: "登陆成功" });
