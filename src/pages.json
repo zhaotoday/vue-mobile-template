@@ -31,6 +31,24 @@
       "style": {
         "navigationBarTitleText": "评论"
       }
+    },
+    {
+      "path": "pages/user/login/index",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/user/register/index",
+      "style": {
+        "navigationBarTitleText": "注册"
+      }
+    },
+    {
+      "path": "pages/user/password/index",
+      "style": {
+        "navigationBarTitleText": "重置密码"
+      }
     }
   ],
   "globalStyle": {
