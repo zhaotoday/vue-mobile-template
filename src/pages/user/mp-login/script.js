@@ -10,29 +10,27 @@ export default {
     const { appLogin } = useWxUser();
 
     const login = async () => {
-      try {
-        // #ifdef MP
-        await useWxUser().login();
-        // #endif
+      // #ifdef MP
+      await useWxUser().login();
+      // #endif
 
-        // #ifdef APP-PLUS
-        const {
-          authResult: { access_token: accessToken, openid: openId },
-        } = await wx.login({ provider: "weixin" });
+      // #ifdef APP-PLUS
+      const {
+        authResult: { access_token: accessToken, openid: openId },
+      } = await wx.login({ provider: "weixin" });
 
-        await appLogin({ accessToken, openId });
-        // #endif
+      await appLogin({ accessToken, openId });
+      // #endif
 
-        // #ifdef H5
-        await useMockWxUser().login();
-        // #endif
+      // #ifdef H5
+      await useMockWxUser().login();
+      // #endif
 
-        wx.showToast({ title: "登陆成功" });
-        await useHelpers().sleep(1500);
-        wx.navigateBack();
-      } catch (e) {
-        wx.navigateBack();
-      }
+      wx.showToast({ title: "登陆成功" });
+
+      await useHelpers().sleep(1500);
+
+      wx.navigateTo({ url: "/pages/user/phone-number/index" });
     };
 
     return {

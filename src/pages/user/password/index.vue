@@ -3,7 +3,15 @@
     <ul class="c-list bg-white fs30">
       <li class="c-list__item">
         <label>手机号</label>
-        <div class="c-list__value">139****2340</div>
+        <input
+          class="c-list__value"
+          type="number"
+          maxlength="11"
+          placeholder-class="t-placeholder"
+          placeholder="请输入手机号"
+          v-model.trim="cForm.model.phoneNumber"
+        />
+        <div v-if="false" class="c-list__value">139****2340</div>
         <div
           class="c-list__operation fs28"
           :class="cCaptcha.disabled ? 't-gray6' : 't-primary'"
