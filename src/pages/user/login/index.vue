@@ -2,7 +2,7 @@
   <div class="p-login">
     <div class="u-tar u-pr10">
       <div
-        class="b-register u-p20 fs26"
+        class="b-register u-p20 t-primary fs26"
         @click="$wx.navigateTo('/pages/user/register/index')"
       >
         注册账号

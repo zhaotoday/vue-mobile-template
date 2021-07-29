@@ -2,12 +2,13 @@
   <div class="p-my-phone-number u-pt18">
     <ul class="c-list bg-white fs30">
       <li class="c-list__item">
+        <label>手机号</label>
         <input
-          class="c-list__value is-full"
+          class="c-list__value"
           type="number"
           maxlength="11"
           placeholder-class="t-placeholder"
-          placeholder="请填写手机号"
+          placeholder="请输入手机号"
           v-model.trim="cForm.model.phoneNumber"
         />
         <div
@@ -19,12 +20,13 @@
         </div>
       </li>
       <li class="c-list__item">
+        <label>验证码</label>
         <input
-          class="c-list__value is-full"
+          class="c-list__value"
           type="number"
           maxlength="6"
           placeholder-class="t-placeholder"
-          placeholder="请填写验证码"
+          placeholder="请输入验证码"
           v-model.trim="cForm.model.captcha"
         />
       </li>
@@ -33,7 +35,7 @@
       class="c-button at-bottom w690 h88 u-br8 bg-primary t-white fs32"
       @click="submit"
     >
-      提交
+      绑定
     </button>
   </div>
 </template>

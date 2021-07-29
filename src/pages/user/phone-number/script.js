@@ -1,11 +1,12 @@
 import AsyncValidator from "async-validator";
-import { onMounted, onUnmounted, reactive } from "@vue/composition-api";
+import { reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
 import { useFormValidators } from "@lr/composables/use-form-validators";
 import { router } from "@/router";
 import { WxUsersApi } from "@lr/apis/wx/wx-users";
 import { useWxUser } from "@lr/composables/use-wx-user";
 import { useHelpers } from "@/composables/use-helpers";
+import { onHide, onShow } from "uni-composition-api";
 
 export default {
   setup() {
@@ -26,13 +27,13 @@ export default {
       },
     });
 
-    onMounted(() => {
+    onShow(() => {
       wx.setNavigationBarTitle({
         title: query.update ? "更换手机号" : "绑定手机号",
       });
     });
 
-    onUnmounted(() => {
+    onHide(() => {
       clearInterval(sendCaptchaTimer);
     });
 

@@ -41,7 +41,7 @@
     {
       "path": "pages/user/register/index",
       "style": {
-        "navigationBarTitleText": "注册"
+        "navigationBarTitleText": "注册账号"
       }
     },
     {
