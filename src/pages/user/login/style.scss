@@ -27,7 +27,12 @@ page {
   @include b(title, desc, button) {
     @include block--center;
 
-    width: px2rpx(670px);
+    width: px2rpx(690px);
+    line-height: 100%;
+  }
+
+  @include b(login) {
+    padding-top: px2rpx(50px);
     line-height: 100%;
   }
 }

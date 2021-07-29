@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
 import { useFormValidators } from "@lr/composables/use-form-validators";
 import { router } from "@/router";
-import { WxUsersApi } from "@/apis/wx/wx-users";
+import { WxUsersApi } from "@lr/apis/wx/wx-users";
 import { useWxUser } from "@lr/composables/use-wx-user";
 import { useHelpers } from "@/composables/use-helpers";
 

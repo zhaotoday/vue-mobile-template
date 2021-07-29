@@ -49,6 +49,12 @@
       "style": {
         "navigationBarTitleText": "重置密码"
       }
+    },
+    {
+      "path": "pages/user/phone-number/index",
+      "style": {
+        "navigationBarTitleText": "绑定手机号"
+      }
     }
   ],
   "globalStyle": {
