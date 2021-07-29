@@ -5,6 +5,11 @@ page {
 }
 
 @include p(login) {
+  @include b(register) {
+    display: inline-block;
+    line-height: 100%;
+  }
+
   @include b(logo) {
     @include padding(px2rpx(130px), null, px2rpx(120px));
 

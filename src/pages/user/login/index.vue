@@ -1,5 +1,8 @@
 <template>
   <div class="p-login">
+    <div class="u-tar u-pr20">
+      <div class="b-register u-p20 fs26">注册账号</div>
+    </div>
     <div class="b-logo">
       <c-logo name="东街口" :css-classes="{ __icon: ['u-circle'] }" />
     </div>
@@ -11,7 +14,7 @@
         class="is-block bg-primary t-white"
         @click="login"
       >
-        授权登录
+        微信登录
       </button>
     </div>
   </div>
