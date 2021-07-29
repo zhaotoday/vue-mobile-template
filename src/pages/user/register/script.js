@@ -2,16 +2,14 @@ import AsyncValidator from "async-validator";
 import { reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
 import { useFormValidators } from "@lr/composables/use-form-validators";
-import { router } from "@/router";
 import { WxUsersApi } from "@lr/apis/wx/wx-users";
 import { useWxUser } from "@lr/composables/use-wx-user";
 import { useHelpers } from "@/composables/use-helpers";
-import { onHide, onShow } from "uni-composition-api";
+import { onHide } from "uni-composition-api";
 
 export default {
   setup() {
     const formValidators = useFormValidators();
-    const { query } = router.currentRoute;
     const { getWxUser } = useWxUser();
     const cForm = reactive({
       model: {},
@@ -23,6 +21,18 @@ export default {
         captcha: [
           formValidators.required({ label: "验证码" }),
           formValidators.captcha(),
+        ],
+        confirmPassword: [
+          formValidators.required({ message: "请确认密码" }),
+          formValidators.password({ label: "确认密码" }),
+          {
+            validator(rule, value) {
+              return (
+                value === cForm.model.password ||
+                new Error("两次密码输入不一致")
+              );
+            },
+          },
         ],
       },
     });
