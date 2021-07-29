@@ -39,6 +39,12 @@
       }
     },
     {
+      "path": "pages/user/account-login/index",
+      "style": {
+        "navigationBarTitleText": "账号登录"
+      }
+    },
+    {
       "path": "pages/user/register/index",
       "style": {
         "navigationBarTitleText": "注册账号"

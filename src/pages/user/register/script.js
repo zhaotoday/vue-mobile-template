@@ -22,6 +22,10 @@ export default {
           formValidators.required({ label: "验证码" }),
           formValidators.captcha(),
         ],
+        password: [
+          formValidators.required({ label: "密码" }),
+          formValidators.password(),
+        ],
         confirmPassword: [
           formValidators.required({ message: "请确认密码" }),
           formValidators.password({ label: "确认密码" }),
