@@ -7,6 +7,7 @@ import { useMockWxUser } from "@lr/composables/use-mock-wx-user";
 export default {
   setup() {
     const bem = useBem();
+    const { appLogin } = useWxUser();
 
     const login = async () => {
       try {
@@ -16,6 +17,14 @@ export default {
 
         // #ifdef H5
         await useMockWxUser().login();
+        // #endif
+
+        // #ifdef APP-PLUS
+        const {
+          authResult: { access_token: accessToken, openid: openId },
+        } = await wx.login({ provider: "weixin" });
+
+        await appLogin({ accessToken, openId });
         // #endif
 
         wx.showToast({ title: "登陆成功" });
