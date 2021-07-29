@@ -8,7 +8,7 @@ export default {
   setup() {
     const bem = useBem();
 
-    const getUserInfo = async () => {
+    const login = async () => {
       try {
         // #ifdef MP
         await useWxUser().login();
@@ -28,7 +28,7 @@ export default {
 
     return {
       bem,
-      getUserInfo,
+      login,
     };
   },
 };

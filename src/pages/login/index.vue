@@ -20,7 +20,7 @@
           <button
             :class="bem.button.middle.$"
             class="is-block bg-primary t-white"
-            @click="getUserInfo"
+            @click="login"
           >
             允许
           </button>

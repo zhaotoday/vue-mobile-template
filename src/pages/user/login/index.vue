@@ -1,14 +1,9 @@
 <template>
   <div class="p-login">
     <div class="b-logo">
-      <c-logo
-        :name="$consts.SchoolConfig.name"
-        :css-classes="{ __icon: ['u-circle'] }"
-      />
+      <c-logo name="东街口" :css-classes="{ __icon: ['u-circle'] }" />
     </div>
-    <h2 class="b-title fs30">
-      {{ $consts.SchoolConfig.name }}将获取以下授权：
-    </h2>
+    <h2 class="b-title fs30">该程序将获取以下授权：</h2>
     <p class="b-desc t-gray7 fs28">获得您的公开信息（昵称、头像等）</p>
     <div class="b-button">
       <button
