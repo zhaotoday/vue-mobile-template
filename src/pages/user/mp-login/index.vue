@@ -23,7 +23,12 @@
       </button>
     </div>
     <div class="b-login__wrap u-tac">
-      <div class="b-login u-p20 t-primary fs26">账号登录</div>
+      <div
+        class="b-login u-p20 t-primary fs26"
+        @click="$wx.navigateTo('/pages/user/account-login/index')"
+      >
+        账号登录
+      </div>
     </div>
   </div>
 </template>
