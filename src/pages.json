@@ -31,36 +31,6 @@
       "style": {
         "navigationBarTitleText": "评论"
       }
-    },
-    {
-      "path": "pages/user/mp-login/index",
-      "style": {
-        "navigationBarTitleText": "登录"
-      }
-    },
-    {
-      "path": "pages/user/account-login/index",
-      "style": {
-        "navigationBarTitleText": "账号登录"
-      }
-    },
-    {
-      "path": "pages/user/register/index",
-      "style": {
-        "navigationBarTitleText": "注册账号"
-      }
-    },
-    {
-      "path": "pages/user/password/index",
-      "style": {
-        "navigationBarTitleText": "重置密码"
-      }
-    },
-    {
-      "path": "pages/user/phone-number/index",
-      "style": {
-        "navigationBarTitleText": "绑定手机号"
-      }
     }
   ],
   "globalStyle": {
