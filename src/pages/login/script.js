@@ -1,8 +1,8 @@
 import wx from "wx-bridge";
 import { useHelpers } from "@/composables/use-helpers";
 import { useBem } from "@/composables/use-bem";
-import { useWxUser } from "@lr/composables/use-wx-user";
-import { useMockWxUser } from "@lr/composables/use-mock-wx-user";
+import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
+import { useMockWxUser } from "vue-mobile/@lr/composables/use-mock-wx-user";
 
 export default {
   setup() {

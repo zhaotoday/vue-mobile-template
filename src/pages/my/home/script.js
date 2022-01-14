@@ -1,4 +1,4 @@
-import { useWxUser } from "@lr/composables/use-wx-user";
+import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 import avatarUrl from "vue-mobile/assets/images/components/avatar/default.png";
 
 export default {

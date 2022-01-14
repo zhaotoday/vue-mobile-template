@@ -1,1 +1,1 @@
-export { useHelpers } from "@lr/composables/use-helpers";
+export { useHelpers } from "vue-mobile/@lr/composables/use-helpers";

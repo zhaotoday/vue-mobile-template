@@ -1,14 +1,14 @@
 import { reactive, ref } from "@vue/composition-api";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
-import { useFormValidators } from "@lr/composables/use-form-validators";
-import { WxUsersApi } from "@lr/apis/wx/wx-users";
+import { useFormValidators } from "vue-mobile/@lr/composables/use-form-validators";
+import { WxUsersApi } from "vue-mobile/@lr/apis/wx/wx-users";
 import { useBem } from "@/composables/use-bem";
-import { useWxUser } from "@lr/composables/use-wx-user";
-import { useEnums } from "@lr/composables/use-enums";
+import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
+import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
 import { router } from "@/router";
-import { PublicWxUsersApi } from "@lr/apis/public/wx-users";
+import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
 import { onShow } from "uni-composition-api";
 
 export default {
