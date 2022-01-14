@@ -1,4 +1,4 @@
-import { reactive, ref } from "@vue/composition-api";
+import { reactive, ref } from "vue";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
 import { useFormValidators } from "vue-mobile/@lr/composables/use-form-validators";
