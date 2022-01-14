@@ -1,9 +1,5 @@
-const {
-  uniPostcssPlugin
-} = require('@dcloudio/uni-cli-shared')
+const { uniPostcssPlugin } = require("@dcloudio/uni-cli-shared");
+
 module.exports = {
-  plugins: [
-    uniPostcssPlugin(),
-    require('autoprefixer')()
-  ]
-}
+  plugins: [uniPostcssPlugin(), require("autoprefixer")()],
+};
