@@ -1,11 +1,8 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import { createStore } from "vuex";
 import wx from "wx-bridge";
 import createPersistedState from "vuex-persistedstate";
 
-Vue.use(Vuex);
-
-export const store = new Vuex.Store({
+export const store = createStore({
   plugins: [
     createPersistedState({
       paths: ["enums", "wxUsers"],
