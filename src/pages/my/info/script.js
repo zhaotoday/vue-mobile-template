@@ -9,7 +9,7 @@ import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
 import { router } from "@/router";
 import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
-import { onShow } from "uni-composition-api";
+import { onShow } from "@dcloudio/uni-app";
 
 export default {
   setup() {
