@@ -1,0 +1,62 @@
+{
+  "pages": [
+    {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "授权登录"
+      }
+    },
+    {
+      "path": "pages/my/home/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#0e6af9"
+      }
+    },
+    {
+      "path": "pages/my/info/index",
+      "style": {
+        "navigationBarTitleText": "我的资料"
+      }
+    },
+    {
+      "path": "pages/examples/form/index",
+      "style": {
+        "navigationBarTitleText": "评论"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#F2F2F2"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "static/tab-bar/home.png",
+        "selectedIconPath": "static/tab-bar/home-hl.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/home/index",
+        "iconPath": "static/tab-bar/my.png",
+        "selectedIconPath": "static/tab-bar/my-hl.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
