@@ -1,7 +1,7 @@
-@import "~@/assets/styles/utils/index";
+@import "~@/assets/styles/utils/index.scss";
 
-@import "~sass-utils/global/index";
-@import "~sass-utils/mobile/global/index";
+@import "node_modules/sass-utils/global/index";
+@import "node_modules/sass-utils/mobile/global/index";
 
 @import "./components/index";
 @import "./objects/index";
