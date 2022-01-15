@@ -1,23 +1,26 @@
 import { reactive, ref } from "vue";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
-import { useFormValidators } from "vue-mobile/@lr/composables/use-form-validators";
+import { useFormValidators } from "vue-validation";
 import { WxUsersApi } from "vue-mobile/@lr/apis/wx/wx-users";
 import { useBem } from "@/composables/use-bem";
 import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
-import { router } from "@/router";
 import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
-import { onShow } from "@dcloudio/uni-app";
+import { onLoad, onShow } from "@dcloudio/uni-app";
 
 export default {
-  setup() {
+  setup(props, context) {
+    onLoad((s) => {
+      alert(2233)
+      console.log(s, "--");
+    });
+    console.log(props, context, "---");
     const formValidators = useFormValidators();
     const bem = useBem();
     const { wxUser, getWxUser } = useWxUser();
     const { enums } = useEnums();
-    const { query } = router.currentRoute;
     const hasBirthday = ref(false);
     const cForm = reactive({
       model: {
@@ -27,9 +30,9 @@ export default {
         gender: -1,
       },
       rules: {
-        name: [formValidators.required({ label: "姓名" })],
-        phoneNumber: [formValidators.required({ message: "请绑定手机号" })],
-        birthday: [formValidators.required({ message: "请选择生日" })],
+        name: [formValidators.isRequired({ label: "姓名" })],
+        phoneNumber: [formValidators.isRequired({ message: "请绑定手机号" })],
+        birthday: [formValidators.isRequired({ message: "请选择生日" })],
       },
     });
 

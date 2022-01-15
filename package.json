@@ -20,10 +20,11 @@
     "async-validator": "^4.0.7",
     "jt-helpers": "^1.0.10",
     "jt-time": "^0.0.9",
-    "sass-utils": "^1.0.58",
+    "sass-utils": "^1.1.1",
     "vue": "^3.2.26",
     "vue-i18n": "^9.1.9",
-    "vue-mobile": "^1.1.10",
+    "vue-mobile": "^1.1.18",
+    "vue-validation": "^0.0.9",
     "vuex": "^4.0.2",
     "vuex-composition-helpers": "^1.1.0",
     "vuex-persistedstate": "^4.1.0",
@@ -41,6 +42,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.3.0",
     "prettier": "^2.5.1",
+    "sass": "^1.48.0",
     "vite": "^2.7.10"
   }
 }
