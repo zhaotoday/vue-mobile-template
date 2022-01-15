@@ -7,9 +7,9 @@ import { useBem } from "@/composables/use-bem";
 import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
-import { router } from "@/router";
 import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
 import { onShow } from "@dcloudio/uni-app";
+import { useRoute } from "@/composables/use-route";
 
 export default {
   setup() {
@@ -17,7 +17,7 @@ export default {
     const bem = useBem();
     const { wxUser, getWxUser } = useWxUser();
     const { enums } = useEnums();
-    const { query } = router.currentRoute;
+    const { currentRoute: query } = useRoute();
     const hasBirthday = ref(false);
     const cForm = reactive({
       model: {
