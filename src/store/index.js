@@ -14,7 +14,7 @@ export const store = createStore({
     }),
   ],
   modules: {
-    enums: require("vue-mobile/@lr/store/modules/enums").default,
-    wxUsers: require("vue-mobile/@lr/store/modules/wx-users").default,
+    enums: import("vue-mobile/@lr/store/modules/enums"),
+    wxUsers: import("vue-mobile/@lr/store/modules/wx-users"),
   },
 });
