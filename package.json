@@ -24,7 +24,7 @@
     "vue": "^3.2.26",
     "vue-i18n": "^9.1.9",
     "vue-mobile": "^1.1.18",
-    "vue-validation": "^0.0.9",
+    "vue-validation": "^1.0.2",
     "vuex": "^4.0.2",
     "vuex-composition-helpers": "^1.1.0",
     "vuex-persistedstate": "^4.1.0",

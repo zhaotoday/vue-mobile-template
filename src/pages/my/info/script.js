@@ -1,7 +1,7 @@
 import { reactive, ref } from "vue";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
-import { useFormValidators } from "vue-mobile/@lr/composables/use-form-validators";
+import { useValidators } from "vue-validation";
 import { WxUsersApi } from "vue-mobile/@lr/apis/wx/wx-users";
 import { useBem } from "@/composables/use-bem";
 import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
@@ -13,7 +13,7 @@ import { onShow } from "@dcloudio/uni-app";
 
 export default {
   setup() {
-    const formValidators = useFormValidators();
+    const { isRequired } = useValidators();
     const bem = useBem();
     const { wxUser, getWxUser } = useWxUser();
     const { enums } = useEnums();
@@ -27,9 +27,9 @@ export default {
         gender: -1,
       },
       rules: {
-        name: [formValidators.required({ label: "姓名" })],
-        phoneNumber: [formValidators.required({ message: "请绑定手机号" })],
-        birthday: [formValidators.required({ message: "请选择生日" })],
+        name: [isRequired({ label: "姓名" })],
+        phoneNumber: [isRequired({ message: "请绑定手机号" })],
+        birthday: [isRequired({ message: "请选择生日" })],
       },
     });
 
