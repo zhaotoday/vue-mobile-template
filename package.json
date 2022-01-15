@@ -35,13 +35,13 @@
     "@dcloudio/uni-automator": "^3.0.0-alpha-3030720220111003",
     "@dcloudio/uni-cli-shared": "^3.0.0-alpha-3030720220111003",
     "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3030720220111003",
-    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "autoprefixer": "^10.4.2",
     "babel-eslint": "^10.1.0",
-    "eslint": "^8.6.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.3.0",
-    "prettier": "^2.5.1",
+    "eslint": "^7.30.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "prettier": "^2.3.2",
     "sass": "^1.48.0",
     "vite": "^2.7.10"
   }
