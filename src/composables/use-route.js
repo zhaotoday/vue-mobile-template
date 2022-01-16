@@ -1,4 +1,4 @@
-import { onLoad } from "@dcloudio/uni-app";
+import { onLoad } from "uni-composition-api";
 import { reactive } from "@vue/composition-api";
 
 export const useRoute = () => {
