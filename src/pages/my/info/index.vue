@@ -57,7 +57,6 @@
           v-else
           class="c-list__value"
           mode="date"
-          v-model="cForm.model.birthday"
           @change="onBirthdayChange"
         >
           <div v-if="cForm.model.birthday">
