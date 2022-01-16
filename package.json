@@ -2,12 +2,12 @@
   "name": "vue-mobile-template",
   "version": "1.0.1",
   "scripts": {
-    "dev:app": "uni -p app",
-    "dev:h5": "uni",
-    "dev:mp-weixin": "uni -p mp-weixin",
-    "build:app": "uni build -p app",
-    "build:h5": "uni build",
-    "build:mp-weixin": "uni build -p mp-weixin",
+    "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
+    "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
+    "dev:app-plus": "cross-env NODE_ENV=development UNI_PLATFORM=app-plus vue-cli-service uni-build --watch",
+    "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
+    "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
+    "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "format": "prettier --write \"src/**/*.{vue,js}\"",
     "lint": "eslint \"src/**/*.{vue,js}\" --fix"
   },
