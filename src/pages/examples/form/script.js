@@ -1,4 +1,4 @@
-import { reactive } from "vue";
+import { reactive } from "@vue/composition-api";
 import { useBem } from "@/composables/use-bem";
 
 export default {

@@ -1,4 +1,4 @@
-import { reactive, ref } from "vue";
+import { reactive, ref } from "@vue/composition-api";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
 import { useValidators } from "vue-validation";
