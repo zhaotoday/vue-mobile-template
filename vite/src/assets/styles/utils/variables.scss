@@ -1,0 +1,37 @@
+@import "node_modules/vue-mobile/assets/styles/utils/variables";
+
+// CDN
+$cdn: "http://localhost:88";
+
+// CDN 版本号
+$cdn-version: 0.1;
+
+// 颜色
+$colors: (
+  white: #fff,
+  black: #303133,
+  primary: #0e6af9,
+  secondary: #ff6201,
+  thirdary: #0e6af9,
+  success: #07c260,
+  warning: #ff9900,
+  error: #fb5252,
+  placeholder: #c0c4cc,
+  gray1: #f5f7fa,
+  gray2: #f2f6fc,
+  gray3: #ebeef5,
+  gray4: #e4e7ed,
+  gray5: #dcdfe6,
+  gray6: #c0c4cc,
+  gray7: #909399,
+  gray8: #606266,
+  gray9: #303133,
+);
+
+// button
+$c-button: (
+  widths: 690px,
+  heights: $pxes,
+  __bottom-wrap-padding: 30px,
+  --at-bottom: 30px,
+);
