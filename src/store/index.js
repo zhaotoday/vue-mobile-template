@@ -1,8 +1,11 @@
-import { createStore } from "vuex";
+import Vue from "vue";
+import Vuex from "vuex";
 import wx from "wx-bridge";
 import createPersistedState from "vuex-persistedstate";
 
-export const store = createStore({
+Vue.use(Vuex);
+
+export const store = new Vuex.Store({
   plugins: [
     createPersistedState({
       paths: ["enums", "wxUsers"],
@@ -14,7 +17,7 @@ export const store = createStore({
     }),
   ],
   modules: {
-    enums: import("vue-mobile/@lr/store/modules/enums"),
-    wxUsers: import("vue-mobile/@lr/store/modules/wx-users"),
+    enums: require("@lr/store/modules/enums").default,
+    wxUsers: require("@lr/store/modules/wx-users").default,
   },
 });
