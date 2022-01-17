@@ -7,7 +7,7 @@ import { useBem } from "@/composables/use-bem";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
-import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
+import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { onShow } from "uni-composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";
 
@@ -47,7 +47,7 @@ export default {
     const onGetPhoneNumber = async (e) => {
       const { iv, encryptedData } = e.detail;
       const { code } = await wx.login();
-      const { phoneNumber } = await new PublicWxUsersApi().POST({
+      const { phoneNumber } = await publicUsersApi.post({
         action: "getPhoneNumber",
         body: { code, iv, encryptedData },
       });
