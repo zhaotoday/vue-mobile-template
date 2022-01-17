@@ -42,6 +42,5 @@
             "urlCheck" : false
         },
         "usingComponents" : true
-    },
-    "vueVersion" : "3"
+    }
 }

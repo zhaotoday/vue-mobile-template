@@ -1,18 +1,16 @@
 <script>
-import { onLaunch } from "uni-composition-api";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 
 export default {
-  setup() {
+  async onLaunch() {
     const { getEnums } = useEnums();
     const { getWxUser } = useWxUser();
 
-    onLaunch(async () => {
-      await getEnums();
-      if (useAuth().loggedIn()) await getWxUser();
-    });
+    await getEnums();
+
+    if (useAuth().loggedIn()) await getWxUser();
   },
 };
 </script>
