@@ -2,7 +2,7 @@ import { reactive, ref } from "@vue/composition-api";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
 import { useValidators } from "vue-validation";
-import { WxUsersApi } from "vue-mobile/@lr/apis/wx/wx-users";
+import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useBem } from "@/composables/use-bem";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
@@ -36,7 +36,7 @@ export default {
     });
 
     const getDetail = async () => {
-      return new WxUsersApi().GET({ id: user.value.id });
+      return usersApi.get({ id: user.value.id });
     };
 
     onShow(async () => {
