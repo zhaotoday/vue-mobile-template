@@ -1,11 +1,11 @@
 <template>
   <div class="p-my-home">
     <div class="b-info bg-primary t-white u-tac">
-      <template v-if="wxUser.id">
-        <img class="c-avatar r168" :src="wxUser.avatarUrl" />
-        <div class="b-name fs40">{{ wxUser.name || wxUser.nickName }}</div>
-        <div v-if="wxUser.phoneNumber" class="b-phone fs28">
-          手机号：{{ wxUser.phoneNumber }}
+      <template v-if="user.id">
+        <img class="c-avatar r168" :src="user.avatarUrl" />
+        <div class="b-name fs40">{{ user.name || user.nickName }}</div>
+        <div v-if="user.phoneNumber" class="b-phone fs28">
+          手机号：{{ user.phoneNumber }}
         </div>
       </template>
       <template v-else>
