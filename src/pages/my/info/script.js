@@ -4,7 +4,7 @@ import wx from "wx-bridge";
 import { useValidators } from "vue-validation";
 import { WxUsersApi } from "vue-mobile/@lr/apis/wx/wx-users";
 import { useBem } from "@/composables/use-bem";
-import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
 import { PublicWxUsersApi } from "vue-mobile/@lr/apis/public/wx-users";
@@ -15,10 +15,12 @@ export default {
   setup() {
     const { isRequired } = useValidators();
     const bem = useBem();
-    const { wxUser, getWxUser } = useWxUser();
+    const { user, getUserInfo } = useUsers();
     const { enums } = useEnums();
-    const { currentRoute: query } = useRoute();
+    const { currentRoute } = useRoute();
+
     const hasBirthday = ref(false);
+
     const cForm = reactive({
       model: {
         name: "",
@@ -34,7 +36,7 @@ export default {
     });
 
     const getDetail = async () => {
-      return new WxUsersApi().GET({ id: wxUser.value.id });
+      return new WxUsersApi().GET({ id: user.value.id });
     };
 
     onShow(async () => {
@@ -75,17 +77,17 @@ export default {
         }
 
         await new WxUsersApi().PUT({
-          id: wxUser.value.id,
+          id: user.value.id,
           body: model,
         });
 
         wx.showToast({ title: "保存成功" });
 
-        await getWxUser();
+        await getUserInfo();
 
         await useHelpers().sleep(1500);
 
-        wx.navigateBack({ delta: query.from === "login" ? 2 : 1 });
+        wx.navigateBack({ delta: currentRoute.query.from === "login" ? 2 : 1 });
       });
     };
 
