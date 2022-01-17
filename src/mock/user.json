@@ -1,0 +1,12 @@
+{
+  "user": {
+    "id": 1,
+    "name": "",
+    "nickName": "",
+    "avatarId": null,
+    "wxNickName": "",
+    "wxAvatarUrl": "",
+    "phoneNumber": "13950442340"
+  },
+  "token": {}
+}
