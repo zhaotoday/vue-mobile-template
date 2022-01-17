@@ -1,9 +1,9 @@
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import avatarUrl from "vue-mobile/assets/images/components/avatar/default.png";
+import defaultAvatarUrl from "vue-mobile/assets/images/components/avatar/default.png";
 
 export default {
   setup() {
-    const { user, name, navigateTo } = useUsers();
-    return { avatarUrl, user, name, navigateTo };
+    const { user, name, avatarUrl, navigateTo } = useUsers();
+    return { defaultAvatarUrl, user, name, avatarUrl, navigateTo };
   },
 };

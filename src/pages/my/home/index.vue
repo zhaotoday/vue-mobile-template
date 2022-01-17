@@ -2,7 +2,7 @@
   <div class="p-my-home">
     <div class="b-info bg-primary t-white u-tac">
       <template v-if="user.id">
-        <img class="c-avatar r168" :src="user.avatarUrl" />
+        <img class="c-avatar r168" :src="avatarUrl" />
         <div class="b-name fs40">{{ user.name || user.nickName }}</div>
         <div v-if="user.phoneNumber" class="b-phone fs28">
           手机号：{{ user.phoneNumber }}
@@ -11,7 +11,7 @@
       <template v-else>
         <image
           class="c-avatar r168"
-          :src="avatarUrl"
+          :src="defaultAvatarUrl"
           @click="$wx.navigateTo('/pages/login/index')"
         />
         <div
