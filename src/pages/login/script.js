@@ -1,8 +1,8 @@
 import wx from "wx-bridge";
 import { useHelpers } from "@/composables/use-helpers";
 import { useBem } from "@/composables/use-bem";
-import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
-import { useMockWxUser } from "vue-mobile/@lr/composables/use-mock-wx-user";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { useMockUser } from "vue-mobile/@lr/composables/use-mock-user";
 
 export default {
   setup() {
@@ -11,11 +11,11 @@ export default {
     const login = async () => {
       try {
         // #ifdef MP
-        await useWxUser().login();
+        await useUsers().wxMpLogin();
         // #endif
 
         // #ifdef H5
-        await useMockWxUser().login();
+        await useMockUser().login();
         // #endif
 
         wx.showToast({ title: "登陆成功" });
