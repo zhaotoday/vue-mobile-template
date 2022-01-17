@@ -1,7 +1,7 @@
 import wx from "wx-bridge";
 import time from "jt-time";
 import { store } from "@/store";
-import { useAuth } from "@lr/composables/use-auth";
+import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 import { useConsts } from "@/composables/use-consts";
 import { useHelpers } from "@/composables/use-helpers";
 
