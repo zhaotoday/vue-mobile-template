@@ -35,12 +35,11 @@ export default {
       },
     });
 
-    const getDetail = async () => {
-      return usersApi.get({ id: user.value.id });
-    };
-
     onShow(async () => {
-      cForm.model = await getDetail();
+      cForm.model = await usersApi.post({
+        action: "getUserInfo",
+        body: { id: user.value.id },
+      });
       hasBirthday.value = !!cForm.model.birthday;
     });
 
