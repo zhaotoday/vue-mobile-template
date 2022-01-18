@@ -38,7 +38,7 @@
     "uni-composition-api": "^0.6.1",
     "uni-simple-router": "^2.0.8-beta.3",
     "vue": "^2.6.14",
-    "vue-mobile": "1.1.25",
+    "vue-mobile": "1.1.26",
     "vue-validation": "^1.0.3",
     "vuex": "^3.6.2",
     "vuex-composition-helpers": "^1.1.0",
