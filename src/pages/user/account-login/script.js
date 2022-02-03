@@ -1,25 +1,19 @@
 import AsyncValidator from "async-validator";
 import { reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
-import { useFormValidators } from "@lr/composables/use-form-validators";
+import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
-import { useUser } from "@lr/composables/use-user";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
-    const formValidators = useFormValidators();
-    const { accountLogin } = useUser();
+    const { isRequired, isPhoneNumber, isPassword } = useValidators();
+    const { accountLogin } = useUsers();
     const cForm = reactive({
       model: {},
       rules: {
-        account: [
-          formValidators.required({ label: "账号" }),
-          formValidators.phoneNumberOrEmail(),
-        ],
-        password: [
-          formValidators.required({ label: "密码" }),
-          formValidators.password(),
-        ],
+        account: [isRequired({ label: "账号" }), isPhoneNumber()],
+        password: [isRequired({ label: "密码" }), isPassword()],
       },
     });
 
