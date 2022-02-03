@@ -8,7 +8,15 @@ page {
   @include b(logo) {
     @include padding(px2rpx(130px), null, px2rpx(120px));
 
-    text-align: center;
+    @include e(logo) {
+      @include block--center;
+
+      margin-bottom: px2rpx(10px);
+    }
+
+    @include e(title) {
+      text-align: center;
+    }
   }
 
   @include b(title) {
