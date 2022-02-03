@@ -15,10 +15,6 @@ page {
 
       margin-bottom: px2rpx(20px);
     }
-
-    @include e(title) {
-      line-height: 100%;
-    }
   }
 
   @include b(title) {

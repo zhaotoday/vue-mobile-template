@@ -2,7 +2,7 @@
   <div class="p-login">
     <div class="b-logo">
       <u-avatar size="90" shape="square" :src="logoUrl" />
-      <div class="b-logo__title fs28">XXX小程序</div>
+      <h2 class="fs28">XXX小程序</h2>
     </div>
     <h2 class="b-title fs32">XXX 小程序将获取以下授权：</h2>
     <p class="b-desc t-gray7 fs28">获得您的公开信息（昵称、头像等）</p>
