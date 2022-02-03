@@ -1,4 +1,4 @@
-import helpers from "jt-helpers";
+import { addArrayItem, deleteArrayItem } from "jt-helpers";
 
 export const useBem = () => {
   const button = {
@@ -12,8 +12,8 @@ export const useBem = () => {
   };
 
   return {
-    add: helpers.addArrayItem,
-    remove: helpers.deleteArrayItem,
+    add: addArrayItem,
+    remove: deleteArrayItem,
     button,
   };
 };
