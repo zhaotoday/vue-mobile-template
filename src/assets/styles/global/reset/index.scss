@@ -4,3 +4,10 @@ page {
   background-color: map-get($colors, gray1);
   color: map-get($colors, gray9);
 }
+
+div,
+h1,
+h2,
+h3 {
+  line-height: 100%;
+}

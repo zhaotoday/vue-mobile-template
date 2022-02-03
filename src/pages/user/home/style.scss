@@ -12,18 +12,11 @@
     position: relative;
     border-radius: px2rpx(10px);
     box-shadow: 0 0 px2rpx(10px) 0 rgba(#cccccc, 0.2);
-    background: {
-      image: url("#{$image-url}/components/list/link.png");
-      size: px2rpx(30px) px2rpx(30px);
-      repeat: no-repeat;
-      position: right px2rpx(30px) center;
-    }
 
-    @include e(avatar) {
-      @include position--absolute(px2rpx(30px), null, null, px2rpx(30px));
-      @include circle(px2rpx(120px));
+    .u-avatar {
+      @include position--absolute(50%, null, null, px2rpx(30px));
 
-      display: block;
+      transform: translateY(-50%);
     }
 
     @include e(extra) {
@@ -31,11 +24,6 @@
 
       transform: translateY(-50%);
       line-height: 100%;
-
-      h2,
-      h3 {
-        line-height: 100%;
-      }
 
       h3 {
         margin-top: px2rpx(18px);
