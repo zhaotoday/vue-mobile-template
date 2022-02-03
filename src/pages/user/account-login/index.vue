@@ -29,7 +29,7 @@
         忘记密码？
       </div>
     </div>
-    <u-button class="at-bottom w690" type="primary" @click="submit">
+    <u-button custom-class="at-bottom w690" type="primary" @click="submit">
       登录
     </u-button>
   </div>
