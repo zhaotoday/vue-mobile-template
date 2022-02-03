@@ -15,18 +15,6 @@
     </div>
     <div :class="$bem.box.$" class="u-mb20">
       <ul class="c-list bg-white fs28">
-        <li class="c-list__item has-icon is-link">
-          <i class="c-iconfont c-iconfont--link fs34"></i>
-          我与 1 个 机构 2个 部门 设置了业务关系
-        </li>
-        <li class="c-list__item has-icon is-link">
-          <i class="c-iconfont c-iconfont--share fs34"></i>
-          我与 33名 伙伴 设置了业务信息共享
-        </li>
-      </ul>
-    </div>
-    <div :class="$bem.box.$" class="u-mb20">
-      <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"
           @click="$wx.navigateTo('/pages/user/account/home/index')"
