@@ -34,12 +34,6 @@
       "style": {
         "navigationBarTitleText": "我的资料"
       }
-    },
-    {
-      "path": "pages/examples/form/index",
-      "style": {
-        "navigationBarTitleText": "评论"
-      }
     }
   ],
   "globalStyle": {

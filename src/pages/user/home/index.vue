@@ -13,7 +13,7 @@
         <div class="c-tag h44 fs24 bgc21 c11">编辑资料</div>
       </div>
     </div>
-    <div :class="bem.box.$" class="u-mb20">
+    <div :class="$bem.box.$" class="u-mb20">
       <ul class="c-list bg-white fs28">
         <li class="c-list__item has-icon is-link">
           <i class="c-iconfont c-iconfont--link fs34"></i>
@@ -25,7 +25,7 @@
         </li>
       </ul>
     </div>
-    <div :class="bem.box.$" class="u-mb20">
+    <div :class="$bem.box.$" class="u-mb20">
       <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"

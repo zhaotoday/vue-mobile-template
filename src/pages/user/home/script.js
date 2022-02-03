@@ -7,7 +7,6 @@ import { useHelpers } from "@/composables/use-helpers";
 
 export default {
   setup() {
-    const bem = useBem();
     const { userInfo, getUserInfo, navigateTo, name, avatarUrl, logout } =
       useUsers();
 
@@ -32,7 +31,6 @@ export default {
 
     return {
       defaultAvatarUrl,
-      bem,
       userInfo,
       name,
       avatarUrl,
