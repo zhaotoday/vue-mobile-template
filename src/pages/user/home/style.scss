@@ -1,0 +1,57 @@
+@import "~@/assets/styles/utils/index";
+
+@include p(user-home) {
+  @include c(button) {
+    text-indent: 0;
+  }
+
+  @include b(info) {
+    @include block--center;
+    @include size(px2rpx(690px), px2rpx(120px + 30px * 2));
+
+    position: relative;
+    border-radius: px2rpx(10px);
+    box-shadow: 0 0 px2rpx(10px) 0 rgba(#cccccc, 0.2);
+    background: {
+      image: url("#{$image-url}/components/list/link.png");
+      size: px2rpx(30px) px2rpx(30px);
+      repeat: no-repeat;
+      position: right px2rpx(30px) center;
+    }
+
+    @include e(avatar) {
+      @include position--absolute(px2rpx(30px), null, null, px2rpx(30px));
+      @include circle(px2rpx(120px));
+
+      display: block;
+    }
+
+    @include e(extra) {
+      @include position--absolute(50%, null, null, px2rpx(180px));
+
+      transform: translateY(-50%);
+      line-height: 100%;
+
+      h2,
+      h3 {
+        line-height: 100%;
+      }
+
+      h3 {
+        margin-top: px2rpx(18px);
+      }
+    }
+
+    @include e(links) {
+      @include position--absolute(50%, px2rpx(30px));
+
+      transform: translateY(-50%);
+
+      @include c(tag) {
+        @include margin(px2rpx(20px), null, px2rpx(20px));
+
+        display: block;
+      }
+    }
+  }
+}
