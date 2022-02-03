@@ -10,4 +10,7 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./assets/styles/global/index.scss"></style>
+<style lang="scss">
+@import "~uview-ui/index.scss";
+@import "./assets/styles/global/index.scss";
+</style>
