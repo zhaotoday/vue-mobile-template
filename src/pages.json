@@ -10,7 +10,7 @@
       }
     },
     {
-      "path": "pages/user/mp-login/index",
+      "path": "pages/mp/login/index",
       "style": {
         "navigationBarTitleText": "授权登录"
       }
