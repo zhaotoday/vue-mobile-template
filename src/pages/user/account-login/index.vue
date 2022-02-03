@@ -29,12 +29,9 @@
         忘记密码？
       </div>
     </div>
-    <button
-      class="c-button at-bottom w690 h88 u-br8 bg-primary t-white fs32"
-      @click="submit"
-    >
+    <u-button class="at-bottom w690" type="primary" @click="submit">
       登录
-    </button>
+    </u-button>
   </div>
 </template>
 

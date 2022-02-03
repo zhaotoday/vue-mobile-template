@@ -1,0 +1,10 @@
+.u-button.at-bottom {
+  position: fixed !important;
+  left: 50%;
+  bottom: px2rpx(30px);
+  transform: translateX(-50%);
+}
+
+.u-button.w690 {
+  width: px2rpx(690px) !important;
+}
