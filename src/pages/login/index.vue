@@ -1,8 +1,8 @@
 <template>
   <div class="p-login">
     <div class="b-logo">
-      <u-avatar class="b-logo__logo" :src="logoUrl" size="80" />
-      <div class="b-logo__title fs26">XXX小程序</div>
+      <u-avatar class="b-logo__logo" :src="logoUrl" size="96" />
+      <div class="b-logo__title fs28">XXX小程序</div>
     </div>
     <h2 class="b-title fs32">XXX 小程序将获取以下授权：</h2>
     <p class="b-desc t-gray7 fs28">获得您的公开信息（昵称、头像等）</p>

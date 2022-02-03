@@ -11,7 +11,7 @@ page {
     @include e(logo) {
       @include block--center;
 
-      margin-bottom: px2rpx(10px);
+      margin-bottom: px2rpx(20px);
     }
 
     @include e(title) {
