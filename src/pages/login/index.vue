@@ -1,7 +1,7 @@
 <template>
   <div class="p-login">
     <div class="b-logo">
-      <u-avatar class="b-logo__logo" :src="logoUrl" size="96" />
+      <u-avatar size="90" shape="square" :src="logoUrl" />
       <div class="b-logo__title fs28">XXX小程序</div>
     </div>
     <h2 class="b-title fs32">XXX 小程序将获取以下授权：</h2>
