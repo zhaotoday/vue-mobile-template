@@ -29,6 +29,7 @@ export default {
     };
 
     return {
+      logoUrl: require("@/static/logo.png"),
       login,
     };
   },
