@@ -1,6 +1,6 @@
 import defaultAvatarUrl from "vue-mobile/assets/images/components/avatar/default.png";
 import { useBem } from "@/composables/use-bem";
-import { useUser } from "@lr/composables/use-user";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { onShow } from "uni-composition-api";
 import wx from "wx-bridge";
 import { useHelpers } from "@/composables/use-helpers";
@@ -9,7 +9,7 @@ export default {
   setup() {
     const bem = useBem();
     const { userInfo, getUserInfo, navigateTo, name, avatarUrl, logout } =
-      useUser();
+      useUsers();
 
     onShow(async () => {
       await getUserInfo();
