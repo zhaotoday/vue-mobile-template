@@ -1,13 +1,11 @@
 import wx from "wx-bridge";
 import { useHelpers } from "@/composables/use-helpers";
-import { useBem } from "@/composables/use-bem";
 import { useWxMp } from "vue-mobile/@lr/composables/use-wx-mp";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useMockUser } from "vue-mobile/@lr/composables/use-mock-user";
 
 export default {
   setup() {
-    const bem = useBem();
     const { getUserProfileAndLogin } = useWxMp();
     const { wxMpLogin } = useUsers();
     const { mockLogin } = useMockUser();
@@ -31,7 +29,6 @@ export default {
     };
 
     return {
-      bem,
       login,
     };
   },

@@ -9,7 +9,7 @@
       <div class="o-grid__row">
         <div class="o-grid__col o-grid__col--6 p20">
           <button
-            :class="bem.button.middle.$"
+            :class="$bem.button.middle.$"
             class="is-block bg-white bd-primary t-primary"
             @click="$wx.navigateBack()"
           >
@@ -18,7 +18,7 @@
         </div>
         <div class="o-grid__col o-grid__col--6 p20">
           <button
-            :class="bem.button.middle.$"
+            :class="$bem.button.middle.$"
             class="is-block bg-primary t-white"
             @click="login"
           >

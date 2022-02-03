@@ -4,6 +4,7 @@ import { store } from "@/store";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 import { useConsts } from "@/composables/use-consts";
 import { useHelpers } from "@/composables/use-helpers";
+import { useBem } from "@/composables/use-bem";
 
 export const globalPlugin = {
   install(Vue) {
@@ -13,5 +14,6 @@ export const globalPlugin = {
     Vue.prototype.$auth = useAuth();
     Vue.prototype.$consts = useConsts();
     Vue.prototype.$helpers = useHelpers();
+    Vue.prototype.$bem = useBem();
   },
 };
