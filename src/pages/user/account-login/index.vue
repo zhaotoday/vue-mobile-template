@@ -6,7 +6,7 @@
         <input
           class="c-list__value"
           placeholder-class="t-placeholder"
-          placeholder="请输入手机号/邮箱"
+          placeholder="请输入手机号"
           v-model.trim="cForm.model.account"
         />
       </li>
