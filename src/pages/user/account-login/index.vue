@@ -2,7 +2,7 @@
   <div class="p-user-account-login u-pt18">
     <div :class="$bem.box.$">
       <ul class="c-form c-form--inbox has-label">
-        <li class="c-form__item is-required">
+        <li class="c-form__item">
           <label class="fs32">账号</label>
           <input
             class="c-form__input"
@@ -15,7 +15,7 @@
             {{ cForm.errors.account }}
           </div>
         </li>
-        <li class="c-form__item is-required">
+        <li class="c-form__item">
           <label class="fs32">密码</label>
           <input
             class="c-form__input"

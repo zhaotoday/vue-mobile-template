@@ -185,8 +185,7 @@
       }
 
       @include e(error) {
-        text-align: right;
-        padding-right: px2rpx(30px);
+        padding-left: px2rpx(180px);
       }
     }
 
