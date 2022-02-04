@@ -168,8 +168,6 @@
       @include e(input) {
         @include margin(null, px2rpx(30px), null, px2rpx(180px));
 
-        text-align: right;
-
         @include s(is-price) {
           position: relative;
           margin-left: px2rpx(520px);
