@@ -18,6 +18,7 @@
           </div>
         </li>
         <li class="c-form__item">
+          <label class="fs30">验证码</label>
           <input
             class="c-form__input"
             type="number"

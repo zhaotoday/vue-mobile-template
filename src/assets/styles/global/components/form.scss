@@ -117,7 +117,7 @@
   }
 
   @include e(send-captcha) {
-    @include position--absolute(px2rpx(60px), 0);
+    @include position--absolute(px2rpx(22px), px2rpx(30px));
 
     border-radius: px2rpx(32px);
   }
