@@ -1,5 +1,5 @@
 <template>
-  <div class="p-user-account-login u-pt20">
+  <div class="p-user-account-login u-pt30">
     <div :class="$bem.box.$">
       <ul class="c-form c-form--inbox has-label">
         <li class="c-form__item">
@@ -31,9 +31,11 @@
         </li>
       </ul>
     </div>
-    <div class="u-tar u-pr10">
+    <div class="t-g7 fs26 u-p20">
+      <div class="b-register" style="float: left">注册账号</div>
       <div
-        class="b-password t-primary u-p20 fs26"
+        class="b-password"
+        style="float: right"
         @click="$wx.navigateTo('/pages/user/password/index')"
       >
         忘记密码？

@@ -1,8 +1,8 @@
 @import "~@/assets/styles/utils/index";
 
 @include p(user-account-login) {
-  @include b(password) {
+  @include b(register, password) {
     display: inline-block;
-    line-height: 100%;
+    padding: px2rpx(10px);
   }
 }

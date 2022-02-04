@@ -125,7 +125,7 @@
   @include e(error) {
     padding-bottom: px2rpx(14px);
     line-height: 100%;
-    font-size: px2rpx(26px);
+    font-size: px2rpx(28px);
     color: map-get($colors, error);
   }
 
