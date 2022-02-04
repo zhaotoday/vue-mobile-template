@@ -1,9 +1,9 @@
 <template>
-  <div class="p-user-account-login u-pt18">
+  <div class="p-user-account-login u-pt20">
     <div :class="$bem.box.$">
       <ul class="c-form c-form--inbox has-label">
         <li class="c-form__item">
-          <label class="fs32">账号</label>
+          <label class="fs30">账号</label>
           <input
             class="c-form__input"
             placeholder-class="t-placeholder"
@@ -16,7 +16,7 @@
           </div>
         </li>
         <li class="c-form__item">
-          <label class="fs32">密码</label>
+          <label class="fs30">密码</label>
           <input
             class="c-form__input"
             type="password"
