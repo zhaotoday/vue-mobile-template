@@ -7,7 +7,7 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
-    const { isRequired, isPhoneNumber, isPassword } = useValidators();
+    const { isRequired, isPhoneNumber, isPassword, validate } = useValidators();
     const { accountLogin } = useUsers();
     const cForm = reactive({
       model: {},
@@ -15,6 +15,7 @@ export default {
         account: [isRequired({ label: "账号" }), isPhoneNumber()],
         password: [isRequired({ label: "密码" }), isPassword()],
       },
+      errors: {},
     });
 
     const submit = async () => {
@@ -37,6 +38,7 @@ export default {
 
     return {
       cForm,
+      validate,
       submit,
     };
   },

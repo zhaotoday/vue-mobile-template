@@ -26,7 +26,7 @@
 
     @include s(is-link) {
       background: {
-        image: url("#{$image-url}/components/icon/list-more.png");
+        image: url("#{$image-url}/components/icon/more.png");
         size: px2rpx(28px) px2rpx(28px);
         repeat: no-repeat;
         position: right px2rpx(30px) top px2rpx(38px);
@@ -116,23 +116,10 @@
     height: px2rpx(80px);
   }
 
-  @include e(clear) {
-    @include position--absolute(px2rpx(66px), 0);
-    @include circle(px2rpx(30px));
-
-    background: {
-      color: map-get($colors, g4);
-      image: url("#{$image-url}/components/icon/clear.png");
-      size: px2rpx(18px) px2rpx(18px);
-      position: center center;
-      repeat: no-repeat;
-    }
-  }
-
   @include e(send-captcha) {
     @include position--absolute(px2rpx(60px), 0);
 
-    border-radius: px2rpx(64px / 2);
+    border-radius: px2rpx(32px);
   }
 
   @include e(error) {
@@ -213,7 +200,7 @@
         width: px2rpx(160px);
         border-right: 1px solid map-get($colors, g7);
         background: {
-          image: url("#{$image-url}/components/icon/list-more.png");
+          image: url("#{$image-url}/components/icon/more.png");
           size: px2rpx(28px) px2rpx(28px);
           repeat: no-repeat;
           position: right px2rpx(10px) center;

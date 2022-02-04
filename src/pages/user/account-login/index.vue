@@ -1,5 +1,22 @@
 <template>
   <div class="p-user-account-login u-pt18">
+    <div class="c-box">
+      <ul class="c-form c-form--inbox has-label u-mb40">
+        <li class="c-form__item is-required">
+          <label class="fs32">姓名</label>
+          <input
+            class="c-form__input"
+            placeholder-class="t-placeholder"
+            placeholder="请输入真实姓名"
+            v-model="cForm.model.nickName"
+            @blur="validate(cForm, 'nickName')"
+          />
+          <div v-if="cForm.errors.nickName" class="c-form__error">
+            {{ cForm.errors.nickName }}
+          </div>
+        </li>
+      </ul>
+    </div>
     <ul class="c-list bg-white fs30">
       <li class="c-list__item">
         <label>账号</label>

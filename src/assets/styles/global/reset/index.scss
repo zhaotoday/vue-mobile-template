@@ -1,8 +1,8 @@
 @import "node_modules/vue-mobile/assets/styles/global/reset/index";
 
 page {
-  background-color: map-get($colors, gray1);
-  color: map-get($colors, gray9);
+  background-color: map-get($colors, g1);
+  color: map-get($colors, g9);
 }
 
 div,
