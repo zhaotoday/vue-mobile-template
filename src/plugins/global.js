@@ -15,5 +15,13 @@ export const globalPlugin = {
     Vue.prototype.$consts = useConsts();
     Vue.prototype.$helpers = useHelpers();
     Vue.prototype.$bem = useBem();
+
+    Vue.mixin({
+      data() {
+        return {
+          $bem: useBem(),
+        };
+      },
+    });
   },
 };
