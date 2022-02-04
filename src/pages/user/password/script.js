@@ -8,7 +8,7 @@ import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 
 export default {
   setup() {
-    const { isRequired, isPhoneNumber, isCaptcha, isPassword } =
+    const { isRequired, isPhoneNumber, isCaptcha, isPassword, validate } =
       useValidators();
     const cForm = reactive({
       model: {},
@@ -42,29 +42,27 @@ export default {
     });
 
     const submit = async () => {
-      const { rules, model } = cForm;
-      const { phoneNumber, captcha, password } = model;
+      await validate(
+        cForm,
+        null,
+        async (errors, { phoneNumber, captcha, password }) => {
+          if (errors) return;
 
-      await new AsyncValidator(rules).validate(model, async (errors) => {
-        if (errors) {
-          wx.showToast({ title: errors[0].message });
-          return;
+          await publicUsersApi.post({
+            showLoading: true,
+            action: "resetPassword",
+            body: {
+              phoneNumber,
+              captcha,
+              password,
+            },
+          });
+
+          wx.showToast({ title: "重置成功" });
+          await useHelpers().sleep(1500);
+          wx.navigateBack();
         }
-
-        await publicUsersApi.post({
-          showLoading: true,
-          action: "resetPassword",
-          body: {
-            phoneNumber,
-            captcha,
-            password,
-          },
-        });
-
-        wx.showToast({ title: "重置成功" });
-        await useHelpers().sleep(1500);
-        wx.navigateBack();
-      });
+      );
     };
 
     return {
