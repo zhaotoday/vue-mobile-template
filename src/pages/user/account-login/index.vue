@@ -31,7 +31,7 @@
         </li>
       </ul>
     </div>
-    <div class="t-g7 fs26 u-p20">
+    <div class="t-g7 fs28 u-p20">
       <div class="b-register" style="float: left">注册账号</div>
       <div
         class="b-password"
