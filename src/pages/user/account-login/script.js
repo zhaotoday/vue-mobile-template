@@ -1,4 +1,3 @@
-import AsyncValidator from "async-validator";
 import { reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
 import { useValidators } from "vue-validation";
@@ -19,15 +18,8 @@ export default {
     });
 
     const submit = async () => {
-      const { rules, model } = cForm;
-      const { account, password } = model;
-
-      await new AsyncValidator(rules).validate(model, async (errors) => {
-        if (errors) {
-          wx.showToast({ title: errors[0].message });
-          return;
-        }
-
+      await validate(cForm, null, async (errors, { account, password }) => {
+        if (errors) return;
         await accountLogin({ account, password });
 
         wx.showToast({ title: "登录成功" });
