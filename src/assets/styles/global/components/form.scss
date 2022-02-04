@@ -1,0 +1,234 @@
+@include c(form) {
+  @include e(item) {
+    position: relative;
+    padding-top: px2rpx(40px);
+    border-bottom: 1px solid map-get($colors, g1);
+
+    @include s(has-icon) {
+      @include c(form) {
+        @include e(input) {
+          margin-left: px2rpx(74px);
+        }
+
+        @include e(error) {
+          margin-left: px2rpx(74px);
+        }
+      }
+    }
+
+    @include s(has-clear) {
+      @include c(form) {
+        @include e(input) {
+          margin-right: px2rpx(36px);
+        }
+      }
+    }
+
+    @include s(is-link) {
+      background: {
+        image: url("#{$image-url}/components/icon/list-more.png");
+        size: px2rpx(28px) px2rpx(28px);
+        repeat: no-repeat;
+        position: right px2rpx(30px) top px2rpx(38px);
+      }
+
+      @include c(form) {
+        @include e(extra) {
+          right: px2rpx(80px);
+        }
+      }
+    }
+
+    @include s(is-required) {
+      &::after {
+        @include position--absolute(px2rpx(78px), null, null, px2rpx(-24px));
+        @include size(px2rpx(20px), px2rpx(20px));
+
+        line-height: px2rpx(20px);
+        text-align: center;
+        color: map-get($colors, error);
+        content: "*";
+        display: block;
+      }
+    }
+
+    @include s(has-no-label) {
+      @include c(form) {
+        @include e(input, error) {
+          text-align: left !important;
+        }
+
+        @include e(input) {
+          margin-left: px2rpx(30px) !important;
+        }
+
+        @include e(error) {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+
+  @include e(value) {
+    @include position--absolute(0);
+    @include text--middle(px2rpx(100px));
+    @include text--overflow;
+
+    border: 0;
+    left: px2rpx(190px);
+
+    @include s(is-full) {
+      left: 0;
+    }
+  }
+
+  @include e(body) {
+    @include padding(px2rpx(10px), px2rpx(30px), px2rpx(10px), px2rpx(30px));
+
+    line-height: 150%;
+  }
+
+  @include e(extra) {
+    @include position--absolute(px2rpx(38px), px2rpx(30px));
+
+    line-height: 100%;
+  }
+
+  @include e(icon) {
+    @include position--absolute(px2rpx(60px), null, null, 0);
+  }
+
+  @include e(input) {
+    @include text--middle(px2rpx(80px));
+    @include text--overflow;
+
+    display: block;
+    font-size: px2rpx(28px);
+  }
+
+  @include e(textarea) {
+    @include margin(null, px2rpx(30px), null, px2rpx(30px));
+    @include padding(px2rpx(20px), null, px2rpx(20px));
+
+    width: auto;
+    line-height: 120%;
+    display: block;
+    height: px2rpx(80px);
+  }
+
+  @include e(clear) {
+    @include position--absolute(px2rpx(66px), 0);
+    @include circle(px2rpx(30px));
+
+    background: {
+      color: map-get($colors, g4);
+      image: url("#{$image-url}/components/icon/clear.png");
+      size: px2rpx(18px) px2rpx(18px);
+      position: center center;
+      repeat: no-repeat;
+    }
+  }
+
+  @include e(send-captcha) {
+    @include position--absolute(px2rpx(60px), 0);
+
+    border-radius: px2rpx(64px / 2);
+  }
+
+  @include e(error) {
+    padding-bottom: px2rpx(14px);
+    line-height: 100%;
+    font-size: px2rpx(26px);
+    color: map-get($colors, error);
+  }
+
+  @include m(inbox) {
+    @include c(form) {
+      @include e(item) {
+        @include padding(px2rpx(10px), null, px2rpx(10px));
+
+        box-sizing: border-box;
+        min-height: px2rpx(100px);
+
+        @include s(is-required) {
+          &::after {
+            left: px2rpx(6px);
+            top: px2rpx(48px);
+          }
+        }
+      }
+
+      @include e(input) {
+        @include text--middle(px2rpx(80px));
+
+        margin-left: px2rpx(30px);
+      }
+
+      @include e(switch) {
+        @include position--absolute(50%, px2rpx(30px));
+
+        transform: translateY(-50%);
+      }
+
+      @include e(error) {
+        padding-left: px2rpx(30px);
+      }
+    }
+  }
+
+  @include s(has-label) {
+    @include c(form) {
+      @include e(input) {
+        @include margin(null, px2rpx(30px), null, px2rpx(180px));
+
+        text-align: right;
+
+        @include s(is-price) {
+          position: relative;
+          margin-left: px2rpx(520px);
+
+          &::after {
+            @include position--absolute(px2rpx(28px), null, null, 0);
+            @include size(px2rpx(30px), px2rpx(30px));
+
+            line-height: px2rpx(30px);
+            display: block;
+            content: "¥";
+            color: map-get($colors, error);
+          }
+        }
+      }
+
+      @include e(error) {
+        text-align: right;
+        padding-right: px2rpx(30px);
+      }
+    }
+
+    label {
+      @include text--middle(px2rpx(80px));
+      @include position--absolute(px2rpx(10px), null, null, px2rpx(30px));
+
+      @include s(can-select) {
+        width: px2rpx(160px);
+        border-right: 1px solid map-get($colors, g7);
+        background: {
+          image: url("#{$image-url}/components/icon/list-more.png");
+          size: px2rpx(28px) px2rpx(28px);
+          repeat: no-repeat;
+          position: right px2rpx(10px) center;
+        }
+      }
+    }
+  }
+
+  @include e(label) {
+    @extend label;
+  }
+
+  @include e(tag) {
+    @include position--absolute(50%, px2rpx(30px));
+
+    transform: translateY(-50%);
+  }
+}
