@@ -20,6 +20,7 @@ export default {
     const submit = async () => {
       await validate(cForm, null, async (errors, { account, password }) => {
         if (errors) return;
+
         await accountLogin({ account, password });
 
         wx.showToast({ title: "登录成功" });
