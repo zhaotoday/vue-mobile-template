@@ -1,5 +1,74 @@
 <template>
-  <div class="p-my-phone-number u-pt18">
+  <div class="p-user-phone-number u-pt30">
+    <div :class="$bem.box.$">
+      <ul class="c-form c-form--inbox has-label">
+        <li class="c-form__item">
+          <label class="fs30">手机号</label>
+          <input
+            class="c-form__input"
+            type="number"
+            maxlength="11"
+            placeholder-class="t-placeholder"
+            placeholder="请输入手机号"
+            v-model="cForm.model.phoneNumber"
+            @blur="validate(cForm, 'phoneNumber')"
+          />
+          <div v-if="cForm.errors.phoneNumber" class="c-form__error">
+            {{ cForm.errors.phoneNumber }}
+          </div>
+        </li>
+        <li class="c-form__item">
+          <input
+            class="c-form__input"
+            type="number"
+            maxlength="6"
+            placeholder-class="t-placeholder"
+            placeholder="请输入验证码"
+            v-model.trim="cForm.model.captcha"
+            @blur="validate(cForm, 'captcha')"
+            style="width: 490rpx"
+          />
+          <div v-if="cForm.errors.captcha" class="c-form__error">
+            {{ cForm.errors.captcha }}
+          </div>
+          <button
+            class="c-form__send-captcha c-button h56 t-white fs26"
+            :class="cCaptcha.disabled ? 'bg-gray4' : 'bg-primary'"
+            @click="sendCaptcha"
+          >
+            {{ cCaptcha.message }}
+          </button>
+        </li>
+        <li class="c-form__item">
+          <label class="fs30">密码</label>
+          <input
+            class="c-form__input"
+            type="password"
+            placeholder-class="t-placeholder"
+            placeholder="请输入密码"
+            v-model="cForm.model.password"
+            @blur="validate(cForm, 'password')"
+          />
+          <div v-if="cForm.errors.password" class="c-form__error">
+            {{ cForm.errors.password }}
+          </div>
+        </li>
+        <li class="c-form__item">
+          <label class="fs30">密码</label>
+          <input
+            class="c-form__input"
+            type="password"
+            placeholder-class="t-placeholder"
+            placeholder="请输入密码"
+            v-model="cForm.model.password"
+            @blur="validate(cForm, 'password')"
+          />
+          <div v-if="cForm.errors.password" class="c-form__error">
+            {{ cForm.errors.password }}
+          </div>
+        </li>
+      </ul>
+    </div>
     <ul class="c-list bg-white fs30">
       <li class="c-list__item">
         <label>手机号</label>

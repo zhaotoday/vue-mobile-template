@@ -1,4 +1,3 @@
-import AsyncValidator from "async-validator";
 import { reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
 import { useValidators } from "vue-validation";
@@ -69,6 +68,7 @@ export default {
       cForm,
       cCaptcha,
       sendCaptcha,
+      validate,
       submit,
     };
   },
