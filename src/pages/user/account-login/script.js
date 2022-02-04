@@ -11,7 +11,7 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        account: [isRequired({ label: "账号" }), isPhoneNumber()],
+        account: [isRequired({ label: "手机号" }), isPhoneNumber()],
         password: [isRequired({ label: "密码" }), isPassword()],
       },
       errors: {},
