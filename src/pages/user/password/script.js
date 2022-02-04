@@ -1,32 +1,24 @@
 import AsyncValidator from "async-validator";
 import { reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
-import { useFormValidators } from "@lr/composables/use-form-validators";
+import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
 import { useCaptcha } from "vue-mobile/@lr/composables/use-captcha";
-import { PublicUsersApi } from "vue-mobile/@lr/apis/public/users";
+import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 
 export default {
   setup() {
-    const formValidators = useFormValidators();
+    const { isRequired, isPhoneNumber, isCaptcha, isPassword } =
+      useValidators();
     const cForm = reactive({
       model: {},
       rules: {
-        phoneNumber: [
-          formValidators.required({ label: "手机号" }),
-          formValidators.phoneNumber(),
-        ],
-        captcha: [
-          formValidators.required({ label: "验证码" }),
-          formValidators.captcha(),
-        ],
-        password: [
-          formValidators.required({ label: "密码" }),
-          formValidators.password(),
-        ],
+        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
+        captcha: [isRequired({ label: "验证码" }), isCaptcha()],
+        password: [isRequired({ label: "密码" }), isPassword()],
         confirmPassword: [
-          formValidators.required({ message: "请确认密码" }),
-          formValidators.password({ label: "确认密码" }),
+          isRequired({ message: "请确认密码" }),
+          isPassword({ label: "确认密码" }),
           {
             validator(rule, value) {
               return value === cForm.model.password;
@@ -41,7 +33,7 @@ export default {
       model: () => ({ phoneNumber: cForm.model.phoneNumber }),
       rules: () => ({ phoneNumber: cForm.rules.phoneNumber }),
       request: () =>
-        new PublicUsersApi().post({
+        publicUsersApi.post({
           action: "sendCaptcha",
           body: {
             phoneNumber: cForm.model.phoneNumber,
@@ -59,7 +51,7 @@ export default {
           return;
         }
 
-        await new PublicUsersApi().post({
+        await publicUsersApi.post({
           showLoading: true,
           action: "resetPassword",
           body: {
