@@ -8,7 +8,7 @@
             class="c-form__input"
             placeholder-class="t-placeholder"
             placeholder="请输入手机号"
-            v-model="cForm.model.account"
+            v-model.trim="cForm.model.account"
             @blur="validate(cForm, 'account')"
           />
           <div v-if="cForm.errors.account" class="c-form__error">
@@ -22,7 +22,7 @@
             type="password"
             placeholder-class="t-placeholder"
             placeholder="请输入密码"
-            v-model="cForm.model.password"
+            v-model.trim="cForm.model.password"
             @blur="validate(cForm, 'password')"
           />
           <div v-if="cForm.errors.password" class="c-form__error">

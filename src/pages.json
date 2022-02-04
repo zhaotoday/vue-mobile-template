@@ -28,6 +28,12 @@
       }
     },
     {
+      "path": "pages/user/password/index",
+      "style": {
+        "navigationBarTitleText": "重置密码"
+      }
+    },
+    {
       "path": "pages/my/info/index",
       "style": {
         "navigationBarTitleText": "我的资料"

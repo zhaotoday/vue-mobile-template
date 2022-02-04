@@ -26,6 +26,7 @@ export default {
           },
         ],
       },
+      errors: {},
     });
 
     const { cCaptcha, sendCaptcha } = useCaptcha({
