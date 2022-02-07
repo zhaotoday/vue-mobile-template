@@ -1,19 +1,19 @@
 import AsyncValidator from "async-validator";
 import { reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
-import { useFormValidators } from "@lr/composables/use-form-validators";
+import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
 import { useCaptcha } from "vue-mobile/@lr/composables/use-captcha";
-import { PublicUsersApi } from "vue-mobile/@lr/apis/public/users";
-import { UsersApi } from "@lr/apis/client/users";
-import { useUser } from "@lr/composables/use-user";
+import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
+import { usersApi } from "vue-mobile/@lr/apis/client/users";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { onShow } from "uni-composition-api";
 import { useCurrentRoute } from "vue-mobile/composables/use-current-route";
 
 export default {
   setup() {
-    const formValidators = useFormValidators();
-    const { getUserInfo } = useUser();
+    const formValidators = useValidators();
+    const { getUserInfo } = useUsers();
     const cForm = reactive({
       model: {},
       rules: {
@@ -33,7 +33,7 @@ export default {
       model: () => ({ phoneNumber: cForm.model.phoneNumber }),
       rules: () => ({ phoneNumber: cForm.rules.phoneNumber }),
       request: () =>
-        new PublicUsersApi().post({
+        publicUsersApi.post({
           action: "sendSmsCaptcha",
           body: {
             phoneNumber: cForm.model.phoneNumber,
@@ -53,7 +53,7 @@ export default {
           return;
         }
 
-        await new UsersApi().post({
+        await new usersApi().post({
           showLoading: true,
           action: "phoneNumberBind",
           body: {
