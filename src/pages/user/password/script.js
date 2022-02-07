@@ -20,9 +20,7 @@ export default {
           isRequired({ message: "请确认密码" }),
           isPassword({ label: "确认密码" }),
           {
-            validator(rule, value) {
-              return value === cForm.model.password;
-            },
+            validator: (rule, value) => value === cForm.model.password,
             message: "两次密码输入不一致",
           },
         ],
@@ -50,7 +48,6 @@ export default {
           if (errors) return;
 
           await publicUsersApi.post({
-            showLoading: true,
             action: "resetPassword",
             body: {
               phoneNumber,
