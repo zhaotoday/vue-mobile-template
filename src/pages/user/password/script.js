@@ -9,6 +9,7 @@ export default {
   setup() {
     const { isRequired, isPhoneNumber, isCaptcha, isPassword, validate } =
       useValidators();
+
     const cForm = reactive({
       model: {},
       rules: {
