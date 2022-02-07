@@ -3,7 +3,7 @@
     <div :class="$bem.box.$">
       <ul class="c-form c-form--inbox has-label">
         <li class="c-form__item">
-          <label class="fs30">手机号</label>
+          <label>手机号</label>
           <input
             class="c-form__input"
             type="number"
@@ -18,7 +18,7 @@
           </div>
         </li>
         <li class="c-form__item">
-          <label class="fs30">验证码</label>
+          <label>验证码</label>
           <input
             class="c-form__input"
             type="number"
@@ -41,7 +41,7 @@
           </button>
         </li>
         <li class="c-form__item">
-          <label class="fs30">密码</label>
+          <label>密码</label>
           <input
             class="c-form__input"
             type="password"
@@ -55,7 +55,7 @@
           </div>
         </li>
         <li class="c-form__item">
-          <label class="fs30">确认密码</label>
+          <label>确认密码</label>
           <input
             class="c-form__input"
             type="password"
