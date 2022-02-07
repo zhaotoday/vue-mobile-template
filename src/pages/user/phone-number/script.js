@@ -37,32 +37,28 @@ export default {
     });
 
     const submit = async () => {
-      await validate(
-        cForm,
-        null,
-        async (errors, { phoneNumber, captcha, password }) => {
-          if (errors) return;
+      await validate(cForm, null, async (errors, { phoneNumber, captcha }) => {
+        if (errors) return;
 
-          await new usersApi().post({
-            showLoading: true,
-            action: "phoneNumberBind",
-            body: {
-              phoneNumber,
-              captcha,
-            },
-          });
+        await usersApi.post({
+          showLoading: true,
+          action: "phoneNumberBind",
+          body: {
+            phoneNumber,
+            captcha,
+          },
+        });
 
-          wx.showToast({ title: "绑定成功" });
-          await getUserInfo();
-          await useHelpers().sleep(1500);
+        wx.showToast({ title: "绑定成功" });
+        await getUserInfo();
+        await useHelpers().sleep(1500);
 
-          if (currentRoute.query.firstBind) {
-            wx.switchTab({ url: "/pages/memo/index" });
-          } else {
-            wx.navigateBack();
-          }
+        if (currentRoute.query.firstBind) {
+          wx.switchTab({ url: "/pages/memo/index" });
+        } else {
+          wx.navigateBack();
         }
-      );
+      });
     };
 
     return {
