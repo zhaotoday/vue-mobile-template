@@ -1,5 +1,5 @@
-import { reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
+import { reactive } from "@vue/composition-api";
 import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
 import { useCaptcha } from "vue-mobile/@lr/composables/use-captcha";
