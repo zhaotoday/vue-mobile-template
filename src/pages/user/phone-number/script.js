@@ -1,4 +1,3 @@
-import AsyncValidator from "async-validator";
 import { reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
 import { useValidators } from "vue-validation";
@@ -7,27 +6,23 @@ import { useCaptcha } from "vue-mobile/@lr/composables/use-captcha";
 import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { onShow } from "uni-composition-api";
-import { useCurrentRoute } from "vue-mobile/composables/use-current-route";
+import { useRoute } from "vue-mobile/composables/use-route";
 
 export default {
   setup() {
-    const formValidators = useValidators();
+    const { currentRoute } = useRoute();
+
+    const { isRequired, isPhoneNumber, isCaptcha, validate } = useValidators();
+
     const { getUserInfo } = useUsers();
+
     const cForm = reactive({
       model: {},
       rules: {
-        phoneNumber: [
-          formValidators.required({ label: "手机号" }),
-          formValidators.phoneNumber(),
-        ],
-        captcha: [
-          formValidators.required({ label: "验证码" }),
-          formValidators.captcha(),
-        ],
+        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
+        captcha: [isRequired({ label: "验证码" }), isCaptcha()],
       },
     });
-    const { currentRoute } = useCurrentRoute();
 
     const { cCaptcha, sendCaptcha } = useCaptcha({
       model: () => ({ phoneNumber: cForm.model.phoneNumber }),
@@ -41,37 +36,33 @@ export default {
         }),
     });
 
-    onShow(() => {});
-
     const submit = async () => {
-      const { rules, model } = cForm;
-      const { phoneNumber, captcha } = model;
+      await validate(
+        cForm,
+        null,
+        async (errors, { phoneNumber, captcha, password }) => {
+          if (errors) return;
 
-      await new AsyncValidator(rules).validate(model, async (errors) => {
-        if (errors) {
-          wx.showToast({ title: errors[0].message });
-          return;
+          await new usersApi().post({
+            showLoading: true,
+            action: "phoneNumberBind",
+            body: {
+              phoneNumber,
+              captcha,
+            },
+          });
+
+          wx.showToast({ title: "绑定成功" });
+          await getUserInfo();
+          await useHelpers().sleep(1500);
+
+          if (currentRoute.query.firstBind) {
+            wx.switchTab({ url: "/pages/memo/index" });
+          } else {
+            wx.navigateBack();
+          }
         }
-
-        await new usersApi().post({
-          showLoading: true,
-          action: "phoneNumberBind",
-          body: {
-            phoneNumber,
-            captcha,
-          },
-        });
-
-        wx.showToast({ title: "绑定成功" });
-        await getUserInfo();
-        await useHelpers().sleep(1500);
-
-        if (currentRoute.query.firstBind) {
-          wx.switchTab({ url: "/pages/memo/index" });
-        } else {
-          wx.navigateBack();
-        }
-      });
+      );
     };
 
     return {
@@ -79,6 +70,7 @@ export default {
       cForm,
       cCaptcha,
       sendCaptcha,
+      validate,
       submit,
     };
   },
