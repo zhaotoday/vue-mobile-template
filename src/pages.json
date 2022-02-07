@@ -34,6 +34,12 @@
       }
     },
     {
+      "path": "pages/user/phone-number/index",
+      "style": {
+        "navigationBarTitleText": "绑定手机号"
+      }
+    },
+    {
       "path": "pages/my/info/index",
       "style": {
         "navigationBarTitleText": "我的资料"
