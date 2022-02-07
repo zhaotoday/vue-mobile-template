@@ -22,6 +22,7 @@ export default {
         phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
         captcha: [isRequired({ label: "验证码" }), isCaptcha()],
       },
+      errors: {},
     });
 
     const { cCaptcha, sendCaptcha } = useCaptcha({
@@ -41,7 +42,6 @@ export default {
         if (errors) return;
 
         await usersApi.post({
-          showLoading: true,
           action: "phoneNumberBind",
           body: {
             phoneNumber,
