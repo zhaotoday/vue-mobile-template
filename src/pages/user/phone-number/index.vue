@@ -1,9 +1,6 @@
 <template>
   <div class="p-user-phone-number u-pt18">
-    <div
-      v-if="currentRoute.query.firstBind"
-      class="b-tip bg-white t-gray7 fs26"
-    >
+    <div v-if="currentRoute.query.firstBind" class="b-tip bg-white t-g7 fs26">
       应国家法律要求，使用互联网服务需进行账号实名。为保障账号的正常使用，请完成手机号绑定。感谢你的理解和支持。
     </div>
     <div :class="$bem.box.$">
