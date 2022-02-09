@@ -56,7 +56,7 @@ export default {
           wx.showToast({ title: "注册成功" });
           await useHelpers().sleep(1500);
           wx.navigateTo({
-            url: "/pages/phone-number/index?from=acount-register",
+            url: "/pages/phone-number/index?from=account-register",
           });
         }
       );
