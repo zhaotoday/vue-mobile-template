@@ -1,15 +1,16 @@
 <template>
   <li class="c-form__item">
-    <label>账号</label>
+    <label>{{ label }}</label>
     <input
       class="c-form__input"
+      :type="type"
       placeholder-class="t-placeholder"
-      placeholder="请输入手机号"
-      v-model.trim="cForm.model.account"
-      @blur="validate(cForm, 'account')"
+      :placeholder="placeholder"
+      v-model.trim="form.model[prop]"
+      @blur="validate(form, prop)"
     />
-    <div v-if="cForm.errors.account" class="c-form__error">
-      {{ cForm.errors.account }}
+    <div v-if="form.errors[prop]" class="c-form__error">
+      {{ form.errors[prop] }}
     </div>
   </li>
 </template>
