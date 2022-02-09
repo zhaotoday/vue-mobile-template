@@ -4,6 +4,7 @@
       <c-form-item label="账号">
         <c-form-input
           type="number"
+          maxlength="11"
           placeholder="请输入账号"
           v-model.trim="cForm.model.account"
           :error-tip="cForm.errors.account"

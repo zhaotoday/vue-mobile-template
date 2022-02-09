@@ -5,6 +5,7 @@
       :type="type"
       placeholder-class="t-placeholder"
       :placeholder="placeholder"
+      :maxlength="maxlength"
       @input="$emit('input', $event.detail.value)"
       @blur="$emit('blur')"
     />
