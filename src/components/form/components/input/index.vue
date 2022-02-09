@@ -5,8 +5,8 @@
       :type="type"
       placeholder-class="t-placeholder"
       :placeholder="placeholder"
-      v-model.trim="form.model[prop]"
-      @blur="validate(form, prop)"
+      @input="$emit('input', $event.detail.value)"
+      @blur="$emit('blur')"
     />
     <div v-if="form.errors[prop]" class="c-form__error">
       {{ form.errors[prop] }}

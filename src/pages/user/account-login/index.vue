@@ -1,11 +1,13 @@
 <template>
   <div class="p-user-account-login u-pt30">
     <c-form :form="cForm">
-      <c-form-item label="账号" prop="account">
-        <c-form-input placeholder="请输入手机号" />
-      </c-form-item>
       <c-form-item label="密码" prop="password">
-        <c-form-input placeholder="请输入密码" />
+        {{ cForm.model }}
+        <c-form-input
+          v-model.trim="cForm.model.password"
+          placeholder="请输入密码"
+          @blur="validate(cForm, 'password')"
+        />
       </c-form-item>
     </c-form>
     ----22

@@ -10,7 +10,14 @@ export default {
       type: String,
       default: "请输入",
     },
-    form: Object,
+    form: {
+      type: Object,
+      default: () => ({
+        model: {},
+        rules: {},
+        errors: {},
+      }),
+    },
   },
   setup(props, { parent }) {
     const { validate } = useValidators();
