@@ -12,7 +12,10 @@ export default {
     },
     maxlength: {
       type: String,
-      default: 140,
+      default: "140",
+    },
+    customStyle: {
+      type: [String, Object],
     },
     error: String,
   },

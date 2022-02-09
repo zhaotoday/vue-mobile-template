@@ -2,7 +2,7 @@
   <li class="c-form__item">
     <label>{{ label }}</label>
     <slot name="default" />
-    <slot name="right" />
+    <slot name="append" />
   </li>
 </template>
 

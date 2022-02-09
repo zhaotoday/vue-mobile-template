@@ -1,11 +1,11 @@
 <template>
   <div class="p-user-account-login u-pt30">
     <c-form>
-      <c-form-item label="账号">
+      <c-form-item label="手机号">
         <c-form-input
           type="number"
           maxlength="11"
-          placeholder="请输入账号"
+          placeholder="请输入手机号"
           v-model.trim="cForm.model.account"
           :error="cForm.errors.account"
           @blur="validate(cForm, 'account')"
