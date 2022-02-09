@@ -36,7 +36,6 @@
     },
     /* SDK配置 */
     "mp-weixin" : {
-        /* 微信小程序特有相关 */
         "appid" : "wx6aa3e8308736f4f4",
         "setting" : {
             "urlCheck" : false
