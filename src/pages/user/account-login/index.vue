@@ -11,7 +11,7 @@
           @blur="validate(cForm, 'password')"
         />
       </c-form-item>
-      <c-form-item label="密码" prop="password">
+      <c-form-item label="密码">
         <c-form-input
           type="password"
           placeholder="请输入密码"
