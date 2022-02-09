@@ -10,7 +10,10 @@ export default {
       type: String,
       default: "请输入",
     },
-    maxlength: String,
+    maxlength: {
+      type: String,
+      default: 140,
+    },
     errorTip: String,
   },
   setup(props, { parent }) {
