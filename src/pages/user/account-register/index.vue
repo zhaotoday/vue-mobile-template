@@ -14,9 +14,9 @@
           type="number"
           maxlength="11"
           placeholder="请输入手机号"
-          v-model.trim="cForm.model.account"
-          :error="cForm.errors.account"
-          @blur="validate(cForm, 'account')"
+          v-model.trim="cForm.model.phoneNumber"
+          :error="cForm.errors.phoneNumber"
+          @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
       <c-form-item label="验证码">
