@@ -7,7 +7,7 @@
           maxlength="11"
           placeholder="请输入账号"
           v-model.trim="cForm.model.account"
-          :error-tip="cForm.errors.account"
+          :error="cForm.errors.account"
           @blur="validate(cForm, 'account')"
         />
       </c-form-item>
@@ -16,7 +16,7 @@
           type="password"
           placeholder="请输入密码"
           v-model.trim="cForm.model.password"
-          :error-tip="cForm.errors.password"
+          :error="cForm.errors.password"
           @blur="validate(cForm, 'password')"
         />
       </c-form-item>

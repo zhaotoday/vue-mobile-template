@@ -14,7 +14,7 @@ export default {
       type: String,
       default: 140,
     },
-    errorTip: String,
+    error: String,
   },
   setup(props, { parent }) {
     const { validate } = useValidators();

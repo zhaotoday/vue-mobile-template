@@ -9,8 +9,8 @@
       @input="$emit('input', $event.detail.value)"
       @blur="$emit('blur')"
     />
-    <div v-if="errorTip" class="c-form__error">
-      {{ errorTip }}
+    <div v-if="error" class="c-form__error">
+      {{ error }}
     </div>
   </div>
 </template>
