@@ -1,7 +1,8 @@
 <template>
   <li class="c-form__item">
     <label>{{ label }}</label>
-    <slot />
+    <slot name="default" />
+    <slot name="right" />
   </li>
 </template>
 

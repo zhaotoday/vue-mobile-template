@@ -3,9 +3,4 @@ export default {
     label: String,
     prop: String,
   },
-  setup(props, { parent }) {
-    return {
-      form: parent.form,
-    };
-  },
 };

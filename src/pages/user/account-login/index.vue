@@ -1,13 +1,14 @@
 <template>
   <div class="p-user-account-login u-pt30">
     <c-form :form="cForm">
-      <template #default="{ form }">
-        {{ form }}
-      </template>
       <c-form-item label="账号" prop="account">
         <c-form-input placeholder="请输入手机号" />
       </c-form-item>
+      <c-form-item label="密码" prop="password">
+        <c-form-input placeholder="请输入密码" />
+      </c-form-item>
     </c-form>
+    ----22
     <div :class="$bem.box.$">
       <ul class="c-form c-form--inbox has-label">
         <li class="c-form__item">

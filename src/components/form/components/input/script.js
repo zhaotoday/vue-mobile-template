@@ -10,12 +10,12 @@ export default {
       type: String,
       default: "请输入",
     },
+    form: Object,
   },
   setup(props, { parent }) {
     const { validate } = useValidators();
 
     return {
-      form: parent.form,
       prop: parent.prop,
       validate,
     };
