@@ -1,5 +1,10 @@
 <template>
   <div class="p-user-account-login u-pt30">
+    <c-form :form="cForm">
+      <c-form-item label="账号" prop="account">
+        <c-form-input />
+      </c-form-item>
+    </c-form>
     <div :class="$bem.box.$">
       <ul class="c-form c-form--inbox has-label">
         <li class="c-form__item">

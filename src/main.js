@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueCompositionAPI from "@vue/composition-api";
 import UniCompositionAPI from "uni-composition-api";
 import App from "@/App";
-import { globalPlugin } from "@/plugins/global";
+import { globalPlugin } from "@/utils/global-plugin";
+import { useComponents } from "@/utils/use-components";
 import { router, RouterMount } from "./router";
 import uView from "uview-ui";
 
@@ -13,6 +14,8 @@ Vue.use(VueCompositionAPI);
 Vue.use(UniCompositionAPI);
 Vue.use(globalPlugin);
 Vue.use(uView);
+
+useComponents();
 
 App.mpType = "app";
 
