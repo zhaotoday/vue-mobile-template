@@ -1,6 +1,6 @@
 <template>
   <div class="p-user-account-login u-pt30">
-    <c-form :form="cForm">
+    <c-form>
       <c-form-item label="账号">
         <c-form-input
           type="number"
