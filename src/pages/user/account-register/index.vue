@@ -38,40 +38,25 @@
           {{ cCaptcha.message }}
         </button>
       </c-form-item>
+      <c-form-item label="密码">
+        <c-form-input
+          type="password"
+          placeholder="请输入密码（6-16位字母和数字组合）"
+          v-model.trim="cForm.model.password"
+          :error="cForm.errors.password"
+          @blur="validate(cForm, 'password')"
+        />
+      </c-form-item>
+      <c-form-item label="确认密码">
+        <c-form-input
+          type="password"
+          placeholder="请确认密码"
+          v-model.trim="cForm.model.confirmPassword"
+          :error="cForm.errors.confirmPassword"
+          @blur="validate(cForm, 'confirmPassword')"
+        />
+      </c-form-item>
     </c-form>
-
-    <div :class="$bem.box.$">
-      <ul class="c-form c-form--inbox has-label">
-        <li class="c-form__item">
-          <label>密码</label>
-          <input
-            class="c-form__input"
-            type="password"
-            placeholder-class="t-placeholder"
-            placeholder="请输入密码（6-16位字母和数字组合）"
-            v-model="cForm.model.password"
-            @blur="validate(cForm, 'password')"
-          />
-          <div v-if="cForm.errors.password" class="c-form__error">
-            {{ cForm.errors.password }}
-          </div>
-        </li>
-        <li class="c-form__item">
-          <label>确认密码</label>
-          <input
-            class="c-form__input"
-            type="password"
-            placeholder-class="t-placeholder"
-            placeholder="请确认密码"
-            v-model="cForm.model.confirmPassword"
-            @blur="validate(cForm, 'confirmPassword')"
-          />
-          <div v-if="cForm.errors.confirmPassword" class="c-form__error">
-            {{ cForm.errors.confirmPassword }}
-          </div>
-        </li>
-      </ul>
-    </div>
     <u-button custom-class="at-bottom w690" type="primary" @click="submit">
       注册
     </u-button>
