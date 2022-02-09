@@ -1,8 +1,0 @@
-@import "~@/assets/styles/utils/index";
-
-@include p(user-phone-number) {
-  @include b(tip) {
-    padding: px2rpx(20px) px2rpx(30px);
-    line-height: 150%;
-  }
-}
