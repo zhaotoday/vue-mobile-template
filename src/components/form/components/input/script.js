@@ -16,7 +16,7 @@ export default {
 
     return {
       form: parent.form,
-      prop: parent.label,
+      prop: parent.prop,
       validate,
     };
   },
