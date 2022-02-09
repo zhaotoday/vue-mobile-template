@@ -1,8 +1,11 @@
 export default {
   props: {
     label: String,
+    prop: String,
   },
-  setup(props, context) {
-    console.log(props, context);
+  setup(props, { parent }) {
+    return {
+      form: parent.form,
+    };
   },
 };

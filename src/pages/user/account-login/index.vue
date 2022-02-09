@@ -2,7 +2,7 @@
   <div class="p-user-account-login u-pt30">
     <c-form :form="cForm">
       <c-form-item label="账号" prop="account">
-        <c-form-input />
+        <c-form-input prop="account" />
       </c-form-item>
     </c-form>
     <div :class="$bem.box.$">
