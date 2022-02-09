@@ -2,7 +2,8 @@
   <div class="p-user-phone-number u-pt30">
     <div
       v-if="currentRoute.query.firstBind"
-      class="t-g7 fs26 u-pl30 u-pr30 u-pb30"
+      class="t-g7 fs26 u-pl30 u-pr30 u-pb20"
+      style="line-height: 150%"
     >
       应国家法律要求，使用互联网服务需进行账号实名。为保障账号的正常使用，请完成手机号绑定。感谢你的理解和支持。
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-my-phone-number u-pt18">
+  <div class="p-my-phone-number u-pt30">
     <c-form>
       <c-form-item label="昵称">
         <c-form-input
