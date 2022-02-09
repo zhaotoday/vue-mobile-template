@@ -8,8 +8,8 @@
       @input="$emit('input', $event.detail.value)"
       @blur="$emit('blur')"
     />
-    <div v-if="form.errors[prop]" class="c-form__error">
-      {{ form.errors[prop] }}
+    <div v-if="errorTip" class="c-form__error">
+      {{ errorTip }}
     </div>
   </div>
 </template>
