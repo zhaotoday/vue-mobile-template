@@ -8,7 +8,7 @@
           placeholder="请输入账号"
           v-model.trim="cForm.model.account"
           :error-tip="cForm.errors.account"
-          @blur="validate(cForm, 'password')"
+          @blur="validate(cForm, 'account')"
         />
       </c-form-item>
       <c-form-item label="密码">
