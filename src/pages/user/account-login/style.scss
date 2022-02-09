@@ -5,4 +5,12 @@
     display: inline-block;
     padding: px2rpx(10px);
   }
+
+  @include b(register) {
+    float: left;
+  }
+
+  @include b(password) {
+    float: right;
+  }
 }

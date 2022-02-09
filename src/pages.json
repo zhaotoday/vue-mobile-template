@@ -30,6 +30,12 @@
       }
     },
     {
+      "path": "pages/user/account-register/index",
+      "style": {
+        "navigationBarTitleText": "账号注册"
+      }
+    },
+    {
       "path": "pages/user/password/index",
       "style": {
         "navigationBarTitleText": "重置密码"
