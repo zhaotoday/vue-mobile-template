@@ -65,6 +65,12 @@
       "style": {
         "navigationBarTitleText": "绑定手机号"
       }
+    },
+    {
+      "path": "pages/products/search/index",
+      "style": {
+        "navigationBarTitleText": "搜索"
+      }
     }
   ],
   "globalStyle": {
