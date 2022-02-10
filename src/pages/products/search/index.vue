@@ -12,7 +12,10 @@
       <template v-if="history[0]">
         <h2 class="b-title fs28">
           历史搜索
-          <i class="c-icon c-icon--del" @click="clearHistory"> </i>
+          <i
+            class="b-clear c-iconfont c-iconfont--delete"
+            @click="clearHistory"
+          ></i>
         </h2>
         <ul class="b-tags">
           <li
