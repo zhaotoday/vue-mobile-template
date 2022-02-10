@@ -52,23 +52,10 @@
           <div v-else class="t-placeholder">请选择性别</div>
         </picker>
       </li>
-      <li class="c-list__item">
-        <label>个人主页</label>
-        <input
-          class="c-list__value"
-          placeholder-class="t-placeholder"
-          placeholder="请输入个人主页"
-          v-model.trim="cForm.model.url"
-        />
-      </li>
     </ul>
-    <button
-      :class="bem.button.big.$"
-      class="at-bottom w690 bg-primary t-white"
-      @click="submit"
-    >
+    <u-button custom-class="at-bottom w690" type="primary" @click="submit">
       保存
-    </button>
+    </u-button>
   </div>
 </template>
 

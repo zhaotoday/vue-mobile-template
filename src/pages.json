@@ -32,6 +32,12 @@
       }
     },
     {
+      "path": "pages/user/info/index",
+      "style": {
+        "navigationBarTitleText": "我的资料"
+      }
+    },
+    {
       "path": "pages/user/account-login/index",
       "style": {
         "navigationBarTitleText": "登录"
@@ -53,12 +59,6 @@
       "path": "pages/user/phone-number/index",
       "style": {
         "navigationBarTitleText": "绑定手机号"
-      }
-    },
-    {
-      "path": "pages/my/info/index",
-      "style": {
-        "navigationBarTitleText": "我的资料"
       }
     }
   ],

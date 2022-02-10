@@ -14,7 +14,7 @@
           class="c-list__item has-icon is-link"
           @click="$wx.navigateTo('/pages/user/info/index')"
         >
-          修改用户信息
+          我的资料
         </li>
         <li class="c-list__item has-icon is-link">修改密码</li>
         <li class="c-list__item has-icon is-link">绑定手机号</li>
