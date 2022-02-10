@@ -19,6 +19,12 @@
       }
     },
     {
+      "path": "pages/cart/index",
+      "style": {
+        "navigationBarTitleText": "购物车"
+      }
+    },
+    {
       "path": "pages/mp/login/index",
       "style": {
         "navigationBarTitleText": "授权登录"

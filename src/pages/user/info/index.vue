@@ -11,7 +11,12 @@
         />
       </c-form-item>
       <c-form-item label="性别">
+        <c-form-picker
+          :enums="enums.Gender.filter((item) => item.value !== 0)"
+          v-model="cForm.model.gender"
+        />
         <picker
+          v-if="false"
           class="c-list__value"
           :range="
             enums.Gender.filter((item) => item.value !== 0).map(
