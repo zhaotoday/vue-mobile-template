@@ -1,0 +1,13 @@
+@import "~@/assets/styles/utils/index";
+
+@include p(user-info) {
+  @include b(avatar) {
+    @include size(px2rpx(80px), px2rpx(80px));
+    @include position--relative(
+      px2rpx((106px - 80px)/2),
+      null,
+      null,
+      px2rpx(138px)
+    );
+  }
+}
