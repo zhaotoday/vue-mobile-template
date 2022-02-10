@@ -8,7 +8,9 @@
     {
       "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "首页"
+        "navigationBarTitleText": "某某商城",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#5ac725"
       }
     },
     {
