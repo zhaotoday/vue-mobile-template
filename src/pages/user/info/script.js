@@ -1,8 +1,6 @@
 import { reactive } from "@vue/composition-api";
-import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
 import { useValidators } from "vue-validation";
-import { useBem } from "@/composables/use-bem";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
 import { onShow } from "uni-composition-api";
@@ -12,10 +10,12 @@ import { usersApi } from "vue-mobile/@lr/apis/client/users";
 
 export default {
   setup() {
-    const { isRequired } = useValidators();
-    const bem = useBem();
+    const { isRequired, validate } = useValidators();
+
     const { enums } = useEnums();
+
     const { getUserInfo, avatarUrl } = useUsers();
+
     const cForm = reactive({
       model: {
         avatarFileId: 0,
@@ -43,7 +43,7 @@ export default {
     const onAvatarUpload = async (res) => {
       const { statusCode, data } = await wx.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
-        header: useUsers().getRequestHeaders(),
+        header: useUsers().getHeaders(),
         filePath: res.path,
         name: "file",
       });
@@ -51,7 +51,7 @@ export default {
       const parsedData = JSON.parse(data);
 
       if (statusCode === 201) {
-        await new usersApi().post({
+        await usersApi.post({
           action: "updateUserInfo",
           body: { avatarFileId: parsedData.data.id },
         });
@@ -63,15 +63,10 @@ export default {
     };
 
     const submit = async () => {
-      const { model, rules } = cForm;
+      await validate(cForm, null, async (errors, model) => {
+        if (errors) return;
 
-      await new AsyncValidator(rules).validate(model, async (errors) => {
-        if (errors) {
-          wx.showToast({ title: errors[0].message });
-          return;
-        }
-
-        await new usersApi().post({
+        await usersApi.post({
           action: "updateUserInfo",
           body: model,
         });
@@ -84,7 +79,6 @@ export default {
     };
 
     return {
-      bem,
       enums,
       cForm,
       avatarUrl,
