@@ -1,6 +1,6 @@
 <template>
   <div class="p-products-search">
-    <div class="bg-white u-pl30 u-pr30 u-pt20 u-pb20">
+    <div class="bg-white u-pl30 u-pr30 u-pt20 u-pb20 u-mb20">
       <u-search
         ref="search"
         placeholder="请输入商品名称"
@@ -8,7 +8,7 @@
         @search="search"
       />
     </div>
-    <div class="b-keywords bgc11">
+    <div class="b-keywords bg-white">
       <template v-if="history[0]">
         <h2 class="b-title fs28">
           历史搜索
@@ -18,7 +18,7 @@
           <li
             v-for="(item, index) in history"
             :key="index"
-            class="b-tags__item c-tag h60 bgc38 c10 fs26"
+            class="b-tags__item c-tag h56 bg-g2 u-br10 fs26"
             @click="search(item)"
           >
             {{ item }}
@@ -30,7 +30,7 @@
         <li
           v-for="(item, index) in hotKeywords"
           :key="index"
-          class="b-tags__item c-tag h60 bgc38 c10 fs26"
+          class="b-tags__item c-tag h56 bg-g2 u-br10 fs26"
           @click="search(item)"
         >
           {{ item }}

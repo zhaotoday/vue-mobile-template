@@ -20,9 +20,9 @@ export default {
     };
 
     const getHistory = () => {
-      const history = wx.getStorageSync("productSearchHistory") || [];
-
-      return history.filter((item, index) => index < 15);
+      return (wx.getStorageSync("productSearchHistory") || []).filter(
+        (item, index) => index < 15
+      );
     };
 
     const saveHistory = (keywords) => {
