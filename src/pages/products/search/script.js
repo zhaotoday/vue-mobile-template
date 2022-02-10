@@ -1,41 +1,48 @@
-const SEARCH_HISTORY = "searchHistory";
+import wx from "wx-bridge";
+import { ref } from "@vue/composition-api";
+import { onShow } from "uni-composition-api";
 
 export default {
-  data() {
-    return {
-      history: [],
-      hotKeywords: ["花生油", "大米", "食盐", "白菜"],
-    };
-  },
-  onShow() {
-    this.history = this.getHistory();
-  },
-  methods: {
-    search(keywords) {
-      keywords = keywords || this.$refs.search.getValue().trim();
+  setup() {
+    const history = ref([]);
+    const hotKeywords = ["花生油", "大米", "食盐", "白菜"];
 
-      this.saveHistory(keywords);
+    onShow(() => {
+      history.value = getHistory();
+    });
 
-      this.$wx.navigateTo({
-        url: `/pages/products/list/index?keywords=${keywords}`,
+    const search = (value) => {
+      saveHistory(value);
+
+      wx.navigateTo({
+        url: `/pages/products/list/index?keywords=${value}`,
       });
-    },
-    getHistory() {
-      const MAX = 15;
-      const ret = this.$wx.getStorageSync(SEARCH_HISTORY);
+    };
 
-      return ret ? ret.filter((item, index) => index < MAX) : [];
-    },
-    saveHistory(keywords) {
-      const searchHistory = this.$wx.getStorageSync(SEARCH_HISTORY) || [];
+    const getHistory = () => {
+      const history = wx.getStorageSync("productSearchHistory") || [];
 
-      if (keywords && !searchHistory.includes(keywords)) {
-        this.$wx.setStorageSync(SEARCH_HISTORY, [...searchHistory, keywords]);
+      return history.filter((item, index) => index < 15);
+    };
+
+    const saveHistory = (keywords) => {
+      const history = wx.getStorageSync("productSearchHistory") || [];
+
+      if (keywords && !history.includes(keywords)) {
+        wx.setStorageSync("productSearchHistory", [...history, keywords]);
       }
-    },
-    clearHistory() {
-      this.$wx.removeStorageSync(SEARCH_HISTORY);
-      this.history = [];
-    },
+    };
+
+    const clearHistory = () => {
+      wx.removeStorageSync("productSearchHistory");
+      history.value = [];
+    };
+
+    return {
+      history,
+      hotKeywords,
+      search,
+      clearHistory,
+    };
   },
 };

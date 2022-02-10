@@ -1,13 +1,13 @@
 <template>
   <div class="p-products-search">
-    <u-search :show-action="false" placeholder="请输入商品名称" />
-    <c-search
-      ref="search"
-      placeholder="输入要搜索的商品名称"
-      show-submit
-      @confirm="search()"
-    >
-    </c-search>
+    <div class="bg-white u-pl30 u-pr30 u-pt20 u-pb20">
+      <u-search
+        ref="search"
+        placeholder="请输入商品名称"
+        focus
+        @search="search"
+      />
+    </div>
     <div class="b-keywords bgc11">
       <template v-if="history[0]">
         <h2 class="b-title fs28">
