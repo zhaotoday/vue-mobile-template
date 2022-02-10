@@ -1,21 +1,21 @@
 import { reactive } from "@vue/composition-api";
 import AsyncValidator from "async-validator";
 import wx from "wx-bridge";
-import { useFormValidators } from "@lr/composables/use-form-validators";
+import { useValidators } from "vue-validation";
 import { useBem } from "@/composables/use-bem";
-import { useEnums } from "@lr/composables/use-enums";
+import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
 import { onShow } from "uni-composition-api";
-import { useUser } from "@lr/composables/use-user";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
 import { UsersApi } from "@lr/apis/client/users";
 
 export default {
   setup() {
-    const formValidators = useFormValidators();
+    const formValidators = useValidators();
     const bem = useBem();
     const { enums } = useEnums();
-    const { getUserInfo, avatarUrl } = useUser();
+    const { getUserInfo, avatarUrl } = useUsers();
     const cForm = reactive({
       model: {
         avatarFileId: 0,
@@ -45,7 +45,7 @@ export default {
     const onAvatarUpload = async (res) => {
       const { statusCode, data } = await wx.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
-        header: useUser().getRequestHeaders(),
+        header: useUsers().getRequestHeaders(),
         filePath: res.path,
         name: "file",
       });
