@@ -35,6 +35,8 @@ export default {
       }
     };
 
+    const wxMpBind = () => {};
+
     return {
       defaultAvatarUrl,
       loggedIn,
@@ -43,6 +45,7 @@ export default {
       avatarUrl,
       navigateTo,
       logoutAndGotoLogin,
+      wxMpBind,
     };
   },
 };

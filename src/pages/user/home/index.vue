@@ -25,13 +25,25 @@
       <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"
-          @click="$wx.navigateTo('/pages/user/info/index')"
+          @click="navigateTo('/pages/user/info/index')"
         >
           我的资料
         </li>
-        <li class="c-list__item has-icon is-link">修改密码</li>
-        <li class="c-list__item has-icon is-link">绑定手机号</li>
-        <li class="c-list__item has-icon is-link">绑定微信</li>
+        <li
+          class="c-list__item has-icon is-link"
+          @click="navigateTo('/pages/user/password/index')"
+        >
+          修改密码
+        </li>
+        <li
+          class="c-list__item has-icon is-link"
+          @click="navigateTo('/pages/user/password/index')"
+        >
+          绑定手机号
+        </li>
+        <li class="c-list__item has-icon is-link" @click="wxMpBind">
+          绑定微信
+        </li>
       </ul>
     </div>
   </div>
