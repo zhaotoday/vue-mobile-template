@@ -42,6 +42,7 @@
           绑定手机号
         </li>
         <li class="c-list__item has-icon is-link" @click="wxMpBind">
+          <i class="c-iconfont c-iconfont--phone fs34"></i>
           绑定微信
         </li>
       </ul>
