@@ -1,5 +1,3 @@
-@import "~@/assets/styles/utils/index.scss";
-
 @include c(form) {
   @include e(item) {
     position: relative;
@@ -121,6 +119,7 @@
   @include e(send-captcha) {
     @include position--absolute(px2rpx(22px), px2rpx(30px));
 
+    display: block;
     border-radius: px2rpx(32px);
   }
 
