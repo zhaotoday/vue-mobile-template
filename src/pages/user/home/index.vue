@@ -25,24 +25,39 @@
       <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"
-          @click="navigateTo('/pages/user/info/index')"
+          @click="
+            navigateTo({ requiresLogin: true, url: '/pages/user/info/index' })
+          "
         >
+          <i class="c-iconfont c-iconfont--info fs34 t-primary"></i>
           我的资料
         </li>
         <li
           class="c-list__item has-icon is-link"
-          @click="navigateTo('/pages/user/password/index')"
+          @click="
+            navigateTo({
+              requiresLogin: true,
+              url: '/pages/user/password/index',
+            })
+          "
         >
+          <i class="c-iconfont c-iconfont--lock fs34 t-primary"></i>
           修改密码
         </li>
         <li
           class="c-list__item has-icon is-link"
-          @click="navigateTo('/pages/user/password/index')"
+          @click="
+            navigateTo({
+              requiresLogin: true,
+              url: '/pages/user/password/index',
+            })
+          "
         >
+          <i class="c-iconfont c-iconfont--phone fs34 t-primary"></i>
           绑定手机号
         </li>
         <li class="c-list__item has-icon is-link" @click="wxMpBind">
-          <i class="c-iconfont c-iconfont--phone fs34"></i>
+          <i class="c-iconfont c-iconfont--wechat fs34 t-primary"></i>
           绑定微信
         </li>
       </ul>
