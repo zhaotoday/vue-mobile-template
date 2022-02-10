@@ -8,11 +8,11 @@ import { useHelpers } from "@/composables/use-helpers";
 import { onShow } from "uni-composition-api";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
-import { UsersApi } from "@lr/apis/client/users";
+import { usersApi } from "vue-mobile/@lr/apis/client/users";
 
 export default {
   setup() {
-    const formValidators = useValidators();
+    const { isRequired } = useValidators();
     const bem = useBem();
     const { enums } = useEnums();
     const { getUserInfo, avatarUrl } = useUsers();
@@ -20,14 +20,12 @@ export default {
       model: {
         avatarFileId: 0,
         name: "",
-        nickName: "",
         gender: -1,
-        url: "",
       },
       rules: {
-        name: [formValidators.required({ label: "姓名" })],
-        nickName: [formValidators.required({ label: "昵称" })],
+        name: [isRequired({ label: "姓名" })],
       },
+      errors: {},
     });
 
     onShow(async () => {
@@ -53,7 +51,7 @@ export default {
       const parsedData = JSON.parse(data);
 
       if (statusCode === 201) {
-        await new UsersApi().post({
+        await new usersApi().post({
           action: "updateUserInfo",
           body: { avatarFileId: parsedData.data.id },
         });
@@ -73,7 +71,7 @@ export default {
           return;
         }
 
-        await new UsersApi().post({
+        await new usersApi().post({
           action: "updateUserInfo",
           body: model,
         });
