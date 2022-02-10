@@ -20,8 +20,9 @@
     }
 
     @include e(extra) {
-      @include position--absolute(50%, null, null, px2rpx(180px));
-
+      position: absolute !important;
+      top: 50%;
+      left: px2rpx(180px);
       transform: translateY(-50%);
       line-height: 100%;
 
