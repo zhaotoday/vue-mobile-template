@@ -1,7 +1,7 @@
 <template>
   <div class="p-user-info u-pt30">
     <c-form>
-      <c-form-item label="头像">
+      <c-form-item custom-class="is-link" label="头像">
         <c-avatar-upload
           class="b-avatar"
           sel-width="500upx"
@@ -12,9 +12,9 @@
           can-rotate="false"
         />
       </c-form-item>
-      <c-form-item label="名字">
+      <c-form-item label="姓名">
         <c-form-input
-          placeholder="请输入名字"
+          placeholder="请输入姓名"
           v-model.trim="cForm.model.name"
           :error="cForm.errors.name"
           @blur="validate(cForm, 'name')"
