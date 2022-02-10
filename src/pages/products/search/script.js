@@ -19,11 +19,10 @@ export default {
       });
     };
 
-    const getHistory = () => {
-      return (wx.getStorageSync("productSearchHistory") || []).filter(
+    const getHistory = () =>
+      (wx.getStorageSync("productSearchHistory") || []).filter(
         (item, index) => index < 15
       );
-    };
 
     const saveHistory = (keywords) => {
       const history = wx.getStorageSync("productSearchHistory") || [];
