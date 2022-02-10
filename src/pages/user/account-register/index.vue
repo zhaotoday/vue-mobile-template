@@ -1,12 +1,12 @@
 <template>
   <div class="p-my-phone-number u-pt30">
     <c-form>
-      <c-form-item label="昵称">
+      <c-form-item label="姓名">
         <c-form-input
-          placeholder="请输入昵称"
-          v-model.trim="cForm.model.nickName"
-          :error="cForm.errors.nickName"
-          @blur="validate(cForm, 'nickName')"
+          placeholder="请输入姓名"
+          v-model.trim="cForm.model.name"
+          :error="cForm.errors.name"
+          @blur="validate(cForm, 'name')"
         />
       </c-form-item>
       <c-form-item label="手机号">

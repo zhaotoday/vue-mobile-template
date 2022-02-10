@@ -16,7 +16,7 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        nickName: [isRequired({ label: "昵称" })],
+        name: [isRequired({ label: "姓名" })],
         phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
         captcha: [isRequired({ label: "验证码" }), isCaptcha()],
         password: [isRequired({ label: "密码" }), isPassword()],
@@ -48,10 +48,10 @@ export default {
       await validate(
         cForm,
         null,
-        async (errors, { nickName, phoneNumber, captcha, password }) => {
+        async (errors, { name, phoneNumber, captcha, password }) => {
           if (errors) return;
 
-          await accountRegister({ nickName, phoneNumber, captcha, password });
+          await accountRegister({ name, phoneNumber, captcha, password });
 
           wx.showToast({ title: "注册成功" });
           await useHelpers().sleep(1500);

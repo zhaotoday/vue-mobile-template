@@ -1,23 +1,13 @@
 <template>
   <div class="p-user-info u-pt30">
     <c-form>
-      <c-form-item label="头像">
-        <c-avatar-crop
-          class="b-avatar"
-          sel-width="500upx"
-          sel-height="500upx"
-          @upload="onAvatarUpload"
-          :avatar-src="avatarUrl"
-          inner="true"
-          can-rotate="false"
-        />
-      </c-form-item>
-      <c-form-item label="昵称">
+      <c-form-item label="头像">abc</c-form-item>
+      <c-form-item label="名字">
         <c-form-input
-          placeholder="请输入昵称"
-          v-model.trim="cForm.model.nickName"
-          :error="cForm.errors.nickName"
-          @blur="validate(cForm, 'nickName')"
+          placeholder="请输入名字"
+          v-model.trim="cForm.model.name"
+          :error="cForm.errors.name"
+          @blur="validate(cForm, 'name')"
         />
       </c-form-item>
       <c-form-item label="性别">

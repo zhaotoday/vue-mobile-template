@@ -82,6 +82,7 @@ export default {
       enums,
       cForm,
       avatarUrl,
+      validate,
       onGenderChange,
       onAvatarUpload,
       submit,
