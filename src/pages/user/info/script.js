@@ -32,14 +32,6 @@ export default {
       cForm.model = await getUserInfo();
     });
 
-    const onGenderChange = (e) => {
-      const pickerIndex = +e.detail.value;
-
-      cForm.model.gender = enums.value.Gender.filter(
-        (item) => item.value !== 0
-      )[pickerIndex].value;
-    };
-
     const onAvatarUpload = async (res) => {
       const { statusCode, data } = await wx.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
@@ -82,9 +74,8 @@ export default {
       enums,
       cForm,
       avatarUrl,
-      validate,
-      onGenderChange,
       onAvatarUpload,
+      validate,
       submit,
     };
   },
