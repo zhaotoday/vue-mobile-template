@@ -4,7 +4,7 @@ page {
   background-color: map-get($colors, white);
 }
 
-@include p(login) {
+@include p(user-mp-login) {
   @include b(logo) {
     @include padding(px2rpx(130px), null, px2rpx(120px));
 

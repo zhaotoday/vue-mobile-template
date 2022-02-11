@@ -1,5 +1,5 @@
 <template>
-  <div class="p-login">
+  <div class="p-user-mp-login">
     <div class="b-logo">
       <u-avatar size="90" shape="square" :src="logoUrl" />
       <h2 class="fs28">XXX小程序</h2>

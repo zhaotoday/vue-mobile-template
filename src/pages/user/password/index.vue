@@ -1,5 +1,5 @@
 <template>
-  <div class="p-user-phone-number u-pt30">
+  <div class="p-user-password u-pt30">
     <c-form>
       <c-form-item label="手机号">
         <c-form-input
