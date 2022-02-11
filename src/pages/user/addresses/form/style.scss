@@ -2,13 +2,11 @@
 
 @include p(user-addresses-form) {
   @include b(genders) {
-    @include position--absolute(50%, px2rpx(40px));
-
-    transform: translateY(-50%);
     line-height: 0;
+    margin-left: px2rpx(180px);
 
     @include c(tag) {
-      margin-left: px2rpx(20px);
+      margin-right: px2rpx(20px);
     }
   }
 
