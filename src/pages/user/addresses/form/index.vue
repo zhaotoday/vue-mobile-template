@@ -10,7 +10,7 @@
         />
         <ul class="b-genders">
           <li
-            v-for="item in $consts.GENDERS"
+            v-for="item in enums.UserAddressGender"
             :key="item.value"
             :class="[
               'c-tag h50',
