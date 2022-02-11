@@ -3,7 +3,9 @@
 @import "node_modules/sass-utils/global/index";
 @import "node_modules/sass-utils/mobile/global/index";
 
+@import "node_modules/vue-mobile/assets/styles/global/uview/index";
+
 @import "./components/index";
 @import "./objects/index";
 @import "./reset/index";
-@import "./uview/index";
+
