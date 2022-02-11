@@ -39,21 +39,20 @@
         </div>
       </li>
     </ul>
-    <c-empty v-if="!list.items.length && loaded"></c-empty>
-    <button
-      class="c-button is-foot w670 h76 bgc21 c11 fs32"
-      @click="navigateTo('/pages/my/addresses/form/index')"
+    <u-empty v-if="loaded && !list.items.length" mode="list" />
+    <u-button
+      custom-class="at-bottom w690"
+      type="primary"
+      @click="$wx.navigateTo('/pages/user/addresses/form/index')"
     >
       新增
-    </button>
-    <c-dialog
-      :visible="cDel.visible"
+    </u-button>
+    <u-modal
+      :show="cDel.visible"
       title="请确认"
-      content="确认删除收货地址？"
-      @cancel="cDel.visible = false"
-      @confirm="confirmDel"
-    >
-    </c-dialog>
+      content="确认删除收货地址"
+      @confirm="del"
+    />
   </div>
 </template>
 
