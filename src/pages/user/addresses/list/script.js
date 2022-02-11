@@ -3,22 +3,41 @@ import { onShow } from "uni-composition-api";
 import { ref } from "@vue/composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";
 import wx from "wx-bridge";
+import { addressesApi } from "@/apis/client/addresses";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
     const { currentRoute } = useRoute();
 
+    const { user } = useUsers();
+
     const loaded = ref(false);
+
+    const list = ref({
+      items: [],
+      total: 0,
+    });
 
     onShow(async () => {
       const { select } = currentRoute.query;
 
       wx.setNavigationBarTitle({ title: select ? "选择收货地址" : "收货地址" });
 
-      await this.getList();
+      list.value = await getList();
 
       loaded.value = true;
     });
+
+    const getList = () => {
+      return addressesApi.get({
+        query: {
+          where: {
+            wxUserId: { $eq: user.value.id },
+          },
+        },
+      });
+    };
 
     return {
       loaded,
@@ -37,17 +56,6 @@ export default {
   }),
   async onShow() {},
   methods: {
-    getList() {
-      return this.$store.dispatch("wx/addresses/getList", {
-        query: {
-          where: {
-            wxUserId: {
-              $eq: this.$auth.get()["user"].id,
-            },
-          },
-        },
-      });
-    },
     async setDefault(item) {
       await this.$store.dispatch("wx/addresses/postAction", {
         showLoading: true,
