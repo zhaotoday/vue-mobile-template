@@ -1,8 +1,7 @@
-import { mapState } from "vuex";
+import wx from "wx-bridge";
 import { onShow } from "uni-composition-api";
 import { ref } from "@vue/composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";
-import wx from "wx-bridge";
 import { addressesApi } from "@/apis/client/addresses";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
