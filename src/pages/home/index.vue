@@ -15,15 +15,15 @@
         indicator-mode="line"
       />
     </div>
-    <u-number-box v-model="value">
-      <view slot="minus" class="minus">
-        <u-icon name="minus" color="#FFFFFF" size="12" />
+    <u-number-box v-model="value" :min="0">
+      <view v-show="value" slot="minus" class="minus">
+        <u-icon name="minus" size="12" color="#5ac725" />
       </view>
-      <text slot="input" style="width: 50px; text-align: center" class="input">
+      <text v-show="value" slot="input" class="input">
         {{ value }}
       </text>
       <view slot="plus" class="plus">
-        <u-icon name="plus" color="#FFFFFF" size="12"></u-icon>
+        <u-icon name="plus" size="12" color="#ffffff" />
       </view>
     </u-number-box>
   </div>
