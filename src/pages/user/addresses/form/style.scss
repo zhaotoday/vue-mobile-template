@@ -1,6 +1,6 @@
-@import '../../../../styles/utils/index';
+@import "~@/assets/styles/utils/index.scss";
 
-@include p(my-addresses-form) {
+@include p(user-addresses-form) {
   @include b(genders) {
     @include position--absolute(50%, px2rpx(40px));
 
