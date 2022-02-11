@@ -93,9 +93,9 @@
         </ul>
       </li>
     </ul>
-    <button class="c-button is-foot w670 h76 bgc21 c11 fs32" @click="save">
+    <u-button custom-class="at-bottom w690" type="primary" @click="submit">
       保存
-    </button>
+    </u-button>
   </div>
 </template>
 
