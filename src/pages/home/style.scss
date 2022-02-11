@@ -2,3 +2,20 @@
 
 @include p(home) {
 }
+
+.input {
+  padding: 0 10px;
+}
+
+.minus,
+.plus {
+  @include size(px2rpx(40px), px2rpx(40px));
+
+  background-color: $u-primary;
+  border-radius: 50%;
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  justify-content: center;
+  align-items: center;
+}
