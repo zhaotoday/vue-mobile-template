@@ -39,8 +39,20 @@ export default {
       });
     };
 
+    const setDefault = async (item) => {
+      await addressesApi.post({
+        action: "setDefault",
+        body: { id: item.id },
+      });
+
+      wx.showToast({ title: "设置成功" });
+
+      this.getList();
+    };
+
     return {
       loaded,
+      setDefault,
     };
   },
   data() {
@@ -56,21 +68,6 @@ export default {
   }),
   async onShow() {},
   methods: {
-    async setDefault(item) {
-      await this.$store.dispatch("wx/addresses/postAction", {
-        showLoading: true,
-        body: {
-          type: "SET_DEFAULT",
-          id: item.id,
-        },
-      });
-
-      wx.showToast({
-        title: "设置成功",
-      });
-
-      this.getList();
-    },
     showDel(item) {
       this.cDel.id = item.id;
       this.cDel.visible = true;
