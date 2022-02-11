@@ -2,6 +2,8 @@ import { useRoute } from "vue-mobile/composables/use-route";
 import { useValidators } from "vue-validation";
 import { reactive } from "@vue/composition-api";
 import { enums } from "@/utils/enums";
+import { onLoad } from "uni-composition-api";
+import wx from "wx-bridge";
 
 export default {
   setup() {
@@ -16,6 +18,16 @@ export default {
         phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
       },
       errors: {},
+    });
+
+    onLoad(async () => {
+      if (currentRoute.query.id) {
+        wx.setNavigationBarTitle({ title: "修改收货地址" });
+
+        cForm.model = await this.getDetail();
+      } else {
+        wx.setNavigationBarTitle({ title: "新增收货地址" });
+      }
     });
 
     return {
@@ -42,21 +54,6 @@ export default {
       },
     };
   },
-  async onLoad() {
-    this.id = this.$mp.query.id;
-
-    if (this.id) {
-      this.$wx.setNavigationBarTitle({
-        title: "修改收货地址",
-      });
-
-      this.cForm = await this.getDetail();
-    } else {
-      this.$wx.setNavigationBarTitle({
-        title: "新增收货地址",
-      });
-    }
-  },
   methods: {
     getDetail() {
       return this.$store.dispatch("wx/addresses/getDetail", {
@@ -70,12 +67,12 @@ export default {
       if (this.cForm.location.name) {
         const { latitude, longitude } = this.cForm.location;
 
-        this.cForm.location = await this.$wx.chooseLocation({
+        this.cForm.location = await wx.chooseLocation({
           latitude,
           longitude,
         });
       } else {
-        this.cForm.location = await this.$wx.chooseLocation();
+        this.cForm.location = await wx.chooseLocation();
       }
     },
     async save() {
@@ -83,22 +80,22 @@ export default {
       const { name, phoneNumber, location } = this.cForm;
 
       if (!name.trim()) {
-        this.$wx.showToast({ title: "请填写收货人" });
+        wx.showToast({ title: "请填写收货人" });
         return;
       }
 
       if (!phoneNumber.trim()) {
-        this.$wx.showToast({ title: "请填写手机号" });
+        wx.showToast({ title: "请填写手机号" });
         return;
       }
 
       if (!PHONE_REG.test(phoneNumber)) {
-        this.$wx.showToast({ title: "手机号格式错误" });
+        wx.showToast({ title: "手机号格式错误" });
         return;
       }
 
       if (!location.name) {
-        this.$wx.showToast({ title: "请填写小区" });
+        wx.showToast({ title: "请填写小区" });
         return;
       }
 
@@ -108,13 +105,13 @@ export default {
         body: this.cForm,
       });
 
-      this.$wx.showToast({
+      wx.showToast({
         title: this.id ? "修改成功" : "新增成功",
       });
 
       await this.$helpers.sleep(1500);
 
-      this.$wx.navigateBack();
+      wx.navigateBack();
     },
   },
 };
