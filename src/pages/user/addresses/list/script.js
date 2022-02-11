@@ -66,17 +66,10 @@ export default {
 
     return {
       loaded,
+      list,
       select,
       setDefault,
       del,
-    };
-  },
-  data() {
-    return {
-      cDel: {
-        visible: false,
-        id: 0,
-      },
     };
   },
 };

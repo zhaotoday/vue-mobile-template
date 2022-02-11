@@ -1,6 +1,6 @@
-@import '../../../../styles/utils/index';
+@import "~@/assets/styles/utils/index.scss";
 
-@include p(my-addresses-list) {
+@include p(user-addresses-list) {
   @include b(list) {
     @include e(item) {
       @include padding(px2rpx(32px), px2rpx(32px), null, px2rpx(32px));
