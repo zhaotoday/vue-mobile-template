@@ -14,7 +14,9 @@
             :key="item.value"
             :class="[
               'c-tag h50',
-              cForm.gender === item.value ? 'bdc22 c22' : 'bdc31 c31',
+              cForm.model.gender === item.value
+                ? 'bd-primary t-primary'
+                : 'bd-g1 t-g1',
               'fs26',
             ]"
             @click="changeTag('gender', item)"

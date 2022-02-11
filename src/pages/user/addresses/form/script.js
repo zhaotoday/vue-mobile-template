@@ -15,14 +15,14 @@ export default {
 
     const cForm = reactive({
       model: {
-        gender: "1",
+        gender: 1,
         location: {
           name: "",
           address: "",
           latitude: "",
           longitude: "",
         },
-        tag: "1",
+        tag: 1,
       },
       rules: {
         name: [isRequired({ label: "收货人姓名" })],
@@ -32,10 +32,12 @@ export default {
     });
 
     onLoad(async () => {
-      if (currentRoute.query.id) {
+      const { id } = currentRoute.query;
+
+      if (id) {
         wx.setNavigationBarTitle({ title: "修改收货地址" });
 
-        cForm.model = await addressesApi.get({ id: currentRoute.query.id });
+        cForm.model = await addressesApi.get({ id });
       } else {
         wx.setNavigationBarTitle({ title: "新增收货地址" });
       }
