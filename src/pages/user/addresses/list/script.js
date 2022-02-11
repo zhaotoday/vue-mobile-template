@@ -1,7 +1,29 @@
 import { mapState } from "vuex";
+import { onShow } from "uni-composition-api";
+import { ref } from "@vue/composition-api";
+import { useRoute } from "vue-mobile/composables/use-route";
+import wx from "wx-bridge";
 
 export default {
-  setup() {},
+  setup() {
+    const { currentRoute } = useRoute();
+
+    const loaded = ref(false);
+
+    onShow(async () => {
+      const { select } = currentRoute.query;
+
+      wx.setNavigationBarTitle({ title: select ? "选择收货地址" : "收货地址" });
+
+      await this.getList();
+
+      loaded.value = true;
+    });
+
+    return {
+      loaded,
+    };
+  },
   data() {
     return {
       cDel: {
@@ -13,15 +35,7 @@ export default {
   computed: mapState({
     list: (state) => state["wx/addresses"].list,
   }),
-  async onShow() {
-    this.$wx.setNavigationBarTitle({
-      title: this.$mp.query.select ? "选择收货地址" : "收货地址",
-    });
-
-    await this.getList();
-
-    this.loaded = true;
-  },
+  async onShow() {},
   methods: {
     getList() {
       return this.$store.dispatch("wx/addresses/getList", {
@@ -43,7 +57,7 @@ export default {
         },
       });
 
-      this.$wx.showToast({
+      wx.showToast({
         title: "设置成功",
       });
 
@@ -60,7 +74,7 @@ export default {
         id: this.cDel.id,
       });
 
-      this.$wx.showToast({
+      wx.showToast({
         title: "删除成功",
       });
 
@@ -72,7 +86,7 @@ export default {
           key: "address",
           value: item,
         });
-        this.$wx.navigateBack();
+        wx.navigateBack();
       }
     },
   },
