@@ -35,7 +35,13 @@
           @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
-      <c-form-item custom-class="is-link" label="小区"> abc </c-form-item>
+      <c-form-item custom-class="is-link" label="小区">
+        <c-form-link
+          placeholder="小区/写字楼等"
+          :label="cForm.model.location.name"
+          @click="selectLocation"
+        />
+      </c-form-item>
       <c-form-item label="门牌号">
         <c-form-input
           placeholder="门牌号，如：1 号楼 102"
@@ -63,15 +69,6 @@
         </ul>
       </c-form-item>
     </c-form>
-    <ul v-if="false" class="c-list bgc11 fs30 u-mt20">
-      <li class="c-list__item is-link" @click="selectLocation">
-        小区
-        <p v-if="cForm.location.name" class="c-list__value fs32">
-          {{ cForm.location.name }}
-        </p>
-        <p v-else class="c-list__value c31 fs32">小区/写字楼等</p>
-      </li>
-    </ul>
     <u-button custom-class="at-bottom w690" type="primary" @click="submit">
       保存
     </u-button>
