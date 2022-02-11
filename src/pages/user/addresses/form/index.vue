@@ -8,12 +8,12 @@
           :error="cForm.errors.name"
           @blur="validate(cForm, 'name')"
         />
-        <ul class="b-genders">
+        <ul class="b-tags">
           <li
-            v-for="item in enums.UserAddressGender"
+            v-for="item in enums.AddressGender"
             :key="item.value"
             :class="[
-              'c-tag h50 u-br10',
+              'c-tag h46 u-br10',
               cForm.model.gender === item.value
                 ? 'bd-primary t-primary'
                 : 'bd-placeholder t-placeholder',
@@ -44,6 +44,24 @@
           @blur="validate(cForm, 'room')"
         />
       </c-form-item>
+      <c-form-item label="地址类型">
+        <ul class="b-tags u-pt18">
+          <li
+            v-for="item in enums.AddressTag"
+            :key="item.value"
+            :class="[
+              'c-tag h46 u-br10',
+              cForm.model.tag === item.value
+                ? 'bd-primary t-primary'
+                : 'bd-placeholder t-placeholder',
+              'fs26',
+            ]"
+            @click="changeTag('tag', item)"
+          >
+            {{ item.label }}
+          </li>
+        </ul>
+      </c-form-item>
     </c-form>
     <ul v-if="false" class="c-list bgc11 fs30 u-mt20">
       <li class="c-list__item is-link" @click="selectLocation">
@@ -52,32 +70,6 @@
           {{ cForm.location.name }}
         </p>
         <p v-else class="c-list__value c31 fs32">小区/写字楼等</p>
-      </li>
-      <li class="c-list__item">
-        门牌号
-        <input
-          class="c-list__value fs32"
-          placeholder-class="c31"
-          placeholder="门牌号，如：1 号楼 102"
-          v-model="cForm.room"
-        />
-      </li>
-      <li class="c-list__item">
-        地址分类
-        <ul class="b-types">
-          <li
-            v-for="item in $consts.ADDRESS_TAGS"
-            :key="item.value"
-            :class="[
-              'c-tag h50',
-              cForm.tag === item.value ? 'bdc22 c22' : 'bdc31 c31',
-              'fs26',
-            ]"
-            @click="changeTag('tag', item)"
-          >
-            {{ item.label }}
-          </li>
-        </ul>
       </li>
     </ul>
     <u-button custom-class="at-bottom w690" type="primary" @click="submit">
