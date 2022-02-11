@@ -39,7 +39,12 @@
         </div>
       </li>
     </ul>
-    <u-empty v-if="loaded && !list.items.length" mode="list" />
+    <u-empty
+      v-if="loaded && !list.items.length"
+      mode="data"
+      icon="https://cdn.uviewui.com/uview/empty/data.png"
+      margin-top="100rpx"
+    />
     <u-button
       custom-class="at-bottom w690"
       type="primary"

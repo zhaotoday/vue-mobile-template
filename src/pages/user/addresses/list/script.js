@@ -4,6 +4,7 @@ import { reactive, ref } from "@vue/composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { addressesApi } from "@/apis/client/addresses";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { enums } from "@/utils/enums";
 
 export default {
   setup() {
@@ -11,10 +12,16 @@ export default {
 
     const { user } = useUsers();
 
-    const loaded = ref(false);
+    const loaded = ref(true);
 
     const list = ref({
-      items: [],
+      items: [
+        {
+          name: "",
+          phoneNumber: "",
+          location: {},
+        },
+      ],
       total: 0,
     });
 
@@ -70,6 +77,7 @@ export default {
     };
 
     return {
+      enums,
       loaded,
       list,
       cDel,
