@@ -1,18 +1,16 @@
 <template>
-  <div class="p-user-addresses-list">
-    <ul v-for="item in list.items" :key="item" class="b-list u-mt20">
-      <li class="b-list__item bgc11" @click="select(item)">
+  <div class="p-user-addresses-list u-pt30">
+    <ul v-for="item in list.items" :key="item" class="b-list">
+      <li class="b-list__item" :class="$bem.box.$" @click="select(item)">
         <div class="b-list__head">
           <h2 class="b-list__title fs28">
             {{ item.location.name + item.room }}
           </h2>
-          <p class="b-list__desc c31 fs24">
+          <p class="b-list__desc t-g7 fs24">
             {{ item.name }} {{ item.phoneNumber }}
           </p>
-          <div class="c-tag h34 bdc22 c22 fs20">
-            {{
-              $helpers.getItem($consts.ADDRESS_TAGS, "value", item.tag)["label"]
-            }}
+          <div class="c-tag h34 bd-primary t-primary u-br10 fs22">
+            {{ $helpers.getItem(enums.AddressTag, "value", item.tag)["label"] }}
           </div>
         </div>
         <div class="b-list__foot fs24">

@@ -4,11 +4,13 @@
   @include b(list) {
     @include e(item) {
       @include padding(px2rpx(32px), px2rpx(32px), null, px2rpx(32px));
+
+      margin-bottom: px2rpx(20px);
     }
 
     @include e(head) {
       position: relative;
-      border-bottom: 1px solid map-get($colors, c34);
+      border-bottom: 1px solid map-get($colors, g4);
     }
 
     @include e(title, desc) {
