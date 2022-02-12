@@ -1,13 +1,13 @@
 <template>
   <div class="p-home">
-    <div class="bg-primary u-pl30 u-pr30 u-pt30 u-pb30">
+    <div class="bg-primary u-pl30 u-pr30 u-pt20 u-pb20">
       <u-search
         placeholder="请输入商品名称"
         disabled
         :show-action="false"
         @click="$wx.navigateTo('/pages/products/search/index')"
       />
-      <u-gap height="30rpx" />
+      <u-gap height="20rpx" />
       <u-swiper
         :list="swiperData"
         height="300rpx"
@@ -16,7 +16,7 @@
       />
     </div>
     <vc-categories />
-
+    <gc-products :products="products" />
     <u-number-box v-model="value" :min="0">
       <view v-show="value" slot="minus" class="minus">
         <u-icon name="minus" size="12" color="#5ac725" />

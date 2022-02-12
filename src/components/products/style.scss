@@ -1,4 +1,19 @@
 @import "~@/assets/styles/utils/index.scss";
 
 @include c(products) {
+  @include e(name) {
+    @include block--center;
+    @include text--overflow;
+
+    padding-top: px2rpx(20px);
+    width: px2rpx(290px);
+  }
+
+  @include e(price) {
+    @include block--center;
+    @include text--overflow;
+    @include padding(6px, null, px2rpx(20px));
+
+    width: px2rpx(290px);
+  }
 }
