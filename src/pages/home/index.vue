@@ -17,17 +17,6 @@
     </div>
     <vc-categories />
     <gc-products :products="products" />
-    <u-number-box v-model="value" :min="0">
-      <view v-show="value" slot="minus" class="minus">
-        <u-icon name="minus" size="12" color="#5ac725" />
-      </view>
-      <text v-show="value" slot="input" class="input">
-        {{ value }}
-      </text>
-      <view slot="plus" class="plus">
-        <u-icon name="plus" size="12" color="#ffffff" />
-      </view>
-    </u-number-box>
   </div>
 </template>
 

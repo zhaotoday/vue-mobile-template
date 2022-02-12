@@ -1,0 +1,32 @@
+@import "~@/assets/styles/utils/index.scss";
+
+@include c(product-number) {
+}
+
+.input {
+  width: px2rpx(40px);
+  font-size: px2rpx(24px);
+  text-align: center;
+}
+
+.minus,
+.plus {
+  @include size(px2rpx(40px), px2rpx(40px));
+
+  box-sizing: border-box;
+  border-radius: 50%;
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  justify-content: center;
+  align-items: center;
+}
+
+.minus {
+  border: 1px solid $u-primary;
+  color: $u-primary;
+}
+
+.plus {
+  background-color: $u-primary;
+}
