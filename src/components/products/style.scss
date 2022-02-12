@@ -1,6 +1,10 @@
 @import "~@/assets/styles/utils/index.scss";
 
 @include c(products) {
+  @include block--center;
+
+  width: px2rpx(720px);
+
   @include e(name) {
     @include block--center;
     @include text--overflow;
