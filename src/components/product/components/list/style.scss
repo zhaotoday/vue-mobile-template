@@ -1,6 +1,6 @@
 @import "~@/assets/styles/utils/index.scss";
 
-@include c(products) {
+@include cc(list) {
   @include block--center;
 
   width: px2rpx(720px);
@@ -19,5 +19,12 @@
     @include padding(6px, null, px2rpx(20px));
 
     width: px2rpx(290px);
+  }
+
+  @include e(number) {
+    @include position--absolute(null, px2rpx(10px), px2rpx(10px));
+
+    padding: px2rpx(10px);
+    text-align: right;
   }
 }
