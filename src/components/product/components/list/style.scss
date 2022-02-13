@@ -1,30 +1,93 @@
 @import "~@/assets/styles/utils/index.scss";
 
 @include cc(list) {
-  @include block--center;
-
-  width: px2rpx(720px);
-
-  @include e(name) {
+  @include m(col2) {
     @include block--center;
-    @include text--overflow;
 
-    padding-top: px2rpx(20px);
-    width: px2rpx(290px);
+    width: px2rpx(720px);
+
+    @include cc(list) {
+      @include e(box) {
+        position: relative;
+        background-color: white;
+        box-shadow: 0 0 px2rpx(10px) 0 rgba(#cccccc, 0.2);
+        border-radius: px2rpx(10px);
+        margin-bottom: px2rpx(30px);
+      }
+
+      @include e(image) {
+        @include size(px2rpx(330px), px2rpx(330px));
+
+        border-radius: px2rpx(10px);
+      }
+
+      @include e(name) {
+        @include block--center;
+        @include text--overflow;
+
+        padding-top: px2rpx(20px);
+        width: px2rpx(290px);
+      }
+
+      @include e(price) {
+        @include block--center;
+        @include text--overflow;
+        @include padding(6px, null, px2rpx(20px));
+
+        width: px2rpx(290px);
+      }
+
+      @include e(number) {
+        @include position--absolute(null, px2rpx(10px), px2rpx(10px));
+
+        padding: px2rpx(10px);
+        text-align: right;
+      }
+    }
   }
 
-  @include e(price) {
-    @include block--center;
-    @include text--overflow;
-    @include padding(6px, null, px2rpx(20px));
+  @include m(col1) {
+    @include cc(list) {
+      @include e(box) {
+        @include padding(px2rpx(30px), null, px2rpx(30px));
 
-    width: px2rpx(290px);
-  }
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid map-get($colors, g4);
+      }
 
-  @include e(number) {
-    @include position--absolute(null, px2rpx(10px), px2rpx(10px));
+      @include e(checkbox) {
+        @include position--absolute(50%, null, null, px2rpx(30px));
 
-    padding: px2rpx(10px);
-    text-align: right;
+        transform: translateY(-50%);
+      }
+
+      @include e(image) {
+        @include size(px2rpx(160px), px2rpx(160px));
+
+        display: block;
+        border-radius: px2rpx(10px);
+        margin-left: px2rpx(80px);
+      }
+
+      @include e(name, price) {
+        @include position--absolute(null, null, null, px2rpx(260px));
+      }
+
+      @include e(name) {
+        top: px2rpx(30px);
+      }
+
+      @include e(price) {
+        top: px2rpx(60px);
+      }
+
+      @include e(number) {
+        @include position--absolute(null, px2rpx(10px), px2rpx(10px));
+
+        padding: px2rpx(10px);
+        text-align: right;
+      }
+    }
   }
 }
