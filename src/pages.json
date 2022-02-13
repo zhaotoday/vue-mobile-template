@@ -104,6 +104,12 @@
       "style": {
         "navigationBarTitleText": "结算"
       }
+    },
+    {
+      "path": "pages/user/orders/index",
+      "style": {
+        "navigationBarTitleText": "我的订单"
+      }
     }
   ],
   "globalStyle": {
