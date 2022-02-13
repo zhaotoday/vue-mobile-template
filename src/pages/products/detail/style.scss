@@ -1,4 +1,27 @@
 @import "~@/assets/styles/utils/index.scss";
 
 @include p(products-detail) {
+  @include b(info) {
+    @include e(name) {
+      @include text--overflow;
+      @include block--center;
+
+      width: px2rpx(690px);
+      padding-top: px2rpx(30px);
+    }
+
+    @include e(others) {
+      @include block--center;
+      @include padding(px2rpx(20px), null, px2rpx(26px));
+
+      position: relative;
+      width: px2rpx(690px);
+    }
+
+    @include e(right) {
+      @include position--absolute(null, 0, px2rpx(30px));
+
+      text-align: right;
+    }
+  }
 }

@@ -7,7 +7,7 @@
           <div class="cc-list__name fs28">{{ item.name }}</div>
           <div class="cc-list__price">
             <span class="t-error fs26">¥100.0</span>
-            <span class="t-g6 u-lt fs24 u-ml10">200.0</span>
+            <span class="t-g7 u-lt fs24 u-ml10">200.0</span>
           </div>
           <div class="cc-list__number" @click.stop>
             <gc-product-number />
