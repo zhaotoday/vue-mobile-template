@@ -1,0 +1,35 @@
+@include c(address) {
+  position: relative;
+  height: px2rpx(130px);
+  background: {
+    image: url("#{$image-url}/components/list/link.png");
+    size: px2rpx(30px) px2rpx(30px);
+    repeat: no-repeat;
+    position: right px2rpx(30px) center;
+  }
+
+  @include e(detail) {
+    @include position--absolute(50%, null, null, px2rpx(80px));
+
+    transform: translateY(-50%);
+    line-height: normal;
+  }
+
+  @include e(icon) {
+    @include position--absolute(50%, null, null, px2rpx(20px));
+
+    transform: translateY(-50%);
+  }
+
+  @include c(tag) {
+    @include position--absolute(50%, px2rpx(60px));
+
+    transform: translateY(-50%);
+  }
+
+  @include e(placeholder) {
+    @include position--absolute(50%, null, null, px2rpx(80px));
+
+    transform: translateY(-50%);
+  }
+}
