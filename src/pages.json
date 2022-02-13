@@ -88,9 +88,21 @@
       }
     },
     {
+      "path": "pages/products/list/index",
+      "style": {
+        "navigationBarTitleText": "商品列表"
+      }
+    },
+    {
       "path": "pages/products/detail/index",
       "style": {
-        "navigationBarTitleText": "心相印纸巾抽纸整箱大包家用实惠装卫生纸心心相印餐巾纸面巾纸抽"
+        "navigationBarTitleText": "商品详情"
+      }
+    },
+    {
+      "path": "pages/pay/index",
+      "style": {
+        "navigationBarTitleText": "结算"
       }
     }
   ],

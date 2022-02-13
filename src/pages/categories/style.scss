@@ -18,7 +18,7 @@ page {
       @include text--middle(px2rpx(90px));
 
       position: relative;
-      background-color: map-get($colors, g2);
+      background-color: map-get($colors, g1);
       text-indent: px2rpx(30px);
 
       @include s(is-active) {

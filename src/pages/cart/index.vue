@@ -1,6 +1,7 @@
 <template>
-  <div class="p-cart">
-    <gc-product-list class="u-pt30" :items="products" :col="1" selectable />
+  <div class="p-cart u-pt20">
+    <gc-product-list :items="products" :col="1" selectable />
+    <gc-cart-submit />
   </div>
 </template>
 

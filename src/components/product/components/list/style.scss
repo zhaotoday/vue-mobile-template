@@ -57,7 +57,7 @@
 
         width: 100%;
         background-color: white;
-        border-bottom: 1px solid map-get($colors, g4);
+        border-bottom: 1px solid map-get($colors, g2);
       }
 
       @include e(checkbox) {
@@ -87,7 +87,7 @@
       }
 
       @include e(number) {
-        @include position--absolute(null, px2rpx(10px), px2rpx(10px));
+        @include position--absolute(null, px2rpx(20px), px2rpx(20px));
 
         padding: px2rpx(10px);
         text-align: right;

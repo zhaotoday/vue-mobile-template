@@ -10,8 +10,12 @@
     </div>
     <div class="b-box">
       <ul class="b-menus fs28">
-        <li v-for="item in 8" :key="item" :class="{ 'is-active': item === 2 }">
-          福大
+        <li
+          v-for="(item, index) in products"
+          :key="item.name"
+          :class="{ 'is-active': index === 2 }"
+        >
+          {{ item.name }}
         </li>
       </ul>
       <div class="b-products">
