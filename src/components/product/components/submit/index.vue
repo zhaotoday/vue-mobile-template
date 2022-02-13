@@ -1,6 +1,13 @@
 <template>
   <div class="cc-submit">
-    <div class="cc-submit__service"></div>
+    <div class="cc-submit__collect">
+      <i class="c-iconfont c-iconfont--heart-off fs42"></i>
+      <h2 class="fs24">收藏</h2>
+    </div>
+    <div class="cc-submit__cart">
+      <i class="c-iconfont c-iconfont--cart-off fs42"></i>
+      <h2 class="fs24">购物车</h2>
+    </div>
     <div class="cc-submit__button bg-primary t-white fs28">加入购物车</div>
   </div>
 </template>

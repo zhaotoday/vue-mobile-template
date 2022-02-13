@@ -12,7 +12,7 @@
         :list="swiperData"
         height="300rpx"
         indicator
-        indicator-mode="line"
+        indicator-mode="dot"
       />
     </div>
     <vc-categories />
