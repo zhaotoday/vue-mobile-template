@@ -1,10 +1,7 @@
 <template>
   <div class="cc-submit">
     <div class="cc-submit__service"></div>
-    <ul class="cc-submit__buttons">
-      <li>加入购物车</li>
-      <li>立即购买</li>
-    </ul>
+    <div class="cc-submit__button bg-primary t-white fs28">加入购物车</div>
   </div>
 </template>
 
