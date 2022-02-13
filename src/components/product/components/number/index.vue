@@ -1,12 +1,12 @@
 <template>
-  <u-number-box v-model="value" :min="0">
-    <div v-show="value" slot="minus" class="minus">
+  <u-number-box class="cc-number" v-model="value" :min="0" :max="max">
+    <div v-show="value" class="cc-number__minus" slot="minus">
       <u-icon name="minus" size="12" color="#5ac725" />
     </div>
-    <div v-show="value" slot="input" class="input">
+    <div v-show="value" class="cc-number__input" slot="input">
       {{ value }}
     </div>
-    <div slot="plus" class="plus">
+    <div class="cc-number__plus" slot="plus">
       <u-icon name="plus" size="12" color="#ffffff" />
     </div>
   </u-number-box>
@@ -14,4 +14,4 @@
 
 <script src="./script.js"></script>
 
-<style lang="scss" src="./style.scss"></style>
+<style lang="scss" scoped src="./style.scss"></style>
