@@ -16,7 +16,7 @@
       />
     </div>
     <vc-categories />
-    <gc-product-list :products="products" />
+    <gc-product-list :items="products" />
   </div>
 </template>
 

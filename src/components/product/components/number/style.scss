@@ -10,6 +10,7 @@
   @include e(minus, plus) {
     @include size(px2rpx(40px), px2rpx(40px));
 
+    position: relative;
     box-sizing: border-box;
     border-radius: 50%;
     /* #ifndef APP-NVUE */

@@ -1,5 +1,5 @@
 export default {
   props: {
-    products: Array,
+    items: Array,
   },
 };

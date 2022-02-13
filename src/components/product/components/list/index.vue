@@ -1,7 +1,7 @@
 <template>
   <div class="cc-list u-pt30">
     <u-grid col="2" :border="false">
-      <u-grid-item v-for="(item, index) in products" :key="index">
+      <u-grid-item v-for="(item, index) in items" :key="index">
         <div class="c-box u-pr bg-white u-br10 u-mb30">
           <u-avatar shape="square" size="330rpx" :src="item.url" />
           <div class="cc-list__name fs28">{{ item.name }}</div>
