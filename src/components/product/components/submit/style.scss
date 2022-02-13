@@ -1,0 +1,7 @@
+@import "~@/assets/styles/utils/index.scss";
+
+@include cc(submit) {
+  @include position--fixed(null, null, 0, 0);
+
+  width: 100%;
+}

@@ -7,7 +7,7 @@
       radius="0"
       indicator-mode="dot"
     />
-    <div class="b-info bg-white">
+    <div class="b-info bg-white u-mb20">
       <div class="b-info__name fs32">
         心相印纸巾抽纸整箱大包家用实惠装卫生纸心心相印餐巾纸面巾纸抽
       </div>
@@ -19,6 +19,16 @@
         </div>
       </div>
     </div>
+    <div class="u-pt20 u-pb20 bg-white">
+      <div class="c-title c-title--md fs32">详情</div>
+    </div>
+    <div class="s-cms-content">
+      <img
+        src="https://imgs.static.pupumall.com/STORE_PRODUCT/a3d844176f6c416f86ffd8d6eda5d02a/1589268148757.jpg"
+        style="width: 100%"
+      />
+    </div>
+    <gc-product-submit />
   </div>
 </template>
 
