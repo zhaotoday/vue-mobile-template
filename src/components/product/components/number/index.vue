@@ -1,15 +1,15 @@
 <template>
   <u-number-box class="cc-number" :min="0" :max="max" v-model="value">
-    <template slot="minus">
+    <div slot="minus">
       <div v-if="value" class="cc-number__minus">
         <u-icon name="minus" size="20rpx" color="#5ac725" />
       </div>
-    </template>
-    <template slot="input">
+    </div>
+    <div slot="input">
       <div v-if="value" class="cc-number__input">
         {{ value }}
       </div>
-    </template>
+    </div>
     <div class="cc-number__plus" slot="plus">
       <u-icon name="plus" size="20rpx" color="#ffffff" />
     </div>
