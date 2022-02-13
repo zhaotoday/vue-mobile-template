@@ -16,7 +16,7 @@
       />
     </div>
     <vc-categories />
-    <gc-product-list :items="products" :col="1" />
+    <gc-product-list class="u-pt30" :items="products" :col="2" />
   </div>
 </template>
 

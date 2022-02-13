@@ -1,6 +1,10 @@
 @import "~@/assets/styles/utils/index.scss";
 
 @include cc(list) {
+  @include e(checkbox) {
+    display: none;
+  }
+
   @include m(col2) {
     @include block--center;
 
@@ -67,11 +71,11 @@
 
         display: block;
         border-radius: px2rpx(10px);
-        margin-left: px2rpx(80px);
+        margin-left: px2rpx(30px);
       }
 
       @include e(name, price) {
-        @include position--absolute(null, null, null, px2rpx(260px));
+        @include position--absolute(null, null, null, px2rpx(210px));
       }
 
       @include e(name) {
@@ -87,6 +91,22 @@
 
         padding: px2rpx(10px);
         text-align: right;
+      }
+    }
+  }
+
+  @include s(is-selectable) {
+    @include cc(list) {
+      @include e(checkbox) {
+        display: block;
+      }
+
+      @include e(image) {
+        margin-left: px2rpx(80px);
+      }
+
+      @include e(name, price) {
+        margin-left: px2rpx(50px);
       }
     }
   }

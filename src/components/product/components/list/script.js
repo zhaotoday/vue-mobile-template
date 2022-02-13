@@ -7,6 +7,10 @@ export default {
       type: Number,
       default: 2,
     },
+    selectable: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup() {
     const cart = useCart();

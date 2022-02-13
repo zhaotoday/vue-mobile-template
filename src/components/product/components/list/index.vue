@@ -1,5 +1,8 @@
 <template>
-  <div class="cc-list u-pt30" :class="`cc-list--col${col}`">
+  <div
+    class="cc-list"
+    :class="[`cc-list--col${col}`, selectable ? 'is-selectable' : '']"
+  >
     <u-grid :col="col" :border="false">
       <u-grid-item v-for="(item, index) in items" :key="index">
         <div
