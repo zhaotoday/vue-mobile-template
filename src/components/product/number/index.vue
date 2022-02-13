@@ -12,6 +12,6 @@
   </u-number-box>
 </template>
 
-<script src=""></script>
+<script src="./script.js"></script>
 
-<style lang="scss"></style>
+<style lang="scss" src="./style.scss"></style>
