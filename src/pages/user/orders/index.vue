@@ -7,9 +7,9 @@
       />
     </div>
     <ul class="c-orders">
-      <li class="c-orders__item bg-white u-mt18">
+      <li v-for="item in 3" :key="item" class="c-orders__item bg-white u-mt18">
         <div class="c-orders__head">
-          <span class="fs26" style="padding-right: 20rpx">代付款</span>
+          <span class="fs26" style="padding-right: 20rpx">待付款</span>
           <span class="t-g7 fs24">2022-02-14 14:00</span>
         </div>
         <div class="c-orders__body o-media">

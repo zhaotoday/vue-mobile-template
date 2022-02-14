@@ -16,6 +16,25 @@ export default {
       logout,
     } = useUsers();
 
+    const menus = [
+      {
+        name: "我的订单",
+        icon: "order",
+      },
+      {
+        name: "收货地址",
+        icon: "address",
+      },
+      {
+        name: "我的收藏",
+        icon: "heart",
+      },
+      {
+        name: "最近购买",
+        icon: "cart",
+      },
+    ];
+
     onShow(async () => {
       await getUserInfo();
     });
@@ -43,6 +62,7 @@ export default {
       userInfo,
       name,
       avatarUrl,
+      menus,
       navigateTo,
       logoutAndGotoLogin,
       wxMpBind,
