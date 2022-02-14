@@ -4,7 +4,12 @@
       <u-checkbox shape="circle" active-color="#5ac725" size="40rpx" />
     </div>
     <div class="cc-submit__total fs28 t-error">¥123.00</div>
-    <div class="cc-submit__button bg-primary t-white fs28">去结算（26）</div>
+    <div
+      class="cc-submit__button bg-primary t-white fs28"
+      @click="$wx.navigateTo('/pages/pay/index')"
+    >
+      去结算（26）
+    </div>
   </div>
 </template>
 

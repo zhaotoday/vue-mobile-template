@@ -10,7 +10,7 @@
       <li class="c-orders__item bg-white u-mt18">
         <div class="c-orders__head">
           <span class="fs26" style="padding-right: 20rpx">已完成</span>
-          <span class="t-gray7 fs24">2021</span>
+          <span class="t-g7 fs24">2022-02-14 14:00</span>
         </div>
         <div class="c-orders__body o-media">
           <img
@@ -21,7 +21,7 @@
           <div class="o-media__body">
             <div class="cc-products">
               <div>
-                <div class="cc-products__item c10 fs26">abc</div>
+                <div class="cc-products__item fs26">商品名称</div>
               </div>
             </div>
             <div class="b-money fs26">实付 ￥12.00</div>

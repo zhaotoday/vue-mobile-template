@@ -4,7 +4,7 @@
       <i
         class="c-address__icon c-iconfont c-iconfont--address fs40 t-primary"
       ></i>
-      <template v-if="false">
+      <template v-if="true">
         <div class="c-address__detail">
           <h2 class="c-address__title fs28">淮安半岛</h2>
           <p class="c-address__desc t-g7 fs24 u-pt16">赵金添 13950442340</p>
@@ -19,7 +19,12 @@
       <div class="u-pt20 u-pb20 bg-white">
         <div class="c-title c-title--md fs32">商品信息</div>
       </div>
-      <gc-product-list :items="products" :col="1" />
+      <gc-product-list
+        :items="products"
+        :col="1"
+        :edit-number="false"
+        show-number
+      />
     </div>
     <c-form class="u-mb30">
       <c-form-item label="总计">
@@ -31,7 +36,9 @@
     </c-form>
     <c-form>
       <c-form-item label="备注">
-        <c-form-input placeholder="请输入备注信息" />
+        <div class="u-pt10 u-pb10 u-mr20" style="margin-left: 180rpx">
+          <u-textarea placeholder="请输入内容" count />
+        </div>
       </c-form-item>
     </c-form>
     <gc-pay-submit />

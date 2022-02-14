@@ -1,7 +1,7 @@
 @import "~@/assets/styles/utils/index.scss";
 
 @include cc(submit) {
-  @include position--fixed(null, 0, px2rpx(100px), 0);
+  @include position--fixed(null, 0, px2rpx(100px - 4px), 0);
 
   border-top: 1px solid map-get($colors, g4);
   height: px2rpx(100px);

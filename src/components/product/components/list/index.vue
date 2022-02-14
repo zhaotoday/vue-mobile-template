@@ -19,7 +19,8 @@
             <span class="t-g7 u-lt fs24 u-ml10">200.0</span>
           </div>
           <div class="cc-list__number" @click.stop>
-            <gc-product-number />
+            <gc-product-number v-if="editNumber" />
+            <div v-if="showNumber" class="fs24">x1</div>
           </div>
         </div>
       </u-grid-item>

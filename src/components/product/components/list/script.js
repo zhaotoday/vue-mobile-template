@@ -11,6 +11,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    editNumber: {
+      type: Boolean,
+      default: true,
+    },
+    showNumber: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup() {
     const cart = useCart();
