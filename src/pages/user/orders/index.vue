@@ -1,6 +1,6 @@
 <template>
   <div class="p-orders">
-    <div class="bg-white u-pb10">
+    <div class="bg-white u-pb10 u-mb24">
       <u-tabs
         :list="cTabs.items"
         item-style="width: 25%; height: 80rpx; box-sizing: border-box"
@@ -8,7 +8,7 @@
       />
     </div>
     <ul class="c-orders">
-      <li v-for="item in 3" :key="item" class="c-orders__item bg-white u-mt18">
+      <li v-for="item in 3" :key="item" class="c-orders__item bg-white u-mt20">
         <div class="c-orders__head">
           <span class="fs26" style="padding-right: 20rpx">待付款</span>
           <span class="t-g7 fs24">2022-02-14 14:00</span>

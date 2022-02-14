@@ -20,18 +20,22 @@ export default {
       {
         name: "我的订单",
         icon: "order",
+        url: "/pages/user/orders/index",
       },
       {
         name: "收货地址",
         icon: "address",
+        url: "/pages/user/addresses/list/index",
       },
       {
         name: "我的收藏",
         icon: "heart",
+        url: "/pages/user/collections/list/index",
       },
       {
         name: "最近购买",
         icon: "cart",
+        url: "/pages/user/buy/index",
       },
     ];
 

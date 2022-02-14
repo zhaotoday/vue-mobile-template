@@ -26,7 +26,11 @@
     </div>
     <div class="b-entries u-pt30 u-pb30 u-mb24" :class="$bem.box.$">
       <u-grid col="4" :border="false">
-        <u-grid-item v-for="(item, index) in menus" :key="index">
+        <u-grid-item
+          v-for="(item, index) in menus"
+          :key="index"
+          @click="navigateTo({ requiresLogin: true, url: item.url })"
+        >
           <i
             class="c-iconfont fs50 t-primary"
             :class="`c-iconfont--${item.icon}`"
@@ -37,7 +41,7 @@
         </u-grid-item>
       </u-grid>
     </div>
-    <div :class="$bem.box.$" class="u-mb20">
+    <div :class="$bem.box.$">
       <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"
