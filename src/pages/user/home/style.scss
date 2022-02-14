@@ -34,6 +34,10 @@
 
   @include b(entries) {
     line-height: normal;
-    height: px2rpx(100px);
+    height: px2rpx(90px);
+
+    .c-iconfont {
+      @include size(px2rpx(52px), px2rpx(52px));
+    }
   }
 }
