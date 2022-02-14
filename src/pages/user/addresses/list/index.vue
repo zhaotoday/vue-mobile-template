@@ -1,5 +1,5 @@
 <template>
-  <div class="p-user-addresses-list u-pt30">
+  <div class="p-user-addresses-list u-pt24">
     <ul v-for="item in list.items" :key="item" class="b-list">
       <li class="b-list__item" :class="$bem.box.$" @click="select(item)">
         <div class="b-list__head">
@@ -26,12 +26,12 @@
           <div
             class="c-icon-tag c-icon-tag--edit"
             @click.stop="
-              navigateTo(`/pages/my/addresses/form/index?id=${item.id}`)
+              $wx.navigateTo(`/pages/user/addresses/form/index?id=${item.id}`)
             "
           >
             修改
           </div>
-          <div class="c-icon-tag c-icon-tag--del" @click.stop="showDel(item)">
+          <div class="c-icon-tag c-icon-tag--del" @click.stop="del(item)">
             删除
           </div>
         </div>
@@ -50,12 +50,6 @@
     >
       新增
     </u-button>
-    <u-modal
-      :show="cDel.visible"
-      title="请确认"
-      content="确认删除收货地址"
-      @confirm="del"
-    />
   </div>
 </template>
 
