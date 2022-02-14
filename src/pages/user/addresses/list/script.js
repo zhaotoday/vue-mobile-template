@@ -40,11 +40,6 @@ export default {
       total: 0,
     });
 
-    const cDel = reactive({
-      id: 0,
-      visible: false,
-    });
-
     onShow(async () => {
       const { select } = currentRoute.query;
 
@@ -85,28 +80,23 @@ export default {
 
     const del = async ({ id }) => {
       const { confirm } = await wx.showModal({
-        title: "qdfdfqfdsq",
-        content: "新版本已经准备好，是否重启应用？",
-        success(res) {
-          if (res.confirm) {
-            // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
-            updateManager.applyUpdate();
-          }
-        },
+        title: "请确认",
+        content: "确认删除吗？",
       });
-      const {} = await wx.showConfirm({});
-      await addressesApi.delete({ id });
 
-      wx.showToast({ title: "删除成功" });
+      if (confirm) {
+        await addressesApi.delete({ id });
 
-      await renderList();
+        wx.showToast({ title: "删除成功" });
+
+        await renderList();
+      }
     };
 
     return {
       enums,
       loaded,
       list,
-      cDel,
       select,
       setDefault,
       del,
