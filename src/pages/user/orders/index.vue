@@ -4,6 +4,7 @@
       <u-tabs
         :list="cTabs.items"
         item-style="width: 25%; height: 80rpx; box-sizing: border-box"
+        line-color="#5ac725"
       />
     </div>
     <ul class="c-orders">

@@ -10,7 +10,7 @@
 
     @include e(head) {
       position: relative;
-      border-bottom: 1px solid map-get($colors, g4);
+      border-bottom: 1px solid map-get($colors, g2);
     }
 
     @include e(title, desc) {

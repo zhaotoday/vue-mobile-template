@@ -7,6 +7,7 @@
       <u-tabs
         :list="cTabs.items"
         item-style="width: 25%; height: 80rpx; box-sizing: border-box"
+        line-color="#5ac725"
       />
     </div>
     <gc-product-list class="u-pt30" :items="products" :col="2" />
