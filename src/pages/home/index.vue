@@ -1,13 +1,14 @@
 <template>
   <div class="p-home">
-    <div class="bg-primary u-pl30 u-pr30 u-pt30 u-pb30">
+    <div class="bg-primary u-pl30 u-pr30 u-pt26 u-pb26">
       <u-search
         placeholder="请输入商品名称"
         disabled
         :show-action="false"
+        height="60rpx"
         @click="$wx.navigateTo('/pages/products/search/index')"
       />
-      <u-gap height="30rpx" />
+      <u-gap height="26rpx" />
       <u-swiper
         :list="swiperData"
         height="300rpx"

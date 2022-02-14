@@ -2,16 +2,14 @@
 
 page {
   background-color: white;
+  height: 100%;
 }
 
 @include p(categories) {
-  @include b(box) {
-    position: relative;
-  }
+  position: relative;
+  height: 100%;
 
-  @include b(menus) {
-    @include position--absolute(0, null, null, 0);
-
+  @include b(categories) {
     width: px2rpx(180px);
 
     li {
@@ -39,6 +37,9 @@ page {
   }
 
   @include b(products) {
-    margin-left: px2rpx(180px);
+    @include position--absolute(px2rpx(116px), null, null, px2rpx(180px));
+
+    width: calc(100% - 180rpx);
+    height: calc(100% - 116rpx);
   }
 }

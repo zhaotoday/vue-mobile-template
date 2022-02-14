@@ -1,27 +1,27 @@
 <template>
   <div class="p-categories">
-    <div class="bg-white u-pl30 u-pr30 u-pt20 u-pb20">
+    <div class="bg-white u-pl30 u-pr30 u-pt26 u-pb26">
       <u-search
         placeholder="请输入商品名称"
         disabled
         :show-action="false"
+        height="60rpx"
         @click="$wx.navigateTo('/pages/products/search/index')"
       />
     </div>
-    <div class="b-box">
-      <ul class="b-menus fs28">
-        <li
-          v-for="(item, index) in products"
-          :key="item.name"
-          :class="{ 'is-active': index === 2 }"
-        >
-          {{ item.name }}
-        </li>
-      </ul>
-      <div class="b-products">
-        <gc-product-list :items="products" :col="1" />
-      </div>
-    </div>
+    <ul class="b-categories fs28">
+      <li
+        v-for="(item, index) in products"
+        :key="item.name"
+        :class="{ 'is-active': index === cTab.current }"
+        @click="changeCategory(index)"
+      >
+        {{ item.name }}
+      </li>
+    </ul>
+    <scroll-view class="b-products" scroll-y>
+      <gc-product-list :items="products" :col="1" />
+    </scroll-view>
   </div>
 </template>
 

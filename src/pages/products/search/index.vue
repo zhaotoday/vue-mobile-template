@@ -1,10 +1,11 @@
 <template>
   <div class="p-products-search">
-    <div class="bg-white u-pl30 u-pr30 u-pt20 u-pb20 u-mb20">
+    <div class="bg-white u-pl30 u-pr30 u-pt26 u-pb26 u-mb26">
       <u-search
         ref="search"
         placeholder="请输入商品名称"
         focus
+        height="60rpx"
         @search="search"
       />
     </div>
