@@ -1,6 +1,6 @@
 <template>
-  <div class="p-pay u-pt30">
-    <div class="c-address u-mb30" :class="$bem.box.$">
+  <div class="p-pay u-pt24">
+    <div class="c-address u-mb24" :class="$bem.box.$">
       <i
         class="c-address__icon c-iconfont c-iconfont--address fs40 t-primary"
       ></i>
@@ -15,7 +15,7 @@
         请选择收获地址
       </div>
     </div>
-    <div class="u-mb30" :class="$bem.box.$">
+    <div class="u-mb24" :class="$bem.box.$">
       <div class="u-pt20 u-pb20 bg-white">
         <div class="c-title c-title--md fs32">商品信息</div>
       </div>
@@ -26,7 +26,7 @@
         show-number
       />
     </div>
-    <c-form class="u-mb30">
+    <c-form class="u-mb24">
       <c-form-item label="总计">
         <div class="c-form__input fs30 t-error">¥123.00</div>
       </c-form-item>

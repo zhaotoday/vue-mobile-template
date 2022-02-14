@@ -1,6 +1,6 @@
 <template>
   <div class="p-home">
-    <div class="bg-primary u-pl30 u-pr30 u-pt26 u-pb26">
+    <div class="bg-primary u-pl30 u-pr30 u-pt24 u-pb24">
       <u-search
         placeholder="请输入商品名称"
         disabled
