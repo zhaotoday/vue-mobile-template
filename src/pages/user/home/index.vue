@@ -24,11 +24,7 @@
         </u-button>
       </template>
     </div>
-    <div
-      class="u-pt30 u-pb30 u-mb24"
-      :class="$bem.box.$"
-      style="line-height: normal"
-    >
+    <div class="b-entries u-pt30 u-pb30 u-mb24" :class="$bem.box.$">
       <u-grid col="4" :border="false">
         <u-grid-item v-for="(item, index) in menus" :key="index">
           <i

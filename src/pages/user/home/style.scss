@@ -30,17 +30,10 @@
         margin-top: px2rpx(18px);
       }
     }
+  }
 
-    @include e(links) {
-      @include position--absolute(50%, px2rpx(30px));
-
-      transform: translateY(-50%);
-
-      @include c(tag) {
-        @include margin(px2rpx(20px), null, px2rpx(20px));
-
-        display: block;
-      }
-    }
+  @include b(entries) {
+    line-height: normal;
+    height: px2rpx(100px);
   }
 }
