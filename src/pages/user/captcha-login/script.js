@@ -6,12 +6,9 @@ import { useCaptcha } from "vue-mobile/@lr/composables/use-captcha";
 import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { useRoute } from "vue-mobile/composables/use-route";
 
 export default {
   setup() {
-    const { currentRoute } = useRoute();
-
     const { isRequired, isPhoneNumber, isCaptcha, validate } = useValidators();
 
     const { getUserInfo } = useUsers();
@@ -42,27 +39,20 @@ export default {
         if (errors) return;
 
         await usersApi.post({
-          action: "phoneNumberBind",
+          action: "captchaLogin",
           body: {
             phoneNumber,
             captcha,
           },
         });
 
-        wx.showToast({ title: "绑定成功" });
+        wx.showToast({ title: "登录成功" });
         await getUserInfo();
         await useHelpers().sleep(1500);
-
-        if (currentRoute.query.firstBind) {
-          wx.switchTab({ url: "/pages/memo/index" });
-        } else {
-          wx.navigateBack();
-        }
       });
     };
 
     return {
-      currentRoute,
       cForm,
       cCaptcha,
       sendCaptcha,

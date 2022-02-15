@@ -24,9 +24,9 @@
     <div class="t-g7 fs28 u-p20">
       <div
         class="b-register"
-        @click="$wx.navigateTo('/pages/user/account-register/index')"
+        @click="$wx.navigateTo('/pages/user/captcha-login/index')"
       >
-        注册账号
+        验证码登录
       </div>
       <div
         class="b-password"

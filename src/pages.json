@@ -69,6 +69,12 @@
       }
     },
     {
+      "path": "pages/user/captcha-login/index",
+      "style": {
+        "navigationBarTitleText": "验证码登录"
+      }
+    },
+    {
       "path": "pages/user/password/index",
       "style": {
         "navigationBarTitleText": "重置密码"
