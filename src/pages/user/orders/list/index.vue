@@ -8,7 +8,12 @@
       />
     </div>
     <ul class="c-orders">
-      <li v-for="item in 3" :key="item" class="c-orders__item bg-white u-mt20">
+      <li
+        v-for="item in 3"
+        :key="item"
+        class="c-orders__item bg-white u-mt20"
+        @click="$wx.navigateTo('/pages/user/orders/detail/index')"
+      >
         <div class="c-orders__head">
           <span class="fs26" style="padding-right: 20rpx">待付款</span>
           <span class="t-g7 fs24">2022-02-14 14:00</span>
