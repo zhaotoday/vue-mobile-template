@@ -26,7 +26,7 @@
         show-number
       />
     </div>
-    <c-form class="u-mb24">
+    <c-form custom-class="u-mb24">
       <c-form-item label="总计">
         <div class="c-form__input fs30 t-error">¥123.00</div>
       </c-form-item>
