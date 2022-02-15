@@ -40,6 +40,6 @@ page {
     @include position--absolute(px2rpx(112px), null, null, px2rpx(180px));
 
     width: calc(100% - 180rpx);
-    height: calc(100% - 116rpx);
+    height: calc(100% - 112rpx);
   }
 }
