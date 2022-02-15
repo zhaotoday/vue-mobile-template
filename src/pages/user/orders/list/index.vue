@@ -1,5 +1,5 @@
 <template>
-  <div class="p-user-orders">
+  <div class="p-user-orders-list">
     <div class="bg-white u-pb10 u-mb24">
       <u-tabs
         :list="cTabs.items"

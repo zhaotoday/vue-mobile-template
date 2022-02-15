@@ -123,9 +123,15 @@
       }
     },
     {
-      "path": "pages/user/orders/index",
+      "path": "pages/user/orders/list/index",
       "style": {
         "navigationBarTitleText": "我的订单"
+      }
+    },
+    {
+      "path": "pages/user/orders/detail/index",
+      "style": {
+        "navigationBarTitleText": "订单详情"
       }
     },
     {
