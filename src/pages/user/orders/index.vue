@@ -21,11 +21,11 @@
           />
           <div class="o-media__body">
             <div class="cc-products">
-              <div>
-                <div class="cc-products__item fs26">商品名称</div>
-              </div>
+              <div class="cc-products__item fs26">商品名称</div>
             </div>
-            <div class="b-money fs26">实付 ￥12.00</div>
+            <div class="b-money fs26">
+              实付 <span class="t-error">￥12.00</span>
+            </div>
           </div>
         </div>
         <div class="c-orders__foot u-tar">
