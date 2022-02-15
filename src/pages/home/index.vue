@@ -8,7 +8,7 @@
         height="60rpx"
         @click="$wx.navigateTo('/pages/products/search/index')"
       />
-      <u-gap height="26rpx" />
+      <u-gap height="24rpx" />
       <u-swiper
         :list="swiperData"
         height="300rpx"
