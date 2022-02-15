@@ -3,6 +3,7 @@ import { reactive } from "@vue/composition-api";
 import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { onNavigationBarButtonTap } from "uni-composition-api";
 
 export default {
   setup() {
@@ -28,6 +29,10 @@ export default {
         wx.navigateTo({ url: "/pages/memo/index" });
       });
     };
+
+    onNavigationBarButtonTap(() => {
+      wx.navigateTo({ url: "/pages/user/account-login/index" });
+    });
 
     return {
       cForm,

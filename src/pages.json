@@ -48,7 +48,18 @@
     {
       "path": "pages/user/account-login/index",
       "style": {
-        "navigationBarTitleText": "登录"
+        "navigationBarTitleText": "登录",
+        "app-plus": {
+          "titleNView": {
+            "buttons": [
+              {
+                "text": "注册",
+                "float": "right",
+                "fontSize": "16"
+              }
+            ]
+          }
+        }
       }
     },
     {
