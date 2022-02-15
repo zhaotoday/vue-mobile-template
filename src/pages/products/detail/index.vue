@@ -7,7 +7,7 @@
       radius="0"
       indicator-mode="dot"
     />
-    <div class="b-info bg-white u-mb20">
+    <div class="b-info bg-white u-mb24">
       <div class="b-info__name fs32">
         心相印纸巾抽纸整箱大包家用实惠装卫生纸心心相印餐巾纸面巾纸抽
       </div>
