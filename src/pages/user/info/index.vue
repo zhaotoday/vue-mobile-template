@@ -1,5 +1,5 @@
 <template>
-  <div class="p-user-info u-pt30">
+  <div class="p-user-info u-pt24">
     <c-form>
       <c-form-item custom-class="is-link" label="头像">
         <c-avatar-upload

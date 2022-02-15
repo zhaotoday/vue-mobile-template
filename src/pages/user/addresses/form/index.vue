@@ -1,5 +1,5 @@
 <template>
-  <div class="p-user-addresses-form u-pt30">
+  <div class="p-user-addresses-form u-pt24">
     <c-form>
       <c-form-item label="收货人">
         <c-form-input
