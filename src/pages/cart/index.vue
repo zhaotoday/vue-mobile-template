@@ -1,6 +1,7 @@
 <template>
   <div class="p-cart u-pt24 u-pb100">
     <u-empty
+      v-if="false"
       mode="car"
       icon="http://cdn.uviewui.com/uview/empty/data.png"
       margin-top="100rpx"
