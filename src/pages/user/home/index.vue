@@ -33,7 +33,7 @@
         >
           <i
             class="c-iconfont fs50 t-primary"
-            :class="`c-iconfont--${item.icon}`"
+            :class="'c-iconfont--' + item.icon"
           ></i>
           <div class="fs26 u-pt10">
             {{ item.name }}
