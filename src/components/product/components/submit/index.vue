@@ -7,6 +7,7 @@
     <div class="cc-submit__cart">
       <i class="c-iconfont c-iconfont--cart-off fs42"></i>
       <h2 class="fs24">购物车</h2>
+      <div class="cc-submit__count fs22">22</div>
     </div>
     <div class="cc-submit__button bg-primary t-white fs28">加入购物车</div>
   </div>
