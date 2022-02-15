@@ -57,7 +57,7 @@
         />
       </c-form-item>
     </c-form>
-    <u-button custom-class="at-bottom w690" type="primary" @click="submit">
+    <u-button custom-class="at-bottom w702" type="primary" @click="submit">
       注册
     </u-button>
   </div>

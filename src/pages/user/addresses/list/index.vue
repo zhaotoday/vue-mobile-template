@@ -44,7 +44,7 @@
       margin-top="100rpx"
     />
     <u-button
-      custom-class="at-bottom w690"
+      custom-class="at-bottom w702"
       type="primary"
       @click="$wx.navigateTo('/pages/user/addresses/form/index')"
     >

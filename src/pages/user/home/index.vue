@@ -87,7 +87,7 @@
       </ul>
     </div>
     <u-button
-      custom-class="at-bottom w690"
+      custom-class="at-bottom w702"
       type="primary"
       style="bottom: 130rpx"
     >
