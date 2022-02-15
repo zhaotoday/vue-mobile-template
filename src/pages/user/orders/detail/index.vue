@@ -1,5 +1,19 @@
 <template>
-  <div class="p-user-orders-detail u-pt24">
+  <div class="p-user-orders-detail u-pt24 u-pb24">
+    <c-form custom-class="u-mb24">
+      <c-form-item label="订单号">
+        <div class="c-form__input">12456461132</div>
+      </c-form-item>
+      <c-form-item label="下单时间">
+        <div class="c-form__input">2022-02-16 00:00</div>
+      </c-form-item>
+      <c-form-item label="送达时间">
+        <div class="c-form__input">2022-02-16 00:00</div>
+      </c-form-item>
+      <c-form-item label="状态">
+        <div class="c-form__input">已完成</div>
+      </c-form-item>
+    </c-form>
     <div class="c-address u-mb24" :class="$bem.box.$">
       <i
         class="c-address__icon c-iconfont c-iconfont--address fs44 t-primary"
@@ -25,15 +39,13 @@
       <c-form-item label="总计">
         <div class="c-form__input fs30 t-error">¥123.00</div>
       </c-form-item>
-      <c-form-item custom-class="is-link" label="支付方式">
+      <c-form-item label="支付方式">
         <div class="c-form__input">货到付款</div>
       </c-form-item>
     </c-form>
     <c-form>
       <c-form-item label="备注">
-        <div class="u-pt10 u-pb10 u-mr20" style="margin-left: 180rpx">
-          <u-textarea placeholder="请输入内容" count />
-        </div>
+        <div class="c-form__input">备注信息</div>
       </c-form-item>
     </c-form>
   </div>
