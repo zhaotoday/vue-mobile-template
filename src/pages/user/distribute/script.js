@@ -8,10 +8,7 @@ export default {
           name: "全部",
         },
         {
-          name: "待付款",
-        },
-        {
-          name: "待收货",
+          name: "配送中",
         },
         {
           name: "已完成",

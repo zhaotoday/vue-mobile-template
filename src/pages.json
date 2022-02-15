@@ -127,6 +127,12 @@
       "style": {
         "navigationBarTitleText": "我的订单"
       }
+    },
+    {
+      "path": "pages/user/distribute/index",
+      "style": {
+        "navigationBarTitleText": "配送管理"
+      }
     }
   ],
   "globalStyle": {

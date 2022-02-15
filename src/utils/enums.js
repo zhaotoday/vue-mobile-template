@@ -27,4 +27,18 @@ export const enums = {
       label: "其他",
     },
   ],
+  DistributeStatus: [
+    {
+      value: "",
+      label: "全部",
+    },
+    {
+      value: "Doing",
+      label: "配送中",
+    },
+    {
+      value: "Done",
+      label: "已完成",
+    },
+  ],
 };

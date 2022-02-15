@@ -1,9 +1,9 @@
 <template>
-  <div class="p-user-orders">
+  <div class="p-user-distribute">
     <div class="bg-white u-pb10 u-mb24">
       <u-tabs
         :list="cTabs.items"
-        item-style="width: 25%; height: 80rpx; box-sizing: border-box"
+        item-style="width: 33.3%; height: 80rpx; box-sizing: border-box"
         line-color="#5ac725"
       />
     </div>
