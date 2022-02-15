@@ -69,7 +69,7 @@
           @click="
             navigateTo({
               requiresLogin: true,
-              url: '/pages/user/password/index',
+              url: '/pages/user/phone-number/index',
             })
           "
         >

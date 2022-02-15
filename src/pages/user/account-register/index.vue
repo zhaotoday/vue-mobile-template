@@ -1,5 +1,5 @@
 <template>
-  <div class="p-user-account-register u-pt30">
+  <div class="p-user-account-register u-pt24">
     <c-form>
       <c-form-item label="姓名">
         <c-form-input

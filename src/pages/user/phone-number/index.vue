@@ -1,5 +1,5 @@
 <template>
-  <div class="p-user-phone-number u-pt30">
+  <div class="p-user-phone-number u-pt24">
     <div
       v-if="currentRoute.query.firstBind"
       class="t-g7 fs26 u-pl30 u-pr30 u-pb20"
