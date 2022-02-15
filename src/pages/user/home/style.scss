@@ -7,7 +7,7 @@
 
   @include b(info) {
     @include block--center;
-    @include size(px2rpx(690px), px2rpx(120px + 30px * 2));
+    @include size(px2rpx(750px - 24px * 2), px2rpx(120px + 30px * 2));
 
     position: relative;
     border-radius: px2rpx(10px);

@@ -12,7 +12,7 @@ export const useBem = () => {
   };
 
   const box = {
-    $: ["c-box", "u-ml30", "u-mr30", "u-br10", "bg-white"],
+    $: ["c-box", "u-ml24", "u-mr24", "u-br10", "bg-white"],
     elements: {
       body: ["c-box__body"],
     },

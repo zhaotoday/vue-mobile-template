@@ -1,6 +1,6 @@
 <template>
   <div class="p-products-list">
-    <div class="bg-white u-pl30 u-pr30 u-pt24">
+    <div class="bg-white u-pl24 u-pr24 u-pt24">
       <u-search
         ref="search"
         placeholder="请输入商品名称"
