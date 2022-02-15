@@ -20,7 +20,7 @@ export default {
       {
         name: "我的订单",
         icon: "order",
-        url: "/pages/user/orders/index",
+        url: "/pages/user/orders/list/index",
       },
       {
         name: "收货地址",

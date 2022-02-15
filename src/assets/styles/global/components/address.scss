@@ -1,11 +1,18 @@
 @include c(address) {
   position: relative;
   height: px2rpx(130px);
-  background: {
-    image: url("#{$image-url}/components/list/link.png");
-    size: px2rpx(30px) px2rpx(30px);
-    repeat: no-repeat;
-    position: right px2rpx(30px) center;
+
+  @include s(is-link) {
+    background: {
+      image: url("#{$image-url}/components/list/link.png");
+      size: px2rpx(30px) px2rpx(30px);
+      repeat: no-repeat;
+      position: right px2rpx(30px) center;
+    }
+
+    @include c(tag) {
+      right: px2rpx(60px);
+    }
   }
 
   @include e(detail) {
@@ -22,7 +29,7 @@
   }
 
   @include c(tag) {
-    @include position--absolute(50%, px2rpx(60px));
+    @include position--absolute(50%, px2rpx(30px));
 
     transform: translateY(-50%);
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="p-pay u-pt24">
-    <div class="c-address u-mb24" :class="$bem.box.$">
+    <div class="c-address is-link u-mb24" :class="$bem.box.$">
       <i
         class="c-address__icon c-iconfont c-iconfont--address fs44 t-primary"
       ></i>
