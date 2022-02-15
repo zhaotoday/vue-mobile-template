@@ -15,7 +15,7 @@
         line-color="#5ac725"
       />
     </div>
-    <gc-product-list custom-class="u-pt30" :items="products" :col="2" />
+    <gc-product-list custom-class="u-pt24" :items="products" :col="2" />
   </div>
 </template>
 

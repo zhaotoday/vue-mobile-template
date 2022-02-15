@@ -17,7 +17,7 @@
       />
     </div>
     <vc-categories />
-    <gc-product-list custom-class="u-pt30" :items="products" :col="2" />
+    <gc-product-list custom-class="u-pt24" :items="products" :col="2" />
   </div>
 </template>
 

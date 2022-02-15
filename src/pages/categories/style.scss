@@ -37,7 +37,7 @@ page {
   }
 
   @include b(products) {
-    @include position--absolute(px2rpx(116px), null, null, px2rpx(180px));
+    @include position--absolute(px2rpx(112px), null, null, px2rpx(180px));
 
     width: calc(100% - 180rpx);
     height: calc(100% - 116rpx);
