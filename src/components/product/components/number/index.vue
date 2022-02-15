@@ -2,7 +2,7 @@
   <u-number-box class="cc-number" :min="0" :max="max" v-model="value">
     <div slot="minus">
       <div v-if="value" class="cc-number__minus">
-        <u-icon name="minus" size="20rpx" color="#5ac725" />
+        <u-icon name="minus" size="24rpx" color="#5ac725" />
       </div>
     </div>
     <div slot="input">
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="cc-number__plus" slot="plus">
-      <u-icon name="plus" size="20rpx" color="#ffffff" />
+      <u-icon name="plus" size="24rpx" color="#ffffff" />
     </div>
   </u-number-box>
 </template>

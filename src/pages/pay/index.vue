@@ -2,7 +2,7 @@
   <div class="p-pay u-pt24">
     <div class="c-address u-mb24" :class="$bem.box.$">
       <i
-        class="c-address__icon c-iconfont c-iconfont--address fs40 t-primary"
+        class="c-address__icon c-iconfont c-iconfont--address fs44 t-primary"
       ></i>
       <template v-if="true">
         <div class="c-address__detail">

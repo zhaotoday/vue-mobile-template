@@ -1,7 +1,7 @@
 <template>
   <div class="cc-submit">
     <div class="cc-submit__checkbox">
-      <u-checkbox shape="circle" active-color="#5ac725" size="40rpx" />
+      <u-checkbox shape="circle" active-color="#5ac725" size="44rpx" />
     </div>
     <div class="cc-submit__total fs28 t-error">¥123.00</div>
     <div
