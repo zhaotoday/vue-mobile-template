@@ -1,7 +1,11 @@
 <template>
   <div
     class="cc-list"
-    :class="[`cc-list--col${col}`, selectable ? 'is-selectable' : '']"
+    :class="[
+      `cc-list--col${col}`,
+      selectable ? 'is-selectable' : '',
+      customClass,
+    ]"
   >
     <u-grid :col="col" :border="false">
       <u-grid-item v-for="(item, index) in items" :key="index">

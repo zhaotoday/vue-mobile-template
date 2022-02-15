@@ -2,6 +2,7 @@ import { useCart } from "@/composables/use-cart";
 
 export default {
   props: {
+    customClass: [String, Object],
     items: Array,
     col: {
       type: Number,

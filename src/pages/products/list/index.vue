@@ -1,7 +1,12 @@
 <template>
   <div class="p-products-list">
-    <div class="bg-white u-pl30 u-pr30 u-pt20">
-      <u-search ref="search" placeholder="请输入商品名称" focus />
+    <div class="bg-white u-pl30 u-pr30 u-pt24">
+      <u-search
+        ref="search"
+        placeholder="请输入商品名称"
+        height="60rpx"
+        focus
+      />
     </div>
     <div class="bg-white u-pb10">
       <u-tabs
@@ -10,7 +15,7 @@
         line-color="#5ac725"
       />
     </div>
-    <gc-product-list class="u-pt30" :items="products" :col="2" />
+    <gc-product-list custom-class="u-pt30" :items="products" :col="2" />
   </div>
 </template>
 
