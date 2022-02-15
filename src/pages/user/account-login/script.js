@@ -31,7 +31,7 @@ export default {
     };
 
     onNavigationBarButtonTap(() => {
-      wx.navigateTo({ url: "/pages/user/account-login/index" });
+      wx.navigateTo({ url: "/pages/user/account-register/index" });
     });
 
     return {
