@@ -1,26 +1,28 @@
 <template>
-  <div class="p-products-list">
-    <div class="bg-white u-pl24 u-pr24 u-pt24">
+  <div class="p-categories">
+    <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24">
       <u-search
-        ref="search"
         placeholder="请输入商品名称"
+        disabled
+        :show-action="false"
         height="60rpx"
-        focus
+        @click="$wx.navigateTo('/pages/products/search/index')"
       />
     </div>
-    <div class="bg-white u-pb10">
-      <u-tabs
-        :list="products"
-        item-style="height: 80rpx; box-sizing: border-box"
-        line-color="#5ac725"
-      />
-    </div>
-    <gc-product-list
-      custom-class="u-pt24"
-      :items="products"
-      :col="1"
-      :edit-number="false"
-    />
+    <ul class="b-categories fs28">
+      <li
+        v-for="(item, index) in products"
+        :key="item.name"
+        :class="{ 'is-active': index === cTab.current }"
+        @click="changeCategory(index)"
+      >
+        {{ item.name }}
+      </li>
+    </ul>
+    <scroll-view class="b-products" scroll-y>
+      <u-button>新增</u-button>
+      <gc-product-list :items="products" :col="1" :edit-number="false" />
+    </scroll-view>
   </div>
 </template>
 
