@@ -21,22 +21,8 @@
         />
       </c-form-item>
     </c-form>
-    <div class="t-g7 fs28 u-p20">
-      <div
-        class="b-register"
-        @click="$wx.navigateTo('/pages/user/captcha-login/index')"
-      >
-        验证码登录
-      </div>
-      <div
-        class="b-password"
-        @click="$wx.navigateTo('/pages/user/password/index')"
-      >
-        忘记密码？
-      </div>
-    </div>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      登录
+      保存
     </u-button>
   </div>
 </template>
