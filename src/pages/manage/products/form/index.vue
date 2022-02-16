@@ -1,24 +1,32 @@
 <template>
   <div class="p-user-account-login u-pt24">
     <c-form>
-      <c-form-item label="手机号">
+      <c-form-item label="商品名称">
         <c-form-input
-          type="number"
-          maxlength="11"
-          placeholder="请输入手机号"
-          v-model.trim="cForm.model.account"
-          :error="cForm.errors.account"
-          @blur="validate(cForm, 'account')"
+          placeholder="请输入商品名称"
+          v-model.trim="cForm.model.name"
+          :error="cForm.errors.name"
+          @blur="validate(cForm, 'name')"
         />
       </c-form-item>
-      <c-form-item label="密码">
+      <c-form-item label="商品图片">
+        <div class="u-pt16" style="margin-left: 180rpx">
+          <u-upload name="3" multiple :maxCount="10" :previewFullImage="true" />
+        </div>
+      </c-form-item>
+      <c-form-item label="商品价格">
         <c-form-input
-          type="password"
-          placeholder="请输入密码"
-          v-model.trim="cForm.model.password"
-          :error="cForm.errors.password"
-          @blur="validate(cForm, 'password')"
+          type="number"
+          placeholder="请输入商品价格"
+          v-model.trim="cForm.model.price"
+          :error="cForm.errors.price"
+          @blur="validate(cForm, 'price')"
         />
+      </c-form-item>
+      <c-form-item label="商品详情">
+        <div class="u-pt10 u-pb10 u-mt70 u-ml20 u-mr20">
+          <u-textarea placeholder="请输入商品详情" height="300" />
+        </div>
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
