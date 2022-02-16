@@ -7,7 +7,6 @@
     @change="updateProductNumber({ id: productId, number: value })"
   >
     <div slot="minus">
-      {{ products }}-{{ productId }}
       <div v-if="value" class="cc-number__minus">
         <u-icon name="minus" size="24rpx" color="#5ac725" />
       </div>

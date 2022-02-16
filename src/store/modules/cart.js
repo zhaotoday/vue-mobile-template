@@ -10,14 +10,22 @@ const types = helpers.keyMirror({
 
 const mutations = {
   [types.UpdateProductNumber](state, { id, number }) {
+    const index = state.products.findIndex((item) => item.id === id);
+
+    if (index === -1) {
+      state.products.push({ id, number });
+    } else {
+      state.products[index].number = number;
+    }
+
     state.products.push({ id, number });
   },
 };
 
 const actions = {
-  updateProductNumber({ commit }, { product }) {
-    commit(types.UpdateProductNumber, product);
-    return { product };
+  updateProductNumber({ commit }, { id, number }) {
+    commit(types.UpdateProductNumber, { id, number });
+    return { id, number };
   },
 };
 

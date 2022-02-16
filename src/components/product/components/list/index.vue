@@ -24,7 +24,6 @@
           </div>
           <div class="cc-list__number" @click.stop>
             <gc-product-number v-if="editNumber" :product-id="item.id" />
-            -{{ item.id }}
             <div v-if="showNumber" class="fs24">x1</div>
           </div>
         </div>
