@@ -13,12 +13,10 @@ const mutations = {
     const index = state.products.findIndex((item) => item.id === id);
 
     if (index === -1) {
-      state.products.push({ id, number });
+      state.products.push({ id, number: 1 });
     } else {
       state.products[index].number = number;
     }
-
-    state.products.push({ id, number });
   },
 };
 

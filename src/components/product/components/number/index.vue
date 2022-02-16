@@ -4,7 +4,9 @@
     :min="0"
     :max="max"
     v-model="value"
-    @change="updateProductNumber({ id: productId, number: value })"
+    @change="
+      ({ value }) => updateProductNumber({ id: productId, number: value })
+    "
   >
     <div slot="minus">
       <div v-if="value" class="cc-number__minus">

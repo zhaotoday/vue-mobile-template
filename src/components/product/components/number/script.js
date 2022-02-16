@@ -18,7 +18,7 @@ export default {
         const found = products.value.find(
           (item) => item.id === props.productId
         );
-        return found ? found.id : 0;
+        return found ? found.number : 0;
       })();
     });
 
