@@ -139,6 +139,12 @@
       "style": {
         "navigationBarTitleText": "配送管理"
       }
+    },
+    {
+      "path": "pages/manage/products/list/index",
+      "style": {
+        "navigationBarTitleText": "商品管理"
+      }
     }
   ],
   "globalStyle": {
