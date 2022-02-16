@@ -1,6 +1,8 @@
 import { ref } from "@vue/composition-api";
 import Categories from "./components/categories";
 import products from "@/mock/products.json";
+import { onShow } from "uni-composition-api";
+import { useCart } from "@/composables/use-cart";
 
 export default {
   components: {
@@ -14,6 +16,10 @@ export default {
     ];
 
     const value = ref(0);
+
+    onShow(() => {
+      useCart().renderProductNumbers();
+    });
 
     return {
       products,
