@@ -15,7 +15,11 @@ const mutations = {
     if (index === -1) {
       state.products.push({ id, number: 1 });
     } else {
-      state.products[index].number = number;
+      if (number) {
+        state.products[index].number = number;
+      } else {
+        state.products.splice(index, 1);
+      }
     }
   },
 };

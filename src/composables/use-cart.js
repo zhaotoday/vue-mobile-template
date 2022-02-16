@@ -8,7 +8,13 @@ export const useCart = () => {
   const { updateProductNumber } = useActions(["updateProductNumber"]);
 
   const renderProductNumbers = () => {
-    wx.setTabBarBadge({ index: 2, text: products.value.length + "" });
+    const count = products.value.length;
+
+    if (count) {
+      wx.setTabBarBadge({ index: 2, text: count + "" });
+    } else {
+      wx.removeTabBarBadge({ index: 2 });
+    }
   };
 
   return {
