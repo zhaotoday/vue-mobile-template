@@ -145,6 +145,12 @@
       "style": {
         "navigationBarTitleText": "商品管理"
       }
+    },
+    {
+      "path": "pages/manage/products/form/index",
+      "style": {
+        "navigationBarTitleText": "新增商品"
+      }
     }
   ],
   "globalStyle": {
