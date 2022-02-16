@@ -20,7 +20,14 @@
       </li>
     </ul>
     <scroll-view class="b-products" scroll-y>
-      <u-button>新增</u-button>
+      <u-button
+        custom-class="u-ml24 u-mb24"
+        custom-style="width: 160rpx"
+        type="primary"
+        size="small"
+      >
+        新增商品
+      </u-button>
       <gc-product-list :items="products" :col="1" :edit-number="false" />
     </scroll-view>
   </div>
