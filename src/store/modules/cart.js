@@ -5,16 +5,18 @@ const state = {
 };
 
 const types = helpers.keyMirror({
-  UpdateProduct: null,
+  UpdateProductNumber: null,
 });
 
 const mutations = {
-  [types.UpdateProduct](state, { product }) {},
+  [types.UpdateProductNumber](state, { id, number }) {
+    state.products.push({ id, number });
+  },
 };
 
 const actions = {
-  updateProduct({ commit }, { product }) {
-    commit(types.UpdateProduct, product);
+  updateProductNumber({ commit }, { product }) {
+    commit(types.UpdateProductNumber, product);
     return { product };
   },
 };

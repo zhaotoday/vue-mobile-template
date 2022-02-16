@@ -1,6 +1,13 @@
 <template>
-  <u-number-box class="cc-number" :min="0" :max="max" v-model="value">
+  <u-number-box
+    class="cc-number"
+    :min="0"
+    :max="max"
+    v-model="value"
+    @change="cart.updateProductNumber({ id: productId, number: value })"
+  >
     <div slot="minus">
+      --{{ products }}
       <div v-if="value" class="cc-number__minus">
         <u-icon name="minus" size="24rpx" color="#5ac725" />
       </div>

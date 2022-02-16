@@ -1,4 +1,5 @@
 import { useCart } from "@/composables/use-cart";
+import { onMounted } from "@vue/composition-api";
 
 export default {
   props: {
@@ -22,8 +23,12 @@ export default {
     },
   },
   setup() {
-    const cart = useCart();
+    const { showNumber } = useCart();
 
-    cart.showNumber();
+    onMounted(() => {
+      showNumber();
+    });
+
+    return {};
   },
 };
