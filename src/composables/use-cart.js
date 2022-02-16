@@ -7,13 +7,13 @@ export const useCart = () => {
   const { products } = useState(["products"]);
   const { updateProductNumber } = useActions(["updateProductNumber"]);
 
-  const showNumber = () => {
-    wx.setTabBarBadge({ index: 2, text: "11" });
+  const renderProductNumbers = () => {
+    wx.setTabBarBadge({ index: 2, text: products.value.length + "" });
   };
 
   return {
-    showNumber,
     products,
     updateProductNumber,
+    renderProductNumbers,
   };
 };

@@ -22,13 +22,4 @@ export default {
       default: false,
     },
   },
-  setup() {
-    const { showNumber } = useCart();
-
-    onMounted(() => {
-      showNumber();
-    });
-
-    return {};
-  },
 };
