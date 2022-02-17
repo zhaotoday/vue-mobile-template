@@ -49,8 +49,8 @@ const mutations = {
   [types.SelectProduct](state, { product }) {
     product.selected = !product.selected;
   },
-  [types.SelectAllProducts](state, { product }) {
-    product.selected = !product.selected;
+  [types.SelectAllProducts](state, { selected }) {
+    state.products = state.products.map((item) => ({ ...item, selected }));
   },
 };
 
@@ -64,8 +64,11 @@ const actions = {
     return { product };
   },
   selectAllProducts({ commit, getters }) {
-    commit(types.SelectAllProducts, { selected: !getters.allProductsSelected });
-    return null;
+    const selected = !getters.allProductsSelected;
+
+    commit(types.SelectAllProducts, { selected });
+
+    return { selected };
   },
 };
 

@@ -5,8 +5,8 @@
         shape="circle"
         active-color="#5ac725"
         size="44rpx"
-        :checked="allSelected"
-        @change="selectAll"
+        :checked="allProductsSelected"
+        @change="selectAllProducts"
       />
     </div>
     <div class="cc-submit__total fs28 t-error">¥{{ totalPrice }}</div>

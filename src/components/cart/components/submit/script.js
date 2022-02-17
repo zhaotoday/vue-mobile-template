@@ -2,12 +2,14 @@ import { useCart } from "@/composables/use-cart";
 
 export default {
   setup() {
-    const { products, totalPrice, selectAll } = useCart();
+    const { products, totalPrice, allProductsSelected, selectAllProducts } =
+      useCart();
 
     return {
       products,
       totalPrice,
-      selectAll,
+      allProductsSelected,
+      selectAllProducts,
     };
   },
 };
