@@ -26,7 +26,7 @@ export default {
     });
 
     const updateNumber = ({ value }) => {
-      updateProductNumber({ ...props.product, number: value });
+      updateProductNumber({ product: props.product, number: value });
       renderProductNumbers();
     };
 

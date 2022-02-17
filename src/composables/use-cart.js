@@ -3,8 +3,12 @@ import { store } from "@/store";
 import { createNamespacedHelpers } from "vuex-composition-helpers";
 
 export const useCart = () => {
-  const { useState, useActions } = createNamespacedHelpers(store, "cart");
+  const { useState, useGetters, useActions } = createNamespacedHelpers(
+    store,
+    "cart"
+  );
   const { products } = useState(["products"]);
+  const { totalPrice } = useGetters(["totalPrice"]);
   const { updateProductNumber } = useActions(["updateProductNumber"]);
 
   const renderProductNumbers = () => {
@@ -19,6 +23,7 @@ export const useCart = () => {
 
   return {
     products,
+    totalPrice,
     updateProductNumber,
     renderProductNumbers,
   };

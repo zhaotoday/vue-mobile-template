@@ -1,22 +1,30 @@
 import helpers from "jt-helpers";
 
-const state = {
-  products: [],
-};
-
 const types = helpers.keyMirror({
   UpdateProductNumber: null,
 });
 
+const state = {
+  products: [],
+};
+
+const getters = {
+  totalPrice(state) {
+    return state.products
+      .map(({ price, number }) => price * number)
+      .reduce((prev, current) => prev + current);
+  },
+};
+
 const mutations = {
-  [types.UpdateProductNumber](state, product) {
+  [types.UpdateProductNumber](state, { product, number }) {
     const index = state.products.findIndex((item) => item.id === product.id);
 
     if (index === -1) {
       state.products.push({ ...product, number: 1 });
     } else {
-      if (product.number) {
-        state.products[index].number = product.number;
+      if (number) {
+        state.products[index].number = number;
       } else {
         state.products.splice(index, 1);
       }
@@ -25,15 +33,16 @@ const mutations = {
 };
 
 const actions = {
-  updateProductNumber({ commit }, product) {
-    commit(types.UpdateProductNumber, product);
-    return product;
+  updateProductNumber({ commit }, { product, number }) {
+    commit(types.UpdateProductNumber, { product, number });
+    return { product, number };
   },
 };
 
 export default {
   namespaced: true,
   state,
+  getters,
   mutations,
   actions,
 };

@@ -19,7 +19,7 @@
           <img class="cc-list__image" mode="aspectFill" :src="item.url" />
           <div class="cc-list__name fs28">{{ item.name }}</div>
           <div class="cc-list__price">
-            <span class="t-error fs26">¥100.0</span>
+            <span class="t-error fs26">¥{{ item.price }}</span>
             <span class="t-g7 u-lt fs24 u-ml10">200.0</span>
           </div>
           <div class="cc-list__number" @click.stop>
