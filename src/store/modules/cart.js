@@ -60,7 +60,7 @@ const actions = {
     return { product, number };
   },
   selectProduct({ commit }, { product }) {
-    commit(types.SelectAllProducts, { product });
+    commit(types.SelectProduct, { product });
     return { product };
   },
   selectAllProducts({ commit, getters }) {
