@@ -1,4 +1,4 @@
-import { computed, onMounted, ref } from "@vue/composition-api";
+import { onMounted, ref } from "@vue/composition-api";
 import { useCart } from "@/composables/use-cart";
 
 export default {
@@ -7,7 +7,10 @@ export default {
       type: Number,
       default: 10000,
     },
-    productId: Number,
+    product: {
+      type: Object,
+      default: () => ({}),
+    },
   },
   setup(props) {
     const { products, updateProductNumber, renderProductNumbers } = useCart();
@@ -16,14 +19,14 @@ export default {
     onMounted(() => {
       value.value = (() => {
         const found = products.value.find(
-          (item) => item.id === props.productId
+          (item) => item.id === props.product.id
         );
         return found ? found.number : 0;
       })();
     });
 
     const updateNumber = ({ value }) => {
-      updateProductNumber({ id: props.productId, number: value });
+      updateProductNumber({ ...props.product, number: value });
       renderProductNumbers();
     };
 

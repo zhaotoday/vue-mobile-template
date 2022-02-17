@@ -9,14 +9,14 @@ const types = helpers.keyMirror({
 });
 
 const mutations = {
-  [types.UpdateProductNumber](state, { id, number }) {
-    const index = state.products.findIndex((item) => item.id === id);
+  [types.UpdateProductNumber](state, product) {
+    const index = state.products.findIndex((item) => item.id === product.id);
 
     if (index === -1) {
-      state.products.push({ id, number: 1 });
+      state.products.push({ ...product, number: 1 });
     } else {
-      if (number) {
-        state.products[index].number = number;
+      if (product.number) {
+        state.products[index].number = product.number;
       } else {
         state.products.splice(index, 1);
       }
@@ -25,9 +25,9 @@ const mutations = {
 };
 
 const actions = {
-  updateProductNumber({ commit }, { id, number }) {
-    commit(types.UpdateProductNumber, { id, number });
-    return { id, number };
+  updateProductNumber({ commit }, product) {
+    commit(types.UpdateProductNumber, product);
+    return product;
   },
 };
 
