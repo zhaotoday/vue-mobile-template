@@ -9,7 +9,10 @@ export const useCart = () => {
   );
   const { products } = useState(["products"]);
   const { totalPrice } = useGetters(["totalPrice"]);
-  const { updateProductNumber } = useActions(["updateProductNumber"]);
+  const { updateProductNumber, selectProduct } = useActions([
+    "updateProductNumber",
+    "selectProduct",
+  ]);
 
   const renderProductNumbers = () => {
     const count = products.value.length;
@@ -25,6 +28,7 @@ export const useCart = () => {
     products,
     totalPrice,
     updateProductNumber,
+    selectProduct,
     renderProductNumbers,
   };
 };

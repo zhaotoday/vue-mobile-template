@@ -2,6 +2,7 @@ import helpers from "jt-helpers";
 
 const types = helpers.keyMirror({
   UpdateProductNumber: null,
+  SelectProduct: null,
 });
 
 const state = {
@@ -11,6 +12,7 @@ const state = {
 const getters = {
   totalPrice(state) {
     return state.products
+      .filter(({ selected }) => selected)
       .map(({ price, number }) => price * number)
       .reduce((prev, current) => prev + current);
   },
@@ -21,7 +23,7 @@ const mutations = {
     const index = state.products.findIndex((item) => item.id === product.id);
 
     if (index === -1) {
-      state.products.push({ ...product, number: 1 });
+      state.products.push({ ...product, selected: true, number: 1 });
     } else {
       if (number) {
         state.products[index].number = number;
@@ -30,12 +32,19 @@ const mutations = {
       }
     }
   },
+  [types.SelectProduct](state, { product }) {
+    product.selected = !product.selected;
+  },
 };
 
 const actions = {
   updateProductNumber({ commit }, { product, number }) {
     commit(types.UpdateProductNumber, { product, number });
     return { product, number };
+  },
+  selectProduct({ commit }, { product }) {
+    commit(types.SelectProduct, { product });
+    return { product };
   },
 };
 
