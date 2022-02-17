@@ -6,6 +6,7 @@
         active-color="#5ac725"
         size="44rpx"
         :checked="allProductsSelected"
+        :disabled="!products.length"
         @change="selectAllProducts"
       />
     </div>
