@@ -25,7 +25,7 @@ const getters = {
   allProductsSelected(state) {
     const { products } = state;
 
-    return (
+    return !!(
       products.length &&
       products.filter(({ selected }) => selected).length === products.length
     );
