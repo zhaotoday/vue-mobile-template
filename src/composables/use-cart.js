@@ -8,10 +8,14 @@ export const useCart = () => {
     "cart"
   );
   const { products } = useState(["products"]);
-  const { totalPrice } = useGetters(["totalPrice"]);
-  const { updateProductNumber, selectProduct } = useActions([
+  const { totalPrice, allProductsSelected } = useGetters([
+    "totalPrice",
+    "allProductsSelected",
+  ]);
+  const { updateProductNumber, selectProduct, selectAllProducts } = useActions([
     "updateProductNumber",
     "selectProduct",
+    "selectAllProducts",
   ]);
 
   const renderProductNumbers = () => {
@@ -27,8 +31,10 @@ export const useCart = () => {
   return {
     products,
     totalPrice,
+    allProductsSelected,
     updateProductNumber,
     selectProduct,
+    selectAllProducts,
     renderProductNumbers,
   };
 };

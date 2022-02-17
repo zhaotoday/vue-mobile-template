@@ -14,7 +14,13 @@
           @click="$wx.navigateTo('/pages/products/detail/index')"
         >
           <div class="cc-list__checkbox">
-            <u-checkbox shape="circle" active-color="#5ac725" size="44rpx" />
+            <u-checkbox
+              shape="circle"
+              active-color="#5ac725"
+              size="44rpx"
+              :checked="item.selected"
+              @change="selectProduct({ product: item })"
+            />
           </div>
           <img class="cc-list__image" mode="aspectFill" :src="item.url" />
           <div class="cc-list__name fs28">{{ item.name }}</div>

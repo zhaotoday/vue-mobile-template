@@ -1,5 +1,4 @@
 import { useCart } from "@/composables/use-cart";
-import { onMounted } from "@vue/composition-api";
 
 export default {
   props: {
@@ -21,5 +20,12 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  setup() {
+    const { selectProduct } = useCart();
+
+    return {
+      selectProduct,
+    };
   },
 };

@@ -3,6 +3,7 @@ import helpers from "jt-helpers";
 const types = helpers.keyMirror({
   UpdateProductNumber: null,
   SelectProduct: null,
+  SelectAllProducts: null,
 });
 
 const state = {
@@ -11,10 +12,23 @@ const state = {
 
 const getters = {
   totalPrice(state) {
-    return state.products
-      .filter(({ selected }) => selected)
-      .map(({ price, number }) => price * number)
-      .reduce((prev, current) => prev + current);
+    const selectedProducts = state.products.filter(({ selected }) => selected);
+
+    if (selectedProducts.length) {
+      return selectedProducts
+        .map(({ price, number }) => price * number)
+        .reduce((prev, current) => prev + current);
+    } else {
+      return 0;
+    }
+  },
+  allProductsSelected(state) {
+    const { products } = state;
+
+    return (
+      products.length &&
+      products.filter(({ selected }) => selected).length === products.length
+    );
   },
 };
 
@@ -35,6 +49,9 @@ const mutations = {
   [types.SelectProduct](state, { product }) {
     product.selected = !product.selected;
   },
+  [types.SelectAllProducts](state, { product }) {
+    product.selected = !product.selected;
+  },
 };
 
 const actions = {
@@ -43,8 +60,12 @@ const actions = {
     return { product, number };
   },
   selectProduct({ commit }, { product }) {
-    commit(types.SelectProduct, { product });
+    commit(types.SelectAllProducts, { product });
     return { product };
+  },
+  selectAllProducts({ commit, getters }) {
+    commit(types.SelectAllProducts, { selected: !getters.allProductsSelected });
+    return null;
   },
 };
 
