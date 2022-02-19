@@ -2,13 +2,10 @@
   <div class="p-user-home u-pt24">
     <div class="b-info bg-white u-mb24">
       <template v-if="loggedIn()">
-        <u-avatar
-          size="120rpx"
-          src="https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83epbyHPGNLu9sAq9NSnaVqZkGKWzTYZaoNDBTfdfDH4kvbiaWtP1RMIK9B9Lqj4Q7WYNtO8JsLSdGkw/132"
-        />
+        <u-avatar size="120rpx" :src="avatarUrl" />
         <div class="b-info__extra">
-          <h2 class="fs30">赵金添{{ name }}</h2>
-          <h3 class="fs26">13950442340</h3>
+          <h2 class="fs30">{{ name }}</h2>
+          <h3 class="fs26" v-if="user.phoneNumber">{{ user.phoneNumber }}</h3>
         </div>
       </template>
       <template v-else>

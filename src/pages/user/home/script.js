@@ -6,15 +6,8 @@ import { useHelpers } from "@/composables/use-helpers";
 
 export default {
   setup() {
-    const {
-      loggedIn,
-      userInfo,
-      getUserInfo,
-      navigateTo,
-      name,
-      avatarUrl,
-      logout,
-    } = useUsers();
+    const { loggedIn, user, getUserInfo, navigateTo, name, avatarUrl, logout } =
+      useUsers();
 
     const menus = [
       {
@@ -63,7 +56,7 @@ export default {
     return {
       defaultAvatarUrl,
       loggedIn,
-      userInfo,
+      user,
       name,
       avatarUrl,
       menus,
