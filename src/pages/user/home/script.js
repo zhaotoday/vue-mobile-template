@@ -33,7 +33,7 @@ export default {
     ];
 
     onShow(async () => {
-      await getUserInfo();
+      if (loggedIn()) await getUserInfo();
     });
 
     const logoutAndGotoLogin = async () => {
