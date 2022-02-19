@@ -7,13 +7,13 @@ import { useMockUser } from "vue-mobile/@lr/composables/use-mock-user";
 export default {
   setup() {
     const { getUserProfileAndLogin } = useWxMp();
-    const { wxMpLogin } = useUsers();
+    const { wxLogin } = useUsers();
     const { mockLogin } = useMockUser();
 
     const login = async () => {
       try {
         // #ifdef MP
-        await wxMpLogin(await getUserProfileAndLogin());
+        await wxLogin(await getUserProfileAndLogin());
         // #endif
 
         // #ifdef H5
