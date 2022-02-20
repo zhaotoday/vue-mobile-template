@@ -8,12 +8,15 @@ import { onShow } from "uni-composition-api";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
+import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 
 export default {
   setup() {
     const { isRequired, validate } = useValidators();
 
     const { enums } = useEnums();
+
+    const { getHeaders } = useAuth();
 
     const { getUserInfo, avatarUrl } = useUsers();
 
@@ -36,7 +39,7 @@ export default {
     const onAvatarUpload = async (res) => {
       const { statusCode, data } = await wx.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
-        header: useUsers().getHeaders(),
+        header: getHeaders(),
         filePath: res.path,
         name: "file",
       });
