@@ -26,14 +26,13 @@ export default {
     });
     // #endif
 
-    onShow(() => {
-      phoneNumber.value.show();
-    });
-
     const login = async () => {
       try {
         // #ifdef MP
-        await wxLogin(await getUserProfileAndLogin());
+        const a = await wxLogin(await getUserProfileAndLogin());
+
+        console.log(a, "--");
+        phoneNumber.value.show();
         // #endif
 
         // #ifdef H5

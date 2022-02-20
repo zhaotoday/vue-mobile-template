@@ -7,7 +7,7 @@ export default {
     const { getUserInfo } = useUsers();
 
     const cModal = reactive({
-      visible: true,
+      visible: false,
     });
 
     const show = () => {
