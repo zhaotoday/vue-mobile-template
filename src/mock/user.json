@@ -1,10 +1,10 @@
 {
-  "user":  {
+  "user": {
     "id": 1,
     "name": null,
     "nickName": "赵金添",
     "avatarFileId": null,
-    "phoneNumber": null,
+    "phoneNumber": "13950442340",
     "wxNickName": "赵金添",
     "wxAvatarUrl": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eopRYpiak5MdicbcLY43zibSP1HTnqU6yHhqnQ614sxV6slPpxJzgXfuzJUav5TKzKUbP15uQQBWIicqg/132"
   },
