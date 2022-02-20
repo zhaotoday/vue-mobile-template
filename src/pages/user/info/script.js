@@ -1,5 +1,6 @@
-import { reactive } from "@vue/composition-api";
+import defaultAvatarUrl from "vue-mobile/assets/images/components/avatar/default.png";
 import wx from "wx-bridge";
+import { reactive } from "@vue/composition-api";
 import { useValidators } from "vue-validation";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
@@ -71,6 +72,7 @@ export default {
     };
 
     return {
+      defaultAvatarUrl,
       enums,
       cForm,
       avatarUrl,

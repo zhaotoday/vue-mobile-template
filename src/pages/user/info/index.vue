@@ -7,7 +7,7 @@
           sel-width="500upx"
           sel-height="500upx"
           @upload="onAvatarUpload"
-          :avatar-src="avatarUrl"
+          :avatar-src="avatarUrl || defaultAvatarUrl"
           inner="true"
           can-rotate="false"
         />
