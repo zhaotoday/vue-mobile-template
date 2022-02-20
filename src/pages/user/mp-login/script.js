@@ -3,7 +3,7 @@ import { useHelpers } from "@/composables/use-helpers";
 import { useWxMp } from "vue-mobile/@lr/composables/use-wx-mp";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useMockUser } from "vue-mobile/@lr/composables/use-mock-user";
-import { onHide, onShow } from "uni-composition-api";
+import { onLoad, onUnload } from "uni-composition-api";
 
 export default {
   setup() {
@@ -12,12 +12,12 @@ export default {
     const { wxLogin } = useUsers();
     const { mockLogin } = useMockUser();
 
-    // #ifdefMP
-    onShow(async () => {
+    // #ifdef MP
+    onLoad(async () => {
       await onRefreshLoginCode();
     });
 
-    onHide(() => {
+    onUnload(() => {
       offRefreshLoginCode();
     });
     // #endif
