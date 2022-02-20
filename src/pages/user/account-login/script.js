@@ -26,7 +26,7 @@ export default {
 
         wx.showToast({ title: "登录成功" });
         await useHelpers().sleep(1500);
-        wx.navigateTo({ url: "/pages/memo/index" });
+        wx.switchTab({ url: "/pages/home/index" });
       });
     };
 

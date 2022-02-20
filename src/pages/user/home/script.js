@@ -36,7 +36,7 @@ export default {
       if (loggedIn()) await getUserInfo();
     });
 
-    const logoutAndGotoLogin = async () => {
+    const logoutAndGotoHome = async () => {
       const { confirm } = await wx.showModal({
         title: "请确认",
         content: "确认退出账号吗？",
@@ -47,7 +47,7 @@ export default {
         await logout();
         wx.showToast({ title: "退出成功" });
         await useHelpers().sleep(1500);
-        wx.navigateTo({ url: "/pages/user/mp-login/index" });
+        wx.navigateTo({ url: "/pages/home/index" });
       }
     };
 
@@ -61,8 +61,9 @@ export default {
       avatarUrl,
       menus,
       navigateTo,
-      logoutAndGotoLogin,
+      logoutAndGotoHome,
       wxMpBind,
+      logout,
     };
   },
 };

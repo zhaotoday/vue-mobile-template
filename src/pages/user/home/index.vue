@@ -2,7 +2,7 @@
   <div class="p-user-home u-pt24">
     <div class="b-info bg-white u-mb24">
       <template v-if="loggedIn()">
-        <u-avatar size="120rpx" :src="avatarUrl" />
+        <u-avatar size="120rpx" :src="avatarUrl || defaultAvatarUrl" />
         <div class="b-info__extra">
           <h2 class="fs30">{{ name }}</h2>
           <h3 class="fs26" v-if="user.phoneNumber">{{ user.phoneNumber }}</h3>
@@ -87,8 +87,9 @@
       custom-class="at-bottom w702"
       type="primary"
       style="bottom: 130rpx"
+      @click="logoutAndGotoHome"
     >
-      退出登录
+      退出账号
     </u-button>
   </div>
 </template>
