@@ -3,8 +3,8 @@ import { useHelpers } from "@/composables/use-helpers";
 import { useWxMp } from "vue-mobile/@lr/composables/use-wx-mp";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useMockUser } from "vue-mobile/@lr/composables/use-mock-user";
-import { onLoad, onUnload } from "uni-composition-api";
-import { reactive } from "@vue/composition-api";
+import { onLoad, onShow, onUnload } from "uni-composition-api";
+import { reactive, ref } from "@vue/composition-api";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 
 export default {
@@ -14,9 +14,7 @@ export default {
     const { wxLogin } = useUsers();
     const { mockLogin } = useMockUser();
 
-    const cPhoneNumber = reactive({
-      visible: true,
-    });
+    const phoneNumber = ref(null);
 
     // #ifdef MP
     onLoad(async () => {
@@ -27,6 +25,10 @@ export default {
       offRefreshLoginCode();
     });
     // #endif
+
+    onShow(() => {
+      phoneNumber.value.show();
+    });
 
     const login = async () => {
       try {
@@ -46,20 +48,10 @@ export default {
       }
     };
 
-    const onGetPhoneNumber = async (e) => {
-      await usersApi.post({
-        action: "getWxPhoneNumber",
-        body: {
-          code: e.detail.code,
-        },
-      });
-    };
-
     return {
       logoUrl: require("@/static/logo.png"),
+      phoneNumber,
       login,
-      cPhoneNumber,
-      onGetPhoneNumber,
     };
   },
 };
