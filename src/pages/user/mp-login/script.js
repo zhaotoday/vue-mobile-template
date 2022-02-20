@@ -29,19 +29,24 @@ export default {
     const login = async () => {
       try {
         // #ifdef MP
-        const a = await wxLogin(await getUserProfileAndLogin());
+        const { user } = await wxLogin(await getUserProfileAndLogin());
 
-        console.log(a, "--");
-        phoneNumber.value.show();
+        if (!user.phoneNumber) {
+          phoneNumber.value.show();
+        } else {
+          wx.showToast({ title: "登陆成功" });
+          await useHelpers().sleep(1500);
+          wx.navigateBack();
+        }
         // #endif
 
         // #ifdef H5
         await mockLogin();
-        // #endif
-
         wx.showToast({ title: "登陆成功" });
         await useHelpers().sleep(1500);
         wx.navigateBack();
+
+        // #endif
       } catch (e) {
         wx.navigateBack();
       }
