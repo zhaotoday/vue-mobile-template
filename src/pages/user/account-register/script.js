@@ -37,7 +37,7 @@ export default {
       rules: () => ({ phoneNumber: cForm.rules.phoneNumber }),
       request: () =>
         publicUsersApi.post({
-          action: "sendCaptcha",
+          action: "sendSmsCaptcha",
           body: {
             phoneNumber: cForm.model.phoneNumber,
           },
