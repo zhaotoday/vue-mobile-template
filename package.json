@@ -39,7 +39,7 @@
     "uni-simple-router": "^2.0.8-beta.3",
     "uview-ui": "2.0.27",
     "vue": "^2.6.14",
-    "vue-mobile": "^1.2.20",
+    "vue-mobile": "^1.2.22",
     "vue-validation": "^1.0.3",
     "vuex": "^3.6.2",
     "vuex-composition-helpers": "^1.1.0",
