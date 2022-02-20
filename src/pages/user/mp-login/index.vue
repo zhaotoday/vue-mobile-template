@@ -18,7 +18,7 @@
         </u-col>
       </u-row>
     </div>
-    <gc-phone-number ref="phoneNumber" />
+    <lr-phone-number ref="phoneNumber" />
   </div>
 </template>
 
