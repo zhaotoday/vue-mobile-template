@@ -19,14 +19,17 @@ export default {
     const onGetPhoneNumber = async (e) => {
       cModal.visible = false;
 
-      await usersApi.post({
-        action: "getWxPhoneNumber",
-        body: { code: e.detail.code },
-      });
+      if (!e.errMsg) {
+        await usersApi.post({
+          action: "getWxPhoneNumber",
+          body: { code: e.detail.code },
+        });
 
-      await getUserInfo();
-      wx.showToast({ title: "登陆成功" });
-      await useHelpers().sleep(1500);
+        await getUserInfo();
+        wx.showToast({ title: "登陆成功" });
+        await useHelpers().sleep(1500);
+      }
+
       wx.navigateBack();
     };
 

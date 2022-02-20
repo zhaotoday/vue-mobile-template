@@ -5,6 +5,7 @@
     :show-confirm-button="false"
     :show-cancel-button="true"
     cancel-text="拒绝"
+    @cancel="$wx.navigateBack()"
   >
     <u-button
       custom-class="u-mt20"

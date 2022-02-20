@@ -44,7 +44,6 @@ export default {
         wx.showToast({ title: "登陆成功" });
         await useHelpers().sleep(1500);
         wx.navigateBack();
-
         // #endif
       } catch (e) {
         wx.navigateBack();
