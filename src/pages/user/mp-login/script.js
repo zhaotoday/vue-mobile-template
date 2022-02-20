@@ -4,6 +4,8 @@ import { useWxMp } from "vue-mobile/@lr/composables/use-wx-mp";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useMockUser } from "vue-mobile/@lr/composables/use-mock-user";
 import { onLoad, onUnload } from "uni-composition-api";
+import { reactive } from "@vue/composition-api";
+import { usersApi } from "vue-mobile/@lr/apis/client/users";
 
 export default {
   setup() {
@@ -11,6 +13,10 @@ export default {
       useWxMp();
     const { wxLogin } = useUsers();
     const { mockLogin } = useMockUser();
+
+    const cPhoneNumber = reactive({
+      visible: true,
+    });
 
     // #ifdef MP
     onLoad(async () => {
@@ -40,9 +46,20 @@ export default {
       }
     };
 
+    const onGetPhoneNumber = async (e) => {
+      await usersApi.post({
+        action: "getWxPhoneNumber",
+        body: {
+          code: e.detail.code,
+        },
+      });
+    };
+
     return {
       logoUrl: require("@/static/logo.png"),
       login,
+      cPhoneNumber,
+      onGetPhoneNumber,
     };
   },
 };

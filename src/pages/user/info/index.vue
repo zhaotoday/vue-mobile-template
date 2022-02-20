@@ -1,9 +1,9 @@
 <template>
   <div class="p-user-info u-pt24">
     <c-form>
-      <c-form-item custom-class="is-link" label="头像">
+      <c-form-item label="头像">
         <c-avatar-upload
-          class="b-avatar"
+          custom-class="b-avatar"
           sel-width="500upx"
           sel-height="500upx"
           @upload="onAvatarUpload"
