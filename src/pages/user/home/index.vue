@@ -84,6 +84,7 @@
       </ul>
     </div>
     <u-button
+      v-if="loggedIn()"
       custom-class="at-bottom w702"
       type="primary"
       style="bottom: 130rpx"
