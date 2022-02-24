@@ -23,7 +23,7 @@ export default {
 
     const { getUserInfo, avatarUrl } = useUsers();
 
-    const { client: cosClient } = useCos({
+    const cos = useCos({
       cosApi: tencentCloudCosApi,
       filesApi,
       uploadTo: UploadTo.TencentCloudOss,
@@ -45,10 +45,12 @@ export default {
 
     onShow(async () => {
       cForm.model = await getUserInfo();
-      cosClient.initialize();
+      await cos.initialize();
     });
 
     const onAvatarUpload = async (res) => {
+      console.log(res, "===");
+
       const { statusCode, data } = await wx.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
         header: getHeaders(),
