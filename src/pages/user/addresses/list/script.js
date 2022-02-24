@@ -1,14 +1,16 @@
 import wx from "wx-bridge";
 import { onShow } from "uni-composition-api";
-import { reactive, ref } from "@vue/composition-api";
+import { ref } from "@vue/composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { addressesApi } from "@/apis/client/addresses";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { enums } from "@/utils/enums";
+import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 
 export default {
   setup() {
     const { currentRoute } = useRoute();
+
+    const { enums } = useEnums();
 
     const { user } = useUsers();
 
@@ -54,7 +56,7 @@ export default {
       list.value = await addressesApi.get({
         query: {
           where: {
-            wxUserId: { $eq: user.value.id },
+            userId: { $eq: user.value.id },
           },
         },
       });

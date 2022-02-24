@@ -2,14 +2,16 @@ import wx from "wx-bridge";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { useValidators } from "vue-validation";
 import { reactive } from "@vue/composition-api";
-import { enums } from "@/utils/enums";
 import { onLoad } from "uni-composition-api";
 import { addressesApi } from "@/apis/client/addresses";
 import { useHelpers } from "@/composables/use-helpers";
+import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 
 export default {
   setup() {
     const { currentRoute } = useRoute();
+
+    const { enums } = useEnums();
 
     const { isRequired, isPhoneNumber, validate } = useValidators();
 
