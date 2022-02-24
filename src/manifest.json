@@ -8,6 +8,16 @@
     "h5" : {
         "devServer" : {
             "port" : 8081
+        },
+        "sdkConfigs": {
+            "maps": {
+                "qqmap": {
+                    "key": "LWTBZ-MLKWU-QCBVQ-22JUJ-B4FRK-Z5FPN"
+              },
+                "google": {
+                    "key": ""
+                }
+            }
         }
     },
     "app-plus" : {
