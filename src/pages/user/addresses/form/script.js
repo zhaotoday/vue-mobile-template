@@ -71,7 +71,10 @@ export default {
       await validate(cForm, null, async (errors, model) => {
         if (errors) return;
 
-        await addressesApi[id ? "put" : "post"]({ id, body: model });
+        await addressesApi[id ? "put" : "post"]({
+          id,
+          body: { ...model, userId: user.value.id },
+        });
 
         wx.showToast({ title: id ? "修改成功" : "新增成功" });
         await useHelpers().sleep(1500);

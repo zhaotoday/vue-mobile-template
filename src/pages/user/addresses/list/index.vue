@@ -46,6 +46,7 @@
     <u-button
       custom-class="at-bottom w702"
       type="primary"
+      :disabled="list.items.length >= 5"
       @click="$wx.navigateTo('/pages/user/addresses/form/index')"
     >
       新增
