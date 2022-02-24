@@ -20,8 +20,6 @@ export default {
 
     const { getUserInfo, avatarUrl } = useUsers();
 
-    const imageUpload = ref(null);
-
     const cForm = reactive({
       model: {
         avatarFileId: 0,
@@ -44,20 +42,13 @@ export default {
         sizeType: ["compressed"],
       });
 
-      const { data } = await wx.uploadFile({
-        url: `${useConsts().ApiUrl}/client/files/actions/upload`,
-        header: getHeaders(),
-        filePath: tempFilePaths[0],
-        name: "file",
-      });
-    };
-
-    const onAvatarUpload = async (res) => {
-      console.log(res);
       const { statusCode, data } = await wx.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
         header: getHeaders(),
-        filePath: res,
+        data: {
+          dir: "avatar",
+        },
+        filePath: tempFilePaths[0],
         name: "file",
       });
 
@@ -92,12 +83,10 @@ export default {
     };
 
     return {
-      imageUpload,
       defaultAvatarUrl,
       enums,
       cForm,
       avatarUrl,
-      onAvatarUpload,
       validate,
       submit,
       chooseImage,

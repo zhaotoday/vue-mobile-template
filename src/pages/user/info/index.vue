@@ -1,9 +1,12 @@
 <template>
   <div class="p-user-info u-pt24">
-    <c-avatar-upload ref="imageUpload" @ok="onAvatarUpload" />
     <c-form>
       <c-form-item label="头像">
-        <u-avatar size="90rpx" :src="avatarUrl" @click="chooseImage" />
+        <u-avatar
+          size="86rpx"
+          :src="avatarUrl || defaultAvatarUrl"
+          @click="chooseImage"
+        />
       </c-form-item>
       <c-form-item label="姓名">
         <c-form-input
