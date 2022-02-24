@@ -17,28 +17,7 @@ export default {
     const loaded = ref(true);
 
     const list = ref({
-      items: [
-        {
-          name: "赵金添",
-          phoneNumber: "13950442340",
-          gender: 1,
-          location: {
-            name: "XXX",
-          },
-          room: "22",
-          tag: 1,
-        },
-        {
-          name: "赵金添",
-          phoneNumber: "13950442340",
-          gender: 1,
-          location: {
-            name: "XXX",
-          },
-          room: "22",
-          tag: 1,
-        },
-      ],
+      items: [],
       total: 0,
     });
 

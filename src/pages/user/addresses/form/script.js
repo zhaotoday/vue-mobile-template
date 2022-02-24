@@ -27,7 +27,7 @@ export default {
           latitude: "",
           longitude: "",
         },
-        tag: 1,
+        tag: "Home",
       },
       rules: {
         name: [isRequired({ label: "收货人姓名" })],
