@@ -50,8 +50,8 @@ export default {
 
     const setDefault = async (item) => {
       await addressesApi.post({
+        id: item.id,
         action: "setDefault",
-        body: { id: item.id },
       });
 
       wx.showToast({ title: "设置成功" });
