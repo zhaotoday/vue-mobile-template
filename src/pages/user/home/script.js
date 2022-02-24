@@ -2,7 +2,6 @@ import defaultAvatarUrl from "vue-mobile/assets/images/components/avatar/default
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { onShow } from "uni-composition-api";
 import wx from "wx-bridge";
-import { useHelpers } from "@/composables/use-helpers";
 
 export default {
   setup() {
@@ -46,8 +45,6 @@ export default {
       if (confirm) {
         await logout();
         wx.showToast({ title: "退出成功" });
-        await useHelpers().sleep(1500);
-        wx.navigateTo({ url: "/pages/home/index" });
       }
     };
 
