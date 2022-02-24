@@ -6,12 +6,15 @@ import { onLoad } from "uni-composition-api";
 import { addressesApi } from "@/apis/client/addresses";
 import { useHelpers } from "@/composables/use-helpers";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
     const { currentRoute } = useRoute();
 
     const { enums } = useEnums();
+
+    const { user } = useUsers();
 
     const { isRequired, isPhoneNumber, validate } = useValidators();
 
@@ -70,7 +73,10 @@ export default {
 
         await addressesApi[id ? "put" : "post"]({
           id,
-          body: model,
+          body: {
+            ...model,
+            userId: user.value.id,
+          },
         });
 
         wx.showToast({ title: id ? "修改成功" : "新增成功" });
