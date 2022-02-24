@@ -9,6 +9,9 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
+import { useCos, UploadTo } from "use-cos";
+import { filesApi } from "@/apis/client/files";
+import { tencentCloudCosApi } from "@/apis/client/tencent-cloud-cos";
 
 export default {
   setup() {
@@ -19,6 +22,14 @@ export default {
     const { getHeaders } = useAuth();
 
     const { getUserInfo, avatarUrl } = useUsers();
+
+    const { client: cosClient } = useCos({
+      cosApi: tencentCloudCosApi,
+      filesApi,
+      uploadTo: UploadTo.TencentCloudOss,
+      bucket: "test-1251051722",
+      region: "ap-shanghai",
+    });
 
     const cForm = reactive({
       model: {
@@ -34,6 +45,7 @@ export default {
 
     onShow(async () => {
       cForm.model = await getUserInfo();
+      cosClient.initialize();
     });
 
     const onAvatarUpload = async (res) => {
