@@ -1,5 +1,6 @@
 <template>
   <div class="p-user-info u-pt24">
+    <u-upload @afterRead="afterRead" />
     <c-form>
       <c-form-item label="头像">
         <c-avatar-upload
