@@ -17,7 +17,7 @@
           <div
             :class="[
               'c-icon-tag',
-              `c-icon-tag--${item.isDefault ? 'set' : 'unset'}`,
+              `c-icon-tag--${item.default ? 'set' : 'unset'}`,
             ]"
             @click.stop="setDefault(item)"
           >

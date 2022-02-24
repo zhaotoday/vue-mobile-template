@@ -49,6 +49,8 @@ export default {
     };
 
     const setDefault = async (item) => {
+      if (item.default) return;
+
       await addressesApi.post({
         id: item.id,
         action: "setDefault",
