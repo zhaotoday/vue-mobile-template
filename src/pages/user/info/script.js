@@ -1,6 +1,6 @@
 import defaultAvatarUrl from "vue-mobile/assets/images/components/avatar/default.png";
 import wx from "wx-bridge";
-import { reactive, ref } from "@vue/composition-api";
+import { reactive } from "@vue/composition-api";
 import { useValidators } from "vue-validation";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
@@ -45,9 +45,7 @@ export default {
       const { statusCode, data } = await wx.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
         header: getHeaders(),
-        data: {
-          dir: "avatar",
-        },
+        formData: { dir: "avatars" },
         filePath: tempFilePaths[0],
         name: "file",
       });
