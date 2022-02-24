@@ -1,17 +1,9 @@
 <template>
   <div class="p-user-info u-pt24">
-    <u-upload @afterRead="afterRead" />
+    <c-avatar-upload ref="imageUpload" @ok="onAvatarUpload" />
     <c-form>
       <c-form-item label="头像">
-        <c-avatar-upload
-          custom-class="b-avatar"
-          sel-width="500upx"
-          sel-height="500upx"
-          @upload="onAvatarUpload"
-          :avatar-src="avatarUrl || defaultAvatarUrl"
-          inner="true"
-          can-rotate="false"
-        />
+        <u-avatar size="90rpx" :src="avatarUrl" @click="chooseImage" />
       </c-form-item>
       <c-form-item label="姓名">
         <c-form-input

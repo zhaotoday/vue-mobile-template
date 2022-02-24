@@ -1,9 +1,7 @@
 @import "~@/assets/styles/utils/index";
 
 @include p(user-info) {
-  @include b(avatar) {
-    @include size(px2rpx(80px), px2rpx(80px));
-
+  .u-avatar {
     margin-left: px2rpx(180px);
   }
 }

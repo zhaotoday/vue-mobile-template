@@ -1,6 +1,6 @@
 import defaultAvatarUrl from "vue-mobile/assets/images/components/avatar/default.png";
 import wx from "wx-bridge";
-import { reactive } from "@vue/composition-api";
+import { reactive, ref } from "@vue/composition-api";
 import { useValidators } from "vue-validation";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useHelpers } from "@/composables/use-helpers";
@@ -20,6 +20,8 @@ export default {
 
     const { getUserInfo, avatarUrl } = useUsers();
 
+    const imageUpload = ref(null);
+
     const cForm = reactive({
       model: {
         avatarFileId: 0,
@@ -36,11 +38,26 @@ export default {
       cForm.model = await getUserInfo();
     });
 
+    const chooseImage = async () => {
+      const { tempFilePaths } = await wx.chooseImage({
+        count: 1,
+        sizeType: ["compressed"],
+      });
+
+      const { data } = await wx.uploadFile({
+        url: `${useConsts().ApiUrl}/client/files/actions/upload`,
+        header: getHeaders(),
+        filePath: tempFilePaths[0],
+        name: "file",
+      });
+    };
+
     const onAvatarUpload = async (res) => {
+      console.log(res);
       const { statusCode, data } = await wx.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
         header: getHeaders(),
-        filePath: res.path,
+        filePath: res,
         name: "file",
       });
 
@@ -75,6 +92,7 @@ export default {
     };
 
     return {
+      imageUpload,
       defaultAvatarUrl,
       enums,
       cForm,
@@ -82,6 +100,7 @@ export default {
       onAvatarUpload,
       validate,
       submit,
+      chooseImage,
     };
   },
 };
