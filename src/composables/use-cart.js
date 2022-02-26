@@ -8,8 +8,8 @@ export const useCart = () => {
     "cart"
   );
   const { products } = useState(["products"]);
-  const { productsNumber, totalPrice, allProductsSelected } = useGetters([
-    "productsNumber",
+  const { selectedProducts, totalPrice, allProductsSelected } = useGetters([
+    "selectedProducts",
     "totalPrice",
     "allProductsSelected",
   ]);
@@ -42,7 +42,7 @@ export const useCart = () => {
 
   return {
     products,
-    productsNumber,
+    selectedProducts,
     totalPrice,
     allProductsSelected,
     updateProductNumber,

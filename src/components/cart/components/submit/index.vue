@@ -12,10 +12,11 @@
     </div>
     <div class="cc-submit__total fs28 t-error">¥{{ totalPrice }}</div>
     <div
-      class="cc-submit__button bg-primary t-white fs28"
-      @click="$emit('submit')"
+      class="cc-submit__button t-white fs28"
+      :class="selectedProducts.length ? 'bg-primary' : 'bg-placeholder'"
+      @click="submit"
     >
-      去结算（{{ products.length }}）
+      去结算（{{ selectedProducts.length }}）
     </div>
   </div>
 </template>

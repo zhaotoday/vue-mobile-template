@@ -5,7 +5,7 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
-    const { products, clearProducts } = useCart();
+    const { products, selectedProducts, clearProducts } = useCart();
 
     const { user } = useUsers();
 
@@ -13,7 +13,7 @@ export default {
       const { id } = await ordersApi.post({
         body: {
           userId: user.value.id,
-          products: products.value,
+          products: selectedProducts.value,
         },
       });
 
