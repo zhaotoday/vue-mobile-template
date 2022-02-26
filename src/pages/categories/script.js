@@ -41,7 +41,9 @@ export default {
       productsList.value = await publicProductsApi.get({
         query: {
           where: {
-            category: categoriesList.value.items[cTab.current].id,
+            categoryId: {
+              $eq: categoriesList.value.items[cTab.current].id,
+            },
           },
         },
       });
