@@ -16,7 +16,7 @@ export default {
 
     const cForm = reactive({
       model: {
-        comment: "",
+        remark: "",
       },
     });
 
@@ -34,7 +34,7 @@ export default {
       await ordersApi.put({
         id: currentRoute.query.orderId,
         body: {
-          comment: cForm.model.comment,
+          remark: cForm.model.remark,
         },
       });
 

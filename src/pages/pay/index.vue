@@ -42,7 +42,7 @@
           <u-textarea
             placeholder="请输入内容"
             count
-            v-model="cForm.model.comment"
+            v-model="cForm.model.remark"
           />
         </div>
       </c-form-item>
