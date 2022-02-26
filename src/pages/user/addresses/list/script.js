@@ -26,12 +26,12 @@ export default {
 
       wx.setNavigationBarTitle({ title: select ? "选择收货地址" : "收货地址" });
 
-      await renderList();
+      await render();
 
       loaded.value = true;
     });
 
-    const renderList = async () => {
+    const render = async () => {
       list.value = await addressesApi.get({
         query: {
           where: {
@@ -58,7 +58,7 @@ export default {
 
       wx.showToast({ title: "设置成功" });
 
-      await renderList();
+      await render();
     };
 
     const del = async ({ id }) => {
@@ -72,7 +72,7 @@ export default {
 
         wx.showToast({ title: "删除成功" });
 
-        await renderList();
+        await render();
       }
     };
 
