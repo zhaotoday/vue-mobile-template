@@ -11,8 +11,8 @@ page {
 
   @include b(categories) {
     width: px2rpx(180px);
-    border-top: px2rpx(1px) solid map-get($colors, g1);
-    border-bottom: px2rpx(1px) solid map-get($colors, g1);
+    border-top: px2rpx(2px) solid map-get($colors, g1);
+    border-bottom: px2rpx(2px) solid map-get($colors, g1);
     background-color: map-get($colors, g1);
 
     li {
