@@ -1,11 +1,14 @@
 <script>
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
+import { useCart } from "@/composables/use-cart";
 
 export default {
   async onLaunch() {
     const { getEnums } = useEnums();
 
     await getEnums();
+
+    useCart().renderProductsNumber();
   },
 };
 </script>

@@ -8,8 +8,8 @@ export const useCart = () => {
     "cart"
   );
   const { products } = useState(["products"]);
-  const { productsCount, totalPrice, allProductsSelected } = useGetters([
-    "productsCount",
+  const { productsNumber, totalPrice, allProductsSelected } = useGetters([
+    "productsNumber",
     "totalPrice",
     "allProductsSelected",
   ]);
@@ -19,7 +19,7 @@ export const useCart = () => {
     "selectAllProducts",
   ]);
 
-  const renderProductNumbers = () => {
+  const renderProductsNumber = () => {
     const count = products.value.length;
 
     if (count) {
@@ -31,12 +31,12 @@ export const useCart = () => {
 
   return {
     products,
-    productsCount,
+    productsNumber,
     totalPrice,
     allProductsSelected,
     updateProductNumber,
     selectProduct,
     selectAllProducts,
-    renderProductNumbers,
+    renderProductsNumber,
   };
 };

@@ -13,7 +13,7 @@ export default {
     },
   },
   setup(props) {
-    const { products, updateProductNumber, renderProductNumbers } = useCart();
+    const { products, updateProductNumber, renderProductsNumber } = useCart();
     const value = ref(0);
 
     onMounted(() => {
@@ -27,7 +27,7 @@ export default {
 
     const updateNumber = ({ value }) => {
       updateProductNumber({ product: props.product, number: value });
-      renderProductNumbers();
+      renderProductsNumber();
     };
 
     return {

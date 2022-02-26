@@ -2,10 +2,10 @@ import { useCart } from "@/composables/use-cart";
 
 export default {
   setup() {
-    const { productsCount } = useCart();
+    const { productsNumber } = useCart();
 
     return {
-      productsCount,
+      productsNumber,
     };
   },
 };

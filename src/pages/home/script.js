@@ -2,7 +2,6 @@ import { ref } from "@vue/composition-api";
 import Categories from "./components/categories";
 import products from "@/mock/products.json";
 import { onShow } from "uni-composition-api";
-import { useCart } from "@/composables/use-cart";
 import { publicAdsApi } from "@/apis/public/ads";
 import { publicCategoriesApi } from "@/apis/public/catetgories";
 import { publicProductsApi } from "@/apis/public/products";
@@ -27,7 +26,6 @@ export default {
     const value = ref(0);
 
     onShow(async () => {
-      useCart().renderProductNumbers();
       await renderAdsList();
       await renderCategoriesList();
       await renderProductsList();

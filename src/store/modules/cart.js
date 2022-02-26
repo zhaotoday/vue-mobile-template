@@ -11,7 +11,7 @@ const state = {
 };
 
 const getters = {
-  productsCount(state) {
+  productsNumber(state) {
     return state.products.length;
   },
   totalPrice(state) {
