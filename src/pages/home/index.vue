@@ -10,7 +10,11 @@
       />
       <u-gap height="24rpx" />
       <u-swiper
-        :list="swiperData"
+        :list="
+          adsList.items.map(({ imageFileId }) =>
+            $helpers.getFileUrl({ id: imageFileId })
+          )
+        "
         height="300rpx"
         indicator
         indicator-mode="dot"

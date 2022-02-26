@@ -1,5 +1,5 @@
 import { createApi } from "vue-mobile/@lr/utils/create-api";
 
-export const productsApi = createApi({
+export const publicProductsApi = createApi({
   url: "/public/products",
 });
