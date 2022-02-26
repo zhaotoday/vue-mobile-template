@@ -12,7 +12,7 @@
       icon="http://cdn.uviewui.com/uview/empty/data.png"
       margin-top="100rpx"
     />
-    <gc-cart-submit />
+    <gc-cart-submit @submit="submit" />
   </div>
 </template>
 

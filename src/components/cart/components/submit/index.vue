@@ -13,7 +13,7 @@
     <div class="cc-submit__total fs28 t-error">¥{{ totalPrice }}</div>
     <div
       class="cc-submit__button bg-primary t-white fs28"
-      @click="$wx.navigateTo('/pages/pay/index')"
+      @click="$emit('submit')"
     >
       去结算（{{ products.length }}）
     </div>
