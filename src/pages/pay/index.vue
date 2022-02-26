@@ -1,6 +1,11 @@
 <template>
   <div class="p-pay u-pt24">
-    <div class="c-address is-link u-mb24" :class="$bem.box.$">
+    {{ defaultAddress }}
+    <div
+      class="c-address is-link u-mb24"
+      :class="$bem.box.$"
+      @click="$wx.navigateTo('/pages/user/addresses/list/index')"
+    >
       <i
         class="c-address__icon c-iconfont c-iconfont--address fs44 t-primary"
       ></i>
