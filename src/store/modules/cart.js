@@ -11,6 +11,9 @@ const state = {
 };
 
 const getters = {
+  productsCount(state) {
+    return state.products.length;
+  },
   totalPrice(state) {
     const selectedProducts = state.products.filter(({ selected }) => selected);
 
