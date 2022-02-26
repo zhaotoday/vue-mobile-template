@@ -1,18 +1,22 @@
 <template>
   <div class="p-products-detail">
     <u-swiper
-      :list="swiperData"
+      :list="
+        detail.imageFileIds.map(
+          (imageFileId) =>
+            $helpers.getFileUrl({ id: imageFileId }) + '?_bugfix=.jpg'
+        )
+      "
       height="750rpx"
       indicator
       radius="0"
       indicator-mode="dot"
+      img-mode="aspectFill"
     />
     <div class="b-info bg-white u-mb24">
-      <div class="b-info__name fs32">
-        心相印纸巾抽纸整箱大包家用实惠装卫生纸心心相印餐巾纸面巾纸抽
-      </div>
+      <div class="b-info__name fs32">{{ detail.name }}</div>
       <div class="b-info__others">
-        <span class="t-error fs32">¥100.0</span>
+        <span class="t-error fs32">¥{{ detail.price }}</span>
         <span class="t-g7 u-lt fs26 u-ml10">200.0</span>
         <div class="b-info__right t-g7 fs26">
           库存：1000 &nbsp;&nbsp; 销量：1000
