@@ -125,6 +125,12 @@
       }
     },
     {
+      "path": "pages/pay/result/index",
+      "style": {
+        "navigationBarTitleText": "下单成功"
+      }
+    },
+    {
       "path": "pages/user/orders/list/index",
       "style": {
         "navigationBarTitleText": "我的订单"

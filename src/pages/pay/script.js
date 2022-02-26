@@ -38,7 +38,7 @@ export default {
         },
       });
 
-      console.log(222);
+      await wx.redirectTo({ url: "/pages/pay-result/index" });
     };
 
     return {

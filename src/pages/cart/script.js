@@ -19,7 +19,7 @@ export default {
 
       clearProducts();
 
-      wx.navigateTo({ url: `/pages/pay/index?orderId=${id}` });
+      await wx.navigateTo({ url: `/pages/pay/index?orderId=${id}` });
     };
 
     return {
