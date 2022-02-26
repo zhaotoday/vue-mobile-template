@@ -1,4 +1,5 @@
 import products from "@/mock/products.json";
+import { ref } from "@vue/composition-api";
 
 export default {
   setup() {
@@ -18,9 +19,14 @@ export default {
         },
       ],
     };
+
+    const productsList = ref({
+      items: [],
+    });
+
     return {
-      products,
       cTabs,
+      productsList,
     };
   },
 };
