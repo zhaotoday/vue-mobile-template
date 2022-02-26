@@ -2,11 +2,11 @@ import { reactive, ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
 import { publicCategoriesApi } from "@/apis/public/catetgories";
 import { publicProductsApi } from "@/apis/public/products";
-import { useRoute } from "vue-mobile/composables/use-route";
+import { useTabBar } from "vue-mobile/composables/use-tab-bar";
 
 export default {
   setup() {
-    const { currentRoute } = useRoute();
+    const { currentRoute } = useTabBar();
 
     const loaded = ref(false);
 

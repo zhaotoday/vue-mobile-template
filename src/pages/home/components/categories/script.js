@@ -1,4 +1,4 @@
-import { useRoute } from "vue-mobile/composables/use-route";
+import { useTabBar } from "vue-mobile/composables/use-tab-bar";
 
 export default {
   props: {
@@ -8,7 +8,7 @@ export default {
     },
   },
   setup() {
-    const { switchTab } = useRoute();
+    const { switchTab } = useTabBar();
 
     return {
       switchTab,
