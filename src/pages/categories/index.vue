@@ -11,7 +11,7 @@
     </div>
     <ul class="b-categories fs28">
       <li
-        v-for="(item, index) in products"
+        v-for="(item, index) in categoriesList.items"
         :key="item.name"
         :class="{ 'is-active': index === cTab.current }"
         @click="changeCategory(index)"
