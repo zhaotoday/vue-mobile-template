@@ -30,8 +30,8 @@ export default {
       });
     };
 
-    onNavigationBarButtonTap(() => {
-      wx.navigateTo({ url: "/pages/user/account-register/index" });
+    onNavigationBarButtonTap(async () => {
+      await wx.navigateTo({ url: "/pages/user/account-register/index" });
     });
 
     return {

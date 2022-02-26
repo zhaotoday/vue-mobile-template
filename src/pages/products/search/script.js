@@ -11,10 +11,10 @@ export default {
       history.value = getHistory();
     });
 
-    const search = (value) => {
+    const search = async (value) => {
       saveHistory(value);
 
-      wx.navigateTo({
+      await wx.navigateTo({
         url: `/pages/products/list/index?keywords=${value}`,
       });
     };

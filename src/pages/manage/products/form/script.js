@@ -26,12 +26,12 @@ export default {
 
         wx.showToast({ title: "登录成功" });
         await useHelpers().sleep(1500);
-        wx.navigateTo({ url: "/pages/memo/index" });
+        await wx.navigateTo({ url: "/pages/memo/index" });
       });
     };
 
-    onNavigationBarButtonTap(() => {
-      wx.navigateTo({ url: "/pages/user/account-register/index" });
+    onNavigationBarButtonTap(async () => {
+      await wx.navigateTo({ url: "/pages/user/account-register/index" });
     });
 
     return {
