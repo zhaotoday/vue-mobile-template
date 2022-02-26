@@ -1,7 +1,11 @@
 <template>
   <div class="vc-categories u-pt24 u-pb10 bg-white">
     <u-grid col="5" :border="false">
-      <u-grid-item v-for="(item, index) in items" :key="index">
+      <u-grid-item
+        v-for="(item, index) in items"
+        :key="index"
+        @click="switchTab(`/pages/categories/index`, { categoryIndex: index })"
+      >
         <u-avatar
           size="90rpx"
           :src="$helpers.getFileUrl({ id: item.iconFileId })"

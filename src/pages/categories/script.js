@@ -2,9 +2,12 @@ import { reactive, ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
 import { publicCategoriesApi } from "@/apis/public/catetgories";
 import { publicProductsApi } from "@/apis/public/products";
+import { useRoute } from "vue-mobile/composables/use-route";
 
 export default {
   setup() {
+    const { currentRoute } = useRoute();
+
     const loaded = ref(false);
 
     const cTab = reactive({
@@ -20,6 +23,8 @@ export default {
     });
 
     onShow(async () => {
+      cTab.current = +currentRoute.query.categoryIndex;
+
       await renderCategoriesList();
 
       if (categoriesList.value.items.length) {
