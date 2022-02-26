@@ -3,6 +3,7 @@ import { onShow } from "uni-composition-api";
 import { publicCategoriesApi } from "@/apis/public/catetgories";
 import { publicProductsApi } from "@/apis/public/products";
 import { useTabBar } from "vue-mobile/composables/use-tab-bar";
+import { useHelpers } from "@/composables/use-helpers";
 
 export default {
   setup() {
@@ -23,6 +24,8 @@ export default {
     });
 
     onShow(async () => {
+      await useHelpers().sleep(10);
+
       cTab.current = +currentRoute.query.categoryIndex;
 
       await renderCategoriesList();
