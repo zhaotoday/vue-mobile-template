@@ -5,7 +5,8 @@
         ref="search"
         placeholder="请输入商品名称"
         height="60rpx"
-        focus
+        v-model="cSearch.model.keywords"
+        @search="search"
       />
     </div>
     <div class="bg-white u-pb10">
@@ -15,7 +16,18 @@
         line-color="#5ac725"
       />
     </div>
-    <gc-product-list custom-class="u-pt24" :items="products" :col="2" />
+    <gc-product-list
+      v-if="list.items.length"
+      custom-class="u-pt24"
+      :items="list.items"
+      :col="2"
+    />
+    <u-empty
+      v-if="loaded && !list.items.length"
+      mode="data"
+      icon="https://cdn.uviewui.com/uview/empty/data.png"
+      margin-top="100rpx"
+    />
   </div>
 </template>
 
