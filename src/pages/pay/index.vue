@@ -28,7 +28,9 @@
     </div>
     <c-form custom-class="u-mb24">
       <c-form-item label="总计">
-        <div class="c-form__input fs30 t-error">¥123.00</div>
+        <div class="c-form__input fs30 t-error">
+          ¥{{ getTotalPrice(ordersDetail.products) }}
+        </div>
       </c-form-item>
       <c-form-item custom-class="is-link" label="支付方式">
         <div class="c-form__input">货到付款</div>
@@ -37,11 +39,15 @@
     <c-form>
       <c-form-item label="备注">
         <div class="u-pt10 u-pb10 u-mr20" style="margin-left: 180rpx">
-          <u-textarea placeholder="请输入内容" count />
+          <u-textarea
+            placeholder="请输入内容"
+            count
+            v-model="cForm.model.comment"
+          />
         </div>
       </c-form-item>
     </c-form>
-    <gc-pay-submit />
+    <gc-pay-submit @submit="submit" />
   </div>
 </template>
 
