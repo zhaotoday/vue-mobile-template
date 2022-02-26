@@ -4,6 +4,7 @@ import products from "@/mock/products.json";
 import { onShow } from "uni-composition-api";
 import { useCart } from "@/composables/use-cart";
 import { publicAdsApi } from "@/apis/public/ads";
+import { publicCategoriesApi } from "@/apis/public/catetgories";
 
 export default {
   components: {
@@ -11,6 +12,10 @@ export default {
   },
   setup() {
     const adsList = ref({
+      items: [],
+    });
+
+    const categoriesList = ref({
       items: [],
     });
 
@@ -25,14 +30,24 @@ export default {
     onShow(async () => {
       useCart().renderProductNumbers();
       await renderAdsList();
+      await renderCategoriesList();
     });
 
     const renderAdsList = async () => {
       adsList.value = await publicAdsApi.get({});
     };
 
+    const renderCategoriesList = async () => {
+      categoriesList.value = await publicCategoriesApi.get({
+        query: {
+          order: [["order", "DESC"]],
+        },
+      });
+    };
+
     return {
       adsList,
+      categoriesList,
       products,
       swiperData,
       value,
