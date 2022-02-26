@@ -11,12 +11,14 @@
       <u-gap height="24rpx" />
       <u-swiper
         :list="
-          adsList.items.map(({ imageFileId }) =>
-            $helpers.getFileUrl({ id: imageFileId })
+          adsList.items.map(
+            ({ imageFileId }) =>
+              $helpers.getFileUrl({ id: imageFileId }) + '?_bugfix=.jpg'
           )
         "
         height="300rpx"
         indicator
+        img-mode="aspectFill"
         indicator-mode="dot"
       />
     </div>

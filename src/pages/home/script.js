@@ -1,4 +1,4 @@
-import { reactive, ref } from "@vue/composition-api";
+import { ref } from "@vue/composition-api";
 import Categories from "./components/categories";
 import products from "@/mock/products.json";
 import { onShow } from "uni-composition-api";
@@ -18,12 +18,6 @@ export default {
     const categoriesList = ref({
       items: [],
     });
-
-    const swiperData = [
-      "https://cdn.uviewui.com/uview/goods/1.jpg",
-      "https://cdn.uviewui.com/uview/goods/2.jpg",
-      "https://cdn.uviewui.com/uview/goods/3.jpg",
-    ];
 
     const value = ref(0);
 
@@ -49,7 +43,6 @@ export default {
       adsList,
       categoriesList,
       products,
-      swiperData,
       value,
     };
   },
