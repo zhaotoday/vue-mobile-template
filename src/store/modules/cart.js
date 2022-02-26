@@ -34,9 +34,6 @@ const getters = {
       products.filter(({ selected }) => selected).length === products.length
     );
   },
-  clearProducts(state) {
-    state.products = {};
-  },
 };
 
 const mutations = {
@@ -58,6 +55,9 @@ const mutations = {
   },
   [types.SelectAllProducts](state, { selected }) {
     state.products = state.products.map((item) => ({ ...item, selected }));
+  },
+  [types.ClearProducts](state) {
+    state.products = {};
   },
 };
 
