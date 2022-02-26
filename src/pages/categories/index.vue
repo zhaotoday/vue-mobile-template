@@ -25,13 +25,13 @@
         :items="productsList.items"
         :col="1"
       />
+      <u-empty
+        v-if="loaded && !productsList.items.length"
+        mode="data"
+        icon="https://cdn.uviewui.com/uview/empty/data.png"
+        margin-top="100rpx"
+      />
     </scroll-view>
-    <u-empty
-      v-if="loaded && !productsList.items.length"
-      mode="data"
-      icon="https://cdn.uviewui.com/uview/empty/data.png"
-      margin-top="100rpx"
-    />
   </div>
 </template>
 
