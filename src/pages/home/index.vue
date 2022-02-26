@@ -22,8 +22,12 @@
         indicator-mode="dot"
       />
     </div>
-    <vc-categories :list="categoriesList" />
-    <gc-product-list custom-class="u-pt24" :items="products" :col="2" />
+    <vc-categories :items="categoriesList.items" />
+    <gc-product-list
+      custom-class="u-pt24"
+      :items="productsList.items"
+      :col="2"
+    />
   </div>
 </template>
 

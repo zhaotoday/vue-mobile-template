@@ -5,6 +5,7 @@ import { onShow } from "uni-composition-api";
 import { useCart } from "@/composables/use-cart";
 import { publicAdsApi } from "@/apis/public/ads";
 import { publicCategoriesApi } from "@/apis/public/catetgories";
+import { publicProductsApi } from "@/apis/public/products";
 
 export default {
   components: {
@@ -19,12 +20,17 @@ export default {
       items: [],
     });
 
+    const productsList = ref({
+      items: [],
+    });
+
     const value = ref(0);
 
     onShow(async () => {
       useCart().renderProductNumbers();
       await renderAdsList();
       await renderCategoriesList();
+      await renderProductsList();
     });
 
     const renderAdsList = async () => {
@@ -39,9 +45,18 @@ export default {
       });
     };
 
+    const renderProductsList = async () => {
+      productsList.value = await publicProductsApi.get({
+        query: {
+          limit: 4,
+        },
+      });
+    };
+
     return {
       adsList,
       categoriesList,
+      productsList,
       products,
       value,
     };

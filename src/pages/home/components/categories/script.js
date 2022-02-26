@@ -1,10 +1,8 @@
 export default {
   props: {
-    list: {
-      type: Object,
-      default: () => ({
-        items: [],
-      }),
+    items: {
+      type: Array,
+      default: () => [],
     },
   },
 };

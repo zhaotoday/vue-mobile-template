@@ -22,7 +22,11 @@
               @change="selectProduct({ product: item })"
             />
           </div>
-          <img class="cc-list__image" mode="aspectFill" :src="item.url" />
+          <image
+            class="cc-list__image"
+            mode="aspectFill"
+            :src="$helpers.getFileUrl({ id: item.imageFileIds[0] })"
+          />
           <div class="cc-list__name fs28">{{ item.name }}</div>
           <div class="cc-list__price">
             <span class="t-error fs26">¥{{ item.price }}</span>
