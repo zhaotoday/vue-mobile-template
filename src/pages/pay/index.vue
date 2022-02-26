@@ -20,7 +20,7 @@
         <div class="c-title c-title--md fs32">商品信息</div>
       </div>
       <gc-product-list
-        :items="products"
+        :items="ordersDetail.products"
         :col="1"
         :edit-number="false"
         show-number

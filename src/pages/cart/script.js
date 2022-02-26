@@ -10,16 +10,16 @@ export default {
     const { user } = useUsers();
 
     const submit = async () => {
-      await ordersApi.post({
+      const { id } = await ordersApi.post({
         body: {
           userId: user.value.id,
-          products,
+          products: products.value,
         },
       });
 
       clearProducts();
 
-      wx.navigateTo({ url: "/pages/pay/index" });
+      wx.navigateTo({ url: `/pages/pay/index?orderId=${id}` });
     };
 
     return {

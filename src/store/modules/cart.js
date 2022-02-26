@@ -57,7 +57,7 @@ const mutations = {
     state.products = state.products.map((item) => ({ ...item, selected }));
   },
   [types.ClearProducts](state) {
-    state.products = {};
+    state.products = [];
   },
 };
 
