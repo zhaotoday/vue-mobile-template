@@ -20,8 +20,18 @@
       </li>
     </ul>
     <scroll-view class="b-products" scroll-y>
-      <gc-product-list :items="products" :col="1" />
+      <gc-product-list
+        v-if="productsList.items.length"
+        :items="productsList.items"
+        :col="1"
+      />
     </scroll-view>
+    <u-empty
+      v-if="loaded && !productsList.items.length"
+      mode="data"
+      icon="https://cdn.uviewui.com/uview/empty/data.png"
+      margin-top="100rpx"
+    />
   </div>
 </template>
 
