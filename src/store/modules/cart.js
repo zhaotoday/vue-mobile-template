@@ -4,6 +4,7 @@ const types = helpers.keyMirror({
   UpdateProductNumber: null,
   SelectProduct: null,
   SelectAllProducts: null,
+  ClearProducts: null,
 });
 
 const state = {
@@ -32,6 +33,9 @@ const getters = {
       products.length &&
       products.filter(({ selected }) => selected).length === products.length
     );
+  },
+  clearProducts(state) {
+    state.products = {};
   },
 };
 
@@ -72,6 +76,9 @@ const actions = {
     commit(types.SelectAllProducts, { selected });
 
     return { selected };
+  },
+  clearProducts({ commit }) {
+    commit(types.ClearProducts);
   },
 };
 

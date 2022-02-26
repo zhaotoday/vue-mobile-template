@@ -13,10 +13,16 @@ export const useCart = () => {
     "totalPrice",
     "allProductsSelected",
   ]);
-  const { updateProductNumber, selectProduct, selectAllProducts } = useActions([
+  const {
+    updateProductNumber,
+    selectProduct,
+    selectAllProducts,
+    clearProducts,
+  } = useActions([
     "updateProductNumber",
     "selectProduct",
     "selectAllProducts",
+    "clearProducts",
   ]);
 
   const renderProductsNumber = () => {
@@ -37,6 +43,7 @@ export const useCart = () => {
     updateProductNumber,
     selectProduct,
     selectAllProducts,
+    clearProducts,
     renderProductsNumber,
   };
 };
