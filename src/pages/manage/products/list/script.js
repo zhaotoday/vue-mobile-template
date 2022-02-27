@@ -1,32 +1,26 @@
-import { reactive, ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
-import { publicCategoriesApi } from "@/apis/public/catetgories";
-import { publicProductsApi } from "@/apis/public/products";
 import { usePageData } from "@/composables/use-page-data";
-import wx from "wx-bridge";
+import { useRender } from "./composables/use-render";
 
 export default {
   setup() {
     const { setPageData, getCurrentPage, getPageData } = usePageData();
 
-    const loaded = ref(false);
-
-    const cTab = reactive({
-      current: 0,
-    });
-
-    const categoriesList = ref({
-      items: [],
-    });
-
-    const productsList = ref({
-      items: [],
-    });
+    const {
+      loaded,
+      cTab,
+      categoriesList,
+      productsList,
+      renderCategoriesList,
+      renderProductsList,
+    } = useRender();
 
     onShow(async () => {
       await renderCategoriesList();
 
-      cTab.current = getPageData({ page: getCurrentPage() }).currentIndex || 0;
+      const { currentIndex } = getPageData({ page: getCurrentPage() });
+
+      cTab.current = currentIndex || 0;
 
       if (categoriesList.value.items.length) {
         await renderProductsList();
@@ -35,41 +29,15 @@ export default {
       loaded.value = true;
     });
 
-    const renderCategoriesList = async () => {
-      categoriesList.value = await publicCategoriesApi.get({
-        query: {
-          order: [["order", "DESC"]],
-        },
-      });
-    };
-
-    const renderProductsList = async () => {
-      productsList.value = await publicProductsApi.get({
-        query: {
-          where: {
-            categoryId: {
-              $eq: categoriesList.value.items[cTab.current].id,
-            },
-          },
-        },
-      });
-    };
-
     const changeCategory = async (index) => {
       cTab.current = index;
+
       setPageData({
         page: getCurrentPage(),
         data: { currentIndex: index },
       });
+
       await renderProductsList();
-    };
-
-    const redirectToAddProduct = () => {
-      const { id } = categoriesList.value.items[cTab.current];
-
-      wx.navigateTo({
-        url: `/pages/manage/products/form/index?categoryId=${id}`,
-      });
     };
 
     return {
@@ -78,7 +46,6 @@ export default {
       categoriesList,
       productsList,
       changeCategory,
-      redirectToAddProduct,
     };
   },
 };
