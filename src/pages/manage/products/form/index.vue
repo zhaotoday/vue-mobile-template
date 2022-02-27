@@ -1,6 +1,9 @@
 <template>
   <div class="p-user-account-login u-pt24">
     <c-form>
+      <c-form-item label="商品分类">
+        <div class="c-form__input">{{ categoriesDetail.name }}</div>
+      </c-form-item>
       <c-form-item label="商品名称">
         <c-form-input
           placeholder="请输入商品名称"
@@ -30,7 +33,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      保存
+      新增
     </u-button>
   </div>
 </template>

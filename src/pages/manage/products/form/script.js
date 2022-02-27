@@ -1,21 +1,26 @@
 import wx from "wx-bridge";
 import { reactive } from "@vue/composition-api";
 import { useValidators } from "vue-validation";
-import { useHelpers } from "@/composables/use-helpers";
-import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { onNavigationBarButtonTap } from "uni-composition-api";
+import { onShow } from "uni-composition-api";
+import { useRender } from "@/pages/manage/products/form/composables/use-render";
 
 export default {
   setup() {
-    const { isRequired, isPhoneNumber, isPassword, validate } = useValidators();
-    const { accountLogin } = useUsers();
+    const { isRequired, validate } = useValidators();
+
+    const { categoriesDetail, renderCategoriesDetail } = useRender();
+
     const cForm = reactive({
       model: {},
       rules: {
-        account: [isRequired({ label: "手机号" }), isPhoneNumber()],
-        password: [isRequired({ label: "密码" }), isPassword()],
+        name: [isRequired({ label: "商品名称" })],
+        imageFileIds: [isRequired({ label: "商品图片" })],
       },
       errors: {},
+    });
+
+    onShow(async () => {
+      await renderCategoriesDetail();
     });
 
     const submit = async () => {
@@ -24,18 +29,13 @@ export default {
 
         await accountLogin({ account, password });
 
-        wx.showToast({ title: "登录成功" });
-        await useHelpers().sleep(1500);
-        await wx.navigateTo({ url: "/pages/memo/index" });
+        wx.showToast({ title: "新增成功" });
       });
     };
 
-    onNavigationBarButtonTap(async () => {
-      await wx.navigateTo({ url: "/pages/user/account-register/index" });
-    });
-
     return {
       cForm,
+      categoriesDetail,
       validate,
       submit,
     };

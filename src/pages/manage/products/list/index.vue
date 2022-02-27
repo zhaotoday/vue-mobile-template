@@ -23,7 +23,7 @@
         custom-style="width: 160rpx"
         type="primary"
         size="small"
-        @click="$wx.navigateTo('/pages/manage/products/form/index')"
+        @click="redirectToAddProduct"
       >
         新增商品
       </u-button>

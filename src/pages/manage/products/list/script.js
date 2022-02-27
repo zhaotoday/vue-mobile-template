@@ -3,6 +3,7 @@ import { onShow } from "uni-composition-api";
 import { publicCategoriesApi } from "@/apis/public/catetgories";
 import { publicProductsApi } from "@/apis/public/products";
 import { usePageData } from "@/composables/use-page-data";
+import wx from "wx-bridge";
 
 export default {
   setup() {
@@ -63,12 +64,21 @@ export default {
       await renderProductsList();
     };
 
+    const redirectToAddProduct = () => {
+      const { id } = categoriesList.value.items[cTab.current];
+
+      wx.navigateTo({
+        url: `/pages/manage/products/form/index?categoryId=${id}`,
+      });
+    };
+
     return {
       loaded,
       cTab,
       categoriesList,
       productsList,
       changeCategory,
+      redirectToAddProduct,
     };
   },
 };
