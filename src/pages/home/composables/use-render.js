@@ -22,17 +22,13 @@ export const useRender = () => {
 
   const renderCategoriesList = async () => {
     categoriesList.value = await publicCategoriesApi.get({
-      query: {
-        order: [["order", "DESC"]],
-      },
+      query: { order: [["order", "DESC"]] },
     });
   };
 
   const renderProductsList = async () => {
     productsList.value = await publicProductsApi.get({
-      query: {
-        limit: 4,
-      },
+      query: { limit: 4 },
     });
   };
 
