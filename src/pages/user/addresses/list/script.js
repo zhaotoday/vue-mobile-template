@@ -17,7 +17,7 @@ export default {
 
     const { user } = useUsers();
 
-    const loaded = ref(true);
+    const loaded = ref(false);
 
     const list = ref({
       items: [],
