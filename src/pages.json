@@ -159,6 +159,12 @@
       "style": {
         "navigationBarTitleText": "新增商品"
       }
+    },
+    {
+      "path": "pages/user/collections/index",
+      "style": {
+        "navigationBarTitleText": "我的收藏"
+      }
     }
   ],
   "globalStyle": {
