@@ -1,4 +1,3 @@
-import { useTabBar } from "vue-mobile/composables/use-tab-bar";
 import { usePageData } from "@/composables/use-page-data";
 
 export default {
@@ -11,15 +10,19 @@ export default {
   setup() {
     const { setPageData } = usePageData();
 
-    const switchTabToCategory = (index) => {
+    const switchTabToCategories = async (index) => {
+      const categoriesUrl = "/pages/categories/index";
+
       setPageData({
-        page: "/pages/categories/index",
+        page: categoriesUrl,
         data: { currentIndex: index },
       });
+
+      await wx.switchTab({ url: categoriesUrl });
     };
 
     return {
-      switchTabToCategory,
+      switchTabToCategories,
     };
   },
 };

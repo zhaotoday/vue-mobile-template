@@ -1,8 +1,7 @@
 import { reactive, ref } from "@vue/composition-api";
-import { onHide, onShow } from "uni-composition-api";
+import { onShow } from "uni-composition-api";
 import { publicCategoriesApi } from "@/apis/public/catetgories";
 import { publicProductsApi } from "@/apis/public/products";
-import { useTabBar } from "vue-mobile/composables/use-tab-bar";
 import { usePageData } from "@/composables/use-page-data";
 
 export default {

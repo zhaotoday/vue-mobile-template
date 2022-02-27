@@ -4,7 +4,7 @@
       <u-grid-item
         v-for="(item, index) in items"
         :key="index"
-        @click="switchTabToCategory(item)"
+        @click="switchTabToCategories(index)"
       >
         <u-avatar
           size="90rpx"
