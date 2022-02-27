@@ -1,6 +1,6 @@
 <template>
   <div class="cc-submit">
-    <cc-collection />
+    <cc-collection :product-id="product.id" />
     <div
       class="cc-submit__cart"
       @click="$wx.switchTab('/pages/categories/index')"

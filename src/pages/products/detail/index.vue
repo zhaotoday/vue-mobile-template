@@ -32,7 +32,7 @@
         style="width: 100%"
       />
     </div>
-    <gc-product-submit />
+    <gc-product-submit :product="detail" />
   </div>
 </template>
 

@@ -5,6 +5,12 @@ export default {
   components: {
     "cc-collection": Collection,
   },
+  props: {
+    product: {
+      type: Object,
+      default: () => ({}),
+    },
+  },
   setup() {
     const { selectedProducts } = useCart();
 
