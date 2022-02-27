@@ -1,4 +1,4 @@
-import { reactive, ref } from "@vue/composition-api";
+import { reactive } from "@vue/composition-api";
 import { onLoad } from "uni-composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { useRender } from "./composables/use-render";
@@ -7,9 +7,7 @@ export default {
   setup() {
     const { currentRoute } = useRoute();
 
-    const loaded = ref(false);
-
-    const { cTabs, list, render } = useRender();
+    const { loaded, cTabs, list, render } = useRender();
 
     const cSearch = reactive({
       model: {

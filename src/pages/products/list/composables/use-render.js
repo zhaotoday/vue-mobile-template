@@ -2,6 +2,8 @@ import { ref } from "@vue/composition-api";
 import { publicProductsApi } from "@/apis/public/products";
 
 export const useRender = () => {
+  const loaded = ref(false);
+
   const cTabs = {
     items: [
       {
@@ -32,6 +34,7 @@ export const useRender = () => {
   };
 
   return {
+    loaded,
     cTabs,
     list,
     render,
