@@ -3,6 +3,7 @@ import { reactive } from "@vue/composition-api";
 import { useValidators } from "vue-validation";
 import { onShow } from "uni-composition-api";
 import { useRender } from "@/pages/manage/products/form/composables/use-render";
+import { productsApi } from "@/apis/client/products";
 
 export default {
   setup() {
@@ -24,10 +25,10 @@ export default {
     });
 
     const submit = async () => {
-      await validate(cForm, null, async (errors, { account, password }) => {
+      await validate(cForm, null, async (errors, model) => {
         if (errors) return;
 
-        await accountLogin({ account, password });
+        await productsApi.post({ body: model });
 
         wx.showToast({ title: "新增成功" });
       });
