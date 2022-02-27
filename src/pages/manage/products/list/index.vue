@@ -1,12 +1,10 @@
 <template>
-  <div class="p-categories">
+  <div class="p-manage-products p-categories">
     <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24">
       <u-search
         placeholder="请输入商品名称"
-        disabled
         :show-action="false"
         height="60rpx"
-        @click="$wx.navigateTo('/pages/products/search/index')"
       />
     </div>
     <ul class="b-categories fs28">
@@ -20,10 +18,20 @@
       </li>
     </ul>
     <scroll-view class="b-products" scroll-y>
+      <u-button
+        custom-class="u-ml24 u-mb24"
+        custom-style="width: 160rpx"
+        type="primary"
+        size="small"
+        @click="$wx.navigateTo('/pages/manage/products/form/index')"
+      >
+        新增商品
+      </u-button>
       <gc-product-list
         v-if="productsList.items.length"
         :items="productsList.items"
         :col="1"
+        :edit-number="false"
       />
       <u-empty
         v-if="loaded && !productsList.items.length"
