@@ -14,6 +14,7 @@ export default {
     const loaded = ref(false);
 
     const cTabs = {
+      current: 0,
       items: [
         {
           label: "全部",
@@ -42,9 +43,17 @@ export default {
     const render = async () => {
       list.value = await ordersApi.get({
         query: {
-          where: { userId: { $eq: user.value.id } },
+          where: {
+            userId: { $eq: user.value.id },
+            status: { $eq: cTabs.items[cTabs.current].value },
+          },
         },
       });
+    };
+
+    const changeTab = async ({ index }) => {
+      cTabs.current = index;
+      await render();
     };
 
     return {
@@ -52,6 +61,7 @@ export default {
       list,
       cTabs,
       getTotalPrice,
+      changeTab,
     };
   },
 };

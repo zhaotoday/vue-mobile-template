@@ -6,6 +6,7 @@
         key-name="label"
         item-style="width: 33.33%; height: 80rpx; box-sizing: border-box"
         line-color="#5ac725"
+        @change="changeTab"
       />
     </div>
     <ul v-if="list.items.length" class="c-orders">
