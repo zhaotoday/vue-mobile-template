@@ -1,4 +1,5 @@
 import { useTabBar } from "vue-mobile/composables/use-tab-bar";
+import { usePageData } from "@/composables/use-page-data";
 
 export default {
   props: {
@@ -8,10 +9,17 @@ export default {
     },
   },
   setup() {
-    const { switchTab } = useTabBar();
+    const { setPageData } = usePageData();
+
+    const switchTabToCategory = (index) => {
+      setPageData({
+        page: "/pages/categories/index",
+        data: { currentIndex: index },
+      });
+    };
 
     return {
-      switchTab,
+      switchTabToCategory,
     };
   },
 };

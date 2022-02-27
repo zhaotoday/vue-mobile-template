@@ -1,12 +1,13 @@
 import { reactive, ref } from "@vue/composition-api";
-import { onShow } from "uni-composition-api";
+import { onHide, onShow } from "uni-composition-api";
 import { publicCategoriesApi } from "@/apis/public/catetgories";
 import { publicProductsApi } from "@/apis/public/products";
 import { useTabBar } from "vue-mobile/composables/use-tab-bar";
+import { usePageData } from "@/composables/use-page-data";
 
 export default {
   setup() {
-    const { currentRoute } = useTabBar();
+    const { setPageData, getCurrentPage, getPageData } = usePageData();
 
     const loaded = ref(false);
 
@@ -22,10 +23,12 @@ export default {
       items: [],
     });
 
+    const currentPage = getCurrentPage();
+
     onShow(async () => {
       await renderCategoriesList();
 
-      cTab.current = +currentRoute.query.categoryIndex || 0;
+      cTab.current = getPageData({ page: currentPage }).currentIndex || 0;
 
       if (categoriesList.value.items.length) {
         await renderProductsList();
@@ -56,6 +59,10 @@ export default {
 
     const changeCategory = async (index) => {
       cTab.current = index;
+      setPageData({
+        page: currentPage,
+        data: { currentIndex: index },
+      });
       await renderProductsList();
     };
 
