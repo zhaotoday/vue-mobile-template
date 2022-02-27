@@ -5,6 +5,8 @@ import { useRoute } from "vue-mobile/composables/use-route";
 import { useProducts } from "@/composables/use-products";
 import { addressesApi } from "@/apis/client/addresses";
 import { usePageData } from "@/composables/use-page-data";
+import { useCart } from "@/composables/use-cart";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
@@ -13,6 +15,10 @@ export default {
     const { getPageData } = usePageData();
 
     const { getTotalPrice } = useProducts();
+
+    const { selectedProducts, clearProducts } = useCart();
+
+    const { user } = useUsers();
 
     const ordersDetail = ref({
       products: [],
@@ -58,10 +64,13 @@ export default {
     };
 
     const submit = async () => {
-      await ordersApi.put({
-        id: currentRoute.query.orderId,
+      await ordersApi.post({
         body: {
+          userId: user.value.id,
+          products: selectedProducts.value,
+          addressId: selectedAddress.value.id,
           remark: cForm.model.remark,
+          status: "ToPay",
         },
       });
 

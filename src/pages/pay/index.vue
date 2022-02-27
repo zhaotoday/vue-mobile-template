@@ -55,7 +55,7 @@
         </div>
       </c-form-item>
     </c-form>
-    <gc-pay-submit @submit="submit" />
+    <gc-pay-submit @submit="$wx.navigateTo('/pages/pay/index')" />
   </div>
 </template>
 

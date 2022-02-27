@@ -38,7 +38,7 @@
               :product="item"
               :key="new Date().getTime()"
             />
-            <div v-if="showNumber" class="fs24">x1</div>
+            <div v-if="showNumber" class="fs24">x{{ item.number }}</div>
           </div>
         </div>
       </u-grid-item>
