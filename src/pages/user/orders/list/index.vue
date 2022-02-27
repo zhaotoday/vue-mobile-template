@@ -9,24 +9,27 @@
     </div>
     <ul class="c-orders">
       <li
-        v-for="item in 3"
-        :key="item"
+        v-for="item in list.items"
+        :key="item.id"
         class="c-orders__item bg-white u-mt20"
-        @click="$wx.navigateTo('/pages/user/orders/detail/index')"
+        @click="$wx.navigateTo(`/pages/user/orders/detail/index?id=${item.id}`)"
       >
         <div class="c-orders__head">
           <span class="fs26" style="padding-right: 20rpx">待付款</span>
-          <span class="t-g7 fs24">2022-02-14 14:00</span>
+          <span class="t-g7 fs24">{{ $time.getTime(item.createdAt) }}</span>
         </div>
         <div class="c-orders__body o-media">
           <img
+            v-if="item.products[0]"
             class="o-media__image"
             mode="aspectFill"
-            src="https://cdn.uviewui.com/uview/goods/1.jpg"
+            :src="$helpers.getFileUrl({ id: item.products[0].imageFileIds[0] })"
           />
           <div class="o-media__body">
             <div class="cc-products">
-              <div class="cc-products__item fs26">商品名称</div>
+              <div class="cc-products__item fs26">
+                {{ item.products[0] ? item.products[0].name : "" }}
+              </div>
             </div>
             <div class="b-money fs26">
               实付 <span class="t-error">￥12.00</span>

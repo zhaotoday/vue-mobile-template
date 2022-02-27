@@ -1,4 +1,8 @@
 import products from "@/mock/products.json";
+import { ref } from "@vue/composition-api";
+import { onShow } from "uni-composition-api";
+import { ordersApi } from "@/apis/client/orders";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
@@ -19,8 +23,27 @@ export default {
       ],
     };
 
+    const { user } = useUsers();
+
+    const list = ref({
+      items: [],
+    });
+
+    onShow(async () => {
+      await render();
+    });
+
+    const render = async () => {
+      list.value = await ordersApi.get({
+        query: {
+          where: { userId: { $eq: user.value.id } },
+        },
+      });
+    };
+
     return {
       products,
+      list,
       cTabs,
     };
   },
