@@ -1,36 +1,29 @@
 import helpers from "jt-helpers";
 
 const types = helpers.keyMirror({
-  SetData: null,
+  SavePageData: null,
 });
 
 const state = {
-  data: {},
-};
-
-const getters = {
-  selectedProducts(state) {
-    return state.products.filter(({ selected }) => selected);
-  },
+  pageData: {},
 };
 
 const mutations = {
-  [types.SetData](state, { page, data }) {
-    state.data[page] = data;
+  [types.SavePageData](state, { page, pageData }) {
+    state.pageData[page] = pageData;
   },
 };
 
 const actions = {
-  setData({ commit }, { page, data }) {
-    commit(types.SetData, { page, data });
-    return { page, data };
+  setData({ commit }, { page, pageData }) {
+    commit(types.SavePageData, { page, pageData });
+    return { page, pageData };
   },
 };
 
 export default {
   namespaced: true,
   state,
-  getters,
   mutations,
   actions,
 };
