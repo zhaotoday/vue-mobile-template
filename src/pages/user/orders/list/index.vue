@@ -3,11 +3,12 @@
     <div class="bg-white u-pb10 u-mb24">
       <u-tabs
         :list="cTabs.items"
-        item-style="width: 25%; height: 80rpx; box-sizing: border-box"
+        key-name="label"
+        item-style="width: 33.33%; height: 80rpx; box-sizing: border-box"
         line-color="#5ac725"
       />
     </div>
-    <ul class="c-orders">
+    <ul v-if="list.items.length" class="c-orders">
       <li
         v-for="item in list.items"
         :key="item.id"
@@ -41,6 +42,12 @@
         </div>
       </li>
     </ul>
+    <u-empty
+      v-if="loaded && !list.items.length"
+      mode="data"
+      icon="https://cdn.uviewui.com/uview/empty/data.png"
+      margin-top="100rpx"
+    />
   </div>
 </template>
 

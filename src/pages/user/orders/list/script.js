@@ -6,24 +6,26 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
+    const { user } = useUsers();
+
+    const loaded = ref(false);
+
     const cTabs = {
       items: [
         {
-          name: "全部",
+          label: "全部",
+          value: "",
         },
         {
-          name: "待付款",
+          label: "待付款",
+          value: "ToPay",
         },
         {
-          name: "待收货",
-        },
-        {
-          name: "已完成",
+          label: "已完成",
+          value: "Finished",
         },
       ],
     };
-
-    const { user } = useUsers();
 
     const list = ref({
       items: [],
@@ -31,6 +33,7 @@ export default {
 
     onShow(async () => {
       await render();
+      loaded.value = true;
     });
 
     const render = async () => {
@@ -42,7 +45,7 @@ export default {
     };
 
     return {
-      products,
+      loaded,
       list,
       cTabs,
     };
