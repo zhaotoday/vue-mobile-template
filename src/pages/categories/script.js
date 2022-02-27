@@ -22,12 +22,10 @@ export default {
       items: [],
     });
 
-    const currentPage = getCurrentPage();
-
     onShow(async () => {
       await renderCategoriesList();
 
-      cTab.current = getPageData({ page: currentPage }).currentIndex || 0;
+      cTab.current = getPageData({ page: getCurrentPage() }).currentIndex || 0;
 
       if (categoriesList.value.items.length) {
         await renderProductsList();
@@ -59,7 +57,7 @@ export default {
     const changeCategory = async (index) => {
       cTab.current = index;
       setPageData({
-        page: currentPage,
+        page: getCurrentPage(),
         data: { currentIndex: index },
       });
       await renderProductsList();
