@@ -28,7 +28,7 @@
         <div class="c-title c-title--md fs32">商品信息</div>
       </div>
       <gc-product-list
-        :items="ordersDetail.products"
+        :items="selectedProducts"
         :col="1"
         :edit-number="false"
         show-number
@@ -37,7 +37,7 @@
     <c-form custom-class="u-mb24">
       <c-form-item label="总计">
         <div class="c-form__input fs30 t-error">
-          ¥{{ getTotalPrice(ordersDetail.products) }}
+          ¥{{ getTotalPrice(selectedProducts) }}
         </div>
       </c-form-item>
       <c-form-item custom-class="is-link" label="支付方式">
@@ -55,7 +55,7 @@
         </div>
       </c-form-item>
     </c-form>
-    <gc-pay-submit @submit="$wx.navigateTo('/pages/pay/index')" />
+    <gc-pay-submit @submit="submit" />
   </div>
 </template>
 

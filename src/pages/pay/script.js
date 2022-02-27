@@ -20,10 +20,6 @@ export default {
 
     const { user } = useUsers();
 
-    const ordersDetail = ref({
-      products: [],
-    });
-
     const selectedAddress = ref({});
 
     const cForm = reactive({
@@ -37,7 +33,6 @@ export default {
     });
 
     onShow(async () => {
-      await renderOrderDetail();
       selectedAddress.value = getPageData({
         page: "/pages/user/addresses/list/index",
       })["selectedAddress"];
@@ -57,12 +52,6 @@ export default {
       }
     };
 
-    const renderOrderDetail = async () => {
-      ordersDetail.value = await ordersApi.get({
-        id: currentRoute.query.orderId,
-      });
-    };
-
     const submit = async () => {
       await ordersApi.post({
         body: {
@@ -74,11 +63,13 @@ export default {
         },
       });
 
+      clearProducts();
+
       await wx.redirectTo({ url: "/pages/pay/result/index" });
     };
 
     return {
-      ordersDetail,
+      selectedProducts,
       selectedAddress,
       cForm,
       getTotalPrice,
