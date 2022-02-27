@@ -22,7 +22,7 @@ export default {
       {
         name: "我的收藏",
         icon: "heart",
-        url: "/pages/user/collections/list/index",
+        url: "/pages/user/collections/index",
       },
       {
         name: "最近购买",
