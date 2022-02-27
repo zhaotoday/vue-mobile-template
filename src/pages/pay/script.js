@@ -4,10 +4,13 @@ import { ordersApi } from "@/apis/client/orders";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { useProducts } from "@/composables/use-products";
 import { addressesApi } from "@/apis/client/addresses";
+import { usePageData } from "@/composables/use-page-data";
 
 export default {
   setup() {
     const { currentRoute } = useRoute();
+
+    const { getPageData } = usePageData();
 
     const { getTotalPrice } = useProducts();
 
@@ -29,6 +32,9 @@ export default {
 
     onShow(async () => {
       await renderOrderDetail();
+      selectedAddress.value = getPageData({
+        page: "/pages/user/addresses/list/index",
+      })["selectedAddress"];
     });
 
     const selectDefaultAddress = async () => {

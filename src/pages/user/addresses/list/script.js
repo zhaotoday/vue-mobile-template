@@ -5,10 +5,13 @@ import { useRoute } from "vue-mobile/composables/use-route";
 import { addressesApi } from "@/apis/client/addresses";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
+import { usePageData } from "@/composables/use-page-data";
 
 export default {
   setup() {
     const { currentRoute } = useRoute();
+
+    const { setPageData, getCurrentPage } = usePageData();
 
     const { enums } = useEnums();
 
@@ -42,8 +45,11 @@ export default {
     };
 
     const select = (item) => {
-      if (currentRoute.query.select) {
-        console.log(item);
+      if (currentRoute.query.action === "select") {
+        setPageData({
+          page: getCurrentPage(),
+          data: { selectedAddress: item },
+        });
         wx.navigateBack();
       }
     };

@@ -1,7 +1,8 @@
-import helpers from "jt-helpers";
+import { keyMirror } from "jt-helpers";
 
-const types = helpers.keyMirror({
-  SavePageData: null,
+const types = keyMirror({
+  SetPageData: null,
+  RemovePageData: null,
 });
 
 const state = {
@@ -9,15 +10,15 @@ const state = {
 };
 
 const mutations = {
-  [types.SavePageData](state, { page, pageData }) {
-    state.pageData[page] = pageData;
+  [types.SetPageData](state, { page, data }) {
+    state.pageData[page] = data;
   },
 };
 
 const actions = {
-  setData({ commit }, { page, pageData }) {
-    commit(types.SavePageData, { page, pageData });
-    return { page, pageData };
+  setPageData({ commit }, { page, data }) {
+    commit(types.SetPageData, { page, data });
+    return { page, data };
   },
 };
 

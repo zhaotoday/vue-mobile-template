@@ -8,6 +8,7 @@ module.exports = {
     wx: true,
     uni: true,
     ROUTES: true,
+    getCurrentPages: true,
   },
   parserOptions: {
     parser: "babel-eslint",

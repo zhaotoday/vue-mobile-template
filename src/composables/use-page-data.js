@@ -3,15 +3,26 @@ import { createNamespacedHelpers } from "vuex-composition-helpers";
 
 export const usePageData = () => {
   const { useState, useActions } = createNamespacedHelpers(store, "pageData");
-  const { pageData } = useState(["products"]);
-  const { savePageData, removePageData } = useActions([
-    "savePageData",
+  const { pageData } = useState(["pageData"]);
+  const { setPageData, removePageData } = useActions([
+    "setPageData",
     "removePageData",
   ]);
 
+  const getPageData = ({ page }) => {
+    return pageData.value[page] || {};
+  };
+
+  const getCurrentPage = () => {
+    const currentPage = getCurrentPages().pop();
+    return currentPage && currentPage.route ? "/" + currentPage.route : "";
+  };
+
   return {
     pageData,
-    savePageData,
+    setPageData,
+    getPageData,
     removePageData,
+    getCurrentPage,
   };
 };

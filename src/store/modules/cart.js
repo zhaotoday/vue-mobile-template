@@ -1,6 +1,6 @@
-import helpers from "jt-helpers";
+import { keyMirror } from "jt-helpers";
 
-const types = helpers.keyMirror({
+const types = keyMirror({
   UpdateProductNumber: null,
   SelectProduct: null,
   SelectAllProducts: null,

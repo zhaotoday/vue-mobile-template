@@ -1,6 +1,6 @@
 <template>
   <div class="p-user-addresses-list u-pt24">
-    <ul v-for="item in list.items" :key="item" class="b-list">
+    <ul v-for="item in list.items" :key="item.id" class="b-list">
       <li class="b-list__item" :class="$bem.box.$" @click="select(item)">
         <div class="b-list__head">
           <h2 class="b-list__title fs28">
