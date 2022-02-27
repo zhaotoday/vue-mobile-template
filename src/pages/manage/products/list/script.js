@@ -1,6 +1,6 @@
 import { onShow } from "uni-composition-api";
 import { usePageData } from "@/composables/use-page-data";
-import { useRender } from "./composables/use-render";
+import { useRender } from "@/pages/categories/composables/use-render";
 
 export default {
   setup() {
@@ -40,12 +40,21 @@ export default {
       await renderProductsList();
     };
 
+    const redirectToAddProduct = async () => {
+      const { id } = categoriesList.value.items[cTab.current];
+
+      await wx.navigateTo({
+        url: `/pages/manage/products/form/index?categoryId=${id}`,
+      });
+    };
+
     return {
       loaded,
       cTab,
       categoriesList,
       productsList,
       changeCategory,
+      redirectToAddProduct,
     };
   },
 };
