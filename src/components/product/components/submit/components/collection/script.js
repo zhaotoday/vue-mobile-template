@@ -1,6 +1,6 @@
 import { ref, watch } from "@vue/composition-api";
-import { useAuth } from "@lr/composables/use-auth";
-import { CollectionsApi } from "@/apis/wx/collections";
+import { useAuth } from "vue-mobile/@lr/composables/use-auth";
+import { collectionsApi } from "@/apis/client/collections";
 
 export default {
   props: {
@@ -18,9 +18,7 @@ export default {
     const productIds = ref([]);
 
     const getProductIds = () =>
-      new CollectionsApi().post({
-        action: "getProductIds",
-      });
+      collectionsApi.post({ action: "getProductIds" });
 
     watch(
       () => props.productId,
@@ -33,7 +31,7 @@ export default {
     );
 
     const updateProductIds = async () => {
-      await new CollectionsApi().post({
+      await collectionsApi.post({
         action: "updateProductIds",
         body: { productId: props.productId },
       });

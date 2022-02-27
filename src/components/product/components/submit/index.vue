@@ -1,9 +1,6 @@
 <template>
   <div class="cc-submit">
-    <div class="cc-submit__collect">
-      <i class="c-iconfont c-iconfont--heart-off fs42"></i>
-      <h2 class="fs24">收藏</h2>
-    </div>
+    <cc-collection />
     <div
       class="cc-submit__cart"
       @click="$wx.switchTab('/pages/categories/index')"
