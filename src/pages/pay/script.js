@@ -1,7 +1,6 @@
 import { reactive, ref } from "@vue/composition-api";
 import { onLoad, onShow } from "uni-composition-api";
 import { ordersApi } from "@/apis/client/orders";
-import { useRoute } from "vue-mobile/composables/use-route";
 import { useProducts } from "@/composables/use-products";
 import { addressesApi } from "@/apis/client/addresses";
 import { usePageData } from "@/composables/use-page-data";
@@ -10,8 +9,6 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
-    const { currentRoute } = useRoute();
-
     const { getPageData } = usePageData();
 
     const { getTotalPrice } = useProducts();
