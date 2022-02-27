@@ -1,6 +1,5 @@
 <template>
   <div class="p-pay u-pt24">
-    {{ defaultAddress }}
     <div
       class="c-address is-link u-mb24"
       :class="$bem.box.$"
