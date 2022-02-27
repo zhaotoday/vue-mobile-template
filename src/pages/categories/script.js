@@ -31,10 +31,12 @@ export default {
 
     const changeCategory = async (index) => {
       cTab.current = index;
+
       setPageData({
         page: getCurrentPage(),
         data: { currentIndex: index },
       });
+
       await renderProductsList();
     };
 
