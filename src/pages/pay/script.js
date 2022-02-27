@@ -65,7 +65,7 @@ export default {
         },
       });
 
-      await wx.redirectTo({ url: "/pages/pay-result/index" });
+      await wx.redirectTo({ url: "/pages/pay/result/index" });
     };
 
     return {
