@@ -3,10 +3,13 @@ import { ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { useProducts } from "@/composables/use-products";
 
 export default {
   setup() {
     const { user } = useUsers();
+
+    const { getTotalPrice } = useProducts();
 
     const loaded = ref(false);
 
@@ -48,6 +51,7 @@ export default {
       loaded,
       list,
       cTabs,
+      getTotalPrice,
     };
   },
 };
