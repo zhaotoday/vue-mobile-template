@@ -11,7 +11,7 @@
     </div>
     <ul class="b-categories fs28">
       <li
-        v-for="(item, index) in products"
+        v-for="(item, index) in categoriesList.items"
         :key="item.name"
         :class="{ 'is-active': index === cTab.current }"
         @click="changeCategory(index)"
@@ -20,16 +20,17 @@
       </li>
     </ul>
     <scroll-view class="b-products" scroll-y>
-      <u-button
-        custom-class="u-ml24 u-mb24"
-        custom-style="width: 160rpx"
-        type="primary"
-        size="small"
-        @click="$wx.navigateTo('/pages/manage/products/form/index')"
-      >
-        新增商品
-      </u-button>
-      <gc-product-list :items="products" :col="1" :edit-number="false" />
+      <gc-product-list
+        v-if="productsList.items.length"
+        :items="productsList.items"
+        :col="1"
+      />
+      <u-empty
+        v-if="loaded && !productsList.items.length"
+        mode="data"
+        icon="https://cdn.uviewui.com/uview/empty/data.png"
+        margin-top="100rpx"
+      />
     </scroll-view>
   </div>
 </template>
