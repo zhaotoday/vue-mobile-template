@@ -1,6 +1,6 @@
 import Categories from "./components/categories";
 import { onShow } from "uni-composition-api";
-import { useRender } from "@/pages/home/composables/use-render";
+import { useRender } from "./composables/use-render";
 
 export default {
   components: {

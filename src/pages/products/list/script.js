@@ -1,7 +1,7 @@
 import { reactive, ref } from "@vue/composition-api";
 import { onLoad } from "uni-composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";
-import { useRender } from "@/pages/products/list/composables/use-render";
+import { useRender } from "./composables/use-render";
 
 export default {
   setup() {
@@ -21,6 +21,7 @@ export default {
       await render(currentRoute.query.keywords);
 
       cSearch.model.keywords = currentRoute.query.keywords;
+
       loaded.value = true;
     });
 

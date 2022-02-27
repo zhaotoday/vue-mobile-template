@@ -5,12 +5,6 @@ import { useRoute } from "vue-mobile/composables/use-route";
 
 export default {
   setup() {
-    const swiperData = [
-      "https://cdn.uviewui.com/uview/goods/1.jpg",
-      "https://cdn.uviewui.com/uview/goods/2.jpg",
-      "https://cdn.uviewui.com/uview/goods/3.jpg",
-    ];
-
     const { currentRoute } = useRoute();
 
     const detail = ref({
@@ -29,7 +23,6 @@ export default {
 
     return {
       detail,
-      swiperData,
     };
   },
 };
