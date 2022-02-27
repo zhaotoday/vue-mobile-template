@@ -1,5 +1,5 @@
 import { reactive, ref } from "@vue/composition-api";
-import { onShow } from "uni-composition-api";
+import { onLoad, onShow } from "uni-composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { useProducts } from "@/composables/use-products";
@@ -15,7 +15,7 @@ export default {
       products: [],
     });
 
-    const defaultAddress = ref({});
+    const selectedAddress = ref({});
 
     const cForm = reactive({
       model: {
@@ -23,17 +23,26 @@ export default {
       },
     });
 
-    onShow(async () => {
-      await renderOrderDetail();
-      defaultAddress.value = await getDefaultAddress();
+    onLoad(async () => {
+      await selectDefaultAddress();
     });
 
-    const getDefaultAddress = () => {
-      return addressesApi.get({
+    onShow(async () => {
+      await renderOrderDetail();
+    });
+
+    const selectDefaultAddress = async () => {
+      const { items } = await addressesApi.get({
         query: {
-          where: { default: 1 },
+          where: {
+            default: { $eq: 1 },
+          },
         },
       });
+
+      if (items.length) {
+        selectedAddress.value = items[0];
+      }
     };
 
     const renderOrderDetail = async () => {
@@ -55,7 +64,7 @@ export default {
 
     return {
       ordersDetail,
-      defaultAddress,
+      selectedAddress,
       cForm,
       getTotalPrice,
       submit,
