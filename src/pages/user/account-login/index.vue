@@ -5,7 +5,7 @@
         <c-form-input
           type="number"
           maxlength="11"
-          :placeholder="$t('global.inputPhoneNumber')"
+          :placeholder="$t('global.input.phoneNumber')"
           v-model.trim="cForm.model.account"
           :error="cForm.errors.account"
           @blur="validate(cForm, 'account')"
@@ -14,7 +14,7 @@
       <c-form-item :label="$t('global.password')">
         <c-form-input
           type="password"
-          :placeholder="$t('global.inputPassword')"
+          :placeholder="$t('global.input.password')"
           v-model.trim="cForm.model.password"
           :error="cForm.errors.password"
           @blur="validate(cForm, 'password')"

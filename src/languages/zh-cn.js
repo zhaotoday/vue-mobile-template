@@ -1,15 +1,18 @@
 export const zhCn = {
   global: {
-    inputProductName: "请输入商品名称",
     remark: "备注",
-    inputContent: "请输入内容",
     stocks: "库存",
     sales: "销量",
     details: "详情",
     phoneNumber: "手机号",
-    inputPhoneNumber: "请输入手机号",
     password: "密码",
-    inputPassword: "请输入密码",
+    title: {},
+    input: {
+      content: "请输入内容",
+      productName: "请输入商品名称",
+      phoneNumber: "请输入手机号",
+      password: "请输入密码",
+    },
   },
   components: {},
   pages: {

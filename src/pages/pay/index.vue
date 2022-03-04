@@ -50,7 +50,7 @@
       <c-form-item :label="$t('global.remark')">
         <div class="u-pt10 u-pb10 u-mr20" style="margin-left: 180rpx">
           <u-textarea
-            :placeholder="$t('global.inputContent')"
+            :placeholder="$t('global.input.content')"
             count
             v-model="cForm.model.remark"
           />

@@ -3,7 +3,7 @@
     <div class="bg-white u-pl24 u-pr24 u-pt24">
       <u-search
         ref="search"
-        :placeholder="$t('global.inputProductName')"
+        :placeholder="$t('global.input.productName')"
         height="60rpx"
         v-model="cSearch.model.keywords"
         @search="search"
