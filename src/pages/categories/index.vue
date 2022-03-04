@@ -2,7 +2,7 @@
   <div class="p-categories">
     <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24">
       <u-search
-        placeholder="请输入商品名称"
+        :placeholder="$t('global.inputProductName')"
         disabled
         :show-action="false"
         height="60rpx"
