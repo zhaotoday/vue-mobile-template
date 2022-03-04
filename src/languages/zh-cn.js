@@ -14,6 +14,7 @@ export const zhCn = {
       phoneNumber: "请输入手机号",
       password: "请输入密码",
     },
+    colon: "：",
   },
   $c: {},
   $p: {
