@@ -6,6 +6,10 @@ export const zhCn = {
     stocks: "库存",
     sales: "销量",
     details: "详情",
+    phoneNumber: "手机号",
+    inputPhoneNumber: "请输入手机号",
+    password: "密码",
+    inputPassword: "请输入密码",
   },
   components: {},
   pages: {
