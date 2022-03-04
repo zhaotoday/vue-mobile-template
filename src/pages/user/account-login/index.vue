@@ -1,20 +1,20 @@
 <template>
   <div class="p-user-account-login u-pt24">
     <c-form>
-      <c-form-item :label="$t('global.PhoneNumber')">
+      <c-form-item :label="$t('$g.PhoneNumber')">
         <c-form-input
           type="number"
           maxlength="11"
-          :placeholder="$t('global.input.phoneNumber')"
+          :placeholder="$t('$g.input.phoneNumber')"
           v-model.trim="cForm.model.account"
           :error="cForm.errors.account"
           @blur="validate(cForm, 'account')"
         />
       </c-form-item>
-      <c-form-item :label="$t('global.Password')">
+      <c-form-item :label="$t('$g.Password')">
         <c-form-input
           type="password"
-          :placeholder="$t('global.input.password')"
+          :placeholder="$t('$g.input.password')"
           v-model.trim="cForm.model.password"
           :error="cForm.errors.password"
           @blur="validate(cForm, 'password')"

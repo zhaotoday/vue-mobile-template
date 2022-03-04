@@ -1,5 +1,5 @@
 export const zhCn = {
-  global: {
+  $g: {
     Remark: "备注",
     Stocks: "库存",
     Sales: "销量",
@@ -13,13 +13,15 @@ export const zhCn = {
       password: "请输入密码",
     },
   },
-  components: {},
-  pages: {
-    $pay: {
-      $result: {
-        paySuccess: "下单成功",
-        gotoOrders: "查看订单列表",
-        backHome: "返回首页",
+  $c: {},
+  $p: {
+    pay: {
+      $p: {
+        result: {
+          paySuccess: "下单成功",
+          gotoOrders: "查看订单列表",
+          backHome: "返回首页",
+        },
       },
       selectAddress: "请选择收获地址",
       productInfo: "商品信息",
@@ -27,10 +29,12 @@ export const zhCn = {
       payment: "支付方式",
       cashOnDelivery: "货到付款",
     },
-    $products: {
-      $search: {
-        history: "历史搜索",
-        hot: "热门搜索",
+    products: {
+      $p: {
+        search: {
+          history: "历史搜索",
+          hot: "热门搜索",
+        },
       },
     },
   },

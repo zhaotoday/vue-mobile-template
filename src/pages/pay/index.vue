@@ -20,13 +20,13 @@
         <div class="c-tag h34 bd-primary t-primary u-br10 fs22">家</div>
       </template>
       <div v-else class="c-address__placeholder fs30 t-placeholder">
-        {{ $t("pages.$pay.selectAddress") }}
+        {{ $t("$p.pay.selectAddress") }}
       </div>
     </div>
     <div class="u-mb24" :class="$bem.box.$">
       <div class="u-pt20 u-pb20 bg-white">
         <div class="c-title c-title--md fs32">
-          {{ $t("pages.$pay.productInfo") }}
+          {{ $t("$p.pay.productInfo") }}
         </div>
       </div>
       <gc-product-list
@@ -37,20 +37,20 @@
       />
     </div>
     <c-form custom-class="u-mb24">
-      <c-form-item :label="$t('pages.$pay.total')">
+      <c-form-item :label="$t('$p.pay.total')">
         <div class="c-form__input fs30 t-error">
           ¥{{ getTotalPrice(selectedProducts) }}
         </div>
       </c-form-item>
-      <c-form-item custom-class="is-link" :label="$t('pages.$pay.payment')">
-        <div class="c-form__input">{{ $t("pages.$pay.cashOnDelivery") }}</div>
+      <c-form-item custom-class="is-link" :label="$t('$p.pay.payment')">
+        <div class="c-form__input">{{ $t("$p.pay.cashOnDelivery") }}</div>
       </c-form-item>
     </c-form>
     <c-form>
-      <c-form-item :label="$t('global.Remark')">
+      <c-form-item :label="$t('$g.Remark')">
         <div class="u-pt10 u-pb10 u-mr20" style="margin-left: 180rpx">
           <u-textarea
-            :placeholder="$t('global.input.content')"
+            :placeholder="$t('$g.input.content')"
             count
             v-model="cForm.model.remark"
           />

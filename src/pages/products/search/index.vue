@@ -3,7 +3,7 @@
     <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24 u-mb26">
       <u-search
         ref="search"
-        :placeholder="$t('global.input.productName')"
+        :placeholder="$t('$g.input.productName')"
         focus
         height="60rpx"
         @search="search"
@@ -12,7 +12,7 @@
     <div class="b-keywords bg-white">
       <template v-if="history[0]">
         <h2 class="b-title fs28">
-          {{ $t("pages.$products.$search.history") }}
+          {{ $t("$p.products.$p.search.history") }}
           <i
             class="b-clear c-iconfont c-iconfont--delete"
             @click="clearHistory"
@@ -29,7 +29,7 @@
           </li>
         </ul>
       </template>
-      <h2 class="b-title fs28">{{ $t("pages.$products.$search.hot") }}</h2>
+      <h2 class="b-title fs28">{{ $t("$p.products.$p.search.hot") }}</h2>
       <ul class="b-tags">
         <li
           v-for="(item, index) in hotKeywords"
