@@ -19,12 +19,13 @@
         <span class="t-error fs32">¥{{ detail.price }}</span>
         <span class="t-g7 u-lt fs26 u-ml10">200.0</span>
         <div class="b-info__right t-g7 fs26">
-          库存：1000 &nbsp;&nbsp; 销量：1000
+          {{ $t("global.stocks") }}：1000 &nbsp;&nbsp;
+          {{ $t("global.sales") }}：1000
         </div>
       </div>
     </div>
     <div class="u-pt30 u-pb30 bg-white">
-      <div class="c-title c-title--md fs32">详情</div>
+      <div class="c-title c-title--md fs32">{{ $t("global.details") }}</div>
     </div>
     <div class="s-cms-content">
       <img

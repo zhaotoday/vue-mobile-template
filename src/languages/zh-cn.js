@@ -3,6 +3,9 @@ export const zhCn = {
     inputProductName: "请输入商品名称",
     remark: "备注",
     inputContent: "请输入内容",
+    stocks: "库存",
+    sales: "销量",
+    details: "详情",
   },
   components: {},
   pages: {
@@ -17,6 +20,12 @@ export const zhCn = {
       total: "总计",
       payment: "支付方式",
       cashOnDelivery: "货到付款",
+    },
+    $products: {
+      $search: {
+        history: "历史搜索",
+        hot: "热门搜索",
+      },
     },
   },
 };
