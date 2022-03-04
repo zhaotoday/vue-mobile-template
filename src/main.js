@@ -8,7 +8,10 @@ import uView from "uview-ui";
 
 Vue.config.productionTip = false;
 
+// #ifndef MP
 Vue.use(router);
+// #endif
+
 Vue.use(VueCompositionAPI);
 Vue.use(UniCompositionAPI);
 Vue.use(globalPlugin);
