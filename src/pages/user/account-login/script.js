@@ -4,9 +4,14 @@ import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { onNavigationBarButtonTap } from "uni-composition-api";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t } = useI18n();
+
+    console.log(t("abc", { aa: 2 }));
+
     const { isRequired, isPhoneNumber, isPassword, validate } = useValidators();
     const { accountLogin } = useUsers();
     const cForm = reactive({

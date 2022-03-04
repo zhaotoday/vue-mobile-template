@@ -7,6 +7,7 @@ export const zhCn = {
       details: "详情",
       phoneNumber: "手机号",
       password: "密码",
+      login: "登录",
     },
     input: {
       content: "请输入内容",
@@ -37,6 +38,14 @@ export const zhCn = {
         search: {
           history: "历史搜索",
           hot: "热门搜索",
+        },
+      },
+    },
+    user: {
+      $p: {
+        accountLogin: {
+          captchaLogin: "验证码登录",
+          forgotPassword: "忘记密码？",
         },
       },
     },

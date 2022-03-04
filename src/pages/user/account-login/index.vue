@@ -26,17 +26,17 @@
         class="b-register"
         @click="$wx.navigateTo('/pages/user/captcha-login/index')"
       >
-        验证码登录
+        {{ $t("$p.user.$p.accountLogin.captchaLogin") }}
       </div>
       <div
         class="b-password"
         @click="$wx.navigateTo('/pages/user/password/index')"
       >
-        忘记密码？
+        {{ $t("$p.user.$p.accountLogin.forgotPassword") }}
       </div>
     </div>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      登录
+      {{ $t("$g.$t.login") }}
     </u-button>
   </div>
 </template>
