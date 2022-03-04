@@ -1,7 +1,7 @@
 <template>
   <div class="p-user-account-login u-pt24">
     <c-form>
-      <c-form-item :label="$t('global.phoneNumber')">
+      <c-form-item :label="$t('global.PhoneNumber')">
         <c-form-input
           type="number"
           maxlength="11"
@@ -11,7 +11,7 @@
           @blur="validate(cForm, 'account')"
         />
       </c-form-item>
-      <c-form-item :label="$t('global.password')">
+      <c-form-item :label="$t('global.Password')">
         <c-form-input
           type="password"
           :placeholder="$t('global.input.password')"

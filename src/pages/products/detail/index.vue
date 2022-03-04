@@ -19,13 +19,13 @@
         <span class="t-error fs32">¥{{ detail.price }}</span>
         <span class="t-g7 u-lt fs26 u-ml10">200.0</span>
         <div class="b-info__right t-g7 fs26">
-          {{ $t("global.stocks") }}：1000 &nbsp;&nbsp;
-          {{ $t("global.sales") }}：1000
+          {{ $t("global.Stocks") }}：1000 &nbsp;&nbsp;
+          {{ $t("global.Sales") }}：1000
         </div>
       </div>
     </div>
     <div class="u-pt30 u-pb30 bg-white">
-      <div class="c-title c-title--md fs32">{{ $t("global.details") }}</div>
+      <div class="c-title c-title--md fs32">{{ $t("global.Details") }}</div>
     </div>
     <div class="s-cms-content">
       <img

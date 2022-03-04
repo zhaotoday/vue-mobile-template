@@ -47,7 +47,7 @@
       </c-form-item>
     </c-form>
     <c-form>
-      <c-form-item :label="$t('global.remark')">
+      <c-form-item :label="$t('global.Remark')">
         <div class="u-pt10 u-pb10 u-mr20" style="margin-left: 180rpx">
           <u-textarea
             :placeholder="$t('global.input.content')"

@@ -1,12 +1,11 @@
 export const zhCn = {
   global: {
-    remark: "备注",
-    stocks: "库存",
-    sales: "销量",
-    details: "详情",
-    phoneNumber: "手机号",
-    password: "密码",
-    title: {},
+    Remark: "备注",
+    Stocks: "库存",
+    Sales: "销量",
+    Details: "详情",
+    PhoneNumber: "手机号",
+    Password: "密码",
     input: {
       content: "请输入内容",
       productName: "请输入商品名称",
