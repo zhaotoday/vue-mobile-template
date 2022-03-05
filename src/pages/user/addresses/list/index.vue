@@ -21,7 +21,7 @@
             ]"
             @click.stop="setDefault(item)"
           >
-            设为默认
+            {{ t("setDefault") }}
           </div>
           <div
             class="c-icon-tag c-icon-tag--edit"
@@ -29,10 +29,10 @@
               $wx.navigateTo(`/pages/user/addresses/form/index?id=${item.id}`)
             "
           >
-            修改
+            {{ $t("titles.modify") }}
           </div>
           <div class="c-icon-tag c-icon-tag--del" @click.stop="del(item)">
-            删除
+            {{ $t("titles.del") }}
           </div>
         </div>
       </li>
@@ -49,7 +49,7 @@
       :disabled="list.items.length >= 5"
       @click="$wx.navigateTo('/pages/user/addresses/form/index')"
     >
-      新增
+      {{ $t("titles.add") }}
     </u-button>
   </div>
 </template>

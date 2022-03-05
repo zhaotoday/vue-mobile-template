@@ -12,6 +12,9 @@ export const zhCn = {
     login: "登录",
     register: "注册",
     save: "保存",
+    modify: "修改",
+    del: "删除",
+    add: "新增",
     colon: "：",
   },
   inputs: {
@@ -70,6 +73,9 @@ export const zhCn = {
         },
         addAddress: "新增收货地址",
         modifyAddress: "修改收货地址",
+      },
+      LIST: {
+        setDefault: "设为默认",
       },
     },
   },

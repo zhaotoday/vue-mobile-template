@@ -6,9 +6,12 @@ import { addressesApi } from "@/apis/client/addresses";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { usePageData } from "@/composables/use-page-data";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t } = useI18n({ page: "user/addresses/list" });
+
     const { currentRoute } = useRoute();
 
     const { setPageData, getCurrentPage } = usePageData();
@@ -83,6 +86,7 @@ export default {
     };
 
     return {
+      t,
       enums,
       loaded,
       list,
