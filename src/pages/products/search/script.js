@@ -1,9 +1,12 @@
 import wx from "wx-bridge";
 import { ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t } = useI18n({ page: "products/search" });
+
     const history = ref([]);
     const hotKeywords = ["花生油", "大米", "食盐", "白菜"];
 
@@ -38,6 +41,7 @@ export default {
     };
 
     return {
+      t,
       history,
       hotKeywords,
       search,
