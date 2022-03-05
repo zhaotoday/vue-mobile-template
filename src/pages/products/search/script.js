@@ -5,7 +5,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { pt } = useI18n({ page: "products/search" });
+    const { pt } = useI18n({ path: "products/search" });
 
     const history = ref([]);
     const hotKeywords = ["花生油", "大米", "食盐", "白菜"];

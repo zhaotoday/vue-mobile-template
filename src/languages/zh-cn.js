@@ -26,6 +26,10 @@ export const zhCn = {
     paid: "实付",
     reset: "重置",
     bind: "绑定",
+    pay: "支付",
+    cart: "购物车",
+    addToCart: "加入购物车",
+    collect: "收藏",
     colon: "：",
   },
   inputs: {
@@ -57,8 +61,11 @@ export const zhCn = {
   },
   components: {
     CART_SUBMIT: {
-      settle: "去结算",
+      titles: {
+        settle: "去结算",
+      },
     },
+    PRODUCT_SUBMIT: {},
   },
   pages: {
     PAY: {

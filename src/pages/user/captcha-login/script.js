@@ -10,7 +10,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { $t } = useI18n({ page: "user/captcha-login" });
+    const { $t } = useI18n({ path: "user/captcha-login" });
     const { isRequired, isPhoneNumber, isCaptcha, validate } = useValidators();
 
     const { getUserInfo } = useUsers();

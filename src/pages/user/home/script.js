@@ -6,7 +6,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { pt, $t } = useI18n({ page: "user/home" });
+    const { pt, $t } = useI18n({ path: "user/home" });
 
     const { loggedIn, user, getUserInfo, navigateTo, name, avatarUrl, logout } =
       useUsers();

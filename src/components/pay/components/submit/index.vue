@@ -5,7 +5,7 @@
       class="cc-submit__button bg-primary t-white fs28"
       @click="$emit('submit')"
     >
-      支付
+      {{ $t("titles.pay") }}
     </div>
   </div>
 </template>

@@ -10,7 +10,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { pt } = useI18n({ page: "user/addresses/list" });
+    const { pt } = useI18n({ path: "user/addresses/list" });
 
     const { currentRoute } = useRoute();
 
