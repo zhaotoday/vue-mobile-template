@@ -31,6 +31,7 @@ export const zhCn = {
     addToCart: "加入购物车",
     collect: "收藏",
     colon: "：",
+    money: "$",
   },
   inputs: {
     content: "请输入内容",
