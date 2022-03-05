@@ -1,23 +1,26 @@
 import { getCurrentInstance } from "@vue/composition-api";
 
-export const useI18n = () => {
+export const useI18n = ({ page = "" }) => {
   const vm = getCurrentInstance();
-  const t = (key, locale) => {
-    console.log(getRoute(), "---");
+  const pageSplit = page.split("/").map((item) => item.replace(/-/g, "_"));
+
+  const $t = (key, locale) => {
     return vm.proxy.$i18n.t(key, locale);
   };
 
-  const getRoute = () => {
-    const currentPage = getCurrentPages().pop();
-    console.log("abc", getCurrentPages());
+  const t = (key, locale) => {
+    const keyPrefix =
+      key.substr(0, 2) === "_."
+        ? pageSplit
+            .filter((item, index) => index > pageSplit.length - 1)
+            .join(".")
+        : pageSplit.join(".");
 
-    const route =
-      currentPage && currentPage.route ? "/" + currentPage.route : "";
-    return route.substr(7, route.length - 7);
+    return vm.proxy.$i18n.t(`${keyPrefix}.${key}`, locale);
   };
 
   return {
+    $t,
     t,
-    getRoute,
   };
 };

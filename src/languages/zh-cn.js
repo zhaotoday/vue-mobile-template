@@ -29,8 +29,8 @@ export const zhCn = {
     loginSuccess: "登录成功",
     registerSuccess: "注册成功",
   },
-  pay: {
-    result: {
+  PAY: {
+    RESULT: {
       paySuccess: "下单成功",
       gotoOrders: "查看订单列表",
       backHome: "返回首页",
@@ -41,25 +41,23 @@ export const zhCn = {
     payment: "支付方式",
     cashOnDelivery: "货到付款",
   },
-  products: {
-    search: {
+  PRODUCT: {
+    SEARCH: {
       history: "历史搜索",
       hot: "热门搜索",
     },
   },
-  user: {
-    accountLogin: {
+  USER: {
+    ACCOUNT_LOGIN: {
       captchaLogin: "验证码登录",
       forgotPassword: "忘记密码？",
     },
-    addresses: {
-      $g: {
-        $t: {
-          consignee: "收货人",
-          housingEstate: "小区",
-          houseNo: "门牌号",
-          addressTag: "地址类型",
-        },
+    ADDRESSES: {
+      titles: {
+        consignee: "收货人",
+        housingEstate: "小区",
+        houseNo: "门牌号",
+        addressTag: "地址类型",
       },
       inputs: {
         consignee: "收货人姓名",
@@ -67,9 +65,7 @@ export const zhCn = {
         housingEstate: "小区/写字楼等",
         houseNo: "门牌号，如：1 号楼 102",
       },
-      $p: {
-        form: {},
-      },
+      FORM: {},
     },
   },
 };
