@@ -8,7 +8,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t, $t } = useI18n({ page: "user/orders/list" });
+    const { $t } = useI18n({ page: "user/orders/list" });
 
     const { user } = useUsers();
 
