@@ -3,7 +3,7 @@
     <c-form>
       <c-form-item :label="$t('titles.name')">
         <c-form-input
-          :placeholder="$t('$g.inputs.name')"
+          :placeholder="$t('inputs.name')"
           v-model.trim="cForm.model.name"
           :error="cForm.errors.name"
           @blur="validate(cForm, 'name')"
@@ -13,7 +13,7 @@
         <c-form-input
           type="number"
           maxlength="11"
-          :placeholder="$t('$g.inputs.phoneNumber')"
+          :placeholder="$t('inputs.phoneNumber')"
           v-model.trim="cForm.model.phoneNumber"
           :error="cForm.errors.phoneNumber"
           @blur="validate(cForm, 'phoneNumber')"
@@ -23,7 +23,7 @@
         <c-form-input
           type="number"
           maxlength="6"
-          :placeholder="$t('$g.inputs.captcha')"
+          :placeholder="$t('inputs.captcha')"
           v-model.trim="cForm.model.captcha"
           :error="cForm.errors.captcha"
           custom-style="width: 300rpx"
@@ -38,10 +38,10 @@
           {{ cCaptcha.message }}
         </button>
       </c-form-item>
-      <c-form-item :label="$t('titles.paswword')">
+      <c-form-item :label="$t('titles.password')">
         <c-form-input
           type="password"
-          :placeholder="$t('$g.inputs.passwordTip')"
+          :placeholder="$t('inputs.passwordTip')"
           v-model.trim="cForm.model.password"
           :error="cForm.errors.password"
           @blur="validate(cForm, 'password')"
@@ -50,7 +50,7 @@
       <c-form-item :label="$t('titles.confirmPassword')">
         <c-form-input
           type="password"
-          :placeholder="$t('$g.inputs.confirmPassword')"
+          :placeholder="$t('inputs.confirmPassword')"
           v-model.trim="cForm.model.confirmPassword"
           :error="cForm.errors.confirmPassword"
           @blur="validate(cForm, 'confirmPassword')"
