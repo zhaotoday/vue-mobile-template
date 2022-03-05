@@ -16,7 +16,7 @@
     <div class="b-info bg-white u-mb24">
       <div class="b-info__name fs32">{{ detail.name }}</div>
       <div class="b-info__others">
-        <span class="t-error fs32">¥{{ detail.price }}</span>
+        <span class="t-error fs32">{{ $t("$.money") }}{{ detail.price }}</span>
         <span class="t-g7 u-lt fs26 u-ml10">200.0</span>
         <div class="b-info__right t-g7 fs26">
           {{ $t("titles.stocks") }}：1000 &nbsp;&nbsp;

@@ -50,7 +50,7 @@
     <c-form custom-class="u-mb24">
       <c-form-item :label="$t('titles.total')">
         <div class="c-form__input fs30 t-error">
-          ¥{{ getTotalPrice(detail.products) }}
+          {{ $t("$.money") }}{{ getTotalPrice(detail.products) }}
         </div>
       </c-form-item>
       <c-form-item :label="$t('titles.payment')">

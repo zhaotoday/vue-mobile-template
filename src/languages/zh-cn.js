@@ -45,7 +45,6 @@ export const zhCn = {
     captcha: "请输入验证码",
     confirmPasswordNotEqualPassword: "两次密码输入不一致",
     passwordFormatError: "密码格式错误",
-    bindSuccess: "绑定成功",
   },
   tips: {
     loginSuccess: "登录成功",
@@ -54,6 +53,7 @@ export const zhCn = {
     modifySuccess: "修改成功",
     addSuccess: "新增成功",
     saveSuccess: "保存成功",
+    bindSuccess: "绑定成功",
     pleaseConfirm: "请确认",
   },
   orderStatuses: {
