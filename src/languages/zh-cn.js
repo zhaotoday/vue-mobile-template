@@ -30,9 +30,12 @@ export const zhCn = {
   },
   tips: {
     loginSuccess: "登录成功",
+    logout: "退出账号",
+    logoutSuccess: "退出成功",
     registerSuccess: "注册成功",
     modifySuccess: "修改成功",
     addSuccess: "新增成功",
+    pleaseConfirm: "请确认",
   },
   PAY: {
     RESULT: {
@@ -76,6 +79,16 @@ export const zhCn = {
       },
       LIST: {
         setDefault: "设为默认",
+      },
+    },
+    HOME: {
+      login: "授权登录",
+      myInformation: "我的资料",
+      modifyPassword: "修改密码",
+      bindPhoneNumber: "绑定手机号",
+      bindWx: "绑定微信",
+      tips: {
+        confirmLogout: "确认退出账号吗？",
       },
     },
   },

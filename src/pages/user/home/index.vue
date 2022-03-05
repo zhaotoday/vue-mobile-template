@@ -17,7 +17,7 @@
           size="small"
           @click="$wx.navigateTo('/pages/user/mp-login/index')"
         >
-          授权登录
+          {{ t("login") }}
         </u-button>
       </template>
     </div>
@@ -47,7 +47,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--info fs34 t-primary"></i>
-          我的资料
+          {{ t("myInformation") }}
         </li>
         <li
           class="c-list__item has-icon is-link"
@@ -59,7 +59,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--lock fs34 t-primary"></i>
-          修改密码
+          {{ t("modifyPassword") }}
         </li>
         <li
           class="c-list__item has-icon is-link"
@@ -71,7 +71,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--phone fs34 t-primary"></i>
-          绑定手机号
+          {{ t("bindPhoneNumber") }}
         </li>
         <li
           v-if="false"
@@ -79,7 +79,7 @@
           @click="wxMpBind"
         >
           <i class="c-iconfont c-iconfont--wechat fs34 t-primary"></i>
-          绑定微信
+          {{ t("bindWx") }}
         </li>
       </ul>
     </div>
@@ -90,7 +90,7 @@
       style="bottom: 130rpx"
       @click="logoutAndGotoHome"
     >
-      退出账号
+      {{ $t("logout") }}
     </u-button>
   </div>
 </template>
