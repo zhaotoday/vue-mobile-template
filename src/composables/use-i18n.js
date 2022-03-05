@@ -11,7 +11,7 @@ export const useI18n = ({ path }) => {
     return vm.proxy.$i18n.t(key, locale);
   };
 
-  const formatKey = (path, key) => {
+  const formatKey = (key) => {
     return key.substr(0, 2) === "_."
       ? pathSplit
           .filter((item, index) => index < pathSplit.length - 1)
