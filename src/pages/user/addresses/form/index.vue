@@ -1,7 +1,7 @@
 <template>
   <div class="p-user-addresses-form u-pt24">
     <c-form>
-      <c-form-item :label="$t('$p.user.$p.addresses.$g.$t.consignee')">
+      <c-form-item :label="t('_.titles.consignee')">
         <c-form-input
           :placeholder="$t('$g.user.$p.addresses.inputs.consignee')"
           v-model.trim="cForm.model.name"

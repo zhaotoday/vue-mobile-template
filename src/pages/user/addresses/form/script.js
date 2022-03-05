@@ -11,8 +11,11 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t } = useI18n({ page: "user/addresses/form" });
+    const { t } = useI18n({
+      page: "user/addresses/form",
+    });
 
+    alert(t("_.titles.consignee"));
     const { currentRoute } = useRoute();
 
     const { enums } = useEnums();
@@ -95,6 +98,7 @@ export default {
     };
 
     return {
+      t,
       enums,
       currentRoute,
       cForm,
