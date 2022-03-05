@@ -12,12 +12,19 @@ page {
 // en
 @include c(form) {
   @include e(input, error) {
+    padding-left: 0 !important;
     margin-left: px2rpx(230px) !important;
   }
 }
 
 @include p(user-addresses-form) {
   @include b(tags) {
+    margin-left: px2rpx(230px) !important;
+  }
+}
+
+@include p(user-info) {
+  .u-avatar {
     margin-left: px2rpx(230px) !important;
   }
 }
