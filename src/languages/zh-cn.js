@@ -40,6 +40,7 @@ export const zhCn = {
     captcha: "请输入验证码",
     confirmPasswordNotEqualPassword: "两次密码输入不一致",
     passwordFormatError: "密码格式错误",
+    bindSuccess: "绑定成功",
   },
   tips: {
     loginSuccess: "登录成功",

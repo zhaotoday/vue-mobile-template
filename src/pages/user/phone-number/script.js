@@ -11,7 +11,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t } = useI18n({ page: "user/phone-number" });
+    const { $t, t } = useI18n({ page: "user/phone-number" });
 
     const { currentRoute } = useRoute();
 
@@ -22,8 +22,11 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
-        captcha: [isRequired({ label: "验证码" }), isCaptcha()],
+        phoneNumber: [
+          isRequired({ message: $t("inputs.phoneNumber") }),
+          isPhoneNumber(),
+        ],
+        captcha: [isRequired({ message: $t("inputs.captcha") }), isCaptcha()],
       },
       errors: {},
     });
@@ -52,7 +55,7 @@ export default {
           },
         });
 
-        wx.showToast({ title: "绑定成功" });
+        wx.showToast({ title: $t("tips.bindSuccess") });
         await getUserInfo();
         await useHelpers().sleep(1500);
 
