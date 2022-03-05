@@ -6,7 +6,7 @@ export const en = {
     details: "Details",
     name: "Name",
     gender: "Gender",
-    phoneNumber: "Phone",
+    phoneNumber: "Phone No",
     password: "Password",
     confirmPassword: "Re-password",
     captcha: "Captcha",
@@ -68,81 +68,81 @@ export const en = {
   components: {
     CART_SUBMIT: {
       $: {
-        settle: "去结算",
+        settle: "Settle",
       },
     },
   },
   pages: {
     PAY: {
       inputs: {
-        selectAddress: "请选择收获地址",
+        selectAddress: "Select your address",
       },
       RESULT: {
         $: {
-          gotoOrders: "查看订单列表",
-          backHome: "返回首页",
+          gotoOrders: "Check orders",
+          backHome: "Back to home page",
         },
         tips: {
-          paySuccess: "下单成功",
+          paySuccess: "Place an order successfully",
         },
       },
     },
     PRODUCTS: {
       SEARCH: {
         $: {
-          history: "历史搜索",
-          hot: "热门搜索",
+          history: "History",
+          hot: "Hot",
         },
       },
     },
     USER: {
       ACCOUNT_LOGIN: {
         $: {
-          captchaLogin: "验证码登录",
-          forgotPassword: "忘记密码？",
+          captchaLogin: "Login by captcha",
+          forgotPassword: "Forgot your password?",
         },
       },
       ADDRESSES: {
         FORM: {
           $: {
-            consignee: "收货人",
-            housingEstate: "小区",
-            houseNo: "门牌号",
-            addressTag: "地址类型",
-            addAddress: "新增收货地址",
-            modifyAddress: "修改收货地址",
+            consignee: "Consignee",
+            housingEstate: "Housing Estate",
+            houseNo: "House No",
+            addressTag: "Address Tag",
+            addAddress: "New address",
+            modifyAddress: "Modify address",
           },
           inputs: {
-            consignee: "收货人姓名",
-            byWhichPhoneWeContactYou: "配送员联系您的手机号",
-            housingEstate: "小区/写字楼等",
-            houseNo: "门牌号，如：1 号楼 102",
+            consignee: "Name",
+            byWhichPhoneWeContactYou: "Your phone number",
+            housingEstate: "House estate or office building",
+            houseNo: "Your house number",
           },
         },
         LIST: {
           $: {
-            setDefault: "设为默认",
+            setDefault: "Set as default address",
           },
         },
       },
       HOME: {
         $: {
-          login: "授权登录",
-          myInformation: "我的资料",
-          modifyPassword: "修改密码",
-          bindPhoneNumber: "绑定手机号",
-          bindWx: "绑定微信",
+          login: "Login",
+          myInformation: "My information",
+          modifyPassword: "Modify my password",
+          bindPhoneNumber: "Bind phone number",
+          bindWx: "Bind Wechat",
         },
         tips: {
-          confirmLogout: "确认退出账号吗？",
+          confirmLogout: "Confirm to logout?",
         },
       },
       ORDERS: {
         $: {
-          orderNo: "订单号",
-          orderTime: "下单时间",
-          reachTime: "送达时间",
-          payAtOnce: "立即付款",
+          orderNo: "Order No",
+          orderTime: "Order Time",
+          reachTime: "Reach Time",
+          payAtOnce: "Pay at once",
         },
       },
       PHONE_NUMBER: {
