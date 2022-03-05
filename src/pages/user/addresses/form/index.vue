@@ -1,9 +1,9 @@
 <template>
   <div class="p-user-addresses-form u-pt24">
     <c-form>
-      <c-form-item label="收货人">
+      <c-form-item :label="$t('$p.user.$p.addresses.$g.$t.consignee')">
         <c-form-input
-          placeholder="收货人姓名"
+          :placeholder="$t('$g.user.$p.addresses.inputs.consignee')"
           v-model.trim="cForm.model.name"
           :error="cForm.errors.name"
           @blur="validate(cForm, 'name')"
@@ -25,32 +25,35 @@
           </li>
         </ul>
       </c-form-item>
-      <c-form-item label="手机号">
+      <c-form-item :label="$t('$g.$t.phoneNumber')">
         <c-form-input
           type="number"
           maxlength="11"
-          placeholder="配送员联系您的手机号"
+          :placeholder="$t('$g.inputs.byWhichPhoneWeContactYou')"
           v-model.trim="cForm.model.phoneNumber"
           :error="cForm.errors.phoneNumber"
           @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
-      <c-form-item custom-class="is-link" label="小区">
+      <c-form-item
+        custom-class="is-link"
+        :label="$t('$p.user.$p.addresses.$g.$t.housingEstate')"
+      >
         <c-form-link
-          placeholder="小区/写字楼等"
+          :placeholder="$t('$g.inputs.housingEstate')"
           :label="cForm.model.location.name"
           @click="selectLocation"
         />
       </c-form-item>
-      <c-form-item label="门牌号">
+      <c-form-item :label="$t('$p.user.$p.addresses.$g.$t.houseNo')">
         <c-form-input
-          placeholder="门牌号，如：1 号楼 102"
+          :placeholder="$t('$g.inputs.houseNo')"
           v-model.trim="cForm.model.room"
           :error="cForm.errors.room"
           @blur="validate(cForm, 'room')"
         />
       </c-form-item>
-      <c-form-item label="地址类型">
+      <c-form-item :label="$t('$p.user.$p.addresses.$g.$t.addressTag')">
         <ul class="b-tags u-pt18">
           <li
             v-for="item in enums.AddressTag"
@@ -70,7 +73,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      保存
+      {{ $t("$g.$t.save") }}
     </u-button>
   </div>
 </template>

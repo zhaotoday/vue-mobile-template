@@ -12,6 +12,7 @@ export const zhCn = {
       captcha: "验证码",
       login: "登录",
       register: "注册",
+      save: "保存",
     },
     inputs: {
       content: "请输入内容",
@@ -59,6 +60,25 @@ export const zhCn = {
         accountLogin: {
           captchaLogin: "验证码登录",
           forgotPassword: "忘记密码？",
+        },
+        addresses: {
+          $g: {
+            $t: {
+              consignee: "收货人",
+              housingEstate: "小区",
+              houseNo: "门牌号",
+              addressTag: "地址类型",
+            },
+          },
+          inputs: {
+            consignee: "收货人姓名",
+            byWhichPhoneWeContactYou: "配送员联系您的手机号",
+            housingEstate: "小区/写字楼等",
+            houseNo: "门牌号，如：1 号楼 102",
+          },
+          $p: {
+            form: {},
+          },
         },
       },
     },

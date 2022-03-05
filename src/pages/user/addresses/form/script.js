@@ -7,9 +7,12 @@ import { addressesApi } from "@/apis/client/addresses";
 import { useHelpers } from "@/composables/use-helpers";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t } = useI18n();
+
     const { currentRoute } = useRoute();
 
     const { enums } = useEnums();
@@ -30,8 +33,11 @@ export default {
         tag: "Home",
       },
       rules: {
-        name: [isRequired({ label: "收货人姓名" })],
-        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
+        name: [isRequired({ message: t("$g.inputs.consignee") })],
+        phoneNumber: [
+          isRequired({ message: t("$g.inputs.phoneNumber") }),
+          isPhoneNumber(),
+        ],
       },
       errors: {},
     });
