@@ -8,18 +8,18 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t } = useI18n({ page: "user/account-login" });
+    const { pt } = useI18n({ page: "user/account-login" });
     const { isRequired, isPhoneNumber, isPassword, validate } = useValidators();
     const { accountLogin } = useUsers();
     const cForm = reactive({
       model: {},
       rules: {
         account: [
-          isRequired({ message: t("$g.inputs.phoneNumber") }),
+          isRequired({ message: pt("$g.inputs.phoneNumber") }),
           isPhoneNumber(),
         ],
         password: [
-          isRequired({ message: t("$g.inputs.password") }),
+          isRequired({ message: pt("$g.inputs.password") }),
           isPassword(),
         ],
       },
@@ -32,7 +32,7 @@ export default {
 
         await accountLogin({ account, password });
 
-        wx.showToast({ title: t("global.tips.loginSuccess") });
+        wx.showToast({ title: pt("global.tips.loginSuccess") });
         await useHelpers().sleep(1500);
         wx.switchTab({ url: "/pages/home/index" });
       });
@@ -43,7 +43,7 @@ export default {
     });
 
     return {
-      t,
+      pt,
       cForm,
       validate,
       submit,

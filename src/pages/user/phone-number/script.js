@@ -68,7 +68,7 @@ export default {
     };
 
     return {
-      t,
+      pt,
       currentRoute,
       cForm,
       cCaptcha,

@@ -62,7 +62,7 @@ export default {
 
           await accountRegister({ name, phoneNumber, captcha, password });
 
-          wx.showToast({ title: t("$g.tips.registerSuccess") });
+          wx.showToast({ title: pt("$g.tips.registerSuccess") });
           await useHelpers().sleep(1500);
           wx.switchTab({ url: "/pages/home/index" });
         }

@@ -26,13 +26,13 @@
         class="b-register"
         @click="$wx.navigateTo('/pages/user/captcha-login/index')"
       >
-        {{ t("captchaLogin") }}
+        {{ pt("captchaLogin") }}
       </div>
       <div
         class="b-password"
         @click="$wx.navigateTo('/pages/user/password/index')"
       >
-        {{ t("forgotPassword") }}
+        {{ pt("forgotPassword") }}
       </div>
     </div>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">

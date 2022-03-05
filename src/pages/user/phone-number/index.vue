@@ -5,7 +5,7 @@
       class="t-g7 fs26 u-pl24 u-pr24 u-pb20"
       style="line-height: 150%"
     >
-      {{ t("tips.header") }}
+      {{ pt("tips.header") }}
     </div>
     <c-form>
       <c-form-item :label="$t('titles.phoneNumber')">

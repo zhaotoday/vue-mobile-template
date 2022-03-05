@@ -20,7 +20,7 @@
         <div class="c-tag h34 bd-primary t-primary u-br10 fs22">家</div>
       </template>
       <div v-else class="c-address__placeholder fs30 t-placeholder">
-        {{ t("selectAddress") }}
+        {{ pt("selectAddress") }}
       </div>
     </div>
     <div class="u-mb24" :class="$bem.box.$">

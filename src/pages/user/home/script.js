@@ -6,7 +6,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t, $t } = useI18n({ page: "user/home" });
+    const { pt, $t } = useI18n({ page: "user/home" });
 
     const { loggedIn, user, getUserInfo, navigateTo, name, avatarUrl, logout } =
       useUsers();
@@ -41,7 +41,7 @@ export default {
     const logoutAndGotoHome = async () => {
       const { confirm } = await wx.showModal({
         title: $t("tips.pleaseConfirm"),
-        content: t("tips.confirmLogout"),
+        content: pt("tips.confirmLogout"),
         confirmText: $t("titles.logout"),
       });
 
@@ -54,7 +54,7 @@ export default {
     const wxMpBind = () => {};
 
     return {
-      t,
+      pt,
       defaultAvatarUrl,
       loggedIn,
       user,

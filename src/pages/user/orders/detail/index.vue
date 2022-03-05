@@ -1,13 +1,13 @@
 <template>
   <div class="p-user-orders-detail u-pt24 u-pb24">
     <c-form custom-class="u-mb24">
-      <c-form-item :label="t('_.titles.orderNo')">
+      <c-form-item :label="pt('_.titles.orderNo')">
         <div class="c-form__input">12456461132</div>
       </c-form-item>
-      <c-form-item :label="t('_.titles.orderTime')">
+      <c-form-item :label="pt('_.titles.orderTime')">
         <div class="c-form__input">{{ $time.getTime(detail.createdAt) }}</div>
       </c-form-item>
-      <c-form-item :label="t('_.titles.reachTime')">
+      <c-form-item :label="pt('_.titles.reachTime')">
         <div class="c-form__input">2022-02-16 00:00</div>
       </c-form-item>
       <c-form-item :label="$t('titles.status')">

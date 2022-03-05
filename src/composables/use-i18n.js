@@ -10,7 +10,7 @@ export const useI18n = ({ page = "" }) => {
     return vm.proxy.$i18n.t(key, locale);
   };
 
-  const t = (key, locale) => {
+  const pt = (key, locale) => {
     const formattedKey =
       key.substr(0, 2) === "_."
         ? pageSplit
@@ -25,6 +25,6 @@ export const useI18n = ({ page = "" }) => {
 
   return {
     $t,
-    t,
+    pt,
   };
 };

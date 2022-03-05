@@ -10,7 +10,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t } = useI18n({ page: "pay" });
+    const { pt } = useI18n({ page: "pay" });
 
     const { getPageData } = usePageData();
 
@@ -69,7 +69,7 @@ export default {
     };
 
     return {
-      t,
+      pt,
       selectedProducts,
       selectedAddress,
       cForm,

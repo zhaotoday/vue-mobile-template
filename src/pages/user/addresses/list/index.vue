@@ -21,7 +21,7 @@
             ]"
             @click.stop="setDefault(item)"
           >
-            {{ t("setDefault") }}
+            {{ pt("setDefault") }}
           </div>
           <div
             class="c-icon-tag c-icon-tag--edit"

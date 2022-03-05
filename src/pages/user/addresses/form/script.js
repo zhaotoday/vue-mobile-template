@@ -11,7 +11,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t, $t } = useI18n({ page: "user/addresses/form" });
+    const { pt, $t } = useI18n({ page: "user/addresses/form" });
 
     const { currentRoute } = useRoute();
 
@@ -33,7 +33,7 @@ export default {
         tag: "Home",
       },
       rules: {
-        name: [isRequired({ message: t("inputs.consignee") })],
+        name: [isRequired({ message: pt("inputs.consignee") })],
         phoneNumber: [
           isRequired({ message: $t("inputs.phoneNumber") }),
           isPhoneNumber(),
@@ -46,10 +46,10 @@ export default {
       const { id } = currentRoute.query;
 
       if (id) {
-        wx.setNavigationBarTitle({ title: t("modifyAddress") });
+        wx.setNavigationBarTitle({ title: pt("modifyAddress") });
         cForm.model = await addressesApi.get({ id });
       } else {
-        wx.setNavigationBarTitle({ title: t("addAddress") });
+        wx.setNavigationBarTitle({ title: pt("addAddress") });
       }
     });
 
@@ -90,7 +90,7 @@ export default {
     };
 
     return {
-      t,
+      pt,
       enums,
       currentRoute,
       cForm,
