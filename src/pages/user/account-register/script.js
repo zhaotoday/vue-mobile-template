@@ -19,22 +19,19 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        name: [isRequired({ message: t("$g.inputs.name") })],
+        name: [isRequired({ message: t("inputs.name") })],
         phoneNumber: [
-          isRequired({ label: t("$g.inputs.phoneNumber") }),
+          isRequired({ label: t("inputs.phoneNumber") }),
           isPhoneNumber(),
         ],
-        captcha: [isRequired({ message: t("$g.inputs.captcha") }), isCaptcha()],
-        password: [
-          isRequired({ message: t("$g.inputs.password") }),
-          isPassword(),
-        ],
+        captcha: [isRequired({ message: t("inputs.captcha") }), isCaptcha()],
+        password: [isRequired({ message: t("inputs.password") }), isPassword()],
         confirmPassword: [
-          isRequired({ message: t("$g.inputs.confirmPassword") }),
+          isRequired({ message: t("inputs.confirmPassword") }),
           isPassword({ label: "确认密码" }),
           {
             validator: (rule, value) => value === cForm.model.password,
-            message: t("$g.inputs.confirmPasswordNotEqualPassword"),
+            message: t("inputs.confirmPasswordNotEqualPassword"),
           },
         ],
       },
