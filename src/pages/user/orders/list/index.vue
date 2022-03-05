@@ -34,13 +34,15 @@
               </div>
             </div>
             <div class="b-money fs26">
-              实付
+              {{ $t("titles.paid") }}
               <span class="t-error">￥{{ getTotalPrice(item.products) }}</span>
             </div>
           </div>
         </div>
         <div v-if="false" class="c-orders__foot u-tar">
-          <div class="c-tag h48 u-br8 bd-primary t-primary fs24">立即付款</div>
+          <div class="c-tag h48 u-br8 bd-primary t-primary fs24">
+            {{ t("titles.payAtOnce") }}
+          </div>
         </div>
       </li>
     </ul>

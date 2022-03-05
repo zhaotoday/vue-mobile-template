@@ -4,9 +4,12 @@ import { onShow } from "uni-composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useProducts } from "@/composables/use-products";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t, $t } = useI18n({ page: "user/orders/list" });
+
     const { user } = useUsers();
 
     const { getTotalPrice } = useProducts();
@@ -17,11 +20,11 @@ export default {
       current: 0,
       items: [
         {
-          label: "全部",
+          label: $t("orderStatuses.all"),
           value: "",
         },
         {
-          label: "待付款",
+          label: $t("orderStatuses.toPay"),
           value: "ToPay",
         },
         {

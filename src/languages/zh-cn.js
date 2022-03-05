@@ -23,6 +23,7 @@ export const zhCn = {
     total: "总计",
     payment: "支付方式",
     cashOnDelivery: "货到付款",
+    paid: "实付",
     colon: "：",
   },
   inputs: {
@@ -45,6 +46,10 @@ export const zhCn = {
     addSuccess: "新增成功",
     saveSuccess: "保存成功",
     pleaseConfirm: "请确认",
+  },
+  orderStatuses: {
+    all: "全部",
+    toPay: "待付款",
   },
   PAY: {
     RESULT: {
@@ -104,6 +109,7 @@ export const zhCn = {
         orderTime: "下单时间",
         reachTime: "送达时间",
         productInfo: "商品信息",
+        payAtOnce: "立即付款",
       },
     },
   },
