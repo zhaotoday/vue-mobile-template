@@ -24,6 +24,7 @@ export const zhCn = {
     payment: "支付方式",
     cashOnDelivery: "货到付款",
     paid: "实付",
+    reset: "重置",
     colon: "：",
   },
   inputs: {

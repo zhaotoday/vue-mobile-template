@@ -28,7 +28,7 @@ export default {
           value: "ToPay",
         },
         {
-          label: "已完成",
+          label: $t("orderStatuses.finished"),
           value: "Finished",
         },
       ],
