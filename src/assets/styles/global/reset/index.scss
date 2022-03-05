@@ -8,3 +8,10 @@ page {
 .uni-page-head-btn {
   margin-right: px2rpx(26px) !important;
 }
+
+// en
+@include c(form) {
+  @include e(input, error) {
+    margin-left: px2rpx(220px) !important;
+  }
+}
