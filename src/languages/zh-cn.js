@@ -65,7 +65,6 @@ export const zhCn = {
         settle: "去结算",
       },
     },
-    PRODUCT_SUBMIT: {},
   },
   pages: {
     PAY: {
