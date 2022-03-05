@@ -25,6 +25,7 @@ export const zhCn = {
     cashOnDelivery: "货到付款",
     paid: "实付",
     reset: "重置",
+    bind: "绑定",
     colon: "：",
   },
   inputs: {
@@ -112,6 +113,12 @@ export const zhCn = {
         reachTime: "送达时间",
         productInfo: "商品信息",
         payAtOnce: "立即付款",
+      },
+    },
+    PHONE_NUMBER: {
+      tips: {
+        header:
+          "应国家法律要求，使用互联网服务需进行账号实名。为保障账号的正常使用，请完成手机号绑定。感谢你的理解和支持。",
       },
     },
   },

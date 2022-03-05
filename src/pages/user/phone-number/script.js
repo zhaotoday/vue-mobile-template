@@ -7,9 +7,12 @@ import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useRoute } from "vue-mobile/composables/use-route";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t } = useI18n({ page: "user/phone-number" });
+
     const { currentRoute } = useRoute();
 
     const { isRequired, isPhoneNumber, isCaptcha, validate } = useValidators();
@@ -62,6 +65,7 @@ export default {
     };
 
     return {
+      t,
       currentRoute,
       cForm,
       cCaptcha,
