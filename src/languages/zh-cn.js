@@ -55,70 +55,72 @@ export const zhCn = {
     all: "全部",
     toPay: "待付款",
   },
-  PAY: {
-    RESULT: {
-      paySuccess: "下单成功",
-      gotoOrders: "查看订单列表",
-      backHome: "返回首页",
+  pages: {
+    PAY: {
+      RESULT: {
+        paySuccess: "下单成功",
+        gotoOrders: "查看订单列表",
+        backHome: "返回首页",
+      },
+      selectAddress: "请选择收获地址",
     },
-    selectAddress: "请选择收获地址",
-  },
-  PRODUCTS: {
-    SEARCH: {
-      history: "历史搜索",
-      hot: "热门搜索",
+    PRODUCTS: {
+      SEARCH: {
+        history: "历史搜索",
+        hot: "热门搜索",
+      },
     },
-  },
-  USER: {
-    ACCOUNT_LOGIN: {
-      captchaLogin: "验证码登录",
-      forgotPassword: "忘记密码？",
-    },
-    ADDRESSES: {
-      FORM: {
+    USER: {
+      ACCOUNT_LOGIN: {
+        captchaLogin: "验证码登录",
+        forgotPassword: "忘记密码？",
+      },
+      ADDRESSES: {
+        FORM: {
+          titles: {
+            consignee: "收货人",
+            housingEstate: "小区",
+            houseNo: "门牌号",
+            addressTag: "地址类型",
+          },
+          inputs: {
+            consignee: "收货人姓名",
+            byWhichPhoneWeContactYou: "配送员联系您的手机号",
+            housingEstate: "小区/写字楼等",
+            houseNo: "门牌号，如：1 号楼 102",
+          },
+          addAddress: "新增收货地址",
+          modifyAddress: "修改收货地址",
+        },
+        LIST: {
+          setDefault: "设为默认",
+        },
+      },
+      HOME: {
         titles: {
-          consignee: "收货人",
-          housingEstate: "小区",
-          houseNo: "门牌号",
-          addressTag: "地址类型",
+          login: "授权登录",
+          myInformation: "我的资料",
+          modifyPassword: "修改密码",
+          bindPhoneNumber: "绑定手机号",
+          bindWx: "绑定微信",
         },
-        inputs: {
-          consignee: "收货人姓名",
-          byWhichPhoneWeContactYou: "配送员联系您的手机号",
-          housingEstate: "小区/写字楼等",
-          houseNo: "门牌号，如：1 号楼 102",
+        tips: {
+          confirmLogout: "确认退出账号吗？",
         },
-        addAddress: "新增收货地址",
-        modifyAddress: "修改收货地址",
       },
-      LIST: {
-        setDefault: "设为默认",
+      ORDERS: {
+        titles: {
+          orderNo: "订单号",
+          orderTime: "下单时间",
+          reachTime: "送达时间",
+          payAtOnce: "立即付款",
+        },
       },
-    },
-    HOME: {
-      titles: {
-        login: "授权登录",
-        myInformation: "我的资料",
-        modifyPassword: "修改密码",
-        bindPhoneNumber: "绑定手机号",
-        bindWx: "绑定微信",
-      },
-      tips: {
-        confirmLogout: "确认退出账号吗？",
-      },
-    },
-    ORDERS: {
-      titles: {
-        orderNo: "订单号",
-        orderTime: "下单时间",
-        reachTime: "送达时间",
-        payAtOnce: "立即付款",
-      },
-    },
-    PHONE_NUMBER: {
-      tips: {
-        header:
-          "应国家法律要求，使用互联网服务需进行账号实名。为保障账号的正常使用，请完成手机号绑定。感谢你的理解和支持。",
+      PHONE_NUMBER: {
+        tips: {
+          header:
+            "应国家法律要求，使用互联网服务需进行账号实名。为保障账号的正常使用，请完成手机号绑定。感谢你的理解和支持。",
+        },
       },
     },
   },

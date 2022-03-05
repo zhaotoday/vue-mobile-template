@@ -10,21 +10,25 @@ export const useI18n = ({ page = "" }) => {
     return vm.proxy.$i18n.t(key, locale);
   };
 
-  const pt = (key, locale) => {
-    const formattedKey =
-      key.substr(0, 2) === "_."
-        ? pageSplit
-            .filter((item, index) => index < pageSplit.length - 1)
-            .join(".") +
+  const formatKey = (key) => {
+    return key.substr(0, 2) === "_."
+      ? pageSplit
+          .filter((item, index) => index < pageSplit.length - 1)
+          .join(".") +
           "." +
           key.substr(2)
-        : pageSplit.join(".") + "." + key;
-
-    return vm.proxy.$i18n.t(formattedKey, locale);
+      : pageSplit.join(".") + "." + key;
   };
+
+  const pt = (key, locale) =>
+    vm.proxy.$i18n.t("pages." + formatKey(key), locale);
+
+  const ct = (key, locale) =>
+    vm.proxy.$i18n.t("components." + formatKey(key), locale);
 
   return {
     $t,
     pt,
+    ct,
   };
 };
