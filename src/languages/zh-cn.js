@@ -38,6 +38,7 @@ export const zhCn = {
     passwordTip: "请输入密码（6-16位字母和数字组合）",
     captcha: "请输入验证码",
     confirmPasswordNotEqualPassword: "两次密码输入不一致",
+    passwordFormatError: "密码格式错误",
   },
   tips: {
     loginSuccess: "登录成功",

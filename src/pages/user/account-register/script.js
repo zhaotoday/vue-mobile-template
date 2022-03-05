@@ -9,7 +9,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t } = useI18n();
+    const { t, $t } = useI18n({ page: "user/account-register/index" });
 
     const { isRequired, isPhoneNumber, isCaptcha, isPassword, validate } =
       useValidators();
@@ -19,19 +19,22 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        name: [isRequired({ message: t("inputs.name") })],
+        name: [isRequired({ message: $t("inputs.name") })],
         phoneNumber: [
-          isRequired({ label: t("inputs.phoneNumber") }),
+          isRequired({ label: $t("inputs.phoneNumber") }),
           isPhoneNumber(),
         ],
-        captcha: [isRequired({ message: t("inputs.captcha") }), isCaptcha()],
-        password: [isRequired({ message: t("inputs.password") }), isPassword()],
+        captcha: [isRequired({ message: $t("inputs.captcha") }), isCaptcha()],
+        password: [
+          isRequired({ message: $t("inputs.password") }),
+          isPassword(),
+        ],
         confirmPassword: [
-          isRequired({ message: t("inputs.confirmPassword") }),
-          isPassword({ label: "确认密码" }),
+          isRequired({ message: $t("inputs.confirmPassword") }),
+          isPassword({ message: $t("inputs.passwordFormatError") }),
           {
             validator: (rule, value) => value === cForm.model.password,
-            message: t("inputs.confirmPasswordNotEqualPassword"),
+            message: $t("inputs.confirmPasswordNotEqualPassword"),
           },
         ],
       },

@@ -8,7 +8,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t, $t } = useI18n({ page: "user/password" });
+    const { $t } = useI18n({ page: "user/password" });
 
     const { isRequired, isPhoneNumber, isCaptcha, isPassword, validate } =
       useValidators();
@@ -26,11 +26,11 @@ export default {
           isPassword(),
         ],
         confirmPassword: [
-          isRequired({ message: "请确认密码" }),
-          isPassword({ label: "确认密码" }),
+          isRequired({ message: $t("inputs.confirmPassword") }),
+          isPassword({ message: $t("inputs.passwordFormatError") }),
           {
             validator: (rule, value) => value === cForm.model.password,
-            message: "两次密码输入不一致",
+            message: $t("inputs.confirmPasswordNotEqualPassword"),
           },
         ],
       },
