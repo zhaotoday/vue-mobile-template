@@ -3,7 +3,7 @@
     <c-form>
       <c-form-item :label="t('_.titles.consignee')">
         <c-form-input
-          :placeholder="$t('_.inputs.consignee')"
+          :placeholder="t('_.inputs.consignee')"
           v-model.trim="cForm.model.name"
           :error="cForm.errors.name"
           @blur="validate(cForm, 'name')"
