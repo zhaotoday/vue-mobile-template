@@ -19,16 +19,22 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        name: [isRequired({ label: "姓名" })],
-        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
-        captcha: [isRequired({ label: "验证码" }), isCaptcha()],
-        password: [isRequired({ label: "密码" }), isPassword()],
+        name: [isRequired({ message: t("$g.inputs.name") })],
+        phoneNumber: [
+          isRequired({ label: t("$g.inputs.phoneNumber") }),
+          isPhoneNumber(),
+        ],
+        captcha: [isRequired({ message: t("$g.inputs.captcha") }), isCaptcha()],
+        password: [
+          isRequired({ message: t("$g.inputs.password") }),
+          isPassword(),
+        ],
         confirmPassword: [
-          isRequired({ message: "请确认密码" }),
+          isRequired({ message: t("$g.inputs.confirmPassword") }),
           isPassword({ label: "确认密码" }),
           {
             validator: (rule, value) => value === cForm.model.password,
-            message: "两次密码输入不一致",
+            message: t("$g.inputs.confirmPasswordNotEqualPassword"),
           },
         ],
       },
