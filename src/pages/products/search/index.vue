@@ -3,7 +3,7 @@
     <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24 u-mb26">
       <u-search
         ref="search"
-        :placeholder="$t('$g.input.productName')"
+        :placeholder="$t('$g.inputs.productName')"
         focus
         height="60rpx"
         @search="search"

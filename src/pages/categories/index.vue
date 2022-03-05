@@ -2,7 +2,7 @@
   <div class="p-categories">
     <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24">
       <u-search
-        :placeholder="$t('$g.input.productName')"
+        :placeholder="$t('$g.inputs.productName')"
         disabled
         :show-action="false"
         height="60rpx"

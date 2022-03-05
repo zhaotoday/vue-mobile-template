@@ -5,9 +5,12 @@ import { useHelpers } from "@/composables/use-helpers";
 import { useCaptcha } from "vue-mobile/@lr/composables/use-captcha";
 import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t } = useI18n();
+
     const { isRequired, isPhoneNumber, isCaptcha, isPassword, validate } =
       useValidators();
 
@@ -53,7 +56,7 @@ export default {
 
           await accountRegister({ name, phoneNumber, captcha, password });
 
-          wx.showToast({ title: "注册成功" });
+          wx.showToast({ title: t("$g.tips.registerSuccess") });
           await useHelpers().sleep(1500);
           wx.switchTab({ url: "/pages/home/index" });
         }

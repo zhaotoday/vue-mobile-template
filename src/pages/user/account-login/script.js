@@ -15,11 +15,11 @@ export default {
       model: {},
       rules: {
         account: [
-          isRequired({ message: t("$g.input.phoneNumber") }),
+          isRequired({ message: t("$g.inputs.phoneNumber") }),
           isPhoneNumber(),
         ],
         password: [
-          isRequired({ message: t("$g.input.password") }),
+          isRequired({ message: t("$g.inputs.password") }),
           isPassword(),
         ],
       },
@@ -32,7 +32,7 @@ export default {
 
         await accountLogin({ account, password });
 
-        wx.showToast({ title: "登录成功" });
+        wx.showToast({ title: t("global.tips.loginSuccess") });
         await useHelpers().sleep(1500);
         wx.switchTab({ url: "/pages/home/index" });
       });
