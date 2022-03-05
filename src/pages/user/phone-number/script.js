@@ -2,7 +2,7 @@ import wx from "wx-bridge";
 import { reactive } from "@vue/composition-api";
 import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
-import { useCaptcha } from "vue-mobile/@lr/composables/use-captcha";
+import { useCaptcha } from "vue-mobile/composables/use-captcha";
 import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
@@ -37,7 +37,9 @@ export default {
     const { cCaptcha, sendCaptcha } = useCaptcha({
       model: () => ({ phoneNumber: cForm.model.phoneNumber }),
       rules: () => ({ phoneNumber: cForm.rules.phoneNumber }),
-      sendCaptchaText: $t("tips.captchaSuccess"),
+      sendCaptchaText: $t("tips.sendCaptcha"),
+      sendCaptchaSuccessText: $t("tips.sendCaptchaSuccess"),
+      waitText: $t("tips.waitCaptcha"),
       request: () =>
         publicUsersApi.post({
           action: "sendSmsCaptcha",
