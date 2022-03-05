@@ -37,20 +37,20 @@
       />
     </div>
     <c-form custom-class="u-mb24">
-      <c-form-item :label="$t('$p.pay.total')">
+      <c-form-item :label="$t('titles.total')">
         <div class="c-form__input fs30 t-error">
           ¥{{ getTotalPrice(selectedProducts) }}
         </div>
       </c-form-item>
-      <c-form-item custom-class="is-link" :label="$t('$p.pay.payment')">
-        <div class="c-form__input">{{ $t("$p.pay.cashOnDelivery") }}</div>
+      <c-form-item custom-class="is-link" :label="$t('titles.payment')">
+        <div class="c-form__input">{{ $t("titles.cashOnDelivery") }}</div>
       </c-form-item>
     </c-form>
     <c-form>
       <c-form-item :label="$t('titles.remark')">
         <div class="u-pt10 u-pb10 u-mr20" style="margin-left: 180rpx">
           <u-textarea
-            :placeholder="$t('$g.inputs.content')"
+            :placeholder="$t('inputs.content')"
             count
             v-model="cForm.model.remark"
           />
