@@ -8,7 +8,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t } = useI18n();
+    const { t } = useI18n({ page: "user/account-login" });
     const { isRequired, isPhoneNumber, isPassword, validate } = useValidators();
     const { accountLogin } = useUsers();
     const cForm = reactive({
@@ -43,6 +43,7 @@ export default {
     });
 
     return {
+      t,
       cForm,
       validate,
       submit,

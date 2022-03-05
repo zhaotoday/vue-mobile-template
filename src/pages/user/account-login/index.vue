@@ -5,7 +5,7 @@
         <c-form-input
           type="number"
           maxlength="11"
-          :placeholder="$t('$g.inputs.phoneNumber')"
+          :placeholder="$t('inputs.phoneNumber')"
           v-model.trim="cForm.model.account"
           :error="cForm.errors.account"
           @blur="validate(cForm, 'account')"
@@ -14,7 +14,7 @@
       <c-form-item :label="$t('titles.password')">
         <c-form-input
           type="password"
-          :placeholder="$t('$g.inputs.password')"
+          :placeholder="$t('inputs.password')"
           v-model.trim="cForm.model.password"
           :error="cForm.errors.password"
           @blur="validate(cForm, 'password')"
@@ -26,13 +26,13 @@
         class="b-register"
         @click="$wx.navigateTo('/pages/user/captcha-login/index')"
       >
-        {{ $t("$p.user.$p.accountLogin.captchaLogin") }}
+        {{ t("captchaLogin") }}
       </div>
       <div
         class="b-password"
         @click="$wx.navigateTo('/pages/user/password/index')"
       >
-        {{ $t("$p.user.$p.accountLogin.forgotPassword") }}
+        {{ t("forgotPassword") }}
       </div>
     </div>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
