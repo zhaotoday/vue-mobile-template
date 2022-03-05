@@ -28,7 +28,7 @@ export default {
         ],
         captcha: [
           isRequired({ message: $t("inputs.captcha") }),
-          isCaptcha({ message: $t("tips.captchaFormatError") }),
+          isCaptcha({ message: $t("inputs.captchaFormatError") }),
         ],
       },
       errors: {},

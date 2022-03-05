@@ -4,7 +4,6 @@ import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
 import { useCaptcha } from "vue-mobile/composables/use-captcha";
 import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
-import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useI18n } from "@/composables/use-i18n";
 
@@ -24,7 +23,7 @@ export default {
         ],
         captcha: [
           isRequired({ message: $t("inputs.captcha") }),
-          isCaptcha({ message: $t("tips.captchaFormatError") }),
+          isCaptcha({ message: $t("inputs.captchaFormatError") }),
         ],
       },
       errors: {},
@@ -49,7 +48,7 @@ export default {
       await validate(cForm, null, async (errors, { phoneNumber, captcha }) => {
         if (errors) return;
 
-        await usersApi.post({
+        await publicUsersApi.post({
           action: "captchaLogin",
           body: {
             phoneNumber,
