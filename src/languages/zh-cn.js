@@ -1,5 +1,5 @@
 export const zhCn = {
-  titles: {
+  $: {
     remark: "备注",
     stocks: "库存",
     sales: "销量",
