@@ -35,7 +35,7 @@ export default {
       rules: {
         name: [isRequired({ message: t("inputs.consignee") })],
         phoneNumber: [
-          isRequired({ message: t("inputs.phoneNumber") }),
+          isRequired({ message: $t("inputs.phoneNumber") }),
           isPhoneNumber(),
         ],
       },
