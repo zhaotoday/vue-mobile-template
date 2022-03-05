@@ -18,6 +18,11 @@ export const zhCn = {
     add: "新增",
     logout: "退出账号",
     avatar: "头像",
+    status: "状态",
+    productInfo: "商品信息",
+    total: "总计",
+    payment: "支付方式",
+    cashOnDelivery: "货到付款",
     colon: "：",
   },
   inputs: {
@@ -48,10 +53,6 @@ export const zhCn = {
       backHome: "返回首页",
     },
     selectAddress: "请选择收获地址",
-    productInfo: "商品信息",
-    total: "总计",
-    payment: "支付方式",
-    cashOnDelivery: "货到付款",
   },
   PRODUCT: {
     SEARCH: {
@@ -95,6 +96,14 @@ export const zhCn = {
       },
       tips: {
         confirmLogout: "确认退出账号吗？",
+      },
+    },
+    ORDERS: {
+      titles: {
+        orderNo: "订单号",
+        orderTime: "下单时间",
+        reachTime: "送达时间",
+        productInfo: "商品信息",
       },
     },
   },

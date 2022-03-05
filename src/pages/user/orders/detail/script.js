@@ -4,9 +4,12 @@ import { ordersApi } from "@/apis/client/orders";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { useProducts } from "@/composables/use-products";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t } = useI18n({ page: "user/orders/detail" });
+
     const { enums } = useEnums();
 
     const { currentRoute } = useRoute();
@@ -30,6 +33,7 @@ export default {
     });
 
     return {
+      t,
       enums,
       detail,
       getTotalPrice,
