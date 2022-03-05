@@ -13,7 +13,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { pt, $t } = useI18n({ path: "user/info" });
+    const { $t } = useI18n({ path: "user/info" });
 
     const { isRequired, validate } = useValidators();
 
