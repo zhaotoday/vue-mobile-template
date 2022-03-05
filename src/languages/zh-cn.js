@@ -55,6 +55,11 @@ export const zhCn = {
     all: "全部",
     toPay: "待付款",
   },
+  components: {
+    CART_SUBMIT: {
+      settle: "去结算",
+    },
+  },
   pages: {
     PAY: {
       RESULT: {

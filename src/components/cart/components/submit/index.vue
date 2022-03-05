@@ -16,7 +16,7 @@
       :class="selectedProducts.length ? 'bg-primary' : 'bg-placeholder'"
       @click="submit"
     >
-      去结算（{{ selectedProducts.length }}）
+      {{ ct("") }}去结算（{{ selectedProducts.length }}）
     </div>
   </div>
 </template>

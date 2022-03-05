@@ -1,8 +1,9 @@
 import { getCurrentInstance } from "@vue/composition-api";
 
-export const useI18n = ({ page = "" }) => {
+export const useI18n = ({ path }) => {
   const vm = getCurrentInstance();
-  const pageSplit = page
+
+  const pathSplit = path
     .split("/")
     .map((item) => item.replace(/-/g, "_").toUpperCase());
 
@@ -10,14 +11,14 @@ export const useI18n = ({ page = "" }) => {
     return vm.proxy.$i18n.t(key, locale);
   };
 
-  const formatKey = (key) => {
+  const formatKey = (path, key) => {
     return key.substr(0, 2) === "_."
-      ? pageSplit
-          .filter((item, index) => index < pageSplit.length - 1)
+      ? pathSplit
+          .filter((item, index) => index < pathSplit.length - 1)
           .join(".") +
           "." +
           key.substr(2)
-      : pageSplit.join(".") + "." + key;
+      : pathSplit.join(".") + "." + key;
   };
 
   const pt = (key, locale) =>
