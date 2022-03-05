@@ -99,11 +99,13 @@ export const zhCn = {
       },
       ADDRESSES: {
         FORM: {
-          titles: {
+          $: {
             consignee: "收货人",
             housingEstate: "小区",
             houseNo: "门牌号",
             addressTag: "地址类型",
+            addAddress: "新增收货地址",
+            modifyAddress: "修改收货地址",
           },
           inputs: {
             consignee: "收货人姓名",
@@ -111,15 +113,15 @@ export const zhCn = {
             housingEstate: "小区/写字楼等",
             houseNo: "门牌号，如：1 号楼 102",
           },
-          addAddress: "新增收货地址",
-          modifyAddress: "修改收货地址",
         },
         LIST: {
-          setDefault: "设为默认",
+          $: {
+            setDefault: "设为默认",
+          },
         },
       },
       HOME: {
-        titles: {
+        $: {
           login: "授权登录",
           myInformation: "我的资料",
           modifyPassword: "修改密码",
@@ -131,7 +133,7 @@ export const zhCn = {
         },
       },
       ORDERS: {
-        titles: {
+        $: {
           orderNo: "订单号",
           orderTime: "下单时间",
           reachTime: "送达时间",

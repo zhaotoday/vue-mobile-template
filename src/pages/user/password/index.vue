@@ -1,7 +1,7 @@
 <template>
   <div class="p-user-password u-pt24">
     <c-form>
-      <c-form-item :label="$t('titles.phoneNumber')">
+      <c-form-item :label="$t('$.phoneNumber')">
         <c-form-input
           type="number"
           maxlength="11"
@@ -11,7 +11,7 @@
           @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
-      <c-form-item :label="$t('titles.captcha')">
+      <c-form-item :label="$t('$.captcha')">
         <c-form-input
           type="number"
           maxlength="6"
@@ -30,7 +30,7 @@
           {{ cCaptcha.message }}
         </button>
       </c-form-item>
-      <c-form-item :label="$t('titles.password')">
+      <c-form-item :label="$t('$.password')">
         <c-form-input
           type="password"
           :placeholder="$t('inputs.passwordTip')"
@@ -39,7 +39,7 @@
           @blur="validate(cForm, 'password')"
         />
       </c-form-item>
-      <c-form-item :label="$t('titles.confirmPassword')">
+      <c-form-item :label="$t('$.confirmPassword')">
         <c-form-input
           type="password"
           :placeholder="$t('inputs.confirmPassword')"
@@ -50,7 +50,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("titles.reset") }}
+      {{ $t("$.reset") }}
     </u-button>
   </div>
 </template>

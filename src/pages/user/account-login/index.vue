@@ -1,7 +1,7 @@
 <template>
   <div class="p-user-account-login u-pt24">
     <c-form>
-      <c-form-item :label="$t('titles.phoneNumber')">
+      <c-form-item :label="$t('$.phoneNumber')">
         <c-form-input
           type="number"
           maxlength="11"
@@ -11,7 +11,7 @@
           @blur="validate(cForm, 'account')"
         />
       </c-form-item>
-      <c-form-item :label="$t('titles.password')">
+      <c-form-item :label="$t('$.password')">
         <c-form-input
           type="password"
           :placeholder="$t('inputs.password')"
@@ -36,7 +36,7 @@
       </div>
     </div>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("titles.login") }}
+      {{ $t("$.login") }}
     </u-button>
   </div>
 </template>

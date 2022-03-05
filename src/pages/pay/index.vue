@@ -26,7 +26,7 @@
     <div class="u-mb24" :class="$bem.box.$">
       <div class="u-pt20 u-pb20 bg-white">
         <div class="c-title c-title--md fs32">
-          {{ $t("titles.productInfo") }}
+          {{ $t("$.productInfo") }}
         </div>
       </div>
       <gc-product-list
@@ -37,17 +37,17 @@
       />
     </div>
     <c-form custom-class="u-mb24">
-      <c-form-item :label="$t('titles.total')">
+      <c-form-item :label="$t('$.total')">
         <div class="c-form__input fs30 t-error">
           {{ $t("$.money") }}{{ getTotalPrice(selectedProducts) }}
         </div>
       </c-form-item>
-      <c-form-item custom-class="is-link" :label="$t('titles.payment')">
-        <div class="c-form__input">{{ $t("titles.cashOnDelivery") }}</div>
+      <c-form-item custom-class="is-link" :label="$t('$.payment')">
+        <div class="c-form__input">{{ $t("$.cashOnDelivery") }}</div>
       </c-form-item>
     </c-form>
     <c-form>
-      <c-form-item :label="$t('titles.remark')">
+      <c-form-item :label="$t('$.remark')">
         <div class="u-pt10 u-pb10 u-mr20" style="margin-left: 180rpx">
           <u-textarea
             :placeholder="$t('inputs.content')"

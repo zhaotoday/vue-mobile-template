@@ -46,10 +46,10 @@ export default {
       const { id } = currentRoute.query;
 
       if (id) {
-        wx.setNavigationBarTitle({ title: pt("modifyAddress") });
+        wx.setNavigationBarTitle({ title: pt("$.modifyAddress") });
         cForm.model = await addressesApi.get({ id });
       } else {
-        wx.setNavigationBarTitle({ title: pt("addAddress") });
+        wx.setNavigationBarTitle({ title: pt("$.addAddress") });
       }
     });
 

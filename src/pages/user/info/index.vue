@@ -1,14 +1,14 @@
 <template>
   <div class="p-user-info u-pt24">
     <c-form>
-      <c-form-item :label="$t('titles.avatar')">
+      <c-form-item :label="$t('$.avatar')">
         <u-avatar
           size="86rpx"
           :src="avatarUrl || defaultAvatarUrl"
           @click="chooseImage"
         />
       </c-form-item>
-      <c-form-item :label="$t('titles.name')">
+      <c-form-item :label="$t('$.name')">
         <c-form-input
           :placeholder="$t('inputs.name')"
           v-model.trim="cForm.model.name"
@@ -16,7 +16,7 @@
           @blur="validate(cForm, 'name')"
         />
       </c-form-item>
-      <c-form-item custom-class="is-link" :label="$t('titles.gender')">
+      <c-form-item custom-class="is-link" :label="$t('$.gender')">
         <c-form-picker
           :placeholder="$t('inputs.gender')"
           :enums="enums.Gender.filter((item) => item.value !== 0)"
@@ -25,7 +25,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("titles.save") }}
+      {{ $t("$.save") }}
     </u-button>
   </div>
 </template>

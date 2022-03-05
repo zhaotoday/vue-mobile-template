@@ -8,7 +8,7 @@
       {{ pt("tips.header") }}
     </div>
     <c-form>
-      <c-form-item :label="$t('titles.phoneNumber')">
+      <c-form-item :label="$t('$.phoneNumber')">
         <c-form-input
           type="number"
           maxlength="11"
@@ -18,7 +18,7 @@
           @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
-      <c-form-item :label="$t('titles.captcha')">
+      <c-form-item :label="$t('$.captcha')">
         <c-form-input
           type="number"
           maxlength="6"
@@ -39,7 +39,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("titles.bind") }}
+      {{ $t("$.bind") }}
     </u-button>
   </div>
 </template>

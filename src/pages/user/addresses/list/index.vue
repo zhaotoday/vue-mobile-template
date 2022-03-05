@@ -21,7 +21,7 @@
             ]"
             @click.stop="setDefault(item)"
           >
-            {{ pt("setDefault") }}
+            {{ pt("$.setDefault") }}
           </div>
           <div
             class="c-icon-tag c-icon-tag--edit"
@@ -29,10 +29,10 @@
               $wx.navigateTo(`/pages/user/addresses/form/index?id=${item.id}`)
             "
           >
-            {{ $t("titles.modify") }}
+            {{ $t("$.modify") }}
           </div>
           <div class="c-icon-tag c-icon-tag--del" @click.stop="del(item)">
-            {{ $t("titles.del") }}
+            {{ $t("$.del") }}
           </div>
         </div>
       </li>
@@ -49,7 +49,7 @@
       :disabled="list.items.length >= 5"
       @click="$wx.navigateTo('/pages/user/addresses/form/index')"
     >
-      {{ $t("titles.add") }}
+      {{ $t("$.add") }}
     </u-button>
   </div>
 </template>

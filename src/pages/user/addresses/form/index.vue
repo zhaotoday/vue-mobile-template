@@ -1,7 +1,7 @@
 <template>
   <div class="p-user-addresses-form u-pt24">
     <c-form>
-      <c-form-item :label="pt('titles.consignee')">
+      <c-form-item :label="pt('$.consignee')">
         <c-form-input
           :placeholder="pt('inputs.consignee')"
           v-model.trim="cForm.model.name"
@@ -25,7 +25,7 @@
           </li>
         </ul>
       </c-form-item>
-      <c-form-item :label="$t('titles.phoneNumber')">
+      <c-form-item :label="$t('$.phoneNumber')">
         <c-form-input
           type="number"
           maxlength="11"
@@ -35,14 +35,14 @@
           @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
-      <c-form-item custom-class="is-link" :label="pt('titles.housingEstate')">
+      <c-form-item custom-class="is-link" :label="pt('$.housingEstate')">
         <c-form-link
           :placeholder="pt('inputs.housingEstate')"
           :label="cForm.model.location.name"
           @click="selectLocation"
         />
       </c-form-item>
-      <c-form-item :label="pt('titles.houseNo')">
+      <c-form-item :label="pt('$.houseNo')">
         <c-form-input
           :placeholder="pt('inputs.houseNo')"
           v-model.trim="cForm.model.room"
@@ -50,7 +50,7 @@
           @blur="validate(cForm, 'room')"
         />
       </c-form-item>
-      <c-form-item :label="pt('titles.addressTag')">
+      <c-form-item :label="pt('$.addressTag')">
         <ul class="b-tags u-pt18">
           <li
             v-for="item in enums.AddressTag"
@@ -70,7 +70,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("titles.save") }}
+      {{ $t("$.save") }}
     </u-button>
   </div>
 </template>

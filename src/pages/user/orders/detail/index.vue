@@ -1,16 +1,16 @@
 <template>
   <div class="p-user-orders-detail u-pt24 u-pb24">
     <c-form custom-class="u-mb24">
-      <c-form-item :label="pt('_.titles.orderNo')">
+      <c-form-item :label="pt('_.$.orderNo')">
         <div class="c-form__input">12456461132</div>
       </c-form-item>
-      <c-form-item :label="pt('_.titles.orderTime')">
+      <c-form-item :label="pt('_.$.orderTime')">
         <div class="c-form__input">{{ $time.getTime(detail.createdAt) }}</div>
       </c-form-item>
-      <c-form-item :label="pt('_.titles.reachTime')">
+      <c-form-item :label="pt('_.$.reachTime')">
         <div class="c-form__input">2022-02-16 00:00</div>
       </c-form-item>
-      <c-form-item :label="$t('titles.status')">
+      <c-form-item :label="$t('$.status')">
         <div class="c-form__input">
           {{
             $helpers.getItem(enums.OrderStatus, "value", detail.status)[
@@ -37,7 +37,7 @@
     <div class="u-mb24" :class="$bem.box.$">
       <div class="u-pt20 u-pb20 bg-white">
         <div class="c-title c-title--md fs32">
-          {{ $t("titles.productInfo") }}
+          {{ $t("$.productInfo") }}
         </div>
       </div>
       <gc-product-list
@@ -48,17 +48,17 @@
       />
     </div>
     <c-form custom-class="u-mb24">
-      <c-form-item :label="$t('titles.total')">
+      <c-form-item :label="$t('$.total')">
         <div class="c-form__input fs30 t-error">
           {{ $t("$.money") }}{{ getTotalPrice(detail.products) }}
         </div>
       </c-form-item>
-      <c-form-item :label="$t('titles.payment')">
-        <div class="c-form__input">{{ $t("titles.cashOnDelivery") }}</div>
+      <c-form-item :label="$t('$.payment')">
+        <div class="c-form__input">{{ $t("$.cashOnDelivery") }}</div>
       </c-form-item>
     </c-form>
     <c-form>
-      <c-form-item :label="$t('titles.remark')">
+      <c-form-item :label="$t('$.remark')">
         <div class="c-form__input">{{ detail.remark }}</div>
       </c-form-item>
     </c-form>
