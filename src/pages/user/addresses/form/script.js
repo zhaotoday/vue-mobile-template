@@ -11,7 +11,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t } = useI18n({ page: "user/addresses/form" });
+    const { t, $t } = useI18n({ page: "user/addresses/form" });
 
     const { currentRoute } = useRoute();
 
@@ -33,9 +33,9 @@ export default {
         tag: "Home",
       },
       rules: {
-        name: [isRequired({ message: t("_.inputs.consignee") })],
+        name: [isRequired({ message: t("inputs.consignee") })],
         phoneNumber: [
-          isRequired({ message: t("_.inputs.phoneNumber") }),
+          isRequired({ message: t("inputs.phoneNumber") }),
           isPhoneNumber(),
         ],
       },
@@ -46,11 +46,10 @@ export default {
       const { id } = currentRoute.query;
 
       if (id) {
-        wx.setNavigationBarTitle({ title: "修改收货地址" });
-
+        wx.setNavigationBarTitle({ title: t("modifyAddress") });
         cForm.model = await addressesApi.get({ id });
       } else {
-        wx.setNavigationBarTitle({ title: "新增收货地址" });
+        wx.setNavigationBarTitle({ title: t("addAddress") });
       }
     });
 
@@ -82,7 +81,9 @@ export default {
           body: { ...model, userId: user.value.id },
         });
 
-        wx.showToast({ title: id ? "修改成功" : "新增成功" });
+        wx.showToast({
+          title: id ? $t("tips.modifySuccess") : $t("tips.addSuccess"),
+        });
         await useHelpers().sleep(1500);
         wx.navigateBack();
       });

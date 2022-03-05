@@ -28,6 +28,8 @@ export const zhCn = {
   tips: {
     loginSuccess: "登录成功",
     registerSuccess: "注册成功",
+    modifySuccess: "修改成功",
+    addSuccess: "新增成功",
   },
   PAY: {
     RESULT: {
@@ -53,19 +55,22 @@ export const zhCn = {
       forgotPassword: "忘记密码？",
     },
     ADDRESSES: {
-      titles: {
-        consignee: "收货人",
-        housingEstate: "小区",
-        houseNo: "门牌号",
-        addressTag: "地址类型",
+      FORM: {
+        titles: {
+          consignee: "收货人",
+          housingEstate: "小区",
+          houseNo: "门牌号",
+          addressTag: "地址类型",
+        },
+        inputs: {
+          consignee: "收货人姓名",
+          byWhichPhoneWeContactYou: "配送员联系您的手机号",
+          housingEstate: "小区/写字楼等",
+          houseNo: "门牌号，如：1 号楼 102",
+        },
+        addAddress: "新增收货地址",
+        modifyAddress: "修改收货地址",
       },
-      inputs: {
-        consignee: "收货人姓名",
-        byWhichPhoneWeContactYou: "配送员联系您的手机号",
-        housingEstate: "小区/写字楼等",
-        houseNo: "门牌号，如：1 号楼 102",
-      },
-      FORM: {},
     },
   },
 };
