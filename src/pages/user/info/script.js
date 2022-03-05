@@ -9,9 +9,12 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t, $t } = useI18n({ page: "user/info" });
+
     const { isRequired, validate } = useValidators();
 
     const { enums } = useEnums();
@@ -27,7 +30,7 @@ export default {
         gender: -1,
       },
       rules: {
-        name: [isRequired({ label: "姓名" })],
+        name: [isRequired({ message: $t("inputs.name") })],
       },
       errors: {},
     });
@@ -73,7 +76,7 @@ export default {
           body: model,
         });
 
-        wx.showToast({ title: "保存成功" });
+        wx.showToast({ title: $t("tips.saveSuccess") });
         await getUserInfo();
         await useHelpers().sleep(1500);
         wx.navigateBack();
