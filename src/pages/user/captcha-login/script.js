@@ -6,9 +6,11 @@ import { useCaptcha } from "vue-mobile/@lr/composables/use-captcha";
 import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { $t } = useI18n({ page: "user/captcha-login" });
     const { isRequired, isPhoneNumber, isCaptcha, validate } = useValidators();
 
     const { getUserInfo } = useUsers();
@@ -16,8 +18,11 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
-        captcha: [isRequired({ label: "验证码" }), isCaptcha()],
+        phoneNumber: [
+          isRequired({ message: $t("inputs.phoneNumber") }),
+          isPhoneNumber(),
+        ],
+        captcha: [isRequired({ message: $t("inputs.captcha") }), isCaptcha()],
       },
       errors: {},
     });
@@ -46,7 +51,7 @@ export default {
           },
         });
 
-        wx.showToast({ title: "登录成功" });
+        wx.showToast({ title: $t("tips.loginSuccess") });
         await getUserInfo();
         await useHelpers().sleep(1500);
       });
