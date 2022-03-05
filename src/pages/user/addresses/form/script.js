@@ -36,7 +36,7 @@ export default {
         name: [isRequired({ message: pt("inputs.consignee") })],
         phoneNumber: [
           isRequired({ message: $t("inputs.phoneNumber") }),
-          isPhoneNumber(),
+          isPhoneNumber({ message: $t("inputs.phoneNumberFormatError") }),
         ],
       },
       errors: {},

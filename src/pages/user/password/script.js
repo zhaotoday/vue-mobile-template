@@ -18,9 +18,12 @@ export default {
       rules: {
         phoneNumber: [
           isRequired({ message: $t("inputs.phoneNumber") }),
-          isPhoneNumber(),
+          isPhoneNumber({ message: $t("inputs.phoneNumberFormatError") }),
         ],
-        captcha: [isRequired({ message: $t("inputs.captcha") }), isCaptcha()],
+        captcha: [
+          isRequired({ message: $t("inputs.captcha") }),
+          isCaptcha({ message: $t("tips.captchaFormatError") }),
+        ],
         password: [
           isRequired({ message: $t("inputs.password") }),
           isPassword(),

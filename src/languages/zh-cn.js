@@ -50,6 +50,7 @@ export const zhCn = {
     confirmPasswordNotEqualPassword: "两次密码输入不一致",
     passwordFormatError: "密码格式错误",
     phoneNumberFormatError: "手机号格式错误",
+    captchaFormatError: "验证码格式错误",
   },
   tips: {
     loginSuccess: "登录成功",
