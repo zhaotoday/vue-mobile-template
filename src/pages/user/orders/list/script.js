@@ -1,4 +1,3 @@
-import products from "@/mock/products.json";
 import { ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
 import { ordersApi } from "@/apis/client/orders";
