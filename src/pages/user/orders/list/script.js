@@ -19,15 +19,15 @@ export default {
       current: 0,
       items: [
         {
-          label: $t("orderStatuses.all"),
+          label: $t("$.orderStatuses.all"),
           value: "",
         },
         {
-          label: $t("orderStatuses.toPay"),
+          label: $t("$.orderStatuses.toPay"),
           value: "ToPay",
         },
         {
-          label: $t("orderStatuses.finished"),
+          label: $t("$.orderStatuses.finished"),
           value: "Finished",
         },
       ],

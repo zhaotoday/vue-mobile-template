@@ -32,6 +32,10 @@ export const zhCn = {
     collect: "收藏",
     colon: "：",
     money: "$",
+    orderStatuses: {
+      all: "全部",
+      toPay: "待付款",
+    },
   },
   inputs: {
     content: "请输入内容",
@@ -56,36 +60,42 @@ export const zhCn = {
     bindSuccess: "绑定成功",
     pleaseConfirm: "请确认",
   },
-  orderStatuses: {
-    all: "全部",
-    toPay: "待付款",
-  },
   components: {
     CART_SUBMIT: {
-      titles: {
+      $: {
         settle: "去结算",
       },
     },
   },
   pages: {
     PAY: {
-      RESULT: {
-        paySuccess: "下单成功",
-        gotoOrders: "查看订单列表",
-        backHome: "返回首页",
+      inputs: {
+        selectAddress: "请选择收获地址",
       },
-      selectAddress: "请选择收获地址",
+      RESULT: {
+        $: {
+          gotoOrders: "查看订单列表",
+          backHome: "返回首页",
+        },
+        tips: {
+          paySuccess: "下单成功",
+        },
+      },
     },
     PRODUCTS: {
       SEARCH: {
-        history: "历史搜索",
-        hot: "热门搜索",
+        $: {
+          history: "历史搜索",
+          hot: "热门搜索",
+        },
       },
     },
     USER: {
       ACCOUNT_LOGIN: {
-        captchaLogin: "验证码登录",
-        forgotPassword: "忘记密码？",
+        $: {
+          captchaLogin: "验证码登录",
+          forgotPassword: "忘记密码？",
+        },
       },
       ADDRESSES: {
         FORM: {

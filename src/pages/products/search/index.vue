@@ -12,7 +12,7 @@
     <div class="b-keywords bg-white">
       <template v-if="history[0]">
         <h2 class="b-title fs28">
-          {{ pt("history") }}
+          {{ pt("$.history") }}
           <i
             class="b-clear c-iconfont c-iconfont--delete"
             @click="clearHistory"
@@ -29,7 +29,7 @@
           </li>
         </ul>
       </template>
-      <h2 class="b-title fs28">{{ pt("hot") }}</h2>
+      <h2 class="b-title fs28">{{ pt("$.hot") }}</h2>
       <ul class="b-tags">
         <li
           v-for="(item, index) in hotKeywords"
