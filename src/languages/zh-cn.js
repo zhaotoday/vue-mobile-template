@@ -63,7 +63,7 @@ export const zhCn = {
     },
     selectAddress: "请选择收获地址",
   },
-  PRODUCT: {
+  PRODUCTS: {
     SEARCH: {
       history: "历史搜索",
       hot: "热门搜索",
