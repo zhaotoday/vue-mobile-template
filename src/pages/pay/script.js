@@ -6,9 +6,12 @@ import { addressesApi } from "@/apis/client/addresses";
 import { usePageData } from "@/composables/use-page-data";
 import { useCart } from "@/composables/use-cart";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { t } = useI18n({ page: "pay" });
+
     const { getPageData } = usePageData();
 
     const { getTotalPrice } = useProducts();
@@ -66,6 +69,7 @@ export default {
     };
 
     return {
+      t,
       selectedProducts,
       selectedAddress,
       cForm,

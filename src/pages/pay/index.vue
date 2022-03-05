@@ -20,13 +20,13 @@
         <div class="c-tag h34 bd-primary t-primary u-br10 fs22">家</div>
       </template>
       <div v-else class="c-address__placeholder fs30 t-placeholder">
-        {{ $t("$p.pay.selectAddress") }}
+        {{ t("selectAddress") }}
       </div>
     </div>
     <div class="u-mb24" :class="$bem.box.$">
       <div class="u-pt20 u-pb20 bg-white">
         <div class="c-title c-title--md fs32">
-          {{ $t("$p.pay.productInfo") }}
+          {{ $t("titles.productInfo") }}
         </div>
       </div>
       <gc-product-list

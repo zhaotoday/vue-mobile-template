@@ -112,7 +112,6 @@ export const zhCn = {
         orderNo: "订单号",
         orderTime: "下单时间",
         reachTime: "送达时间",
-        productInfo: "商品信息",
         payAtOnce: "立即付款",
       },
     },
