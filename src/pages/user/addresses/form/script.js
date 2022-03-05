@@ -11,11 +11,8 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { t } = useI18n({
-      page: "user/addresses/form",
-    });
+    const { t } = useI18n({ page: "user/addresses/form" });
 
-    alert(t("_.titles.consignee"));
     const { currentRoute } = useRoute();
 
     const { enums } = useEnums();
@@ -36,15 +33,9 @@ export default {
         tag: "Home",
       },
       rules: {
-        name: [
-          isRequired({
-            message: t("$p.user.$p.addresses.inputs.consignee"),
-          }),
-        ],
+        name: [isRequired({ message: t("_.inputs.consignee") })],
         phoneNumber: [
-          isRequired({
-            message: t("$p.user.$p.addresses.inputs.phoneNumber"),
-          }),
+          isRequired({ message: t("_.inputs.phoneNumber") }),
           isPhoneNumber(),
         ],
       },

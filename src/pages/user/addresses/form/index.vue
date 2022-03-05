@@ -29,31 +29,28 @@
         <c-form-input
           type="number"
           maxlength="11"
-          :placeholder="$t('$g.inputs.byWhichPhoneWeContactYou')"
+          :placeholder="t('_.inputs.byWhichPhoneWeContactYou')"
           v-model.trim="cForm.model.phoneNumber"
           :error="cForm.errors.phoneNumber"
           @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
-      <c-form-item
-        custom-class="is-link"
-        :label="$t('$p.user.$p.addresses.$g.$t.housingEstate')"
-      >
+      <c-form-item custom-class="is-link" :label="t('_.titles.housingEstate')">
         <c-form-link
-          :placeholder="$t('$g.inputs.housingEstate')"
+          :placeholder="t('_.inputs.housingEstate')"
           :label="cForm.model.location.name"
           @click="selectLocation"
         />
       </c-form-item>
-      <c-form-item :label="$t('$p.user.$p.addresses.$g.$t.houseNo')">
+      <c-form-item :label="t('_.titles.houseNo')">
         <c-form-input
-          :placeholder="$t('$g.inputs.houseNo')"
+          :placeholder="t('_.inputs.houseNo')"
           v-model.trim="cForm.model.room"
           :error="cForm.errors.room"
           @blur="validate(cForm, 'room')"
         />
       </c-form-item>
-      <c-form-item :label="$t('$p.user.$p.addresses.$g.$t.addressTag')">
+      <c-form-item :label="t('_.titles.addressTag')">
         <ul class="b-tags u-pt18">
           <li
             v-for="item in enums.AddressTag"
