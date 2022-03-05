@@ -61,6 +61,7 @@ export const zhCn = {
     saveSuccess: "保存成功",
     bindSuccess: "绑定成功",
     pleaseConfirm: "请确认",
+    captchaSuccess: "验证码获取成功",
   },
   components: {
     CART_SUBMIT: {

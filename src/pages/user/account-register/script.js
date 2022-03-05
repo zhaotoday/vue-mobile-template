@@ -47,6 +47,7 @@ export default {
     const { cCaptcha, sendCaptcha } = useCaptcha({
       model: () => ({ phoneNumber: cForm.model.phoneNumber }),
       rules: () => ({ phoneNumber: cForm.rules.phoneNumber }),
+      sendCaptchaText: $t("tips.captchaSuccess"),
       request: () =>
         publicUsersApi.post({
           action: "sendSmsCaptcha",

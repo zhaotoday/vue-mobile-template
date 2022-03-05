@@ -11,7 +11,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { $t, t } = useI18n({ path: "user/phone-number" });
+    const { $t } = useI18n({ path: "user/phone-number" });
 
     const { currentRoute } = useRoute();
 
@@ -37,6 +37,7 @@ export default {
     const { cCaptcha, sendCaptcha } = useCaptcha({
       model: () => ({ phoneNumber: cForm.model.phoneNumber }),
       rules: () => ({ phoneNumber: cForm.rules.phoneNumber }),
+      sendCaptchaText: $t("tips.captchaSuccess"),
       request: () =>
         publicUsersApi.post({
           action: "sendSmsCaptcha",
