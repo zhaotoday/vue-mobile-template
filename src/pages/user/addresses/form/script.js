@@ -33,9 +33,15 @@ export default {
         tag: "Home",
       },
       rules: {
-        name: [isRequired({ message: t("$g.inputs.consignee") })],
+        name: [
+          isRequired({
+            message: t("$p.user.$p.addresses.inputs.consignee"),
+          }),
+        ],
         phoneNumber: [
-          isRequired({ message: t("$g.inputs.phoneNumber") }),
+          isRequired({
+            message: t("$p.user.$p.addresses.inputs.phoneNumber"),
+          }),
           isPhoneNumber(),
         ],
       },
