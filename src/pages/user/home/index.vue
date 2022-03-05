@@ -17,7 +17,7 @@
           size="small"
           @click="$wx.navigateTo('/pages/user/mp-login/index')"
         >
-          {{ t("login") }}
+          {{ t("titles.login") }}
         </u-button>
       </template>
     </div>
@@ -47,7 +47,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--info fs34 t-primary"></i>
-          {{ t("myInformation") }}
+          {{ t("titles.myInformation") }}
         </li>
         <li
           class="c-list__item has-icon is-link"
@@ -59,7 +59,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--lock fs34 t-primary"></i>
-          {{ t("modifyPassword") }}
+          {{ t("titles.modifyPassword") }}
         </li>
         <li
           class="c-list__item has-icon is-link"
@@ -71,7 +71,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--phone fs34 t-primary"></i>
-          {{ t("bindPhoneNumber") }}
+          {{ t("titles.bindPhoneNumber") }}
         </li>
         <li
           v-if="false"
@@ -79,7 +79,7 @@
           @click="wxMpBind"
         >
           <i class="c-iconfont c-iconfont--wechat fs34 t-primary"></i>
-          {{ t("bindWx") }}
+          {{ t("titles.bindWx") }}
         </li>
       </ul>
     </div>
@@ -90,7 +90,7 @@
       style="bottom: 130rpx"
       @click="logoutAndGotoHome"
     >
-      {{ $t("logout") }}
+      {{ $t("titles.logout") }}
     </u-button>
   </div>
 </template>

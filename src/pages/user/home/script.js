@@ -42,7 +42,7 @@ export default {
       const { confirm } = await wx.showModal({
         title: $t("tips.pleaseConfirm"),
         content: t("tips.confirmLogout"),
-        confirmText: $t("tips.logout"),
+        confirmText: $t("titles.logout"),
       });
 
       if (confirm) {

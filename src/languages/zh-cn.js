@@ -15,6 +15,7 @@ export const zhCn = {
     modify: "修改",
     del: "删除",
     add: "新增",
+    logout: "退出账号",
     colon: "：",
   },
   inputs: {
@@ -30,7 +31,6 @@ export const zhCn = {
   },
   tips: {
     loginSuccess: "登录成功",
-    logout: "退出账号",
     logoutSuccess: "退出成功",
     registerSuccess: "注册成功",
     modifySuccess: "修改成功",
@@ -82,11 +82,13 @@ export const zhCn = {
       },
     },
     HOME: {
-      login: "授权登录",
-      myInformation: "我的资料",
-      modifyPassword: "修改密码",
-      bindPhoneNumber: "绑定手机号",
-      bindWx: "绑定微信",
+      titles: {
+        login: "授权登录",
+        myInformation: "我的资料",
+        modifyPassword: "修改密码",
+        bindPhoneNumber: "绑定手机号",
+        bindWx: "绑定微信",
+      },
       tips: {
         confirmLogout: "确认退出账号吗？",
       },
