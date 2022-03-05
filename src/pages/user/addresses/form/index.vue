@@ -3,7 +3,7 @@
     <c-form>
       <c-form-item :label="t('_.titles.consignee')">
         <c-form-input
-          :placeholder="$t('$g.user.$p.addresses.inputs.consignee')"
+          :placeholder="$t('_.inputs.consignee')"
           v-model.trim="cForm.model.name"
           :error="cForm.errors.name"
           @blur="validate(cForm, 'name')"
@@ -25,7 +25,7 @@
           </li>
         </ul>
       </c-form-item>
-      <c-form-item :label="$t('$g.$t.phoneNumber')">
+      <c-form-item :label="$t('titles.phoneNumber')">
         <c-form-input
           type="number"
           maxlength="11"
@@ -73,7 +73,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("$g.$t.save") }}
+      {{ $t("titles.save") }}
     </u-button>
   </div>
 </template>
