@@ -32,7 +32,7 @@
         <c-form-input
           type="number"
           placeholder="请输入商品价格"
-          v-model.trim="cForm.model.price"
+          v-model.number="cForm.model.price"
           :error="cForm.errors.price"
           @blur="validate(cForm, 'price')"
         />

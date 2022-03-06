@@ -1,4 +1,4 @@
-import { onShow } from "uni-composition-api";
+import { onLoad, onShow } from "uni-composition-api";
 import { usePageData } from "@/composables/use-page-data";
 import { useRender } from "@/pages/categories/composables/use-render";
 
