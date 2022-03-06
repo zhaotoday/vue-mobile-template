@@ -61,19 +61,17 @@ export default {
       }
     };
 
-    const finish = () => {
-      const del = async ({ id }) => {
-        const { confirm } = await wx.showModal({
-          title: "请确认",
-          content: "确认设置该订单为已送达吗？",
-          cancelText: "取消",
-          confirmText: "送达",
-        });
+    const finish = async ({ id }) => {
+      const { confirm } = await wx.showModal({
+        title: "请确认",
+        content: "确认设置该订单为已送达吗？",
+        cancelText: "取消",
+        confirmText: "送达",
+      });
 
-        if (confirm) {
-          wx.showToast({ title: "设置成功" });
-        }
-      };
+      if (confirm) {
+        wx.showToast({ title: "设置成功" });
+      }
     };
 
     return {
