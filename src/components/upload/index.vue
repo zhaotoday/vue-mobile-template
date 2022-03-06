@@ -1,12 +1,5 @@
 <template>
-  <div>
-    <u-upload
-      :file-list="fileList"
-      @afterRead="onAfterRead"
-      @delete="onDelete"
-    />
-    {{ value }}
-  </div>
+  <u-upload :file-list="fileList" @afterRead="onAfterRead" @delete="onDelete" />
 </template>
 
 <script src="./script.js"></script>

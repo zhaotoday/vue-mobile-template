@@ -18,7 +18,6 @@
             :value="cForm.model.imageFileIds"
             @change="(value) => (cForm.model.imageFileIds = value)"
           />
-          {{ cForm.model.imageFileIds }}
         </div>
       </c-form-item>
       <c-form-item label="商品价格">

@@ -1,7 +1,7 @@
 import wx from "wx-bridge";
 import { useConsts } from "@/composables/use-consts";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
-import { ref } from "@vue/composition-api";
+import { ref, watch } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
 
 export default {
@@ -16,6 +16,25 @@ export default {
     const { getHeaders } = useAuth();
 
     const fileList = ref([]);
+
+    watch(
+      () => props.value,
+      async (newVal) => {
+        if (newVal && newVal.length) {
+          fileList.value = newVal.map((id) => createFile(id));
+        }
+      },
+      { immediate: true, deep: true }
+    );
+
+    const createFile = (id) => {
+      return {
+        id,
+        status: "success",
+        message: "",
+        url: useHelpers().getImageUrl({ id }),
+      };
+    };
 
     const onAfterRead = async (event) => {
       const { statusCode, data } = await wx.uploadFile({
@@ -32,12 +51,7 @@ export default {
       } = JSON.parse(data);
 
       if (statusCode === 201) {
-        fileList.value.push({
-          id,
-          status: "success",
-          message: "",
-          url: useHelpers().getImageUrl({ id }),
-        });
+        fileList.value.push(createFile(id));
 
         context.emit(
           "change",
