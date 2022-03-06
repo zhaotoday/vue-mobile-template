@@ -132,8 +132,8 @@ export const en = {
       HOME: {
         $: {
           login: "Login",
-          myInformation: "My information",
-          modifyPassword: "Modify my password",
+          myInformation: "Modify personal information",
+          modifyPassword: "Modify login password",
           bindPhoneNumber: "Bind phone number",
           myOrders: "My Orders",
           myAddresses: "My Addresses",
