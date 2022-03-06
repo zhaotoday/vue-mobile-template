@@ -12,7 +12,9 @@ export default {
     const { categoriesDetail, renderCategoriesDetail } = useRender();
 
     const cForm = reactive({
-      model: {},
+      model: {
+        imageFileIds: [],
+      },
       rules: {
         name: [isRequired({ label: "商品名称" })],
         imageFileIds: [isRequired({ label: "商品图片" })],
