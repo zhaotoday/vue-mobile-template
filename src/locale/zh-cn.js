@@ -30,6 +30,7 @@ export const zhCn = {
     cart: "购物车",
     addToCart: "加入购物车",
     collect: "收藏",
+    collected: "收藏",
     search: "搜索",
     colon: "：",
     money: "$",

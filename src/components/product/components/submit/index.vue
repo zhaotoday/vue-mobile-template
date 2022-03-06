@@ -6,7 +6,7 @@
       @click="$wx.switchTab('/pages/categories/index')"
     >
       <i class="c-iconfont c-iconfont--cart-off fs42"></i>
-      <h2 class="fs24">{{ $t("$.cart") }}</h2>
+      <h2 class="fs24 u-lh1">{{ $t("$.cart") }}</h2>
       <div v-if="selectedProducts.length" class="cc-submit__count fs22">
         {{ selectedProducts.length }}
       </div>

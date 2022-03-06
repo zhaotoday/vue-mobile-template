@@ -14,8 +14,8 @@
       img-mode="aspectFill"
     />
     <div class="b-info bg-white u-mb24">
-      <div class="b-info__name fs32">{{ detail.name }}</div>
-      <div class="b-info__others">
+      <div class="b-info__name fs32 u-lh1">{{ detail.name }}</div>
+      <div class="b-info__others u-lh1">
         <span class="t-error fs32">{{ $t("$.money") }}{{ detail.price }}</span>
         <span class="t-g7 u-lt fs26 u-ml10">200.0</span>
         <div class="b-info__right t-g7 fs26">
