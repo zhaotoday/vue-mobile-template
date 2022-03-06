@@ -1,5 +1,5 @@
 <template>
-  <u-upload @after-read="onAfterRead" @delete="onDelete" />
+  <u-upload @afterRead="onAfterRead" @delete="onDelete" />
 </template>
 
 <script src="./script.js"></script>

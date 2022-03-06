@@ -14,6 +14,7 @@
       </c-form-item>
       <c-form-item label="商品图片">
         <div class="u-pt16" style="margin-left: 230rpx">
+          <gc-upload />
           <u-upload name="3" multiple :maxCount="10" :previewFullImage="true" />
         </div>
       </c-form-item>
