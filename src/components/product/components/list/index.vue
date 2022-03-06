@@ -9,10 +9,7 @@
   >
     <u-grid :col="col" :border="false">
       <u-grid-item v-for="(item, index) in items" :key="index">
-        <div
-          class="cc-list__box"
-          @click="$wx.navigateTo(`/pages/products/detail/index?id=${item.id}`)"
-        >
+        <div class="cc-list__box">
           <div class="cc-list__checkbox">
             <u-checkbox
               shape="circle"

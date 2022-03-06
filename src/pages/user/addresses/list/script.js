@@ -28,9 +28,11 @@ export default {
     });
 
     onShow(async () => {
-      const { select } = currentRoute.query;
+      const { action } = currentRoute.query;
 
-      wx.setNavigationBarTitle({ title: select ? "选择收货地址" : "收货地址" });
+      wx.setNavigationBarTitle({
+        title: action === "select" ? pt("$.selectAddress") : pt("$.address"),
+      });
 
       await render();
 

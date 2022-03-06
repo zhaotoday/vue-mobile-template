@@ -127,6 +127,8 @@ export const en = {
         LIST: {
           $: {
             setDefault: "Set as default address",
+            address: "My Addresses",
+            selectAddress: "Select Address",
           },
         },
       },

@@ -127,6 +127,8 @@ export const zhCn = {
         LIST: {
           $: {
             setDefault: "设为默认",
+            address: "收货地址",
+            selectAddress: "选择收货地址",
           },
         },
       },
