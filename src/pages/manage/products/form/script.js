@@ -17,7 +17,8 @@ export default {
       },
       rules: {
         name: [isRequired({ label: "商品名称" })],
-        imageFileIds: [isRequired({ label: "商品图片" })],
+        imageFileIds: [isRequired({ message: "请上传商品图片" })],
+        price: [isRequired({ label: "商品价格" })],
       },
       errors: {},
     });

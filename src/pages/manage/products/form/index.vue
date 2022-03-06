@@ -16,8 +16,16 @@
         <div class="u-pt16" style="margin-left: 230rpx">
           <gc-upload
             :value="cForm.model.imageFileIds"
-            @change="(value) => (cForm.model.imageFileIds = value)"
+            @change="
+              (value) => {
+                cForm.model.imageFileIds = value;
+                validate(cForm, 'imageFileIds');
+              }
+            "
           />
+        </div>
+        <div v-if="cForm.errors.imageFileIds" class="c-form__error">
+          {{ cForm.errors.imageFileIds }}
         </div>
       </c-form-item>
       <c-form-item label="商品价格">
