@@ -26,7 +26,7 @@
           @blur="validate(cForm, 'price')"
         />
       </c-form-item>
-      <c-form-item label="商品详情">
+      <c-form-item v-if="false" label="商品详情">
         <div class="u-pt10 u-pb10 u-mt70 u-ml20 u-mr20">
           <u-textarea placeholder="请输入商品详情" height="300" />
         </div>
