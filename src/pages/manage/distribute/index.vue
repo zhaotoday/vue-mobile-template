@@ -19,19 +19,27 @@
         </div>
         <div class="c-orders__body o-media">
           <img
+            v-if="item.products[0]"
             class="o-media__image"
             mode="aspectFill"
-            src="https://cdn.uviewui.com/uview/goods/1.jpg"
+            :src="$helpers.getFileUrl({ id: item.products[0].imageFileIds[0] })"
           />
           <div class="o-media__body">
             <div class="cc-products">
               <div class="cc-products__item fs26">
-                赵金添（13950442340）<br />
-                <span class="t-g7">福建省福州市鼓楼区蒙古</span>
+                {{ item.products[0] ? item.products[0].name : "" }}<br />
+                <span class="t-g7">
+                  {{ item.user.name }}
+                  &nbsp;&nbsp;
+                  {{ item.user.phoneNumber }}
+                  &nbsp;&nbsp;
+                  {{ item.address ? item.address.location.name : "" }}
+                </span>
               </div>
             </div>
             <div class="b-money fs26">
-              实付 <span class="t-error">￥12.00</span>
+              {{ $t("$.paid") }}
+              <span class="t-error">￥{{ getTotalPrice(item.products) }}</span>
             </div>
           </div>
         </div>
@@ -50,7 +58,12 @@
           >
             位置
           </div>
-          <div class="c-tag h48 u-br8 bd-primary t-primary fs24">打电话</div>
+          <div
+            class="c-tag h48 u-br8 bd-primary t-primary fs24"
+            @click="makePhoneCall(item.address)"
+          >
+            打电话
+          </div>
           <div class="c-tag h48 u-br8 bd-primary t-primary fs24">送达</div>
         </div>
       </li>

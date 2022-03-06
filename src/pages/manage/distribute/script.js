@@ -2,9 +2,12 @@ import { ref } from "@vue/composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { onShow } from "uni-composition-api";
 import wx from "wx-bridge";
+import { useProducts } from "@/composables/use-products";
 
 export default {
   setup() {
+    const { getTotalPrice } = useProducts();
+
     const cTabs = {
       items: [
         {
@@ -30,7 +33,10 @@ export default {
     const renderOrdersList = async () => {
       ordersList.value = await ordersApi.get({
         query: {
-          include: [{ model: "Address", as: "address" }],
+          include: [
+            { model: "User", as: "user" },
+            { model: "Address", as: "address" },
+          ],
         },
       });
     };
@@ -44,10 +50,22 @@ export default {
       }
     };
 
+    const makePhoneCall = async (address) => {
+      if (address) {
+        wx.makePhoneCall({
+          phoneNumber: address.phoneNumber,
+        });
+      } else {
+        wx.showToast({ title: "收货地址已被删除，无法拨打电话" });
+      }
+    };
+
     return {
       cTabs,
       ordersList,
+      getTotalPrice,
       openLocation,
+      makePhoneCall,
     };
   },
 };
