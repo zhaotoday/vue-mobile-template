@@ -1,6 +1,7 @@
 import { ref } from "@vue/composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { onShow } from "uni-composition-api";
+import wx from "wx-bridge";
 
 export default {
   setup() {
@@ -27,14 +28,26 @@ export default {
     });
 
     const renderOrdersList = async () => {
-      ordersList.value = ordersApi.get({
-        query: {},
+      ordersList.value = await ordersApi.get({
+        query: {
+          include: [{ model: "Address", as: "address" }],
+        },
       });
+    };
+
+    const openLocation = async (address) => {
+      if (address) {
+        const { latitude, longitude } = address.location;
+        await wx.openLocation({ latitude, longitude });
+      } else {
+        wx.showToast({ title: "位置不存在（地址可能被删除）" });
+      }
     };
 
     return {
       cTabs,
       ordersList,
+      openLocation,
     };
   },
 };
