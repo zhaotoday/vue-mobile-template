@@ -3,7 +3,7 @@ export const useConsts = () => {
   const ApiUrl = "http://localhost:10601";
 
   // CDN 地址
-  const CdnUrl = "https://my-app.lrcdn.cn";
+  const CdnUrl = "http://localhost:10601/public/files";
 
   // 静态资源地址
   const StaticUrl = "https://my-app.liruan.cn/static";
