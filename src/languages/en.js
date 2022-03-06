@@ -68,7 +68,7 @@ export const en = {
   components: {
     CART_SUBMIT: {
       $: {
-        settle: "Settle",
+        settle: "Checkout",
       },
     },
   },
