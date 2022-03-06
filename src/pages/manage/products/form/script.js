@@ -12,7 +12,7 @@ export default {
 
     const { isRequired, validate } = useValidators();
 
-    const { categoriesDetail, renderCategoriesDetail } = useRender();
+    const { categoriesDetail, renderCategoriesDetail, getDetail } = useRender();
 
     const cForm = reactive({
       model: {
@@ -33,6 +33,7 @@ export default {
 
     onShow(async () => {
       await renderCategoriesDetail();
+      cForm.model = await getDetail();
     });
 
     const submit = async () => {

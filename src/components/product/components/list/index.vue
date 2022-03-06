@@ -40,7 +40,14 @@
             <div v-if="showNumber" class="fs24">x{{ item.number }}</div>
           </div>
           <template v-if="editable">
-            <div class="cc-action cc-action--edit c-icon-tag--edit fs24">
+            <div
+              class="cc-action cc-action--edit c-icon-tag--edit fs24"
+              @click.stop="
+                $wx.navigateTo(
+                  `/pages/manage/products/form/index?categoryId=${item.categoryId}&id=${item.id}`
+                )
+              "
+            >
               {{ $t("$.modify") }}
             </div>
             <div
