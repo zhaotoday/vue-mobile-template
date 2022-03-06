@@ -2,6 +2,9 @@ export const useConsts = () => {
   // 接口地址
   const ApiUrl = "http://localhost:10601";
 
+  // 登录页面地址
+  const LoginUrl = "/pages/user/account-login/index";
+
   // CDN 地址
   const CdnUrl = "http://localhost:10601/public/files";
 
@@ -10,6 +13,7 @@ export const useConsts = () => {
 
   return {
     ApiUrl,
+    LoginUrl,
     CdnUrl,
     StaticUrl,
   };
