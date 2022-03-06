@@ -69,6 +69,9 @@ export const en = {
     sendCaptcha: "Send captcha",
     sendCaptchaSuccess: "Send captcha send successfully",
     waitCaptcha: "Wait {seconds}s",
+    confirmDelete: "Confirm to delete?",
+    setSuccess: "Set successfully",
+    deleteSuccess: "Delete successfully",
   },
   components: {
     CART_SUBMIT: {

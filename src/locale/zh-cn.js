@@ -69,6 +69,9 @@ export const zhCn = {
     sendCaptcha: "获取验证码",
     sendCaptchaSuccess: "验证码获取成功",
     waitCaptcha: "{seconds}s 后获取",
+    confirmDelete: "确认删除吗？",
+    setSuccess: "设置成功",
+    deleteSuccess: "删除成功",
   },
   components: {
     CART_SUBMIT: {

@@ -10,7 +10,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { pt } = useI18n({ path: "user/addresses/list" });
+    const { $t, pt } = useI18n({ path: "user/addresses/list" });
 
     const { currentRoute } = useRoute();
 
@@ -67,21 +67,21 @@ export default {
         action: "setDefault",
       });
 
-      wx.showToast({ title: "设置成功" });
+      wx.showToast({ title: $t("tips.setSuccess") });
 
       await render();
     };
 
     const del = async ({ id }) => {
       const { confirm } = await wx.showModal({
-        title: "请确认",
-        content: "确认删除吗？",
+        title: $t("tips.pleaseConfirm"),
+        content: $t("tips.confirmDelete"),
       });
 
       if (confirm) {
         await addressesApi.delete({ id });
 
-        wx.showToast({ title: "删除成功" });
+        wx.showToast({ title: $t("tips.deleteSuccess") });
 
         await render();
       }
