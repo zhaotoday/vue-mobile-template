@@ -133,7 +133,7 @@ export const en = {
         $: {
           login: "Login",
           myInformation: "Modify personal information",
-          modifyPassword: "Modify login password",
+          modifyPassword: "Modify password",
           bindPhoneNumber: "Bind phone number",
           myOrders: "My Orders",
           myAddresses: "My Addresses",

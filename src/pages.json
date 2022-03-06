@@ -44,7 +44,7 @@
     {
       "path": "pages/user/info/index",
       "style": {
-        "navigationBarTitleText": "My Information"
+        "navigationBarTitleText": "My Personal Information"
       }
     },
     {
