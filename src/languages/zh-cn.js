@@ -34,7 +34,8 @@ export const zhCn = {
     money: "$",
     orderStatuses: {
       all: "全部",
-      toPay: "待付款",
+      delivering: "配送中",
+      finished: "已完成",
     },
   },
   inputs: {
@@ -131,6 +132,8 @@ export const zhCn = {
           myInformation: "我的资料",
           modifyPassword: "修改密码",
           bindPhoneNumber: "绑定手机号",
+          myOrders: "我的订单",
+          myAddresses: "我的地址",
           bindWx: "绑定微信",
         },
         tips: {

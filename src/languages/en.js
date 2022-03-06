@@ -34,7 +34,8 @@ export const en = {
     money: "$",
     orderStatuses: {
       all: "All",
-      toPay: "to Pay",
+      delivering: "Delivering",
+      finished: "Finished",
     },
   },
   inputs: {
@@ -131,6 +132,8 @@ export const en = {
           myInformation: "My information",
           modifyPassword: "Modify my password",
           bindPhoneNumber: "Bind phone number",
+          myOrders: "My Orders",
+          myAddresses: "My Addresses",
           bindWx: "Bind Wechat",
         },
         tips: {

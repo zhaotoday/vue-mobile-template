@@ -23,7 +23,7 @@ export default {
           value: "",
         },
         {
-          label: $t("$.orderStatuses.toPay"),
+          label: $t("$.orderStatuses.delivering"),
           value: "ToPay",
         },
         {

@@ -21,7 +21,11 @@
         </u-button>
       </template>
     </div>
-    <div class="b-entries u-pt30 u-pb30 u-mb24" :class="$bem.box.$">
+    <div
+      v-if="false"
+      class="b-entries u-pt30 u-pb30 u-mb24"
+      :class="$bem.box.$"
+    >
       <u-grid col="4" :border="false">
         <u-grid-item
           v-for="(item, index) in menus"
@@ -37,6 +41,34 @@
           </div>
         </u-grid-item>
       </u-grid>
+    </div>
+    <div class="u-mb24" :class="$bem.box.$">
+      <ul class="c-list bg-white fs28">
+        <li
+          class="c-list__item has-icon is-link"
+          @click="
+            navigateTo({
+              requireLogin: true,
+              url: '/pages/user/orders/list/index',
+            })
+          "
+        >
+          <i class="c-iconfont c-iconfont--order fs34 t-primary"></i>
+          {{ pt("$.myOrders") }}
+        </li>
+        <li
+          class="c-list__item has-icon is-link"
+          @click="
+            navigateTo({
+              requireLogin: true,
+              url: '/pages/user/addresses/list/index',
+            })
+          "
+        >
+          <i class="c-iconfont c-iconfont--address fs34 t-primary"></i>
+          {{ pt("$.myAddresses") }}
+        </li>
+      </ul>
     </div>
     <div :class="$bem.box.$">
       <ul class="c-list bg-white fs28">
