@@ -24,7 +24,7 @@
             "
           />
         </div>
-        <div v-if="!cForm.model.imageFileIds.length" class="c-form__error">
+        <div v-if="cForm.errors.imageFileIds" class="c-form__error">
           {{ cForm.errors.imageFileIds }}
         </div>
       </c-form-item>
