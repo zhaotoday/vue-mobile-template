@@ -33,6 +33,8 @@ export const en = {
     search: "Search",
     colon: ": ",
     money: "$",
+    noData: "No data",
+    emptyCart: "Shopping cart is empty",
     orderStatuses: {
       all: "All",
       delivering: "Delivering",

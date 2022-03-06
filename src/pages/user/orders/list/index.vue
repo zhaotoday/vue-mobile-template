@@ -51,6 +51,7 @@
       mode="data"
       icon="https://cdn.uviewui.com/uview/empty/data.png"
       margin-top="100rpx"
+      :text="$t('$.noData')"
     />
   </div>
 </template>

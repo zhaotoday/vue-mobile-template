@@ -33,6 +33,8 @@ export const zhCn = {
     search: "搜索",
     colon: "：",
     money: "$",
+    noData: "暂无数据",
+    emptyCart: "购物车为空",
     orderStatuses: {
       all: "全部",
       delivering: "配送中",

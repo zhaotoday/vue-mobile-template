@@ -11,6 +11,7 @@
       mode="car"
       icon="http://cdn.uviewui.com/uview/empty/data.png"
       margin-top="100rpx"
+      :text="$t('$.emptyCart')"
     />
     <gc-cart-submit @submit="$wx.navigateTo('/pages/pay/index')" />
   </div>
