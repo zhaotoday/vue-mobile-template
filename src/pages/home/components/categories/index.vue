@@ -10,7 +10,7 @@
           size="90rpx"
           :src="$helpers.getFileUrl({ id: item.iconFileId })"
         />
-        <div class="fs26 u-pt10 u-pb20">
+        <div class="fs26 u-pt10 u-pb20 u-lh1">
           {{ item.name }}
         </div>
       </u-grid-item>

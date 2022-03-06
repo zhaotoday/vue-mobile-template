@@ -27,8 +27,8 @@
             mode="aspectFill"
             :src="$helpers.getFileUrl({ id: item.imageFileIds[0] })"
           />
-          <div class="cc-list__name fs28">{{ item.name }}</div>
-          <div class="cc-list__price">
+          <div class="cc-list__name fs28 u-lh1">{{ item.name }}</div>
+          <div class="cc-list__price u-lh1">
             <span class="t-error fs26">
               {{ $t("$.money") }}{{ item.price }}
             </span>
