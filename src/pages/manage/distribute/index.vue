@@ -64,7 +64,12 @@
           >
             打电话
           </div>
-          <div class="c-tag h48 u-br8 bd-primary t-primary fs24">送达</div>
+          <div
+            class="c-tag h48 u-br8 bd-primary t-primary fs24"
+            @click="finish(item)"
+          >
+            送达
+          </div>
         </div>
       </li>
     </ul>
