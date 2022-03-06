@@ -39,6 +39,17 @@
             />
             <div v-if="showNumber" class="fs24">x{{ item.number }}</div>
           </div>
+          <template v-if="editable">
+            <div class="cc-action cc-action--edit c-icon-tag--edit fs24">
+              {{ $t("$.modify") }}
+            </div>
+            <div
+              class="cc-action cc-action--del c-icon-tag--del fs24"
+              @click.stop="del(item)"
+            >
+              {{ $t("$.del") }}
+            </div>
+          </template>
         </div>
       </u-grid-item>
     </u-grid>

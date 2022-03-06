@@ -4,9 +4,12 @@ import { useValidators } from "vue-validation";
 import { onShow } from "uni-composition-api";
 import { useRender } from "@/pages/manage/products/form/composables/use-render";
 import { productsApi } from "@/apis/client/products";
+import { useRoute } from "vue-mobile/composables/use-route";
 
 export default {
   setup() {
+    const { currentRoute } = useRoute();
+
     const { isRequired, validate } = useValidators();
 
     const { categoriesDetail, renderCategoriesDetail } = useRender();
@@ -36,7 +39,12 @@ export default {
       await validate(cForm, null, async (errors, model) => {
         if (errors) return;
 
-        await productsApi.post({ body: model });
+        await productsApi.post({
+          body: {
+            ...model,
+            categoryId: currentRoute.query.id,
+          },
+        });
 
         wx.showToast({ title: "新增成功" });
       });

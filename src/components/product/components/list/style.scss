@@ -53,6 +53,18 @@
     }
   }
 
+  @include cc(action) {
+    @include position--absolute(null, null, px2rpx(22px));
+
+    @include m(edit) {
+      right: px2rpx(150px);
+    }
+
+    @include m(del) {
+      right: px2rpx(30px);
+    }
+  }
+
   @include m(col1) {
     @include cc(list) {
       @include e(box) {

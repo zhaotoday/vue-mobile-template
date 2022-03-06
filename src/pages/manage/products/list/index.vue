@@ -32,6 +32,7 @@
         :items="productsList.items"
         :col="1"
         :edit-number="false"
+        editable
       />
       <u-empty
         v-if="loaded && !productsList.items.length"

@@ -12,6 +12,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    editable: {
+      type: Boolean,
+      default: false,
+    },
     editNumber: {
       type: Boolean,
       default: true,
