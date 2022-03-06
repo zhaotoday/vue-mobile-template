@@ -1,4 +1,6 @@
-import products from "@/mock/products.json";
+import { ref } from "@vue/composition-api";
+import { ordersApi } from "@/apis/client/orders";
+import { onShow } from "uni-composition-api";
 
 export default {
   setup() {
@@ -16,9 +18,23 @@ export default {
       ],
     };
 
+    const ordersList = ref({
+      items: [],
+    });
+
+    onShow(async () => {
+      await renderOrdersList();
+    });
+
+    const renderOrdersList = async () => {
+      ordersList.value = ordersApi.get({
+        query: {},
+      });
+    };
+
     return {
-      products,
       cTabs,
+      ordersList,
     };
   },
 };
