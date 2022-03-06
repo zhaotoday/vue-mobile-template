@@ -9,13 +9,13 @@
         "devServer" : {
             "port" : 8081
         },
-        "sdkConfigs": {
-            "maps": {
-                "qqmap": {
-                    "key": "LWTBZ-MLKWU-QCBVQ-22JUJ-B4FRK-Z5FPN"
-              },
-                "google": {
-                    "key": ""
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "LWTBZ-MLKWU-QCBVQ-22JUJ-B4FRK-Z5FPN"
+                },
+                "google" : {
+                    "key" : ""
                 }
             }
         }
