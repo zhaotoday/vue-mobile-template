@@ -13,7 +13,7 @@ export default {
 
     const cForm = reactive({
       model: {
-        imageFileIds: [],
+        imageFileIds: [43],
       },
       rules: {
         name: [isRequired({ label: "商品名称" })],

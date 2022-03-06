@@ -17,6 +17,15 @@ export default {
 
     const fileList = ref([]);
 
+    const createFile = (id) => {
+      return {
+        id,
+        status: "success",
+        message: "",
+        url: useHelpers().getImageUrl({ id }),
+      };
+    };
+
     watch(
       () => props.value,
       async (newVal) => {
@@ -26,15 +35,6 @@ export default {
       },
       { immediate: true, deep: true }
     );
-
-    const createFile = (id) => {
-      return {
-        id,
-        status: "success",
-        message: "",
-        url: useHelpers().getImageUrl({ id }),
-      };
-    };
 
     const onAfterRead = async (event) => {
       const { statusCode, data } = await wx.uploadFile({
