@@ -25,6 +25,7 @@ export default {
       default: false,
     },
   },
+  emits: ["del"],
   setup() {
     const { selectProduct } = useCart();
 

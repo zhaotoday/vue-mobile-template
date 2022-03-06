@@ -52,7 +52,7 @@
             </div>
             <div
               class="cc-action cc-action--del c-icon-tag--del fs24"
-              @click.stop="del(item)"
+              @click.stop="$emit('del', item)"
             >
               删除
             </div>

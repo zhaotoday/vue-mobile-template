@@ -1,6 +1,9 @@
 import { onLoad, onShow } from "uni-composition-api";
 import { usePageData } from "@/composables/use-page-data";
 import { useRender } from "@/pages/categories/composables/use-render";
+import wx from "wx-bridge";
+import { addressesApi } from "@/apis/client/addresses";
+import { productsApi } from "@/apis/client/products";
 
 export default {
   setup() {
@@ -48,6 +51,23 @@ export default {
       });
     };
 
+    const del = async ({ id }) => {
+      const { confirm } = await wx.showModal({
+        title: "请确认",
+        content: "确认删除吗？",
+        cancelText: "取消",
+        confirmText: "删除",
+      });
+
+      if (confirm) {
+        await productsApi.delete({ id });
+
+        wx.showToast({ title: "删除成功" });
+
+        await renderProductsList();
+      }
+    };
+
     return {
       loaded,
       cTab,
@@ -55,6 +75,7 @@ export default {
       productsList,
       changeCategory,
       redirectToAddProduct,
+      del,
     };
   },
 };
