@@ -24,9 +24,9 @@
     <div class="t-g7 fs28 u-p20">
       <div
         class="b-register"
-        @click="$wx.navigateTo('/pages/user/register/index')"
+        @click="$wx.navigateTo('/pages/user/account-register/index')"
       >
-        {{ pt("$.register") }}
+        {{ $t("$.register") }}
       </div>
       <div
         class="b-password"

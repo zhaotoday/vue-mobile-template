@@ -15,7 +15,7 @@
           custom-class="b-info__extra"
           custom-style="width: 130rpx"
           size="small"
-          @click="$wx.navigateTo('/pages/user/mp-login/index')"
+          @click="$wx.navigateTo($consts.LoginUrl)"
         >
           {{ pt("$.login") }}
         </u-button>
