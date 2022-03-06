@@ -12,7 +12,7 @@
     {
       "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "某某商城",
+        "navigationBarTitleText": "My Shop",
         "navigationBarTextStyle": "white",
         "navigationBarBackgroundColor": "#5ac725"
       }
@@ -20,13 +20,13 @@
     {
       "path": "pages/categories/index",
       "style": {
-        "navigationBarTitleText": "分类"
+        "navigationBarTitleText": "Categories"
       }
     },
     {
       "path": "pages/cart/index",
       "style": {
-        "navigationBarTitleText": "购物车"
+        "navigationBarTitleText": "Cart"
       }
     },
     {
@@ -38,36 +38,25 @@
     {
       "path": "pages/user/home/index",
       "style": {
-        "navigationBarTitleText": "我的"
+        "navigationBarTitleText": "My"
       }
     },
     {
       "path": "pages/user/info/index",
       "style": {
-        "navigationBarTitleText": "我的资料"
+        "navigationBarTitleText": "My Information"
       }
     },
     {
       "path": "pages/user/account-login/index",
       "style": {
-        "navigationBarTitleText": "登录",
-        "app-plus": {
-          "titleNView": {
-            "buttons": [
-              {
-                "text": "注册",
-                "float": "right",
-                "fontSize": "16"
-              }
-            ]
-          }
-        }
+        "navigationBarTitleText": "Login"
       }
     },
     {
       "path": "pages/user/account-register/index",
       "style": {
-        "navigationBarTitleText": "注册"
+        "navigationBarTitleText": "Register"
       }
     },
     {
@@ -79,19 +68,19 @@
     {
       "path": "pages/user/password/index",
       "style": {
-        "navigationBarTitleText": "重置密码"
+        "navigationBarTitleText": "Reset Password"
       }
     },
     {
       "path": "pages/user/phone-number/index",
       "style": {
-        "navigationBarTitleText": "绑定手机号"
+        "navigationBarTitleText": "Bind Phone Number"
       }
     },
     {
       "path": "pages/products/search/index",
       "style": {
-        "navigationBarTitleText": "搜索"
+        "navigationBarTitleText": "Search"
       }
     },
     {
@@ -109,37 +98,37 @@
     {
       "path": "pages/products/list/index",
       "style": {
-        "navigationBarTitleText": "商品列表"
+        "navigationBarTitleText": "Goods List"
       }
     },
     {
       "path": "pages/products/detail/index",
       "style": {
-        "navigationBarTitleText": "商品详情"
+        "navigationBarTitleText": "Goods Details"
       }
     },
     {
       "path": "pages/pay/index",
       "style": {
-        "navigationBarTitleText": "结算"
+        "navigationBarTitleText": "Checkout"
       }
     },
     {
       "path": "pages/pay/result/index",
       "style": {
-        "navigationBarTitleText": "下单成功"
+        "navigationBarTitleText": "Place an Order Successfully"
       }
     },
     {
       "path": "pages/user/orders/list/index",
       "style": {
-        "navigationBarTitleText": "我的订单"
+        "navigationBarTitleText": "My Orders"
       }
     },
     {
       "path": "pages/user/orders/detail/index",
       "style": {
-        "navigationBarTitleText": "订单详情"
+        "navigationBarTitleText": "Order Details"
       }
     },
     {
@@ -163,7 +152,7 @@
     {
       "path": "pages/user/collections/index",
       "style": {
-        "navigationBarTitleText": "我的收藏"
+        "navigationBarTitleText": "My Stars"
       }
     }
   ],
@@ -183,25 +172,25 @@
         "pagePath": "pages/home/index",
         "iconPath": "static/tab-bar/home.png",
         "selectedIconPath": "static/tab-bar/home-selected.png",
-        "text": "首页"
+        "text": "Home Page"
       },
       {
         "pagePath": "pages/categories/index",
         "iconPath": "static/tab-bar/category.png",
         "selectedIconPath": "static/tab-bar/category-selected.png",
-        "text": "分类"
+        "text": "Categories"
       },
       {
         "pagePath": "pages/cart/index",
         "iconPath": "static/tab-bar/cart.png",
         "selectedIconPath": "static/tab-bar/cart-selected.png",
-        "text": "购物车"
+        "text": "Cart"
       },
       {
         "pagePath": "pages/user/home/index",
         "iconPath": "static/tab-bar/user.png",
         "selectedIconPath": "static/tab-bar/user-selected.png",
-        "text": "我的"
+        "text": "My"
       }
     ]
   }

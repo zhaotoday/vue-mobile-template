@@ -24,9 +24,9 @@
     <div class="t-g7 fs28 u-p20">
       <div
         class="b-register"
-        @click="$wx.navigateTo('/pages/user/captcha-login/index')"
+        @click="$wx.navigateTo('/pages/user/register/index')"
       >
-        {{ pt("$.captchaLogin") }}
+        {{ pt("$.register") }}
       </div>
       <div
         class="b-password"
