@@ -30,7 +30,7 @@ export default {
         ],
         password: [
           isRequired({ message: $t("inputs.password") }),
-          isPassword(),
+          isPassword({ message: $t("inputs.passwordFormatError") }),
         ],
         confirmPassword: [
           isRequired({ message: $t("inputs.confirmPassword") }),

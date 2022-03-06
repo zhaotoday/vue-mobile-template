@@ -53,7 +53,7 @@ export const en = {
     passwordTip: "Enter your password",
     captcha: "Enter captcha",
     confirmPasswordNotEqualPassword: "Different from password",
-    passwordFormatError: "Password format error",
+    passwordFormatError: "Must be 6-32 letters and numbers",
     phoneNumberFormatError: "Phone number format error",
     captchaFormatError: "Captcha format error",
   },
