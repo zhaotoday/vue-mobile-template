@@ -4,7 +4,7 @@ import UniCompositionAPI from "uni-composition-api";
 import VueI18n from "vue-i18n";
 import uView from "uview-ui";
 import App from "@/App";
-import { languages } from "@/languages";
+import { locale } from "@/locale";
 import { globalPlugin } from "@/utils/global-plugin";
 import { router, RouterMount } from "./router";
 
@@ -24,7 +24,7 @@ App.mpType = "app";
 
 const i18n = new VueI18n({
   locale: "en",
-  messages: languages,
+  messages: locale,
 });
 
 const app = new Vue({
