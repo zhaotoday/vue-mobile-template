@@ -30,6 +30,7 @@ export const en = {
     cart: "Cart",
     addToCart: "Add to cart",
     collect: "Star",
+    search: "Search",
     colon: ": ",
     money: "$",
     orderStatuses: {

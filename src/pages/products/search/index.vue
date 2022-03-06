@@ -6,6 +6,8 @@
         :placeholder="$t('inputs.productName')"
         focus
         height="60rpx"
+        :action-text="$t('$.search')"
+        :action-style="{ width: '100rpx' }"
         @search="search"
       />
     </div>

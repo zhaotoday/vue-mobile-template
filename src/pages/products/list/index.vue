@@ -5,6 +5,8 @@
         ref="search"
         :placeholder="$t('inputs.productName')"
         height="60rpx"
+        :action-text="$t('$.search')"
+        :action-style="{ width: '100rpx' }"
         v-model="cSearch.model.keywords"
         @search="search"
       />
