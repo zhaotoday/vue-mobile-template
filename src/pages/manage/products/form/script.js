@@ -5,19 +5,24 @@ import { onShow } from "uni-composition-api";
 import { useRender } from "@/pages/manage/products/form/composables/use-render";
 import { productsApi } from "@/apis/client/products";
 import { useRoute } from "vue-mobile/composables/use-route";
+import { useHelpers } from "@/composables/use-helpers";
 
 export default {
   setup() {
     const { currentRoute } = useRoute();
 
+    const { deepCopy } = useHelpers();
+
     const { isRequired, validate } = useValidators();
 
     const { categoriesDetail, renderCategoriesDetail, getDetail } = useRender();
 
+    const initialModel = {
+      imageFileIds: [],
+    };
+
     const cForm = reactive({
-      model: {
-        imageFileIds: [],
-      },
+      model: deepCopy(initialModel),
       rules: {
         name: [isRequired({ label: "商品名称" })],
         imageFileIds: [
@@ -37,17 +42,24 @@ export default {
     });
 
     const submit = async () => {
-      await validate(cForm, null, async (errors, model) => {
+      await validate(cForm, null, async (errors, { id, ...restModel }) => {
         if (errors) return;
 
-        await productsApi.post({
+        await productsApi[id ? "put" : "post"]({
+          id: id,
           body: {
-            ...model,
-            categoryId: currentRoute.query.id,
+            ...restModel,
+            categoryId: currentRoute.query.categoryId,
           },
         });
 
-        wx.showToast({ title: "新增成功" });
+        if (id) {
+          wx.showToast({ title: "修改成功" });
+          wx.navigateBack();
+        } else {
+          wx.showToast({ title: "新增成功" });
+          cForm.model = deepCopy(initialModel);
+        }
       });
     };
 

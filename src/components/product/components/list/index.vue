@@ -48,13 +48,13 @@
                 )
               "
             >
-              {{ $t("$.modify") }}
+              修改
             </div>
             <div
               class="cc-action cc-action--del c-icon-tag--del fs24"
               @click.stop="del(item)"
             >
-              {{ $t("$.del") }}
+              删除
             </div>
           </template>
         </div>

@@ -30,7 +30,6 @@
       </c-form-item>
       <c-form-item label="商品价格">
         <c-form-input
-          type="number"
           placeholder="请输入商品价格"
           v-model.trim="cForm.model.price"
           :error="cForm.errors.price"
@@ -44,7 +43,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      新增
+      {{ cForm.model.id ? "修改" : "新增" }}
     </u-button>
   </div>
 </template>

@@ -31,6 +31,8 @@ export default {
       async (newVal) => {
         if (newVal && newVal.length) {
           fileList.value = newVal.map((id) => createFile(id));
+        } else {
+          fileList.value = [];
         }
       },
       { immediate: true, deep: true }
