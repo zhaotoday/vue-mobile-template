@@ -31,7 +31,12 @@ export default {
             type: "array",
           },
         ],
-        price: [isRequired({ label: "商品价格" })],
+        price: [
+          {
+            ...isRequired({ label: "商品价格" }),
+            type: "number",
+          },
+        ],
       },
       errors: {},
     });

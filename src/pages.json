@@ -12,7 +12,7 @@
     {
       "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "My Shop",
+        "navigationBarTitleText": "Sol Summer Shop",
         "navigationBarTextStyle": "white",
         "navigationBarBackgroundColor": "#5ac725"
       }
