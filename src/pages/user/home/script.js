@@ -3,6 +3,7 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { onShow } from "uni-composition-api";
 import wx from "wx-bridge";
 import { useI18n } from "@/composables/use-i18n";
+import { useCart } from "@/composables/use-cart";
 
 export default {
   setup() {
@@ -35,6 +36,8 @@ export default {
     ];
 
     onShow(async () => {
+      useCart().renderProductsNumber();
+
       if (loggedIn()) await getUserInfo();
     });
 

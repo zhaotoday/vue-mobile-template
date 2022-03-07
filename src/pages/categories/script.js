@@ -1,6 +1,7 @@
 import { onShow } from "uni-composition-api";
 import { usePageData } from "@/composables/use-page-data";
 import { useRender } from "./composables/use-render";
+import { useCart } from "@/composables/use-cart";
 
 export default {
   setup() {
@@ -16,6 +17,8 @@ export default {
     } = useRender();
 
     onShow(async () => {
+      useCart().renderProductsNumber();
+
       await renderCategoriesList();
 
       const { currentIndex } = getPageData({ page: getCurrentPage() });

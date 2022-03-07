@@ -42,7 +42,7 @@ export const useCart = () => {
 
   const clearProducts = () => {
     _clearProducts();
-    wx.removeTabBarBadge({ index: 2 });
+    renderProductsNumber();
   };
 
   return {
@@ -50,10 +50,10 @@ export const useCart = () => {
     selectedProducts,
     totalPrice,
     allProductsSelected,
-    updateProductNumber,
     selectProduct,
     selectAllProducts,
-    clearProducts,
     renderProductsNumber,
+    updateProductNumber,
+    clearProducts,
   };
 };

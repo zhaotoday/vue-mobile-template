@@ -1,6 +1,7 @@
 import Categories from "./components/categories";
 import { onShow } from "uni-composition-api";
 import { useRender } from "./composables/use-render";
+import { useCart } from "@/composables/use-cart";
 
 export default {
   components: {
@@ -17,6 +18,8 @@ export default {
     } = useRender();
 
     onShow(async () => {
+      useCart().renderProductsNumber();
+
       await renderAdsList();
       await renderCategoriesList();
       await renderProductsList();
