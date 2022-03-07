@@ -81,7 +81,7 @@ export const en = {
     },
   },
   pages: {
-    PAY: {
+    CHECKOUT: {
       inputs: {
         selectAddress: "Select your address",
       },

@@ -81,7 +81,7 @@ export const zhCn = {
     },
   },
   pages: {
-    PAY: {
+    CHECKOUT: {
       inputs: {
         selectAddress: "请选择收获地址",
       },
