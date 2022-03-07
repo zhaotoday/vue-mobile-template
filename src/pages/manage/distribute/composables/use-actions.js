@@ -33,7 +33,7 @@ export const useActions = ({ renderOrdersList = () => {} }) => {
   const finish = async ({ id }) => {
     const { confirm } = await wx.showModal({
       title: "请确认",
-      content: "确认该已送达订单吗？",
+      content: "确认已送达该订单吗？",
       cancelText: "取消",
       confirmText: "送达",
     });

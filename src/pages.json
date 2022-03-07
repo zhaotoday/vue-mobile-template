@@ -146,7 +146,7 @@
     {
       "path": "pages/manage/products/form/index",
       "style": {
-        "navigationBarTitleText": "新增商品"
+        "navigationBarTitleText": ""
       }
     },
     {
