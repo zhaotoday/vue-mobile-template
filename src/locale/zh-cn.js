@@ -72,6 +72,7 @@ export const zhCn = {
     confirmDelete: "确认删除吗？",
     setSuccess: "设置成功",
     deleteSuccess: "删除成功",
+    deletedAddress: "位置不存在（收货地址可能被删除）",
   },
   components: {
     CART_SUBMIT: {

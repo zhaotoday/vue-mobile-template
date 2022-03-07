@@ -11,7 +11,7 @@
       <template v-if="selectedAddress && selectedAddress.id">
         <div class="c-address__detail">
           <h2 class="c-address__title fs28">
-            {{ selectedAddress.location.name }}
+            {{ selectedAddress.location.name + selectedAddress.room }}
           </h2>
           <p class="c-address__desc t-g7 fs24 u-pt16">
             {{ selectedAddress.name }} {{ selectedAddress.phoneNumber }}

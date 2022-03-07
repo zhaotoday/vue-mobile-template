@@ -1,5 +1,5 @@
 import { reactive, ref } from "@vue/composition-api";
-import { onLoad, onShow } from "uni-composition-api";
+import { onShow } from "uni-composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { useProducts } from "@/composables/use-products";
 import { addressesApi } from "@/apis/client/addresses";
@@ -7,6 +7,7 @@ import { usePageData } from "@/composables/use-page-data";
 import { useCart } from "@/composables/use-cart";
 import { useI18n } from "@/composables/use-i18n";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
+import wx from "wx-bridge";
 
 export default {
   setup() {
@@ -28,42 +29,45 @@ export default {
       },
     });
 
-    onLoad(async () => {
-      await selectDefaultAddress();
-    });
-
     onShow(async () => {
-      selectedAddress.value = getPageData({
-        page: "/pages/user/addresses/list/index",
-      })["selectedAddress"];
+      await selectAddress();
     });
 
-    const selectDefaultAddress = async () => {
-      const { items } = await addressesApi.get({
-        query: {
-          where: {
-            default: { $eq: 1 },
-          },
-        },
-      });
+    const selectAddress = async () => {
+      const page = "/pages/user/addresses/list/index";
+      const lastSelectedAddress = getPageData({ page })["selectedAddress"];
 
-      if (items.length) {
-        selectedAddress.value = items[0];
+      if (lastSelectedAddress) {
+        selectedAddress.value = lastSelectedAddress;
+      } else {
+        const { items } = await addressesApi.get({
+          query: {
+            where: { default: { $eq: 1 } },
+          },
+        });
+
+        if (items.length) {
+          selectedAddress.value = items[0];
+        }
       }
     };
 
     const submit = async () => {
-      await ordersApi.post({
-        body: {
-          products: selectedProducts.value,
-          addressId: selectedAddress.value.id,
-          remark: cForm.model.remark,
-        },
-      });
+      if (selectedAddress.value.id) {
+        await ordersApi.post({
+          body: {
+            products: selectedProducts.value,
+            addressId: selectedAddress.value.id,
+            remark: cForm.model.remark,
+          },
+        });
 
-      clearProducts();
+        clearProducts();
 
-      await wx.redirectTo({ url: "/pages/checkout/result/index" });
+        await wx.redirectTo({ url: "/pages/checkout/result/index" });
+      } else {
+        await wx.showToast({ title: pt("inputs.selectAddress") });
+      }
     };
 
     return {

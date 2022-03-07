@@ -66,6 +66,12 @@
           </div>
           <div
             class="c-tag h48 u-br8 bd-primary t-primary fs24"
+            @click="distribute(item)"
+          >
+            开始配送
+          </div>
+          <div
+            class="c-tag h48 u-br8 bd-primary t-primary fs24"
             @click="finish(item)"
           >
             送达

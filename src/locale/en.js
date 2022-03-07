@@ -72,6 +72,7 @@ export const en = {
     confirmDelete: "Confirm to delete?",
     setSuccess: "Set successfully",
     deleteSuccess: "Delete successfully",
+    deletedAddress: "Your address may be deleted",
   },
   components: {
     CART_SUBMIT: {

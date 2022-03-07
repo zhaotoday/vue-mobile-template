@@ -2,7 +2,7 @@
   <div class="p-user-orders-detail u-pt24 u-pb24">
     <c-form custom-class="u-mb24">
       <c-form-item :label="pt('_.$.orderNo')">
-        <div class="c-form__input">12456461132</div>
+        <div class="c-form__input">{{ detail.no }}</div>
       </c-form-item>
       <c-form-item :label="pt('_.$.orderTime')">
         <div class="c-form__input">{{ $time.getTime(detail.createdAt) }}</div>
@@ -22,7 +22,12 @@
         </div>
       </c-form-item>
     </c-form>
-    <div v-if="detail.address" class="c-address u-mb24" :class="$bem.box.$">
+    <div
+      v-if="detail.address"
+      class="c-address u-mb24"
+      :class="$bem.box.$"
+      @click="openLocation(detail.address)"
+    >
       <i
         class="c-address__icon c-iconfont c-iconfont--address fs44 t-primary"
       ></i>
