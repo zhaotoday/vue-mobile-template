@@ -3,6 +3,7 @@ import { keyMirror } from "jt-helpers";
 const types = keyMirror({
   SetPageData: null,
   RemovePageData: null,
+  ClearPageData: null,
 });
 
 const state = {
@@ -16,6 +17,9 @@ const mutations = {
   [types.RemovePageData](state, { page }) {
     delete state.pageData[page];
   },
+  [types.ClearPageData](state) {
+    state.pageData = {};
+  },
 };
 
 const actions = {
@@ -26,6 +30,10 @@ const actions = {
   removePageData({ commit }, { page }) {
     commit(types.RemovePageData, { page });
     return { page };
+  },
+  clearPageData({ commit }) {
+    commit(types.ClearPageData);
+    return {};
   },
 };
 

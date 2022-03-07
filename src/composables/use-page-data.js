@@ -4,9 +4,10 @@ import { createNamespacedHelpers } from "vuex-composition-helpers";
 export const usePageData = () => {
   const { useState, useActions } = createNamespacedHelpers(store, "pageData");
   const { pageData } = useState(["pageData"]);
-  const { setPageData, removePageData } = useActions([
+  const { setPageData, removePageData, clearPageData } = useActions([
     "setPageData",
     "removePageData",
+    "clearPageData",
   ]);
 
   const getPageData = ({ page }) => {
@@ -24,5 +25,6 @@ export const usePageData = () => {
     getPageData,
     removePageData,
     getCurrentPage,
+    clearPageData,
   };
 };
