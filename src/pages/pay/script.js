@@ -55,11 +55,9 @@ export default {
     const submit = async () => {
       await ordersApi.post({
         body: {
-          userId: user.value.id,
           products: selectedProducts.value,
           addressId: selectedAddress.value.id,
           remark: cForm.model.remark,
-          status: "ToPay",
         },
       });
 
