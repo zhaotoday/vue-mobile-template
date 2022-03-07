@@ -8,7 +8,7 @@
   >
     <div slot="minus">
       <div v-if="value" class="cc-number__minus">
-        <u-icon name="minus" size="24rpx" color="#5ac725" />
+        <u-icon name="minus" size="24rpx" :color="iconColor || '#5ac725'" />
       </div>
     </div>
     <div slot="input">

@@ -11,8 +11,13 @@
         {{ selectedProducts.length }}
       </div>
     </div>
-    <div class="cc-submit__button bg-primary t-white fs28">
-      {{ $t("$.addToCart") }}
+    <div class="cc-submit__button bg-primary t-white fs28" @click="addToCart">
+      <template v-if="addedToCart">
+        <gc-product-number :product="product" icon-color="white" />
+      </template>
+      <template v-else>
+        {{ $t("$.addToCart") }}
+      </template>
     </div>
   </div>
 </template>

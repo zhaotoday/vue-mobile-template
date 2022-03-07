@@ -1,5 +1,6 @@
 import { useCart } from "@/composables/use-cart";
 import Collection from "./components/collection/index.vue";
+import { computed } from "@vue/composition-api";
 
 export default {
   components: {
@@ -11,11 +12,21 @@ export default {
       default: () => ({}),
     },
   },
-  setup() {
-    const { selectedProducts } = useCart();
+  setup(props) {
+    const { products, selectedProducts, updateProductNumber } = useCart();
+
+    const addedToCart = computed(() =>
+      products.value.map(({ id }) => id).includes(props.product.id)
+    );
+
+    const addToCart = () => {
+      updateProductNumber({ product: props.product, number: 1 });
+    };
 
     return {
       selectedProducts,
+      addedToCart,
+      addToCart,
     };
   },
 };

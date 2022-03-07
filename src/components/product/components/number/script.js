@@ -11,6 +11,10 @@ export default {
       type: Object,
       default: () => ({}),
     },
+    iconColor: {
+      type: String,
+      default: "",
+    },
   },
   setup(props) {
     const { products, updateProductNumber, renderProductsNumber } = useCart();
