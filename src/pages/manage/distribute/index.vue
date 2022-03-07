@@ -5,9 +5,10 @@
         :list="OrderStatus.map(({ label }) => ({ name: label }))"
         item-style="width: 25%; height: 80rpx; box-sizing: border-box"
         line-color="#5ac725"
+        @change="changeTab"
       />
     </div>
-    <ul class="c-orders">
+    <ul v-if="ordersList.items.length" class="c-orders">
       <li
         v-for="item in ordersList.items"
         :key="item.id"
@@ -39,7 +40,6 @@
               </div>
             </div>
             <div class="b-money fs26">
-              {{ $t("$.paid") }}
               <span class="t-error">￥{{ getTotalPrice(item.products) }}</span>
             </div>
           </div>
@@ -72,6 +72,13 @@
         </div>
       </li>
     </ul>
+    <u-empty
+      v-if="loaded && !ordersList.items.length"
+      mode="data"
+      icon="https://cdn.uviewui.com/uview/empty/data.png"
+      margin-top="100rpx"
+      :text="$t('$.noData')"
+    />
   </div>
 </template>
 
