@@ -10,7 +10,7 @@ page {
   height: 100%;
 
   @include b(categories) {
-    width: px2rpx(180px);
+    width: px2rpx(200px);
     border-top: px2rpx(2px) solid map-get($colors, g1);
     border-bottom: px2rpx(2px) solid map-get($colors, g1);
     background-color: map-get($colors, g1);
@@ -40,7 +40,7 @@ page {
   }
 
   @include b(products) {
-    @include position--absolute(px2rpx(112px), null, null, px2rpx(180px));
+    @include position--absolute(px2rpx(112px), null, null, px2rpx(200px));
 
     width: calc(100% - 180rpx);
     height: calc(100% - 112rpx);
