@@ -3,30 +3,14 @@ import { ordersApi } from "@/apis/client/orders";
 import { onShow } from "uni-composition-api";
 import wx from "wx-bridge";
 import { useProducts } from "@/composables/use-products";
+import { OrderStatus } from "../utils/enums/order-status";
 
 export default {
   setup() {
     const { getTotalPrice } = useProducts();
 
     const cTabs = {
-      items: [
-        {
-          name: "全部",
-          value: "",
-        },
-        {
-          name: "待配送",
-          value: "ToDistribute",
-        },
-        {
-          name: "配送中",
-          value: "Distributing",
-        },
-        {
-          name: "已完成",
-          value: "Finished",
-        },
-      ],
+      current: 1,
     };
 
     const ordersList = ref({
@@ -49,30 +33,38 @@ export default {
     };
 
     const openLocation = async (address) => {
-      if (address) {
-        const { latitude, longitude } = address.location;
-        await wx.openLocation({ latitude, longitude });
-      } else {
-        wx.showToast({ title: "位置不存在（地址可能被删除）" });
-      }
+      const { latitude, longitude } = address.location;
+      await wx.openLocation({ latitude, longitude });
     };
 
     const makePhoneCall = async (address) => {
-      if (address) {
-        wx.makePhoneCall({
-          phoneNumber: address.phoneNumber,
-        });
-      } else {
-        wx.showToast({ title: "收货地址已被删除，无法拨打电话" });
-      }
+      wx.makePhoneCall({
+        phoneNumber: address.phoneNumber,
+      });
     };
 
-    const startToDistribute = () => {};
+    const startToDistribute = async ({ id }) => {
+      const { confirm } = await wx.showModal({
+        title: "请确认",
+        content: "确认开始配送该订单？",
+        cancelText: "取消",
+        confirmText: "送达",
+      });
+
+      if (confirm) {
+        await ordersApi.post({
+          id,
+          action: "changeState",
+          body: { status: "Distributing" },
+        });
+        wx.showToast({ title: "设置成功" });
+      }
+    };
 
     const finish = async ({ id }) => {
       const { confirm } = await wx.showModal({
         title: "请确认",
-        content: "确认设置该订单为已送达吗？",
+        content: "确认该已送达订单吗？",
         cancelText: "取消",
         confirmText: "送达",
       });
@@ -88,6 +80,7 @@ export default {
     };
 
     return {
+      OrderStatus,
       cTabs,
       ordersList,
       getTotalPrice,

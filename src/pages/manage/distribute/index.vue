@@ -2,7 +2,7 @@
   <div class="p-user-distribute">
     <div class="bg-white u-pb10 u-mb24">
       <u-tabs
-        :list="cTabs.items"
+        :list="OrderStatus.map(({ label }) => ({ name: label }))"
         item-style="width: 25%; height: 80rpx; box-sizing: border-box"
         line-color="#5ac725"
       />
@@ -65,7 +65,7 @@
           </div>
           <div
             class="c-tag h48 u-br8 bd-primary t-primary fs24"
-            @click="finish(item)"
+            @click.stop="finish(item)"
           >
             送达
           </div>
