@@ -18,9 +18,10 @@
       <div class="b-info__name fs32 u-lh1">{{ detail.name }}</div>
       <div class="b-info__others u-lh1">
         <span class="t-error fs32">{{ $t("$.money") }}{{ detail.price }}</span>
-        <span class="t-g7 u-lt fs26 u-ml10">200.0</span>
+        <span v-if="false" class="t-g7 u-lt fs26 u-ml10">200.0</span>
         <div class="b-info__right t-g7 fs26 u-lh1">
-          {{ $t("$.stocks") }}：1000 &nbsp;&nbsp; {{ $t("$.sales") }}：1000
+          {{ $t("$.stocks") + $t("$.colon") + detail.stock }} &nbsp;&nbsp;
+          {{ $t("$.sales") + $t("$.colon") + detail.sales }}
         </div>
       </div>
     </div>

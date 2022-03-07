@@ -14,10 +14,10 @@ export const useCart = () => {
     "allProductsSelected",
   ]);
   const {
-    updateProductNumber,
+    updateProductNumber: _updateProductNumber,
     selectProduct,
     selectAllProducts,
-    clearProducts: $clearProducts,
+    clearProducts: _clearProducts,
   } = useActions([
     "updateProductNumber",
     "selectProduct",
@@ -35,8 +35,13 @@ export const useCart = () => {
     }
   };
 
+  const updateProductNumber = (options) => {
+    _updateProductNumber(options);
+    renderProductsNumber();
+  };
+
   const clearProducts = () => {
-    $clearProducts();
+    _clearProducts();
     wx.removeTabBarBadge({ index: 2 });
   };
 
