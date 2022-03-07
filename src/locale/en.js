@@ -91,7 +91,7 @@ export const en = {
           backHome: "Back to home page",
         },
         tips: {
-          paySuccess: "Place an order successfully",
+          paySuccess: "Place order successfully",
         },
       },
     },

@@ -116,7 +116,7 @@
     {
       "path": "pages/pay/result/index",
       "style": {
-        "navigationBarTitleText": "Place an Order Successfully"
+        "navigationBarTitleText": "Place Order Successfully"
       }
     },
     {
