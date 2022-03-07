@@ -126,7 +126,7 @@
             })
           "
         >
-          <i class="c-iconfont c-iconfont--info fs34 t-primary"></i>
+          <i class="c-iconfont c-iconfont--product fs34 t-primary"></i>
           商品管理
         </li>
         <li
@@ -138,7 +138,7 @@
             })
           "
         >
-          <i class="c-iconfont c-iconfont--info fs34 t-primary"></i>
+          <i class="c-iconfont c-iconfont--distribute fs34 t-primary"></i>
           配送管理
         </li>
       </ul>
