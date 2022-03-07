@@ -124,7 +124,7 @@ export const en = {
           inputs: {
             consignee: "Name",
             byWhichPhoneWeContactYou: "Your phone number",
-            housingEstate: "House estate or office building",
+            housingEstate: "Housing estate/office building",
             houseNo: "Your house number",
           },
         },

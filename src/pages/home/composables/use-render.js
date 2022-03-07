@@ -28,7 +28,7 @@ export const useRender = () => {
 
   const renderProductsList = async () => {
     productsList.value = await publicProductsApi.get({
-      query: { limit: 4 },
+      query: { limit: 50 },
     });
   };
 
