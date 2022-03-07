@@ -19,7 +19,7 @@ export const en = {
     logout: "Logout",
     avatar: "Avatar",
     status: "Status",
-    productInfo: "Product Information",
+    productInfo: "Shopping List",
     total: "Total",
     payment: "Payment",
     cashOnDelivery: "Cash on Delivery",

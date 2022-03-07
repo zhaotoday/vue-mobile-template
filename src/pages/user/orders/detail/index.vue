@@ -8,7 +8,9 @@
         <div class="c-form__input">{{ $time.getTime(detail.createdAt) }}</div>
       </c-form-item>
       <c-form-item :label="pt('_.$.reachTime')">
-        <div class="c-form__input">2022-02-16 00:00</div>
+        <div class="c-form__input">
+          {{ detail.finishedAt ? $time.getTime(detail.finishedAt) : "-" }}
+        </div>
       </c-form-item>
       <c-form-item :label="$t('$.status')">
         <div class="c-form__input">
