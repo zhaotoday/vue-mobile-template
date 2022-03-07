@@ -13,12 +13,19 @@ const mutations = {
   [types.SetPageData](state, { page, data }) {
     state.pageData[page] = data;
   },
+  [types.RemovePageData](state, { page }) {
+    delete state.pageData[page];
+  },
 };
 
 const actions = {
   setPageData({ commit }, { page, data }) {
     commit(types.SetPageData, { page, data });
     return { page, data };
+  },
+  removePageData({ commit }, { page }) {
+    commit(types.RemovePageData, { page });
+    return { page };
   },
 };
 
