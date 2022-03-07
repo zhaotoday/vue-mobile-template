@@ -27,10 +27,13 @@
       <div class="c-title c-title--md fs32">{{ $t("$.details") }}</div>
     </div>
     <div class="s-cms-content">
-      <img
-        src="https://imgs.static.pupumall.com/STORE_PRODUCT/a3d844176f6c416f86ffd8d6eda5d02a/1589268148757.jpg"
-        style="width: 100%"
-      />
+      <div
+        v-if="detail.content"
+        class="bg-white"
+        style="padding: 30rpx; font-size: 28rpx"
+        v-html="detail.content || 'no data'"
+      ></div>
+      <div v-else class="bg-white u-p30 fs28 u-tac t-placeholder">no data</div>
     </div>
     <gc-product-submit :product="detail" />
   </div>
