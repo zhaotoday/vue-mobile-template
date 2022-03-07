@@ -70,7 +70,7 @@
         </li>
       </ul>
     </div>
-    <div :class="$bem.box.$">
+    <div class="u-mb24" :class="$bem.box.$">
       <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"
@@ -112,6 +112,34 @@
         >
           <i class="c-iconfont c-iconfont--wechat fs34 t-primary"></i>
           {{ pt("$.bindWx") }}
+        </li>
+      </ul>
+    </div>
+    <div :class="$bem.box.$">
+      <ul class="c-list bg-white fs28">
+        <li
+          class="c-list__item has-icon is-link"
+          @click="
+            navigateTo({
+              requiresLogin: true,
+              url: '/pages/manage/products/list/index',
+            })
+          "
+        >
+          <i class="c-iconfont c-iconfont--info fs34 t-primary"></i>
+          商品管理
+        </li>
+        <li
+          class="c-list__item has-icon is-link"
+          @click="
+            navigateTo({
+              requiresLogin: true,
+              url: '/pages/manage/distribute/index',
+            })
+          "
+        >
+          <i class="c-iconfont c-iconfont--info fs34 t-primary"></i>
+          配送管理
         </li>
       </ul>
     </div>

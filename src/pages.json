@@ -172,7 +172,7 @@
         "pagePath": "pages/home/index",
         "iconPath": "static/tab-bar/home.png",
         "selectedIconPath": "static/tab-bar/home-selected.png",
-        "text": "Home Page"
+        "text": "Home"
       },
       {
         "pagePath": "pages/categories/index",
