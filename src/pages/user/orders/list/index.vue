@@ -17,7 +17,11 @@
         @click="$wx.navigateTo(`/pages/user/orders/detail/index?id=${item.id}`)"
       >
         <div class="c-orders__head">
-          <span class="fs26" style="padding-right: 20rpx">待付款</span>
+          <span class="fs26" style="padding-right: 20rpx">
+            {{
+              $helpers.getItem(enums.OrderStatus, "value", item.status)["label"]
+            }}
+          </span>
           <span class="t-g7 fs24">{{ $time.getTime(item.createdAt) }}</span>
         </div>
         <div class="c-orders__body o-media">
@@ -34,7 +38,6 @@
               </div>
             </div>
             <div class="b-money fs26">
-              {{ $t("$.paid") }}
               <span class="t-error">￥{{ getTotalPrice(item.products) }}</span>
             </div>
           </div>

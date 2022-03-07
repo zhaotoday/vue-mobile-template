@@ -4,10 +4,13 @@ import { ordersApi } from "@/apis/client/orders";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useProducts } from "@/composables/use-products";
 import { useI18n } from "@/composables/use-i18n";
+import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 
 export default {
   setup() {
     const { $t } = useI18n({ path: "user/orders/list" });
+
+    const { enums } = useEnums();
 
     const { user } = useUsers();
 
@@ -59,6 +62,7 @@ export default {
     };
 
     return {
+      enums,
       loaded,
       list,
       cTabs,

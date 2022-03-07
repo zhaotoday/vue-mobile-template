@@ -60,6 +60,7 @@ export default {
 
         if (id) {
           wx.showToast({ title: "修改成功" });
+          await useHelpers().sleep(1500);
           wx.navigateBack();
         } else {
           wx.showToast({ title: "新增成功" });

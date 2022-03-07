@@ -98,7 +98,7 @@
       }
 
       @include e(price) {
-        top: px2rpx(60px);
+        bottom: px2rpx(30px);
       }
 
       @include e(number) {

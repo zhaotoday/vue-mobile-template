@@ -20,7 +20,7 @@
         </div>
       </c-form-item>
     </c-form>
-    <div class="c-address u-mb24" :class="$bem.box.$">
+    <div v-if="detail.address" class="c-address u-mb24" :class="$bem.box.$">
       <i
         class="c-address__icon c-iconfont c-iconfont--address fs44 t-primary"
       ></i>
@@ -32,7 +32,13 @@
           {{ detail.address.name }} {{ detail.address.phoneNumber }}
         </p>
       </div>
-      <div class="c-tag h34 bd-primary t-primary u-br10 fs22">家</div>
+      <div class="c-tag h34 bd-primary t-primary u-br10 fs22">
+        {{
+          $helpers.getItem(enums.AddressTag, "value", detail.address.tag)[
+            "label"
+          ]
+        }}
+      </div>
     </div>
     <div class="u-mb24" :class="$bem.box.$">
       <div class="u-pt20 u-pb20 bg-white">
