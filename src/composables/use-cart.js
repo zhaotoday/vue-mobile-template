@@ -14,9 +14,9 @@ export const useCart = () => {
     "allProductsSelected",
   ]);
   const {
-    updateProductNumber: _updateProductNumber,
     selectProduct,
     selectAllProducts,
+    updateProductNumber: _updateProductNumber,
     clearProducts: _clearProducts,
   } = useActions([
     "updateProductNumber",
