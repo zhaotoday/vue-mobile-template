@@ -26,7 +26,7 @@ export const en = {
     paid: "Paid",
     reset: "Reset",
     bind: "Bind",
-    pay: "Pay",
+    completeOrder: "Complete Order",
     cart: "Cart",
     addToCart: "Add to cart",
     collect: "Star",
