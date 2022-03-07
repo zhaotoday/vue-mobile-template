@@ -1,8 +1,8 @@
+import wx from "wx-bridge";
 import { reactive } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
 import { useValidators } from "vue-validation";
 import { productsApi } from "@/apis/client/products";
-import wx from "wx-bridge";
 import { useRoute } from "vue-mobile/composables/use-route";
 
 export const useForm = () => {
