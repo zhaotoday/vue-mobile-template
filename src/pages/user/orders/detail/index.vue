@@ -72,7 +72,17 @@
     </c-form>
     <c-form>
       <c-form-item :label="$t('$.remark')">
-        <div class="c-form__input">{{ detail.remark }}</div>
+        <div
+          class="fs28"
+          style="
+            margin-left: 230rpx;
+            padding-top: 22rpx;
+            padding-bottom: 10rpx;
+            padding-right: 10rpx;
+          "
+        >
+          {{ detail.remark }}
+        </div>
       </c-form-item>
     </c-form>
   </div>
