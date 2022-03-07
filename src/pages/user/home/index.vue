@@ -4,8 +4,10 @@
       <template v-if="loggedIn()">
         <u-avatar size="120rpx" :src="avatarUrl || defaultAvatarUrl" />
         <div class="b-info__extra">
-          <h2 class="fs30">{{ name }}</h2>
-          <h3 class="fs26" v-if="user.phoneNumber">{{ user.phoneNumber }}</h3>
+          <h2 class="fs30">Name: {{ name }}</h2>
+          <h3 class="fs26" v-if="user.phoneNumber">
+            Phone Number: {{ user.phoneNumber }}
+          </h3>
         </div>
       </template>
       <template v-else>
