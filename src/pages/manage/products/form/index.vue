@@ -37,6 +37,24 @@
           @blur="validate(cForm, 'price')"
         />
       </c-form-item>
+      <c-form-item label="库存">
+        <c-form-input
+          type="number"
+          placeholder="请输入库存"
+          v-model.number="cForm.model.stock"
+          :error="cForm.errors.stock"
+          @blur="validate(cForm, 'stock')"
+        />
+      </c-form-item>
+      <c-form-item label="销量">
+        <c-form-input
+          type="number"
+          placeholder="请输入销量"
+          v-model.number="cForm.model.sales"
+          :error="cForm.errors.sales"
+          @blur="validate(cForm, 'sales')"
+        />
+      </c-form-item>
       <c-form-item v-if="false" label="商品详情">
         <div class="u-pt10 u-pb10 u-mt70 u-ml20 u-mr20">
           <u-textarea placeholder="请输入商品详情" height="300" />
