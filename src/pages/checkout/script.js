@@ -5,7 +5,6 @@ import { useProducts } from "@/composables/use-products";
 import { addressesApi } from "@/apis/client/addresses";
 import { usePageData } from "@/composables/use-page-data";
 import { useCart } from "@/composables/use-cart";
-import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useI18n } from "@/composables/use-i18n";
 
 export default {
@@ -17,8 +16,6 @@ export default {
     const { getTotalPrice } = useProducts();
 
     const { selectedProducts, clearProducts } = useCart();
-
-    const { user } = useUsers();
 
     const selectedAddress = ref({});
 

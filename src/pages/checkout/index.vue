@@ -8,7 +8,7 @@
       <i
         class="c-address__icon c-iconfont c-iconfont--address fs44 t-primary"
       ></i>
-      <template v-if="selectedAddress.id">
+      <template v-if="selectedAddress && selectedAddress.id">
         <div class="c-address__detail">
           <h2 class="c-address__title fs28">
             {{ selectedAddress.location.name }}
