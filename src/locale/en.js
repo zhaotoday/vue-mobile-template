@@ -73,6 +73,7 @@ export const en = {
     setSuccess: "Set successfully",
     deleteSuccess: "Delete successfully",
     deletedAddress: "Your address may be deleted",
+    resetSuccess: "Reset successfully",
   },
   components: {
     CART_SUBMIT: {

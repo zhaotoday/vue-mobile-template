@@ -71,7 +71,7 @@ export default {
             },
           });
 
-          wx.showToast({ title: "重置成功" });
+          wx.showToast({ title: $t("tips.resetSuccess") });
           await useHelpers().sleep(1500);
           wx.navigateBack();
         }
