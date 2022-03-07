@@ -2,9 +2,9 @@
   <div class="p-user-orders-list">
     <div class="bg-white u-pb10 u-mb24">
       <u-tabs
-        :list="cTabs.items"
+        :list="tabItems"
         key-name="label"
-        item-style="width: 33.33%; height: 80rpx; box-sizing: border-box"
+        item-style="padding-left: 36rpx; padding-right: 36rpx; height: 80rpx; box-sizing: border-box"
         line-color="#5ac725"
         @change="changeTab"
       />

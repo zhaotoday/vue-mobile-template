@@ -1,4 +1,4 @@
-import { ref } from "@vue/composition-api";
+import { computed, ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
@@ -20,21 +20,15 @@ export default {
 
     const cTabs = {
       current: 0,
-      items: [
-        {
-          label: $t("$.orderStatuses.all"),
-          value: "",
-        },
-        {
-          label: $t("$.orderStatuses.delivering"),
-          value: "ToPay",
-        },
-        {
-          label: $t("$.orderStatuses.finished"),
-          value: "Finished",
-        },
-      ],
     };
+
+    const tabItems = computed(() => [
+      {
+        label: $t("$.orderStatuses.all"),
+        value: "",
+      },
+      ...enums.value.OrderStatus,
+    ]);
 
     const list = ref({
       items: [],
@@ -50,7 +44,7 @@ export default {
         query: {
           where: {
             userId: { $eq: user.value.id },
-            status: { $eq: cTabs.items[cTabs.current].value },
+            status: { $eq: tabItems.value[cTabs.current].value },
           },
         },
       });
@@ -66,6 +60,7 @@ export default {
       loaded,
       list,
       cTabs,
+      tabItems,
       getTotalPrice,
       changeTab,
     };

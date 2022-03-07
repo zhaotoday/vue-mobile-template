@@ -13,6 +13,7 @@
     </div>
     <div class="bg-white u-pb10">
       <u-tabs
+        v-if="false"
         :list="cTabs.items"
         item-style="width: 25%; height: 80rpx; box-sizing: border-box"
         line-color="#5ac725"
