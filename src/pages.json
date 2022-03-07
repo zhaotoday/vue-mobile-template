@@ -108,13 +108,13 @@
       }
     },
     {
-      "path": "pages/pay/index",
+      "path": "pages/checkout/index",
       "style": {
         "navigationBarTitleText": "Checkout"
       }
     },
     {
-      "path": "pages/pay/result/index",
+      "path": "pages/checkout/result/index",
       "style": {
         "navigationBarTitleText": "Place Order Successfully"
       }

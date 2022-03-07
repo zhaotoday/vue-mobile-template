@@ -13,7 +13,7 @@
       margin-top="100rpx"
       :text="$t('$.emptyCart')"
     />
-    <gc-cart-submit @submit="$wx.navigateTo('/pages/pay/index')" />
+    <gc-cart-submit @submit="$wx.navigateTo('/pages/checkout/index')" />
   </div>
 </template>
 

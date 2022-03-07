@@ -63,7 +63,7 @@ export default {
 
       clearProducts();
 
-      await wx.redirectTo({ url: "/pages/pay/result/index" });
+      await wx.redirectTo({ url: "/pages/checkout/result/index" });
     };
 
     return {
