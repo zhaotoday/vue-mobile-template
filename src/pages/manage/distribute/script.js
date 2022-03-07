@@ -3,7 +3,6 @@ import { ordersApi } from "@/apis/client/orders";
 import { onShow } from "uni-composition-api";
 import wx from "wx-bridge";
 import { useProducts } from "@/composables/use-products";
-import { productsApi } from "@/apis/client/products";
 
 export default {
   setup() {
@@ -13,12 +12,19 @@ export default {
       items: [
         {
           name: "全部",
+          value: "",
+        },
+        {
+          name: "待配送",
+          value: "ToDistribute",
         },
         {
           name: "配送中",
+          value: "Distributing",
         },
         {
           name: "已完成",
+          value: "Finished",
         },
       ],
     };
