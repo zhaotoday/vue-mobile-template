@@ -22,7 +22,7 @@ export const useRender = () => {
 
   const renderCategoriesList = async () => {
     categoriesList.value = await publicCategoriesApi.get({
-      query: { order: [["order", "DESC"]] },
+      query: { order: [["order", "ASC"]] },
     });
   };
 
