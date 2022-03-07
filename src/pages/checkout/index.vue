@@ -17,7 +17,13 @@
             {{ selectedAddress.name }} {{ selectedAddress.phoneNumber }}
           </p>
         </div>
-        <div class="c-tag h34 bd-primary t-primary u-br10 fs22">家</div>
+        <div class="c-tag h34 bd-primary t-primary u-br10 fs22">
+          {{
+            $helpers.getItem(enums.AddressTag, "value", selectedAddress.tag)[
+              "label"
+            ]
+          }}
+        </div>
       </template>
       <div v-else class="c-address__placeholder fs30 t-placeholder">
         {{ pt("inputs.selectAddress") }}
@@ -42,7 +48,7 @@
           {{ $t("$.money") }}{{ getTotalPrice(selectedProducts) }}
         </div>
       </c-form-item>
-      <c-form-item custom-class="is-link" :label="$t('$.payment')">
+      <c-form-item :label="$t('$.payment')">
         <div class="c-form__input">{{ $t("$.cashOnDelivery") }}</div>
       </c-form-item>
     </c-form>

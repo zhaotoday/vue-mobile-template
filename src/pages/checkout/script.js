@@ -6,10 +6,13 @@ import { addressesApi } from "@/apis/client/addresses";
 import { usePageData } from "@/composables/use-page-data";
 import { useCart } from "@/composables/use-cart";
 import { useI18n } from "@/composables/use-i18n";
+import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 
 export default {
   setup() {
-    const { pt } = useI18n({ path: "pay" });
+    const { enums } = useEnums();
+
+    const { pt } = useI18n({ path: "checkout" });
 
     const { getPageData } = usePageData();
 
@@ -64,6 +67,7 @@ export default {
     };
 
     return {
+      enums,
       pt,
       selectedProducts,
       selectedAddress,
