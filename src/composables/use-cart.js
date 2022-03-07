@@ -25,6 +25,8 @@ export const useCart = () => {
     "clearProducts",
   ]);
 
+  // 在非 tab-bar 页面无法更新 TabBarBadge，
+  // 所以必须在每个 tab-bar 页面的 onShow 中更新 TabBarBadge
   const renderProductsNumber = () => {
     const count = products.value.length;
 
