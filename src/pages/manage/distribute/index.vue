@@ -16,8 +16,10 @@
         @click="$wx.navigateTo(`/pages/user/orders/detail/index?id=${item.id}`)"
       >
         <div class="c-orders__head">
-          <span class="fs26" style="padding-right: 20rpx">配送中</span>
-          <span class="t-g7 fs24">2022-02-14 14:00</span>
+          <span class="fs26" style="padding-right: 20rpx">
+            {{ $helpers.getItem(OrderStatus, "value", item.status)["label"] }}
+          </span>
+          <span class="t-g7 fs24">{{ $time.getTime(item.createdAt) }}</span>
         </div>
         <div class="c-orders__body o-media">
           <img
@@ -40,7 +42,9 @@
               </div>
             </div>
             <div class="b-money fs26">
-              <span class="t-error">￥{{ getTotalPrice(item.products) }}</span>
+              <span class="t-error">
+                {{ $t("$.money") }}{{ getTotalPrice(item.products) }}
+              </span>
             </div>
           </div>
         </div>
@@ -49,7 +53,7 @@
             class="c-tag h48 u-br8 bd-primary t-primary fs24"
             @click.stop="openLocation(item.address)"
           >
-            位置
+            定位
           </div>
           <div
             class="c-tag h48 u-br8 bd-primary t-primary fs24"
@@ -58,12 +62,14 @@
             打电话
           </div>
           <div
+            v-if="item.status === 'ToDistribute'"
             class="c-tag h48 u-br8 bd-primary t-primary fs24"
             @click.stop="startToDistribute(item)"
           >
             开始配送
           </div>
           <div
+            v-if="item.status === 'Distributing'"
             class="c-tag h48 u-br8 bd-primary t-primary fs24"
             @click.stop="finish(item)"
           >

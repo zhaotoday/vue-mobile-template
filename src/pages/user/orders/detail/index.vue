@@ -7,7 +7,7 @@
       <c-form-item :label="pt('_.$.orderTime')">
         <div class="c-form__input">{{ $time.getTime(detail.createdAt) }}</div>
       </c-form-item>
-      <c-form-item :label="pt('_.$.reachTime')">
+      <c-form-item :label="pt('_.$.finishTime')">
         <div class="c-form__input">
           {{ detail.finishedAt ? $time.getTime(detail.finishedAt) : "-" }}
         </div>

@@ -154,7 +154,7 @@ export const en = {
         $: {
           orderNo: "Order No",
           orderTime: "Order Time",
-          reachTime: "Reach Time",
+          finishTime: "Finish Time",
           payAtOnce: "Pay at once",
         },
       },

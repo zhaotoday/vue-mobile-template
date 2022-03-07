@@ -154,7 +154,7 @@ export const zhCn = {
         $: {
           orderNo: "订单号",
           orderTime: "下单时间",
-          reachTime: "送达时间",
+          finishTime: "完成时间",
           payAtOnce: "立即付款",
         },
       },

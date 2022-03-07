@@ -16,16 +16,16 @@ export const useActions = ({ renderOrdersList = () => {} }) => {
       title: "请确认",
       content: "确认开始配送该订单？",
       cancelText: "取消",
-      confirmText: "送达",
+      confirmText: "开始配送",
     });
 
     if (confirm) {
       await ordersApi.post({
         id,
-        action: "changeState",
+        action: "changeStatus",
         body: { status: "Distributing" },
       });
-      wx.showToast({ title: "设置成功" });
+      wx.showToast({ title: "操作成功" });
       await renderOrdersList();
     }
   };
@@ -41,10 +41,10 @@ export const useActions = ({ renderOrdersList = () => {} }) => {
     if (confirm) {
       await ordersApi.post({
         id,
-        action: "changeState",
+        action: "changeStatus",
         body: { status: "Finished" },
       });
-      wx.showToast({ title: "设置成功" });
+      wx.showToast({ title: "操作成功" });
       await renderOrdersList();
     }
   };
