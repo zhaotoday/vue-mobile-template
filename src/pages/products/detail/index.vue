@@ -12,6 +12,7 @@
       radius="0"
       indicator-mode="dot"
       img-mode="aspectFill"
+      @click="onSwiperClick"
     />
     <div class="b-info bg-white u-mb24">
       <div class="b-info__name fs32 u-lh1">{{ detail.name }}</div>
