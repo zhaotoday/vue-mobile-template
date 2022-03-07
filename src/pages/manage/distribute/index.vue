@@ -12,6 +12,7 @@
         v-for="item in ordersList.items"
         :key="item.id"
         class="c-orders__item bg-white u-mt20"
+        @click="$wx.navigateTo(`/pages/user/orders/detail/index?id=${item.id}`)"
       >
         <div class="c-orders__head">
           <span class="fs26" style="padding-right: 20rpx">配送中</span>
@@ -46,27 +47,19 @@
         <div class="c-orders__foot u-tar">
           <div
             class="c-tag h48 u-br8 bd-primary t-primary fs24"
-            @click="
-              $wx.navigateTo(`/pages/user/orders/detail/index?id=${item.id}`)
-            "
-          >
-            订单详情
-          </div>
-          <div
-            class="c-tag h48 u-br8 bd-primary t-primary fs24"
-            @click="openLocation(item.address)"
+            @click.stop="openLocation(item.address)"
           >
             位置
           </div>
           <div
             class="c-tag h48 u-br8 bd-primary t-primary fs24"
-            @click="makePhoneCall(item.address)"
+            @click.stop="makePhoneCall(item.address)"
           >
             打电话
           </div>
           <div
             class="c-tag h48 u-br8 bd-primary t-primary fs24"
-            @click="distribute(item)"
+            @click.stop="startToDistribute(item)"
           >
             开始配送
           </div>

@@ -67,6 +67,8 @@ export default {
       }
     };
 
+    const startToDistribute = () => {};
+
     const finish = async ({ id }) => {
       const { confirm } = await wx.showModal({
         title: "请确认",
@@ -76,6 +78,11 @@ export default {
       });
 
       if (confirm) {
+        await ordersApi.post({
+          id,
+          action: "changeState",
+          body: { status: "Finished" },
+        });
         wx.showToast({ title: "设置成功" });
       }
     };
@@ -86,6 +93,7 @@ export default {
       getTotalPrice,
       openLocation,
       makePhoneCall,
+      startToDistribute,
       finish,
     };
   },
