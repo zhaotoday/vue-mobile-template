@@ -1,5 +1,7 @@
 <template>
   <div class="cc-submit">
+    <!-- app computed bug -->
+    <div v-show="false">{{ JSON.stringify(products) }}</div>
     <div class="cc-submit__checkbox">
       <u-checkbox
         shape="circle"
