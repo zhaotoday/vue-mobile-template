@@ -1,6 +1,6 @@
 import { useCart } from "@/composables/use-cart";
 import Collection from "./components/collection/index.vue";
-import { computed } from "@vue/composition-api";
+import { store } from "@/store";
 
 export default {
   components: {
@@ -13,12 +13,7 @@ export default {
     },
   },
   setup(props) {
-    const { products, selectedProducts, updateProductNumber } = useCart();
-
-    const addedToCart = computed({
-      get: () => products.value.map(({ id }) => id).includes(props.product.id),
-      effect: true,
-    });
+    const { selectedProducts, updateProductNumber } = useCart();
 
     const addToCart = () => {
       updateProductNumber({ product: props.product, number: 1 });
@@ -26,8 +21,14 @@ export default {
 
     return {
       selectedProducts,
-      addedToCart,
       addToCart,
     };
+  },
+  // app computed bug
+  computed: {
+    addedToCart() {
+      const { products } = store.state.cart;
+      return products.map(({ id }) => id).includes(this.product.id);
+    },
   },
 };
