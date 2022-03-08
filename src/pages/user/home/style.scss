@@ -26,8 +26,9 @@
       transform: translateY(-50%);
       line-height: 100%;
 
-      h3 {
-        margin-top: px2rpx(18px);
+      .u-button {
+        float: left;
+        margin-right: px2rpx(20px);
       }
     }
   }

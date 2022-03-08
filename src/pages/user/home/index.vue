@@ -18,15 +18,24 @@
       </template>
       <template v-else>
         <u-avatar size="120rpx" mode="aspectFill" :src="defaultAvatarUrl" />
-        <u-button
-          type="primary"
-          custom-class="b-info__extra"
-          custom-style="width: 130rpx"
-          size="small"
-          @click="$wx.navigateTo($consts.LoginUrl)"
-        >
-          {{ pt("$.login") }}
-        </u-button>
+        <div class="b-info__extra">
+          <u-button
+            type="primary"
+            custom-style="width: 130rpx"
+            size="small"
+            @click="$wx.navigateTo($consts.LoginUrl)"
+          >
+            {{ pt("$.login") }}
+          </u-button>
+          <u-button
+            type="primary"
+            custom-style="width: 130rpx"
+            size="small"
+            @click="$wx.navigateTo('/pages/user/account-register/index')"
+          >
+            {{ $t("$.register") }}
+          </u-button>
+        </div>
       </template>
     </div>
     <div
