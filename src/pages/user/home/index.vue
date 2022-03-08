@@ -162,7 +162,7 @@
     </div>
     <u-button
       v-if="loggedIn()"
-      custom-class="at-bottom w702"
+      custom-class="b-logout w702"
       type="primary"
       style="bottom: 130rpx"
       @click="logoutAndGotoHome"
