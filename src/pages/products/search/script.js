@@ -8,7 +8,7 @@ export default {
     const { pt } = useI18n({ path: "products/search" });
 
     const history = ref([]);
-    const hotKeywords = ["花生油", "大米", "食盐", "白菜"];
+    const hotKeywords = ["apple", "orange", "chocolate"];
 
     onShow(() => {
       history.value = getHistory();
