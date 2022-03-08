@@ -6,6 +6,7 @@ import { useProducts } from "@/composables/use-products";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useI18n } from "@/composables/use-i18n";
 import wx from "wx-bridge";
+import { permission } from "@/utils/permission";
 
 export default {
   setup() {
@@ -36,6 +37,11 @@ export default {
     const openLocation = async (address) => {
       if (address) {
         const { latitude, longitude } = address.location;
+
+        // #ifdef APP-PLUS
+        await permission.request("ACCESS_FINE_LOCATION");
+        // #endif
+
         await wx.openLocation({ latitude, longitude });
       } else {
         wx.showToast({ title: $t("tips.deletedAddress") });

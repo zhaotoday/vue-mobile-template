@@ -1,9 +1,15 @@
 import wx from "wx-bridge";
 import { ordersApi } from "@/apis/client/orders";
+import { permission } from "@/utils/permission";
 
 export const useActions = ({ renderOrdersList = () => {} }) => {
   const openLocation = async ({ location }) => {
     const { latitude, longitude } = location;
+
+    // #ifdef APP-PLUS
+    await permission.request("ACCESS_FINE_LOCATION");
+    // #endif
+
     await wx.openLocation({ latitude, longitude });
   };
 

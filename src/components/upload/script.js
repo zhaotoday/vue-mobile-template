@@ -1,8 +1,9 @@
 import wx from "wx-bridge";
 import { useConsts } from "@/composables/use-consts";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
-import { ref, watch } from "@vue/composition-api";
+import { onMounted, ref, watch } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
+import { permission } from "@/utils/permission";
 
 export default {
   props: {
@@ -37,6 +38,12 @@ export default {
       },
       { immediate: true, deep: true }
     );
+
+    onMounted(async () => {
+      // #ifdef APP-PLUS
+      await permission.request("CAMERA");
+      // #endif
+    });
 
     const onAfterRead = async (event) => {
       const { statusCode, data } = await wx.uploadFile({

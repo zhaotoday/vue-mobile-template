@@ -8,6 +8,7 @@ import { useHelpers } from "@/composables/use-helpers";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useI18n } from "@/composables/use-i18n";
+import { permission } from "@/utils/permission";
 
 export default {
   setup() {
@@ -58,6 +59,10 @@ export default {
     };
 
     const selectLocation = async () => {
+      // #ifdef APP-PLUS
+      await permission.request("ACCESS_FINE_LOCATION");
+      // #endif
+
       if (cForm.model.location.name) {
         const { latitude, longitude } = cForm.model.location;
 
