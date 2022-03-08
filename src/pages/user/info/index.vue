@@ -5,6 +5,7 @@
         <u-avatar
           size="86rpx"
           :src="avatarUrl || defaultAvatarUrl"
+          mode="aspectFill"
           @click="chooseImage"
         />
       </c-form-item>

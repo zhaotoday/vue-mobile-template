@@ -2,7 +2,11 @@
   <div class="p-user-home has-nav-bar u-pt24">
     <div class="b-info bg-white u-mb24">
       <template v-if="loggedIn()">
-        <u-avatar size="120rpx" :src="avatarUrl || defaultAvatarUrl" />
+        <u-avatar
+          size="120rpx"
+          mode="aspectFill"
+          :src="avatarUrl || defaultAvatarUrl"
+        />
         <div class="b-info__extra">
           <h2 class="fs30">Name: {{ name }}</h2>
           <h3 class="fs26" v-if="user.phoneNumber">
@@ -11,7 +15,7 @@
         </div>
       </template>
       <template v-else>
-        <u-avatar size="120rpx" :src="defaultAvatarUrl" />
+        <u-avatar size="120rpx" mode="aspectFill" :src="defaultAvatarUrl" />
         <u-button
           type="primary"
           custom-class="b-info__extra"

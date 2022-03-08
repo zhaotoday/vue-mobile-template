@@ -8,6 +8,7 @@
       >
         <u-avatar
           size="90rpx"
+          mode="aspectFill"
           :src="$helpers.getFileUrl({ id: item.iconFileId })"
         />
         <div class="fs26 u-pt10 u-pb20 u-lh1">
