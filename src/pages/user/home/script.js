@@ -4,6 +4,7 @@ import { onShow } from "uni-composition-api";
 import wx from "wx-bridge";
 import { useI18n } from "@/composables/use-i18n";
 import { useCart } from "@/composables/use-cart";
+import { store } from "@/store";
 
 export default {
   setup() {
@@ -69,5 +70,11 @@ export default {
       wxMpBind,
       logout,
     };
+  },
+  // app computed bug
+  computed: {
+    users() {
+      return store.state.users;
+    },
   },
 };

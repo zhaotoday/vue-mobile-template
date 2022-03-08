@@ -1,5 +1,7 @@
 <template>
   <div class="p-user-home has-nav-bar u-pt24">
+    <!-- app computed bug -->
+    <div v-show="false">{{ users }}</div>
     <div class="b-info bg-white u-mb24">
       <template v-if="loggedIn()">
         <u-avatar
