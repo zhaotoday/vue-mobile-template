@@ -15,9 +15,10 @@ export default {
   setup(props) {
     const { products, selectedProducts, updateProductNumber } = useCart();
 
-    const addedToCart = computed(() =>
-      products.value.map(({ id }) => id).includes(props.product.id)
-    );
+    const addedToCart = computed({
+      get: () => products.value.map(({ id }) => id).includes(props.product.id),
+      effect: true,
+    });
 
     const addToCart = () => {
       updateProductNumber({ product: props.product, number: 1 });

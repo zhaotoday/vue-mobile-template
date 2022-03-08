@@ -1,5 +1,5 @@
 <template>
-  <div class="p-user-home u-pt24">
+  <div class="p-user-home has-nav-bar u-pt24">
     <div class="b-info bg-white u-mb24">
       <template v-if="loggedIn()">
         <u-avatar size="120rpx" :src="avatarUrl || defaultAvatarUrl" />
