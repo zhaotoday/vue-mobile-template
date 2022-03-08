@@ -10,6 +10,7 @@ import { useConsts } from "@/composables/use-consts";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 import { useI18n } from "@/composables/use-i18n";
+import { permission } from "@/utils/permission";
 
 export default {
   setup() {
@@ -40,6 +41,10 @@ export default {
     });
 
     const chooseImage = async () => {
+      // #ifdef APP-PLUS
+      await permission.request("CAMERA");
+      // #endif
+
       const { tempFilePaths } = await wx.chooseImage({
         count: 1,
         sizeType: ["compressed"],
