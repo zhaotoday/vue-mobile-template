@@ -29,7 +29,10 @@
             "autoclose" : true,
             "delay" : 0
         },
-        "modules" : {},
+        "modules" : {
+            "Geolocation" : {},
+            "Maps" : {}
+        },
         /* 模块配置 */
         "distribute" : {
             /* 应用发布信息 */
@@ -63,7 +66,18 @@
             "ios" : {},
             /* ios打包配置 */
             "sdkConfigs" : {
-                "ad" : {}
+                "ad" : {},
+                "geolocation" : {
+                    "system" : {
+                        "__platform__" : [ "ios", "android" ]
+                    }
+                },
+                "maps" : {
+                    "baidu" : {
+                        "appkey_ios" : "",
+                        "appkey_android" : "xZAmO26Rf8L5W0D11EGXMkVdaFDpwiad"
+                    }
+                }
             },
             "icons" : {
                 "android" : {
