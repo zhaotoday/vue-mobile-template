@@ -3,7 +3,7 @@
     <div
       class="c-address is-link u-mb24"
       :class="$bem.box.$"
-      @click="$wx.navigateTo('/pages/user/addresses/list/index?action=select')"
+      @click="gotoAddresses"
     >
       <i
         class="c-address__icon c-iconfont c-iconfont--address fs44 t-primary"

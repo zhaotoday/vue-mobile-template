@@ -8,6 +8,8 @@ import { useCart } from "@/composables/use-cart";
 import { useI18n } from "@/composables/use-i18n";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import wx from "wx-bridge";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { useConsts } from "@/composables/use-consts";
 
 export default {
   setup() {
@@ -20,6 +22,8 @@ export default {
     const { getTotalPrice } = useProducts();
 
     const { selectedProducts, clearProducts } = useCart();
+
+    const { loggedIn } = useUsers();
 
     const selectedAddress = ref({});
 
@@ -40,19 +44,35 @@ export default {
       if (lastSelectedAddress) {
         selectedAddress.value = lastSelectedAddress;
       } else {
-        const { items } = await addressesApi.get({
-          query: {
-            where: { default: { $eq: 1 } },
-          },
-        });
+        if (loggedIn()) {
+          const { items } = await addressesApi.get({
+            query: {
+              where: { default: { $eq: 1 } },
+            },
+          });
 
-        if (items.length) {
-          selectedAddress.value = items[0];
+          if (items.length) {
+            selectedAddress.value = items[0];
+          }
         }
       }
     };
 
+    const gotoAddresses = () => {
+      if (!loggedIn()) {
+        wx.navigateTo({ url: useConsts().LoginUrl });
+        return;
+      }
+
+      wx.navigateTo({ url: "/pages/user/addresses/list/index?action=select" });
+    };
+
     const submit = async () => {
+      if (!loggedIn()) {
+        wx.navigateTo({ url: useConsts().LoginUrl });
+        return;
+      }
+
       if (selectedAddress.value.id) {
         await ordersApi.post({
           body: {
@@ -77,6 +97,7 @@ export default {
       selectedAddress,
       cForm,
       getTotalPrice,
+      gotoAddresses,
       submit,
     };
   },

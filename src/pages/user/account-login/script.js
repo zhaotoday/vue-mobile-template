@@ -34,7 +34,7 @@ export default {
 
         wx.showToast({ title: $t("tips.loginSuccess") });
         await useHelpers().sleep(1500);
-        wx.switchTab({ url: "/pages/home/index" });
+        wx.navigateBack();
       });
     };
 
