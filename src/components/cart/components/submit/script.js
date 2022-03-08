@@ -1,5 +1,6 @@
 import { useCart } from "@/composables/use-cart";
 import { useI18n } from "@/composables/use-i18n";
+import { store } from "@/store";
 
 export default {
   emits: ["submit"],
@@ -7,7 +8,6 @@ export default {
     const { ct } = useI18n({ path: "cart-submit" });
 
     const {
-      products,
       selectedProducts,
       totalPrice,
       allProductsSelected,
@@ -20,12 +20,17 @@ export default {
 
     return {
       ct,
-      products,
       selectedProducts,
       totalPrice,
       allProductsSelected,
       selectAllProducts,
       submit,
     };
+  },
+  // app computed bug
+  computed: {
+    products() {
+      return store.state.cart.products;
+    },
   },
 };
