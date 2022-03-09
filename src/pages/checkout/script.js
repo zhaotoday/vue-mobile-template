@@ -77,7 +77,7 @@ export default {
         await ordersApi.post({
           body: {
             products: selectedProducts.value,
-            addressId: selectedAddress.value.id,
+            address: selectedAddress.value,
             remark: cForm.model.remark,
           },
         });
