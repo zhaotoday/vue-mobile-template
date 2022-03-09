@@ -78,6 +78,7 @@ export default {
           body: {
             products: selectedProducts.value,
             address: selectedAddress.value,
+            amount: getTotalPrice(selectedProducts.value),
             remark: cForm.model.remark,
           },
         });
