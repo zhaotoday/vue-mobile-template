@@ -69,18 +69,18 @@
                 "ad" : {},
                 "geolocation" : {
                     "system" : {
-                        "__platform__" : [ "ios", "android" ]
+                        "__platform__" : [ "android" ]
                     },
-                    "baidu" : {
+                    "amap" : {
                         "__platform__" : [ "android" ],
                         "appkey_ios" : "",
-                        "appkey_android" : "xZAmO26Rf8L5W0D11EGXMkVdaFDpwiad"
+                        "appkey_android" : "ebfd4001a72c29d3ef75fbbda19f24ba"
                     }
                 },
                 "maps" : {
-                    "baidu" : {
+                    "amap" : {
                         "appkey_ios" : "",
-                        "appkey_android" : "xZAmO26Rf8L5W0D11EGXMkVdaFDpwiad"
+                        "appkey_android" : "ebfd4001a72c29d3ef75fbbda19f24ba"
                     }
                 }
             },
