@@ -70,6 +70,11 @@
                 "geolocation" : {
                     "system" : {
                         "__platform__" : [ "ios", "android" ]
+                    },
+                    "baidu" : {
+                        "__platform__" : [ "android" ],
+                        "appkey_ios" : "",
+                        "appkey_android" : "xZAmO26Rf8L5W0D11EGXMkVdaFDpwiad"
                     }
                 },
                 "maps" : {
