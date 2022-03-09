@@ -164,7 +164,6 @@
       v-if="loggedIn()"
       custom-class="b-logout w702"
       type="primary"
-      style="bottom: 130rpx"
       @click="logoutAndGotoHome"
     >
       {{ $t("$.logout") }}
