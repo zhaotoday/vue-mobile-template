@@ -26,12 +26,7 @@ export default {
     });
 
     onShow(async () => {
-      detail.value = await ordersApi.get({
-        id: currentRoute.query.id,
-        query: {
-          include: [{ model: "Address", as: "address" }],
-        },
-      });
+      detail.value = await ordersApi.get({ id: currentRoute.query.id });
     });
 
     const openLocation = async (address) => {

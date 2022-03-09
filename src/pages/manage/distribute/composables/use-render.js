@@ -19,10 +19,7 @@ export const useRender = () => {
         where: {
           status: { $eq: OrderStatus[cTabs.current].value },
         },
-        include: [
-          { model: "User", as: "user" },
-          { model: "Address", as: "address" },
-        ],
+        include: [{ model: "User", as: "user" }],
       },
     });
   };
