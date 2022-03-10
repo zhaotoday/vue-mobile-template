@@ -3,10 +3,18 @@ import { publicAppUpgradesApi } from "@/apis/public/app-upgrades";
 export const useAppUpgrade = () => {
   const check = async () => {
     // #ifdef APP-PLUS
-    const a = await publicAppUpgradesApi.post({
+    const { packageType, fileId } = await publicAppUpgradesApi.post({
       action: "check",
+      body: {
+        platform: "Android",
+        versionName: 2,
+        versionCode: 33,
+      },
     });
-    console.log(a);
+
+    if (fileId) {
+      console.log(packageType);
+    }
     // #endif
   };
 
