@@ -96,13 +96,13 @@
       }
     },
     {
-      "path": "pages/user/addresses/form/index",
+      "path": "pages/user/addresses/list/index",
       "style": {
         "navigationBarTitleText": ""
       }
     },
     {
-      "path": "pages/user/addresses/list/index",
+      "path": "pages/user/addresses/form/index",
       "style": {
         "navigationBarTitleText": ""
       }
@@ -132,15 +132,15 @@
       }
     },
     {
-      "path": "pages/manage/distribute/index",
-      "style": {
-        "navigationBarTitleText": "配送管理"
-      }
-    },
-    {
       "path": "pages/manage/products/form/index",
       "style": {
         "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/manage/distribute/index",
+      "style": {
+        "navigationBarTitleText": "配送管理"
       }
     }
   ],
