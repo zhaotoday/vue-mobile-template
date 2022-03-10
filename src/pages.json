@@ -80,7 +80,7 @@
     {
       "path": "pages/user/account-register/index",
       "style": {
-        "navigationBarTitleText": "user.accountRegister%"
+        "navigationBarTitleText": "%user.accountRegister%"
       }
     },
     {
