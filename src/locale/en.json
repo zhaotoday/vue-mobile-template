@@ -1,5 +1,6 @@
 {
   "home": "Sol Summer Shop",
+  "home.tabBar": "Home",
   "categories": "Categories",
   "cart": "Cart",
   "checkout": "Checkout",

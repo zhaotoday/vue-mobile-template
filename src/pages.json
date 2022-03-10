@@ -160,25 +160,25 @@
         "pagePath": "pages/home/index",
         "iconPath": "static/tab-bar/home.png",
         "selectedIconPath": "static/tab-bar/home-selected.png",
-        "text": "Home"
+        "text": "%home.tabBar%"
       },
       {
         "pagePath": "pages/categories/index",
         "iconPath": "static/tab-bar/category.png",
         "selectedIconPath": "static/tab-bar/category-selected.png",
-        "text": "Categories"
+        "text": "%categories%"
       },
       {
         "pagePath": "pages/cart/index",
         "iconPath": "static/tab-bar/cart.png",
         "selectedIconPath": "static/tab-bar/cart-selected.png",
-        "text": "Cart"
+        "text": "%cart%"
       },
       {
         "pagePath": "pages/user/home/index",
         "iconPath": "static/tab-bar/user.png",
         "selectedIconPath": "static/tab-bar/user-selected.png",
-        "text": "My"
+        "text": "%user.home%"
       }
     ]
   }
