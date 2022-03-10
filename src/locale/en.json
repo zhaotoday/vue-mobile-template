@@ -1,3 +1,17 @@
 {
-  "index.title": "xxx"
+  "home.title": "Sol Summer Shop",
+  "categories.title": "Categories",
+  "cart.title": "Cart",
+  "user.home": "My",
+  "user.info": "My Personal Information",
+  "user.accountLogin": "Login",
+  "user.accountRegister": "Register",
+  "user.password": "Reset Password",
+  "user.phoneNumber": "Bind Phone Number",
+  "products.search": "Search",
+  "products.list": "Good List",
+  "products.detail": "Goods Details",
+  "checkout": "Checkout",
+  "checkout.result": "Place Order Successfully",
+  "user.orders":
 }

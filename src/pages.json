@@ -96,6 +96,18 @@
       }
     },
     {
+      "path": "pages/user/orders/list/index",
+      "style": {
+        "navigationBarTitleText": "My Orders"
+      }
+    },
+    {
+      "path": "pages/user/orders/detail/index",
+      "style": {
+        "navigationBarTitleText": "Order Details"
+      }
+    },
+    {
       "path": "pages/products/list/index",
       "style": {
         "navigationBarTitleText": "Goods List"
@@ -117,18 +129,6 @@
       "path": "pages/checkout/result/index",
       "style": {
         "navigationBarTitleText": "Place Order Successfully"
-      }
-    },
-    {
-      "path": "pages/user/orders/list/index",
-      "style": {
-        "navigationBarTitleText": "My Orders"
-      }
-    },
-    {
-      "path": "pages/user/orders/detail/index",
-      "style": {
-        "navigationBarTitleText": "Order Details"
       }
     },
     {
