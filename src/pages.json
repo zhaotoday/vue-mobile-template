@@ -30,9 +30,33 @@
       }
     },
     {
-      "path": "pages/user/mp-login/index",
+      "path": "pages/checkout/index",
       "style": {
-        "navigationBarTitleText": "授权登录"
+        "navigationBarTitleText": "Checkout"
+      }
+    },
+    {
+      "path": "pages/checkout/result/index",
+      "style": {
+        "navigationBarTitleText": "Place Order Successfully"
+      }
+    },
+    {
+      "path": "pages/products/search/index",
+      "style": {
+        "navigationBarTitleText": "Search"
+      }
+    },
+    {
+      "path": "pages/products/list/index",
+      "style": {
+        "navigationBarTitleText": "Goods List"
+      }
+    },
+    {
+      "path": "pages/products/detail/index",
+      "style": {
+        "navigationBarTitleText": "Goods Details"
       }
     },
     {
@@ -60,12 +84,6 @@
       }
     },
     {
-      "path": "pages/user/captcha-login/index",
-      "style": {
-        "navigationBarTitleText": "验证码登录"
-      }
-    },
-    {
       "path": "pages/user/password/index",
       "style": {
         "navigationBarTitleText": "Reset Password"
@@ -75,12 +93,6 @@
       "path": "pages/user/phone-number/index",
       "style": {
         "navigationBarTitleText": "Bind Phone Number"
-      }
-    },
-    {
-      "path": "pages/products/search/index",
-      "style": {
-        "navigationBarTitleText": "Search"
       }
     },
     {
@@ -108,27 +120,9 @@
       }
     },
     {
-      "path": "pages/products/list/index",
+      "path": "pages/user/collections/index",
       "style": {
-        "navigationBarTitleText": "Goods List"
-      }
-    },
-    {
-      "path": "pages/products/detail/index",
-      "style": {
-        "navigationBarTitleText": "Goods Details"
-      }
-    },
-    {
-      "path": "pages/checkout/index",
-      "style": {
-        "navigationBarTitleText": "Checkout"
-      }
-    },
-    {
-      "path": "pages/checkout/result/index",
-      "style": {
-        "navigationBarTitleText": "Place Order Successfully"
+        "navigationBarTitleText": "My Stars"
       }
     },
     {
@@ -147,12 +141,6 @@
       "path": "pages/manage/products/form/index",
       "style": {
         "navigationBarTitleText": ""
-      }
-    },
-    {
-      "path": "pages/user/collections/index",
-      "style": {
-        "navigationBarTitleText": "My Stars"
       }
     }
   ],
