@@ -12,7 +12,7 @@
     {
       "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "Sol Summer Shop",
+        "navigationBarTitleText": "%home%",
         "navigationBarTextStyle": "white",
         "navigationBarBackgroundColor": "#5ac725"
       }
@@ -20,19 +20,19 @@
     {
       "path": "pages/categories/index",
       "style": {
-        "navigationBarTitleText": "Categories"
+        "navigationBarTitleText": "%categories%"
       }
     },
     {
       "path": "pages/cart/index",
       "style": {
-        "navigationBarTitleText": "Cart"
+        "navigationBarTitleText": "%cart%"
       }
     },
     {
       "path": "pages/checkout/index",
       "style": {
-        "navigationBarTitleText": "Checkout"
+        "navigationBarTitleText": "%checkout%"
       }
     },
     {
