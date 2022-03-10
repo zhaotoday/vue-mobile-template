@@ -38,61 +38,61 @@
     {
       "path": "pages/checkout/result/index",
       "style": {
-        "navigationBarTitleText": "Place Order Successfully"
+        "navigationBarTitleText": "%checkout.result%"
       }
     },
     {
       "path": "pages/products/search/index",
       "style": {
-        "navigationBarTitleText": "Search"
+        "navigationBarTitleText": "%products.search%"
       }
     },
     {
       "path": "pages/products/list/index",
       "style": {
-        "navigationBarTitleText": "Goods List"
+        "navigationBarTitleText": "%products.list%"
       }
     },
     {
       "path": "pages/products/detail/index",
       "style": {
-        "navigationBarTitleText": "Goods Details"
+        "navigationBarTitleText": "%products.detail%"
       }
     },
     {
       "path": "pages/user/home/index",
       "style": {
-        "navigationBarTitleText": "My"
+        "navigationBarTitleText": "%user.home%"
       }
     },
     {
       "path": "pages/user/info/index",
       "style": {
-        "navigationBarTitleText": "My Personal Information"
+        "navigationBarTitleText": "%user.info%"
       }
     },
     {
       "path": "pages/user/account-login/index",
       "style": {
-        "navigationBarTitleText": "Login"
+        "navigationBarTitleText": "%user.accountLogin%"
       }
     },
     {
       "path": "pages/user/account-register/index",
       "style": {
-        "navigationBarTitleText": "Register"
+        "navigationBarTitleText": "user.accountRegister%"
       }
     },
     {
       "path": "pages/user/password/index",
       "style": {
-        "navigationBarTitleText": "Reset Password"
+        "navigationBarTitleText": "%user.password%"
       }
     },
     {
       "path": "pages/user/phone-number/index",
       "style": {
-        "navigationBarTitleText": "Bind Phone Number"
+        "navigationBarTitleText": "%user.phoneNumber%"
       }
     },
     {
@@ -110,19 +110,19 @@
     {
       "path": "pages/user/orders/list/index",
       "style": {
-        "navigationBarTitleText": "My Orders"
+        "navigationBarTitleText": "%user.orders.list%"
       }
     },
     {
       "path": "pages/user/orders/detail/index",
       "style": {
-        "navigationBarTitleText": "Order Details"
+        "navigationBarTitleText": "%user.orders.detail%"
       }
     },
     {
       "path": "pages/user/collections/index",
       "style": {
-        "navigationBarTitleText": "My Stars"
+        "navigationBarTitleText": "%user.collections%"
       }
     },
     {
