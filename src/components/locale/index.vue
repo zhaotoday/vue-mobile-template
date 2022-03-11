@@ -5,7 +5,9 @@
     @change="onChange"
   >
     <div class="c-locale fs26">
-      {{ $consts.Languages[cPicker.current].label }}
+      <div class="c-locale__title">
+        {{ $consts.Languages[cPicker.current].label }}
+      </div>
       <i class="c-iconfont c-iconfont--arrow-down-filled fs20 u-info"></i>
     </div>
   </picker>

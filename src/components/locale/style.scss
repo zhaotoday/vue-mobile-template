@@ -10,6 +10,11 @@
   margin-right: px2rpx(20px);
   padding-left: px2rpx(20px);
 
+  @include e(title) {
+    width: px2rpx(90px);
+    text-align: center;
+  }
+
   @include c(iconfont) {
     @include position--absolute(50%, px2rpx(16px));
 

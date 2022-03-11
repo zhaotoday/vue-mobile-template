@@ -12,7 +12,10 @@ export default {
 
     onMounted(() => {
       const locale = wx.getStorageSync("locale") || "en";
-      cPicker.current = consts.findIndex(({ value }) => value === locale);
+
+      cPicker.current = consts.Languages.findIndex(
+        ({ value }) => value === locale
+      );
     });
 
     const onChange = (e) => {
