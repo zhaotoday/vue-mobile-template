@@ -1,12 +1,8 @@
 <template>
   <div class="p-download">
     <div class="b-logo">
-      <img
-        v-if="schoolsDetail.homeDressComponents[0].props.logoId"
-        class="b-logo__image"
-        :src="`https://tnjh-mall.lrcdn.cn/${schoolsDetail.homeDressComponents[0].props.logoId}`"
-      />
-      <span class="fs30">{{ schoolsDetail.name }}</span>
+      <img class="b-logo__image" src="/static/logo.png" />
+      <span class="fs30">Sol Summer Shop</span>
     </div>
     <div class="b-phone"></div>
     <swiper
@@ -29,13 +25,8 @@
       >
       </span>
     </div>
-    <div class="b-desc fs24">
-      {{ schoolsDetail.homeDressComponents[0].props.introduction }}
-    </div>
-    <a
-      class="b-button b-button--android"
-      :href="`http://tnjh-app.tongnianjihua.com/${schoolsDetail.id}/${schoolsDetail.appVersionCode}.apk`"
-    >
+    <div class="b-desc fs24">应用介绍</div>
+    <a class="b-button b-button--android" href="#">
       <div class="b-button__title fs24">Android版</div>
       <div class="b-button__desc fs24">APK下载</div>
     </a>
