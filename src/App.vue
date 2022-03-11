@@ -6,9 +6,9 @@ import { usePageData } from "@/composables/use-page-data";
 
 export default {
   async onLaunch() {
-    const locale = wx.getStorageSync("locale");
+    const locale = wx.getStorageSync("locale") || "en";
 
-    wx.setLocale(locale || "en");
+    wx.setLocale(locale);
 
     const { getEnums } = useEnums();
 

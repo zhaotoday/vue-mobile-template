@@ -6,7 +6,7 @@ export default {
   setup() {
     const vm = getCurrentInstance();
 
-    const consts = useConsts();
+    const { Languages } = useConsts();
 
     const cPicker = reactive({
       current: 0,
@@ -15,9 +15,7 @@ export default {
     onMounted(() => {
       const locale = wx.getStorageSync("locale") || "en";
 
-      cPicker.current = consts.Languages.findIndex(
-        ({ value }) => value === locale
-      );
+      cPicker.current = Languages.findIndex(({ value }) => value === locale);
     });
 
     const onChange = (e) => {
