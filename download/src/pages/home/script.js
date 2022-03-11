@@ -1,34 +1,43 @@
-import Categories from "./components/categories";
+import { reactive, ref } from "@vue/composition-api";
+import { router } from "@/router";
 import { onShow } from "uni-composition-api";
-import { useRender } from "./composables/use-render";
-import { useCart } from "@/composables/use-cart";
+import wx from "wx-bridge";
+import { PublicSchoolsApi } from "@/apis/public/schools";
 
 export default {
-  components: {
-    "vc-categories": Categories,
-  },
   setup() {
-    const {
-      adsList,
-      categoriesList,
-      productsList,
-      renderAdsList,
-      renderCategoriesList,
-      renderProductsList,
-    } = useRender();
+    const { query } = router.currentRoute;
 
-    onShow(async () => {
-      useCart().renderProductsNumber();
-
-      await renderAdsList();
-      await renderCategoriesList();
-      await renderProductsList();
+    const schoolsDetail = ref({
+      homeDressComponents: [
+        {
+          props: {
+            logo: 0,
+          },
+        },
+      ],
     });
 
+    const cDemoPages = reactive({
+      current: 0,
+    });
+
+    onShow(async () => {
+      schoolsDetail.value = await new PublicSchoolsApi().get({
+        id: query.schoolId,
+      });
+      wx.setNavigationBarTitle({ title: schoolsDetail.value.name });
+    });
+
+    const onDemoPagesChange = (e) => {
+      cDemoPages.current = e.detail.current;
+    };
+
     return {
-      adsList,
-      categoriesList,
-      productsList,
+      schoolsDetail,
+      query,
+      cDemoPages,
+      onDemoPagesChange,
     };
   },
 };
