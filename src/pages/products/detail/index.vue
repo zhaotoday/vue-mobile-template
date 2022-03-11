@@ -35,7 +35,9 @@
         style="padding: 30rpx; font-size: 28rpx"
         v-html="detail.content || 'no data'"
       ></div>
-      <div v-else class="bg-white u-p30 fs28 u-tac t-placeholder">no data</div>
+      <div v-else class="bg-white u-p30 fs28 u-tac t-placeholder">
+        {{ $t("$.noData") }}
+      </div>
     </div>
     <gc-product-submit :product="detail" />
   </div>
