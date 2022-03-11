@@ -4,6 +4,7 @@ import UniCompositionAPI from "uni-composition-api";
 import VueI18n from "vue-i18n";
 import uView from "uview-ui";
 import App from "@/App";
+import wx from "wx-bridge";
 import { locale } from "@/locale";
 import { globalPlugin } from "@/utils/global-plugin";
 import { router, RouterMount } from "./router";
@@ -24,7 +25,7 @@ Vue.use(uView);
 App.mpType = "app";
 
 const i18n = new VueI18n({
-  locale: wx.getStorageSync("locale") || "en",
+  locale: wx.getLocale() || "en",
   messages: locale,
 });
 

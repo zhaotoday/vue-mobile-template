@@ -5,6 +5,6 @@ export const Languages = [
   },
   {
     label: "中文",
-    value: "zhHans",
+    value: "zh-Hans",
   },
 ];

@@ -18,9 +18,6 @@ export default {
       cPicker.current = consts.Languages.findIndex(
         ({ value }) => value === locale
       );
-
-      wx.setLocale(locale);
-      vm.proxy.$i18n.locale = locale;
     });
 
     const onChange = (e) => {
