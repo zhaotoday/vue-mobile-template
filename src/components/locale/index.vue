@@ -1,6 +1,7 @@
 <template>
   <picker
     :range="$consts.Languages.map((item) => item.label)"
+    :value="cPicker.current"
     @change="onChange"
   >
     <div class="c-locale fs26">
