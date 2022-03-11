@@ -1,13 +1,20 @@
 <template>
   <div class="p-home">
     <div class="bg-primary u-pl24 u-pr24 u-pt24 u-pb24">
-      <u-search
-        :placeholder="$t('inputs.productName')"
-        disabled
-        :show-action="false"
-        height="60rpx"
-        @click="$wx.navigateTo('/pages/products/search/index')"
-      />
+      <u-row>
+        <u-col span="3">
+          <gc-locale />
+        </u-col>
+        <u-col span="9">
+          <u-search
+            :placeholder="$t('inputs.productName')"
+            disabled
+            :show-action="false"
+            height="60rpx"
+            @click="$wx.navigateTo('/pages/products/search/index')"
+          />
+        </u-col>
+      </u-row>
       <u-gap height="24rpx" />
       <u-swiper
         :list="
