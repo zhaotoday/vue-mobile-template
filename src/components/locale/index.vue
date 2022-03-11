@@ -1,5 +1,13 @@
 <template>
-  <div class="c-locale"></div>
+  <picker
+    :range="$consts.Languages.map((item) => item.label)"
+    @change="onChange"
+  >
+    <div class="c-locale fs26">
+      {{ $consts.Languages[cPicker.current].label }}
+      <i class="c-iconfont c-iconfont--arrow-down-filled fs20 u-info"></i>
+    </div>
+  </picker>
 </template>
 
 <script src="./script.js"></script>

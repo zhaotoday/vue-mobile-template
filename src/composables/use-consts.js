@@ -1,3 +1,5 @@
+import { Languages } from "@/utils/consts/languages";
+
 export const useConsts = () => {
   // 接口地址
   const ApiUrl = "http://localhost:10601";
@@ -18,5 +20,6 @@ export const useConsts = () => {
     LoginUrl,
     CdnUrl,
     StaticUrl,
+    Languages,
   };
 };
