@@ -66,6 +66,7 @@ export const zhHans = {
     saveSuccess: "保存成功",
     bindSuccess: "绑定成功",
     pleaseConfirm: "请确认",
+    pleasePayAttention: "请注意",
     sendCaptcha: "获取验证码",
     sendCaptchaSuccess: "验证码获取成功",
     waitCaptcha: "{seconds}s 后获取",

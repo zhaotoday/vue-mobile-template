@@ -5,7 +5,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { $t } = useI18n({});
+    const { $t } = useI18n({ path: "" });
 
     const vm = getCurrentInstance();
 
@@ -22,12 +22,15 @@ export default {
     });
 
     const onChange = async (e) => {
+      if (e.detail.value === cPicker.current) return;
+
       cPicker.current = e.detail.value;
 
       const locale = useConsts().Languages[cPicker.current].value;
 
       const { confirm } = await wx.showModal({
-        title: $t("tips.pleaseConfirm"),
+        showCancel: false,
+        title: $t("tips.pleasePayAttention"),
         content: $t("tips.switchLanguage"),
       });
 
