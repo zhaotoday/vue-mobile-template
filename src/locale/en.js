@@ -74,6 +74,7 @@ export const en = {
     deleteSuccess: "Delete successfully",
     deletedAddress: "Your address may be deleted",
     resetSuccess: "Reset successfully",
+    switchLanguage: "Applying this setting will restart the app",
   },
   components: {
     CART_SUBMIT: {

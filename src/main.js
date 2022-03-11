@@ -25,7 +25,7 @@ Vue.use(uView);
 App.mpType = "app";
 
 const i18n = new VueI18n({
-  locale: wx.getLocale() || "en",
+  locale: wx.getStorageSync("locale") || "en",
   messages: locale,
 });
 

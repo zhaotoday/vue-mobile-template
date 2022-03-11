@@ -74,6 +74,7 @@ export const zhHans = {
     deleteSuccess: "删除成功",
     deletedAddress: "位置不存在（收货地址可能被删除）",
     resetSuccess: "重置成功",
+    switchLanguage: "切换语言将重启 App",
   },
   components: {
     CART_SUBMIT: {
