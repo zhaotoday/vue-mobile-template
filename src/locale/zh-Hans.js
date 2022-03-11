@@ -1,4 +1,4 @@
-export const zhCn = {
+export const zhHans = {
   $: {
     remark: "备注",
     stocks: "库存",

@@ -1,4 +1,4 @@
 import { en } from "./en";
-import { zhCn } from "./zh-cn";
+import { zhHans } from "./zh-Hans";
 
-export const locale = { en, zhCn };
+export const locale = { en, zhHans };

@@ -1,0 +1,20 @@
+{
+  "home": "Sol Summer Shop",
+  "home.tabBar": "首页",
+  "categories": "分类",
+  "cart": "购物车",
+  "checkout": "结算",
+  "checkout.result": "下单成功",
+  "products.search": "Search",
+  "products.list": "Goods List",
+  "products.detail": "Goods Details",
+  "user.home": "My",
+  "user.info": "My Personal Information",
+  "user.accountLogin": "Login",
+  "user.accountRegister": "Register",
+  "user.password": "Reset Password",
+  "user.phoneNumber": "Bind Phone Number",
+  "user.orders.list": "My Orders",
+  "user.orders.detail": "Order Details",
+  "user.collections": "My Stars"
+}
