@@ -8,7 +8,6 @@ import wx from "wx-bridge";
 import { locale } from "@/locale";
 import { globalPlugin } from "@/utils/global-plugin";
 import { router, RouterMount } from "./router";
-import { permission } from "@/utils/permission";
 
 Vue.config.productionTip = false;
 
@@ -41,11 +40,3 @@ RouterMount(app, router, "#app");
 // #ifndef H5
 app.$mount();
 // #endif
-
-(async () => {
-  // #ifdef APP-PLUS
-  await permission.request("READ_EXTERNAL_STORAGE");
-  await permission.request("ACCESS_FINE_LOCATION");
-  await permission.request("CAMERA");
-  // #endif
-})();
