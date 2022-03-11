@@ -4,6 +4,7 @@
       <img class="b-logo__image" src="/static/logo.png" />
       <span class="fs30">Sol Summer Shop</span>
     </div>
+    <gc-locale />
     <div class="b-phone"></div>
     <swiper
       class="b-demo-pages"
