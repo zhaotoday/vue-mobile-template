@@ -1,15 +1,10 @@
 <script>
-import wx from "wx-bridge";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useCart } from "@/composables/use-cart";
 import { usePageData } from "@/composables/use-page-data";
 
 export default {
   async onLaunch() {
-    const locale = wx.getStorageSync("locale") || "en";
-
-    wx.setLocale(locale);
-
     const { getEnums } = useEnums();
 
     await getEnums();
