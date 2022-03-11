@@ -1,0 +1,48 @@
+@import "~@/assets/styles/utils/index.scss";
+
+page {
+  background-color: white;
+  height: 100%;
+}
+
+@include p(categories) {
+  position: relative;
+  height: 100%;
+
+  @include b(categories) {
+    width: px2rpx(200px);
+    border-top: px2rpx(2px) solid map-get($colors, g1);
+    border-bottom: px2rpx(2px) solid map-get($colors, g1);
+    background-color: map-get($colors, g1);
+
+    li {
+      @include text--middle(px2rpx(90px));
+
+      position: relative;
+      background-color: map-get($colors, g1);
+      text-indent: px2rpx(30px);
+
+      @include s(is-active) {
+        background-color: white;
+
+        &::after {
+          @include position--absolute(50%, null, null, 0);
+          @include size(px2rpx(6px), px2rpx(map-get($c-title, --md-height)));
+
+          transform: translateY(-50%);
+          border-radius: px2rpx(6px);
+          display: block;
+          content: "";
+          background-color: map-get($colors, primary);
+        }
+      }
+    }
+  }
+
+  @include b(products) {
+    @include position--absolute(px2rpx(112px), null, null, px2rpx(200px));
+
+    width: calc(100% - 180rpx);
+    height: calc(100% - 112rpx);
+  }
+}

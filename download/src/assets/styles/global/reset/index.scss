@@ -1,0 +1,30 @@
+@import "node_modules/vue-mobile/assets/styles/global/reset/index";
+
+page {
+  background-color: map-get($colors, g1);
+  color: map-get($colors, g9);
+}
+
+.uni-page-head-btn {
+  margin-right: px2rpx(26px) !important;
+}
+
+// en
+@include c(form) {
+  @include e(input, error) {
+    padding-left: 0 !important;
+    margin-left: px2rpx(230px) !important;
+  }
+}
+
+@include p(user-addresses-form) {
+  @include b(tags) {
+    margin-left: px2rpx(230px) !important;
+  }
+}
+
+@include p(user-info) {
+  .u-avatar {
+    margin-left: px2rpx(230px) !important;
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "easycom": {
+    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+    "^c-(.*)-(.*)": "vue-mobile/components/$1/components/$2/index.vue",
+    "^c-(.*)": "vue-mobile/components/$1/index.vue",
+    "^lr-(.*)-(.*)": "vue-mobile/@lr/components/$1/components/$2/index.vue",
+    "^lr-(.*)": "vue-mobile/@lr/components/$1/index.vue",
+    "^gc-(.*)-(.*)": "@/components/$1/components/$2/index.vue",
+    "^gc-(.*)": "@/components/$1/index.vue"
+  },
+  "pages": [
+    {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "%home%",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#5ac725"
+      }
+    },
+    {
+      "path": "pages/categories/index",
+      "style": {
+        "navigationBarTitleText": "%categories%"
+      }
+    },
+    {
+      "path": "pages/cart/index",
+      "style": {
+        "navigationBarTitleText": "%cart%"
+      }
+    },
+    {
+      "path": "pages/checkout/index",
+      "style": {
+        "navigationBarTitleText": "%checkout%"
+      }
+    },
+    {
+      "path": "pages/checkout/result/index",
+      "style": {
+        "navigationBarTitleText": "%checkout.result%"
+      }
+    },
+    {
+      "path": "pages/products/search/index",
+      "style": {
+        "navigationBarTitleText": "%products.search%"
+      }
+    },
+    {
+      "path": "pages/products/list/index",
+      "style": {
+        "navigationBarTitleText": "%products.list%"
+      }
+    },
+    {
+      "path": "pages/products/detail/index",
+      "style": {
+        "navigationBarTitleText": "%products.detail%"
+      }
+    },
+    {
+      "path": "pages/user/home/index",
+      "style": {
+        "navigationBarTitleText": "%user.home%"
+      }
+    },
+    {
+      "path": "pages/user/info/index",
+      "style": {
+        "navigationBarTitleText": "%user.info%"
+      }
+    },
+    {
+      "path": "pages/user/account-login/index",
+      "style": {
+        "navigationBarTitleText": "%user.accountLogin%"
+      }
+    },
+    {
+      "path": "pages/user/account-register/index",
+      "style": {
+        "navigationBarTitleText": "%user.accountRegister%"
+      }
+    },
+    {
+      "path": "pages/user/password/index",
+      "style": {
+        "navigationBarTitleText": "%user.password%"
+      }
+    },
+    {
+      "path": "pages/user/phone-number/index",
+      "style": {
+        "navigationBarTitleText": "%user.phoneNumber%"
+      }
+    },
+    {
+      "path": "pages/user/addresses/list/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/user/addresses/form/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/user/orders/list/index",
+      "style": {
+        "navigationBarTitleText": "%user.orders.list%"
+      }
+    },
+    {
+      "path": "pages/user/orders/detail/index",
+      "style": {
+        "navigationBarTitleText": "%user.orders.detail%"
+      }
+    },
+    {
+      "path": "pages/user/collections/index",
+      "style": {
+        "navigationBarTitleText": "%user.collections%"
+      }
+    },
+    {
+      "path": "pages/manage/products/list/index",
+      "style": {
+        "navigationBarTitleText": "商品管理"
+      }
+    },
+    {
+      "path": "pages/manage/products/form/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/manage/distribute/index",
+      "style": {
+        "navigationBarTitleText": "配送管理"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#F2F2F2"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "static/tab-bar/home.png",
+        "selectedIconPath": "static/tab-bar/home-selected.png",
+        "text": "%home.tabBar%"
+      },
+      {
+        "pagePath": "pages/categories/index",
+        "iconPath": "static/tab-bar/category.png",
+        "selectedIconPath": "static/tab-bar/category-selected.png",
+        "text": "%categories%"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "iconPath": "static/tab-bar/cart.png",
+        "selectedIconPath": "static/tab-bar/cart-selected.png",
+        "text": "%cart%"
+      },
+      {
+        "pagePath": "pages/user/home/index",
+        "iconPath": "static/tab-bar/user.png",
+        "selectedIconPath": "static/tab-bar/user-selected.png",
+        "text": "%user.home%"
+      }
+    ]
+  }
+}

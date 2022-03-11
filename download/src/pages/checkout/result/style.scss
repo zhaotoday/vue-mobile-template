@@ -1,0 +1,34 @@
+@import "~@/assets/styles/utils/index.scss";
+
+@include p(pay-result) {
+  @include b(tip) {
+    padding-top: px2rpx(200px);
+
+    @include e(icon) {
+      @include circle(px2rpx(120px));
+      @include block--center;
+
+      position: relative;
+      line-height: px2rpx(120px);
+      text-align: center;
+      background-color: $u-success;
+      margin-bottom: px2rpx(30px);
+
+      .u-icon {
+        @include position--absolute(50%, null, null, 50%);
+
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+
+    @include e(buttons) {
+      @include block--center;
+
+      width: px2rpx(300px);
+
+      .u-button {
+        margin-top: px2rpx(20px);
+      }
+    }
+  }
+}

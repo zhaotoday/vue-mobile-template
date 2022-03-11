@@ -1,0 +1,20 @@
+{
+  "home": "Sol Summer Shop",
+  "home.tabBar": "首页",
+  "categories": "分类",
+  "cart": "购物车",
+  "checkout": "结算",
+  "checkout.result": "下单成功",
+  "products.search": "搜索",
+  "products.list": "商品列表",
+  "products.detail": "商品详情",
+  "user.home": "我的",
+  "user.info": "我的资料",
+  "user.accountLogin": "登录",
+  "user.accountRegister": "注册",
+  "user.password": "重置密码",
+  "user.phoneNumber": "绑定手机号",
+  "user.orders.list": "我的订单",
+  "user.orders.detail": "订单详情",
+  "user.collections": "我的收藏"
+}

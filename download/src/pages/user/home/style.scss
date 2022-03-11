@@ -1,0 +1,50 @@
+@import "~@/assets/styles/utils/index";
+
+@include p(user-home) {
+  @include c(button) {
+    text-indent: 0;
+  }
+
+  @include b(info) {
+    @include block--center;
+    @include size(px2rpx(750px - 24px * 2), px2rpx(120px + 30px * 2));
+
+    position: relative;
+    border-radius: px2rpx(10px);
+    box-shadow: 0 0 px2rpx(10px) 0 rgba(#cccccc, 0.2);
+
+    .u-avatar {
+      @include position--absolute(50%, null, null, px2rpx(30px));
+
+      transform: translateY(-50%);
+    }
+
+    @include e(extra) {
+      position: absolute !important;
+      top: 50%;
+      left: px2rpx(180px);
+      transform: translateY(-50%);
+      line-height: 100%;
+
+      .u-button {
+        float: left;
+        margin-right: px2rpx(20px);
+      }
+    }
+  }
+
+  @include b(entries) {
+    line-height: normal;
+    height: px2rpx(90px);
+
+    .c-iconfont {
+      @include size(px2rpx(52px), px2rpx(52px));
+    }
+  }
+
+  @include b(logout) {
+    @include position--fixed(null, null, px2rpx(30px), 50%);
+
+    transform: translateX(-50%);
+  }
+}
