@@ -1,19 +1,7 @@
 <script>
-import { useEnums } from "vue-mobile/@lr/composables/use-enums";
-import { useCart } from "@/composables/use-cart";
-import { usePageData } from "@/composables/use-page-data";
-
 export default {
-  async onLaunch() {
-    const { getEnums } = useEnums();
-
-    await getEnums();
-
-    useCart().renderProductsNumber();
-  },
-  onHide() {
-    usePageData().clearPageData();
-  },
+  onLaunch() {},
+  onHide() {},
 };
 </script>
 
