@@ -1,9 +1,11 @@
 import { useConsts } from "@/composables/use-consts";
-import { onMounted, reactive } from "@vue/composition-api";
+import { getCurrentInstance, onMounted, reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
 
 export default {
   setup() {
+    const vm = getCurrentInstance();
+
     const consts = useConsts();
 
     const cPicker = reactive({
@@ -16,11 +18,19 @@ export default {
       cPicker.current = consts.Languages.findIndex(
         ({ value }) => value === locale
       );
+
+      wx.setLocale(locale);
+      vm.proxy.$i18n.locale = locale;
     });
 
     const onChange = (e) => {
       cPicker.current = e.detail.value;
-      wx.setStorageSync("locale", useConsts().Languages[cPicker.current].value);
+
+      const locale = useConsts().Languages[cPicker.current].value;
+
+      wx.setStorageSync("locale", locale);
+      wx.setLocale(locale);
+      vm.proxy.$i18n.locale = locale;
     };
 
     return {
