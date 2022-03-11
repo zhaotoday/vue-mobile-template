@@ -139,7 +139,7 @@ export const zhHans = {
       },
       HOME: {
         $: {
-          login: "授权登录",
+          login: "登录",
           myInformation: "我的资料",
           modifyPassword: "修改密码",
           bindPhoneNumber: "绑定手机号",
