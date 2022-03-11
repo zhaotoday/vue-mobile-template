@@ -65,7 +65,7 @@
           class="c-list__item has-icon is-link"
           @click="
             navigateTo({
-              requireLogin: true,
+              requiresLogin: true,
               url: '/pages/user/orders/list/index',
             })
           "
@@ -77,7 +77,7 @@
           class="c-list__item has-icon is-link"
           @click="
             navigateTo({
-              requireLogin: true,
+              requiresLogin: true,
               url: '/pages/user/addresses/list/index',
             })
           "
