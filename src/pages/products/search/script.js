@@ -1,7 +1,7 @@
 import wx from "wx-bridge";
 import { ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {

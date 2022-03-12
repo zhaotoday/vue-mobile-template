@@ -9,7 +9,7 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 import { permission } from "uni-plugins/utils/permission";
 
 export default {

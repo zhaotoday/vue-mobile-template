@@ -7,7 +7,7 @@ import { addressesApi } from "@/apis/client/addresses";
 import { useHelpers } from "@/composables/use-helpers";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 import { permission } from "uni-plugins/utils/permission";
 
 export default {

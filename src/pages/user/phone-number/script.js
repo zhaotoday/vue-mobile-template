@@ -7,7 +7,7 @@ import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useRoute } from "vue-mobile/composables/use-route";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {

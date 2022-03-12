@@ -1,7 +1,7 @@
 import { useConsts } from "@/composables/use-consts";
 import { getCurrentInstance, onMounted, reactive } from "@vue/composition-api";
 import wx from "wx-bridge";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {

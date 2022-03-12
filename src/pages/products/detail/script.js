@@ -4,7 +4,7 @@ import { publicProductsApi } from "@/apis/public/products";
 import { useRoute } from "vue-mobile/composables/use-route";
 import wx from "wx-bridge";
 import { useHelpers } from "@/composables/use-helpers";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {

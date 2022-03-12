@@ -4,7 +4,7 @@ import { ordersApi } from "@/apis/client/orders";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { useProducts } from "@/composables/use-products";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 import wx from "wx-bridge";
 import { permission } from "uni-plugins/utils/permission";
 

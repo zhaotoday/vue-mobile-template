@@ -1,7 +1,7 @@
 import { computed, reactive, ref } from "@vue/composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { OrderStatus } from "@/pages/manage/utils/enums/order-status";
 

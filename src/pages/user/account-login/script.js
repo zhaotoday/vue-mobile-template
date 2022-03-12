@@ -4,7 +4,7 @@ import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { onNavigationBarButtonTap } from "uni-composition-api";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {

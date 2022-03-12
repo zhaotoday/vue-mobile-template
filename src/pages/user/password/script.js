@@ -4,7 +4,7 @@ import { useValidators } from "vue-validation";
 import { useHelpers } from "@/composables/use-helpers";
 import { useCaptcha } from "vue-mobile/composables/use-captcha";
 import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
-import { useI18n } from "@/composables/use-i18n";
+import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {
