@@ -4,9 +4,12 @@ import { publicProductsApi } from "@/apis/public/products";
 import { useRoute } from "vue-mobile/composables/use-route";
 import wx from "wx-bridge";
 import { useHelpers } from "@/composables/use-helpers";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { getLocale } = useI18n();
+
     const { currentRoute } = useRoute();
 
     const { getImageUrl } = useHelpers();
@@ -36,6 +39,7 @@ export default {
 
     return {
       detail,
+      getLocale,
       onSwiperClick,
     };
   },
