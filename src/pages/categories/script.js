@@ -1,7 +1,7 @@
 import { onShow } from "uni-composition-api";
 import { usePageData } from "vue-mobile/composables/use-page-data";
 import { useRender } from "./composables/use-render";
-import { useCart } from "@/composables/use-cart";
+import { useCart } from "uni-shop/composables/use-cart";
 import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {

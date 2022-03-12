@@ -1,5 +1,5 @@
 import { onShow } from "uni-composition-api";
-import { useProducts } from "@/composables/use-products";
+import { useProducts } from "uni-shop/composables/use-products";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useRender } from "./composables/use-render";
 

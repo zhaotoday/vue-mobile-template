@@ -1,5 +1,5 @@
 import { onShow } from "uni-composition-api";
-import { useProducts } from "@/composables/use-products";
+import { useProducts } from "uni-shop/composables/use-products";
 import { OrderStatus } from "../utils/enums/order-status";
 import { useRender } from "./composables/use-render";
 import { useActions } from "./composables/use-actions";

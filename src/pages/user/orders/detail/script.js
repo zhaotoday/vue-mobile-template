@@ -2,7 +2,7 @@ import { ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { useRoute } from "vue-mobile/composables/use-route";
-import { useProducts } from "@/composables/use-products";
+import { useProducts } from "uni-shop/composables/use-products";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useI18n } from "vue-mobile/composables/use-i18n";
 import wx from "wx-bridge";

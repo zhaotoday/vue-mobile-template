@@ -1,5 +1,5 @@
-import { useCart } from "@/composables/use-cart";
-import { useProducts } from "@/composables/use-products";
+import { useCart } from "uni-shop/composables/use-cart";
+import { useProducts } from "uni-shop/composables/use-products";
 
 export default {
   emits: ["submit"],

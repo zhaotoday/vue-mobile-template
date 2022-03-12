@@ -1,7 +1,7 @@
 import Categories from "./components/categories";
 import { onShow } from "uni-composition-api";
 import { useRender } from "./composables/use-render";
-import { useCart } from "@/composables/use-cart";
+import { useCart } from "uni-shop/composables/use-cart";
 
 export default {
   components: {

@@ -1,4 +1,4 @@
-import { useCart } from "@/composables/use-cart";
+import { useCart } from "uni-shop/composables/use-cart";
 import { onShow } from "uni-composition-api";
 
 export default {

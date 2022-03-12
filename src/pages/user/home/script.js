@@ -3,7 +3,7 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { onShow } from "uni-composition-api";
 import wx from "wx-bridge";
 import { useI18n } from "vue-mobile/composables/use-i18n";
-import { useCart } from "@/composables/use-cart";
+import { useCart } from "uni-shop/composables/use-cart";
 import { store } from "@/store";
 
 export default {

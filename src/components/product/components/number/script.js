@@ -1,5 +1,5 @@
 import { onMounted, ref } from "@vue/composition-api";
-import { useCart } from "@/composables/use-cart";
+import { useCart } from "uni-shop/composables/use-cart";
 
 export default {
   props: {

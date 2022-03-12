@@ -1,10 +1,10 @@
 import { reactive, ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
 import { ordersApi } from "@/apis/client/orders";
-import { useProducts } from "@/composables/use-products";
+import { useProducts } from "uni-shop/composables/use-products";
 import { addressesApi } from "@/apis/client/addresses";
 import { usePageData } from "vue-mobile/composables/use-page-data";
-import { useCart } from "@/composables/use-cart";
+import { useCart } from "uni-shop/composables/use-cart";
 import { useI18n } from "vue-mobile/composables/use-i18n";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import wx from "wx-bridge";
