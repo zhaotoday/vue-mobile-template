@@ -15,7 +15,7 @@ export default {
   setup() {
     const { enums } = useEnums();
 
-    const { pt } = useI18n({ path: "checkout" });
+    const { pt } = useI18n({ page: "checkout" });
 
     const { getPageData } = usePageData();
 

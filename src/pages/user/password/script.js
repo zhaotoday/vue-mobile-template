@@ -8,7 +8,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { $t } = useI18n({ path: "user/password" });
+    const { $t } = useI18n({ page: "user/password" });
 
     const { isRequired, isPhoneNumber, isCaptcha, isPassword, validate } =
       useValidators();

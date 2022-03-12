@@ -5,7 +5,7 @@ import { useI18n } from "@/composables/use-i18n";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 
 export const useRender = () => {
-  const { $t } = useI18n({ path: "user/orders/list" });
+  const { $t } = useI18n({ page: "user/orders/list" });
 
   const { enums } = useEnums();
 

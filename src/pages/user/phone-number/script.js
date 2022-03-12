@@ -11,7 +11,7 @@ import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
-    const { $t } = useI18n({ path: "user/phone-number" });
+    const { $t } = useI18n({ page: "user/phone-number" });
 
     const { currentRoute } = useRoute();
 

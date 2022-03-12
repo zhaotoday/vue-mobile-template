@@ -5,7 +5,7 @@ import { store } from "@/store";
 export default {
   emits: ["submit"],
   setup(props, context) {
-    const { ct } = useI18n({ path: "cart-submit" });
+    const { ct } = useI18n({ component: "cart-submit" });
 
     const {
       selectedProducts,

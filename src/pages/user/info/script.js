@@ -14,7 +14,7 @@ import { permission } from "@/utils/permission";
 
 export default {
   setup() {
-    const { $t } = useI18n({ path: "user/info" });
+    const { $t } = useI18n({ page: "user/info" });
 
     const { isRequired, validate } = useValidators();
 

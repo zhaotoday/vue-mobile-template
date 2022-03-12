@@ -10,7 +10,7 @@ import { permission } from "@/utils/permission";
 
 export default {
   setup() {
-    const { $t, pt } = useI18n({ path: "user/orders/detail" });
+    const { $t, pt } = useI18n({ page: "user/orders/detail" });
 
     const { enums } = useEnums();
 
