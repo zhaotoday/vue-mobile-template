@@ -1,5 +1,6 @@
 import { publicAppUpgradesApi } from "@/apis/public/app-upgrades";
 import { appUpgrade } from "uni-plugins/utils/app-upgrade";
+import wx from "wx-bridge";
 
 export const useAppUpgrade = () => {
   const upgrade = async () => {
