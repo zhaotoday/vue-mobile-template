@@ -100,14 +100,7 @@ uni-page-head {
     box-sizing: border-box;
     color: map-get($colors, white);
     background-size: 100% 100%;
-
-    @include e(title, desc) {
-      line-height: 100%;
-    }
-
-    @include e(desc) {
-      padding-top: px2rpx(4px);
-    }
+    padding-left: px2rpx(100px);
 
     @include m(android) {
       background-image: url("#{$image-url}/pages/download/android.png");

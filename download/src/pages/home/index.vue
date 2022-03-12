@@ -26,22 +26,13 @@
       >
       </span>
     </div>
-    <div class="b-desc fs24">应用介绍</div>
     <a class="b-button b-button--android" href="#">
-      <div class="b-button__title fs24">Android版</div>
-      <div class="b-button__desc fs24">APK下载</div>
+      <div class="b-button__title fs24">Android</div>
     </a>
-    <div
-      class="b-button b-button--ios"
-      @click="$wx.showToast({ title: 'iPhone版正在开发中...' })"
-    >
-      <div class="b-button__title fs24">iPhone版</div>
-      <div class="b-button__desc fs24">AppStore下载</div>
+    <div class="b-button b-button--ios">
+      <div class="b-button__title fs24">iPhone</div>
     </div>
-    <div class="b-tip t-gray7 fs24 u-tac">
-      版权所有：福州市童易家网络科技有限公司<br />
-      闽ICP备19013055号-1
-    </div>
+    <div class="b-tip t-gray7 fs24 u-tac">powered by Sol Summer Shop</div>
   </div>
 </template>
 
