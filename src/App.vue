@@ -2,6 +2,7 @@
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useCart } from "@/composables/use-cart";
 import { usePageData } from "@/composables/use-page-data";
+import { useAppUpgrade } from "@/composables/use-app-upgrade";
 
 export default {
   async onLaunch() {
@@ -10,6 +11,8 @@ export default {
     await getEnums();
 
     useCart().renderProductsNumber();
+
+    await useAppUpgrade().check();
   },
   onHide() {
     usePageData().clearPageData();
