@@ -18,19 +18,19 @@ export const useAppUpgrade = () => {
     if (upgrade) {
       switch (packageType) {
         case "App":
-          appUpgrade.init({
-            logo: "/static/logos/169.png",
-            packageUrl: appUrl,
-            content: log,
-            contentAlign: "left",
-            cancel: "Cancel",
-            cancelColor: "#c0c4cc",
-            confirm: "Confirm",
-            confirmColor: "#fca523",
-          });
-
-          appUpgrade.show();
-
+          {
+            appUpgrade.init({
+              logo: "/static/logo.png",
+              packageUrl: appUrl,
+              content: log,
+              contentAlign: "left",
+              cancel: "Cancel",
+              cancelColor: "#c0c4cc",
+              confirm: "Confirm",
+              confirmColor: "#fca523",
+            });
+            appUpgrade.show();
+          }
           break;
 
         default:
