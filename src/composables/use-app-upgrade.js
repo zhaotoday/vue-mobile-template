@@ -2,7 +2,7 @@ import { publicAppUpgradesApi } from "@/apis/public/app-upgrades";
 
 export const useAppUpgrade = () => {
   const check = async () => {
-    // #ifdef APP-PLUS
+    // #ifndef APP-PLUS
     const { upgrade, packageType, appUrl, wgtUrl } =
       await publicAppUpgradesApi.post({
         action: "check",
