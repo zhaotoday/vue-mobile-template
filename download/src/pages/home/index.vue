@@ -27,14 +27,16 @@
         >
         </span>
       </div>
-      <a class="b-button b-button--android" href="#">
+      <a
+        class="b-button b-button--android"
+        :href="$helpers.getFileUrl({ id: latestAppUpgrade.appFileId })"
+      >
         <div class="b-button__title fs30">Android</div>
       </a>
       <div class="b-button b-button--ios">
         <div class="b-button__title fs30">iPhone</div>
       </div>
       <div class="b-tip t-gray7 fs24 u-tac">Powered by Sol Summer Shop</div>
-      {{ latestAppUpgrade }}
     </div>
   </div>
 </template>
