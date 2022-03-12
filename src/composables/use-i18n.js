@@ -1,6 +1,7 @@
 import { getCurrentInstance } from "@vue/composition-api";
+import wx from "wx-bridge";
 
-export const useI18n = ({ page = "", component = "" }) => {
+export const useI18n = ({ page = "", component = "" } = {}) => {
   const vm = getCurrentInstance();
 
   const $t = (key, locale) => {
@@ -27,9 +28,14 @@ export const useI18n = ({ page = "", component = "" }) => {
   const ct = (key, locale) =>
     vm.proxy.$i18n.t("components." + formatKey(component, key), locale);
 
+  const getLocale = () => {
+    wx.getStorageSync("locale") || "en";
+  };
+
   return {
     $t,
     pt,
     ct,
+    getLocale,
   };
 };

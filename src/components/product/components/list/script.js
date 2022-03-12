@@ -1,4 +1,5 @@
 import { useCart } from "@/composables/use-cart";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   props: {
@@ -27,10 +28,13 @@ export default {
   },
   emits: ["del"],
   setup() {
+    const { getLocale } = useI18n();
+
     const { selectProduct } = useCart();
 
     return {
       selectProduct,
+      getLocale,
     };
   },
 };
