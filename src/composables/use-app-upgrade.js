@@ -35,26 +35,22 @@ export const useAppUpgrade = () => {
 
         case "Wgt":
           {
-            uni.downloadFile({
-              url: data.wgtUrl,
-              success: (downloadResult) => {
-                if (downloadResult.statusCode === 200) {
-                  plus.runtime.install(
-                    downloadResult.tempFilePath,
-                    {
-                      force: false,
-                    },
-                    function () {
-                      console.log("install success...");
-                      plus.runtime.restart();
-                    },
-                    function (e) {
-                      console.error("install fail...");
-                    }
-                  );
-                }
-              },
+            const { statusCode, tempFilePath } = await wx.downloadFile({
+              url: wgtUrl,
             });
+
+            if (statusCode === 200) {
+              plus.runtime.install(
+                tempFilePath,
+                { force: false },
+                () => {
+                  plus.runtime.restart();
+                },
+                () => {
+                  console.error("install fail...");
+                }
+              );
+            }
           }
           break;
 
