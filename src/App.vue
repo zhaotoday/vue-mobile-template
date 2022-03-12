@@ -12,7 +12,7 @@ export default {
 
     useCart().renderProductsNumber();
 
-    await useAppUpgrade().check();
+    await useAppUpgrade().upgrade();
   },
   onHide() {
     usePageData().clearPageData();

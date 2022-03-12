@@ -3,7 +3,7 @@ import { appUpgrade } from "uni-plugins/utils/app-upgrade";
 
 export const useAppUpgrade = () => {
   const upgrade = async () => {
-    // #ifdef APP-PLUS
+    // #ifndef APP-PLUS
     const { upgrade, packageType, appUrl, wgtUrl, log } =
       await publicAppUpgradesApi.post({
         action: "check",
