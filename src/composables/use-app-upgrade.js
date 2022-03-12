@@ -8,10 +8,9 @@ export const useAppUpgrade = () => {
       await publicAppUpgradesApi.post({
         action: "check",
         body: {
-          // appId: plus.runtime.appid,
-          // versionName: plus.runtime.version,
           platform: "Android",
-          versionName: "1.0.0",
+          appId: plus.runtime.appid,
+          versionName: plus.runtime.version,
         },
       });
 
