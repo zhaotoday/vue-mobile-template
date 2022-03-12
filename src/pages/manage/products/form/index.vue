@@ -4,12 +4,20 @@
       <c-form-item label="商品分类">
         <div class="c-form__input">{{ categoriesDetail.name }}</div>
       </c-form-item>
-      <c-form-item label="商品名称">
+      <c-form-item label="商品英文名称">
         <c-form-input
-          placeholder="请输入商品名称"
+          placeholder="请输入商品英文名称"
           v-model.trim="cForm.model.name"
           :error="cForm.errors.name"
           @blur="validate(cForm, 'name')"
+        />
+      </c-form-item>
+      <c-form-item label="商品中文名称">
+        <c-form-input
+          placeholder="请输入商品中文名称"
+          v-model.trim="cForm.model.cnName"
+          :error="cForm.errors.cnName"
+          @blur="validate(cForm, 'cnName')"
         />
       </c-form-item>
       <c-form-item label="商品图片">
