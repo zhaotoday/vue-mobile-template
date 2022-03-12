@@ -20,6 +20,6 @@ export const store = new Vuex.Store({
     enums: require("vue-mobile/@lr/store/modules/enums").default,
     users: require("vue-mobile/@lr/store/modules/users").default,
     cart: require("./modules/cart").default,
-    pageData: require("vue-mobile/modules/page-data").default,
+    pageData: require("vue-mobile/store/modules/page-data").default,
   },
 });
