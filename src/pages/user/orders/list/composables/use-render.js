@@ -3,9 +3,10 @@ import { ordersApi } from "@/apis/client/orders";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useI18n } from "@/composables/use-i18n";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
+import { OrderStatus } from "@/pages/manage/utils/enums/order-status";
 
 export const useRender = () => {
-  const { $t } = useI18n({ page: "user/orders/list" });
+  const { $t, getLocale } = useI18n({ page: "user/orders/list" });
 
   const { enums } = useEnums();
 
@@ -17,13 +18,17 @@ export const useRender = () => {
     current: 0,
   });
 
-  const tabItems = computed(() => [
-    {
-      label: $t("$.orderStatuses.all"),
-      value: "",
-    },
-    ...enums.value.OrderStatus,
-  ]);
+  const tabItems = computed(() =>
+    getLocale() === "en"
+      ? [
+          {
+            label: $t("$.orderStatuses.all"),
+            value: "",
+          },
+          ...enums.value.OrderStatus,
+        ]
+      : OrderStatus
+  );
 
   const list = ref({
     items: [],
