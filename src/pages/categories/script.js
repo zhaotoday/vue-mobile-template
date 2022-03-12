@@ -2,9 +2,12 @@ import { onShow } from "uni-composition-api";
 import { usePageData } from "@/composables/use-page-data";
 import { useRender } from "./composables/use-render";
 import { useCart } from "@/composables/use-cart";
+import { useI18n } from "@/composables/use-i18n";
 
 export default {
   setup() {
+    const { getLocale } = useI18n();
+
     const { setPageData, getCurrentPage, getPageData } = usePageData();
 
     const {
@@ -48,6 +51,7 @@ export default {
       cTab,
       categoriesList,
       productsList,
+      getLocale,
       changeCategory,
     };
   },

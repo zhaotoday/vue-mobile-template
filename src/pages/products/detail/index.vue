@@ -16,7 +16,7 @@
     />
     <div class="b-info bg-white u-mb24">
       <div class="b-info__name fs32 u-lh1">
-        {{ getLocale() ? detail.name : detail.cnName }}
+        {{ getLocale() === "en" ? detail.name : detail.cnName }}
       </div>
       <div class="b-info__others u-lh1">
         <span class="t-error fs32">{{ $t("$.money") }}{{ detail.price }}</span>

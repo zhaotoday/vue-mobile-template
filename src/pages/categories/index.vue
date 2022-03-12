@@ -16,7 +16,7 @@
         :class="{ 'is-active': index === cTab.current }"
         @click="changeCategory(index)"
       >
-        {{ item.name }}
+        {{ getLocale() === "en" ? item.name : item.cnName }}
       </li>
     </ul>
     <scroll-view class="b-products" scroll-y>

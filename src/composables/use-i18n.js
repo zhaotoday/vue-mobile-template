@@ -29,7 +29,7 @@ export const useI18n = ({ page = "", component = "" } = {}) => {
     vm.proxy.$i18n.t("components." + formatKey(component, key), locale);
 
   const getLocale = () => {
-    wx.getStorageSync("locale") || "en";
+    return wx.getStorageSync("locale") || "en";
   };
 
   return {
