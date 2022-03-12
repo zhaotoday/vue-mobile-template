@@ -36,6 +36,7 @@
     "regenerator-runtime": "^0.13.9",
     "sass-utils": "1.1.2",
     "uni-composition-api": "^0.6.1",
+    "uni-plugins": "1.0.1",
     "uni-simple-router": "^2.0.8-beta.3",
     "use-cos": "^0.0.2",
     "uview-ui": "^2.0.28",

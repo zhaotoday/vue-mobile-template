@@ -1,9 +1,10 @@
 import { publicAppUpgradesApi } from "@/apis/public/app-upgrades";
+import { appUpgrade } from "uni-plugins/utils/app-upgrade";
 
 export const useAppUpgrade = () => {
   const check = async () => {
     // #ifndef APP-PLUS
-    const { upgrade, packageType, appUrl, wgtUrl } =
+    const { upgrade, packageType, appUrl, wgtUrl, log } =
       await publicAppUpgradesApi.post({
         action: "check",
         body: {
@@ -13,7 +14,29 @@ export const useAppUpgrade = () => {
           versionName: "1.0.0",
         },
       });
-    console.log(upgrade, packageType, appUrl, wgtUrl);
+
+    if (upgrade) {
+      switch (packageType) {
+        case "App":
+          appUpgrade.init({
+            logo: "/static/logos/169.png",
+            packageUrl: appUrl,
+            content: log,
+            contentAlign: "left",
+            cancel: "Cancel",
+            cancelColor: "#c0c4cc",
+            confirm: "Confirm",
+            confirmColor: "#fca523",
+          });
+
+          appUpgrade.show();
+
+          break;
+
+        default:
+          break;
+      }
+    }
     // #endif
   };
 
