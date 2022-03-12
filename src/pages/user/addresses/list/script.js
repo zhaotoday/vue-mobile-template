@@ -5,7 +5,7 @@ import { useRoute } from "vue-mobile/composables/use-route";
 import { addressesApi } from "@/apis/client/addresses";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
-import { usePageData } from "@/composables/use-page-data";
+import { usePageData } from "vue-mobile/composables/use-page-data";
 import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {

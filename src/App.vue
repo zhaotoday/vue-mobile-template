@@ -1,7 +1,7 @@
 <script>
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useCart } from "@/composables/use-cart";
-import { usePageData } from "@/composables/use-page-data";
+import { usePageData } from "vue-mobile/composables/use-page-data";
 import { useAppUpgrade } from "vue-mobile/@lr/composables/use-app-upgrade";
 
 export default {

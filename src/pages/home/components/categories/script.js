@@ -1,4 +1,4 @@
-import { usePageData } from "@/composables/use-page-data";
+import { usePageData } from "vue-mobile/composables/use-page-data";
 import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
