@@ -27,10 +27,10 @@
       </span>
     </div>
     <a class="b-button b-button--android" href="#">
-      <div class="b-button__title fs24">Android</div>
+      <div class="b-button__title fs30">Android</div>
     </a>
     <div class="b-button b-button--ios">
-      <div class="b-button__title fs24">iPhone</div>
+      <div class="b-button__title fs30">iPhone</div>
     </div>
     <div class="b-tip t-gray7 fs24 u-tac">powered by Sol Summer Shop</div>
   </div>
