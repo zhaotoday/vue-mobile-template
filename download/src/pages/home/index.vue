@@ -34,6 +34,7 @@
         <div class="b-button__title fs30">iPhone</div>
       </div>
       <div class="b-tip t-gray7 fs24 u-tac">Powered by Sol Summer Shop</div>
+      {{ latestAppUpgrade }}
     </div>
   </div>
 </template>
