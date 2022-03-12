@@ -1,8 +1,7 @@
-import { onLoad, onShow } from "uni-composition-api";
+import { onShow } from "uni-composition-api";
 import { usePageData } from "@/composables/use-page-data";
 import { useRender } from "@/pages/categories/composables/use-render";
 import wx from "wx-bridge";
-import { addressesApi } from "@/apis/client/addresses";
 import { productsApi } from "@/apis/client/products";
 
 export default {
