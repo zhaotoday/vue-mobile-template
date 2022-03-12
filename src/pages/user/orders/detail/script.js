@@ -6,7 +6,7 @@ import { useProducts } from "@/composables/use-products";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useI18n } from "@/composables/use-i18n";
 import wx from "wx-bridge";
-import { permission } from "@/utils/permission";
+import { permission } from "uni-plugins/utils/permission";
 
 export default {
   setup() {

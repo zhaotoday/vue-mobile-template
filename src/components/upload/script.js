@@ -3,7 +3,7 @@ import { useConsts } from "@/composables/use-consts";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 import { onMounted, ref, watch } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
-import { permission } from "@/utils/permission";
+import { permission } from "uni-plugins/utils/permission";
 
 export default {
   props: {

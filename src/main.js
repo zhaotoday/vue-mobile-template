@@ -8,7 +8,7 @@ import wx from "wx-bridge";
 import { locale } from "@/locale";
 import { globalPlugin } from "@/utils/global-plugin";
 import { router, RouterMount } from "./router";
-import { permission } from "@/utils/permission";
+import { permission } from "uni-plugins/utils/permission";
 
 Vue.config.productionTip = false;
 

@@ -1,6 +1,6 @@
 import wx from "wx-bridge";
 import { ordersApi } from "@/apis/client/orders";
-import { permission } from "@/utils/permission";
+import { permission } from "uni-plugins/utils/permission";
 
 export const useActions = ({ renderOrdersList = () => {} }) => {
   const openLocation = async ({ location }) => {
