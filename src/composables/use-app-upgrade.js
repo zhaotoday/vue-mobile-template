@@ -33,6 +33,31 @@ export const useAppUpgrade = () => {
           }
           break;
 
+        case "Wgt":
+          {
+            uni.downloadFile({
+              url: data.wgtUrl,
+              success: (downloadResult) => {
+                if (downloadResult.statusCode === 200) {
+                  plus.runtime.install(
+                    downloadResult.tempFilePath,
+                    {
+                      force: false,
+                    },
+                    function () {
+                      console.log("install success...");
+                      plus.runtime.restart();
+                    },
+                    function (e) {
+                      console.error("install fail...");
+                    }
+                  );
+                }
+              },
+            });
+          }
+          break;
+
         default:
           break;
       }

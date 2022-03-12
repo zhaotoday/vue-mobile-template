@@ -7,6 +7,7 @@ module.exports = {
   globals: {
     wx: true,
     uni: true,
+    plus: true,
     ROUTES: true,
     getCurrentPages: true,
   },
