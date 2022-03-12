@@ -7,8 +7,8 @@ export const useAppUpgrade = () => {
       action: "check",
       body: {
         platform: "Android",
-        versionName: 2,
-        versionCode: 33,
+        appId: plus.runtime.appid,
+        versionName: plus.runtime.version,
       },
     });
 
