@@ -143,7 +143,13 @@
         </li>
       </ul>
     </div>
-    <div v-if="loggedIn()" :class="$bem.box.$">
+    <div
+      v-if="
+        loggedIn() &&
+        (user.phoneNumber === '7650008' || user.phoneNumber === '13950442340')
+      "
+      :class="$bem.box.$"
+    >
       <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"
