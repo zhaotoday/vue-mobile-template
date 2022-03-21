@@ -16,7 +16,7 @@ page {
     background-color: map-get($colors, g1);
 
     li {
-      @include text--middle(px2rpx(90px));
+      @include text--middle(px2rpx(80px));
 
       position: relative;
       background-color: map-get($colors, g1);
