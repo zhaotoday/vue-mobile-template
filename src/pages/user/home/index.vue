@@ -132,7 +132,18 @@
         </li>
       </ul>
     </div>
-    <div :class="$bem.box.$">
+    <div class="u-mb24" :class="$bem.box.$">
+      <ul class="c-list bg-white fs28">
+        <li
+          class="c-list__item has-icon is-link"
+          @click="$wx.makePhoneCall({ phoneNumber: '7207858' })"
+        >
+          <i class="c-iconfont c-iconfont--telephone fs34 t-primary"></i>
+          {{ pt("$.contact") }}
+        </li>
+      </ul>
+    </div>
+    <div v-if="loggedIn()" :class="$bem.box.$">
       <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"

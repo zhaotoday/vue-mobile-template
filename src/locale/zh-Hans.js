@@ -148,6 +148,7 @@ export const zhHans = {
           myOrders: "我的订单",
           myAddresses: "我的地址",
           bindWx: "绑定微信",
+          contact: "联系我们",
         },
         tips: {
           confirmLogout: "确认退出账号吗？",

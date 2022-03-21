@@ -148,6 +148,7 @@ export const en = {
           myOrders: "My Orders",
           myAddresses: "My Addresses",
           bindWx: "Bind Wechat",
+          contact: "Contact Us",
         },
         tips: {
           confirmLogout: "Confirm to logout?",
