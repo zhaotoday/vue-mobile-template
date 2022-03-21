@@ -136,7 +136,7 @@
       <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"
-          @click="$wx.makePhoneCall({ phoneNumber: '7207858' })"
+          @click="$wx.makePhoneCall({ phoneNumber: '7204466' })"
         >
           <i class="c-iconfont c-iconfont--telephone fs34 t-primary"></i>
           {{ pt("$.contact") }}
