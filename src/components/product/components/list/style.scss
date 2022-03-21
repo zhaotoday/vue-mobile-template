@@ -94,7 +94,10 @@
       }
 
       @include e(name) {
+        @include text--overflow;
+
         top: px2rpx(30px);
+        width: calc(100% - 200rpx); // 100% - 170rpx - 30rpx
       }
 
       @include e(price) {
