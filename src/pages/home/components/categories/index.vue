@@ -1,6 +1,6 @@
 <template>
   <div class="vc-categories u-pt24 u-pb10 bg-white">
-    <u-grid col="5" :border="false">
+    <u-grid col="3" :border="false">
       <u-grid-item
         v-for="(item, index) in items"
         :key="index"
@@ -11,7 +11,7 @@
           mode="aspectFill"
           :src="$helpers.getFileUrl({ id: item.iconFileId })"
         />
-        <div class="fs26 u-pt10 u-pb20 u-lh1">
+        <div class="fs24 u-pt10 u-pb20 u-lh1">
           {{ getLocale() === "en" ? item.name : item.cnName }}
         </div>
       </u-grid-item>
