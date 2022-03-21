@@ -1,3 +1,12 @@
-@use "sass:map";
-
 @import "~@/assets/styles/utils/index.scss";
+
+@include c(contact) {
+  @include position--fixed(null, px2rpx(30px), px2rpx(90px));
+  @include circle(px2rpx(80px));
+
+  i {
+    @include position--absolute(50%, null, null, 50%);
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+}

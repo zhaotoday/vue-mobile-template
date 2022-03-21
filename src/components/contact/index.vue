@@ -1,6 +1,6 @@
 <template>
-  <div class="c-contact">
-    <i class="c-iconfont c-iconfont--phone"></i>
+  <div class="c-contact bg-secondary">
+    <i class="c-iconfont c-iconfont--telephone t-white fs40"></i>
   </div>
 </template>
 

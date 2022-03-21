@@ -35,6 +35,7 @@
       :items="productsList.items"
       :col="2"
     />
+    <gc-contact />
   </div>
 </template>
 
