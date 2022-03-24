@@ -22,8 +22,8 @@
         }
     },
     "app-plus" : {
-        "compatible": {
-            "ignoreVersion": true
+        "compatible" : {
+            "ignoreVersion" : true
         },
         /* 5+App特有相关 */
         "usingComponents" : true,
