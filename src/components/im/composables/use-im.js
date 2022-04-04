@@ -2,6 +2,7 @@ import wx from "wx-bridge";
 import { Ws } from "../utils/ws.class";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
+import dayjs from "dayjs";
 
 const { ApiUrl, WsUrl } = useConsts();
 
@@ -115,18 +116,6 @@ export const useIm = () => {
     );
   };
 
-  const formatMessages = (data) => {
-    return data.map(({ alias, fromUser, createdAt, ...rest }) => ({
-      fromUser: {
-        id: fromUser.id,
-        avatar: fromUser.avatarUrl,
-        username: alias || fromUser.nickName,
-      },
-      time: ws.formatTime(createdAt),
-      ...rest,
-    }));
-  };
-
   const ping = () => {
     ws.send({
       event: ws.events.ping,
@@ -169,6 +158,22 @@ export const useIm = () => {
     });
   };
 
+  const formatTime = (dateTime) => {
+    const day = dayjs().format("YYYY-MM-DD");
+    const diffDay = dayjs(dateTime).format("YYYY-MM-DD");
+    const days = dayjs(day).diff(dayjs(diffDay), "day");
+    const date = days
+      ? {
+          0: "",
+          1: "昨天",
+          2: "前天",
+        }[days] || dayjs(dateTime).format("YY/MM/DD")
+      : "";
+    const time = dayjs(dateTime).format("HH:mm");
+
+    return date ? date + " " + time : time;
+  };
+
   const getFileUrl = (id) => {
     return `${ApiUrl}/public/messageFiles/${id}`;
   };
@@ -187,12 +192,12 @@ export const useIm = () => {
     ws,
     initialize,
     formatChats,
-    formatMessages,
     createChat,
     getChats,
     markChatRead,
     createMessage,
     getMessages,
+    formatTime,
     getFileUrl,
     getAvatarUrl,
   };
