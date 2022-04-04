@@ -17,16 +17,6 @@
     transform: translateY(-50%);
     display: block;
     border-radius: px2rpx(6px);
-
-    @include s(is-default) {
-      background: {
-        color: map-get($colors, primary);
-        image: url("./images/avatar.png");
-        size: px2rpx(50px) px2rpx(50px);
-        position: center center;
-        repeat: no-repeat;
-      }
-    }
   }
 
   @include e(body) {

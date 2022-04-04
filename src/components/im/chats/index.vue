@@ -7,12 +7,10 @@
       @click="$emit('goto-chat', item)"
     >
       <image
-        v-if="item.avatar"
         class="c-im-chats__avatar"
         mode="aspectFill"
-        :src="getAvatarUrl(item)"
+        :src="getAvatarUrl(item.user)"
       />
-      <div v-else class="c-im-chats__avatar is-default"></div>
       <div v-if="item.unreadMessageCount" class="c-im-chats__count fs22">
         {{ item.unreadMessageCount }}
       </div>
