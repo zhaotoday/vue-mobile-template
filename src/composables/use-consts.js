@@ -16,8 +16,8 @@ export const useConsts = () => {
   const StaticUrl = "https://my-app.liruan.cn/static";
 
   // WebSocket 地址
-  const WsUrl = "wss://mall.tongnianjihua.com/wss";
-  // const WsUrl = "ws://localhost:3002";
+  // const WsUrl = "wss://sol-api.fzlr.com/wss";
+  const WsUrl = "ws://localhost:3002";
 
   return {
     ApiUrl,
