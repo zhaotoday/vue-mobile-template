@@ -1,5 +1,5 @@
 import { useIm } from "@/components/im/components/composables/use-im";
-import { reactive, ref } from "@vue/composition-api";
+import { onMounted, reactive, ref } from "@vue/composition-api";
 
 export default {
   computed: {
@@ -20,6 +20,10 @@ export default {
 
     const list = ref({
       items: [],
+    });
+
+    onMounted(async () => {
+      await render();
     });
 
     const onGetChatList = (data) => {
