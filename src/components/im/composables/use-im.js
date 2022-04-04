@@ -2,15 +2,12 @@ import wx from "wx-bridge";
 import { Ws } from "../utils/ws.class";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
-import { useHelpers } from "@/composables/use-helpers";
 
 const { ApiUrl, WsUrl } = useConsts();
 
 const ws = new Ws({ url: WsUrl });
 
 export const useIm = () => {
-  const { getImageUrl } = useHelpers();
-
   const { user } = useUsers();
 
   const initialize = () => {
