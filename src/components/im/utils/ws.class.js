@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import socket from "plus-websocket";
 import { useConsts } from "@/composables/use-consts";
 import { useHelpers } from "@/composables/use-helpers";
-import { useAuth } from "@lr/composables/use-auth";
+import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 
 const { keyMirror } = useHelpers();
 
