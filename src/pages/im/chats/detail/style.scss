@@ -4,10 +4,10 @@ page {
   height: 100%;
 }
 
-@include p(im-chats-detail) {
+@include p(chat-window) {
   height: 100%;
 
-  @include b(messages) {
-    height: 100%;
+  @include b(chat-messages) {
+    height: calc(100% - 190rpx);
   }
 }
