@@ -13,12 +13,17 @@ export const Ws = class extends Mitt {
     error: null,
     close: null,
     ping: null,
+    pingOk: null,
     createChat: null,
-    getChatList: null,
+    createChatOk: null,
+    getChats: null,
+    getChatsOk: null,
     markChatRead: null,
+    markChatReadOk: null,
     createMessage: null,
+    createMessageOk: null,
     getMessages: null,
-    newMessage: null,
+    getMessagesOk: null,
   });
 
   connected = false;
