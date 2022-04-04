@@ -1,10 +1,10 @@
 import { onShow, onUnload } from "uni-composition-api";
 import wx from "wx-bridge";
 import { useRoute } from "vue-mobile/composables/use-route";
-import { useChat } from "@/components/chat/composables/use-chat";
+import { useIm } from "@/components/im/components/composables/use-im";
 import { ref } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
-import { WxUsersApi } from "@/apis/wx/wx-users";
+import { usersApi } from "vue-mobile/@lr/apis/client/users";
 import { ChatFriendsApi } from "@/apis/wx/chat-friends";
 import { ClassesApi } from "@/apis/wx/classes";
 import { PublicProductsApi } from "@/apis/public/products";
@@ -20,7 +20,7 @@ export default {
       formatMessages,
       createChat,
       createMessage,
-    } = useChat();
+    } = useIm();
 
     const chatId = ref(0);
 
@@ -61,17 +61,11 @@ export default {
 
       switch (chatType) {
         case "OneToOne": {
-          const { nickName: toUserName } = await new WxUsersApi().get({
+          const { name, wxNickName } = await usersApi.get({
             id: toUserId,
           });
-          const { alias } = await new ChatFriendsApi().post({
-            action: "getAlias",
-            body: {
-              friendUserId: toUserId,
-            },
-          });
 
-          wx.setNavigationBarTitle({ title: alias || toUserName });
+          wx.setNavigationBarTitle({ title: name || wxNickName });
 
           break;
         }
