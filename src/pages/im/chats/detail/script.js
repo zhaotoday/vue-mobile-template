@@ -10,14 +10,8 @@ export default {
   setup() {
     const { currentRoute } = useRoute();
 
-    const {
-      ws,
-      markChatRead,
-      getMessagesOk,
-      formatMessages,
-      createChatOk,
-      createMessage,
-    } = useIm();
+    const { ws, markChatRead, getMessages, createChat, createMessage } =
+      useIm();
 
     const chatId = ref(0);
 
@@ -28,7 +22,7 @@ export default {
     const onCreateChatOk = (data) => {
       chatId.value = data.chatId;
 
-      getMessagesOk({
+      getMessages({
         chatId: chatId.value,
         toUserId: currentRoute.query.toUserId,
       });
@@ -36,7 +30,7 @@ export default {
     };
 
     const onGetMessagesOk = async (data) => {
-      items.value = formatMessages(data);
+      items.value = data;
 
       await useHelpers().sleep(100);
 
@@ -46,7 +40,7 @@ export default {
     };
 
     const onCreateMessageOk = () => {
-      getMessagesOk({
+      getMessages({
         chatId: chatId.value,
         toUserId: currentRoute.query.toUserId,
       });
@@ -76,7 +70,7 @@ export default {
       ws.on(ws.events.createMessageOk, onCreateMessageOk);
 
       ws.ready(() => {
-        createChatOk({ type: chatType, toUserId });
+        createChat({ type: chatType, toUserId });
       });
     });
 
@@ -99,7 +93,7 @@ export default {
     const onMessageRetractOk = () => {
       const { toUserId } = currentRoute.query;
 
-      getMessagesOk({ toUserId });
+      getMessages({ toUserId });
     };
 
     return {
