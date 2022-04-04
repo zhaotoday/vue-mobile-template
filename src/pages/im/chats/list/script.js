@@ -32,7 +32,7 @@ export default {
     };
 
     const render = async () => {
-      ws.on(ws.events.getChats, onGetChats);
+      ws.on(ws.events.getChatsOk, onGetChats);
 
       ws.ready(() => {
         getChats();
