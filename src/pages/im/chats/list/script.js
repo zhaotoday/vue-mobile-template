@@ -12,7 +12,7 @@ export default {
   setup() {
     const loaded = ref(false);
 
-    const { ws, formatChatList, getChatList } = useIm();
+    const { ws, formatChatList, getChats } = useIm();
 
     const cSearch = reactive({
       keywords: "",
@@ -26,21 +26,21 @@ export default {
       await render();
     });
 
-    const onGetChatList = (data) => {
+    const onGetChats = (data) => {
       list.value = { items: formatChatList(data) };
       loaded.value = true;
     };
 
     const render = async () => {
-      ws.on(ws.events.getChatList, onGetChatList);
+      ws.on(ws.events.getChats, onGetChats);
 
       ws.ready(() => {
-        getChatList();
+        getChats();
       });
     };
 
     const unRender = () => {
-      ws.off(ws.events.getChatList, onGetChatList);
+      ws.off(ws.events.getChats, onGetChats);
     };
 
     const confirmSearch = (value) => {
