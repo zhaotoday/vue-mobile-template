@@ -12,11 +12,11 @@
         :src="getAvatarUrl(item.fromUser)"
       />
       <div class="c-chat-messages__time fs24 t-g7 u-tac">
-        {{ item.time }}
+        {{ formatTime(item.createdAt) }}
       </div>
       <div class="c-chat-messages__body">
         <div class="c-chat-messages__title fs24 t-g7">
-          {{ item.fromUser.username }}
+          {{ item.fromUser.name || item.fromUser.wxNickName }}
         </div>
         <div class="c-chat-messages__message fs26" @longtap="select(item)">
           <template v-if="item.type === 'Text'">
