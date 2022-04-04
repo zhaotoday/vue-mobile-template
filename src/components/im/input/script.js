@@ -1,5 +1,5 @@
 import { reactive } from "@vue/composition-api";
-import { useFormValidators } from "vue-validation";
+import { useValidators } from "vue-validation";
 import wx from "wx-bridge";
 import Recorder from "./recorder";
 import { useConsts } from "@/composables/use-consts";
@@ -25,7 +25,7 @@ export default {
   },
   emits: ["send"],
   setup(props, context) {
-    const { isRequired, validate } = useFormValidators();
+    const { isRequired, validate } = useValidators();
 
     const cForm = reactive({
       model: {
