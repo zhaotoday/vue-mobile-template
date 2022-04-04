@@ -85,34 +85,37 @@ export const useIm = () => {
   };
 
   const formatChats = (data) => {
-    return data.map(({ lastMessage, unreadMessages, ...rest }) => {
-      return {
-        ...rest,
-        message: (({ type, text, retracted }) => {
-          if (retracted) {
-            return "[撤回消息]";
-          } else {
-            switch (type) {
-              case "Image":
-                return "[图片消息]";
+    return data.map(
+      ({ fromUser, toUser, lastMessage, unreadMessages, ...rest }) => {
+        return {
+          ...rest,
+          user: fromUser.id === user.value.id ? toUser : fromUser,
+          message: (({ type, text, retracted }) => {
+            if (retracted) {
+              return "[撤回消息]";
+            } else {
+              switch (type) {
+                case "Image":
+                  return "[图片消息]";
 
-              case "Audio":
-                return "[语音消息]";
+                case "Audio":
+                  return "[语音消息]";
 
-              case "File":
-                return "[文件消息]";
+                case "File":
+                  return "[文件消息]";
 
-              default:
-                return text;
+                default:
+                  return text;
+              }
             }
-          }
-        })(lastMessage),
-        time: ws.formatTime(lastMessage.createdAt),
-        unreadMessageCount: (unreadMessages.find(
-          ({ userId }) => userId === user.value.id
-        ) || {})["unreadMessageCount"],
-      };
-    });
+          })(lastMessage),
+          time: ws.formatTime(lastMessage.createdAt),
+          unreadMessageCount: (unreadMessages.find(
+            ({ userId }) => userId === user.value.id
+          ) || {})["unreadMessageCount"],
+        };
+      }
+    );
   };
 
   const formatMessages = (data) => {
