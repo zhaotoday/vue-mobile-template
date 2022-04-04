@@ -1,1 +1,13 @@
-@import "~@/assets/styles/utils/index.scss";
+@import "~@/assets/styles/utils/index";
+
+page {
+  height: 100%;
+}
+
+@include p(chat-message-window) {
+  height: 100%;
+
+  @include b(chat-messages) {
+    height: 100%;
+  }
+}
