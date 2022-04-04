@@ -1,0 +1,49 @@
+@import "~@/assets/styles/utils/index";
+
+@include c(friends) {
+  @include e(item) {
+    @include clearfix;
+
+    position: relative;
+    height: px2rpx(80px + 20px * 2);
+    background-color: white;
+    border-bottom: 1px solid map-get($colors, gray2);
+  }
+
+  @include e(avatar) {
+    @include position--absolute(50%, null, null, px2rpx(30px));
+    @include size(px2rpx(80px), px2rpx(80px));
+
+    transform: translateY(-50%);
+    display: block;
+    border-radius: px2rpx(6px);
+
+    @include s(is-default) {
+      background: {
+        color: map-get($colors, primary);
+        image: url("./images/avatar.png");
+        size: px2rpx(50px) px2rpx(50px);
+        position: center center;
+        repeat: no-repeat;
+      }
+    }
+  }
+
+  @include e(name) {
+    @include position--absolute(50%, null, null, px2rpx(30px + 80px + 20px));
+    @include text--overflow;
+
+    width: px2rpx(750px - 30px - 80px - 20px - 30px);
+    transform: translateY(-50%);
+    line-height: 100%;
+  }
+
+  @include e(edit) {
+    @include position--absolute(50%, px2rpx(20px));
+    @include size(px2rpx(50px), px2rpx(50px));
+
+    transform: translateY(-50%);
+    line-height: px2rpx(50px);
+    text-align: center;
+  }
+}

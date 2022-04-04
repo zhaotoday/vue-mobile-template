@@ -1,0 +1,9 @@
+@import "~@/assets/styles/utils/index";
+
+@include cc(audio) {
+  line-height: 100%;
+
+  i {
+    margin-right: px2rpx(10px);
+  }
+}

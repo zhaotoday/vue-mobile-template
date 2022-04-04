@@ -1,0 +1,43 @@
+<template>
+  <div class="c-chat-input" :class="backgroundClass">
+    <div class="c-chat-input__wrap">
+      <textarea
+        class="fs26"
+        auto-height
+        :placeholder="placeholder"
+        placeholder-class="t-placeholder"
+        v-model.trim="cForm.model.content"
+      />
+      <div
+        class="c-chat-input__submit c-button w84 h60 fs30"
+        :class="{ 'is-disabled': !cForm.model.content }"
+        @click="send"
+      >
+        {{ sendText }}
+      </div>
+      <cc-recorder
+        v-show="cRecorder.visible"
+        @hide="cRecorder.visible = false"
+        @ok="sendAudio"
+      />
+    </div>
+    <div class="c-chat-input__operations o-grid c37 fs52 u-tac">
+      <div class="o-grid__cell" @click="toggleRecorder">
+        <i class="c-iconfont c-iconfont--audio"></i>
+      </div>
+      <div class="o-grid__cell" @click="sendImage">
+        <i class="c-iconfont c-iconfont--image"></i>
+      </div>
+      <div class="o-grid__cell is-opacity">
+        <i class="c-iconfont c-iconfont--video"></i>
+      </div>
+      <div class="o-grid__cell is-opacity">
+        <i class="c-iconfont c-iconfont--courseware"></i>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script src="./script.js"></script>
+
+<style lang="scss" src="./style.scss"></style>
