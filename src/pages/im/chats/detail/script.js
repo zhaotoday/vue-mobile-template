@@ -1,4 +1,3 @@
-import ChatMessages from "@/components/chat/messages";
 import { onShow } from "uni-composition-api";
 import { useCurrentRoute } from "vue-mobile/composables/use-current-route";
 import { MessagesApi } from "@/apis/wx/messages";
@@ -8,9 +7,6 @@ import { useHelpers } from "@/composables/use-helpers";
 import wx from "wx-bridge";
 
 export default {
-  components: {
-    "c-messages": ChatMessages,
-  },
   setup() {
     const { currentRoute } = useCurrentRoute();
 

@@ -1,7 +1,7 @@
 <template>
   <div class="p-im-chats-detail">
     <scroll-view class="b-messages" scroll-y :scroll-into-view="lastViewId">
-      <c-messages :items="list.items" />
+      <gc-im-messages :items="list.items" />
     </scroll-view>
   </div>
 </template>
