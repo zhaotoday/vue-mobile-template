@@ -85,17 +85,9 @@ export const useIm = () => {
   };
 
   const formatChats = (data) => {
-    return data.map(({ id, type, user, lastMessage, unreadMessages }) => {
+    return data.map(({ lastMessage, unreadMessages, ...rest }) => {
       return {
-        id,
-        type,
-        userId: user.id,
-        name: user.name,
-        avatar:
-          user.avatarUrl ||
-          (user.avatarId
-            ? getImageUrl({ id: user.avatarId, width: 80, height: 80 })
-            : ""),
+        ...rest,
         message: (({ type, text, retracted }) => {
           if (retracted) {
             return "[撤回消息]";
