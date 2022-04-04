@@ -7,7 +7,10 @@
       :class="item.fromUser.id === user.id ? 'is-me' : 'is-other'"
       :id="`message-${item.id}`"
     >
-      <image class="c-chat-messages__avatar" :src="item.fromUser.avatar" />
+      <image
+        class="c-chat-messages__avatar"
+        :src="getAvatarUrl(item.fromUser)"
+      />
       <div class="c-chat-messages__time fs24 t-g7 u-tac">
         {{ item.time }}
       </div>

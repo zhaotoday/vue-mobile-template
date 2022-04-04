@@ -18,7 +18,7 @@ export default {
   emits: ["retract-ok"],
   setup(props, context) {
     const { user } = useUsers();
-    const { getFileUrl } = useIm();
+    const { getFileUrl, getAvatarUrl } = useIm();
 
     const cMessages = reactive({
       id: 0,
@@ -52,6 +52,7 @@ export default {
       cMessages,
       cAudio,
       getFileUrl,
+      getAvatarUrl,
       previewImage,
       select,
       retract,
