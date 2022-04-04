@@ -33,7 +33,7 @@ export const useIm = () => {
     };
 
     ws.ready(() => {
-      getChatList();
+      getChats();
 
       clearInterval(timers.heartbeat);
 
@@ -61,12 +61,12 @@ export const useIm = () => {
         }
       }
 
-      getChatList();
+      getChats();
     });
 
-    ws.on(ws.events.getChatList, (data) => {
+    ws.on(ws.events.getChats, (data) => {
       if (data && data.length) {
-        const count = formatChatList(data)
+        const count = formatChats(data)
           .map(({ unreadMessageCount }) => unreadMessageCount || 0)
           .reduce((prev, current) => prev + current);
 
@@ -84,7 +84,7 @@ export const useIm = () => {
     });
   };
 
-  const formatChatList = (data) => {
+  const formatChats = (data) => {
     return data.map(({ id, type, user, lastMessage, unreadMessages }) => {
       return {
         id,
@@ -153,9 +153,9 @@ export const useIm = () => {
     });
   };
 
-  const getChatList = ({ type, toUserId } = {}) => {
+  const getChats = ({ type, toUserId } = {}) => {
     ws.send({
-      event: ws.events.getChatList,
+      event: ws.events.getChats,
       data: { type, toUserId },
     });
   };
@@ -184,11 +184,11 @@ export const useIm = () => {
   return {
     ws,
     initialize,
-    formatChatList,
+    formatChats,
     formatMessages,
     getFileUrl,
     createChat,
-    getChatList,
+    getChats,
     markChatRead,
     createMessage,
     getMessages,
