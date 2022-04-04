@@ -1,9 +1,9 @@
-import { useWxUser } from "@lr/composables/use-wx-user";
-import { useChat } from "@/components/chat/composables/use-chat";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { useIm } from "../composables/use-im";
 import wx from "wx-bridge";
 import Audio from "./audio";
 import { reactive } from "@vue/composition-api";
-import { MessagesApi } from "@/apis/wx/messages";
+import { imMessagesApi } from "@/apis/client/im-messages";
 
 export default {
   components: {
@@ -17,8 +17,8 @@ export default {
   },
   emits: ["retract-ok"],
   setup(props, context) {
-    const { wxUser } = useWxUser();
-    const { getFileUrl } = useChat();
+    const { user } = useUsers();
+    const { getFileUrl } = useIm();
 
     const cMessages = reactive({
       id: 0,
@@ -33,13 +33,13 @@ export default {
     };
 
     const select = ({ fromUser, id }) => {
-      if (fromUser.id === wxUser.value.id) {
+      if (fromUser.id === user.value.id) {
         cMessages.id = cMessages.id === id ? 0 : id;
       }
     };
 
     const retract = async ({ id }) => {
-      await new MessagesApi().post({
+      await imMessagesApi.post({
         action: "retract",
         body: { id },
       });
@@ -48,7 +48,7 @@ export default {
     };
 
     return {
-      wxUser,
+      user,
       cMessages,
       cAudio,
       getFileUrl,
