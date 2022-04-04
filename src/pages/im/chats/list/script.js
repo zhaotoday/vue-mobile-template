@@ -26,13 +26,13 @@ export default {
       await render();
     });
 
-    const onGetChats = (data) => {
+    const onGetChatsOk = (data) => {
       list.value = { items: formatChats(data) };
       loaded.value = true;
     };
 
     const render = async () => {
-      ws.on(ws.events.getChatsOk, onGetChats);
+      ws.on(ws.events.getChatsOk, onGetChatsOk);
 
       ws.ready(() => {
         getChats();
@@ -40,7 +40,7 @@ export default {
     };
 
     const unRender = () => {
-      ws.off(ws.events.getChats, onGetChats);
+      ws.off(ws.events.getChats, onGetChatsOk);
     };
 
     const confirmSearch = (value) => {
