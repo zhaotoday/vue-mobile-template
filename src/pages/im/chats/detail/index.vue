@@ -1,11 +1,7 @@
 <template>
-  <div class="p-chat-message-window">
-    <scroll-view
-      class="b-chat-messages"
-      scroll-y
-      :scroll-into-view="lastViewId"
-    >
-      <c-chat-messages :items="list.items" />
+  <div class="p-im-chats-detail">
+    <scroll-view class="b-messages" scroll-y :scroll-into-view="lastViewId">
+      <c-messages :items="list.items" />
     </scroll-view>
   </div>
 </template>

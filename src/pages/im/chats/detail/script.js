@@ -9,7 +9,7 @@ import wx from "wx-bridge";
 
 export default {
   components: {
-    "c-chat-messages": ChatMessages,
+    "c-messages": ChatMessages,
   },
   setup() {
     const { currentRoute } = useCurrentRoute();
