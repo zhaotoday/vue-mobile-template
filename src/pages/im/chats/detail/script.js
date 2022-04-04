@@ -1,5 +1,3 @@
-import ChatMessages from "@/components/chat/messages";
-import ChatInput from "@/components/chat/input";
 import { onShow, onUnload } from "uni-composition-api";
 import wx from "wx-bridge";
 import { useCurrentRoute } from "vue-mobile/composables/use-current-route";
@@ -9,14 +7,9 @@ import { useHelpers } from "@/composables/use-helpers";
 import { WxUsersApi } from "@/apis/wx/wx-users";
 import { ChatFriendsApi } from "@/apis/wx/chat-friends";
 import { ClassesApi } from "@/apis/wx/classes";
-import { ProductsApi } from "@/apis/wx/products";
 import { PublicProductsApi } from "@/apis/public/products";
 
 export default {
-  components: {
-    "c-chat-messages": ChatMessages,
-    "c-chat-input": ChatInput,
-  },
   setup() {
     const { currentRoute } = useCurrentRoute();
 
