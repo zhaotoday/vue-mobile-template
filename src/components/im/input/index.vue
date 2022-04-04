@@ -1,6 +1,6 @@
 <template>
-  <div class="c-chat-input" :class="backgroundClass">
-    <div class="c-chat-input__wrap">
+  <div class="c-im-input" :class="backgroundClass">
+    <div class="c-im-input__wrap">
       <textarea
         class="fs26"
         auto-height
@@ -9,7 +9,7 @@
         v-model.trim="cForm.model.content"
       />
       <div
-        class="c-chat-input__submit c-button w84 h60 fs30"
+        class="c-im-input__submit c-button w84 h60 fs30"
         :class="{ 'is-disabled': !cForm.model.content }"
         @click="send"
       >
@@ -21,7 +21,7 @@
         @ok="sendAudio"
       />
     </div>
-    <div class="c-chat-input__operations o-grid c37 fs52 u-tac">
+    <div class="c-im-input__operations o-grid c37 fs52 u-tac">
       <div class="o-grid__cell" @click="toggleRecorder">
         <i class="c-iconfont c-iconfont--audio"></i>
       </div>

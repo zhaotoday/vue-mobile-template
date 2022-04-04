@@ -1,6 +1,6 @@
 @import "~@/assets/styles/utils/index";
 
-@include c(chat-input) {
+@include c(im-input) {
   @include position--fixed(null, null, 0, 50%);
 
   width: 100%;
