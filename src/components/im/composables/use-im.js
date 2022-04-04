@@ -6,7 +6,7 @@ import { useHelpers } from "@/composables/use-helpers";
 
 const ws = new Ws();
 
-export const useChat = () => {
+export const useIm = () => {
   const { ApiUrl } = useConsts();
 
   const { getImageUrl } = useHelpers();
