@@ -5,9 +5,6 @@ import { useIm } from "@/components/im/components/composables/use-im";
 import { ref } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
 import { usersApi } from "vue-mobile/@lr/apis/client/users";
-import { ChatFriendsApi } from "@/apis/wx/chat-friends";
-import { ClassesApi } from "@/apis/wx/classes";
-import { PublicProductsApi } from "@/apis/public/products";
 
 export default {
   setup() {
@@ -16,9 +13,9 @@ export default {
     const {
       ws,
       markChatRead,
-      getMessages,
+      getMessagesOk,
       formatMessages,
-      createChat,
+      createChatOk,
       createMessage,
     } = useIm();
 
@@ -28,17 +25,17 @@ export default {
 
     const lastViewId = ref("");
 
-    const onCreateChat = (data) => {
+    const onCreateChatOk = (data) => {
       chatId.value = data.chatId;
 
-      getMessages({
+      getMessagesOk({
         chatId: chatId.value,
         toUserId: currentRoute.query.toUserId,
       });
       markChatRead({ chatId: chatId.value });
     };
 
-    const onGetMessages = async (data) => {
+    const onGetMessagesOk = async (data) => {
       items.value = formatMessages(data);
 
       await useHelpers().sleep(100);
@@ -48,8 +45,8 @@ export default {
       }
     };
 
-    const onNewMessage = () => {
-      getMessages({
+    const onCreateMessageOk = () => {
+      getMessagesOk({
         chatId: chatId.value,
         toUserId: currentRoute.query.toUserId,
       });
@@ -74,19 +71,19 @@ export default {
           break;
       }
 
-      ws.on(ws.events.createChat, onCreateChat);
-      ws.on(ws.events.getMessages, onGetMessages);
-      ws.on(ws.events.newMessage, onNewMessage);
+      ws.on(ws.events.createChatOk, onCreateChatOk);
+      ws.on(ws.events.getMessagesOk, onGetMessagesOk);
+      ws.on(ws.events.createMessageOk, onCreateMessageOk);
 
       ws.ready(() => {
-        createChat({ type: chatType, toUserId });
+        createChatOk({ type: chatType, toUserId });
       });
     });
 
     onUnload(() => {
-      ws.off(ws.events.createChat, onCreateChat);
-      ws.off(ws.events.getMessages, onGetMessages);
-      ws.off(ws.events.newMessage, onNewMessage);
+      ws.off(ws.events.createChatOk, onCreateChatOk);
+      ws.off(ws.events.getMessagesOk, onGetMessagesOk);
+      ws.off(ws.events.createMessageOk, onCreateMessageOk);
     });
 
     const sendMessage = ({ type, text, fileId }) => {
@@ -102,7 +99,7 @@ export default {
     const onMessageRetractOk = () => {
       const { toUserId } = currentRoute.query;
 
-      getMessages({ toUserId });
+      getMessagesOk({ toUserId });
     };
 
     return {
