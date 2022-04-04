@@ -22,8 +22,8 @@
       </div>
       <div class="c-im-chats__body">
         <div class="c-im-chats__name fs32">{{ item.name }}</div>
-        <div class="c-im-chats__message fs26 t-gray7">{{ item.message }}</div>
-        <div class="c-im-chats__time fs26 t-gray7">{{ item.time }}</div>
+        <div class="c-im-chats__message fs26 t-g7">{{ item.message }}</div>
+        <div class="c-im-chats__time fs26 t-g7">{{ item.time }}</div>
       </div>
     </li>
   </ul>

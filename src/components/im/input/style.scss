@@ -13,8 +13,8 @@
     position: relative;
     border-radius: px2rpx(20px);
     background-color: map-get($colors, white);
-    box-shadow: 0 0 px2rpx(20px) 0 rgba(map-get($colors, gray5), 0.2);
-    border: 1px solid map-get($colors, gray3);
+    box-shadow: 0 0 px2rpx(20px) 0 rgba(map-get($colors, g5), 0.2);
+    border: 1px solid map-get($colors, g3);
   }
 
   textarea {

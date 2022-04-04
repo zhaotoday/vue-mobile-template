@@ -77,7 +77,7 @@
   @include e(message) {
     position: relative;
     box-sizing: border-box;
-    border: 1px solid map-get($colors, gray4);
+    border: 1px solid map-get($colors, g4);
     padding: px2rpx(16px) px2rpx(20px);
     line-height: 140%;
     border-radius: px2rpx(20px);

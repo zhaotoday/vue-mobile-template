@@ -7,7 +7,7 @@
     position: relative;
     height: px2rpx(80px + 20px * 2);
     background-color: white;
-    border-bottom: 1px solid map-get($colors, gray2);
+    border-bottom: 1px solid map-get($colors, g2);
   }
 
   @include e(avatar) {

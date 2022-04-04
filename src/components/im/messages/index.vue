@@ -8,11 +8,11 @@
       :id="`message-${item.id}`"
     >
       <image class="c-chat-messages__avatar" :src="item.fromUser.avatar" />
-      <div class="c-chat-messages__time fs24 t-gray7 u-tac">
+      <div class="c-chat-messages__time fs24 t-g7 u-tac">
         {{ item.time }}
       </div>
       <div class="c-chat-messages__body">
-        <div class="c-chat-messages__title fs24 t-gray7">
+        <div class="c-chat-messages__title fs24 t-g7">
           {{ item.fromUser.username }}
         </div>
         <div class="c-chat-messages__message fs26" @longtap="select(item)">

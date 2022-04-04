@@ -1,7 +1,7 @@
 <template>
   <div
     class="cc-recorder fs30 u-tac"
-    :class="cRecorder.speaking ? 'bg-gray3' : 'bg-white'"
+    :class="cRecorder.speaking ? 'bg-g3' : 'bg-white'"
     @longtap="startSpeaking"
     @touchend="stopSpeaking"
   >
