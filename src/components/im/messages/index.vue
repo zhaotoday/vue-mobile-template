@@ -1,30 +1,27 @@
 <template>
-  <ul class="c-chat-messages">
+  <ul class="c-im-messages">
     <li
       v-for="(item, index) in items.filter((item) => !item.retracted)"
       :key="item.id"
-      class="c-chat-messages__item"
+      class="c-im-messages__item"
       :class="item.fromUser.id === user.id ? 'is-me' : 'is-other'"
       :id="`message-${item.id}`"
     >
-      <image
-        class="c-chat-messages__avatar"
-        :src="getAvatarUrl(item.fromUser)"
-      />
-      <div class="c-chat-messages__time fs24 t-g7 u-tac">
+      <image class="c-im-messages__avatar" :src="getAvatarUrl(item.fromUser)" />
+      <div class="c-im-messages__time fs24 t-g7 u-tac">
         {{ formatTime(item.createdAt) }}
       </div>
-      <div class="c-chat-messages__body">
-        <div class="c-chat-messages__title fs24 t-g7">
+      <div class="c-im-messages__body">
+        <div class="c-im-messages__title fs24 t-g7">
           {{ item.fromUser.name || item.fromUser.wxNickName }}
         </div>
-        <div class="c-chat-messages__message fs26" @longtap="select(item)">
+        <div class="c-im-messages__message fs26" @longtap="select(item)">
           <template v-if="item.type === 'Text'">
             {{ item.text }}
           </template>
           <template v-else-if="item.type === 'Image'">
             <img
-              class="c-chat-messages__image"
+              class="c-im-messages__image"
               :src="getFileUrl(item.fileId)"
               @click="previewImage(getFileUrl(item.fileId))"
             />
@@ -39,7 +36,7 @@
           </template>
           <div
             v-show="item.id === cMessages.id"
-            class="c-chat-messages__retract"
+            class="c-im-messages__retract"
             @click.stop="retract(item)"
           >
             <i class="c-iconfont c-iconfont--retract fs30"></i>

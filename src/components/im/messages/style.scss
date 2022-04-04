@@ -1,6 +1,6 @@
 @import "~@/assets/styles/utils/index";
 
-@include c(chat-messages) {
+@include c(im-messages) {
   @include e(item) {
     @include clearfix;
 
@@ -8,7 +8,7 @@
     padding-top: px2rpx(40px);
 
     @include s(is-me) {
-      @include c(chat-messages) {
+      @include c(im-messages) {
         @include e(avatar) {
           right: px2rpx(30px);
         }
@@ -31,7 +31,7 @@
     }
 
     @include s(is-other) {
-      @include c(chat-messages) {
+      @include c(im-messages) {
         @include e(avatar) {
           left: px2rpx(30px);
         }
