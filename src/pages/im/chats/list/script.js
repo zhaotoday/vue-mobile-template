@@ -1,11 +1,7 @@
-import { useIm } from "@/components/chat/composables/use-chat";
+import { useIm } from "@/components/im/components/composables/use-im";
 import { reactive, ref } from "@vue/composition-api";
-import ChatList from "@/components/chat/list";
 
 export default {
-  components: {
-    "c-chat-list": ChatList,
-  },
   computed: {
     filteredItems() {
       return this.list.items.filter((item) =>
