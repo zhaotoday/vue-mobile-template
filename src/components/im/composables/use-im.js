@@ -1,6 +1,6 @@
-import { Ws } from "../utils/ws.class";
-import { useWxUser } from "vue-mobile/@lr/composables/use-wx-user";
 import wx from "wx-bridge";
+import { Ws } from "../utils/ws.class";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
 import { useHelpers } from "@/composables/use-helpers";
 
@@ -11,7 +11,7 @@ export const useIm = () => {
 
   const { getImageUrl } = useHelpers();
 
-  const { wxUser } = useWxUser();
+  const { wxUser } = useUsers();
 
   const initialize = () => {
     const timers = {};
