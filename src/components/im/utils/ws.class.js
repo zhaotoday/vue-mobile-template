@@ -1,4 +1,4 @@
-import EventEmitter from "eventemitter2";
+import Mitt from "mitt";
 import dayjs from "dayjs";
 import socket from "plus-websocket";
 import { useConsts } from "@/composables/use-consts";
@@ -7,7 +7,7 @@ import { useAuth } from "@lr/composables/use-auth";
 
 const { keyMirror } = useHelpers();
 
-export const Ws = class extends EventEmitter {
+export const Ws = class extends Mitt {
   events = keyMirror({
     open: null,
     error: null,
