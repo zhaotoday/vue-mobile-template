@@ -15,7 +15,7 @@
       >
         {{ sendText }}
       </div>
-      <cc-recorder
+      <b-recorder
         v-show="cRecorder.visible"
         @hide="cRecorder.visible = false"
         @ok="sendAudio"

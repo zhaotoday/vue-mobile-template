@@ -1,6 +1,6 @@
 <template>
   <div
-    class="cc-recorder fs30 u-tac"
+    class="b-recorder fs30 u-tac"
     :class="cRecorder.speaking ? 'bg-g3' : 'bg-white'"
     @longtap="startSpeaking"
     @touchend="stopSpeaking"
@@ -10,5 +10,3 @@
 </template>
 
 <script src="./script.js"></script>
-
-<style lang="scss" src="./style.scss"></style>

@@ -1,13 +1,13 @@
 import { reactive } from "@vue/composition-api";
 import { useValidators } from "vue-validation";
 import wx from "wx-bridge";
-import Recorder from "./recorder";
+import Recorder from "./components/recorder";
 import { useConsts } from "@/composables/use-consts";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 
 export default {
   components: {
-    "cc-recorder": Recorder,
+    "b-recorder": Recorder,
   },
   props: {
     placeholder: {
