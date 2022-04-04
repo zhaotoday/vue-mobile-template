@@ -54,7 +54,7 @@ export const useIm = () => {
       heartbeat.reset().start();
     });
 
-    ws.on(ws.events.newMessage, ({ toUserId }) => {
+    ws.on(ws.events.createMessageOk, ({ toUserId }) => {
       if (toUserId === user.value.id) {
         if (innerAudioContext.paused) {
           innerAudioContext.play();
