@@ -1,9 +1,9 @@
 <template>
   <div class="p-im-chats-detail">
     <scroll-view class="b-messages" scroll-y :scroll-into-view="lastViewId">
-      <gc-im-chat-messages :items="items" @retract-ok="onMessageRetractOk" />
+      <gc-im-messages :items="items" @retract-ok="onMessageRetractOk" />
     </scroll-view>
-    <gc-im-chat-input @send="sendMessage" />
+    <gc-im-input @send="sendMessage" />
   </div>
 </template>
 
