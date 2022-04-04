@@ -10,7 +10,7 @@
         v-if="item.avatar"
         class="c-im-chats__avatar"
         mode="aspectFill"
-        :src="item.avatar"
+        :src="getAvatarUrl(item)"
       />
       <div v-else class="c-im-chats__avatar is-default"></div>
       <div v-if="item.unreadMessageCount" class="c-im-chats__count fs22">

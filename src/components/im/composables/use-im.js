@@ -127,10 +127,6 @@ export const useIm = () => {
     }));
   };
 
-  const getFileUrl = (id) => {
-    return `${ApiUrl}/public/messageFiles/${id}`;
-  };
-
   const ping = () => {
     ws.send({
       event: ws.events.ping,
@@ -173,16 +169,31 @@ export const useIm = () => {
     });
   };
 
+  const getFileUrl = (id) => {
+    return `${ApiUrl}/public/messageFiles/${id}`;
+  };
+
+  const getAvatarUrl = ({ avatarFileId, wxAvatarUrl }) => {
+    if (wxAvatarUrl) {
+      return wxAvatarUrl;
+    } else if (avatarFileId) {
+      return `${ApiUrl}/public/files/${avatarFileId}`;
+    } else {
+      return `${ApiUrl}/avatar.png`;
+    }
+  };
+
   return {
     ws,
     initialize,
     formatChats,
     formatMessages,
-    getFileUrl,
     createChat,
     getChats,
     markChatRead,
     createMessage,
     getMessages,
+    getFileUrl,
+    getAvatarUrl,
   };
 };

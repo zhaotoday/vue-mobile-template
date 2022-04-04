@@ -1,3 +1,5 @@
+import { useIm } from "../composables/use-im";
+
 export default {
   props: {
     items: {
@@ -6,4 +8,11 @@ export default {
     },
   },
   emits: ["goto-chat"],
+  setup() {
+    const { getAvatarUrl } = useIm();
+
+    return {
+      getAvatarUrl,
+    };
+  },
 };
