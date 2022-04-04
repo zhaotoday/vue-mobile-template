@@ -70,22 +70,6 @@ export default {
           break;
         }
 
-        case "Class": {
-          const { name } = await new ClassesApi().get({ id: toUserId });
-
-          wx.setNavigationBarTitle({ title: name });
-
-          break;
-        }
-
-        case "Product": {
-          const { name } = await new PublicProductsApi().get({ id: toUserId });
-
-          wx.setNavigationBarTitle({ title: name });
-
-          break;
-        }
-
         default:
           break;
       }
