@@ -3,7 +3,7 @@
     <scroll-view class="b-messages" scroll-y :scroll-into-view="lastViewId">
       <c-chat-messages :items="items" @retract-ok="onMessageRetractOk" />
     </scroll-view>
-    <c-chat-input @send="sendMessage" />
+    <gc-chats-input @send="sendMessage" />
   </div>
 </template>
 
