@@ -4,7 +4,7 @@
       v-for="(item, index) in items.filter((item) => !item.retracted)"
       :key="item.id"
       class="c-chat-messages__item"
-      :class="item.fromUser.id === wxUser.id ? 'is-me' : 'is-other'"
+      :class="item.fromUser.id === user.id ? 'is-me' : 'is-other'"
       :id="`message-${item.id}`"
     >
       <image class="c-chat-messages__avatar" :src="item.fromUser.avatar" />
@@ -27,7 +27,7 @@
             />
           </template>
           <template v-else-if="item.type === 'Audio'">
-            <cc-audio
+            <b-audio
               :file-id="item.fileId"
               :index="index"
               :play-index="cAudio.playIndex"

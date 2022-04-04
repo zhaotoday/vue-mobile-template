@@ -7,7 +7,7 @@ import { imMessagesApi } from "@/apis/client/im-messages";
 
 export default {
   components: {
-    "cc-audio": Audio,
+    "b-audio": Audio,
   },
   props: {
     items: {

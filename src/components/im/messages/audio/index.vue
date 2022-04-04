@@ -1,5 +1,5 @@
 <template>
-  <div class="cc-audio" @click="play">
+  <div class="b-audio" @click="play">
     <i
       class="c-iconfont fs28"
       :class="
