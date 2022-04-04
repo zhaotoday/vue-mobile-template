@@ -1,4 +1,4 @@
-import { useChat } from "@/components/chat/composables/use-chat";
+import { useIm } from "@/components/chat/composables/use-chat";
 import { reactive, ref } from "@vue/composition-api";
 import ChatList from "@/components/chat/list";
 
@@ -16,7 +16,7 @@ export default {
   setup() {
     const loaded = ref(false);
 
-    const { ws, formatChatList, getChatList } = useChat();
+    const { ws, formatChatList, getChatList } = useIm();
 
     const cSearch = reactive({
       keywords: "",
