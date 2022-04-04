@@ -12,7 +12,7 @@ export default {
   setup() {
     const loaded = ref(false);
 
-    const { ws, formatChatList, getChats } = useIm();
+    const { ws, formatChats, getChats } = useIm();
 
     const cSearch = reactive({
       keywords: "",
@@ -27,7 +27,7 @@ export default {
     });
 
     const onGetChats = (data) => {
-      list.value = { items: formatChatList(data) };
+      list.value = { items: formatChats(data) };
       loaded.value = true;
     };
 
