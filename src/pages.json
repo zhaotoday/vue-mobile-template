@@ -148,6 +148,12 @@
       "style": {
         "navigationBarTitleText": "消息"
       }
+    },
+    {
+      "path": "pages/im/chats/detail/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
     }
   ],
   "globalStyle": {
