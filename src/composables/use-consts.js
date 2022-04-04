@@ -15,11 +15,16 @@ export const useConsts = () => {
   // 静态资源地址
   const StaticUrl = "https://my-app.liruan.cn/static";
 
+  // WebSocket 地址
+  const WsUrl = "wss://mall.tongnianjihua.com/wss";
+  // const WsUrl = "ws://localhost:3002";
+
   return {
     ApiUrl,
     LoginUrl,
     CdnUrl,
     StaticUrl,
+    WsUrl,
     Languages,
   };
 };

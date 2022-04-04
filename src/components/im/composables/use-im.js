@@ -4,14 +4,14 @@ import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
 import { useHelpers } from "@/composables/use-helpers";
 
-const ws = new Ws();
+const { ApiUrl, WsUrl } = useConsts();
+
+const ws = new Ws({ url: WsUrl });
 
 export const useIm = () => {
-  const { ApiUrl } = useConsts();
-
   const { getImageUrl } = useHelpers();
 
-  const { wxUser } = useUsers();
+  const { user } = useUsers();
 
   const initialize = () => {
     const timers = {};
@@ -55,7 +55,7 @@ export const useIm = () => {
     });
 
     ws.on(ws.events.newMessage, ({ toUserId }) => {
-      if (toUserId === wxUser.value.id) {
+      if (toUserId === user.value.id) {
         if (innerAudioContext.paused) {
           innerAudioContext.play();
         }
@@ -117,7 +117,7 @@ export const useIm = () => {
         })(lastMessage),
         time: ws.formatTime(lastMessage.createdAt),
         unreadMessageCount: (unreadMessages.find(
-          ({ userId }) => userId === wxUser.value.id
+          ({ userId }) => userId === user.value.id
         ) || {})["unreadMessageCount"],
       };
     });

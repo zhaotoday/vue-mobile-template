@@ -28,16 +28,17 @@ export const Ws = class extends Mitt {
 
   connected = false;
 
-  constructor() {
+  constructor({ url }) {
     super();
 
+    this.url = url;
     this.connect();
     this.listenEvents();
   }
 
   connect() {
     this.socket = socket.connectSocket({
-      url: useConsts().WsUrl,
+      url: this.url,
       complete: () => {},
     });
   }
@@ -102,10 +103,11 @@ export const Ws = class extends Mitt {
 
   send({ event, data }) {
     data.headers = useAuth().getHeaders();
-    data.schoolId = useConsts().SchoolConfig.id;
 
     if (data.chatId) data.chatId = +data.chatId;
+
     if (data.fromUserId) data.fromUserId = +data.fromUserId;
+
     if (data.toUserId) data.toUserId = +data.toUserId;
 
     this.socket.send({ data: JSON.stringify({ event, data }) });
