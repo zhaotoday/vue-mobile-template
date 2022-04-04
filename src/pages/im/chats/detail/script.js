@@ -1,6 +1,6 @@
 import { onShow, onUnload } from "uni-composition-api";
 import wx from "wx-bridge";
-import { useCurrentRoute } from "vue-mobile/composables/use-current-route";
+import { useRoute } from "vue-mobile/composables/use-route";
 import { useChat } from "@/components/chat/composables/use-chat";
 import { ref } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
@@ -11,7 +11,7 @@ import { PublicProductsApi } from "@/apis/public/products";
 
 export default {
   setup() {
-    const { currentRoute } = useCurrentRoute();
+    const { currentRoute } = useRoute();
 
     const {
       ws,
