@@ -1,4 +1,4 @@
-import Mitt from "mitt";
+import EventEmitter from "eventemitter2";
 import dayjs from "dayjs";
 import socket from "plus-websocket";
 import { useHelpers } from "@/composables/use-helpers";
@@ -6,7 +6,7 @@ import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 
 const { keyMirror } = useHelpers();
 
-export const Ws = class extends Mitt {
+export const Ws = class extends EventEmitter {
   events = keyMirror({
     open: null,
     error: null,
