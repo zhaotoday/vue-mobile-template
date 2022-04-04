@@ -1,4 +1,4 @@
-import { useChat } from "@/components/chat/composables/use-chat";
+import { useIm } from "../../../composables/use-im";
 
 export default {
   props: {
@@ -17,7 +17,7 @@ export default {
   },
   emits: ["play-index-change"],
   setup(props, context) {
-    const { getFileUrl } = useChat();
+    const { getFileUrl } = useIm();
 
     const innerAudioContext = uni.createInnerAudioContext();
 
