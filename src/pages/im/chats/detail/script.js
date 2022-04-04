@@ -2,7 +2,7 @@ import { onShow } from "uni-composition-api";
 import { useCurrentRoute } from "vue-mobile/composables/use-current-route";
 import { MessagesApi } from "@/apis/wx/messages";
 import { ref } from "@vue/composition-api";
-import { useChat } from "@/components/chat/composables/use-chat";
+import { useIm } from "@/components/im/components/composables/use-im";
 import { useHelpers } from "@/composables/use-helpers";
 import wx from "wx-bridge";
 
@@ -10,7 +10,7 @@ export default {
   setup() {
     const { currentRoute } = useCurrentRoute();
 
-    const { formatMessages } = useChat();
+    const { formatMessages } = useIm();
 
     const list = ref({
       items: [],
