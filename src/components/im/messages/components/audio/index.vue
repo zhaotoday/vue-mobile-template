@@ -1,7 +1,7 @@
 <template>
-  <div class="b-audio" @click="play">
+  <div class="b-audio u-lh1" @click="play">
     <i
-      class="c-iconfont fs28"
+      class="c-iconfont fs28 u-mr10"
       :class="
         playIndex === index
           ? 'c-iconfont--audio-stop'

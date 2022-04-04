@@ -1,9 +1,0 @@
-@import "~@/assets/styles/utils/index";
-
-@include b(audio) {
-  line-height: 100%;
-
-  i {
-    margin-right: px2rpx(10px);
-  }
-}
