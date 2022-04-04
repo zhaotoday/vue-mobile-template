@@ -42,7 +42,7 @@ export const useIm = () => {
       }, 5 * 1000);
     });
 
-    ws.on(ws.events.ping, () => {
+    ws.on(ws.events.pingOk, () => {
       heartbeat.reset();
     });
 
@@ -64,7 +64,7 @@ export const useIm = () => {
       getChats();
     });
 
-    ws.on(ws.events.getChats, (data) => {
+    ws.on(ws.events.getChatsOk, (data) => {
       if (data && data.length) {
         const count = formatChats(data)
           .map(({ unreadMessageCount }) => unreadMessageCount || 0)
