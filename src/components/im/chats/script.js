@@ -5,4 +5,5 @@ export default {
       default: () => [{}],
     },
   },
+  emits: ["goto-chat"],
 };

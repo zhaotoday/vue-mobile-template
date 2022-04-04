@@ -4,11 +4,7 @@
       v-for="item in items"
       :key="item.id"
       class="c-im-chats__item"
-      @click="
-        $wx.navigateTo(
-          `/pages/chat/window/index?chatType=${item.type}&toUserId=${item.userId}`
-        )
-      "
+      @click="$emit('goto-chat', item)"
     >
       <image
         v-if="item.avatar"
