@@ -1,6 +1,8 @@
 @import "~@/assets/styles/utils/index";
 
 @include c(im-messages) {
+  @import "./components/audio/style";
+
   @include e(item) {
     @include clearfix;
 
