@@ -10,7 +10,17 @@
         @search="confirmSearch"
       />
     </div>
-    <gc-im-chats :items="filteredItems" />
+    <gc-im-chats
+      :items="filteredItems"
+      @goto-chat="
+        (item) =>
+          $wx.navigateTo(
+            `/pages/im/chats/detail/index?toUserId=${item.user.id}&toUserName=${
+              item.user.name || item.user.wxNickName
+            }`
+          )
+      "
+    />
     <u-empty
       v-if="loaded && !filteredItems.length"
       mode="data"

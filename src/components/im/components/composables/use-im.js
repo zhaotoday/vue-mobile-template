@@ -70,14 +70,14 @@ export const useIm = () => {
 
         if (count) {
           wx.setTabBarBadge({
-            index: 2,
+            index: 3,
             text: count >= 100 ? "99+" : (count || "") + "",
           });
         } else {
-          wx.removeTabBarBadge({ index: 2 });
+          wx.removeTabBarBadge({ index: 3 });
         }
       } else {
-        wx.removeTabBarBadge({ index: 2 });
+        wx.removeTabBarBadge({ index: 3 });
       }
     });
   };

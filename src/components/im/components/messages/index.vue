@@ -7,7 +7,11 @@
       :class="item.fromUser.id === user.id ? 'is-me' : 'is-other'"
       :id="`message-${item.id}`"
     >
-      <image class="c-im-messages__avatar" :src="getAvatarUrl(item.fromUser)" />
+      <image
+        class="c-im-messages__avatar"
+        mode="aspectFill"
+        :src="getAvatarUrl(item.fromUser)"
+      />
       <div class="c-im-messages__time fs24 t-g7 u-tac">
         {{ formatTime(item.createdAt) }}
       </div>
