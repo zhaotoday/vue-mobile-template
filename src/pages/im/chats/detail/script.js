@@ -25,6 +25,7 @@ export default {
         chatId: chatId.value,
         toUserId: currentRoute.query.toUserId,
       });
+
       markChatRead({ chatId: chatId.value });
     };
 
