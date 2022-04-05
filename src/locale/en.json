@@ -3,6 +3,7 @@
   "home.tabBar": "Home",
   "categories": "Categories",
   "cart": "Cart",
+  "message": "Messages",
   "checkout": "Checkout",
   "checkout.result": "Place Order Successfully",
   "products.search": "Search",

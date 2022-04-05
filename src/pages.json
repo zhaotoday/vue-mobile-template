@@ -187,6 +187,12 @@
         "text": "%cart%"
       },
       {
+        "pagePath": "pages/im/chats/list/index",
+        "iconPath": "static/tab-bar/message.png",
+        "selectedIconPath": "static/tab-bar/message-selected.png",
+        "text": "%message%"
+      },
+      {
         "pagePath": "pages/user/home/index",
         "iconPath": "static/tab-bar/user.png",
         "selectedIconPath": "static/tab-bar/user-selected.png",
