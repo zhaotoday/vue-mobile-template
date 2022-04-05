@@ -184,7 +184,7 @@ export const useIm = () => {
     } else if (avatarFileId) {
       return `${ApiUrl}/public/files/${avatarFileId}`;
     } else {
-      return `${ApiUrl}/avatar.png`;
+      return `${ApiUrl}/avatars/default.png`;
     }
   };
 
