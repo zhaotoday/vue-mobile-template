@@ -1,8 +1,6 @@
 import Categories from "./components/categories";
 import { onShow } from "uni-composition-api";
 import { useRender } from "./composables/use-render";
-import { useCart } from "uni-shop/composables/use-cart";
-import { useIm } from "@/components/im/components/composables/use-im";
 import { useTabBarBadge } from "@/composables/use-tab-bar-badge";
 
 export default {
