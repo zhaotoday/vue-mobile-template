@@ -9,11 +9,12 @@
     <li
       class="c-contacts__item bg-secondary u-mt20"
       @click="
-        $wx.navigateTo(
-          `/pages/im/chats/detail/index?toUserId=2&toUserName=${$t(
+        navigateTo({
+          requiresLogin: true,
+          url: `/pages/im/chats/detail/index?toUserId=2&toUserName=${$t(
             '$.customService'
-          )}`
-        )
+          )}`,
+        })
       "
     >
       <i class="c-iconfont c-iconfont--service-filled t-white fs40"></i>

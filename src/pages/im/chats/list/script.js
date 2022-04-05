@@ -2,6 +2,7 @@ import { useIm } from "@/components/im/components/composables/use-im";
 import { reactive, ref } from "@vue/composition-api";
 import { onHide, onShow } from "uni-composition-api";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
+import { store } from "@/store";
 
 export default {
   computed: {
@@ -9,6 +10,10 @@ export default {
       return this.list.items.filter((item) =>
         (item.user.name || item.user.wxNickName).includes(this.cSearch.keywords)
       );
+    },
+    // app computed bug
+    users() {
+      return store.state.users;
     },
   },
   setup() {
