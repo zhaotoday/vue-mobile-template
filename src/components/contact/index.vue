@@ -10,7 +10,9 @@
       class="c-contacts__item bg-secondary u-mt20"
       @click="
         $wx.navigateTo(
-          '/pages/im/chats/detail/index?toUserId=2&toUserName=客服'
+          `/pages/im/chats/detail/index?toUserId=2&toUserName=${$t(
+            '$.customService'
+          )}`
         )
       "
     >
