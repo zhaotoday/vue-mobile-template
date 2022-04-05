@@ -2,6 +2,7 @@ import Categories from "./components/categories";
 import { onShow } from "uni-composition-api";
 import { useRender } from "./composables/use-render";
 import { useCart } from "uni-shop/composables/use-cart";
+import { useIm } from "@/components/im/components/composables/use-im";
 
 export default {
   components: {
@@ -19,6 +20,7 @@ export default {
 
     onShow(async () => {
       useCart().renderProductsNumber();
+      useIm().getChats();
 
       await renderAdsList();
       await renderCategoriesList();

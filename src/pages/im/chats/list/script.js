@@ -1,6 +1,6 @@
 import { useIm } from "@/components/im/components/composables/use-im";
 import { onMounted, reactive, ref } from "@vue/composition-api";
-import { onHide } from "uni-composition-api";
+import { onHide, onShow } from "uni-composition-api";
 
 export default {
   computed: {
@@ -23,7 +23,7 @@ export default {
       items: [],
     });
 
-    onMounted(async () => {
+    onShow(async () => {
       ws.on(ws.events.getChatsOk, onGetChatsOk);
 
       ws.ready(() => {

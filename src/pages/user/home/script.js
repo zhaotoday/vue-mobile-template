@@ -5,6 +5,7 @@ import wx from "wx-bridge";
 import { useI18n } from "vue-mobile/composables/use-i18n";
 import { useCart } from "uni-shop/composables/use-cart";
 import { store } from "@/store";
+import { useIm } from "@/components/im/components/composables/use-im";
 
 export default {
   setup() {
@@ -38,6 +39,7 @@ export default {
 
     onShow(async () => {
       useCart().renderProductsNumber();
+      useIm().getChats();
 
       if (loggedIn()) await getUserInfo();
     });
