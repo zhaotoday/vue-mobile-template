@@ -5,7 +5,7 @@ export default {
   computed: {
     filteredItems() {
       return this.list.items.filter((item) =>
-        item.name.includes(this.cSearch.keywords)
+        (item.user.name || item.user.wxNickName).includes(this.cSearch.keywords)
       );
     },
   },
