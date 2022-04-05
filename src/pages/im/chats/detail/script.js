@@ -4,7 +4,6 @@ import { useRoute } from "vue-mobile/composables/use-route";
 import { useIm } from "@/components/im/components/composables/use-im";
 import { ref } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
-import { usersApi } from "vue-mobile/@lr/apis/client/users";
 
 export default {
   setup() {
@@ -48,22 +47,9 @@ export default {
     };
 
     onShow(async () => {
-      const { chatType, toUserId } = currentRoute.query;
+      const { chatType, toUserId, toUserName } = currentRoute.query;
 
-      switch (chatType) {
-        case "OneToOne": {
-          const { name, wxNickName } = await usersApi.get({
-            id: toUserId,
-          });
-
-          wx.setNavigationBarTitle({ title: name || wxNickName });
-
-          break;
-        }
-
-        default:
-          break;
-      }
+      wx.setNavigationBarTitle({ title: toUserName });
 
       ws.on(ws.events.createChatOk, onCreateChatOk);
       ws.on(ws.events.getMessagesOk, onGetMessagesOk);
