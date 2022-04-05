@@ -16,6 +16,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c-iconfont--service-filled:before {
+  content: "\e740";
+}
+
 .c-iconfont--retract:before {
   content: "\e6e2";
 }
