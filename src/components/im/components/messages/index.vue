@@ -35,6 +35,7 @@
             />
           </template>
           <div
+            v-if="false"
             v-show="item.id === cMessages.id"
             class="c-im-messages__retract"
             @click.stop="retract(item)"

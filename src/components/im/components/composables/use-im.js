@@ -165,8 +165,8 @@ export const useIm = () => {
     const date = days
       ? {
           0: "",
-          1: "昨天",
-          2: "前天",
+          // 1: "昨天",
+          // 2: "前天",
         }[days] || dayjs(dateTime).format("YY/MM/DD")
       : "";
     const time = dayjs(dateTime).format("HH:mm");
