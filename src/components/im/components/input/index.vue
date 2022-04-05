@@ -1,5 +1,5 @@
 <template>
-  <div class="c-im-input" :class="backgroundClass">
+  <div class="c-im-input u-pt20 u-pb20 u-pl30 u-pr30" :class="backgroundClass">
     <div class="c-im-input__wrap">
       <textarea
         class="fs26"
