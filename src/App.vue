@@ -15,11 +15,11 @@ export default {
 
     useCart().renderProductsNumber();
 
-    await useAppUpgrade().upgrade();
-
     if (loggedIn()) {
       useIm().initialize();
     }
+
+    await useAppUpgrade().upgrade();
   },
   onHide() {
     usePageData().clearPageData();
