@@ -16,7 +16,7 @@
         (item) =>
           $wx.navigateTo(
             `/pages/im/chats/detail/index?toUserId=${item.user.id}&toUserName=${
-              item.user.name || item.user.wxNickName
+              item.user.name || item.user.wxNickName || '--'
             }`
           )
       "

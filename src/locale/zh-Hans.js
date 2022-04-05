@@ -37,6 +37,7 @@ export const zhHans = {
     money: "$",
     noData: "暂无数据",
     emptyCart: "购物车为空",
+    customService: "客服",
     orderStatuses: {
       all: "全部",
       delivering: "配送中",

@@ -37,6 +37,7 @@ export const en = {
     money: "$",
     noData: "No data",
     emptyCart: "Shopping cart is empty",
+    customService: "Custom Service",
     orderStatuses: {
       all: "All",
       delivering: "Delivering",
