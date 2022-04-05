@@ -13,6 +13,7 @@ export const zhHans = {
     login: "登录",
     register: "注册",
     save: "保存",
+    send: "发送",
     modify: "修改",
     del: "删除",
     add: "新增",
@@ -45,6 +46,7 @@ export const zhHans = {
   inputs: {
     content: "请输入内容",
     productName: "请输入商品名称",
+    userName: "请输入名字",
     name: "请输入姓名",
     gender: "请选择性别",
     phoneNumber: "请输入手机号",

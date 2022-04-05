@@ -3,7 +3,7 @@
     <scroll-view class="b-messages" scroll-y :scroll-into-view="lastViewId">
       <gc-im-messages :items="items" @retract-ok="onMessageRetractOk" />
     </scroll-view>
-    <gc-im-input @send="sendMessage" />
+    <gc-im-input :send-text="$t('$.send')" @send="sendMessage" />
   </div>
 </template>
 

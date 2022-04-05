@@ -13,6 +13,7 @@ export const en = {
     login: "Login",
     register: "Register",
     save: "Save",
+    send: "Send",
     modify: "Modify",
     del: "Delete",
     add: "New",
@@ -45,6 +46,7 @@ export const en = {
   inputs: {
     content: "Enter what you want to tell us",
     productName: "Enter product name",
+    userName: "Enter name",
     name: "Enter your name",
     gender: "Select your gender",
     phoneNumber: "Enter your phone number",

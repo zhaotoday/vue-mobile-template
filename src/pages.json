@@ -146,7 +146,7 @@
     {
       "path": "pages/im/chats/list/index",
       "style": {
-        "navigationBarTitleText": "消息"
+        "navigationBarTitleText": "%message%"
       }
     },
     {
