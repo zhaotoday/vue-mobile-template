@@ -47,6 +47,7 @@ export const en = {
     content: "Enter what you want to tell us",
     productName: "Enter product name",
     userName: "Enter name",
+    words: "Enter here",
     name: "Enter your name",
     gender: "Select your gender",
     phoneNumber: "Enter your phone number",

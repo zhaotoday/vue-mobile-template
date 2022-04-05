@@ -47,6 +47,7 @@ export const zhHans = {
     content: "请输入内容",
     productName: "请输入商品名称",
     userName: "请输入名字",
+    words: "请输入文字",
     name: "请输入姓名",
     gender: "请选择性别",
     phoneNumber: "请输入手机号",

@@ -1,12 +1,17 @@
 @import "~@/assets/styles/utils/index.scss";
 
-@include c(contact) {
+@include c(contacts) {
   @include position--fixed(null, px2rpx(30px), px2rpx(90px));
-  @include circle(px2rpx(80px));
 
-  i {
-    @include position--absolute(50%, null, null, 50%);
+  @include e(item) {
+    @include circle(px2rpx(80px));
 
-    transform: translateX(-50%) translateY(-50%);
+    position: relative;
+
+    i {
+      @include position--absolute(50%, null, null, 50%);
+
+      transform: translateX(-50%) translateY(-50%);
+    }
   }
 }
