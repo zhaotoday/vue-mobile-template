@@ -1,5 +1,6 @@
 import { useIm } from "@/components/im/components/composables/use-im";
 import { onMounted, reactive, ref } from "@vue/composition-api";
+import { onHide } from "uni-composition-api";
 
 export default {
   computed: {
@@ -23,24 +24,20 @@ export default {
     });
 
     onMounted(async () => {
-      await render();
-    });
-
-    const onGetChatsOk = (data) => {
-      list.value = { items: formatChats(data) };
-      loaded.value = true;
-    };
-
-    const render = async () => {
       ws.on(ws.events.getChatsOk, onGetChatsOk);
 
       ws.ready(() => {
         getChats();
       });
-    };
+    });
 
-    const unRender = () => {
+    onHide(() => {
       ws.off(ws.events.getChats, onGetChatsOk);
+    });
+
+    const onGetChatsOk = (data) => {
+      list.value = { items: formatChats(data) };
+      loaded.value = true;
     };
 
     const confirmSearch = (value) => {
@@ -51,8 +48,6 @@ export default {
       loaded,
       cSearch,
       list,
-      render,
-      unRender,
       confirmSearch,
     };
   },
