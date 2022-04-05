@@ -40,7 +40,11 @@
   }
 
   @include e(submit) {
-    @include position--absolute(null, px2rpx(12px), px2rpx(10px));
+    @include position--absolute(50%, px2rpx(12px));
+
+    transform: translateY(-50%);
+    padding: px2rpx(14px);
+    line-height: 100%;
 
     @include s(is-disabled) {
       color: map-get($colors, placeholder);

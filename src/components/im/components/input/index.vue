@@ -9,7 +9,7 @@
         v-model.trim="cForm.model.content"
       />
       <div
-        class="c-im-input__submit c-button w84 h60 fs30"
+        class="c-im-input__submit fs30"
         :class="{ 'is-disabled': !cForm.model.content }"
         @click="send"
       >

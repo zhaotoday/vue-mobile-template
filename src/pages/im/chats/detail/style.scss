@@ -8,6 +8,6 @@ page {
   height: 100%;
 
   @include b(messages) {
-    height: calc(100% - 190rpx);
+    height: calc(100% - 120rpx);
   }
 }
