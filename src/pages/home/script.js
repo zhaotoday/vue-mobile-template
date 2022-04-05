@@ -3,6 +3,7 @@ import { onShow } from "uni-composition-api";
 import { useRender } from "./composables/use-render";
 import { useCart } from "uni-shop/composables/use-cart";
 import { useIm } from "@/components/im/components/composables/use-im";
+import { useTabBarBadge } from "@/composables/use-tab-bar-badge";
 
 export default {
   components: {
@@ -19,8 +20,7 @@ export default {
     } = useRender();
 
     onShow(async () => {
-      useCart().renderProductsNumber();
-      useIm().getChats();
+      useTabBarBadge().initialize();
 
       await renderAdsList();
       await renderCategoriesList();
