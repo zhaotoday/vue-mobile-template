@@ -71,6 +71,7 @@ export const en = {
     bindSuccess: "Bind successfully",
     pleaseConfirm: "Please confirm",
     pleasePayAttention: "Please pay attention",
+    pleaseLogin: "Please login",
     sendCaptcha: "Send captcha",
     sendCaptchaSuccess: "Send captcha send successfully",
     waitCaptcha: "Wait {seconds}s",

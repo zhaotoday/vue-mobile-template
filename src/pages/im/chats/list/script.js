@@ -1,6 +1,7 @@
 import { useIm } from "@/components/im/components/composables/use-im";
 import { reactive, ref } from "@vue/composition-api";
 import { onHide, onShow } from "uni-composition-api";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   computed: {
@@ -11,6 +12,8 @@ export default {
     },
   },
   setup() {
+    const { loggedIn } = useUsers();
+
     const loaded = ref(false);
 
     const { ws, formatChats, getChats } = useIm();
@@ -26,9 +29,11 @@ export default {
     onShow(async () => {
       ws.on(ws.events.getChatsOk, onGetChatsOk);
 
-      ws.ready(() => {
-        getChats();
-      });
+      if (loggedIn()) {
+        ws.ready(() => {
+          getChats();
+        });
+      }
     });
 
     onHide(() => {
@@ -48,6 +53,7 @@ export default {
       loaded,
       cSearch,
       list,
+      loggedIn,
       confirmSearch,
     };
   },

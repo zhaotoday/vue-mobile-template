@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="loggedIn()">
     <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24 u-mb26">
       <u-search
         ref="search"
@@ -28,6 +28,22 @@
       margin-top="100rpx"
       :text="$t('$.noData')"
     />
+  </div>
+  <div v-else>
+    <u-empty
+      mode="permission"
+      icon="https://cdn.uviewui.com/uview/empty/permission.png"
+      margin-top="100rpx"
+      :text="$t('tips.pleaseLogin')"
+    />
+    <u-button
+      type="primary"
+      custom-style="width: 130rpx; margin-top: 20rpx"
+      size="small"
+      @click="$wx.navigateTo($consts.LoginUrl)"
+    >
+      {{ $t("$.login") }}
+    </u-button>
   </div>
 </template>
 

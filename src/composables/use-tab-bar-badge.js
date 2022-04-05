@@ -1,16 +1,20 @@
 import { useCart } from "uni-shop/composables/use-cart";
 import { useIm } from "@/components/im/components/composables/use-im";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export const useTabBarBadge = () => {
+  const { loggedIn } = useUsers();
   const { renderProductsNumber } = useCart();
   const { ws, getChats } = useIm();
 
   const initialize = () => {
     renderProductsNumber();
 
-    ws.ready(() => {
-      getChats();
-    });
+    if (loggedIn()) {
+      ws.ready(() => {
+        getChats();
+      });
+    }
   };
 
   return {
