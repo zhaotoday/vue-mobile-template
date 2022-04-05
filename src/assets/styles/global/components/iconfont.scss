@@ -1,10 +1,10 @@
 @font-face {
   font-family: "c-iconfont"; /* Project id 3174865 */
-  src: url("https://at.alicdn.com/t/font_3174865_sac7uw6eky.woff2?t=1647844740488")
+  src: url("https://at.alicdn.com/t/font_3174865_sljbgi6tzke.woff2?t=1649146390481")
       format("woff2"),
-    url("https://at.alicdn.com/t/font_3174865_sac7uw6eky.woff?t=1647844740488")
+    url("https://at.alicdn.com/t/font_3174865_sljbgi6tzke.woff?t=1649146390481")
       format("woff"),
-    url("https://at.alicdn.com/t/font_3174865_sac7uw6eky.ttf?t=1647844740488")
+    url("https://at.alicdn.com/t/font_3174865_sljbgi6tzke.ttf?t=1649146390481")
       format("truetype");
 }
 
@@ -14,6 +14,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.c-iconfont--retract:before {
+  content: "\e6e2";
+}
+
+.c-iconfont--message:before {
+  content: "\e61f";
 }
 
 .c-iconfont--telephone:before {
