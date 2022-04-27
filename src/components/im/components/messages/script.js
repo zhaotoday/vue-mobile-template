@@ -3,7 +3,7 @@ import Audio from "./components/audio";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useIm } from "../../composables/use-im";
 import { reactive } from "@vue/composition-api";
-import { imMessagesApi } from "@/apis/client/im-messages";
+import { imMessagesApi } from "../../../../apis/client/im-messages";
 
 export default {
   components: {
