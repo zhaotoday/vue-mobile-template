@@ -41,7 +41,7 @@
         {{ $t("$.noData") }}
       </div>
     </div>
-    <gc-product-submit :product="detail" />
+    <c-product-submit :product="detail" />
   </div>
 </template>
 

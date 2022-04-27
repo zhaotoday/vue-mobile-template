@@ -18,7 +18,7 @@
         line-color="#5ac725"
       />
     </div>
-    <gc-product-list
+    <c-product-list
       v-if="list.items.length"
       custom-class="u-pt24"
       :items="list.items"

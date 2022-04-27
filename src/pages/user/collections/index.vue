@@ -1,6 +1,6 @@
 <template>
   <div class="p-products-list">
-    <gc-product-list
+    <c-product-list
       v-if="productsList.items.length"
       custom-class="u-pt24"
       :items="productsList.items"

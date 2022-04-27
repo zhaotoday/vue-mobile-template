@@ -27,7 +27,7 @@
       >
         新增商品
       </u-button>
-      <gc-product-list
+      <c-product-list
         v-if="productsList.items.length"
         :items="productsList.items"
         :col="1"

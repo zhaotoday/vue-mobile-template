@@ -35,7 +35,7 @@
           {{ $t("$.productInfo") }}
         </div>
       </div>
-      <gc-product-list
+      <c-product-list
         :items="selectedProducts"
         :col="1"
         :edit-number="false"
@@ -63,7 +63,7 @@
         </div>
       </c-form-item>
     </c-form>
-    <gc-pay-submit @submit="submit" />
+    <c-pay-submit @submit="submit" />
   </div>
 </template>
 

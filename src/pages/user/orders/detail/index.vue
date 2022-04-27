@@ -53,7 +53,7 @@
           {{ $t("$.productInfo") }}
         </div>
       </div>
-      <gc-product-list
+      <c-product-list
         :items="detail.products"
         :col="1"
         :edit-number="false"

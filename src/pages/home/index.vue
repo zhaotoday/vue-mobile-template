@@ -3,7 +3,7 @@
     <div class="bg-primary u-pl24 u-pr24 u-pt24 u-pb24">
       <u-row>
         <u-col span="3">
-          <gc-locale />
+          <c-locale />
         </u-col>
         <u-col span="9">
           <u-search
@@ -30,12 +30,12 @@
       />
     </div>
     <vc-categories :items="categoriesList.items" />
-    <gc-product-list
+    <c-product-list
       custom-class="u-pt24"
       :items="productsList.items"
       :col="2"
     />
-    <gc-contact />
+    <c-contact />
   </div>
 </template>
 

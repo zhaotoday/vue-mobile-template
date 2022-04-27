@@ -37,7 +37,7 @@
             <span v-if="false" class="t-g7 u-lt fs24 u-ml10">200.0</span>
           </div>
           <div class="cc-list__number" @click.stop>
-            <gc-product-number
+            <c-product-number
               v-if="editNumber"
               :product="item"
               :key="new Date().getTime()"

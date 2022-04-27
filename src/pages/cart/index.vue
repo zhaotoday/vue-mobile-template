@@ -1,6 +1,6 @@
 <template>
   <div class="p-cart u-pt24 u-pb100">
-    <gc-product-list
+    <c-product-list
       v-if="products.length"
       :items="products"
       :col="1"
@@ -13,7 +13,7 @@
       margin-top="100rpx"
       :text="$t('$.emptyCart')"
     />
-    <gc-cart-submit @submit="$wx.navigateTo('/pages/checkout/index')" />
+    <c-cart-submit @submit="$wx.navigateTo('/pages/checkout/index')" />
   </div>
 </template>
 
