@@ -107,7 +107,7 @@ export const useIm = () => {
               }
             }
           })(lastMessage),
-          time: ws.formatTime(lastMessage.createdAt),
+          time: formatTime(lastMessage.createdAt),
           unreadMessageCount: (unreadMessages.find(
             ({ userId }) => userId === user.value.id
           ) || {})["unreadMessageCount"],

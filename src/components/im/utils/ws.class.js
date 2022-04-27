@@ -84,22 +84,6 @@ export const Ws = class extends EventEmitter {
     });
   }
 
-  formatTime(dateTime) {
-    const day = dayjs().format("YYYY-MM-DD");
-    const diffDay = dayjs(dateTime).format("YYYY-MM-DD");
-    const days = dayjs(day).diff(dayjs(diffDay), "day");
-    const date = days
-      ? {
-          0: "",
-          1: "昨天",
-          2: "前天",
-        }[days] || dayjs(dateTime).format("YY/MM/DD")
-      : "";
-    const time = dayjs(dateTime).format("HH:mm");
-
-    return date ? date + " " + time : time;
-  }
-
   send({ event, data }) {
     data.headers = useAuth().getHeaders();
 
