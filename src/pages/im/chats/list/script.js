@@ -1,4 +1,4 @@
-import { useIm } from "@/components/im/components/composables/use-im";
+import { useIm } from "@/components/im/composables/use-im";
 import { reactive, ref } from "@vue/composition-api";
 import { onHide, onShow } from "uni-composition-api";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";

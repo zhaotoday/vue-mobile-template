@@ -1,7 +1,7 @@
 import wx from "wx-bridge";
 import { onShow, onUnload } from "uni-composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";
-import { useIm } from "@/components/im/components/composables/use-im";
+import { useIm } from "@/components/im/composables/use-im";
 import { ref } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
 
