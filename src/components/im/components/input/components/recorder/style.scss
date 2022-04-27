@@ -1,9 +1,0 @@
-@import "~@/assets/styles/utils";
-
-@include b(recorder) {
-  @include position--absolute(0, null, null, 0);
-  @include size(100%, px2rpx(80px));
-
-  line-height: px2rpx(80px);
-  border-radius: px2rpx(20px);
-}

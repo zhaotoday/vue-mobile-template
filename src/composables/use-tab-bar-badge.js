@@ -1,5 +1,5 @@
 import { useCart } from "uni-shop/composables/use-cart";
-import { useIm } from "@/components/im/composables/use-im";
+import { useIm } from "uni-im/components/im/composables/use-im";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export const useTabBarBadge = () => {

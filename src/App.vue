@@ -4,7 +4,7 @@ import { useCart } from "uni-shop/composables/use-cart";
 import { usePageData } from "vue-mobile/composables/use-page-data";
 import { useAppUpgrade } from "vue-mobile/@lr/composables/use-app-upgrade";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { useIm } from "@/components/im/composables/use-im";
+import { useIm } from "uni-im/components/im/composables/use-im";
 
 export default {
   async onLaunch() {
