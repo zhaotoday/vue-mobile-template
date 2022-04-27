@@ -1,4 +1,4 @@
-import { useIm } from "../composables/use-im";
+import { useIm } from "../../composables/use-im";
 
 export default {
   props: {
