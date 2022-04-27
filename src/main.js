@@ -9,6 +9,7 @@ import { locale } from "@/locale";
 import { globalPlugin } from "@/utils/global-plugin";
 import { router, RouterMount } from "./router";
 import { permission } from "uni-plugins/utils/permission";
+import { useComponents } from "@/utils/use-components";
 
 Vue.config.productionTip = false;
 
@@ -21,6 +22,8 @@ Vue.use(UniCompositionAPI);
 Vue.use(VueI18n);
 Vue.use(globalPlugin);
 Vue.use(uView);
+
+useComponents(Vue);
 
 App.mpType = "app";
 

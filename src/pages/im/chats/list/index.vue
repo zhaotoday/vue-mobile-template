@@ -13,7 +13,7 @@
           @search="confirmSearch"
         />
       </div>
-      <gc-im-chats
+      <c-im-chats
         :items="filteredItems"
         @goto-chat="
           (item) =>
