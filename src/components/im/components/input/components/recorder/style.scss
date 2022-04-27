@@ -1,4 +1,4 @@
-@import "~@/assets/styles/utils/index";
+@import "~@/assets/styles/utils";
 
 @include b(recorder) {
   @include position--absolute(0, null, null, 0);

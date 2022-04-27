@@ -1,4 +1,4 @@
-@import "~@/assets/styles/utils/index";
+@import "~@/assets/styles/utils";
 
 @include c(im-input) {
   @import "./components/recorder/style";
