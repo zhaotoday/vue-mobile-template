@@ -1,5 +1,4 @@
 import EventEmitter from "eventemitter2";
-import dayjs from "dayjs";
 import socket from "plus-websocket";
 import { useHelpers } from "@/composables/use-helpers";
 import { useAuth } from "vue-mobile/@lr/composables/use-auth";
