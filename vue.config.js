@@ -2,7 +2,7 @@ const TransformPages = require("uni-read-pages");
 const { webpack } = new TransformPages();
 
 module.exports = {
-  transpileDependencies: ["uview-ui"],
+  transpileDependencies: ["uview-ui", "uni-im"],
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({
