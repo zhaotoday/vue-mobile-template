@@ -4,15 +4,10 @@ import UniCompositionAPI from "uni-composition-api";
 import uView from "uview-ui";
 import App from "@/App";
 import { globalPlugin } from "@/utils/global-plugin";
-import { router, RouterMount } from "./router";
 import { permission } from "uni-plugins/utils/permission";
 import { useComponents } from "@/utils/use-components";
 
 Vue.config.productionTip = false;
-
-// #ifndef MP
-Vue.use(router);
-// #endif
 
 Vue.use(VueCompositionAPI);
 Vue.use(UniCompositionAPI);
@@ -23,15 +18,7 @@ useComponents(Vue);
 
 App.mpType = "app";
 
-const app = new Vue({ ...App });
-
-// #ifdef H5
-RouterMount(app, router, "#app");
-// #endif
-
-// #ifndef H5
-app.$mount();
-// #endif
+new Vue({ ...App }).$mount();
 
 (async () => {
   // #ifdef APP-PLUS
