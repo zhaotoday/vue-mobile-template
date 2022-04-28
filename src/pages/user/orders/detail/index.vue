@@ -59,7 +59,7 @@
       />
     </div>
     <c-form custom-class="u-mb24">
-      <c-form-item :label="$t('$.total')">
+      <c-form-item label="总计">
         <div class="c-form__input fs30 t-error">
           ¥{{ getTotalPrice(detail.products) }}
         </div>
