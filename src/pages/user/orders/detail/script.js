@@ -4,14 +4,11 @@ import { ordersApi } from "@/apis/client/orders";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { useProducts } from "uni-shop/composables/use-products";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 import wx from "wx-bridge";
 import { permission } from "uni-plugins/utils/permission";
 
 export default {
   setup() {
-    const { $t, pt } = useI18n({ page: "user/orders/detail" });
-
     const { enums } = useEnums();
 
     const { currentRoute } = useRoute();
@@ -39,12 +36,11 @@ export default {
 
         await wx.openLocation({ latitude, longitude });
       } else {
-        wx.showToast({ title: $t("tips.deletedAddress") });
+        wx.showToast({ title: "位置不存在（收货地址可能被删除）" });
       }
     };
 
     return {
-      pt,
       enums,
       detail,
       getTotalPrice,

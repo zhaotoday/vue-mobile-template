@@ -12,7 +12,7 @@
           {{ detail.finishedAt ? $time.getTime(detail.finishedAt) : "-" }}
         </div>
       </c-form-item>
-      <c-form-item :label="$t('$.status')">
+      <c-form-item label="状态">
         <div class="c-form__input">
           {{
             $helpers.getItem(enums.OrderStatus, "value", detail.status)[
@@ -49,9 +49,7 @@
     </div>
     <div class="u-mb24" :class="$bem.box.$">
       <div class="u-pt20 u-pb20 bg-white">
-        <div class="c-title c-title--md fs32">
-          {{ $t("$.productInfo") }}
-        </div>
+        <div class="c-title c-title--md fs32">商品信息</div>
       </div>
       <c-product-list
         :items="detail.products"
@@ -63,15 +61,15 @@
     <c-form custom-class="u-mb24">
       <c-form-item :label="$t('$.total')">
         <div class="c-form__input fs30 t-error">
-          {{ $t("$.money") }}{{ getTotalPrice(detail.products) }}
+          ¥{{ getTotalPrice(detail.products) }}
         </div>
       </c-form-item>
-      <c-form-item :label="$t('$.payment')">
-        <div class="c-form__input">{{ $t("$.cashOnDelivery") }}</div>
+      <c-form-item label="支付方式">
+        <div class="c-form__input">货到付款</div>
       </c-form-item>
     </c-form>
     <c-form>
-      <c-form-item :label="$t('$.remark')">
+      <c-form-item label="备注">
         <div
           class="fs28"
           style="
