@@ -1,20 +1,20 @@
 <template>
   <div class="p-user-account-login u-pt24">
     <c-form>
-      <c-form-item :label="$t('$.phoneNumber')">
+      <c-form-item label="手机号">
         <c-form-input
           type="number"
           maxlength="11"
-          :placeholder="$t('inputs.phoneNumber')"
+          placeholder="请输入手机号"
           v-model.trim="cForm.model.account"
           :error="cForm.errors.account"
           @blur="validate(cForm, 'account')"
         />
       </c-form-item>
-      <c-form-item :label="$t('$.password')">
+      <c-form-item label="密码">
         <c-form-input
           type="password"
-          :placeholder="$t('inputs.password')"
+          placeholder="请输入密码"
           v-model.trim="cForm.model.password"
           :error="cForm.errors.password"
           @blur="validate(cForm, 'password')"
@@ -26,17 +26,17 @@
         class="b-register"
         @click="$wx.navigateTo('/pages/user/account-register/index')"
       >
-        {{ $t("$.register") }}
+        注册
       </div>
       <div
         class="b-password"
         @click="$wx.navigateTo('/pages/user/password/index')"
       >
-        {{ pt("$.forgotPassword") }}
+        忘记密码？
       </div>
     </div>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("$.login") }}
+      登录
     </u-button>
   </div>
 </template>

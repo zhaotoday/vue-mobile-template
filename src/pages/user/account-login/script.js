@@ -14,14 +14,8 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        account: [
-          isRequired({ message: $t("inputs.phoneNumber") }),
-          isPhoneNumber({ message: $t("inputs.phoneNumberFormatError") }),
-        ],
-        password: [
-          isRequired({ message: $t("inputs.password") }),
-          isPassword({ message: $t("inputs.passwordFormatError") }),
-        ],
+        account: [isRequired({ label: "手机号" }), isPhoneNumber()],
+        password: [isRequired({ label: "密码" }), isPassword()],
       },
       errors: {},
     });
@@ -32,7 +26,7 @@ export default {
 
         await accountLogin({ account, password });
 
-        wx.showToast({ title: $t("tips.loginSuccess") });
+        wx.showToast({ title: "登录成功" });
         await useHelpers().sleep(1500);
         wx.navigateBack();
       });
