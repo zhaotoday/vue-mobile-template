@@ -2,7 +2,7 @@
   <div class="p-user-orders-list">
     <div class="bg-white u-pb10 u-mb24">
       <u-tabs
-        :list="tabItems"
+        :list="enums.OrderStatus"
         key-name="label"
         item-style="padding-left: 36rpx; padding-right: 36rpx; height: 80rpx; box-sizing: border-box"
         line-color="#5ac725"

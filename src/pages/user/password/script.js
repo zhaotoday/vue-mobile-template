@@ -16,24 +16,15 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        phoneNumber: [
-          isRequired({ message: $t("inputs.phoneNumber") }),
-          isPhoneNumber({ message: $t("inputs.phoneNumberFormatError") }),
-        ],
-        captcha: [
-          isRequired({ message: $t("inputs.captcha") }),
-          isCaptcha({ message: $t("inputs.captchaFormatError") }),
-        ],
-        password: [
-          isRequired({ message: $t("inputs.password") }),
-          isPassword({ message: $t("inputs.passwordFormatError") }),
-        ],
+        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
+        captcha: [isRequired({ label: "验证码" }), isCaptcha()],
+        password: [isRequired({ label: "密码" }), isPassword()],
         confirmPassword: [
-          isRequired({ message: $t("inputs.confirmPassword") }),
-          isPassword({ message: $t("inputs.passwordFormatError") }),
+          isRequired({ label: "确认密码" }),
+          isPassword(),
           {
             validator: (rule, value) => value === cForm.model.password,
-            message: $t("inputs.confirmPasswordNotEqualPassword"),
+            message: "两次密码输入不一致",
           },
         ],
       },
@@ -43,9 +34,6 @@ export default {
     const { cCaptcha, sendCaptcha } = useCaptcha({
       model: () => ({ phoneNumber: cForm.model.phoneNumber }),
       rules: () => ({ phoneNumber: cForm.rules.phoneNumber }),
-      sendCaptchaText: $t("tips.sendCaptcha"),
-      sendCaptchaSuccessText: $t("tips.sendCaptchaSuccess"),
-      waitText: $t("tips.waitCaptcha"),
       request: () =>
         publicUsersApi.post({
           action: "sendSmsCaptcha",
@@ -71,7 +59,7 @@ export default {
             },
           });
 
-          wx.showToast({ title: $t("tips.resetSuccess") });
+          wx.showToast({ title: "重置成功" });
           await useHelpers().sleep(1500);
           wx.navigateBack();
         }

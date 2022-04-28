@@ -1,13 +1,9 @@
-import { computed, reactive, ref } from "@vue/composition-api";
+import { reactive, ref } from "@vue/composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
-import { OrderStatus } from "@/pages/manage/utils/enums/order-status";
 
 export const useRender = () => {
-  const { $t, getLocale } = useI18n({ page: "user/orders/list" });
-
   const { enums } = useEnums();
 
   const { user } = useUsers();
@@ -18,18 +14,6 @@ export const useRender = () => {
     current: 0,
   });
 
-  const tabItems = computed(() =>
-    getLocale() === "en"
-      ? [
-          {
-            label: $t("$.orderStatuses.all"),
-            value: "",
-          },
-          ...enums.value.OrderStatus,
-        ]
-      : OrderStatus
-  );
-
   const list = ref({
     items: [],
   });
@@ -39,7 +23,7 @@ export const useRender = () => {
       query: {
         where: {
           userId: { $eq: user.value.id },
-          status: { $eq: tabItems.value[cTabs.current].value },
+          status: { $eq: enums.OrderStatus[cTabs.current].value },
         },
       },
     });
@@ -53,7 +37,6 @@ export const useRender = () => {
   return {
     loaded,
     cTabs,
-    tabItems,
     list,
     render,
     changeTab,

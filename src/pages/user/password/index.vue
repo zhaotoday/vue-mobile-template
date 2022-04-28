@@ -1,21 +1,21 @@
 <template>
   <div class="p-user-password u-pt24">
     <c-form>
-      <c-form-item :label="$t('$.phoneNumber')">
+      <c-form-item label="手机号">
         <c-form-input
           type="number"
           maxlength="11"
-          :placeholder="$t('inputs.phoneNumber')"
+          placeholder="请输入手机号"
           v-model.trim="cForm.model.phoneNumber"
           :error="cForm.errors.phoneNumber"
           @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
-      <c-form-item :label="$t('$.captcha')">
+      <c-form-item label="验证码">
         <c-form-input
           type="number"
           maxlength="6"
-          :placeholder="$t('inputs.captcha')"
+          placeholder="请输入验证码"
           v-model.trim="cForm.model.captcha"
           :error="cForm.errors.captcha"
           custom-style="width: 300rpx"
@@ -30,19 +30,19 @@
           {{ cCaptcha.message }}
         </button>
       </c-form-item>
-      <c-form-item :label="$t('$.password')">
+      <c-form-item label="密码">
         <c-form-input
           type="password"
-          :placeholder="$t('inputs.passwordTip')"
+          placeholder="请输入密码（6-16位字母和数字组合）"
           v-model.trim="cForm.model.password"
           :error="cForm.errors.password"
           @blur="validate(cForm, 'password')"
         />
       </c-form-item>
-      <c-form-item :label="$t('$.confirmPassword')">
+      <c-form-item label="确认密码">
         <c-form-input
           type="password"
-          :placeholder="$t('inputs.confirmPassword')"
+          placeholder="请确认密码"
           v-model.trim="cForm.model.confirmPassword"
           :error="cForm.errors.confirmPassword"
           @blur="validate(cForm, 'confirmPassword')"
@@ -50,7 +50,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("$.reset") }}
+      重置
     </u-button>
   </div>
 </template>

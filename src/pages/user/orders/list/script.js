@@ -9,7 +9,7 @@ export default {
 
     const { getTotalPrice } = useProducts();
 
-    const { loaded, cTabs, tabItems, list, render, changeTab } = useRender();
+    const { loaded, cTabs, list, render, changeTab } = useRender();
 
     onShow(async () => {
       await render();
@@ -21,7 +21,6 @@ export default {
       loaded,
       list,
       cTabs,
-      tabItems,
       getTotalPrice,
       changeTab,
     };
