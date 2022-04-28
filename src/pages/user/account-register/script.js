@@ -5,12 +5,9 @@ import { useHelpers } from "@/composables/use-helpers";
 import { useCaptcha } from "vue-mobile/composables/use-captcha";
 import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {
-    const { $t } = useI18n({ page: "user/account-register/index" });
-
     const { isRequired, isPhoneNumber, isCaptcha, isPassword, validate } =
       useValidators();
 
@@ -19,25 +16,16 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        name: [isRequired({ message: $t("inputs.name") })],
-        phoneNumber: [
-          isRequired({ message: $t("inputs.phoneNumber") }),
-          isPhoneNumber({ message: $t("inputs.phoneNumberFormatError") }),
-        ],
-        captcha: [
-          isRequired({ message: $t("inputs.captcha") }),
-          isCaptcha({ message: $t("inputs.captchaFormatError") }),
-        ],
-        password: [
-          isRequired({ message: $t("inputs.password") }),
-          isPassword({ message: $t("inputs.passwordFormatError") }),
-        ],
+        name: [isRequired({ label: "姓名" })],
+        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
+        captcha: [isRequired({ label: "验证码" }), isCaptcha()],
+        password: [isRequired({ label: "密码" }), isPassword()],
         confirmPassword: [
-          isRequired({ message: $t("inputs.confirmPassword") }),
-          isPassword({ message: $t("inputs.passwordFormatError") }),
+          isRequired({ message: "请确认密码" }),
+          isPassword({ label: "确认密码" }),
           {
             validator: (rule, value) => value === cForm.model.password,
-            message: $t("inputs.confirmPasswordNotEqualPassword"),
+            message: "两次密码输入不一致",
           },
         ],
       },
@@ -47,9 +35,6 @@ export default {
     const { cCaptcha, sendCaptcha } = useCaptcha({
       model: () => ({ phoneNumber: cForm.model.phoneNumber }),
       rules: () => ({ phoneNumber: cForm.rules.phoneNumber }),
-      sendCaptchaText: $t("tips.sendCaptcha"),
-      sendCaptchaSuccessText: $t("tips.sendCaptchaSuccess"),
-      waitText: $t("tips.waitCaptcha"),
       request: () =>
         publicUsersApi.post({
           action: "sendSmsCaptcha",
@@ -68,7 +53,7 @@ export default {
 
           await accountRegister({ name, phoneNumber, captcha, password });
 
-          wx.showToast({ title: $t("tips.registerSuccess") });
+          wx.showToast({ title: "注册成功" });
           await useHelpers().sleep(1500);
           wx.switchTab({ url: "/pages/home/index" });
         }
