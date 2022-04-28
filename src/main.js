@@ -1,11 +1,8 @@
 import Vue from "vue";
 import VueCompositionAPI from "@vue/composition-api";
 import UniCompositionAPI from "uni-composition-api";
-import VueI18n from "vue-i18n";
 import uView from "uview-ui";
 import App from "@/App";
-import wx from "wx-bridge";
-import { locale } from "@/locale";
 import { globalPlugin } from "@/utils/global-plugin";
 import { router, RouterMount } from "./router";
 import { permission } from "uni-plugins/utils/permission";
@@ -19,7 +16,6 @@ Vue.use(router);
 
 Vue.use(VueCompositionAPI);
 Vue.use(UniCompositionAPI);
-Vue.use(VueI18n);
 Vue.use(globalPlugin);
 Vue.use(uView);
 
@@ -27,15 +23,7 @@ useComponents(Vue);
 
 App.mpType = "app";
 
-const i18n = new VueI18n({
-  locale: wx.getStorageSync("locale") || "en",
-  messages: locale,
-});
-
-const app = new Vue({
-  ...App,
-  i18n,
-});
+const app = new Vue({ ...App });
 
 // #ifdef H5
 RouterMount(app, router, "#app");
