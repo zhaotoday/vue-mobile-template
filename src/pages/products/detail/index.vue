@@ -16,7 +16,7 @@
     />
     <div class="b-info bg-white u-mb24">
       <div class="b-info__name fs32 u-lh1">
-        {{ getLocale() === "en" ? detail.name : detail.cnName }}
+        {{ detail.name }}
       </div>
       <div class="b-info__others u-lh1">
         <span class="t-error fs32">¥{{ detail.price }}</span>
