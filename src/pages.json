@@ -6,7 +6,7 @@
     {
       "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "%home%",
+        "navigationBarTitleText": "Sol Summer Shop",
         "navigationBarTextStyle": "white",
         "navigationBarBackgroundColor": "#5ac725"
       }
@@ -14,79 +14,79 @@
     {
       "path": "pages/categories/index",
       "style": {
-        "navigationBarTitleText": "%categories%"
+        "navigationBarTitleText": "分类"
       }
     },
     {
       "path": "pages/cart/index",
       "style": {
-        "navigationBarTitleText": "%cart%"
+        "navigationBarTitleText": "购物车"
       }
     },
     {
       "path": "pages/checkout/index",
       "style": {
-        "navigationBarTitleText": "%checkout%"
+        "navigationBarTitleText": "结算"
       }
     },
     {
       "path": "pages/checkout/result/index",
       "style": {
-        "navigationBarTitleText": "%checkout.result%"
+        "navigationBarTitleText": "下单成功"
       }
     },
     {
       "path": "pages/products/search/index",
       "style": {
-        "navigationBarTitleText": "%products.search%"
+        "navigationBarTitleText": "搜索"
       }
     },
     {
       "path": "pages/products/list/index",
       "style": {
-        "navigationBarTitleText": "%products.list%"
+        "navigationBarTitleText": "商品列表"
       }
     },
     {
       "path": "pages/products/detail/index",
       "style": {
-        "navigationBarTitleText": "%products.detail%"
+        "navigationBarTitleText": "商品详情"
       }
     },
     {
       "path": "pages/user/home/index",
       "style": {
-        "navigationBarTitleText": "%user.home%"
+        "navigationBarTitleText": "我的"
       }
     },
     {
       "path": "pages/user/info/index",
       "style": {
-        "navigationBarTitleText": "%user.info%"
+        "navigationBarTitleText": "我的资料"
       }
     },
     {
       "path": "pages/user/account-login/index",
       "style": {
-        "navigationBarTitleText": "%user.accountLogin%"
+        "navigationBarTitleText": "登录"
       }
     },
     {
       "path": "pages/user/account-register/index",
       "style": {
-        "navigationBarTitleText": "%user.accountRegister%"
+        "navigationBarTitleText": "注册"
       }
     },
     {
       "path": "pages/user/password/index",
       "style": {
-        "navigationBarTitleText": "%user.password%"
+        "navigationBarTitleText": "重置密码"
       }
     },
     {
       "path": "pages/user/phone-number/index",
       "style": {
-        "navigationBarTitleText": "%user.phoneNumber%"
+        "navigationBarTitleText": "绑定手机号"
       }
     },
     {
@@ -104,19 +104,19 @@
     {
       "path": "pages/user/orders/list/index",
       "style": {
-        "navigationBarTitleText": "%user.orders.list%"
+        "navigationBarTitleText": "我的订单"
       }
     },
     {
       "path": "pages/user/orders/detail/index",
       "style": {
-        "navigationBarTitleText": "%user.orders.detail%"
+        "navigationBarTitleText": "订单详情"
       }
     },
     {
       "path": "pages/user/collections/index",
       "style": {
-        "navigationBarTitleText": "%user.collections%"
+        "navigationBarTitleText": "我的收藏"
       }
     },
     {
@@ -140,7 +140,7 @@
     {
       "path": "pages/im/chats/list/index",
       "style": {
-        "navigationBarTitleText": "%message%"
+        "navigationBarTitleText": "消息"
       }
     },
     {
@@ -166,7 +166,7 @@
         "pagePath": "pages/home/index",
         "iconPath": "static/tab-bar/home.png",
         "selectedIconPath": "static/tab-bar/home-selected.png",
-        "text": "%home.tabBar%"
+        "text": "首页"
       },
       {
         "pagePath": "pages/categories/index",
