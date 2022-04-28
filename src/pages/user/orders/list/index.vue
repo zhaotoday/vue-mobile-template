@@ -43,9 +43,7 @@
           </div>
         </div>
         <div v-if="false" class="c-orders__foot u-tar">
-          <div class="c-tag h48 u-br8 bd-primary t-primary fs24">
-            {{ pt("$.payAtOnce") }}
-          </div>
+          <div class="c-tag h48 u-br8 bd-primary t-primary fs24">立即付款</div>
         </div>
       </li>
     </ul>

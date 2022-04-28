@@ -1,13 +1,13 @@
 <template>
   <div class="p-user-orders-detail u-pt24 u-pb24">
     <c-form custom-class="u-mb24">
-      <c-form-item :label="pt('_.$.orderNo')">
+      <c-form-item label="订单号">
         <div class="c-form__input">{{ detail.no }}</div>
       </c-form-item>
-      <c-form-item :label="pt('_.$.orderTime')">
+      <c-form-item label="下单时间">
         <div class="c-form__input">{{ $time.getTime(detail.createdAt) }}</div>
       </c-form-item>
-      <c-form-item :label="pt('_.$.finishTime')">
+      <c-form-item label="完成时间">
         <div class="c-form__input">
           {{ detail.finishedAt ? $time.getTime(detail.finishedAt) : "-" }}
         </div>

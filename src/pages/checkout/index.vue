@@ -26,7 +26,7 @@
         </div>
       </template>
       <div v-else class="c-address__placeholder fs30 t-placeholder">
-        {{ pt("inputs.selectAddress") }}
+        请选择收获地址
       </div>
     </div>
     <div class="u-mb24" :class="$bem.box.$">
@@ -41,7 +41,7 @@
       />
     </div>
     <c-form custom-class="u-mb24">
-      <c-form-item :label="$t('$.total')">
+      <c-form-item label="总计">
         <div class="c-form__input fs30 t-error">
           ¥{{ getTotalPrice(selectedProducts) }}
         </div>
