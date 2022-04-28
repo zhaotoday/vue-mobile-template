@@ -3,7 +3,7 @@
     <cc-collection :product-id="product.id" />
     <div class="cc-submit__cart" @click="$wx.switchTab('/pages/cart/index')">
       <i class="c-iconfont c-iconfont--cart-off fs42"></i>
-      <h2 class="fs24 u-lh1">{{ $t("$.cart") }}</h2>
+      <h2 class="fs24 u-lh1">购物车</h2>
       <div v-if="selectedProducts.length" class="cc-submit__count fs22">
         {{ selectedProducts.length }}
       </div>
@@ -12,9 +12,7 @@
       <template v-if="addedToCart">
         <c-product-number :product="product" icon-color="white" />
       </template>
-      <template v-else>
-        {{ $t("$.addToCart") }}
-      </template>
+      <template v-else>加入购物车</template>
     </div>
   </div>
 </template>

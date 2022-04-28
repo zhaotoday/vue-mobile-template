@@ -37,7 +37,7 @@
         mode="permission"
         icon="https://cdn.uviewui.com/uview/empty/permission.png"
         margin-top="100rpx"
-        :text="$t('tips.pleaseLogin')"
+        text="请登录"
       />
       <u-button
         type="primary"
