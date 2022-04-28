@@ -7,7 +7,7 @@
         </u-col>
         <u-col span="9">
           <u-search
-            :placeholder="$t('inputs.productName')"
+            placeholder="请输入商品名称"
             disabled
             :show-action="false"
             height="60rpx"

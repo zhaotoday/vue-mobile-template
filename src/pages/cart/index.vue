@@ -11,7 +11,7 @@
       mode="car"
       icon="http://cdn.uviewui.com/uview/empty/data.png"
       margin-top="100rpx"
-      :text="$t('$.emptyCart')"
+      text="购物车为空"
     />
     <c-cart-submit @submit="$wx.navigateTo('/pages/checkout/index')" />
   </div>

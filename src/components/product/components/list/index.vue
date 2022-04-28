@@ -28,7 +28,7 @@
             :src="$helpers.getFileUrl({ id: item.imageFileIds[0] })"
           />
           <div class="cc-list__name fs28 u-lh1">
-            {{ getLocale() === "en" ? item.name : item.cnName }}
+            {{ item.name }}
           </div>
           <div class="cc-list__price u-lh1">
             <span class="t-error fs26">

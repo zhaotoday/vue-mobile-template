@@ -12,7 +12,7 @@
           :src="$helpers.getFileUrl({ id: item.iconFileId })"
         />
         <div class="vc-categories__name fs24 u-pt10 u-pb10 u-lh1">
-          {{ getLocale() === "en" ? item.name : item.cnName }}
+          {{ item.name }}
         </div>
       </u-grid-item>
     </u-grid>

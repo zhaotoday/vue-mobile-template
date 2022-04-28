@@ -3,7 +3,7 @@
     <div class="bg-white u-pl24 u-pr24 u-pt24">
       <u-search
         ref="search"
-        :placeholder="$t('inputs.productName')"
+        placeholder="请输入商品名称"
         height="60rpx"
         :show-action="false"
         v-model="cSearch.model.keywords"

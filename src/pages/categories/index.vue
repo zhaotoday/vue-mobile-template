@@ -2,7 +2,7 @@
   <div class="p-categories">
     <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24">
       <u-search
-        :placeholder="$t('inputs.productName')"
+        placeholder="请输入商品名称"
         disabled
         :show-action="false"
         height="60rpx"
@@ -16,7 +16,7 @@
         :class="{ 'is-active': index === cTab.current }"
         @click="changeCategory(index)"
       >
-        {{ getLocale() === "en" ? item.name : item.cnName }}
+        {{ item.name }}
       </li>
     </ul>
     <scroll-view class="b-products" scroll-y>
