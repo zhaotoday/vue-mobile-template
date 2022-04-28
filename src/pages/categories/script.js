@@ -1,13 +1,10 @@
 import { onShow } from "uni-composition-api";
 import { usePageData } from "vue-mobile/composables/use-page-data";
 import { useRender } from "./composables/use-render";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 import { useTabBarBadge } from "@/composables/use-tab-bar-badge";
 
 export default {
   setup() {
-    const { getLocale } = useI18n();
-
     const { setPageData, getCurrentPage, getPageData } = usePageData();
 
     const {
@@ -51,7 +48,6 @@ export default {
       cTab,
       categoriesList,
       productsList,
-      getLocale,
       changeCategory,
     };
   },

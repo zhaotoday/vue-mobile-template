@@ -31,9 +31,7 @@
     </div>
     <div class="u-mb24" :class="$bem.box.$">
       <div class="u-pt20 u-pb20 bg-white">
-        <div class="c-title c-title--md fs32">
-          {{ $t("$.productInfo") }}
-        </div>
+        <div class="c-title c-title--md fs32">商品信息</div>
       </div>
       <c-product-list
         :items="selectedProducts"
