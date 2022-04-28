@@ -30,7 +30,7 @@
         mode="data"
         icon="https://cdn.uviewui.com/uview/empty/data.png"
         margin-top="100rpx"
-        :text="$t('$.noData')"
+        text="暂无数据"
       />
     </scroll-view>
   </div>
