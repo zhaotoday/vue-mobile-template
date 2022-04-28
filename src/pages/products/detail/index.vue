@@ -22,13 +22,12 @@
         <span class="t-error fs32">¥{{ detail.price }}</span>
         <span v-if="false" class="t-g7 u-lt fs26 u-ml10">200.0</span>
         <div class="b-info__right t-g7 fs26 u-lh1">
-          {{ $t("$.stocks") + $t("$.colon") }}{{ detail.stock }} &nbsp;&nbsp;
-          {{ $t("$.sales") + $t("$.colon") }}{{ detail.sales }}
+          库存：{{ detail.stock }} &nbsp;&nbsp; 销量：{{ detail.sales }}
         </div>
       </div>
     </div>
     <div class="u-pt30 u-pb30 bg-white">
-      <div class="c-title c-title--md fs32">{{ $t("$.details") }}</div>
+      <div class="c-title c-title--md fs32">详情</div>
     </div>
     <div class="s-cms-content">
       <div
@@ -37,9 +36,7 @@
         style="padding: 30rpx; font-size: 28rpx"
         v-html="detail.content || 'no data'"
       ></div>
-      <div v-else class="bg-white u-p30 fs28 u-tac t-placeholder">
-        {{ $t("$.noData") }}
-      </div>
+      <div v-else class="bg-white u-p30 fs28 u-tac t-placeholder">暂无数据</div>
     </div>
     <c-product-submit :product="detail" />
   </div>

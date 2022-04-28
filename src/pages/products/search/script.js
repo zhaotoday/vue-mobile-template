@@ -1,12 +1,9 @@
 import wx from "wx-bridge";
 import { ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {
-    const { pt } = useI18n({ page: "products/search" });
-
     const history = ref([]);
     const hotKeywords = ["apple", "orange", "chocolate"];
 
@@ -41,7 +38,6 @@ export default {
     };
 
     return {
-      pt,
       history,
       hotKeywords,
       search,
