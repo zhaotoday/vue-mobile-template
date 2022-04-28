@@ -172,25 +172,25 @@
         "pagePath": "pages/categories/index",
         "iconPath": "static/tab-bar/category.png",
         "selectedIconPath": "static/tab-bar/category-selected.png",
-        "text": "%categories%"
+        "text": "分类"
       },
       {
         "pagePath": "pages/cart/index",
         "iconPath": "static/tab-bar/cart.png",
         "selectedIconPath": "static/tab-bar/cart-selected.png",
-        "text": "%cart%"
+        "text": "购物车"
       },
       {
         "pagePath": "pages/im/chats/list/index",
         "iconPath": "static/tab-bar/message.png",
         "selectedIconPath": "static/tab-bar/message-selected.png",
-        "text": "%message%"
+        "text": "消息"
       },
       {
         "pagePath": "pages/user/home/index",
         "iconPath": "static/tab-bar/user.png",
         "selectedIconPath": "static/tab-bar/user-selected.png",
-        "text": "%user.home%"
+        "text": "我的"
       }
     ]
   }
