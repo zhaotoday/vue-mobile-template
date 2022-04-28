@@ -41,7 +41,7 @@
     "use-cos": "^0.0.2",
     "uview-ui": "^2.0.28",
     "vue": "^2.6.14",
-    "vue-mobile": "1.3.8",
+    "vue-mobile": "1.3.9",
     "vue-validation": "^1.0.3",
     "vuex": "^3.6.2",
     "vuex-composition-helpers": "^1.1.0",

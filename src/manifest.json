@@ -128,6 +128,7 @@
         "setting" : {
             "urlCheck" : false
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "permission": ["location"]
     }
 }

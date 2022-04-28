@@ -9,6 +9,7 @@ import { permission } from "uni-plugins/utils/permission";
 import Form from "vue-mobile/components/form";
 import FormInput from "vue-mobile/components/form/components/input";
 import FormItem from "vue-mobile/components/form/components/item";
+import FormLink from "vue-mobile/components/form/components/link";
 import FormPicker from "vue-mobile/components/form/components/picker";
 
 import PhoneNumber from "vue-mobile/@lr/components/phone/components/number";
@@ -35,6 +36,7 @@ Vue.use(uView);
 Vue.component("c-form", Form);
 Vue.component("c-form-input", FormInput);
 Vue.component("c-form-item", FormItem);
+Vue.component("c-form-link", FormLink);
 Vue.component("c-form-picker", FormPicker);
 
 Vue.component("c-phone-number", PhoneNumber);
