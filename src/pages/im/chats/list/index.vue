@@ -6,7 +6,7 @@
       <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24 u-mb26">
         <u-search
           ref="search"
-          :placeholder="$t('inputs.userName')"
+          placeholder="请输入名字"
           focus
           height="60rpx"
           :show-action="false"
@@ -45,7 +45,7 @@
         size="small"
         @click="$wx.navigateTo($consts.LoginUrl)"
       >
-        {{ $t("$.login") }}
+        登录
       </u-button>
     </div>
   </div>

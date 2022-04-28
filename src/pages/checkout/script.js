@@ -5,7 +5,6 @@ import { useProducts } from "uni-shop/composables/use-products";
 import { addressesApi } from "@/apis/client/addresses";
 import { usePageData } from "vue-mobile/composables/use-page-data";
 import { useCart } from "uni-shop/composables/use-cart";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import wx from "wx-bridge";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
@@ -14,8 +13,6 @@ import { useConsts } from "@/composables/use-consts";
 export default {
   setup() {
     const { enums } = useEnums();
-
-    const { pt } = useI18n({ page: "checkout" });
 
     const { getPageData } = usePageData();
 
@@ -87,13 +84,12 @@ export default {
 
         await wx.redirectTo({ url: "/pages/checkout/result/index" });
       } else {
-        await wx.showToast({ title: pt("inputs.selectAddress") });
+        await wx.showToast({ title: "请选择收获地址" });
       }
     };
 
     return {
       enums,
-      pt,
       selectedProducts,
       selectedAddress,
       cForm,

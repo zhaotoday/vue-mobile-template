@@ -1,5 +1,4 @@
 import { usePageData } from "vue-mobile/composables/use-page-data";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   props: {
@@ -9,8 +8,6 @@ export default {
     },
   },
   setup() {
-    const { getLocale } = useI18n();
-
     const { setPageData } = usePageData();
 
     const switchTabToCategories = async (index) => {
@@ -25,7 +22,6 @@ export default {
     };
 
     return {
-      getLocale,
       switchTabToCategories,
     };
   },

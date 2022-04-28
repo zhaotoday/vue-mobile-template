@@ -46,15 +46,15 @@
           ¥{{ getTotalPrice(selectedProducts) }}
         </div>
       </c-form-item>
-      <c-form-item :label="$t('$.payment')">
-        <div class="c-form__input">{{ $t("$.cashOnDelivery") }}</div>
+      <c-form-item label="支付方式">
+        <div class="c-form__input">货到付款</div>
       </c-form-item>
     </c-form>
     <c-form>
-      <c-form-item :label="$t('$.remark')">
+      <c-form-item label="备注">
         <div class="u-pt10 u-pb10 u-mr20" style="margin-left: 180rpx">
           <u-textarea
-            :placeholder="$t('inputs.content')"
+            placeholder="请输入内容"
             count
             v-model="cForm.model.remark"
           />
