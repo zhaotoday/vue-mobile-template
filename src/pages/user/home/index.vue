@@ -33,7 +33,7 @@
             size="small"
             @click="$wx.navigateTo('/pages/user/account-register/index')"
           >
-            {{ $t("$.register") }}
+            注册
           </u-button>
         </div>
       </template>
@@ -71,7 +71,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--order fs34 t-primary"></i>
-          {{ pt("$.myOrders") }}
+          我的订单
         </li>
         <li
           class="c-list__item has-icon is-link"
@@ -83,7 +83,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--address fs34 t-primary"></i>
-          {{ pt("$.myAddresses") }}
+          收货地址
         </li>
       </ul>
     </div>
@@ -96,7 +96,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--info fs34 t-primary"></i>
-          {{ pt("$.myInformation") }}
+          我的资料
         </li>
         <li
           class="c-list__item has-icon is-link"
@@ -108,7 +108,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--lock fs34 t-primary"></i>
-          {{ pt("$.modifyPassword") }}
+          修改密码
         </li>
         <li
           class="c-list__item has-icon is-link"
@@ -120,7 +120,7 @@
           "
         >
           <i class="c-iconfont c-iconfont--phone fs34 t-primary"></i>
-          {{ pt("$.bindPhoneNumber") }}
+          绑定手机号
         </li>
         <li
           v-if="false"
@@ -128,7 +128,7 @@
           @click="wxMpBind"
         >
           <i class="c-iconfont c-iconfont--wechat fs34 t-primary"></i>
-          {{ pt("$.bindWx") }}
+          绑定微信
         </li>
       </ul>
     </div>
@@ -139,41 +139,7 @@
           @click="$wx.makePhoneCall({ phoneNumber: '7204466' })"
         >
           <i class="c-iconfont c-iconfont--telephone fs34 t-primary"></i>
-          {{ pt("$.contact") }}
-        </li>
-      </ul>
-    </div>
-    <div
-      v-if="
-        loggedIn() &&
-        (user.phoneNumber === '7650008' || user.phoneNumber === '13950442340')
-      "
-      :class="$bem.box.$"
-    >
-      <ul class="c-list bg-white fs28">
-        <li
-          class="c-list__item has-icon is-link"
-          @click="
-            navigateTo({
-              requiresLogin: true,
-              url: '/pages/manage/products/list/index',
-            })
-          "
-        >
-          <i class="c-iconfont c-iconfont--product fs34 t-primary"></i>
-          商品管理
-        </li>
-        <li
-          class="c-list__item has-icon is-link"
-          @click="
-            navigateTo({
-              requiresLogin: true,
-              url: '/pages/manage/distribute/index',
-            })
-          "
-        >
-          <i class="c-iconfont c-iconfont--distribute fs34 t-primary"></i>
-          配送管理
+          联系我们
         </li>
       </ul>
     </div>
@@ -183,7 +149,7 @@
       type="primary"
       @click="logoutAndGotoHome"
     >
-      {{ $t("$.logout") }}
+      退出账号
     </u-button>
   </div>
 </template>
