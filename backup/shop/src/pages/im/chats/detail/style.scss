@@ -1,0 +1,13 @@
+@import "~@/assets/styles/utils";
+
+page {
+  height: 100%;
+}
+
+@include p(im-chats-detail) {
+  height: 100%;
+
+  @include b(messages) {
+    height: calc(100% - 120rpx);
+  }
+}
