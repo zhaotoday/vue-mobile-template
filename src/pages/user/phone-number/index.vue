@@ -5,24 +5,24 @@
       class="t-g7 fs26 u-pl24 u-pr24 u-pb20"
       style="line-height: 150%"
     >
-      {{ pt("tips.header") }}
+      应国家法律要求，使用互联网服务需进行账号实名。为保障账号的正常使用，请完成手机号绑定。感谢你的理解和支持。
     </div>
     <c-form>
-      <c-form-item :label="$t('$.phoneNumber')">
+      <c-form-item label="手机号">
         <c-form-input
           type="number"
           maxlength="11"
-          :placeholder="$t('inputs.phoneNumber')"
+          placeholder="请输入手机号"
           v-model.trim="cForm.model.phoneNumber"
           :error="cForm.errors.phoneNumber"
           @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
-      <c-form-item :label="$t('$.captcha')">
+      <c-form-item label="验证码">
         <c-form-input
           type="number"
           maxlength="6"
-          :placeholder="$t('inputs.captcha')"
+          placeholder="请输入验证码"
           v-model.trim="cForm.model.captcha"
           :error="cForm.errors.captcha"
           custom-style="width: 300rpx"
@@ -39,7 +39,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("$.bind") }}
+      绑定
     </u-button>
   </div>
 </template>
