@@ -17,23 +17,23 @@ import ProductNumber from "@/components/product/components/number";
 import ProductSubmit from "@/components/product/components/submit";
 import Upload from "@/components/upload";
 
-export const useComponents = (Vue) => {
-  Vue.component("c-form", Form);
-  Vue.component("c-form-input", FormInput);
-  Vue.component("c-form-item", FormItem);
-  Vue.component("c-form-picker", FormPicker);
+export const components = {
+  "c-form": Form,
+  "c-form-input": FormInput,
+  "c-form-item": FormItem,
+  "c-form-picker": FormPicker,
 
-  Vue.component("c-phone-number", PhoneNumber);
+  "c-phone-number": PhoneNumber,
 
-  Vue.component("c-im-chats", ImChats);
-  Vue.component("c-im-input", ImInput);
-  Vue.component("c-im-messages", ImMessages);
+  "c-im-chats": ImChats,
+  "c-im-input": ImInput,
+  "c-im-messages": ImMessages,
 
-  Vue.component("c-cart-submit", CartSubmit);
-  Vue.component("c-contact", Contact);
-  Vue.component("c-pay-submit", PaySubmit);
-  Vue.component("c-product-list", ProductList);
-  Vue.component("c-product-number", ProductNumber);
-  Vue.component("c-product-submit", ProductSubmit);
-  Vue.component("c-upload", Upload);
+  "c-cart-submit": CartSubmit,
+  "c-contact": Contact,
+  "c-pay-submit": PaySubmit,
+  "c-product-list": ProductList,
+  "c-product-number": ProductNumber,
+  "c-product-submit": ProductSubmit,
+  "c-upload": Upload,
 };

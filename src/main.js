@@ -5,7 +5,7 @@ import uView from "uview-ui";
 import App from "@/App";
 import { globalPlugin } from "@/utils/global-plugin";
 import { permission } from "uni-plugins/utils/permission";
-import { useComponents } from "@/utils/use-components";
+import { components } from "@/utils/components";
 
 Vue.config.productionTip = false;
 
@@ -14,7 +14,9 @@ Vue.use(UniCompositionAPI);
 Vue.use(globalPlugin);
 Vue.use(uView);
 
-useComponents(Vue);
+Object.keys(components).forEach((key) => {
+  Vue.component(key, components[key]);
+});
 
 Vue.config.productionTip = false;
 
