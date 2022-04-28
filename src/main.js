@@ -16,6 +16,8 @@ Vue.use(uView);
 
 useComponents(Vue);
 
+Vue.config.productionTip = false;
+
 App.mpType = "app";
 
 new Vue({ ...App }).$mount();
