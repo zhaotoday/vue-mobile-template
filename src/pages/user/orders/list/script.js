@@ -1,15 +1,13 @@
 import { onShow } from "uni-composition-api";
 import { useProducts } from "uni-shop/composables/use-products";
-import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useRender } from "./composables/use-render";
 
 export default {
   setup() {
-    const { enums } = useEnums();
-
     const { getTotalPrice } = useProducts();
 
-    const { loaded, cTabs, list, render, changeTab } = useRender();
+    const { loaded, cTabs, list, orderStatuses, render, changeTab } =
+      useRender();
 
     onShow(async () => {
       await render();
@@ -17,7 +15,7 @@ export default {
     });
 
     return {
-      enums,
+      orderStatuses,
       loaded,
       list,
       cTabs,

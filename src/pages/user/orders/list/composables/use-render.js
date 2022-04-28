@@ -1,4 +1,4 @@
-import { reactive, ref } from "@vue/composition-api";
+import { computed, reactive, ref } from "@vue/composition-api";
 import { ordersApi } from "@/apis/client/orders";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
@@ -18,12 +18,17 @@ export const useRender = () => {
     items: [],
   });
 
+  const orderStatuses = computed(() => [
+    { label: "所有", value: "" },
+    ...enums.value.OrderStatus,
+  ]);
+
   const render = async () => {
     list.value = await ordersApi.get({
       query: {
         where: {
           userId: { $eq: user.value.id },
-          status: { $eq: enums.OrderStatus[cTabs.current].value },
+          status: { $eq: orderStatuses.value[cTabs.current].value },
         },
       },
     });
@@ -38,6 +43,7 @@ export const useRender = () => {
     loaded,
     cTabs,
     list,
+    orderStatuses,
     render,
     changeTab,
   };
