@@ -5,11 +5,9 @@ import { useHelpers } from "@/composables/use-helpers";
 import { useCaptcha } from "vue-mobile/composables/use-captcha";
 import { publicUsersApi } from "vue-mobile/@lr/apis/public/users";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {
-    const { $t } = useI18n({ page: "user/captcha-login" });
     const { isRequired, isPhoneNumber, isCaptcha, validate } = useValidators();
 
     const { getUserInfo } = useUsers();
@@ -17,14 +15,8 @@ export default {
     const cForm = reactive({
       model: {},
       rules: {
-        phoneNumber: [
-          isRequired({ message: $t("inputs.phoneNumber") }),
-          isPhoneNumber({ message: $t("inputs.phoneNumberFormatError") }),
-        ],
-        captcha: [
-          isRequired({ message: $t("inputs.captcha") }),
-          isCaptcha({ message: $t("inputs.captchaFormatError") }),
-        ],
+        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
+        captcha: [isRequired({ label: "验证码" }), isCaptcha()],
       },
       errors: {},
     });
@@ -32,9 +24,6 @@ export default {
     const { cCaptcha, sendCaptcha } = useCaptcha({
       model: () => ({ phoneNumber: cForm.model.phoneNumber }),
       rules: () => ({ phoneNumber: cForm.rules.phoneNumber }),
-      sendCaptchaText: $t("tips.sendCaptcha"),
-      sendCaptchaSuccessText: $t("tips.sendCaptchaSuccess"),
-      waitText: $t("tips.waitCaptcha"),
       request: () =>
         publicUsersApi.post({
           action: "sendSmsCaptcha",
@@ -56,7 +45,7 @@ export default {
           },
         });
 
-        wx.showToast({ title: $t("tips.loginSuccess") });
+        wx.showToast({ title: "登录成功" });
         await getUserInfo();
         await useHelpers().sleep(1500);
       });
