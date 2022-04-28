@@ -10,9 +10,9 @@
           :src="avatarUrl || defaultAvatarUrl"
         />
         <div class="b-info__extra">
-          <h2 class="fs30">{{ $t("$.name") }}{{ $t("$.colon") }} {{ name }}</h2>
+          <h2 class="fs30">姓名：{{ name }}</h2>
           <h3 class="fs26" v-if="user.phoneNumber">
-            {{ $t("$.phoneNumber") }}{{ $t("$.colon") }} {{ user.phoneNumber }}
+            手机号：{{ user.phoneNumber }}
           </h3>
         </div>
       </template>
@@ -25,7 +25,7 @@
             size="small"
             @click="$wx.navigateTo($consts.LoginUrl)"
           >
-            {{ pt("$.login") }}
+            登录
           </u-button>
           <u-button
             type="primary"

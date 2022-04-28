@@ -6,12 +6,9 @@ import { addressesApi } from "@/apis/client/addresses";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { usePageData } from "vue-mobile/composables/use-page-data";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 
 export default {
   setup() {
-    const { $t, pt } = useI18n({ page: "user/addresses/list" });
-
     const { currentRoute } = useRoute();
 
     const { setPageData, getCurrentPage } = usePageData();
@@ -31,7 +28,7 @@ export default {
       const { action } = currentRoute.query;
 
       wx.setNavigationBarTitle({
-        title: action === "select" ? pt("$.selectAddress") : pt("$.address"),
+        title: action === "select" ? "选择收货地址" : "收货地址",
       });
 
       await render();
@@ -67,28 +64,27 @@ export default {
         action: "setDefault",
       });
 
-      wx.showToast({ title: $t("tips.setSuccess") });
+      wx.showToast({ title: "设置成功" });
 
       await render();
     };
 
     const del = async ({ id }) => {
       const { confirm } = await wx.showModal({
-        title: $t("tips.pleaseConfirm"),
-        content: $t("tips.confirmDelete"),
+        title: "请确认",
+        content: "确认删除吗？",
       });
 
       if (confirm) {
         await addressesApi.delete({ id });
 
-        wx.showToast({ title: $t("tips.deleteSuccess") });
+        wx.showToast({ title: "删除成功" });
 
         await render();
       }
     };
 
     return {
-      pt,
       enums,
       loaded,
       list,
