@@ -3,11 +3,7 @@
     <scroll-view class="b-messages" scroll-y :scroll-into-view="lastViewId">
       <c-im-messages :items="items" @retract-ok="onMessageRetractOk" />
     </scroll-view>
-    <c-im-input
-      :placeholder="$t('inputs.words')"
-      :send-text="$t('$.send')"
-      @send="sendMessage"
-    />
+    <c-im-input placeholder="请输入文字" send-text="发送" @send="sendMessage" />
   </div>
 </template>
 
