@@ -11,7 +11,6 @@ import ImMessages from "uni-im/components/im/components/messages";
 
 import CartSubmit from "@/components/cart/components/submit";
 import Contact from "@/components/contact";
-import Locale from "@/components/locale";
 import PaySubmit from "@/components/pay/components/submit";
 import ProductList from "@/components/product/components/list";
 import ProductNumber from "@/components/product/components/number";
@@ -32,7 +31,6 @@ export const useComponents = (Vue) => {
 
   Vue.component("c-cart-submit", CartSubmit);
   Vue.component("c-contact", Contact);
-  Vue.component("c-locale", Locale);
   Vue.component("c-pay-submit", PaySubmit);
   Vue.component("c-product-list", ProductList);
   Vue.component("c-product-number", ProductNumber);

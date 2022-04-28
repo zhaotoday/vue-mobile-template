@@ -1,20 +1,13 @@
 <template>
   <div class="p-home">
     <div class="bg-primary u-pl24 u-pr24 u-pt24 u-pb24">
-      <u-row>
-        <u-col span="3">
-          <c-locale />
-        </u-col>
-        <u-col span="9">
-          <u-search
-            placeholder="请输入商品名称"
-            disabled
-            :show-action="false"
-            height="60rpx"
-            @click="$wx.navigateTo('/pages/products/search/index')"
-          />
-        </u-col>
-      </u-row>
+      <u-search
+        placeholder="请输入商品名称"
+        disabled
+        :show-action="false"
+        height="60rpx"
+        @click="$wx.navigateTo('/pages/products/search/index')"
+      />
       <u-gap height="24rpx" />
       <u-swiper
         :list="
