@@ -38,10 +38,10 @@
         </div>
       </template>
     </div>
-    <div v-if="true" class="b-entries u-pt30 u-pb30 u-mb24" :class="$bem.box.$">
+    <div class="b-entries u-pt30 u-pb30 u-mb24" :class="$bem.box.$">
       <u-grid col="4" :border="false">
         <u-grid-item
-          v-for="(item, index) in menus"
+          v-for="(item, index) in mainMenus"
           :key="index"
           @click="navigateTo({ requiresLogin: true, url: item.url })"
         >

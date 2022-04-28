@@ -5,6 +5,7 @@ import wx from "wx-bridge";
 import { useI18n } from "vue-mobile/composables/use-i18n";
 import { store } from "@/store";
 import { useTabBarBadge } from "@/composables/use-tab-bar-badge";
+import mainMenus from "./utils/main-menus.json";
 
 export default {
   setup() {
@@ -12,29 +13,6 @@ export default {
 
     const { loggedIn, user, getUserInfo, navigateTo, name, avatarUrl, logout } =
       useUsers();
-
-    const menus = [
-      {
-        name: "我的订单",
-        icon: "order",
-        url: "/pages/user/orders/list/index",
-      },
-      {
-        name: "收货地址",
-        icon: "address",
-        url: "/pages/user/addresses/list/index",
-      },
-      {
-        name: "我的收藏",
-        icon: "heart",
-        url: "/pages/user/collections/index",
-      },
-      {
-        name: "最近购买",
-        icon: "cart",
-        url: "/pages/user/buy/index",
-      },
-    ];
 
     onShow(async () => {
       useTabBarBadge().initialize();
@@ -64,7 +42,7 @@ export default {
       user,
       name,
       avatarUrl,
-      menus,
+      mainMenus,
       navigateTo,
       logoutAndGotoHome,
       wxMpBind,
