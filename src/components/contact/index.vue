@@ -11,9 +11,7 @@
       @click="
         navigateTo({
           requiresLogin: true,
-          url: `/pages/im/chats/detail/index?toUserId=2&toUserName=${$t(
-            '$.customService'
-          )}`,
+          url: '/pages/im/chats/detail/index?toUserId=2&toUserName=客服',
         })
       "
     >
