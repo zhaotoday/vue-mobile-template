@@ -7,13 +7,10 @@ import { addressesApi } from "@/apis/client/addresses";
 import { useHelpers } from "@/composables/use-helpers";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
-import { useI18n } from "vue-mobile/composables/use-i18n";
 import { permission } from "uni-plugins/utils/permission";
 
 export default {
   setup() {
-    const { pt, $t } = useI18n({ page: "user/addresses/form" });
-
     const { currentRoute } = useRoute();
 
     const { enums } = useEnums();
@@ -34,11 +31,8 @@ export default {
         tag: "Home",
       },
       rules: {
-        name: [isRequired({ message: pt("inputs.consignee") })],
-        phoneNumber: [
-          isRequired({ message: $t("inputs.phoneNumber") }),
-          isPhoneNumber({ message: $t("inputs.phoneNumberFormatError") }),
-        ],
+        name: [isRequired({ label: "收货人姓名" })],
+        phoneNumber: [isRequired({ label: "手机号" }), isPhoneNumber()],
       },
       errors: {},
     });
@@ -47,10 +41,10 @@ export default {
       const { id } = currentRoute.query;
 
       if (id) {
-        wx.setNavigationBarTitle({ title: pt("$.modifyAddress") });
+        wx.setNavigationBarTitle({ title: "修改收货地址" });
         cForm.model = await addressesApi.get({ id });
       } else {
-        wx.setNavigationBarTitle({ title: pt("$.addAddress") });
+        wx.setNavigationBarTitle({ title: "新增收货地址" });
       }
     });
 
@@ -87,7 +81,7 @@ export default {
         });
 
         wx.showToast({
-          title: id ? $t("tips.modifySuccess") : $t("tips.addSuccess"),
+          title: id ? "修改成功" : "新增成功",
         });
         await useHelpers().sleep(1500);
         wx.navigateBack();
@@ -95,7 +89,6 @@ export default {
     };
 
     return {
-      pt,
       enums,
       currentRoute,
       cForm,

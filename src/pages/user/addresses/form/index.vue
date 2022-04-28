@@ -1,9 +1,9 @@
 <template>
   <div class="p-user-addresses-form u-pt24">
     <c-form>
-      <c-form-item :label="pt('$.consignee')">
+      <c-form-item label="收货人">
         <c-form-input
-          :placeholder="pt('inputs.consignee')"
+          placeholder="收货人姓名"
           v-model.trim="cForm.model.name"
           :error="cForm.errors.name"
           @blur="validate(cForm, 'name')"
@@ -25,32 +25,32 @@
           </li>
         </ul>
       </c-form-item>
-      <c-form-item :label="$t('$.phoneNumber')">
+      <c-form-item label="手机号">
         <c-form-input
           type="number"
           maxlength="11"
-          :placeholder="pt('inputs.byWhichPhoneWeContactYou')"
+          placeholder="配送员联系您的手机号"
           v-model.trim="cForm.model.phoneNumber"
           :error="cForm.errors.phoneNumber"
           @blur="validate(cForm, 'phoneNumber')"
         />
       </c-form-item>
-      <c-form-item custom-class="is-link" :label="pt('$.housingEstate')">
+      <c-form-item custom-class="is-link" label="小区">
         <c-form-link
-          :placeholder="pt('inputs.housingEstate')"
+          placeholder="小区/写字楼等"
           :label="cForm.model.location.name"
           @click="selectLocation"
         />
       </c-form-item>
-      <c-form-item :label="pt('$.houseNo')">
+      <c-form-item label="门牌号">
         <c-form-input
-          :placeholder="pt('inputs.houseNo')"
+          placeholder="门牌号，如：1 号楼 102"
           v-model.trim="cForm.model.room"
           :error="cForm.errors.room"
           @blur="validate(cForm, 'room')"
         />
       </c-form-item>
-      <c-form-item :label="pt('$.addressTag')">
+      <c-form-item label="地址类型">
         <ul class="b-tags u-pt18">
           <li
             v-for="item in enums.AddressTag"
@@ -70,7 +70,7 @@
       </c-form-item>
     </c-form>
     <u-button custom-class="at-bottom w702" type="primary" @click="submit">
-      {{ $t("$.save") }}
+      保存
     </u-button>
   </div>
 </template>
