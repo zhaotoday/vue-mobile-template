@@ -31,9 +31,7 @@
             {{ item.name }}
           </div>
           <div class="cc-list__price u-lh1">
-            <span class="t-error fs26">
-              {{ $t("$.money") }}{{ item.price }}
-            </span>
+            <span class="t-error fs26"> ¥{{ item.price }} </span>
             <span v-if="false" class="t-g7 u-lt fs24 u-ml10">200.0</span>
           </div>
           <div class="cc-list__number" @click.stop>

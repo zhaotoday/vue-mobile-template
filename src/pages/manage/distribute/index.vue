@@ -42,9 +42,7 @@
               </div>
             </div>
             <div class="b-money fs26">
-              <span class="t-error">
-                {{ $t("$.money") }}{{ getTotalPrice(item.products) }}
-              </span>
+              <span class="t-error"> ¥{{ getTotalPrice(item.products) }} </span>
             </div>
           </div>
         </div>

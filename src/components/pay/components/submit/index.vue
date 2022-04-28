@@ -1,7 +1,7 @@
 <template>
   <div class="cc-submit">
     <div class="cc-submit__total fs28 t-error">
-      {{ $t("$.money") }}{{ getTotalPrice(selectedProducts) }}
+      ¥{{ getTotalPrice(selectedProducts) }}
     </div>
     <div
       class="cc-submit__button bg-primary t-white fs28"

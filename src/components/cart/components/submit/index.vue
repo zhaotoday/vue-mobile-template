@@ -12,9 +12,7 @@
         @change="selectAllProducts"
       />
     </div>
-    <div class="cc-submit__total fs28 t-error">
-      {{ $t("$.money") }}{{ totalPrice }}
-    </div>
+    <div class="cc-submit__total fs28 t-error">¥{{ totalPrice }}</div>
     <div
       class="cc-submit__button t-white fs28"
       :class="selectedProducts.length ? 'bg-primary' : 'bg-placeholder'"
