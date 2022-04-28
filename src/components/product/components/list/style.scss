@@ -21,8 +21,8 @@
 
       @include e(image) {
         @include size(
-          px2rpx((750px - 24px * 3) / 2),
-          px2rpx((750px - 24px * 3) / 2)
+          px2rpx(calc((750px - 24px * 3) / 2)),
+          px2rpx(calc((750px - 24px * 3) / 2))
         );
 
         border-radius: px2rpx(10px);
