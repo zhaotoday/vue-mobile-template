@@ -17,6 +17,10 @@
     text-align: center;
   }
 
+  @include e(add) {
+    @include size(100%, 100%);
+  }
+
   @include e(collect, cart) {
     @include position--absolute(50%);
 
