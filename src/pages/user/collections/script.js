@@ -19,6 +19,8 @@ export default {
           where: { id: { $in: productIds } },
         },
       });
+
+      loaded.value = true;
     });
 
     return {
