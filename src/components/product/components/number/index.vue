@@ -3,7 +3,7 @@
     class="b-number"
     :min="0"
     :max="max"
-    v-model="value"
+    :value="value"
     @change="updateNumber"
   >
     <div slot="minus">

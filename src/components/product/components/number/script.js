@@ -16,6 +16,12 @@ export default {
       default: "",
     },
   },
+  computed: {
+    value() {
+      const found = this.products.find((item) => item.id === this.product.id);
+      return found ? found.number : 0;
+    },
+  },
   setup(props) {
     const { products, updateProductNumber } = useCart();
     const value = ref(0);
@@ -34,7 +40,6 @@ export default {
     };
 
     return {
-      value,
       products,
       updateNumber,
     };

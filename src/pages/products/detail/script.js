@@ -13,6 +13,11 @@ export default {
 
     const detail = ref({
       imageFileIds: [],
+      name: "",
+      price: 0,
+      stock: 0,
+      sales: 0,
+      content: "",
     });
 
     onShow(async () => {

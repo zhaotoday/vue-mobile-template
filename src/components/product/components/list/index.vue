@@ -35,11 +35,7 @@
             <span v-if="false" class="t-g7 u-lt fs24 u-ml10">200.0</span>
           </div>
           <div class="b-list__number" @click.stop>
-            <c-product-number
-              v-if="editNumber"
-              :product="item"
-              :key="new Date().getTime()"
-            />
+            <c-product-number v-if="editNumber" :product="item" />
             <div v-if="showNumber" class="fs24">x{{ item.number }}</div>
           </div>
           <template v-if="editable">
