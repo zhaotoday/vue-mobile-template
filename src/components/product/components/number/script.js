@@ -1,4 +1,3 @@
-import { onMounted, ref } from "@vue/composition-api";
 import { useCart } from "uni-shop/composables/use-cart";
 
 export default {
