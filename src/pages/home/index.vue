@@ -22,7 +22,7 @@
         indicator-mode="dot"
       />
     </div>
-    <vc-categories :items="categoriesList.items" />
+    <b-categories :items="categoriesList.items" />
     <c-product-list
       custom-class="u-pt24"
       :items="productsList.items"

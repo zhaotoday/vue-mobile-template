@@ -5,7 +5,7 @@ import { useTabBarBadge } from "@/composables/use-tab-bar-badge";
 
 export default {
   components: {
-    "vc-categories": Categories,
+    "b-categories": Categories,
   },
   setup() {
     const {
