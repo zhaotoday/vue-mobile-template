@@ -7,7 +7,6 @@
         <u-search
           ref="search"
           placeholder="请输入名字"
-          focus
           height="60rpx"
           :show-action="false"
           @search="confirmSearch"
