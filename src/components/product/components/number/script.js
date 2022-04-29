@@ -1,4 +1,5 @@
 import { useCart } from "uni-shop/composables/use-cart";
+import { store } from "@/store";
 
 export default {
   props: {
@@ -16,21 +17,22 @@ export default {
     },
   },
   computed: {
-    value() {
-      const found = this.products.find((item) => item.id === this.product.id);
-      return found ? found.number : 0;
+    value: {
+      get() {
+        const { products } = store.state.cart;
+        const found = products.find((item) => item.id === this.product.id);
+        return found ? found.number : 0;
+      },
+      set(value) {
+        this.updateProductNumber({ product: this.product, number: value });
+      },
     },
   },
-  setup(props) {
-    const { products, updateProductNumber } = useCart();
-
-    const updateNumber = ({ value }) => {
-      updateProductNumber({ product: props.product, number: value });
-    };
+  setup() {
+    const { updateProductNumber } = useCart();
 
     return {
-      products,
-      updateNumber,
+      updateProductNumber,
     };
   },
 };
