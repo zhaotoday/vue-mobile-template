@@ -24,16 +24,6 @@ export default {
   },
   setup(props) {
     const { products, updateProductNumber } = useCart();
-    const value = ref(0);
-
-    onMounted(() => {
-      value.value = (() => {
-        const found = products.value.find(
-          (item) => item.id === props.product.id
-        );
-        return found ? found.number : 0;
-      })();
-    });
 
     const updateNumber = ({ value }) => {
       updateProductNumber({ product: props.product, number: value });
