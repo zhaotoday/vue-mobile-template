@@ -1,4 +1,4 @@
-@import "~@/assets/styles/utils/index.scss";
+@import "~@/assets/styles/utils";
 
 @include c(contacts) {
   @include position--fixed(null, px2rpx(30px), px2rpx(90px));

@@ -1,4 +1,4 @@
-@import "~@/assets/styles/utils/index.scss";
+@import "~@/assets/styles/utils";
 
 @include b(submit) {
   @include position--fixed(null, 0, 0, 0);
