@@ -10,7 +10,11 @@
     </div>
     <div class="b-submit__button bg-primary t-white fs28" @click="addToCart">
       <template v-if="addedToCart">
-        <c-product-number :product="product" icon-color="white" />
+        <c-product-number
+          class="b-submit__number"
+          :product="product"
+          icon-color="white"
+        />
       </template>
       <template v-else>加入购物车</template>
     </div>
