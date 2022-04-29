@@ -1,6 +1,6 @@
 @import "~@/assets/styles/utils/index.scss";
 
-@include cc(list) {
+@include b(list) {
   @include e(checkbox) {
     display: none;
   }
@@ -10,7 +10,7 @@
 
     width: px2rpx(750px - 24px);
 
-    @include cc(list) {
+    @include b(list) {
       @include e(box) {
         position: relative;
         background-color: white;
@@ -53,7 +53,7 @@
     }
   }
 
-  @include cc(action) {
+  @include b(action) {
     @include position--absolute(null, null, px2rpx(22px));
 
     @include m(edit) {
@@ -66,7 +66,7 @@
   }
 
   @include m(col1) {
-    @include cc(list) {
+    @include b(list) {
       @include e(box) {
         @include padding(px2rpx(30px), null, px2rpx(30px));
 
@@ -114,7 +114,7 @@
   }
 
   @include s(is-selectable) {
-    @include cc(list) {
+    @include b(list) {
       @include e(checkbox) {
         display: block;
       }

@@ -1,10 +1,10 @@
 <template>
-  <div class="cc-submit">
-    <div class="cc-submit__total fs28 t-error">
+  <div class="b-submit">
+    <div class="b-submit__total fs28 t-error">
       ¥{{ getTotalPrice(selectedProducts) }}
     </div>
     <div
-      class="cc-submit__button bg-primary t-white fs28"
+      class="b-submit__button bg-primary t-white fs28"
       @click="$emit('submit')"
     >
       支付

@@ -1,6 +1,6 @@
 @import "~@/assets/styles/utils/index.scss";
 
-@include cc(number) {
+@include b(number) {
   @include e(input) {
     width: px2rpx(42px);
     font-size: px2rpx(26px);

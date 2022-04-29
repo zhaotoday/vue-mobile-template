@@ -1,8 +1,8 @@
 <template>
   <div
-    class="cc-list"
+    class="b-list"
     :class="[
-      `cc-list--col${col}`,
+      `b-list--col${col}`,
       selectable ? 'is-selectable' : '',
       customClass,
     ]"
@@ -10,10 +10,10 @@
     <u-grid :col="col" :border="false">
       <u-grid-item v-for="(item, index) in items" :key="index">
         <div
-          class="cc-list__box"
+          class="b-list__box"
           @click="$wx.navigateTo(`/pages/products/detail/index?id=${item.id}`)"
         >
-          <div class="cc-list__checkbox">
+          <div class="b-list__checkbox">
             <u-checkbox
               shape="circle"
               active-color="#5ac725"
@@ -23,18 +23,18 @@
             />
           </div>
           <image
-            class="cc-list__image"
+            class="b-list__image"
             mode="aspectFill"
             :src="$helpers.getFileUrl({ id: item.imageFileIds[0] })"
           />
-          <div class="cc-list__name fs28 u-lh1">
+          <div class="b-list__name fs28 u-lh1">
             {{ item.name }}
           </div>
-          <div class="cc-list__price u-lh1">
+          <div class="b-list__price u-lh1">
             <span class="t-error fs26"> ¥{{ item.price }} </span>
             <span v-if="false" class="t-g7 u-lt fs24 u-ml10">200.0</span>
           </div>
-          <div class="cc-list__number" @click.stop>
+          <div class="b-list__number" @click.stop>
             <c-product-number
               v-if="editNumber"
               :product="item"
@@ -44,7 +44,7 @@
           </div>
           <template v-if="editable">
             <div
-              class="cc-action cc-action--edit c-icon-tag--edit fs24"
+              class="b-action b-action--edit c-icon-tag--edit fs24"
               @click.stop="
                 $wx.navigateTo(
                   `/pages/manage/products/form/index?categoryId=${item.categoryId}&id=${item.id}`
@@ -54,7 +54,7 @@
               修改
             </div>
             <div
-              class="cc-action cc-action--del c-icon-tag--del fs24"
+              class="b-action b-action--del c-icon-tag--del fs24"
               @click.stop="$emit('del', item)"
             >
               删除

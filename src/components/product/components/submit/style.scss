@@ -1,6 +1,6 @@
 @import "~@/assets/styles/utils/index.scss";
 
-@include cc(submit) {
+@include b(submit) {
   @include position--fixed(null, 0, 0, 0);
 
   border-top: 1px solid map-get($colors, g4);
@@ -50,7 +50,7 @@
     color: white;
   }
 
-  @include cc(number) {
+  @include b(number) {
     @include position--absolute(50%, null, null, 50%);
 
     transform: translateX(-50%) translateY(-50%);

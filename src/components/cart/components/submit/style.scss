@@ -1,6 +1,6 @@
 @import "~@/assets/styles/utils/index.scss";
 
-@include cc(submit) {
+@include b(submit) {
   // #ifdef H5
   @include position--fixed(null, 0, px2rpx(100px - 4px), 0);
   // #endif

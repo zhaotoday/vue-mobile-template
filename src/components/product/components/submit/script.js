@@ -4,7 +4,7 @@ import { store } from "@/store";
 
 export default {
   components: {
-    "cc-collection": Collection,
+    "b-collection": Collection,
   },
   props: {
     product: {
