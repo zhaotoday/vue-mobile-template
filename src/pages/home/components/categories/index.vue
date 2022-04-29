@@ -1,22 +1,21 @@
 <template>
-  <div class="vc-categories u-pt24 u-pb10 bg-white">
-    <u-grid col="5" :border="false">
-      <u-grid-item
-        v-for="(item, index) in items"
-        :key="index"
-        @click="switchTabToCategories(index)"
-      >
-        <u-avatar
-          size="90rpx"
-          mode="aspectFill"
-          :src="$helpers.getFileUrl({ id: item.iconFileId })"
-        />
-        <div class="vc-categories__name fs24 u-pt10 u-pb10 u-lh1">
-          {{ item.name }}
-        </div>
-      </u-grid-item>
-    </u-grid>
-  </div>
+  <ul class="b-categories u-pt24 u-pb10 bg-white">
+    <li
+      v-for="(item, index) in items"
+      :key="index"
+      class="b-categories__item"
+      @click="switchTabToCategories(index)"
+    >
+      <image
+        class="b-categories__icon"
+        mode="aspectFill"
+        :src="$helpers.getFileUrl({ id: item.iconFileId })"
+      />
+      <div class="b-categories__name fs24 u-pt10 u-pb10 u-lh1">
+        {{ item.name }}
+      </div>
+    </li>
+  </ul>
 </template>
 
 <script src="./script.js"></script>

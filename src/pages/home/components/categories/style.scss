@@ -1,6 +1,21 @@
 @import "~@/assets/styles/utils/index.scss";
 
-@include vc(categories) {
+@include b(categories) {
+  @include clearfix;
+
+  @include e(item) {
+    @include size(20%, px2rpx(160px));
+
+    float: left;
+  }
+
+  @include e(icon) {
+    @include circle(px2rpx(90px));
+    @include block__center;
+
+    display: block;
+  }
+
   @include e(name) {
     @include text--overflow(2);
     @include margin(null, 0%, null, 0%);
