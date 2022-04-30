@@ -1,6 +1,6 @@
 <template>
   <div class="p-products-list">
-    <div class="bg-white u-pl24 u-pr24 u-pt24">
+    <div class="bg-white u-pl24 u-pr24 u-pt24 u-pb24">
       <u-search
         ref="search"
         placeholder="请输入商品名称"
@@ -10,9 +10,8 @@
         @search="search"
       />
     </div>
-    <div class="bg-white u-pb10">
+    <div v-if="false" class="bg-white u-pb10">
       <u-tabs
-        v-if="false"
         :list="cTabs.items"
         item-style="width: 25%; height: 80rpx; box-sizing: border-box"
         line-color="#5ac725"
