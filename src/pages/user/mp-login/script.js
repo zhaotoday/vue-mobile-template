@@ -3,14 +3,14 @@ import { useHelpers } from "@/composables/use-helpers";
 import { useWxMp } from "vue-mobile/@lr/composables/use-wx-mp";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useMockUser } from "vue-mobile/@lr/composables/use-mock-user";
-import { onLoad, onUnload } from "uni-composition-api";
+import { onLoad, onShow, onUnload } from "uni-composition-api";
 import { ref } from "@vue/composition-api";
 
 export default {
   setup() {
     const { getUserProfileAndLogin, onRefreshLoginCode, offRefreshLoginCode } =
       useWxMp();
-    const { wxLogin } = useUsers();
+    const { wxLogin, logout } = useUsers();
     const { mockLogin } = useMockUser();
 
     const phoneNumber = ref(null);
@@ -24,6 +24,10 @@ export default {
       offRefreshLoginCode();
     });
     // #endif
+
+    onShow(async () => {
+      await logout();
+    });
 
     const login = async () => {
       try {

@@ -17,11 +17,15 @@ export const useConsts = () => {
   const WsUrl = "wss://sol-api.fzlr.com/wss";
   // const WsUrl = "ws://localhost:3002";
 
+  // 购物车 tabBar 的索引
+  const CartTabBarIndex = 2;
+
   return {
     ApiUrl,
     LoginUrl,
     CdnUrl,
     StaticUrl,
     WsUrl,
+    CartTabBarIndex,
   };
 };
