@@ -4,7 +4,6 @@ import { useWxMp } from "vue-mobile/@lr/composables/use-wx-mp";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useMockUser } from "vue-mobile/@lr/composables/use-mock-user";
 import { onLoad, onShow, onUnload } from "uni-composition-api";
-import { ref } from "@vue/composition-api";
 
 export default {
   setup(props, context) {
