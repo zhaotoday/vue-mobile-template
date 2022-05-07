@@ -10,9 +10,11 @@ page {
 
     text-align: center;
 
-    .u-avatar {
+    @include e(logo) {
       @include block--center;
+      @include circle(px2rpx(170px));
 
+      box-shadow: 0 0 px2rpx(6px) px2rpx(2px) rgba(168, 168, 171, 0.14);
       margin-bottom: px2rpx(20px);
     }
   }
