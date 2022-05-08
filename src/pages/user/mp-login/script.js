@@ -9,7 +9,7 @@ export default {
   setup(props, context) {
     const { getUserProfileAndLogin, onRefreshLoginCode, offRefreshLoginCode } =
       useWxMp();
-    const { wxLogin, logout } = useUsers();
+    const { wxLogin, setUser, setToken, logout } = useUsers();
     const { mockLogin } = useMockUser();
 
     // #ifdef MP
@@ -29,11 +29,16 @@ export default {
     const login = async () => {
       try {
         // #ifdef MP
-        const { user } = await wxLogin(await getUserProfileAndLogin());
+        const { user, token } = await wxLogin({
+          ...(await getUserProfileAndLogin()),
+          store: false,
+        });
 
         if (!user.phoneNumber) {
-          context.refs.phoneNumber.show();
+          context.refs.phoneNumber.show({ token });
         } else {
+          await setUser({ user });
+          await setToken({ token });
           wx.showToast({ title: "登陆成功" });
           await useHelpers().sleep(1500);
           wx.navigateBack();
