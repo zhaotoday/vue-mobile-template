@@ -5,7 +5,6 @@
     "versionName" : "1.0.2",
     "versionCode" : "102",
     "transformPx" : false,
-    "locale" : "en",
     "h5" : {
         "devServer" : {
             "port" : 8081
