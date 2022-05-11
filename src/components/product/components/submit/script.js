@@ -1,6 +1,7 @@
 import { useCart } from "uni-shop/composables/use-cart";
 import Collection from "./components/collection/index.vue";
 import { store } from "@/store";
+import wx from "wx-bridge";
 
 export default {
   components: {
@@ -16,7 +17,11 @@ export default {
     const { selectedProducts, updateProductNumber } = useCart();
 
     const addToCart = () => {
-      updateProductNumber({ product: props.product, number: 1 });
+      if (props.product.stock) {
+        updateProductNumber({ product: props.product, number: 1 });
+      } else {
+        wx.showToast({ title: "库存不足" });
+      }
     };
 
     return {
