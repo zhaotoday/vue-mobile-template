@@ -1,5 +1,11 @@
 <template>
-  <u-number-box class="b-number" :min="0" :max="max" v-model="value">
+  <u-number-box
+    class="b-number"
+    :min="0"
+    :max="product.stock"
+    v-model="value"
+    @overlimit="onOverLimit"
+  >
     <div slot="minus">
       <div v-if="value" class="b-number__minus">
         <u-icon name="minus" size="24rpx" :color="iconColor || '#5ac725'" />

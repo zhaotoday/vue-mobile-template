@@ -1,12 +1,9 @@
 import { useCart } from "uni-shop/composables/use-cart";
 import { store } from "@/store";
+import wx from "wx-bridge";
 
 export default {
   props: {
-    max: {
-      type: Number,
-      default: 10000,
-    },
     product: {
       type: Object,
       default: () => ({}),
@@ -31,8 +28,15 @@ export default {
   setup() {
     const { updateProductNumber } = useCart();
 
+    const onOverLimit = (type) => {
+      if (type === "plus") {
+        wx.showToast({ title: "库存不足" });
+      }
+    };
+
     return {
       updateProductNumber,
+      onOverLimit,
     };
   },
 };
