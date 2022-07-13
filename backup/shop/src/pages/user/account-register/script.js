@@ -20,10 +20,7 @@ export default {
       model: {},
       rules: {
         name: [isRequired({ message: $t("inputs.name") })],
-        phoneNumber: [
-          isRequired({ message: $t("inputs.phoneNumber") }),
-          isPhoneNumber({ message: $t("inputs.phoneNumberFormatError") }),
-        ],
+        phoneNumber: [isRequired({ message: $t("inputs.phoneNumber") })],
         captcha: [
           isRequired({ message: $t("inputs.captcha") }),
           isCaptcha({ message: $t("inputs.captchaFormatError") }),

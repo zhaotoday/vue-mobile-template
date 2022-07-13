@@ -17,7 +17,10 @@ export default {
       });
 
       await renderCategoriesDetail();
-      cForm.model = await getDetail();
+
+      if (currentRoute.query.id) {
+        cForm.model = await getDetail();
+      }
     });
 
     return {

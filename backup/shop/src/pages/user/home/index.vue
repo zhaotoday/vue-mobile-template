@@ -146,7 +146,9 @@
     <div
       v-if="
         loggedIn() &&
-        (user.phoneNumber === '7650008' || user.phoneNumber === '13950442340')
+        (user.phoneNumber === '7650008' ||
+          user.phoneNumber === '13950442340' ||
+          user.phoneNumber === '7207858')
       "
       :class="$bem.box.$"
     >
