@@ -5,6 +5,7 @@ import uView from "uview-ui";
 import App from "@/App";
 import { globalPlugin } from "@/utils/global-plugin";
 import { permission } from "uni-plugins/utils/permission";
+import UButton from "uview-ui/components/u-button/u-button";
 
 import Form from "vue-mobile/components/form";
 import FormInput from "vue-mobile/components/form/components/input";
@@ -33,6 +34,7 @@ Vue.use(UniCompositionAPI);
 Vue.use(globalPlugin);
 Vue.use(uView);
 
+Vue.component("u-button", UButton);
 Vue.component("c-form", Form);
 Vue.component("c-form-input", FormInput);
 Vue.component("c-form-item", FormItem);
