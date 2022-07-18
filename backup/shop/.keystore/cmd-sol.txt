@@ -6,11 +6,11 @@
 
 命令：
 $ set PATH=%PATH%;"C:\Program Files\Java\jdk1.8.0_201\bin"
-$ keytool -genkey -alias fzxxdd-hjys -keyalg RSA -keysize 2048 -validity 36500 -keystore fzxxdd-hjys.keystore
-$ keytool -importkeystore -srckeystore fzxxdd-hjys.keystore -destkeystore fzxxdd-hjys.keystore -deststoretype pkcs12
-$ keytool -list -v -keystore fzxxdd-hjys.keystore
+$ keytool -genkey -alias fzxxdd-sol -keyalg RSA -keysize 2048 -validity 36500 -keystore fzxxdd-sol.keystore
+$ keytool -importkeystore -srckeystore fzxxdd-sol.keystore -destkeystore fzxxdd-sol.keystore -deststoretype pkcs12
+$ keytool -list -v -keystore fzxxdd-sol.keystore
 
-密码：fzxxdd-hjys111
+密码：fzxxdd-sol111
 
 您的名字与姓氏是什么?
   [Unknown]:  wanjuanxiao
@@ -25,4 +25,4 @@ $ keytool -list -v -keystore fzxxdd-hjys.keystore
 该单位的双字母国家/地区代码是什么?
   [Unknown]:  cn
 
-Android 包名：com.fzxxdd.hjys
+Android 包名：com.fzxxdd.sol
