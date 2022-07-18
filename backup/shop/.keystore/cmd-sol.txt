@@ -1,0 +1,28 @@
+参考链接：https://ask.dcloud.net.cn/article/35777
+
+下载并安装 JRE：
+访问：https://www.oracle.com/java/technologies/javase-downloads.html
+搜索：JRE Download
+
+命令：
+$ set PATH=%PATH%;"C:\Program Files\Java\jdk1.8.0_201\bin"
+$ keytool -genkey -alias fzxxdd-hjys -keyalg RSA -keysize 2048 -validity 36500 -keystore fzxxdd-hjys.keystore
+$ keytool -importkeystore -srckeystore fzxxdd-hjys.keystore -destkeystore fzxxdd-hjys.keystore -deststoretype pkcs12
+$ keytool -list -v -keystore fzxxdd-hjys.keystore
+
+密码：fzxxdd-hjys111
+
+您的名字与姓氏是什么?
+  [Unknown]:  wanjuanxiao
+您的组织单位名称是什么?
+  [Unknown]:  xiaoxiongdiandian
+您的组织名称是什么?
+  [Unknown]:  xiaoxiongdiandian
+您所在的城市或区域名称是什么?
+  [Unknown]:  fuzhou
+您所在的省/市/自治区名称是什么?
+  [Unknown]:  fujian
+该单位的双字母国家/地区代码是什么?
+  [Unknown]:  cn
+
+Android 包名：com.fzxxdd.hjys
