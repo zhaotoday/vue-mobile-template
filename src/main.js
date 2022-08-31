@@ -5,7 +5,18 @@ import uView from "uview-ui";
 import App from "@/App";
 import { globalPlugin } from "@/utils/global-plugin";
 import { permission } from "uni-plugins/utils/permission";
+
+import UAvatar from "uview-ui/components/u-avatar/u-avatar";
 import UButton from "uview-ui/components/u-button/u-button";
+import UCol from "uview-ui/components/u-col/u-col";
+import UIcon from "uview-ui/components/u-icon/u-icon";
+import ULineProgress from "uview-ui/components/u-line-progress/u-line-progress";
+import ULoadingPage from "uview-ui/components/u-loading-page/u-loading-page";
+import UModal from "uview-ui/components/u-modal/u-modal";
+import UOverlay from "uview-ui/components/u-overlay/u-overlay";
+import UPopup from "uview-ui/components/u-popup/u-popup";
+import URow from "uview-ui/components/u-row/u-row";
+import UTransition from "uview-ui/components/u-transition/u-transition";
 
 import Form from "vue-mobile/components/form";
 import FormInput from "vue-mobile/components/form/components/input";
@@ -34,7 +45,18 @@ Vue.use(UniCompositionAPI);
 Vue.use(globalPlugin);
 Vue.use(uView);
 
+Vue.component("u-avatar", UAvatar);
 Vue.component("u-button", UButton);
+Vue.component("u-col", UCol);
+Vue.component("u-icon", UIcon);
+Vue.component("u-line-progress", ULineProgress);
+Vue.component("u-loading-page", ULoadingPage);
+Vue.component("u-modal", UModal);
+Vue.component("u-overlay", UOverlay);
+Vue.component("u-popup", UPopup);
+Vue.component("u-row", URow);
+Vue.component("u-transition", UTransition);
+
 Vue.component("c-form", Form);
 Vue.component("c-form-input", FormInput);
 Vue.component("c-form-item", FormItem);
