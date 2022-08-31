@@ -1,6 +1,5 @@
 import Vue from "vue";
-import VueCompositionAPI from "@vue/composition-api";
-import UniCompositionAPI from "uni-composition-api";
+import "./utils/use-composition-api";
 import uView from "uview-ui";
 import App from "@/App";
 import { globalPlugin } from "@/utils/global-plugin";
@@ -18,6 +17,7 @@ import UIcon from "uview-ui/components/u-icon/u-icon";
 import ULineProgress from "uview-ui/components/u-line-progress/u-line-progress";
 import ULoadingPage from "uview-ui/components/u-loading-page/u-loading-page";
 import UModal from "uview-ui/components/u-modal/u-modal";
+import UNumberBox from "uview-ui/components/u-number-box/u-number-box";
 import UOverlay from "uview-ui/components/u-overlay/u-overlay";
 import UPopup from "uview-ui/components/u-popup/u-popup";
 import URow from "uview-ui/components/u-row/u-row";
@@ -48,8 +48,6 @@ import Upload from "@/components/upload";
 
 Vue.config.productionTip = false;
 
-Vue.use(VueCompositionAPI);
-Vue.use(UniCompositionAPI);
 Vue.use(globalPlugin);
 Vue.use(uView);
 
@@ -65,6 +63,7 @@ Vue.component("u-icon", UIcon);
 Vue.component("u-line-progress", ULineProgress);
 Vue.component("u-loading-page", ULoadingPage);
 Vue.component("u-modal", UModal);
+Vue.component("u-number-box", UNumberBox);
 Vue.component("u-overlay", UOverlay);
 Vue.component("u-popup", UPopup);
 Vue.component("u-row", URow);
