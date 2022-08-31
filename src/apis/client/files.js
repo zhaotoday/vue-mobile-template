@@ -3,5 +3,5 @@ import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 
 export const filesApi = createApi({
   url: "/client/files",
-  getHeaders: useAuth().getHeaders,
+  headers: useAuth().getHeaders,
 });

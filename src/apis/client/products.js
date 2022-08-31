@@ -3,5 +3,5 @@ import { useAuth } from "vue-mobile/@lr/composables/use-auth";
 
 export const productsApi = createApi({
   url: "/client/products",
-  getHeaders: useAuth().getHeaders,
+  headers: useAuth().getHeaders,
 });
