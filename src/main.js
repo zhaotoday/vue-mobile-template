@@ -8,7 +8,12 @@ import { permission } from "uni-plugins/utils/permission";
 
 import UAvatar from "uview-ui/components/u-avatar/u-avatar";
 import UButton from "uview-ui/components/u-button/u-button";
+import UCheckbox from "uview-ui/components/u-checkbox/u-checkbox";
 import UCol from "uview-ui/components/u-col/u-col";
+import UEmpty from "uview-ui/components/u-empty/u-empty";
+import UGap from "uview-ui/components/u-gap/u-gap";
+import UGrid from "uview-ui/components/u-grid/u-grid";
+import UGridItem from "uview-ui/components/u-grid-item/u-grid-item";
 import UIcon from "uview-ui/components/u-icon/u-icon";
 import ULineProgress from "uview-ui/components/u-line-progress/u-line-progress";
 import ULoadingPage from "uview-ui/components/u-loading-page/u-loading-page";
@@ -16,6 +21,9 @@ import UModal from "uview-ui/components/u-modal/u-modal";
 import UOverlay from "uview-ui/components/u-overlay/u-overlay";
 import UPopup from "uview-ui/components/u-popup/u-popup";
 import URow from "uview-ui/components/u-row/u-row";
+import USearch from "uview-ui/components/u-search/u-search";
+import USwiper from "uview-ui/components/u-swiper/u-swiper";
+import USwiperIndicator from "uview-ui/components/u-swiper-indicator/u-swiper-indicator";
 import UTransition from "uview-ui/components/u-transition/u-transition";
 
 import Form from "vue-mobile/components/form";
@@ -47,7 +55,12 @@ Vue.use(uView);
 
 Vue.component("u-avatar", UAvatar);
 Vue.component("u-button", UButton);
+Vue.component("u-checkbox", UCheckbox);
 Vue.component("u-col", UCol);
+Vue.component("u-empty", UEmpty);
+Vue.component("u-gap", UGap);
+Vue.component("u-grid", UGrid);
+Vue.component("u-grid-item", UGridItem);
 Vue.component("u-icon", UIcon);
 Vue.component("u-line-progress", ULineProgress);
 Vue.component("u-loading-page", ULoadingPage);
@@ -55,6 +68,9 @@ Vue.component("u-modal", UModal);
 Vue.component("u-overlay", UOverlay);
 Vue.component("u-popup", UPopup);
 Vue.component("u-row", URow);
+Vue.component("u-search", USearch);
+Vue.component("u-swiper", USwiper);
+Vue.component("u-swiper-indicator", USwiperIndicator);
 Vue.component("u-transition", UTransition);
 
 Vue.component("c-form", Form);
