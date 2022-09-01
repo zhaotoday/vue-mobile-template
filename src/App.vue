@@ -9,14 +9,14 @@ import { useIm } from "uni-im/components/im/composables/use-im";
 export default {
   async onLaunch() {
     const { getEnums } = useEnums();
-    const { loggedIn } = useUsers();
+    const { loggedIn, user } = useUsers();
 
     await getEnums();
 
     useCart().renderProductsNumber();
 
     if (loggedIn()) {
-      useIm().initialize();
+      useIm({ user }).initialize();
     }
 
     await useAppUpgrade().upgrade();
