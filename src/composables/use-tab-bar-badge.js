@@ -3,9 +3,9 @@ import { useIm } from "uni-im/components/im/composables/use-im";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export const useTabBarBadge = () => {
-  const { loggedIn } = useUsers();
+  const { loggedIn, user } = useUsers();
   const { renderProductsNumber } = useCart();
-  const { ws, getChats } = useIm();
+  const { ws, getChats } = useIm({ user });
 
   const initialize = () => {
     renderProductsNumber();

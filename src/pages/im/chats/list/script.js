@@ -17,11 +17,11 @@ export default {
     },
   },
   setup() {
-    const { loggedIn } = useUsers();
+    const { loggedIn, user } = useUsers();
 
     const loaded = ref(false);
 
-    const { ws, formatChats, getChats } = useIm();
+    const { ws, formatChats, getChats } = useIm({ user });
 
     const cSearch = reactive({
       keywords: "",
