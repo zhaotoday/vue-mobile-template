@@ -14,7 +14,7 @@ export const useConsts = () => {
   const StaticUrl = "https://my-app.liruan.cn/static";
 
   // WebSocket 地址
-  const WsUrl = "wss://sol-api.fzlr.com/wss";
+  const WsUrl = "wss://sol-api.liruan.cn/wss";
   // const WsUrl = "ws://localhost:3002";
 
   // 购物车 tabBar 的索引
