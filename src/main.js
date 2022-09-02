@@ -6,6 +6,7 @@ import { globalPlugin } from "@/utils/global-plugin";
 import { permission } from "uni-plugins/utils/permission";
 
 import UAvatar from "uview-ui/components/u-avatar/u-avatar";
+import UBadge from "uview-ui/components/u-badge/u-badge";
 import UButton from "uview-ui/components/u-button/u-button";
 import UCheckbox from "uview-ui/components/u-checkbox/u-checkbox";
 import UCol from "uview-ui/components/u-col/u-col";
@@ -53,6 +54,7 @@ Vue.use(globalPlugin);
 Vue.use(uView);
 
 Vue.component("u-avatar", UAvatar);
+Vue.component("u-badge", UBadge);
 Vue.component("u-button", UButton);
 Vue.component("u-checkbox", UCheckbox);
 Vue.component("u-col", UCol);
