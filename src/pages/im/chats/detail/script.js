@@ -4,13 +4,17 @@ import { useRoute } from "vue-mobile/composables/use-route";
 import { useIm } from "uni-im/components/im/composables/use-im";
 import { ref } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
+import { useUsers } from "vue-mobile/@lr/composables/use-users";
 
 export default {
   setup() {
     const { currentRoute } = useRoute();
 
-    const { ws, markChatRead, getMessages, createChat, createMessage } =
-      useIm();
+    const { user } = useUsers();
+
+    const { ws, markChatRead, getMessages, createChat, createMessage } = useIm({
+      user,
+    });
 
     const chatId = ref(0);
 
