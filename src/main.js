@@ -25,6 +25,7 @@ import USearch from "uview-ui/components/u-search/u-search";
 import USwiper from "uview-ui/components/u-swiper/u-swiper";
 import USwiperIndicator from "uview-ui/components/u-swiper-indicator/u-swiper-indicator";
 import UTransition from "uview-ui/components/u-transition/u-transition";
+import UTabs from "uview-ui/components/u-tabs/u-tabs";
 
 import Form from "vue-mobile/components/form";
 import FormInput from "vue-mobile/components/form/components/input";
@@ -71,6 +72,7 @@ Vue.component("u-search", USearch);
 Vue.component("u-swiper", USwiper);
 Vue.component("u-swiper-indicator", USwiperIndicator);
 Vue.component("u-transition", UTransition);
+Vue.component("u-tabs", UTabs);
 
 Vue.component("c-form", Form);
 Vue.component("c-form-input", FormInput);
