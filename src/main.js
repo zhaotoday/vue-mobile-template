@@ -28,25 +28,25 @@ import USwiperIndicator from "uview-ui/components/u-swiper-indicator/u-swiper-in
 import UTransition from "uview-ui/components/u-transition/u-transition";
 import UTabs from "uview-ui/components/u-tabs/u-tabs";
 
-import Form from "vue-mobile/components/form";
-import FormInput from "vue-mobile/components/form/components/input";
-import FormItem from "vue-mobile/components/form/components/item";
-import FormLink from "vue-mobile/components/form/components/link";
-import FormPicker from "vue-mobile/components/form/components/picker";
+import CForm from "vue-mobile/components/form";
+import CFormInput from "vue-mobile/components/form/components/input";
+import CFormItem from "vue-mobile/components/form/components/item";
+import CFormLink from "vue-mobile/components/form/components/link";
+import CFormPicker from "vue-mobile/components/form/components/picker";
 
-import PhoneNumber from "vue-mobile/@lr/components/phone/components/number";
+import CPhoneNumber from "vue-mobile/@lr/components/phone/components/number";
 
-import ImChats from "uni-im/components/im/components/chats";
-import ImInput from "uni-im/components/im/components/input";
-import ImMessages from "uni-im/components/im/components/messages";
+import CPImChats from "uni-im/components/im/components/chats";
+import CImInput from "uni-im/components/im/components/input";
+import CImMessages from "uni-im/components/im/components/messages";
 
-import CartSubmit from "@/components/cart/components/submit";
-import Contact from "@/components/contact";
-import PaySubmit from "@/components/pay/components/submit";
-import ProductList from "@/components/product/components/list";
-import ProductNumber from "@/components/product/components/number";
-import ProductSubmit from "@/components/product/components/submit";
-import Upload from "@/components/upload";
+import CCartSubmit from "@/components/cart/components/submit";
+import CContact from "@/components/contact";
+import CPaySubmit from "@/components/pay/components/submit";
+import CProductList from "@/components/product/components/list";
+import CProductNumber from "@/components/product/components/number";
+import CProductSubmit from "@/components/product/components/submit";
+import CUpload from "@/components/upload";
 
 Vue.config.productionTip = false;
 
@@ -76,25 +76,25 @@ Vue.component("u-swiper-indicator", USwiperIndicator);
 Vue.component("u-transition", UTransition);
 Vue.component("u-tabs", UTabs);
 
-Vue.component("c-form", Form);
-Vue.component("c-form-input", FormInput);
-Vue.component("c-form-item", FormItem);
-Vue.component("c-form-link", FormLink);
-Vue.component("c-form-picker", FormPicker);
+Vue.component("c-form", CForm);
+Vue.component("c-form-input", CFormInput);
+Vue.component("c-form-item", CFormItem);
+Vue.component("c-form-link", CFormLink);
+Vue.component("c-form-picker", CFormPicker);
 
-Vue.component("c-phone-number", PhoneNumber);
+Vue.component("c-phone-number", CPhoneNumber);
 
-Vue.component("c-im-chats", ImChats);
-Vue.component("c-im-input", ImInput);
-Vue.component("c-im-messages", ImMessages);
+Vue.component("c-im-chats", CPImChats);
+Vue.component("c-im-input", CImInput);
+Vue.component("c-im-messages", CImMessages);
 
-Vue.component("c-cart-submit", CartSubmit);
-Vue.component("c-contact", Contact);
-Vue.component("c-pay-submit", PaySubmit);
-Vue.component("c-product-list", ProductList);
-Vue.component("c-product-number", ProductNumber);
-Vue.component("c-product-submit", ProductSubmit);
-Vue.component("c-upload", Upload);
+Vue.component("c-cart-submit", CCartSubmit);
+Vue.component("c-contact", CContact);
+Vue.component("c-pay-submit", CPaySubmit);
+Vue.component("c-product-list", CProductList);
+Vue.component("c-product-number", CProductNumber);
+Vue.component("c-product-submit", CProductSubmit);
+Vue.component("c-upload", CUpload);
 
 Vue.config.productionTip = false;
 
