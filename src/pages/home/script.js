@@ -1,11 +1,11 @@
-import Categories from "./components/categories";
+import BCategories from "./components/categories";
 import { onShow } from "uni-composition-api";
 import { useRender } from "./composables/use-render";
 import { useTabBarBadge } from "@/composables/use-tab-bar-badge";
 
 export default {
   components: {
-    "b-categories": Categories,
+    BCategories,
   },
   setup() {
     const {
