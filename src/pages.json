@@ -69,6 +69,12 @@
       }
     },
     {
+      "path": "pages/user/mp-login/index",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
       "path": "pages/user/account-register/index",
       "style": {
         "navigationBarTitleText": "注册"
