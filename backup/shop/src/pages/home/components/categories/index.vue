@@ -14,7 +14,7 @@
               id: item.iconFileId,
               width: 90,
               height: 90,
-            }) + '&.jpg'
+            })
           "
         />
         <div class="vc-categories__name fs24 u-pt10 u-pb10 u-lh1">
