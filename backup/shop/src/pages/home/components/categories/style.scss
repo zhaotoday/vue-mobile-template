@@ -1,0 +1,13 @@
+@import "~@/assets/styles/utils/index.scss";
+
+@include vc(categories) {
+  @include e(name) {
+    @include text--overflow(2);
+    @include margin(null, 0%, null, 0%);
+
+    word-break: break-word;
+    text-align: center;
+    width: 100%;
+    height: px2rpx(50px);
+  }
+}

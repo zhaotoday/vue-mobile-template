@@ -1,0 +1,16 @@
+@import "~@/assets/styles/utils";
+
+@include p(user-account-login) {
+  @include b(register, password) {
+    display: inline-block;
+    padding: px2rpx(10px);
+  }
+
+  @include b(register) {
+    float: left;
+  }
+
+  @include b(password) {
+    float: right;
+  }
+}

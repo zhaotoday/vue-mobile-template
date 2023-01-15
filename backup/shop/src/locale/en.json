@@ -1,0 +1,21 @@
+{
+  "home": "Sol Summer Shop",
+  "home.tabBar": "Home",
+  "categories": "Categories",
+  "cart": "Cart",
+  "message": "Messages",
+  "checkout": "Checkout",
+  "checkout.result": "Place Order Successfully",
+  "products.search": "Search",
+  "products.list": "Goods List",
+  "products.detail": "Goods Details",
+  "user.home": "My",
+  "user.info": "My Personal Information",
+  "user.accountLogin": "Login",
+  "user.accountRegister": "Register",
+  "user.password": "Reset Password",
+  "user.phoneNumber": "Bind Phone Number",
+  "user.orders.list": "My Orders",
+  "user.orders.detail": "Order Details",
+  "user.collections": "My Stars"
+}

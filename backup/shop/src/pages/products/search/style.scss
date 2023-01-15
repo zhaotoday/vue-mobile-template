@@ -1,0 +1,30 @@
+@import "~@/assets/styles/utils/index.scss";
+
+@include p(products-search) {
+  @include b(keywords) {
+    padding-bottom: px2rpx(160px);
+  }
+
+  @include b(title) {
+    @include padding(px2rpx(24px), px2rpx(30px), px2rpx(24px), px2rpx(30px));
+
+    position: relative;
+    line-height: 100%;
+    border-top: px2rpx(14px) solid transparent;
+  }
+
+  @include b(clear) {
+    @include position--absolute(50%, px2rpx(20px));
+
+    transform: translateY(-50%);
+    border: px2rpx(10px) solid transparent;
+  }
+
+  @include b(tags) {
+    @include margin(null, px2rpx(10px), px2rpx(40px), px2rpx(30px));
+
+    @include e(item) {
+      @include margin(null, px2rpx(20px), px2rpx(20px));
+    }
+  }
+}
