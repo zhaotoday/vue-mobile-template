@@ -25,7 +25,13 @@
           <image
             class="cc-list__image"
             mode="aspectFill"
-            :src="$helpers.getFileUrl({ id: item.imageFileIds[0] })"
+            :src="
+              $helpers.getImageUrl({
+                id: item.imageFileIds[0],
+                width: 339,
+                height: 339,
+              })
+            "
           />
           <div class="cc-list__name fs28 u-lh1">
             {{ getLocale() === "en" ? item.name : item.cnName }}
