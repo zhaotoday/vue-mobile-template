@@ -20,7 +20,11 @@
         :list="
           adsList.items.map(
             ({ imageFileId }) =>
-              $helpers.getFileUrl({ id: imageFileId }) + '?_bugfix=.jpg'
+              $helpers.getImageUrl({
+                id: imageFileId,
+                width: 702,
+                height: 300,
+              }) + '&_bugfix=.jpg'
           )
         "
         height="300rpx"

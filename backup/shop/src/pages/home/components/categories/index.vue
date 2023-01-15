@@ -9,7 +9,13 @@
         <u-avatar
           size="90rpx"
           mode="aspectFill"
-          :src="$helpers.getFileUrl({ id: item.iconFileId })"
+          :src="
+            $helpers.getImageUrl({
+              id: item.iconFileId,
+              width: 90,
+              height: 90,
+            }) + '&.jpg'
+          "
         />
         <div class="vc-categories__name fs24 u-pt10 u-pb10 u-lh1">
           {{ getLocale() === "en" ? item.name : item.cnName }}
