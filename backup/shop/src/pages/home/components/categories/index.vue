@@ -1,11 +1,15 @@
 <template>
   <div class="vc-categories u-pt24 u-pb10 bg-white">
-    <swiper>
+    <swiper
+      indicator-dots
+      indicator-active-color="#5ac725"
+      style="height: 504rpx"
+    >
       <swiper-item
         v-for="(item1, index1) in $helpers.page(items, 15)"
         :key="index1"
       >
-        <u-grid col="15" :border="false" style="width: 2250rpx">
+        <u-grid col="5" :border="false">
           <u-grid-item
             v-for="(item2, index2) in item1"
             :key="index2"

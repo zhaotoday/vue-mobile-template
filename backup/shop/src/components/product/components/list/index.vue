@@ -26,11 +26,17 @@
             class="cc-list__image"
             mode="aspectFill"
             :src="
-              $helpers.getImageUrl({
-                id: item.imageFileIds[0],
-                width: 339,
-                height: 339,
-              })
+              col === 1
+                ? $helpers.getImageUrl({
+                    id: item.imageFileIds[0],
+                    width: 120,
+                    height: 120,
+                  })
+                : $helpers.getImageUrl({
+                    id: item.imageFileIds[0],
+                    width: 339,
+                    height: 339,
+                  })
             "
           />
           <div class="cc-list__name fs28 u-lh1">
