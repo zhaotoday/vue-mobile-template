@@ -7,6 +7,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    loaded: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup() {
     const { getLocale } = useI18n();

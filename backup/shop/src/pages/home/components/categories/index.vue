@@ -1,6 +1,7 @@
 <template>
-  <div class="vc-categories u-pt24 u-pb10 bg-white">
+  <div class="vc-categories u-pt24 u-pb10 bg-white" style="height: 504rpx">
     <swiper
+      v-if="loaded"
       indicator-dots
       indicator-active-color="#5ac725"
       style="height: 504rpx"

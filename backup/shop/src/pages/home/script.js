@@ -9,6 +9,7 @@ export default {
   },
   setup() {
     const {
+      loaded,
       adsList,
       categoriesList,
       productsList,
@@ -23,9 +24,12 @@ export default {
       await renderAdsList();
       await renderCategoriesList();
       await renderProductsList();
+
+      loaded.value = true;
     });
 
     return {
+      loaded,
       adsList,
       categoriesList,
       productsList,

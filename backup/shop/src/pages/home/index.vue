@@ -33,7 +33,7 @@
         indicator-mode="dot"
       />
     </div>
-    <vc-categories :items="categoriesList.items" />
+    <vc-categories :loaded="loaded" :items="categoriesList.items" />
     <c-product-list
       custom-class="u-pt24"
       :items="productsList.items"

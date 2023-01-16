@@ -4,6 +4,8 @@ import { publicCategoriesApi } from "@/apis/public/catetgories";
 import { publicProductsApi } from "@/apis/public/products";
 
 export const useRender = () => {
+  const loaded = ref(false);
+
   const adsList = ref({
     items: [],
   });
@@ -33,6 +35,7 @@ export const useRender = () => {
   };
 
   return {
+    loaded,
     adsList,
     categoriesList,
     productsList,
