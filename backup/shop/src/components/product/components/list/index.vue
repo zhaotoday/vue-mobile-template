@@ -23,6 +23,7 @@
             />
           </div>
           <image
+            :key="item.id"
             class="cc-list__image"
             mode="aspectFill"
             :src="
