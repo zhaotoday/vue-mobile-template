@@ -11,7 +11,7 @@ export const useHelpers = () => {
 
         switch (true) {
           case !!width && !!height:
-            return `?imageView2/1/w/${w}/h/${h}/q/100`;
+            return `?x-oss-process=image/resize,w_${w},h_${h}`;
 
           case !!width:
             return `?imageView2/2/w/${w}/q/100`;

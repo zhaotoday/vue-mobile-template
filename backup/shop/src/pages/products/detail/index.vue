@@ -4,8 +4,8 @@
       :list="
         detail.imageFileIds.map(
           (imageFileId) =>
-            $helpers.getFileUrl({ id: imageFileId, width: 750, height: 750 }) +
-            '?_bugfix=.jpg'
+            $helpers.getImageUrl({ id: imageFileId, width: 750, height: 750 }) +
+            '&_bugfix=.jpg'
         )
       "
       height="750rpx"
