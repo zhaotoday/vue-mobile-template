@@ -38,6 +38,10 @@ export default {
         wx.setStorageSync("locale", locale);
         wx.setLocale(locale);
         vm.proxy.$i18n.locale = locale;
+
+        // #ifdef H5
+        window.location.reload();
+        // #endif
       }
     };
 
