@@ -19,7 +19,7 @@
         {{ getLocale() === "en" ? item.name : item.cnName }}
       </li>
     </ul>
-    <scroll-view class="b-products" scroll-y>
+    <scroll-view class="b-products" :key="cTab.current" scroll-y>
       <c-product-list
         v-if="productsList.items.length"
         :items="productsList.items"
