@@ -29,7 +29,13 @@
             v-if="item.products[0]"
             class="o-media__image"
             mode="aspectFill"
-            :src="$helpers.getFileUrl({ id: item.products[0].imageFileIds[0] })"
+            :src="
+              $helpers.getImageUrl({
+                id: item.products[0].imageFileIds[0],
+                width: 100,
+                height: 100,
+              })
+            "
           />
           <div class="o-media__body">
             <div class="cc-products">
