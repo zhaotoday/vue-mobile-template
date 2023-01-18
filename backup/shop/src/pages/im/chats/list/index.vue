@@ -27,7 +27,7 @@
       <u-empty
         v-if="loaded && !filteredItems.length"
         mode="data"
-        icon="https://cdn.uviewui.com/uview/empty/data.png"
+        icon="https://fzxxdd-sol.oss-ap-southeast-2.aliyuncs.com/avatars/2023-01-18/b53ae50b-4bf7-4469-bd87-ccd0f7da3663.png"
         margin-top="100rpx"
         :text="$t('$.noData')"
       />
@@ -35,7 +35,7 @@
     <div v-else>
       <u-empty
         mode="permission"
-        icon="https://cdn.uviewui.com/uview/empty/permission.png"
+        icon="https://fzxxdd-sol.oss-ap-southeast-2.aliyuncs.com/avatars/2023-01-18/8b482ccb-1cfe-4957-b2ac-47dcdd88129b.png"
         margin-top="100rpx"
         :text="$t('tips.pleaseLogin')"
       />
