@@ -9,7 +9,7 @@
     <u-empty
       v-else
       mode="car"
-      icon="http://cdn.uviewui.com/uview/empty/data.png"
+      icon="https://fzxxdd-sol.oss-ap-southeast-2.aliyuncs.com/avatars/2023-01-18/b53ae50b-4bf7-4469-bd87-ccd0f7da3663.png"
       margin-top="100rpx"
       :text="$t('$.emptyCart')"
     />
