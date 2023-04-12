@@ -3,26 +3,26 @@ export const useConsts = () => {
   const API_URL = process.env["VUE_APP_API_URL"];
 
   // 静态资源地址
-  const StaticUrl = process.env["VUE_APP_STATIC_URL"];
+  const STATIC_URL = process.env["VUE_APP_STATIC_URL"];
 
   // CDN 地址
   const CDN_URL = process.env["VUE_APP_CDN_URL"];
 
   // WebSocket 地址
-  const WsUrl = process.env["VUE_APP_WS_URL"];
+  const WS_URL = process.env["VUE_APP_WS_URL"];
 
   // 登录页面地址
   const LOGIN_URL = "/pages/user/account-login/index";
 
   // 购物车 tabBar 的索引
-  const CartTabBarIndex = 2;
+  const CART_TAB_BAR_INDEX = 2;
 
   return {
     API_URL,
-    StaticUrl,
+    STATIC_URL,
     CDN_URL,
-    WsUrl,
+    WS_URL,
     LOGIN_URL,
-    CartTabBarIndex,
+    CART_TAB_BAR_INDEX,
   };
 };
