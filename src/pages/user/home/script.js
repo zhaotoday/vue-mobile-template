@@ -26,7 +26,7 @@ export default {
 
       if (confirm) {
         await logout();
-        uni.showToast({ title: "退出成功" });
+        await uni.showToast({ title: "退出成功" });
       }
     };
 

@@ -14,7 +14,7 @@ export const useActions = ({ renderOrdersList = () => {} }) => {
   };
 
   const makePhoneCall = async ({ phoneNumber }) => {
-    uni.makePhoneCall({ phoneNumber });
+    await uni.makePhoneCall({ phoneNumber });
   };
 
   const startToDistribute = async ({ id }) => {
@@ -31,7 +31,7 @@ export const useActions = ({ renderOrdersList = () => {} }) => {
         action: "changeStatus",
         body: { status: "Distributing" },
       });
-      uni.showToast({ title: "操作成功" });
+      await uni.showToast({ title: "操作成功" });
       await renderOrdersList();
     }
   };
@@ -50,7 +50,7 @@ export const useActions = ({ renderOrdersList = () => {} }) => {
         action: "changeStatus",
         body: { status: "Finished" },
       });
-      uni.showToast({ title: "操作成功" });
+      await uni.showToast({ title: "操作成功" });
       await renderOrdersList();
     }
   };

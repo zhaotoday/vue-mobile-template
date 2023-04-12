@@ -41,10 +41,10 @@ export default {
       const { id } = currentRoute.query;
 
       if (id) {
-        uni.setNavigationBarTitle({ title: "修改收货地址" });
+        await uni.setNavigationBarTitle({ title: "修改收货地址" });
         cForm.model = await addressesApi.get({ id });
       } else {
-        uni.setNavigationBarTitle({ title: "新增收货地址" });
+        await uni.setNavigationBarTitle({ title: "新增收货地址" });
       }
     });
 
@@ -80,11 +80,11 @@ export default {
           body: { ...model, userId: user.value.id },
         });
 
-        uni.showToast({
+        await uni.showToast({
           title: id ? "修改成功" : "新增成功",
         });
         await useHelpers().sleep(1500);
-        uni.navigateBack();
+        await uni.navigateBack();
       });
     };
 

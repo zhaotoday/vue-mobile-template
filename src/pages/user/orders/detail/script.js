@@ -36,7 +36,7 @@ export default {
 
         await uni.openLocation({ latitude, longitude });
       } else {
-        uni.showToast({ title: "位置不存在（收货地址可能被删除）" });
+        await uni.showToast({ title: "位置不存在（收货地址可能被删除）" });
       }
     };
 

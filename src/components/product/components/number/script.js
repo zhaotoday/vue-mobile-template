@@ -28,9 +28,9 @@ export default {
   setup() {
     const { updateProductNumber } = useCart();
 
-    const onOverLimit = (type) => {
+    const onOverLimit =async (type) => {
       if (type === "plus") {
-        uni.showToast({ title: "库存不足" });
+        await uni.showToast({ title: "库存不足" });
       }
     };
 

@@ -65,7 +65,7 @@ export default {
         const { avatarFileId } = await getUserInfo();
         cForm.model.avatarFileId = avatarFileId;
       } else {
-        uni.showToast({ title: parsedData.error.message });
+        await uni.showToast({ title: parsedData.error.message });
       }
     };
 
@@ -78,10 +78,10 @@ export default {
           body: model,
         });
 
-        uni.showToast({ title: "保存成功" });
+        await uni.showToast({ title: "保存成功" });
         await getUserInfo();
         await useHelpers().sleep(1500);
-        uni.navigateBack();
+        await uni.navigateBack();
       });
     };
 

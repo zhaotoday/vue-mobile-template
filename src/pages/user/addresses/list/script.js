@@ -27,7 +27,7 @@ export default {
     onShow(async () => {
       const { action } = currentRoute.query;
 
-      uni.setNavigationBarTitle({
+      await uni.setNavigationBarTitle({
         title: action === "select" ? "选择收货地址" : "收货地址",
       });
 
@@ -46,13 +46,13 @@ export default {
       });
     };
 
-    const select = (item) => {
+    const select = async (item) => {
       if (currentRoute.query.action === "select") {
         setPageData({
           page: getCurrentPage(),
           data: { selectedAddress: item },
         });
-        uni.navigateBack();
+        await uni.navigateBack();
       }
     };
 
@@ -64,7 +64,7 @@ export default {
         action: "setDefault",
       });
 
-      uni.showToast({ title: "设置成功" });
+      await uni.showToast({ title: "设置成功" });
 
       await render();
     };
@@ -78,7 +78,7 @@ export default {
       if (confirm) {
         await addressesApi.delete({ id });
 
-        uni.showToast({ title: "删除成功" });
+        await uni.showToast({ title: "删除成功" });
 
         await render();
       }

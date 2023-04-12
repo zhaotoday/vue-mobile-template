@@ -55,18 +55,17 @@ export default {
       }
     };
 
-    const gotoAddresses = () => {
-      if (!loggedIn()) {
-        uni.navigateTo({ url: useConsts().LoginUrl });
-        return;
-      }
-
-      uni.navigateTo({ url: "/pages/user/addresses/list/index?action=select" });
+    const gotoAddresses = async () => {
+      await uni.navigateTo({
+        url: loggedIn()
+          ? "/pages/user/addresses/list/index?action=select"
+          : useConsts().LoginUrl,
+      });
     };
 
     const submit = async () => {
       if (!loggedIn()) {
-        uni.navigateTo({ url: useConsts().LoginUrl });
+        await uni.navigateTo({ url: useConsts().LoginUrl });
         return;
       }
 

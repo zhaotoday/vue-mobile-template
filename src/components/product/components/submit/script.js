@@ -16,11 +16,11 @@ export default {
   setup(props) {
     const { selectedProducts, updateProductNumber } = useCart();
 
-    const addToCart = () => {
+    const addToCart = async () => {
       if (props.product.stock) {
         updateProductNumber({ product: props.product, number: 1 });
       } else {
-        uni.showToast({ title: "库存不足" });
+        await uni.showToast({ title: "库存不足" });
       }
     };
 

@@ -39,20 +39,20 @@ export default {
         } else {
           await setUser({ user });
           await setToken({ token });
-          uni.showToast({ title: "登陆成功" });
+          await uni.showToast({ title: "登陆成功" });
           await useHelpers().sleep(1500);
-          uni.navigateBack();
+          await uni.navigateBack();
         }
         // #endif
 
         // #ifdef H5
         await mockLogin();
-        uni.showToast({ title: "登陆成功" });
+        await uni.showToast({ title: "登陆成功" });
         await useHelpers().sleep(1500);
-        uni.navigateBack();
+        await uni.navigateBack();
         // #endif
       } catch (e) {
-        uni.navigateBack();
+        await uni.navigateBack();
       }
     };
 

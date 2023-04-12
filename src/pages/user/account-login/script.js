@@ -24,9 +24,9 @@ export default {
 
         await accountLogin({ account, password });
 
-        uni.showToast({ title: "登录成功" });
+        await uni.showToast({ title: "登录成功" });
         await useHelpers().sleep(1500);
-        uni.navigateBack();
+        await uni.navigateBack();
       });
     };
 

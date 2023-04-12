@@ -67,7 +67,7 @@ export default {
           fileList.value.map(({ id }) => id)
         );
       } else {
-        uni.showToast({ title: error.message });
+        await uni.showToast({ title: error.message });
       }
     };
 

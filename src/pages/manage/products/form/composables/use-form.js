@@ -50,11 +50,11 @@ export const useForm = () => {
       });
 
       if (id) {
-        uni.showToast({ title: "修改成功" });
+        await uni.showToast({ title: "修改成功" });
         await useHelpers().sleep(1500);
-        uni.navigateBack();
+        await uni.navigateBack();
       } else {
-        uni.showToast({ title: "新增成功" });
+        await uni.showToast({ title: "新增成功" });
         cForm.model = deepCopy(initialModel);
       }
     });

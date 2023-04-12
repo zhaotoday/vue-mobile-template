@@ -45,7 +45,7 @@ export default {
           },
         });
 
-        uni.showToast({ title: "登录成功" });
+        await uni.showToast({ title: "登录成功" });
         await getUserInfo();
         await useHelpers().sleep(1500);
       });

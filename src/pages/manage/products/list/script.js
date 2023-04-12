@@ -61,7 +61,7 @@ export default {
       if (confirm) {
         await productsApi.delete({ id });
 
-        uni.showToast({ title: "删除成功" });
+        await uni.showToast({ title: "删除成功" });
 
         await renderProductsList();
       }

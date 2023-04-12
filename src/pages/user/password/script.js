@@ -59,9 +59,9 @@ export default {
             },
           });
 
-          uni.showToast({ title: "重置成功" });
+          await uni.showToast({ title: "重置成功" });
           await useHelpers().sleep(1500);
-          uni.navigateBack();
+          await uni.navigateBack();
         }
       );
     };

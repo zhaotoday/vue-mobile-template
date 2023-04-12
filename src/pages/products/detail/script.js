@@ -30,8 +30,8 @@ export default {
       });
     };
 
-    const onSwiperClick = (index) => {
-      uni.previewImage({
+    const onSwiperClick = async (index) => {
+      await uni.previewImage({
         current: index,
         urls: detail.value.imageFileIds.map((imageFileId) =>
           getImageUrl({ id: imageFileId })
