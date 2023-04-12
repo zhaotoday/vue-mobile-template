@@ -6,7 +6,6 @@ import { addressesApi } from "@/apis/client/addresses";
 import { usePageData } from "vue-mobile/composables/use-page-data";
 import { useCart } from "uni-shop/composables/use-cart";
 import { useEnums } from "vue-mobile/@lr/composables/use-enums";
-import wx from "wx-bridge";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { useConsts } from "@/composables/use-consts";
 

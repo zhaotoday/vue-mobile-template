@@ -1,4 +1,3 @@
-import wx from "wx-bridge";
 import { onShow } from "uni-composition-api";
 import { ref } from "@vue/composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";

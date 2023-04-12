@@ -1,4 +1,3 @@
-import wx from "wx-bridge";
 import { ordersApi } from "@/apis/client/orders";
 import { permission } from "uni-plugins/utils/permission";
 

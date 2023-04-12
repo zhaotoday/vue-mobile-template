@@ -1,4 +1,3 @@
-import wx from "wx-bridge";
 import { ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
 

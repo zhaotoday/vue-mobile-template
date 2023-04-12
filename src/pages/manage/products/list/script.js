@@ -1,7 +1,6 @@
 import { onShow } from "uni-composition-api";
 import { usePageData } from "vue-mobile/composables/use-page-data";
 import { useRender } from "@/pages/categories/composables/use-render";
-import wx from "wx-bridge";
 import { productsApi } from "@/apis/client/products";
 
 export default {

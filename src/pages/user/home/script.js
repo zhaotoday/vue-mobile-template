@@ -1,7 +1,6 @@
 import defaultAvatarUrl from "vue-mobile/assets/images/components/avatar/default.png";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";
 import { onShow } from "uni-composition-api";
-import wx from "wx-bridge";
 import { store } from "@/store";
 import { useTabBarBadge } from "@/composables/use-tab-bar-badge";
 import mainMenus from "./utils/main-menus.json";

@@ -1,4 +1,3 @@
-import wx from "wx-bridge";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { useValidators } from "vue-validation";
 import { reactive } from "@vue/composition-api";

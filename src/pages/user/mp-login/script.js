@@ -1,4 +1,3 @@
-import wx from "wx-bridge";
 import { useHelpers } from "@/composables/use-helpers";
 import { useWxMp } from "vue-mobile/@lr/composables/use-wx-mp";
 import { useUsers } from "vue-mobile/@lr/composables/use-users";

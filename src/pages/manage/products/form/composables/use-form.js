@@ -1,4 +1,3 @@
-import wx from "wx-bridge";
 import { reactive } from "@vue/composition-api";
 import { useHelpers } from "@/composables/use-helpers";
 import { useValidators } from "vue-validation";

@@ -2,7 +2,6 @@ import { ref } from "@vue/composition-api";
 import { onShow } from "uni-composition-api";
 import { publicProductsApi } from "@/apis/public/products";
 import { useRoute } from "vue-mobile/composables/use-route";
-import wx from "wx-bridge";
 import { useHelpers } from "@/composables/use-helpers";
 
 export default {

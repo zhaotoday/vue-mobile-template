@@ -1,7 +1,6 @@
 import { useCart } from "uni-shop/composables/use-cart";
 import BCollection from "./components/collection/index.vue";
 import { store } from "@/store";
-import wx from "wx-bridge";
 
 export default {
   components: {

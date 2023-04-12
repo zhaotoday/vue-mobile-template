@@ -1,4 +1,3 @@
-import wx from "wx-bridge";
 import { onShow, onUnload } from "uni-composition-api";
 import { useRoute } from "vue-mobile/composables/use-route";
 import { useIm } from "uni-im/components/im/composables/use-im";
