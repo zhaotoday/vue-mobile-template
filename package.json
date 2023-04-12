@@ -71,6 +71,7 @@
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
+    "postcss-loader": "^7.2.4",
     "prettier": "^2.8.7",
     "sass": "^1.62.0",
     "vue-template-compiler": "^2.7.14"

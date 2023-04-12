@@ -1,5 +1,6 @@
 import Vue from "vue";
-import "./utils/use-composition-api";
+import "vue-mobile/utils/use-composition-api";
+import "vue-mobile/utils/add-interceptor";
 import uView from "uview-ui";
 import App from "@/App";
 import { globalPlugin } from "@/utils/global-plugin";
