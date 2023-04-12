@@ -50,11 +50,11 @@ export const useForm = () => {
       });
 
       if (id) {
-        wx.showToast({ title: "修改成功" });
+        uni.showToast({ title: "修改成功" });
         await useHelpers().sleep(1500);
-        wx.navigateBack();
+        uni.navigateBack();
       } else {
-        wx.showToast({ title: "新增成功" });
+        uni.showToast({ title: "新增成功" });
         cForm.model = deepCopy(initialModel);
       }
     });

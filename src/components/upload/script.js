@@ -46,7 +46,7 @@ export default {
     });
 
     const onAfterRead = async (event) => {
-      const { statusCode, data } = await wx.uploadFile({
+      const { statusCode, data } = await uni.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
         header: getHeaders(),
         formData: { dir: "avatars" },
@@ -67,7 +67,7 @@ export default {
           fileList.value.map(({ id }) => id)
         );
       } else {
-        wx.showToast({ title: error.message });
+        uni.showToast({ title: error.message });
       }
     };
 

@@ -52,14 +52,14 @@ export default {
           },
         });
 
-        wx.showToast({ title: "绑定成功" });
+        uni.showToast({ title: "绑定成功" });
         await getUserInfo();
         await useHelpers().sleep(1500);
 
         if (currentRoute.query.firstBind) {
-          wx.switchTab({ url: "/pages/memo/index" });
+          uni.switchTab({ url: "/pages/memo/index" });
         } else {
-          wx.navigateBack();
+          uni.navigateBack();
         }
       });
     };

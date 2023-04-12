@@ -12,7 +12,7 @@ export default {
     const { cForm, validate, submit } = useForm();
 
     onShow(async () => {
-      await wx.setNavigationBarTitle({
+      await uni.setNavigationBarTitle({
         title: currentRoute.query.id ? "修改商品" : "新增商品",
       });
 

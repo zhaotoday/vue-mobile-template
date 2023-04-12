@@ -10,9 +10,9 @@ export const store = new Vuex.Store({
     createPersistedState({
       paths: ["enums", "users", "cart", "pageData"],
       storage: {
-        getItem: (key) => wx.getStorageSync(key),
-        setItem: (key, value) => wx.setStorageSync(key, value),
-        removeItem: (key) => wx.removeStorageSync(key),
+        getItem: (key) => uni.getStorageSync(key),
+        setItem: (key, value) => uni.setStorageSync(key, value),
+        removeItem: (key) => uni.removeStorageSync(key),
       },
     }),
   ],

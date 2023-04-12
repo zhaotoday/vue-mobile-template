@@ -10,15 +10,15 @@ export const useActions = ({ renderOrdersList = () => {} }) => {
     await permission.request("ACCESS_FINE_LOCATION");
     // #endif
 
-    await wx.openLocation({ latitude, longitude });
+    await uni.openLocation({ latitude, longitude });
   };
 
   const makePhoneCall = async ({ phoneNumber }) => {
-    wx.makePhoneCall({ phoneNumber });
+    uni.makePhoneCall({ phoneNumber });
   };
 
   const startToDistribute = async ({ id }) => {
-    const { confirm } = await wx.showModal({
+    const { confirm } = await uni.showModal({
       title: "请确认",
       content: "确认开始配送该订单？",
       cancelText: "取消",
@@ -31,13 +31,13 @@ export const useActions = ({ renderOrdersList = () => {} }) => {
         action: "changeStatus",
         body: { status: "Distributing" },
       });
-      wx.showToast({ title: "操作成功" });
+      uni.showToast({ title: "操作成功" });
       await renderOrdersList();
     }
   };
 
   const finish = async ({ id }) => {
-    const { confirm } = await wx.showModal({
+    const { confirm } = await uni.showModal({
       title: "请确认",
       content: "确认已送达该订单吗？",
       cancelText: "取消",
@@ -50,7 +50,7 @@ export const useActions = ({ renderOrdersList = () => {} }) => {
         action: "changeStatus",
         body: { status: "Finished" },
       });
-      wx.showToast({ title: "操作成功" });
+      uni.showToast({ title: "操作成功" });
       await renderOrdersList();
     }
   };

@@ -20,7 +20,7 @@ export default {
       if (props.product.stock) {
         updateProductNumber({ product: props.product, number: 1 });
       } else {
-        wx.showToast({ title: "库存不足" });
+        uni.showToast({ title: "库存不足" });
       }
     };
 

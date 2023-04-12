@@ -59,9 +59,9 @@ export default {
             },
           });
 
-          wx.showToast({ title: "重置成功" });
+          uni.showToast({ title: "重置成功" });
           await useHelpers().sleep(1500);
-          wx.navigateBack();
+          uni.navigateBack();
         }
       );
     };

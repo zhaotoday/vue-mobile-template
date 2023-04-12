@@ -27,7 +27,7 @@ export default {
     onShow(async () => {
       const { action } = currentRoute.query;
 
-      wx.setNavigationBarTitle({
+      uni.setNavigationBarTitle({
         title: action === "select" ? "选择收货地址" : "收货地址",
       });
 
@@ -52,7 +52,7 @@ export default {
           page: getCurrentPage(),
           data: { selectedAddress: item },
         });
-        wx.navigateBack();
+        uni.navigateBack();
       }
     };
 
@@ -64,13 +64,13 @@ export default {
         action: "setDefault",
       });
 
-      wx.showToast({ title: "设置成功" });
+      uni.showToast({ title: "设置成功" });
 
       await render();
     };
 
     const del = async ({ id }) => {
-      const { confirm } = await wx.showModal({
+      const { confirm } = await uni.showModal({
         title: "请确认",
         content: "确认删除吗？",
       });
@@ -78,7 +78,7 @@ export default {
       if (confirm) {
         await addressesApi.delete({ id });
 
-        wx.showToast({ title: "删除成功" });
+        uni.showToast({ title: "删除成功" });
 
         await render();
       }

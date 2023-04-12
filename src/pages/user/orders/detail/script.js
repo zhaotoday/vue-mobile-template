@@ -34,9 +34,9 @@ export default {
         await permission.request("ACCESS_FINE_LOCATION");
         // #endif
 
-        await wx.openLocation({ latitude, longitude });
+        await uni.openLocation({ latitude, longitude });
       } else {
-        wx.showToast({ title: "位置不存在（收货地址可能被删除）" });
+        uni.showToast({ title: "位置不存在（收货地址可能被删除）" });
       }
     };
 

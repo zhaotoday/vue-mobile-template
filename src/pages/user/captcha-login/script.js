@@ -45,7 +45,7 @@ export default {
           },
         });
 
-        wx.showToast({ title: "登录成功" });
+        uni.showToast({ title: "登录成功" });
         await getUserInfo();
         await useHelpers().sleep(1500);
       });

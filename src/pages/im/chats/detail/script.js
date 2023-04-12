@@ -54,7 +54,7 @@ export default {
     onShow(async () => {
       const { chatType, toUserId, toUserName } = currentRoute.query;
 
-      wx.setNavigationBarTitle({ title: toUserName });
+      uni.setNavigationBarTitle({ title: toUserName });
 
       ws.on(ws.events.createChatOk, onCreateChatOk);
       ws.on(ws.events.getMessagesOk, onGetMessagesOk);

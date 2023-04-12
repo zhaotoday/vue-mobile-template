@@ -31,7 +31,7 @@ export default {
     };
 
     const onSwiperClick = (index) => {
-      wx.previewImage({
+      uni.previewImage({
         current: index,
         urls: detail.value.imageFileIds.map((imageFileId) =>
           getImageUrl({ id: imageFileId })

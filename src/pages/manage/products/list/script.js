@@ -45,13 +45,13 @@ export default {
     const redirectToAddProduct = async () => {
       const { id } = categoriesList.value.items[cTab.current];
 
-      await wx.navigateTo({
+      await uni.navigateTo({
         url: `/pages/manage/products/form/index?categoryId=${id}`,
       });
     };
 
     const del = async ({ id }) => {
-      const { confirm } = await wx.showModal({
+      const { confirm } = await uni.showModal({
         title: "请确认",
         content: "确认删除吗？",
         cancelText: "取消",
@@ -61,7 +61,7 @@ export default {
       if (confirm) {
         await productsApi.delete({ id });
 
-        wx.showToast({ title: "删除成功" });
+        uni.showToast({ title: "删除成功" });
 
         await renderProductsList();
       }

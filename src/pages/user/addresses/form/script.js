@@ -41,10 +41,10 @@ export default {
       const { id } = currentRoute.query;
 
       if (id) {
-        wx.setNavigationBarTitle({ title: "修改收货地址" });
+        uni.setNavigationBarTitle({ title: "修改收货地址" });
         cForm.model = await addressesApi.get({ id });
       } else {
-        wx.setNavigationBarTitle({ title: "新增收货地址" });
+        uni.setNavigationBarTitle({ title: "新增收货地址" });
       }
     });
 
@@ -60,12 +60,12 @@ export default {
       if (cForm.model.location.name) {
         const { latitude, longitude } = cForm.model.location;
 
-        cForm.model.location = await wx.chooseLocation({
+        cForm.model.location = await uni.chooseLocation({
           latitude,
           longitude,
         });
       } else {
-        cForm.model.location = await wx.chooseLocation();
+        cForm.model.location = await uni.chooseLocation();
       }
     };
 
@@ -80,11 +80,11 @@ export default {
           body: { ...model, userId: user.value.id },
         });
 
-        wx.showToast({
+        uni.showToast({
           title: id ? "修改成功" : "新增成功",
         });
         await useHelpers().sleep(1500);
-        wx.navigateBack();
+        uni.navigateBack();
       });
     };
 

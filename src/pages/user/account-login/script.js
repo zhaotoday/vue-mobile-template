@@ -24,14 +24,14 @@ export default {
 
         await accountLogin({ account, password });
 
-        wx.showToast({ title: "登录成功" });
+        uni.showToast({ title: "登录成功" });
         await useHelpers().sleep(1500);
-        wx.navigateBack();
+        uni.navigateBack();
       });
     };
 
     onNavigationBarButtonTap(async () => {
-      await wx.navigateTo({ url: "/pages/user/account-register/index" });
+      await uni.navigateTo({ url: "/pages/user/account-register/index" });
     });
 
     return {

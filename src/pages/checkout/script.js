@@ -57,16 +57,16 @@ export default {
 
     const gotoAddresses = () => {
       if (!loggedIn()) {
-        wx.navigateTo({ url: useConsts().LoginUrl });
+        uni.navigateTo({ url: useConsts().LoginUrl });
         return;
       }
 
-      wx.navigateTo({ url: "/pages/user/addresses/list/index?action=select" });
+      uni.navigateTo({ url: "/pages/user/addresses/list/index?action=select" });
     };
 
     const submit = async () => {
       if (!loggedIn()) {
-        wx.navigateTo({ url: useConsts().LoginUrl });
+        uni.navigateTo({ url: useConsts().LoginUrl });
         return;
       }
 
@@ -82,9 +82,9 @@ export default {
 
         clearProducts();
 
-        await wx.redirectTo({ url: "/pages/checkout/result/index" });
+        await uni.redirectTo({ url: "/pages/checkout/result/index" });
       } else {
-        await wx.showToast({ title: "请选择收获地址" });
+        await uni.showToast({ title: "请选择收获地址" });
       }
     };
 

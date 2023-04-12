@@ -53,9 +53,9 @@ export default {
 
           await accountRegister({ name, phoneNumber, captcha, password });
 
-          wx.showToast({ title: "注册成功" });
+          uni.showToast({ title: "注册成功" });
           await useHelpers().sleep(1500);
-          wx.switchTab({ url: "/pages/home/index" });
+          uni.switchTab({ url: "/pages/home/index" });
         }
       );
     };

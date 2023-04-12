@@ -39,20 +39,20 @@ export default {
         } else {
           await setUser({ user });
           await setToken({ token });
-          wx.showToast({ title: "登陆成功" });
+          uni.showToast({ title: "登陆成功" });
           await useHelpers().sleep(1500);
-          wx.navigateBack();
+          uni.navigateBack();
         }
         // #endif
 
         // #ifdef H5
         await mockLogin();
-        wx.showToast({ title: "登陆成功" });
+        uni.showToast({ title: "登陆成功" });
         await useHelpers().sleep(1500);
-        wx.navigateBack();
+        uni.navigateBack();
         // #endif
       } catch (e) {
-        wx.navigateBack();
+        uni.navigateBack();
       }
     };
 

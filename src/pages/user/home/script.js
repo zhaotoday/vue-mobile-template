@@ -18,7 +18,7 @@ export default {
     });
 
     const logoutAndGotoHome = async () => {
-      const { confirm } = await wx.showModal({
+      const { confirm } = await uni.showModal({
         title: "请确认",
         content: "确认退出账号吗？",
         confirmText: "退出账号",
@@ -26,7 +26,7 @@ export default {
 
       if (confirm) {
         await logout();
-        wx.showToast({ title: "退出成功" });
+        uni.showToast({ title: "退出成功" });
       }
     };
 

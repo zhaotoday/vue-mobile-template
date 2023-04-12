@@ -30,7 +30,7 @@ export default {
 
     const onOverLimit = (type) => {
       if (type === "plus") {
-        wx.showToast({ title: "库存不足" });
+        uni.showToast({ title: "库存不足" });
       }
     };
 

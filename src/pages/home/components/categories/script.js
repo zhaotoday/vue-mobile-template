@@ -18,7 +18,7 @@ export default {
         data: { currentIndex: index },
       });
 
-      await wx.switchTab({ url: categoriesUrl });
+      await uni.switchTab({ url: categoriesUrl });
     };
 
     return {

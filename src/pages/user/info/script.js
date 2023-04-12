@@ -42,12 +42,12 @@ export default {
       await permission.request("CAMERA");
       // #endif
 
-      const { tempFilePaths } = await wx.chooseImage({
+      const { tempFilePaths } = await uni.chooseImage({
         count: 1,
         sizeType: ["compressed"],
       });
 
-      const { statusCode, data } = await wx.uploadFile({
+      const { statusCode, data } = await uni.uploadFile({
         url: `${useConsts().ApiUrl}/client/files/actions/upload`,
         header: getHeaders(),
         formData: { dir: "avatars" },
@@ -65,7 +65,7 @@ export default {
         const { avatarFileId } = await getUserInfo();
         cForm.model.avatarFileId = avatarFileId;
       } else {
-        wx.showToast({ title: parsedData.error.message });
+        uni.showToast({ title: parsedData.error.message });
       }
     };
 
@@ -78,10 +78,10 @@ export default {
           body: model,
         });
 
-        wx.showToast({ title: "保存成功" });
+        uni.showToast({ title: "保存成功" });
         await getUserInfo();
         await useHelpers().sleep(1500);
-        wx.navigateBack();
+        uni.navigateBack();
       });
     };
 

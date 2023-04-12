@@ -14,26 +14,26 @@ export default {
     const search = async (value) => {
       saveHistory(value);
 
-      await wx.navigateTo({
+      await uni.navigateTo({
         url: `/pages/products/list/index?keywords=${value}`,
       });
     };
 
     const getHistory = () =>
-      (wx.getStorageSync("productSearchHistory") || []).filter(
+      (uni.getStorageSync("productSearchHistory") || []).filter(
         (item, index) => index < 15
       );
 
     const saveHistory = (keywords) => {
-      const history = wx.getStorageSync("productSearchHistory") || [];
+      const history = uni.getStorageSync("productSearchHistory") || [];
 
       if (keywords && !history.includes(keywords)) {
-        wx.setStorageSync("productSearchHistory", [...history, keywords]);
+        uni.setStorageSync("productSearchHistory", [...history, keywords]);
       }
     };
 
     const clearHistory = () => {
-      wx.removeStorageSync("productSearchHistory");
+      uni.removeStorageSync("productSearchHistory");
       history.value = [];
     };
 
