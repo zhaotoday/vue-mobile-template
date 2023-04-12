@@ -24,13 +24,13 @@
     <div class="t-g7 fs28 u-p20">
       <div
         class="b-register"
-        @click="$wx.navigateTo('/pages/user/account-register/index')"
+        @click="$uni.navigateTo('/pages/user/account-register/index')"
       >
         注册
       </div>
       <div
         class="b-password"
-        @click="$wx.navigateTo('/pages/user/password/index')"
+        @click="$uni.navigateTo('/pages/user/password/index')"
       >
         忘记密码？
       </div>

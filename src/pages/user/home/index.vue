@@ -23,7 +23,7 @@
             type="primary"
             custom-style="width: 130rpx"
             size="small"
-            @click="$wx.navigateTo($consts.LoginUrl)"
+            @click="$uni.navigateTo($consts.LoginUrl)"
           >
             登录
           </u-button>
@@ -31,7 +31,7 @@
             type="primary"
             custom-style="width: 130rpx"
             size="small"
-            @click="$wx.navigateTo('/pages/user/account-register/index')"
+            @click="$uni.navigateTo('/pages/user/account-register/index')"
           >
             注册
           </u-button>
@@ -132,7 +132,7 @@
       <ul class="c-list bg-white fs28">
         <li
           class="c-list__item has-icon is-link"
-          @click="$wx.makePhoneCall({ phoneNumber: '7204466' })"
+          @click="$uni.makePhoneCall({ phoneNumber: '7204466' })"
         >
           <i class="c-iconfont c-iconfont--telephone fs34 t-primary"></i>
           联系我们

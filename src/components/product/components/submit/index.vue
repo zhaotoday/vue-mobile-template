@@ -1,7 +1,7 @@
 <template>
   <div class="b-submit">
     <b-collection :product-id="product.id" />
-    <div class="b-submit__cart" @click="$wx.switchTab('/pages/cart/index')">
+    <div class="b-submit__cart" @click="$uni.switchTab('/pages/cart/index')">
       <i class="c-iconfont c-iconfont--cart-off fs42"></i>
       <h2 class="fs24 u-lh1">购物车</h2>
       <div v-if="selectedProducts.length" class="b-submit__count fs22">

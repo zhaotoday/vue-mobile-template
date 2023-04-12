@@ -11,7 +11,7 @@
       <u-grid-item v-for="(item, index) in items" :key="index">
         <div
           class="b-list__box"
-          @click="$wx.navigateTo(`/pages/products/detail/index?id=${item.id}`)"
+          @click="$uni.navigateTo(`/pages/products/detail/index?id=${item.id}`)"
         >
           <div class="b-list__checkbox">
             <u-checkbox
@@ -42,7 +42,7 @@
             <div
               class="b-action b-action--edit c-icon-tag--edit fs24"
               @click.stop="
-                $wx.navigateTo(
+                $uni.navigateTo(
                   `/pages/manage/products/form/index?categoryId=${item.categoryId}&id=${item.id}`
                 )
               "

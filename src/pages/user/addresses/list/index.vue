@@ -26,7 +26,7 @@
           <div
             class="c-icon-tag c-icon-tag--edit"
             @click.stop="
-              $wx.navigateTo(`/pages/user/addresses/form/index?id=${item.id}`)
+              $uni.navigateTo(`/pages/user/addresses/form/index?id=${item.id}`)
             "
           >
             修改
@@ -48,7 +48,7 @@
       custom-class="at-bottom w702"
       type="primary"
       :disabled="list.items.length >= 5"
-      @click="$wx.navigateTo('/pages/user/addresses/form/index')"
+      @click="$uni.navigateTo('/pages/user/addresses/form/index')"
     >
       新增
     </u-button>

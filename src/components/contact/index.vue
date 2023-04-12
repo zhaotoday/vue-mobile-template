@@ -2,7 +2,7 @@
   <ul class="c-contacts">
     <li
       class="c-contacts__item bg-secondary"
-      @click="$wx.makePhoneCall({ phoneNumber: '7204466' })"
+      @click="$uni.makePhoneCall({ phoneNumber: '7204466' })"
     >
       <i class="c-iconfont c-iconfont--telephone t-white fs40"></i>
     </li>

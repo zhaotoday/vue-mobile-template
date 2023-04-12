@@ -16,7 +16,7 @@
         :items="filteredItems"
         @goto-chat="
           (item) =>
-            $wx.navigateTo(
+            $uni.navigateTo(
               `/pages/im/chats/detail/index?toUserId=${
                 item.user.id
               }&toUserName=${item.user.name || item.user.wxNickName || '--'}`
@@ -42,7 +42,7 @@
         type="primary"
         custom-style="width: 130rpx; margin-top: 20rpx"
         size="small"
-        @click="$wx.navigateTo($consts.LoginUrl)"
+        @click="$uni.navigateTo($consts.LoginUrl)"
       >
         登录
       </u-button>

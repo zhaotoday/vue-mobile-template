@@ -14,7 +14,7 @@
         v-for="item in list.items"
         :key="item.id"
         class="c-orders__item bg-white u-mt20"
-        @click="$wx.navigateTo(`/pages/user/orders/detail/index?id=${item.id}`)"
+        @click="$uni.navigateTo(`/pages/user/orders/detail/index?id=${item.id}`)"
       >
         <div class="c-orders__head">
           <span class="fs26" style="padding-right: 20rpx">

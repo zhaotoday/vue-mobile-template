@@ -9,11 +9,11 @@
         <u-button
           type="primary"
           size="small"
-          @click="$wx.redirectTo('/pages/user/orders/list/index')"
+          @click="$uni.redirectTo('/pages/user/orders/list/index')"
         >
           查看订单列表
         </u-button>
-        <u-button size="small" @click="$wx.switchTab('/pages/home/index')">
+        <u-button size="small" @click="$uni.switchTab('/pages/home/index')">
           返回首页
         </u-button>
       </div>

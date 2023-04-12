@@ -9,7 +9,7 @@
     <div class="b-buttons">
       <u-row gutter="10">
         <u-col span="6">
-          <u-button type="primary" plain @click="$wx.navigateBack()">
+          <u-button type="primary" plain @click="$uni.navigateBack()">
             拒绝
           </u-button>
         </u-col>

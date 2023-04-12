@@ -13,7 +13,7 @@
       margin-top="100rpx"
       text="购物车为空"
     />
-    <c-cart-submit @submit="$wx.navigateTo('/pages/checkout/index')" />
+    <c-cart-submit @submit="$uni.navigateTo('/pages/checkout/index')" />
   </div>
 </template>
 

@@ -6,7 +6,7 @@
         disabled
         :show-action="false"
         height="60rpx"
-        @click="$wx.navigateTo('/pages/products/search/index')"
+        @click="$uni.navigateTo('/pages/products/search/index')"
       />
       <u-gap height="24rpx" />
       <u-swiper
