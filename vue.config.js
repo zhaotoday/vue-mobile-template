@@ -1,3 +1,3 @@
 module.exports = {
-  transpileDependencies: ["uview-ui", "uni-im"],
+  transpileDependencies: ["uview-ui", "vue-mobile", "uni-im"],
 };
