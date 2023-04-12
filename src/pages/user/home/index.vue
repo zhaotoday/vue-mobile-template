@@ -23,7 +23,7 @@
             type="primary"
             custom-style="width: 130rpx"
             size="small"
-            @click="$uni.navigateTo($consts.LoginUrl)"
+            @click="$uni.navigateTo($consts.LOGIN_URL)"
           >
             登录
           </u-button>

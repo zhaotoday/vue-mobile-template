@@ -58,13 +58,13 @@ export default {
       await uni.navigateTo({
         url: loggedIn()
           ? "/pages/user/addresses/list/index?action=select"
-          : useConsts().LoginUrl,
+          : useConsts().LOGIN_URL,
       });
     };
 
     const submit = async () => {
       if (!loggedIn()) {
-        await uni.navigateTo({ url: useConsts().LoginUrl });
+        await uni.navigateTo({ url: useConsts().LOGIN_URL });
         return;
       }
 

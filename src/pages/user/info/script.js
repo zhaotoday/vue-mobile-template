@@ -47,7 +47,7 @@ export default {
       });
 
       const { statusCode, data } = await uni.uploadFile({
-        url: `${useConsts().ApiUrl}/client/files/actions/upload`,
+        url: `${useConsts().API_URL}/client/files/actions/upload`,
         header: getHeaders(),
         formData: { dir: "avatars" },
         filePath: tempFilePaths[0],
