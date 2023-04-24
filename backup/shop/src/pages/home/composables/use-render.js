@@ -18,6 +18,10 @@ export const useRender = () => {
     items: [],
   });
 
+  const specialProductsList = ref({
+    items: [],
+  });
+
   const renderAdsList = async () => {
     adsList.value = await publicAdsApi.get({});
   };
@@ -34,13 +38,24 @@ export const useRender = () => {
     });
   };
 
+  const renderSpecialProductsList = async () => {
+    specialProductsList.value = await publicProductsApi.get({
+      query: {
+        where: { special: { $eq: 1 } },
+        limit: 50,
+      },
+    });
+  };
+
   return {
     loaded,
     adsList,
     categoriesList,
     productsList,
+    specialProductsList,
     renderAdsList,
     renderCategoriesList,
     renderProductsList,
+    renderSpecialProductsList,
   };
 };

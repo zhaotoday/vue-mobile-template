@@ -13,9 +13,11 @@ export default {
       adsList,
       categoriesList,
       productsList,
+      specialProductsList,
       renderAdsList,
       renderCategoriesList,
       renderProductsList,
+      renderSpecialProductsList,
     } = useRender();
 
     onShow(async () => {
@@ -24,6 +26,7 @@ export default {
       await renderAdsList();
       await renderCategoriesList();
       await renderProductsList();
+      await renderSpecialProductsList();
 
       loaded.value = true;
     });
@@ -33,6 +36,7 @@ export default {
       adsList,
       categoriesList,
       productsList,
+      specialProductsList,
     };
   },
 };
