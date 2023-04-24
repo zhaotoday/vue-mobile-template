@@ -34,6 +34,25 @@
       />
     </div>
     <vc-categories :loaded="loaded" :items="categoriesList.items" />
+    <div class="u-pl24 u-pt20">
+      <div class="c-title c-title--md fs32">特价区</div>
+    </div>
+    <div class="b-special">
+      <div class="b-product">
+        <u-scroll-list>
+          <view v-for="(item, index) in list" :key="index">
+            <image :src="item.thumb"></image>
+          </view>
+        </u-scroll-list>
+
+        <image
+          src="https://sol-api.liruan.cn/public/files/1651?x-oss-process=image/resize,w_406,h_406"
+        />
+      </div>
+    </div>
+    <div class="u-pl24 u-pt20">
+      <div class="c-title c-title--md fs32">商品</div>
+    </div>
     <c-product-list
       custom-class="u-pt24"
       :items="productsList.items"

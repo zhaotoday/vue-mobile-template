@@ -1,4 +1,22 @@
 @import "~@/assets/styles/utils/index.scss";
 
 @include p(home) {
+  @include b(special) {
+    @include margin(px2rpx(24px), px2rpx(24px), null, px2rpx(24px));
+
+    background-color: white;
+    box-shadow: 0 0 px2rpx(10px) 0 rgba(#cccccc, 0.2);
+    border-radius: px2rpx(10px);
+    height: px2rpx(200px);
+
+    padding: px2rpx(20px);
+
+    @include b(product) {
+      @include size(px2rpx(160px), px2rpx(160px));
+
+      image {
+        @include size(100%, 100%);
+      }
+    }
+  }
 }
