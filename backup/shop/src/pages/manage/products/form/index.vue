@@ -63,6 +63,16 @@
           @blur="validate(cForm, 'sales')"
         />
       </c-form-item>
+      {{ cForm.model.special }}
+      <c-form-item label="特价商品">
+        <div class="c-form__input u-pt20">
+          <u-switch
+            v-model="cForm.model.special"
+            :active-value="1"
+            :inactive-value="0"
+          />
+        </div>
+      </c-form-item>
       <c-form-item v-if="false" label="商品详情">
         <div class="u-pt10 u-pb10 u-mt70 u-ml20 u-mr20">
           <u-textarea placeholder="请输入商品详情" height="300" />
