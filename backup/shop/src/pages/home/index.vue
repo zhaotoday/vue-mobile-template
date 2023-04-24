@@ -50,7 +50,7 @@
               src="https://sol-api.liruan.cn/public/files/1651?x-oss-process=image/resize,w_406,h_406"
               style="width: 152rpx"
             />
-            <h3 class="u-lh1 fs28 t-error u-pt10 u-tac">$33</h3>
+            <h3 class="u-lh1 fs26 t-error u-pt10 u-tac">$33</h3>
           </div>
         </u-scroll-list>
       </div>
