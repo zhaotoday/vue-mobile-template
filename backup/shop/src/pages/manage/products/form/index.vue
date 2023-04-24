@@ -63,7 +63,6 @@
           @blur="validate(cForm, 'sales')"
         />
       </c-form-item>
-      {{ cForm.model.special }}
       <c-form-item label="特价商品">
         <div class="c-form__input u-pt20">
           <u-switch
