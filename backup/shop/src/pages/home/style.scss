@@ -7,15 +7,15 @@
     background-color: white;
     box-shadow: 0 0 px2rpx(10px) 0 rgba(#cccccc, 0.2);
     border-radius: px2rpx(10px);
-    height: px2rpx(200px);
-
+    height: px2rpx(230px);
     padding: px2rpx(20px);
 
     @include b(product) {
-      @include size(px2rpx(160px), px2rpx(160px));
+      width: px2rpx(152px);
+      margin-right: px2rpx(20px);
 
       image {
-        @include size(100%, 100%);
+        @include size(px2rpx(152px), px2rpx(152px));
       }
     }
   }

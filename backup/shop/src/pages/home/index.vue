@@ -38,16 +38,21 @@
       <div class="c-title c-title--md fs32">特价区</div>
     </div>
     <div class="b-special">
-      <div class="b-product">
-        <u-scroll-list>
-          <view v-for="(item, index) in list" :key="index">
-            <image :src="item.thumb"></image>
-          </view>
+      <div class="b-special__box">
+        <u-scroll-list indicator-active-color="#5ac725">
+          <div
+            v-for="(item, index) in 20"
+            :key="index"
+            class="b-product"
+            style="width: 152rpx"
+          >
+            <image
+              src="https://sol-api.liruan.cn/public/files/1651?x-oss-process=image/resize,w_406,h_406"
+              style="width: 152rpx"
+            />
+            <h3 class="u-lh1 fs28 t-error u-pt10 u-tac">$33</h3>
+          </div>
         </u-scroll-list>
-
-        <image
-          src="https://sol-api.liruan.cn/public/files/1651?x-oss-process=image/resize,w_406,h_406"
-        />
       </div>
     </div>
     <div class="u-pl24 u-pt20">
